@@ -1,0 +1,9 @@
+digraph "java/broad/pda/rnai" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8530d4a580cb4d50cf384308e0640be3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="pda" fontname="Helvetica", fontsize="10", URL="dir_8530d4a580cb4d50cf384308e0640be3.html"]
+  dir_87328bac70ff1185a0780a61cc18c00d [shape=box, label="rnai", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_87328bac70ff1185a0780a61cc18c00d.html"];
+  }
+}

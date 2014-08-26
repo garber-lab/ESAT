@@ -1,0 +1,263 @@
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution}{\section{broad.\+core.\+math.\+Permutation\+Distribution Class Reference}
+\label{classbroad_1_1core_1_1math_1_1_permutation_distribution}\index{broad.\+core.\+math.\+Permutation\+Distribution@{broad.\+core.\+math.\+Permutation\+Distribution}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_a7a37bd253f3dbdd71400fb4ab16d77f4}{Permutation\+Distribution} (Annotation parent\+Region, String bam\+File, String bed\+File, int num\+Permutations)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_aa379bbeb09128585cebb5fc922cd4757}{Permutation\+Distribution} (Annotation parent\+Region, String bam\+File, String bed\+File, int num\+Permutations, int max\+Genomic\+Span)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_aa1022e2116c2ecbb3346807817c51111}{Permutation\+Distribution} (Annotation parent\+Region, Alignment\+Model alignments, Coordinate\+Space coordinate\+Space, int num\+Permutations)
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_aeeabc414789e3349db4a875c9f81d51e}{Permutation\+Distribution} (Annotation parent\+Region, Alignment\+Model alignments, Coordinate\+Space coordinate\+Space, int num\+Permutations, int max\+Genomic\+Span)
+\item 
+double \hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_adeb49888f4ff5c275859a9a4f306c5e9}{get\+Scan\+Pvalue} (Annotation window)
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_empirical_distribution}{Empirical\+Distribution} \hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_a1f13a6af358b1359c0d56833ceefac11}{get\+Scan\+Distribution} (int window\+Size)
+\item 
+void \hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_ae531b99c9afb0b405018df412907ee5d}{write\+Wig\+Each\+Position} (String out\+Wig)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_a449635db64f5a7d8ca811860f1247892}{write\+Windows\+With\+Pvalue} (int window\+Size, String out\+Bed)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1math_1_1_permutation_distribution_a756894b7aa364ed1fd63c44dd315fe13}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_a7a37bd253f3dbdd71400fb4ab16d77f4}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!Permutation\+Distribution@{Permutation\+Distribution}}
+\index{Permutation\+Distribution@{Permutation\+Distribution}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{Permutation\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+math.\+Permutation\+Distribution.\+Permutation\+Distribution (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{parent\+Region, }
+\item[{String}]{bam\+File, }
+\item[{String}]{bed\+File, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_a7a37bd253f3dbdd71400fb4ab16d77f4}
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Region} & Parent region \\
+\hline
+{\em bam\+File} & Bam file \\
+\hline
+{\em bed\+File} & Bed file for transcriptome space \\
+\hline
+{\em num\+Permutations} & Number of permutations \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_aa379bbeb09128585cebb5fc922cd4757}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!Permutation\+Distribution@{Permutation\+Distribution}}
+\index{Permutation\+Distribution@{Permutation\+Distribution}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{Permutation\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+math.\+Permutation\+Distribution.\+Permutation\+Distribution (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{parent\+Region, }
+\item[{String}]{bam\+File, }
+\item[{String}]{bed\+File, }
+\item[{int}]{num\+Permutations, }
+\item[{int}]{max\+Genomic\+Span}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_aa379bbeb09128585cebb5fc922cd4757}
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Region} & Parent region \\
+\hline
+{\em bam\+File} & Bam file \\
+\hline
+{\em bed\+File} & Bed file for transcriptome space \\
+\hline
+{\em num\+Permutations} & Number of permutations \\
+\hline
+{\em max\+Genomic\+Span} & Max genomic span for paired reads \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_aa1022e2116c2ecbb3346807817c51111}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!Permutation\+Distribution@{Permutation\+Distribution}}
+\index{Permutation\+Distribution@{Permutation\+Distribution}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{Permutation\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+math.\+Permutation\+Distribution.\+Permutation\+Distribution (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{parent\+Region, }
+\item[{Alignment\+Model}]{alignments, }
+\item[{Coordinate\+Space}]{coordinate\+Space, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_aa1022e2116c2ecbb3346807817c51111}
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Region} & Parent annotation \\
+\hline
+{\em alignments} & Collection of annotations to count e.\+g. read mappings \\
+\hline
+{\em coordinate\+Space} & Coordinate space \\
+\hline
+{\em num\+Permutations} & Number of permutations \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_aeeabc414789e3349db4a875c9f81d51e}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!Permutation\+Distribution@{Permutation\+Distribution}}
+\index{Permutation\+Distribution@{Permutation\+Distribution}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{Permutation\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+math.\+Permutation\+Distribution.\+Permutation\+Distribution (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{parent\+Region, }
+\item[{Alignment\+Model}]{alignments, }
+\item[{Coordinate\+Space}]{coordinate\+Space, }
+\item[{int}]{num\+Permutations, }
+\item[{int}]{max\+Genomic\+Span}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_aeeabc414789e3349db4a875c9f81d51e}
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Region} & Parent annotation \\
+\hline
+{\em alignments} & Collection of annotations to count e.\+g. read mappings \\
+\hline
+{\em coordinate\+Space} & Coordinate space \\
+\hline
+{\em num\+Permutations} & Number of permutations \\
+\hline
+{\em max\+Genomic\+Span} & Max genomic span for paired reads \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_a1f13a6af358b1359c0d56833ceefac11}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!get\+Scan\+Distribution@{get\+Scan\+Distribution}}
+\index{get\+Scan\+Distribution@{get\+Scan\+Distribution}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{get\+Scan\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Empirical\+Distribution} broad.\+core.\+math.\+Permutation\+Distribution.\+get\+Scan\+Distribution (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_a1f13a6af358b1359c0d56833ceefac11}
+Get scan distribution for the window size 
+\begin{DoxyParams}{Parameters}
+{\em window\+Size} & Window size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scan distribution 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_adeb49888f4ff5c275859a9a4f306c5e9}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!get\+Scan\+Pvalue@{get\+Scan\+Pvalue}}
+\index{get\+Scan\+Pvalue@{get\+Scan\+Pvalue}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{get\+Scan\+Pvalue}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+math.\+Permutation\+Distribution.\+get\+Scan\+Pvalue (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{window}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_adeb49888f4ff5c275859a9a4f306c5e9}
+Get scan P value of window 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The percentage of permutations with a window of the same size that has more overlapping fragments 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_a756894b7aa364ed1fd63c44dd315fe13}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!main@{main}}
+\index{main@{main}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+math.\+Permutation\+Distribution.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_a756894b7aa364ed1fd63c44dd315fe13}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_ae531b99c9afb0b405018df412907ee5d}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!write\+Wig\+Each\+Position@{write\+Wig\+Each\+Position}}
+\index{write\+Wig\+Each\+Position@{write\+Wig\+Each\+Position}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{write\+Wig\+Each\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+math.\+Permutation\+Distribution.\+write\+Wig\+Each\+Position (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+Wig}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_ae531b99c9afb0b405018df412907ee5d}
+Write a wig file of -\/log10(Pvalue) at each position of annotation 
+\begin{DoxyParams}{Parameters}
+{\em out\+Wig} & Output wig file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_permutation_distribution_a449635db64f5a7d8ca811860f1247892}{\index{broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}!write\+Windows\+With\+Pvalue@{write\+Windows\+With\+Pvalue}}
+\index{write\+Windows\+With\+Pvalue@{write\+Windows\+With\+Pvalue}!broad\+::core\+::math\+::\+Permutation\+Distribution@{broad\+::core\+::math\+::\+Permutation\+Distribution}}
+\subsubsection[{write\+Windows\+With\+Pvalue}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+math.\+Permutation\+Distribution.\+write\+Windows\+With\+Pvalue (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{String}]{out\+Bed}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1math_1_1_permutation_distribution_a449635db64f5a7d8ca811860f1247892}
+Write windows to bed file with scan P value in score field 
+\begin{DoxyParams}{Parameters}
+{\em window\+Size} & Window size \\
+\hline
+{\em out\+Bed} & Output bed file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/math/\hyperlink{_permutation_distribution_8java}{Permutation\+Distribution.\+java}\end{DoxyCompactItemize}

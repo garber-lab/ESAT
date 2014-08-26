@@ -1,0 +1,15 @@
+digraph "umms.core.coordinatesystem.TranscriptInGenomicSpace.getLength"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace.getLength",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace.getUnmasked\lLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1coordinatesystem_1_1_transcript_in_genomic_space.html#a9c7d62e75789b55cd3aef2087b832565"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace.getReference\lAnnotations",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1coordinatesystem_1_1_transcript_in_genomic_space.html#ae511e3d677e4ae595d484e2e822b8322"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace.getReference\lAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1coordinatesystem_1_1_transcript_in_genomic_space.html#aa29f8f9716891ceec997edb80632a8a6"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace.isValid\lWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1coordinatesystem_1_1_transcript_in_genomic_space.html#a2b0985bdebf24dc9c6840cbff3533682"];
+}

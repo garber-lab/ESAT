@@ -1,0 +1,13 @@
+digraph "broad.pda.feature.genome.DirectoryInstalledGenomeAssembly.getGenomeSize"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.feature.genome.\lDirectoryInstalledGenomeAssembly.get\lGenomeSize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.feature.genome.\lDirectoryInstalledGenomeAssembly.draw\lChromosome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_directory_installed_genome_assembly.html#a61e20cec51563cf0109fd039ac861c3e"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.pda.feature.genome.\lDirectoryInstalledGenomeAssembly.draw\lRandomRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_directory_installed_genome_assembly.html#adca92fa4600659ae4239424187d482f5"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.pda.feature.genome.\lDirectoryInstalledGenomeAssembly.get\lReducedRepresentation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_directory_installed_genome_assembly.html#abfa6a7b8afd3f5f5bddb699939db5e28"];
+}

@@ -1,0 +1,13 @@
+digraph "broad.core.multiplealignment.MAFAlignment.getAlignedSequenceIds"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lMAFAlignment.getAlignedSequenceIds",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.multiplealignment.\lMAFAlignment.getColumnsAsVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a4a26c761129c3b99364a45c242f8e06b"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.multiplealignment.\lMAFAlignment.sampleColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a53c281eb887b5cb250224b1bb1ff25b5"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.multiplealignment.\lMAFAlignment.load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a5c27232aa71cd8c0db9c1647b1c3e4c2"];
+}

@@ -1,0 +1,15 @@
+digraph "umms.core.model.AlignmentModel.getMedianReadSize"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.Alignment\lModel.getMedianReadSize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.model.Alignment\lModel.getReadSizeDistribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#ac8a2dfade7662d69c9abae1712c52d2f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.model.Alignment\lModel.getReadIterator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#aedc2745bb8e85e862a91de0cb2e94546"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.math.Empirical\lDistribution.getAllDataValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_empirical_distribution.html#a87b93a0a097bfd7fa7b330b77075108e"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.annotation.Annotation.getName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#adf055d923b7239351f4dd5908a1eebeb"];
+}

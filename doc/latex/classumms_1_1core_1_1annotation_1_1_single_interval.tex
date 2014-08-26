@@ -1,0 +1,208 @@
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval}{\section{umms.\+core.\+annotation.\+Single\+Interval Class Reference}
+\label{classumms_1_1core_1_1annotation_1_1_single_interval}\index{umms.\+core.\+annotation.\+Single\+Interval@{umms.\+core.\+annotation.\+Single\+Interval}}
+}
+
+
+Inheritance diagram for umms.\+core.\+annotation.\+Single\+Interval\+:
+
+
+Collaboration diagram for umms.\+core.\+annotation.\+Single\+Interval\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_a0cb30ab2aae75194cad10928e2e8dc6e}{Single\+Interval} ()
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_a497bc904cf68273751bd4d5133e63751}{Single\+Interval} (int start, int end)
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_a983972f2e020292e97ef970b204577e5}{Single\+Interval} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} other)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_a09af82d060ca9d9e831550fad08e033d}{overlaps} (\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} other)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_ac4beddc176961e3571745e624e8b7935}{contains} (\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} other)
+\item 
+int \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_a50c6fe38bfa25042209be45b319185e8}{get\+Distance\+To} (\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} other)
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_a924417b81926218be5df0a4886c2818d}{intersect} (\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} other)
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_af44452eabde12b58440724fe802c6d50}{union} (\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} other)
+\item 
+int \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_ab5cd161bf20b4b63196de28feba3a400}{compare\+To} (\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} other)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_a38841887f454c200862148f6003b0a9a}{equals} (\hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval}{Single\+Interval} other)
+\item 
+String \hyperlink{classumms_1_1core_1_1annotation_1_1_single_interval_af6ec57ba960feb42089534e956d13075}{to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz This class represents a single interval on a integer coordinate space. 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_a0cb30ab2aae75194cad10928e2e8dc6e}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!Single\+Interval@{Single\+Interval}}
+\index{Single\+Interval@{Single\+Interval}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{Single\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+annotation.\+Single\+Interval.\+Single\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_a0cb30ab2aae75194cad10928e2e8dc6e}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_a497bc904cf68273751bd4d5133e63751}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!Single\+Interval@{Single\+Interval}}
+\index{Single\+Interval@{Single\+Interval}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{Single\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+annotation.\+Single\+Interval.\+Single\+Interval (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_a497bc904cf68273751bd4d5133e63751}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_a983972f2e020292e97ef970b204577e5}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!Single\+Interval@{Single\+Interval}}
+\index{Single\+Interval@{Single\+Interval}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{Single\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+annotation.\+Single\+Interval.\+Single\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_a983972f2e020292e97ef970b204577e5}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_ab5cd161bf20b4b63196de28feba3a400}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!compare\+To@{compare\+To}}
+\index{compare\+To@{compare\+To}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{compare\+To}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Single\+Interval.\+compare\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_ab5cd161bf20b4b63196de28feba3a400}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_ac4beddc176961e3571745e624e8b7935}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!contains@{contains}}
+\index{contains@{contains}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Single\+Interval.\+contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_ac4beddc176961e3571745e624e8b7935}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_a38841887f454c200862148f6003b0a9a}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!equals@{equals}}
+\index{equals@{equals}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Single\+Interval.\+equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_a38841887f454c200862148f6003b0a9a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_a50c6fe38bfa25042209be45b319185e8}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!get\+Distance\+To@{get\+Distance\+To}}
+\index{get\+Distance\+To@{get\+Distance\+To}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{get\+Distance\+To}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Single\+Interval.\+get\+Distance\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_a50c6fe38bfa25042209be45b319185e8}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if overlapping, otherwise the minimum absolute distance from one to the other. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_a924417b81926218be5df0a4886c2818d}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!intersect@{intersect}}
+\index{intersect@{intersect}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Single\+Interval} umms.\+core.\+annotation.\+Single\+Interval.\+intersect (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_a924417b81926218be5df0a4886c2818d}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New interval of intersection; if they don't intersect, then returns null 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_a09af82d060ca9d9e831550fad08e033d}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{overlaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Single\+Interval.\+overlaps (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_a09af82d060ca9d9e831550fad08e033d}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_af6ec57ba960feb42089534e956d13075}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Single\+Interval.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_af6ec57ba960feb42089534e956d13075}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_single_interval_af44452eabde12b58440724fe802c6d50}{\index{umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}!union@{union}}
+\index{union@{union}!umms\+::core\+::annotation\+::\+Single\+Interval@{umms\+::core\+::annotation\+::\+Single\+Interval}}
+\subsubsection[{union}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Single\+Interval} umms.\+core.\+annotation.\+Single\+Interval.\+union (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+Interval}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_single_interval_af44452eabde12b58440724fe802c6d50}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New interval spanning both intervals, including the space between them if they don't overlap 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/annotation/\hyperlink{_single_interval_8java}{Single\+Interval.\+java}\end{DoxyCompactItemize}

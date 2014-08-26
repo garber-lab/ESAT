@@ -1,0 +1,607 @@
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser}{\section{broad.\+core.\+parser.\+Command\+Line\+Parser Class Reference}
+\label{classbroad_1_1core_1_1parser_1_1_command_line_parser}\index{broad.\+core.\+parser.\+Command\+Line\+Parser@{broad.\+core.\+parser.\+Command\+Line\+Parser}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_aca48b6e3ce81bf026ce5dd86d0b39287}{Command\+Line\+Parser} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a80bd6dcaaa8cac1cdc089ba3d9627f24}{set\+Program\+Description} (String description)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_aa45de7ab4457124cb187347665a4da05}{add\+String\+Arg} (String flag, String description, boolean required)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a3cc73b6a3ae84ab16d3e500384fe1609}{add\+String\+Arg} (String flag, String description, boolean required, String def)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a0d5d15695b32e2ebe4e3d8c22ecb857f}{add\+String\+List\+Arg} (String flag, String description, boolean required, Array\+List$<$ String $>$ def)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_aa0f40e30d43b7d2dd3a2f5765daed1bc}{add\+String\+List\+Arg} (String flag, String description, boolean required)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_ac64f3bd75600400d5918592a9886f0a0}{add\+Int\+Arg} (String flag, String description, boolean required)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a7c2d0496cbec72be20f2d40c71e6b50a}{add\+Int\+Arg} (String flag, String description, boolean required, int def)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a5d9cc79fff4b57c989d81f23d1846f5e}{add\+Float\+Arg} (String flag, String description, boolean required)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a11825bfaa3c2195cac040f71885d905b}{add\+Float\+Arg} (String flag, String description, boolean required, float def)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a48920168143e988e8c7c694eb009944a}{add\+Double\+Arg} (String flag, String description, boolean required)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a80d900f67d17dc6d3ef32b99017861c7}{add\+Double\+Arg} (String flag, String description, boolean required, double def)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a29f0a27275c717df10c3e5a608d562b5}{add\+Boolean\+Arg} (String flag, String description, boolean required)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a92b1d109fee6f5d93596203dfedc5778}{add\+Boolean\+Arg} (String flag, String description, boolean required, boolean def)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_af17c04bc7125acf4ee7d2e790b0e86b8}{parse} (String\mbox{[}$\,$\mbox{]} args, boolean allow\+Duplicate\+Tags)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad6dcff13248241df62c57f4cbfacae33}{parse} (String\mbox{[}$\,$\mbox{]} args)
+\item 
+Map$<$ String, String $>$ \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_af4f549277703f59966280847ebb07660}{get\+Flags\+And\+Values} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_af859e4c1934b19df011c55aa27c3d9ee}{get\+Arg\+String} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_aea73ccacd3ef7fd25ddce6b45377684e}{get\+Arg\+String} (Collection$<$ String $>$ flags\+To\+Remove)
+\item 
+String \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_ab453d8b59548ccda31289abff8f44b37}{get\+String\+Arg} (String flag)
+\item 
+Array\+List$<$ String $>$ \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a6906c17b029cb5293d812b520065163a}{get\+String\+List\+Arg} (String flag)
+\item 
+int \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a172b91cd4b699b9341366c6dcc1b3b8e}{get\+Int\+Arg} (String flag)
+\item 
+float \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a89de2b3e47d77c6dc09daa4a229f56c5}{get\+Float\+Arg} (String flag)
+\item 
+double \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a1a12805a038827bca9e5a41c5df97933}{get\+Double\+Arg} (String flag)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a5776bb75022365597c4f147f1c4f04d0}{get\+Boolean\+Arg} (String flag)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad387216e72c2cc5a458ccac68b460e79}{print\+Help\+Message} ()
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a81dfcfb569d1c60fec2bd19b535119b2}{has\+Int\+Flag} (String flag)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_adeedd0c0480dee53f0b695c615b89824}{has\+Float\+Flag} (String flag)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad8f3fa6cc1fa884cee17853180acb322}{has\+Double\+Flag} (String flag)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a842eb76d7d79688703849248f6dd6d8d}{has\+Boolean\+Flag} (String flag)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1parser_1_1_command_line_parser_a215f7315d6a61a4755b3ddc3a9a198a7}{has\+String\+Flag} (String flag)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell Full-\/featured command line parser 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_aca48b6e3ce81bf026ce5dd86d0b39287}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!Command\+Line\+Parser@{Command\+Line\+Parser}}
+\index{Command\+Line\+Parser@{Command\+Line\+Parser}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{Command\+Line\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+parser.\+Command\+Line\+Parser.\+Command\+Line\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_aca48b6e3ce81bf026ce5dd86d0b39287}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a29f0a27275c717df10c3e5a608d562b5}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Boolean\+Arg@{add\+Boolean\+Arg}}
+\index{add\+Boolean\+Arg@{add\+Boolean\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Boolean\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Boolean\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a29f0a27275c717df10c3e5a608d562b5}
+Adds new boolean argument to set of arguments Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a92b1d109fee6f5d93596203dfedc5778}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Boolean\+Arg@{add\+Boolean\+Arg}}
+\index{add\+Boolean\+Arg@{add\+Boolean\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Boolean\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Boolean\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required, }
+\item[{boolean}]{def}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a92b1d109fee6f5d93596203dfedc5778}
+Adds new boolean argument to set of arguments and stores default Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+{\em def} & default value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a48920168143e988e8c7c694eb009944a}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Double\+Arg@{add\+Double\+Arg}}
+\index{add\+Double\+Arg@{add\+Double\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Double\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Double\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a48920168143e988e8c7c694eb009944a}
+Adds new double argument to set of arguments Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a80d900f67d17dc6d3ef32b99017861c7}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Double\+Arg@{add\+Double\+Arg}}
+\index{add\+Double\+Arg@{add\+Double\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Double\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Double\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required, }
+\item[{double}]{def}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a80d900f67d17dc6d3ef32b99017861c7}
+Adds new double argument to set of arguments and stores default Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+{\em def} & default value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a5d9cc79fff4b57c989d81f23d1846f5e}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Float\+Arg@{add\+Float\+Arg}}
+\index{add\+Float\+Arg@{add\+Float\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Float\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Float\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a5d9cc79fff4b57c989d81f23d1846f5e}
+Adds new float argument to set of arguments Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a11825bfaa3c2195cac040f71885d905b}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Float\+Arg@{add\+Float\+Arg}}
+\index{add\+Float\+Arg@{add\+Float\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Float\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Float\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required, }
+\item[{float}]{def}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a11825bfaa3c2195cac040f71885d905b}
+Adds new float argument to set of arguments and stores default Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+{\em def} & default value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_ac64f3bd75600400d5918592a9886f0a0}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Int\+Arg@{add\+Int\+Arg}}
+\index{add\+Int\+Arg@{add\+Int\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Int\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Int\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_ac64f3bd75600400d5918592a9886f0a0}
+Adds new int argument to set of arguments Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a7c2d0496cbec72be20f2d40c71e6b50a}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+Int\+Arg@{add\+Int\+Arg}}
+\index{add\+Int\+Arg@{add\+Int\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+Int\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+Int\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required, }
+\item[{int}]{def}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a7c2d0496cbec72be20f2d40c71e6b50a}
+Adds new int argument to set of arguments and stores default Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+{\em def} & default value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_aa45de7ab4457124cb187347665a4da05}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+String\+Arg@{add\+String\+Arg}}
+\index{add\+String\+Arg@{add\+String\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+String\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+String\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_aa45de7ab4457124cb187347665a4da05}
+Adds new string argument to set of arguments Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a3cc73b6a3ae84ab16d3e500384fe1609}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+String\+Arg@{add\+String\+Arg}}
+\index{add\+String\+Arg@{add\+String\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+String\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+String\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required, }
+\item[{String}]{def}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a3cc73b6a3ae84ab16d3e500384fe1609}
+Adds new string argument to set of arguments and stores default Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+{\em def} & default value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a0d5d15695b32e2ebe4e3d8c22ecb857f}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+String\+List\+Arg@{add\+String\+List\+Arg}}
+\index{add\+String\+List\+Arg@{add\+String\+List\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+String\+List\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+String\+List\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required, }
+\item[{Array\+List$<$ String $>$}]{def}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a0d5d15695b32e2ebe4e3d8c22ecb857f}
+Adds new string list argument to set of arguments and stores default Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+{\em def} & default value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_aa0f40e30d43b7d2dd3a2f5765daed1bc}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!add\+String\+List\+Arg@{add\+String\+List\+Arg}}
+\index{add\+String\+List\+Arg@{add\+String\+List\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{add\+String\+List\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+add\+String\+List\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag, }
+\item[{String}]{description, }
+\item[{boolean}]{required}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_aa0f40e30d43b7d2dd3a2f5765daed1bc}
+Adds new string list argument to set of arguments and stores default Client will crash if the same argument flag or description has already been added 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the command line flag for the argument \\
+\hline
+{\em description} & the description of the argument \\
+\hline
+{\em required} & whether parameter is required \\
+\hline
+{\em def} & default value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_af859e4c1934b19df011c55aa27c3d9ee}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+Arg\+String@{get\+Arg\+String}}
+\index{get\+Arg\+String@{get\+Arg\+String}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+Arg\+String}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+Arg\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_af859e4c1934b19df011c55aa27c3d9ee}
+Get the argument string from the command line \begin{DoxyReturn}{Returns}
+The argument string 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_aea73ccacd3ef7fd25ddce6b45377684e}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+Arg\+String@{get\+Arg\+String}}
+\index{get\+Arg\+String@{get\+Arg\+String}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+Arg\+String}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+Arg\+String (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ String $>$}]{flags\+To\+Remove}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_aea73ccacd3ef7fd25ddce6b45377684e}
+Get the argument string from the command line, possibly leaving out some arguments 
+\begin{DoxyParams}{Parameters}
+{\em flags\+To\+Remove} & Flags to leave out \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The argument string 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a5776bb75022365597c4f147f1c4f04d0}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+Boolean\+Arg@{get\+Boolean\+Arg}}
+\index{get\+Boolean\+Arg@{get\+Boolean\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+Boolean\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+Boolean\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a5776bb75022365597c4f147f1c4f04d0}
+Get value of boolean parameter specified by flag 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The command line flag for the argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean specified on command line or null if parameter was not specified 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a1a12805a038827bca9e5a41c5df97933}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+Double\+Arg@{get\+Double\+Arg}}
+\index{get\+Double\+Arg@{get\+Double\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+Double\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+Double\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a1a12805a038827bca9e5a41c5df97933}
+Get value of double parameter specified by flag 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The command line flag for the argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double specified on command line or null if parameter was not specified 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_af4f549277703f59966280847ebb07660}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+Flags\+And\+Values@{get\+Flags\+And\+Values}}
+\index{get\+Flags\+And\+Values@{get\+Flags\+And\+Values}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+Flags\+And\+Values}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, String$>$ broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+Flags\+And\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_af4f549277703f59966280847ebb07660}
+Get the flags and values that were specified on the command line \begin{DoxyReturn}{Returns}
+Map of flag to value 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a89de2b3e47d77c6dc09daa4a229f56c5}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+Float\+Arg@{get\+Float\+Arg}}
+\index{get\+Float\+Arg@{get\+Float\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+Float\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}float broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+Float\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a89de2b3e47d77c6dc09daa4a229f56c5}
+Get value of float parameter specified by flag 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The command line flag for the argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Float specified on command line or null if parameter was not specified 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a172b91cd4b699b9341366c6dcc1b3b8e}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+Int\+Arg@{get\+Int\+Arg}}
+\index{get\+Int\+Arg@{get\+Int\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+Int\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+Int\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a172b91cd4b699b9341366c6dcc1b3b8e}
+Get value of int parameter specified by flag 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The command line flag for the argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer specified on command line or null if parameter was not specified 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_ab453d8b59548ccda31289abff8f44b37}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+String\+Arg@{get\+String\+Arg}}
+\index{get\+String\+Arg@{get\+String\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+String\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+String\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_ab453d8b59548ccda31289abff8f44b37}
+Get value of String parameter specified by flag 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The command line flag for the argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String specified on command line or null if parameter was not specified 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a6906c17b029cb5293d812b520065163a}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!get\+String\+List\+Arg@{get\+String\+List\+Arg}}
+\index{get\+String\+List\+Arg@{get\+String\+List\+Arg}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{get\+String\+List\+Arg}]{\setlength{\rightskip}{0pt plus 5cm}Array\+List$<$String$>$ broad.\+core.\+parser.\+Command\+Line\+Parser.\+get\+String\+List\+Arg (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a6906c17b029cb5293d812b520065163a}
+Get value of String parameter specified by flag 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The command line flag for the argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String specified on command line or null if parameter was not specified 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a842eb76d7d79688703849248f6dd6d8d}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!has\+Boolean\+Flag@{has\+Boolean\+Flag}}
+\index{has\+Boolean\+Flag@{has\+Boolean\+Flag}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{has\+Boolean\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+parser.\+Command\+Line\+Parser.\+has\+Boolean\+Flag (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a842eb76d7d79688703849248f6dd6d8d}
+Whether the flag is associated with a boolean argument and was specified on the command line 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the flag is present 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad8f3fa6cc1fa884cee17853180acb322}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!has\+Double\+Flag@{has\+Double\+Flag}}
+\index{has\+Double\+Flag@{has\+Double\+Flag}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{has\+Double\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+parser.\+Command\+Line\+Parser.\+has\+Double\+Flag (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad8f3fa6cc1fa884cee17853180acb322}
+Whether the flag is associated with a double argument and was specified on the command line 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the flag is present 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_adeedd0c0480dee53f0b695c615b89824}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!has\+Float\+Flag@{has\+Float\+Flag}}
+\index{has\+Float\+Flag@{has\+Float\+Flag}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{has\+Float\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+parser.\+Command\+Line\+Parser.\+has\+Float\+Flag (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_adeedd0c0480dee53f0b695c615b89824}
+Whether the flag is associated with a float argument and was specified on the command line 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the flag is present 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a81dfcfb569d1c60fec2bd19b535119b2}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!has\+Int\+Flag@{has\+Int\+Flag}}
+\index{has\+Int\+Flag@{has\+Int\+Flag}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{has\+Int\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+parser.\+Command\+Line\+Parser.\+has\+Int\+Flag (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a81dfcfb569d1c60fec2bd19b535119b2}
+Whether the flag is associated with an int argument and was specified on the command line 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the flag is present 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a215f7315d6a61a4755b3ddc3a9a198a7}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!has\+String\+Flag@{has\+String\+Flag}}
+\index{has\+String\+Flag@{has\+String\+Flag}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{has\+String\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+parser.\+Command\+Line\+Parser.\+has\+String\+Flag (
+\begin{DoxyParamCaption}
+\item[{String}]{flag}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a215f7315d6a61a4755b3ddc3a9a198a7}
+Whether the flag is associated with a string argument and was specified on the command line 
+\begin{DoxyParams}{Parameters}
+{\em flag} & The flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the flag is present 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_af17c04bc7125acf4ee7d2e790b0e86b8}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+parse (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args, }
+\item[{boolean}]{allow\+Duplicate\+Tags}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_af17c04bc7125acf4ee7d2e790b0e86b8}
+Parse command arguments If command line is not in proper form, prints help menu and exits If a required argument is missing, prints help menu and exits 
+\begin{DoxyParams}{Parameters}
+{\em args} & the command line arguments passed to a main program \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad6dcff13248241df62c57f4cbfacae33}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+parse (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad6dcff13248241df62c57f4cbfacae33}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad387216e72c2cc5a458ccac68b460e79}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!print\+Help\+Message@{print\+Help\+Message}}
+\index{print\+Help\+Message@{print\+Help\+Message}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{print\+Help\+Message}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+print\+Help\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_ad387216e72c2cc5a458ccac68b460e79}
+Prints program description plus argument flags and descriptions 
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_command_line_parser_a80bd6dcaaa8cac1cdc089ba3d9627f24}{\index{broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}!set\+Program\+Description@{set\+Program\+Description}}
+\index{set\+Program\+Description@{set\+Program\+Description}!broad\+::core\+::parser\+::\+Command\+Line\+Parser@{broad\+::core\+::parser\+::\+Command\+Line\+Parser}}
+\subsubsection[{set\+Program\+Description}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+Command\+Line\+Parser.\+set\+Program\+Description (
+\begin{DoxyParamCaption}
+\item[{String}]{description}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_command_line_parser_a80bd6dcaaa8cac1cdc089ba3d9627f24}
+Sets program description to be printed as part of help menu 
+\begin{DoxyParams}{Parameters}
+{\em description} & The program description \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/parser/\hyperlink{_command_line_parser_8java}{Command\+Line\+Parser.\+java}\end{DoxyCompactItemize}

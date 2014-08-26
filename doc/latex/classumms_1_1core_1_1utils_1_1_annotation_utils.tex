@@ -1,0 +1,354 @@
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils}{\section{umms.\+core.\+utils.\+Annotation\+Utils Class Reference}
+\label{classumms_1_1core_1_1utils_1_1_annotation_utils}\index{umms.\+core.\+utils.\+Annotation\+Utils@{umms.\+core.\+utils.\+Annotation\+Utils}}
+}
+
+
+Collaboration diagram for umms.\+core.\+utils.\+Annotation\+Utils\+:
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Map$<$ String, Collection\\*
+$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_af14dd663711ec5bb378f70875f114e41}{collapse\+Overlappers} (Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$$>$ genes, boolean ignore\+Strand)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_adbf08ad30438460c5ef2d903196b08dd}{pairwise\+Nonoverlapping\+Ignore\+Strand} (Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ regions)
+\item 
+static Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_afa2cbf048459a0670cccff99e9140b6e}{merge\+Overlapping\+Blocks} (Tree\+Set$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ windows)
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_a73c090856164c0c8917b1dad326e515f}{merge\+Overlapping\+Blocks\+Single\+Orientation} (Collection$<$ T $>$ regions, boolean enforce\+Same\+Orientation)
+\item 
+static$<$ Textends\+Annotation $>$ T \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_adef9249ccd39f5aa8d2fed2b91e3dcc8}{get\+Largest\+Parent} (T child, Map$<$ String, Collection$<$ T $>$$>$ parents)
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Map$<$ T, T $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_ac8303f589525602b8a1d740ba6b05b30}{map\+Child\+To\+Largest\+Parent} (Map$<$ String, Collection$<$ T $>$$>$ children, Map$<$ String, Collection$<$ T $>$$>$ parents)
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Collection$<$ T $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_ac03f2394577fbf5f2bf25d041f195868}{get\+Parents} (T child, Map$<$ String, Collection$<$ T $>$$>$ parents)
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Collection$<$ T $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_a51fc4a9a678764303e6d94afc89df218}{get\+Children} (T parent, Map$<$ String, Collection$<$ T $>$$>$ children)
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Map$<$ T, Collection$<$ T $>$ $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_aa83a2cd0521f94949b7feac6929438ed}{map\+Parents\+To\+Children} (Map$<$ String, Collection$<$ T $>$$>$ children, Map$<$ String, Collection$<$ T $>$$>$ parents)
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Map$<$ T, Collection$<$ T $>$ $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_ae306f1081d2c5548bf9c320952cd8f68}{map\+Child\+To\+Parents} (Map$<$ String, Collection$<$ T $>$$>$ children, Map$<$ String, Collection$<$ T $>$$>$ parents)
+\item 
+static Map$<$ String, Collection\\*
+$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ $>$ \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_a4c807596fd83cfab73a3657ea796bebd}{load\+Annotations} (String bed\+File)  throws I\+O\+Exception 
+\item 
+static int \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_a6b7be0a704f3217b3b882dd06b07bd0b}{get\+Midpoint} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} annot)
+\item 
+static int \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_aad340b093e32c429083e65070ee4a3ed}{get\+Sub\+Annotation\+Midpoint\+Within\+Annotation} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} annot, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} sub\+Annot)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Logger \hyperlink{classumms_1_1core_1_1utils_1_1_annotation_utils_a3826100b13f52c51cb5dce4b420c7abb}{logger} = Logger.\+get\+Logger(Annotation\+Utils.\+class.\+get\+Name())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_af14dd663711ec5bb378f70875f114e41}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!collapse\+Overlappers@{collapse\+Overlappers}}
+\index{collapse\+Overlappers@{collapse\+Overlappers}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{collapse\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<${\bf Gene}$>$ $>$ umms.\+core.\+utils.\+Annotation\+Utils.\+collapse\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ {\bf Gene} $>$$>$}]{genes, }
+\item[{boolean}]{ignore\+Strand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_af14dd663711ec5bb378f70875f114e41}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_a51fc4a9a678764303e6d94afc89df218}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!get\+Children@{get\+Children}}
+\index{get\+Children@{get\+Children}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{get\+Children}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Collection$<$T$>$ umms.\+core.\+utils.\+Annotation\+Utils.\+get\+Children (
+\begin{DoxyParamCaption}
+\item[{T}]{parent, }
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{children}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_a51fc4a9a678764303e6d94afc89df218}
+Get children of parent annotation 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent \\
+\hline
+{\em children} & Potential children by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of children contained in parent or empty set if none 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_adef9249ccd39f5aa8d2fed2b91e3dcc8}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!get\+Largest\+Parent@{get\+Largest\+Parent}}
+\index{get\+Largest\+Parent@{get\+Largest\+Parent}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{get\+Largest\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ T umms.\+core.\+utils.\+Annotation\+Utils.\+get\+Largest\+Parent (
+\begin{DoxyParamCaption}
+\item[{T}]{child, }
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{parents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_adef9249ccd39f5aa8d2fed2b91e3dcc8}
+Get largest parent 
+\begin{DoxyParams}{Parameters}
+{\em child} & Child annotation \\
+\hline
+{\em parents} & Possible parent annotations by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Largest parent (annotation containing child on same strand) or null if none exists 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_a6b7be0a704f3217b3b882dd06b07bd0b}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!get\+Midpoint@{get\+Midpoint}}
+\index{get\+Midpoint@{get\+Midpoint}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{get\+Midpoint}]{\setlength{\rightskip}{0pt plus 5cm}static int umms.\+core.\+utils.\+Annotation\+Utils.\+get\+Midpoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{annot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_a6b7be0a704f3217b3b882dd06b07bd0b}
+Get midpoint along mature transcript of a spliced annotation 
+\begin{DoxyParams}{Parameters}
+{\em annot} & Annotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Genome coordinate of mature transcript midpoint 
+\end{DoxyReturn}
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_ac03f2394577fbf5f2bf25d041f195868}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!get\+Parents@{get\+Parents}}
+\index{get\+Parents@{get\+Parents}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{get\+Parents}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Collection$<$T$>$ umms.\+core.\+utils.\+Annotation\+Utils.\+get\+Parents (
+\begin{DoxyParamCaption}
+\item[{T}]{child, }
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{parents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_ac03f2394577fbf5f2bf25d041f195868}
+Get parents of child annotation 
+\begin{DoxyParams}{Parameters}
+{\em child} & Child \\
+\hline
+{\em parents} & Parents by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of parents containing child or empty set if none 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_aad340b093e32c429083e65070ee4a3ed}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!get\+Sub\+Annotation\+Midpoint\+Within\+Annotation@{get\+Sub\+Annotation\+Midpoint\+Within\+Annotation}}
+\index{get\+Sub\+Annotation\+Midpoint\+Within\+Annotation@{get\+Sub\+Annotation\+Midpoint\+Within\+Annotation}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{get\+Sub\+Annotation\+Midpoint\+Within\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}static int umms.\+core.\+utils.\+Annotation\+Utils.\+get\+Sub\+Annotation\+Midpoint\+Within\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{annot, }
+\item[{{\bf Annotation}}]{sub\+Annot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_aad340b093e32c429083e65070ee4a3ed}
+Get midpoint of a sub annotation with respect to a possibly spliced parent annotation Ignores blocks of sub annotation and only considers blocks of parent annotation 
+\begin{DoxyParams}{Parameters}
+{\em annot} & Parent annotation \\
+\hline
+{\em sub\+Annot} & Sub annotation contained in parent annotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Midpoint of sub annotation span considering blocks of parent annotation 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_a4c807596fd83cfab73a3657ea796bebd}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!load\+Annotations@{load\+Annotations}}
+\index{load\+Annotations@{load\+Annotations}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{load\+Annotations}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<${\bf Annotation}$>$ $>$ umms.\+core.\+utils.\+Annotation\+Utils.\+load\+Annotations (
+\begin{DoxyParamCaption}
+\item[{String}]{bed\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_a4c807596fd83cfab73a3657ea796bebd}
+Load annotations in the bed file as annotation objects 
+\begin{DoxyParams}{Parameters}
+{\em bed\+File} & Bed file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of chromosome to collection of annotations 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_ac8303f589525602b8a1d740ba6b05b30}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!map\+Child\+To\+Largest\+Parent@{map\+Child\+To\+Largest\+Parent}}
+\index{map\+Child\+To\+Largest\+Parent@{map\+Child\+To\+Largest\+Parent}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{map\+Child\+To\+Largest\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Map$<$T, T$>$ umms.\+core.\+utils.\+Annotation\+Utils.\+map\+Child\+To\+Largest\+Parent (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{children, }
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{parents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_ac8303f589525602b8a1d740ba6b05b30}
+Map each child annotation to its largest parent defined as annotations overlapping and containing child 
+\begin{DoxyParams}{Parameters}
+{\em children} & Child annotations by chromosome \\
+\hline
+{\em parents} & Parent annotations by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of child to largest parent. Does not include children with no parents. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_ae306f1081d2c5548bf9c320952cd8f68}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!map\+Child\+To\+Parents@{map\+Child\+To\+Parents}}
+\index{map\+Child\+To\+Parents@{map\+Child\+To\+Parents}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{map\+Child\+To\+Parents}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Map$<$T, Collection$<$T$>$ $>$ umms.\+core.\+utils.\+Annotation\+Utils.\+map\+Child\+To\+Parents (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{children, }
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{parents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_ae306f1081d2c5548bf9c320952cd8f68}
+Map each child annotation to its set of parents defined as annotations overlapping and containing child 
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & \\
+\hline
+{\em children} & Child annotations by chromosome \\
+\hline
+{\em parents} & Parent annotations by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of child to set of parents. Does not include children with no parents. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_aa83a2cd0521f94949b7feac6929438ed}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!map\+Parents\+To\+Children@{map\+Parents\+To\+Children}}
+\index{map\+Parents\+To\+Children@{map\+Parents\+To\+Children}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{map\+Parents\+To\+Children}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Map$<$T, Collection$<$T$>$ $>$ umms.\+core.\+utils.\+Annotation\+Utils.\+map\+Parents\+To\+Children (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{children, }
+\item[{Map$<$ String, Collection$<$ T $>$$>$}]{parents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_aa83a2cd0521f94949b7feac6929438ed}
+Map each parent annotation to its set of contained children 
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & \\
+\hline
+{\em children} & Child annotations by chromosome \\
+\hline
+{\em parents} & Parent annotations by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of parent to set of children. Annotations with no children map to empty set. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_afa2cbf048459a0670cccff99e9140b6e}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!merge\+Overlapping\+Blocks@{merge\+Overlapping\+Blocks}}
+\index{merge\+Overlapping\+Blocks@{merge\+Overlapping\+Blocks}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{merge\+Overlapping\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<${\bf Annotation}$>$ umms.\+core.\+utils.\+Annotation\+Utils.\+merge\+Overlapping\+Blocks (
+\begin{DoxyParamCaption}
+\item[{Tree\+Set$<$?extends {\bf Annotation} $>$}]{windows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_afa2cbf048459a0670cccff99e9140b6e}
+Merge annotations that overlap in the same orientation as each other, and leave singleton windows the same 
+\begin{DoxyParams}{Parameters}
+{\em windows} & Annotation set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New set of merged windows 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_a73c090856164c0c8917b1dad326e515f}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!merge\+Overlapping\+Blocks\+Single\+Orientation@{merge\+Overlapping\+Blocks\+Single\+Orientation}}
+\index{merge\+Overlapping\+Blocks\+Single\+Orientation@{merge\+Overlapping\+Blocks\+Single\+Orientation}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{merge\+Overlapping\+Blocks\+Single\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Collection$<${\bf Annotation}$>$ umms.\+core.\+utils.\+Annotation\+Utils.\+merge\+Overlapping\+Blocks\+Single\+Orientation (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ T $>$}]{regions, }
+\item[{boolean}]{enforce\+Same\+Orientation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_a73c090856164c0c8917b1dad326e515f}
+Merge annotations that overlap, and leave singleton windows the same All returned annotations will have the same orientation\+: unknown if not enforcing same orientation, or the common orientation of all input regions if enforcing 
+\begin{DoxyParams}{Parameters}
+{\em regions} & Annotation set \\
+\hline
+{\em enforce\+Same\+Orientation} & Require that all regions have same orientation to begin with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New set of merged windows 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_adbf08ad30438460c5ef2d903196b08dd}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!pairwise\+Nonoverlapping\+Ignore\+Strand@{pairwise\+Nonoverlapping\+Ignore\+Strand}}
+\index{pairwise\+Nonoverlapping\+Ignore\+Strand@{pairwise\+Nonoverlapping\+Ignore\+Strand}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{pairwise\+Nonoverlapping\+Ignore\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+utils.\+Annotation\+Utils.\+pairwise\+Nonoverlapping\+Ignore\+Strand (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Annotation} $>$}]{regions}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_adbf08ad30438460c5ef2d903196b08dd}
+Check if the entire set is pairwise non-\/overlapping, ignoring strand 
+\begin{DoxyParams}{Parameters}
+{\em regions} & Set of regions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if no blocks overlap 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1core_1_1utils_1_1_annotation_utils_a3826100b13f52c51cb5dce4b420c7abb}{\index{umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}!logger@{logger}}
+\index{logger@{logger}!umms\+::core\+::utils\+::\+Annotation\+Utils@{umms\+::core\+::utils\+::\+Annotation\+Utils}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger umms.\+core.\+utils.\+Annotation\+Utils.\+logger = Logger.\+get\+Logger(Annotation\+Utils.\+class.\+get\+Name())\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1utils_1_1_annotation_utils_a3826100b13f52c51cb5dce4b420c7abb}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/utils/\hyperlink{umms_2core_2utils_2_annotation_utils_8java}{Annotation\+Utils.\+java}\end{DoxyCompactItemize}

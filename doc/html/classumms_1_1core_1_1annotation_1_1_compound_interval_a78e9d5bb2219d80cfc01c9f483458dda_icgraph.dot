@@ -1,0 +1,21 @@
+digraph "umms.core.annotation.CompoundInterval.getBlocks"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Compound\lInterval.getBlocks",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.annotation.Basic\lAnnotation.getBlocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#ab25d0e3c56d554e3426bf2d3ecf9d7c8"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.annotation.Basic\lAnnotation.getFlankingBlocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#a3e559cf112dcf53643c073df5bf7c1aa"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.annotation.Compound\lInterval.CompoundInterval",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#ad2b8402757cce5a10b4169b9103c5cbd"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.annotation.Compound\lInterval.contains",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#a3bf8c87e093e0b792f7f26b535070e48"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="umms.core.annotation.Compound\lInterval.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#a82252fc143476b556b0bf3a192233c8e"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="umms.core.annotation.Compound\lInterval.intersect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#a4f4d181aef401608e1132208f67752b3"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="umms.core.annotation.Compound\lInterval.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#aa1111ec6321d6343445ea95584a3a0b8"];
+}

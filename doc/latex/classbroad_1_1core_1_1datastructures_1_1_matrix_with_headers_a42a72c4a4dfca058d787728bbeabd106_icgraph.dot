@@ -1,0 +1,48 @@
+digraph "broad.core.datastructures.MatrixWithHeaders.MatrixWithHeaders"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.datastructures.\lMatrixWithHeaders.MatrixWithHeaders",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.datastructures.\lMatrixWithHeaders.filterValues\lLargerThanUsingColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a634dd0c6b372eabcae8ba3bce7f3d98d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.datastructures.\lMatrixWithHeaders.filterValues\lSmallerThanUsingColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#af6c727a09ecc8c8aef659d1de63b29fb"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.datastructures.\lMatrixWithHeaders.filterValues\lRangeUsingColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#aaccce63b0cc66f90649737787bb12054"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByRow\lDescriptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a108627a9a341ddba30ec917b180ad6f1"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByRowNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a6fe084d8d21e55313ce73c2594e4ac68"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByRowNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#acce4e9bbe685bff02b1f01487eaa8292"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByColumnNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a4c1f213a9770630270705826680797ca"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByColumnNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a51039cb4346193fba13dd235b10f03bf"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="broad.core.datastructures.\lMatrixWithHeaders.zScoresByColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a4dc96120f6b0c80480a24e1a3c66e126"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="broad.core.datastructures.\lMatrixWithHeaders.confidenceBy\lColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#af1bdcc66fa4e72efe89060370302373c"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="broad.core.datastructures.\lMatrixWithHeaders.tScoresByRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#aeda6be93dd868197f7c51ba9faaaa2f6"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="broad.core.datastructures.\lMatrixWithHeaders.rank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a3b9c2c75801146d39097c198c3ae4934"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="broad.core.datastructures.\lMatrixWithHeaders.sortList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#afdb4fa388dc0081fdf34784428ec248f"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="broad.core.datastructures.\lMatrixWithHeaders.times",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a59a134b24bbbd08c932cfa2276d77757"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="broad.core.datastructures.\lMatrixWithHeaders.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#af8962575e65d9cdbba2bba970b3f263c"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="broad.core.datastructures.\lMatrixWithHeaders.quantileNormalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a0d24d53ca38a9dc31411bdc69ddb4f91"];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="broad.core.datastructures.\lMatrixWithHeaders.medianCenter\lColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#af34c92d09322c6a27fb48b1aeb43e2c6"];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="broad.core.datastructures.\lMatrixWithHeaders.medianCenterRows",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a8b02d67ec694a0a8f61392fab9ea5bc5"];
+  Node1 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="broad.core.datastructures.\lMatrixWithHeaders.scaleNorm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a56a1092e224d5e5a09b46efef681d27f"];
+  Node1 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="broad.core.datastructures.\lMatrixWithHeaders.multiplyColumns\lWithConstants",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a276a7e36e9c0939a64033ba0ff1a5e09"];
+}

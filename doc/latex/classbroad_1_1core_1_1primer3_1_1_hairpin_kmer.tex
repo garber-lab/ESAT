@@ -1,0 +1,268 @@
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer}{\section{broad.\+core.\+primer3.\+Hairpin\+Kmer Class Reference}
+\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer}\index{broad.\+core.\+primer3.\+Hairpin\+Kmer@{broad.\+core.\+primer3.\+Hairpin\+Kmer}}
+}
+
+
+Inheritance diagram for broad.\+core.\+primer3.\+Hairpin\+Kmer\+:
+
+
+Collaboration diagram for broad.\+core.\+primer3.\+Hairpin\+Kmer\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ac75c6fb9a6ad5bee5f6e5cab1f2e8df1}{Hairpin\+Kmer} (String kmer, int relative\+Start, int relative\+End)
+\item 
+\hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a50ea9762f8f70ad429b48731cfb7578a}{Hairpin\+Kmer} (String kmer, int relative\+Start, int relative\+End, Map$<$ String, Double $>$ mir\+Lookup, Set$<$ String $>$ lookup2, Set$<$ String $>$ rc\+Lookup2)
+\item 
+void \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a3e6a23489b9deb0774f03bcb42738439}{add\+Transcript} (\hyperlink{classbroad_1_1pda_1_1rnai_1_1_r_n_ai_gene_annotation}{R\+N\+Ai\+Gene\+Annotation} transcript)
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1rnai_1_1_r_n_ai_gene_annotation}{R\+N\+Ai\+Gene\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a9565c3976f7cb63bb06b2ff488f60e29}{get\+Transcripts} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_aad510bc4bf2090b5d528105f223101a9}{set\+Percent\+Variants\+Covered} (double percent)
+\item 
+double \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a2c34bc14ef01361fe29d89f287ba937e}{get\+Percent\+Variants\+Covered} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a95de1ea0f84761e1ddd1550815d5d026}{get\+Kmer\+Sequence} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_addcf0acb79aed88e1534f13b138856f4}{get\+Kmer\+Start\+Position} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a698c1efd7c65b2a97fb22ee4ce3e8ba3}{get\+Kmer\+End\+Position} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a41cdc00d4ed4473e37c7ee28020e6680}{get\+R\+S8\+Score} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ab743db5421aed53935c4bc5ff9183012}{get\+Original\+Score} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ab176e0652dfb5364e98aa377c38789b1}{get\+Mir\+Score} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a94a68e49d68979288bb6eb0ef8d8984b}{compare\+To} (\hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer}{Hairpin\+Kmer} kmer)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a6c5ce386d481e633b2d010ea8585b6c5}{set\+R\+S8\+Score} (double score)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a294ae5418fc2bd6cbbeb105147e0c157}{set\+Original\+Score} (double score)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a7c4b98cf635f1314ad769248e0aaa1bd}{set\+Mir\+Score} (double score)
+\item 
+void \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a3df2b6875a5496c8447a3f389d173d7a}{set\+Blast\+Hit} (boolean b)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a6137c907877131fdc99e2ac9e29d5c57}{get\+Blast\+Hit} ()
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} $>$ \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a78a3c96c2b34cc37b558f390512a074c}{get\+Relative\+Positions} (\hyperlink{classbroad_1_1pda_1_1rnai_1_1_r_n_ai_gene_annotation}{R\+N\+Ai\+Gene\+Annotation} transcript)  throws Search\+Exception 
+\item 
+int \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ae6410252588bf4ba7a0d87f866ee9b4c}{get\+Overlap} (\hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer}{Hairpin\+Kmer} hp)
+\item 
+double \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a1fc153d6348e1a2f959d230b005c3f04}{get\+Percent\+G\+C} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ada34732d5709df1afba5b4064bd0353a}{max\+Self\+Complementarity} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ac75c6fb9a6ad5bee5f6e5cab1f2e8df1}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!Hairpin\+Kmer@{Hairpin\+Kmer}}
+\index{Hairpin\+Kmer@{Hairpin\+Kmer}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{Hairpin\+Kmer}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+primer3.\+Hairpin\+Kmer.\+Hairpin\+Kmer (
+\begin{DoxyParamCaption}
+\item[{String}]{kmer, }
+\item[{int}]{relative\+Start, }
+\item[{int}]{relative\+End}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ac75c6fb9a6ad5bee5f6e5cab1f2e8df1}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a50ea9762f8f70ad429b48731cfb7578a}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!Hairpin\+Kmer@{Hairpin\+Kmer}}
+\index{Hairpin\+Kmer@{Hairpin\+Kmer}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{Hairpin\+Kmer}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+primer3.\+Hairpin\+Kmer.\+Hairpin\+Kmer (
+\begin{DoxyParamCaption}
+\item[{String}]{kmer, }
+\item[{int}]{relative\+Start, }
+\item[{int}]{relative\+End, }
+\item[{Map$<$ String, Double $>$}]{mir\+Lookup, }
+\item[{Set$<$ String $>$}]{lookup2, }
+\item[{Set$<$ String $>$}]{rc\+Lookup2}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a50ea9762f8f70ad429b48731cfb7578a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a3e6a23489b9deb0774f03bcb42738439}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!add\+Transcript@{add\+Transcript}}
+\index{add\+Transcript@{add\+Transcript}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{add\+Transcript}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+primer3.\+Hairpin\+Kmer.\+add\+Transcript (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+N\+Ai\+Gene\+Annotation}}]{transcript}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a3e6a23489b9deb0774f03bcb42738439}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a94a68e49d68979288bb6eb0ef8d8984b}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!compare\+To@{compare\+To}}
+\index{compare\+To@{compare\+To}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{compare\+To}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+primer3.\+Hairpin\+Kmer.\+compare\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Hairpin\+Kmer}}]{kmer}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a94a68e49d68979288bb6eb0ef8d8984b}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a6137c907877131fdc99e2ac9e29d5c57}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Blast\+Hit@{get\+Blast\+Hit}}
+\index{get\+Blast\+Hit@{get\+Blast\+Hit}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Blast\+Hit}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Blast\+Hit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a6137c907877131fdc99e2ac9e29d5c57}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a698c1efd7c65b2a97fb22ee4ce3e8ba3}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Kmer\+End\+Position@{get\+Kmer\+End\+Position}}
+\index{get\+Kmer\+End\+Position@{get\+Kmer\+End\+Position}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Kmer\+End\+Position}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Kmer\+End\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a698c1efd7c65b2a97fb22ee4ce3e8ba3}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a95de1ea0f84761e1ddd1550815d5d026}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Kmer\+Sequence@{get\+Kmer\+Sequence}}
+\index{get\+Kmer\+Sequence@{get\+Kmer\+Sequence}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Kmer\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Kmer\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a95de1ea0f84761e1ddd1550815d5d026}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_addcf0acb79aed88e1534f13b138856f4}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Kmer\+Start\+Position@{get\+Kmer\+Start\+Position}}
+\index{get\+Kmer\+Start\+Position@{get\+Kmer\+Start\+Position}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Kmer\+Start\+Position}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Kmer\+Start\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_addcf0acb79aed88e1534f13b138856f4}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ab176e0652dfb5364e98aa377c38789b1}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Mir\+Score@{get\+Mir\+Score}}
+\index{get\+Mir\+Score@{get\+Mir\+Score}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Mir\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Mir\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ab176e0652dfb5364e98aa377c38789b1}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ab743db5421aed53935c4bc5ff9183012}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Original\+Score@{get\+Original\+Score}}
+\index{get\+Original\+Score@{get\+Original\+Score}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Original\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Original\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ab743db5421aed53935c4bc5ff9183012}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ae6410252588bf4ba7a0d87f866ee9b4c}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Overlap@{get\+Overlap}}
+\index{get\+Overlap@{get\+Overlap}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Overlap (
+\begin{DoxyParamCaption}
+\item[{{\bf Hairpin\+Kmer}}]{hp}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ae6410252588bf4ba7a0d87f866ee9b4c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a1fc153d6348e1a2f959d230b005c3f04}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Percent\+G\+C@{get\+Percent\+G\+C}}
+\index{get\+Percent\+G\+C@{get\+Percent\+G\+C}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Percent\+G\+C}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Percent\+G\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a1fc153d6348e1a2f959d230b005c3f04}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a2c34bc14ef01361fe29d89f287ba937e}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Percent\+Variants\+Covered@{get\+Percent\+Variants\+Covered}}
+\index{get\+Percent\+Variants\+Covered@{get\+Percent\+Variants\+Covered}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Percent\+Variants\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Percent\+Variants\+Covered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a2c34bc14ef01361fe29d89f287ba937e}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a78a3c96c2b34cc37b558f390512a074c}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Relative\+Positions@{get\+Relative\+Positions}}
+\index{get\+Relative\+Positions@{get\+Relative\+Positions}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Relative\+Positions}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence\+Region}$>$ broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Relative\+Positions (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+N\+Ai\+Gene\+Annotation}}]{transcript}
+\end{DoxyParamCaption}
+) throws {\bf Search\+Exception}}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a78a3c96c2b34cc37b558f390512a074c}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a41cdc00d4ed4473e37c7ee28020e6680}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+R\+S8\+Score@{get\+R\+S8\+Score}}
+\index{get\+R\+S8\+Score@{get\+R\+S8\+Score}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+R\+S8\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+R\+S8\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a41cdc00d4ed4473e37c7ee28020e6680}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a9565c3976f7cb63bb06b2ff488f60e29}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!get\+Transcripts@{get\+Transcripts}}
+\index{get\+Transcripts@{get\+Transcripts}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{get\+Transcripts}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf R\+N\+Ai\+Gene\+Annotation}$>$ broad.\+core.\+primer3.\+Hairpin\+Kmer.\+get\+Transcripts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a9565c3976f7cb63bb06b2ff488f60e29}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ada34732d5709df1afba5b4064bd0353a}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!max\+Self\+Complementarity@{max\+Self\+Complementarity}}
+\index{max\+Self\+Complementarity@{max\+Self\+Complementarity}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{max\+Self\+Complementarity}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+primer3.\+Hairpin\+Kmer.\+max\+Self\+Complementarity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_ada34732d5709df1afba5b4064bd0353a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a3df2b6875a5496c8447a3f389d173d7a}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!set\+Blast\+Hit@{set\+Blast\+Hit}}
+\index{set\+Blast\+Hit@{set\+Blast\+Hit}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{set\+Blast\+Hit}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+primer3.\+Hairpin\+Kmer.\+set\+Blast\+Hit (
+\begin{DoxyParamCaption}
+\item[{boolean}]{b}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a3df2b6875a5496c8447a3f389d173d7a}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a7c4b98cf635f1314ad769248e0aaa1bd}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!set\+Mir\+Score@{set\+Mir\+Score}}
+\index{set\+Mir\+Score@{set\+Mir\+Score}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{set\+Mir\+Score}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+primer3.\+Hairpin\+Kmer.\+set\+Mir\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a7c4b98cf635f1314ad769248e0aaa1bd}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a294ae5418fc2bd6cbbeb105147e0c157}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!set\+Original\+Score@{set\+Original\+Score}}
+\index{set\+Original\+Score@{set\+Original\+Score}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{set\+Original\+Score}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+primer3.\+Hairpin\+Kmer.\+set\+Original\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a294ae5418fc2bd6cbbeb105147e0c157}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_aad510bc4bf2090b5d528105f223101a9}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!set\+Percent\+Variants\+Covered@{set\+Percent\+Variants\+Covered}}
+\index{set\+Percent\+Variants\+Covered@{set\+Percent\+Variants\+Covered}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{set\+Percent\+Variants\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+primer3.\+Hairpin\+Kmer.\+set\+Percent\+Variants\+Covered (
+\begin{DoxyParamCaption}
+\item[{double}]{percent}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_aad510bc4bf2090b5d528105f223101a9}
+\hypertarget{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a6c5ce386d481e633b2d010ea8585b6c5}{\index{broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}!set\+R\+S8\+Score@{set\+R\+S8\+Score}}
+\index{set\+R\+S8\+Score@{set\+R\+S8\+Score}!broad\+::core\+::primer3\+::\+Hairpin\+Kmer@{broad\+::core\+::primer3\+::\+Hairpin\+Kmer}}
+\subsubsection[{set\+R\+S8\+Score}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+primer3.\+Hairpin\+Kmer.\+set\+R\+S8\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1primer3_1_1_hairpin_kmer_a6c5ce386d481e633b2d010ea8585b6c5}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/primer3/\hyperlink{_hairpin_kmer_8java}{Hairpin\+Kmer.\+java}\end{DoxyCompactItemize}

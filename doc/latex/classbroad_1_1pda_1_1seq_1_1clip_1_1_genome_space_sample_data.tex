@@ -1,0 +1,99 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data}{\section{broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data}\index{broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data@{broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data\+:
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_adc0e201ce593f6d21b1f7b32c907f6a5}{Genome\+Space\+Sample\+Data} (String bam\+File, String chr\+Size\+File, Map$<$ String, Collection$<$ Gene $>$$>$ genes, double expression\+Cutoff, boolean fully\+Contained)  throws I\+O\+Exception 
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_afe48c74821821d5bdc1feb0dce339646}{is\+Expressed} (Gene gene)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_ad0f782f3334827febea9c93e01878ae6}{get\+Gene\+Pval} (Gene gene)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_adc0e201ce593f6d21b1f7b32c907f6a5}{\index{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data}!Genome\+Space\+Sample\+Data@{Genome\+Space\+Sample\+Data}}
+\index{Genome\+Space\+Sample\+Data@{Genome\+Space\+Sample\+Data}!broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data}}
+\subsubsection[{Genome\+Space\+Sample\+Data}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data.\+Genome\+Space\+Sample\+Data (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{String}]{chr\+Size\+File, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{double}]{expression\+Cutoff, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_adc0e201ce593f6d21b1f7b32c907f6a5}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Bam alignment file \\
+\hline
+{\em chr\+Size\+File} & Chromosome size file \\
+\hline
+{\em genes} & Genes by chromosome \\
+\hline
+{\em window} & Window size \\
+\hline
+{\em step} & Step size \\
+\hline
+{\em expression\+Cutoff} & Genome wide scan P value cutoff for expression \\
+\hline
+{\em fully\+Contained} & Count fully contained reads only \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_ad0f782f3334827febea9c93e01878ae6}{\index{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data}!get\+Gene\+Pval@{get\+Gene\+Pval}}
+\index{get\+Gene\+Pval@{get\+Gene\+Pval}!broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data}}
+\subsubsection[{get\+Gene\+Pval}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data.\+get\+Gene\+Pval (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_ad0f782f3334827febea9c93e01878ae6}
+Get genome wide scan P value of number of fragments mapping to the gene Get score from cache or calculate and cache score 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scan P value of the number of fragments mapping to the gene 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_afe48c74821821d5bdc1feb0dce339646}{\index{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data}!is\+Expressed@{is\+Expressed}}
+\index{is\+Expressed@{is\+Expressed}!broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Genome\+Space\+Sample\+Data}}
+\subsubsection[{is\+Expressed}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+clip.\+Genome\+Space\+Sample\+Data.\+is\+Expressed (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_genome_space_sample_data_afe48c74821821d5bdc1feb0dce339646}
+Whether the gene is significantly expressed genome wide 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the gene is expressed at the given significance level 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/clip/\hyperlink{clip_2_genome_space_sample_data_8java}{Genome\+Space\+Sample\+Data.\+java}\end{DoxyCompactItemize}

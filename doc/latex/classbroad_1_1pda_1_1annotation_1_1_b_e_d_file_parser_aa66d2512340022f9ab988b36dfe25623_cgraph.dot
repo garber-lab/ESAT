@@ -1,0 +1,9 @@
+digraph "broad.pda.annotation.BEDFileParser.writeBEDWithScores"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.annotation.BEDFile\lParser.writeBEDWithScores",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.annotation.BEDFile\lParser.writeBED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a82d1c3ff1719b420ae996047497598d2"];
+}

@@ -1,0 +1,15 @@
+digraph "umms.core.model.score.NewRatioScore.getNumeratorRegionTotal"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.New\lRatioScore.getNumeratorRegionTotal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.model.score.New\lRatioScore.getRegionNumeratorRPKM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#a26a42d5b27ecffe6bc7be64b5986d8fb"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.model.score.New\lRatioScore.getRegionRatio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#a7d5afcbe79df879267e40808def116e9"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.model.score.New\lRatioScore.getLog2RegionRatio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#ab9b35ce818f5f17c1bdf64a60610dd82"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.model.score.New\lRatioScore.toString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#ae8767f8a4d1aa3613992cb4f43119669"];
+}

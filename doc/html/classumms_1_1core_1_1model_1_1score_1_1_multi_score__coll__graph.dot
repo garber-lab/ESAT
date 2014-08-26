@@ -1,0 +1,32 @@
+digraph "umms.core.model.score.MultiScore"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.Multi\lScore",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.model.score.Count\lScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.model.score.Window\lScore.AbstractWindowScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_window_score_1_1_abstract_window_score.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.model.score.Window\lScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1model_1_1score_1_1_window_score.html"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" annotation" ,fontname="Helvetica"];
+  Node5 [label="umms.core.annotation.Annotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Comparable\< Annotation \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Comparable\< CountScore \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger" ,fontname="Helvetica"];
+  Node8 [label="Logger",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ctrlModel\nsampleModel" ,fontname="Helvetica"];
+  Node9 [label="umms.core.model.Alignment\lModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="AbstractAnnotationCollection\l\< Alignment \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger" ,fontname="Helvetica"];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" coordinateSpace" ,fontname="Helvetica"];
+  Node11 [label="umms.core.coordinatesystem.\lCoordinateSpace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space.html"];
+  Node12 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" readFilters" ,fontname="Helvetica"];
+  Node12 [label="Collection\< Predicate\l\< umms.core.alignment.Alignment \> \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node13 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" reader" ,fontname="Helvetica"];
+  Node13 [label="umms.core.readers.Paired\lEndReader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1readers_1_1_paired_end_reader.html"];
+}

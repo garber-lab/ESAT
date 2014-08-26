@@ -1,0 +1,18 @@
+digraph "broad.core.multiplealignment.MAFAlignment"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lMAFAlignment",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.multiplealignment.\lMultipleAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" header" ,fontname="Helvetica"];
+  Node3 [label="broad.core.multiplealignment.\lMAFAlignment.MAFHeader",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" otherVariables" ,fontname="Helvetica"];
+  Node4 [label="Hashtable\< String,\l String \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" alignment" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger" ,fontname="Helvetica"];
+  Node5 [label="Logger",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" index" ,fontname="Helvetica"];
+  Node6 [label="IntervalTree\< Long \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

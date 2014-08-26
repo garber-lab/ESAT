@@ -1,0 +1,148 @@
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader}{\section{broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader Class Reference}
+\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader}\index{broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader@{broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader\+:
+
+
+Collaboration diagram for broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_aceab6b49722b6ea070e0e89dcc6e729f}{S\+A\+M\+Paired\+End\+File\+Reader} (final File file)
+\item 
+Closeable\+Iterator$<$ Alignment $>$ \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ac5a42e248431b503fb9e03126fb688ef}{iterator} ()
+\item 
+Closeable\+Iterator$<$ S\+A\+M\+Record $>$ \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a445a2860d8414157045797d3a79fd057}{get\+S\+A\+M\+Record\+Iterator} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a39580aacae64bebfdad06b166388c554}{close} ()
+\item 
+S\+A\+M\+File\+Reader \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ab3636dbaeb6c8f851d60084603b30907}{get\+Reader} ()
+\item 
+Closeable\+Iterator$<$ Alignment $>$ \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ab533cac8d250a0054bca6f862830cd52}{query} (String sequence, int start, int end, boolean contained)
+\item 
+S\+A\+M\+File\+Header \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_aebc7516a7202903377c4e58b0b75ed33}{get\+Header} ()
+\item 
+Set$<$ String $>$ \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a1412dc9e8408dcbc581ca071488e53b5}{get\+Sequence\+Names} ()
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_afbc47f2e30cc5e2de8b42450005f521f}{has\+Index} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static S\+A\+M\+Record \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ae86af5872ad93d8a8dcb34e3fa03510a}{convert\+To\+Paired\+End\+Fragment} (S\+A\+M\+Record rec)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_abd20642531b0de318293361369dc068c}{M\+A\+X\+\_\+\+I\+N\+S\+E\+R\+T} = 2000
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz Modeled after the Picard S\+A\+M\+File\+Reader Currently this class does not just extend the Picard S\+A\+M\+File\+Reader because that class has a lot more functionality that would be a pain to implement in the paired-\/end format.
+\end{DoxyAuthor}
+Also it's trying to accommodate iterators of both S\+A\+M\+Records and Alignments to be compatible with Scripture/\+I\+G\+V. Annoying.
+
+Note\+: With move to Scripture\+V2, this class was replaced with nextgen.\+core.\+writers.\+Paired\+End\+Writer and nextgen.\+core.\+readers.\+Paired\+End\+Reader 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_aceab6b49722b6ea070e0e89dcc6e729f}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!S\+A\+M\+Paired\+End\+File\+Reader@{S\+A\+M\+Paired\+End\+File\+Reader}}
+\index{S\+A\+M\+Paired\+End\+File\+Reader@{S\+A\+M\+Paired\+End\+File\+Reader}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{S\+A\+M\+Paired\+End\+File\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+S\+A\+M\+Paired\+End\+File\+Reader (
+\begin{DoxyParamCaption}
+\item[{final File}]{file}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_aceab6b49722b6ea070e0e89dcc6e729f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a39580aacae64bebfdad06b166388c554}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!close@{close}}
+\index{close@{close}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a39580aacae64bebfdad06b166388c554}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ae86af5872ad93d8a8dcb34e3fa03510a}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!convert\+To\+Paired\+End\+Fragment@{convert\+To\+Paired\+End\+Fragment}}
+\index{convert\+To\+Paired\+End\+Fragment@{convert\+To\+Paired\+End\+Fragment}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{convert\+To\+Paired\+End\+Fragment}]{\setlength{\rightskip}{0pt plus 5cm}static S\+A\+M\+Record broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+convert\+To\+Paired\+End\+Fragment (
+\begin{DoxyParamCaption}
+\item[{S\+A\+M\+Record}]{rec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ae86af5872ad93d8a8dcb34e3fa03510a}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_aebc7516a7202903377c4e58b0b75ed33}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{get\+Header}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+M\+File\+Header broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_aebc7516a7202903377c4e58b0b75ed33}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ab3636dbaeb6c8f851d60084603b30907}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!get\+Reader@{get\+Reader}}
+\index{get\+Reader@{get\+Reader}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{get\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+M\+File\+Reader broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+get\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ab3636dbaeb6c8f851d60084603b30907}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a445a2860d8414157045797d3a79fd057}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!get\+S\+A\+M\+Record\+Iterator@{get\+S\+A\+M\+Record\+Iterator}}
+\index{get\+S\+A\+M\+Record\+Iterator@{get\+S\+A\+M\+Record\+Iterator}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{get\+S\+A\+M\+Record\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<$S\+A\+M\+Record$>$ broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+get\+S\+A\+M\+Record\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a445a2860d8414157045797d3a79fd057}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a1412dc9e8408dcbc581ca071488e53b5}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!get\+Sequence\+Names@{get\+Sequence\+Names}}
+\index{get\+Sequence\+Names@{get\+Sequence\+Names}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{get\+Sequence\+Names}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$String$>$ broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+get\+Sequence\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_a1412dc9e8408dcbc581ca071488e53b5}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_afbc47f2e30cc5e2de8b42450005f521f}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!has\+Index@{has\+Index}}
+\index{has\+Index@{has\+Index}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{has\+Index}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+has\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_afbc47f2e30cc5e2de8b42450005f521f}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ac5a42e248431b503fb9e03126fb688ef}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!iterator@{iterator}}
+\index{iterator@{iterator}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<$Alignment$>$ broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ac5a42e248431b503fb9e03126fb688ef}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ab533cac8d250a0054bca6f862830cd52}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!query@{query}}
+\index{query@{query}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<$Alignment$>$ broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+query (
+\begin{DoxyParamCaption}
+\item[{String}]{sequence, }
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{boolean}]{contained}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_ab533cac8d250a0054bca6f862830cd52}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_abd20642531b0de318293361369dc068c}{\index{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}!M\+A\+X\+\_\+\+I\+N\+S\+E\+R\+T@{M\+A\+X\+\_\+\+I\+N\+S\+E\+R\+T}}
+\index{M\+A\+X\+\_\+\+I\+N\+S\+E\+R\+T@{M\+A\+X\+\_\+\+I\+N\+S\+E\+R\+T}!broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader@{broad\+::pda\+::samtools\+::\+S\+A\+M\+Paired\+End\+File\+Reader}}
+\subsubsection[{M\+A\+X\+\_\+\+I\+N\+S\+E\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int broad.\+pda.\+samtools.\+S\+A\+M\+Paired\+End\+File\+Reader.\+M\+A\+X\+\_\+\+I\+N\+S\+E\+R\+T = 2000\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1samtools_1_1_s_a_m_paired_end_file_reader_abd20642531b0de318293361369dc068c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/samtools/\hyperlink{_s_a_m_paired_end_file_reader_8java}{S\+A\+M\+Paired\+End\+File\+Reader.\+java}\end{DoxyCompactItemize}

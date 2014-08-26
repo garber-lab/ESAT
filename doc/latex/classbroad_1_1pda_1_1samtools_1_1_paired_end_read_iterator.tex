@@ -1,0 +1,83 @@
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator}{\section{broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator Class Reference}
+\label{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator}\index{broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator@{broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator\+:
+
+
+Collaboration diagram for broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a21df478249257e363685314b73d40ee1}{Paired\+End\+Read\+Iterator} (S\+A\+M\+File\+Reader reader)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a5f08593562a867b63ab262fbda5ed6e7}{has\+Next} ()
+\item 
+Pair$<$ S\+A\+M\+Record $>$ \hyperlink{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_ac17685b591b5d334cfb2c17adaf97c08}{next} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a680e5116d46574fe21e8a0f9621fdcb2}{close} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a4029eb2bd2148a3d626ac903450020d6}{remove} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_afa19ac960a85e684e8f5be020a5cf479}{get\+Single\+Reads\+Skipped} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz This class iterators over a standard format S\+A\+M or B\+A\+M file, but gives an iterator over paired reads with the same name. Does not return reads that do not have a mate. 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a21df478249257e363685314b73d40ee1}{\index{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}!Paired\+End\+Read\+Iterator@{Paired\+End\+Read\+Iterator}}
+\index{Paired\+End\+Read\+Iterator@{Paired\+End\+Read\+Iterator}!broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}}
+\subsubsection[{Paired\+End\+Read\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator.\+Paired\+End\+Read\+Iterator (
+\begin{DoxyParamCaption}
+\item[{S\+A\+M\+File\+Reader}]{reader}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a21df478249257e363685314b73d40ee1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a680e5116d46574fe21e8a0f9621fdcb2}{\index{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}!close@{close}}
+\index{close@{close}!broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator.\+close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a680e5116d46574fe21e8a0f9621fdcb2}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_afa19ac960a85e684e8f5be020a5cf479}{\index{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}!get\+Single\+Reads\+Skipped@{get\+Single\+Reads\+Skipped}}
+\index{get\+Single\+Reads\+Skipped@{get\+Single\+Reads\+Skipped}!broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}}
+\subsubsection[{get\+Single\+Reads\+Skipped}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator.\+get\+Single\+Reads\+Skipped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_afa19ac960a85e684e8f5be020a5cf479}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a5f08593562a867b63ab262fbda5ed6e7}{\index{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}!has\+Next@{has\+Next}}
+\index{has\+Next@{has\+Next}!broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}}
+\subsubsection[{has\+Next}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator.\+has\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a5f08593562a867b63ab262fbda5ed6e7}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_ac17685b591b5d334cfb2c17adaf97c08}{\index{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}!next@{next}}
+\index{next@{next}!broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}Pair$<$S\+A\+M\+Record$>$ broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator.\+next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_ac17685b591b5d334cfb2c17adaf97c08}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a4029eb2bd2148a3d626ac903450020d6}{\index{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}!remove@{remove}}
+\index{remove@{remove}!broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator@{broad\+::pda\+::samtools\+::\+Paired\+End\+Read\+Iterator}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+samtools.\+Paired\+End\+Read\+Iterator.\+remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1samtools_1_1_paired_end_read_iterator_a4029eb2bd2148a3d626ac903450020d6}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/samtools/\hyperlink{_paired_end_read_iterator_8java}{Paired\+End\+Read\+Iterator.\+java}\end{DoxyCompactItemize}

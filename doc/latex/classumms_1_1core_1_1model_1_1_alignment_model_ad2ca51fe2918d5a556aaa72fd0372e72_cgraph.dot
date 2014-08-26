@@ -1,0 +1,17 @@
+digraph "umms.core.model.AlignmentModel.getRefSequenceLambda"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.Alignment\lModel.getRefSequenceLambda",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.Alignment\lModel.computeGlobalStats",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#ae1bdf3b93c959ea459a07c8b781913c9"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.coordinatesystem.\lCoordinateSpace.getLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space.html#a5a1a16d1a6043ea09efe1084b5a9c84c"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.coordinatesystem.\lCoordinateSpace.getReferenceNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space.html#ac00dc2e5986d067615d65301bc93a63b"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.model.Alignment\lModel.containsReference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a13cae6f7cc2b1c6830fa8adb2d410ee4"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.model.Alignment\lModel.getRefSequenceLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a3b33fe828a04581c1106d7179a1182a6"];
+}

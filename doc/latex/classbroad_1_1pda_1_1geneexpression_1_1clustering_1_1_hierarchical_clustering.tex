@@ -1,0 +1,132 @@
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering}{\section{broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering Class Reference}
+\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering}\index{broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering@{broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4a79fa62751a971d7f6e0671df21266e}{Hierarchical\+Clustering} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} data)
+\item 
+\hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_ac57f650bd84503e15ed4d0a80f3ad387}{Hierarchical\+Clustering} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} data1, Map$<$ String, Collection$<$ String $>$$>$ column\+Groups, Map$<$ String, Collection$<$ String $>$$>$ row\+Groups)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a7d0b43d95c1bf4d161c51462e13ade49}{write} (String save)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4b12cc4e37e5ea21f76aab5738c0cfbf}{set\+Cluster\+Distance\+Function} (\hyperlink{interfacebroad_1_1pda_1_1geneexpression_1_1clustering_1_1_cluster_distance_function}{Cluster\+Distance\+Function} distance\+Function)  throws Illegal\+Argument\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_abc3cb1d0ba472bbcee40bb151bc4b209}{set\+Cluster\+Distance\+Function} (String distance\+Function\+Name)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a8e710d388508dce2b03f6dc4dde37fdc}{set\+Linkage} (String linkage)  throws Illegal\+Argument\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a54cae450cf75f5336ea4175a061207c5}{cluster} (boolean cluster\+Row, boolean cluster\+Column)
+\item 
+\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_ad1e80a17182c37cd9689d8ab1514b7ab}{get\+Matrix} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4c13521bea7f9bbc7e76a40b9e6865c8}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception, Parse\+Exception
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4a79fa62751a971d7f6e0671df21266e}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!Hierarchical\+Clustering@{Hierarchical\+Clustering}}
+\index{Hierarchical\+Clustering@{Hierarchical\+Clustering}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{Hierarchical\+Clustering}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+Hierarchical\+Clustering (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{data}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4a79fa62751a971d7f6e0671df21266e}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_ac57f650bd84503e15ed4d0a80f3ad387}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!Hierarchical\+Clustering@{Hierarchical\+Clustering}}
+\index{Hierarchical\+Clustering@{Hierarchical\+Clustering}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{Hierarchical\+Clustering}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+Hierarchical\+Clustering (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{data1, }
+\item[{Map$<$ String, Collection$<$ String $>$$>$}]{column\+Groups, }
+\item[{Map$<$ String, Collection$<$ String $>$$>$}]{row\+Groups}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_ac57f650bd84503e15ed4d0a80f3ad387}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a54cae450cf75f5336ea4175a061207c5}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!cluster@{cluster}}
+\index{cluster@{cluster}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{cluster}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+cluster (
+\begin{DoxyParamCaption}
+\item[{boolean}]{cluster\+Row, }
+\item[{boolean}]{cluster\+Column}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a54cae450cf75f5336ea4175a061207c5}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_ad1e80a17182c37cd9689d8ab1514b7ab}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{get\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+With\+Headers} broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+get\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_ad1e80a17182c37cd9689d8ab1514b7ab}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4c13521bea7f9bbc7e76a40b9e6865c8}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!main@{main}}
+\index{main@{main}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4c13521bea7f9bbc7e76a40b9e6865c8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4b12cc4e37e5ea21f76aab5738c0cfbf}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!set\+Cluster\+Distance\+Function@{set\+Cluster\+Distance\+Function}}
+\index{set\+Cluster\+Distance\+Function@{set\+Cluster\+Distance\+Function}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{set\+Cluster\+Distance\+Function}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+set\+Cluster\+Distance\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Cluster\+Distance\+Function}}]{distance\+Function}
+\end{DoxyParamCaption}
+) throws Illegal\+Argument\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a4b12cc4e37e5ea21f76aab5738c0cfbf}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_abc3cb1d0ba472bbcee40bb151bc4b209}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!set\+Cluster\+Distance\+Function@{set\+Cluster\+Distance\+Function}}
+\index{set\+Cluster\+Distance\+Function@{set\+Cluster\+Distance\+Function}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{set\+Cluster\+Distance\+Function}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+set\+Cluster\+Distance\+Function (
+\begin{DoxyParamCaption}
+\item[{String}]{distance\+Function\+Name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_abc3cb1d0ba472bbcee40bb151bc4b209}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a8e710d388508dce2b03f6dc4dde37fdc}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!set\+Linkage@{set\+Linkage}}
+\index{set\+Linkage@{set\+Linkage}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{set\+Linkage}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+set\+Linkage (
+\begin{DoxyParamCaption}
+\item[{String}]{linkage}
+\end{DoxyParamCaption}
+) throws Illegal\+Argument\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a8e710d388508dce2b03f6dc4dde37fdc}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a7d0b43d95c1bf4d161c51462e13ade49}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}!write@{write}}
+\index{write@{write}!broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering@{broad\+::pda\+::geneexpression\+::clustering\+::\+Hierarchical\+Clustering}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Hierarchical\+Clustering.\+write (
+\begin{DoxyParamCaption}
+\item[{String}]{save}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_hierarchical_clustering_a7d0b43d95c1bf4d161c51462e13ade49}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/geneexpression/clustering/\hyperlink{_hierarchical_clustering_8java}{Hierarchical\+Clustering.\+java}\end{DoxyCompactItemize}

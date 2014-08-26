@@ -1,0 +1,320 @@
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader}{\section{umms.\+core.\+readers.\+Paired\+End\+Reader Class Reference}
+\label{classumms_1_1core_1_1readers_1_1_paired_end_reader}\index{umms.\+core.\+readers.\+Paired\+End\+Reader@{umms.\+core.\+readers.\+Paired\+End\+Reader}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Alignment\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_af2b50ac1dacc861de37aaa5a6c9f9bc3}{Paired\+End\+Reader} (File bam)
+\item 
+\hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a96ba61552e211e291175ea1ad4d5b298}{Paired\+End\+Reader} (File bam, Transcription\+Read read)
+\item 
+\hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a3697137ca20657cdb8e4e550e6eb334a}{Paired\+End\+Reader} (File bam, Transcription\+Read read, boolean fra)
+\item 
+Alignment\+Type \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a6ad57c4efb2f14b5639d384b39ef5ca9}{get\+Alignment\+Type} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_aaeab070b5abd537741ffcd9d3a51ed88}{set\+Fragment\+Flag} (boolean fra)
+\item 
+void \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a042b674540f796c0631213592b167448}{close} ()  throws I\+O\+Exception 
+\item 
+S\+A\+M\+File\+Header \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a0053947945b1d82abb79ab943c78e0e9}{get\+Header} ()
+\item 
+Set$<$ String $>$ \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a3126e03ea603485ecd7eb0f8dc3381a1}{get\+Sequence\+Names} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a4a619c059deea10d30eff2772cea317b}{has\+Index} ()
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_ab050bf528b5fe9e7b2011ba41d41e9cc}{iterator} ()
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_ae312b03d46913edc1082f184d47baf82}{query} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} a, boolean contained)
+\item 
+int \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_ae867912b0cab94b20481eee1eb5390b8}{get\+Ref\+Sequence\+Lengths} (String chr)
+\item 
+Map$<$ String, Integer $>$ \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a43aff465a170901ce11a079f921065a1}{get\+Ref\+Sequence\+Lengths} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Alignment\+Type \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_acf45dbe8546d2d0b09d778ded28e3ae6}{get\+Alignment\+Type} (S\+A\+M\+File\+Header header)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a90d2c33b061d7e411d931933247ab9c3}{is\+Paired\+End\+Format} (String file\+To\+Check)
+\item 
+static String \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_afaaf969aed6aaa75928ba7e6e17586e7}{get\+Paired\+End\+File} (String file\+To\+Check)
+\item 
+static String \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a46eda7e5fccfc727a3164ced595a9384}{get\+Or\+Create\+Paired\+End\+File} (String file\+To\+Check, Transcription\+Read txn\+Read)
+\item 
+static void \hyperlink{classumms_1_1core_1_1readers_1_1_paired_end_reader_a25032e390568784979e93728bdd69fcd}{main} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_af2b50ac1dacc861de37aaa5a6c9f9bc3}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!Paired\+End\+Reader@{Paired\+End\+Reader}}
+\index{Paired\+End\+Reader@{Paired\+End\+Reader}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{Paired\+End\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+readers.\+Paired\+End\+Reader.\+Paired\+End\+Reader (
+\begin{DoxyParamCaption}
+\item[{File}]{bam}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_af2b50ac1dacc861de37aaa5a6c9f9bc3}
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a96ba61552e211e291175ea1ad4d5b298}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!Paired\+End\+Reader@{Paired\+End\+Reader}}
+\index{Paired\+End\+Reader@{Paired\+End\+Reader}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{Paired\+End\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+readers.\+Paired\+End\+Reader.\+Paired\+End\+Reader (
+\begin{DoxyParamCaption}
+\item[{File}]{bam, }
+\item[{Transcription\+Read}]{read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a96ba61552e211e291175ea1ad4d5b298}
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a3697137ca20657cdb8e4e550e6eb334a}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!Paired\+End\+Reader@{Paired\+End\+Reader}}
+\index{Paired\+End\+Reader@{Paired\+End\+Reader}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{Paired\+End\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+readers.\+Paired\+End\+Reader.\+Paired\+End\+Reader (
+\begin{DoxyParamCaption}
+\item[{File}]{bam, }
+\item[{Transcription\+Read}]{read, }
+\item[{boolean}]{fra}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a3697137ca20657cdb8e4e550e6eb334a}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a042b674540f796c0631213592b167448}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!close@{close}}
+\index{close@{close}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+readers.\+Paired\+End\+Reader.\+close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a042b674540f796c0631213592b167448}
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_acf45dbe8546d2d0b09d778ded28e3ae6}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Alignment\+Type@{get\+Alignment\+Type}}
+\index{get\+Alignment\+Type@{get\+Alignment\+Type}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Alignment\+Type}]{\setlength{\rightskip}{0pt plus 5cm}static Alignment\+Type umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Alignment\+Type (
+\begin{DoxyParamCaption}
+\item[{S\+A\+M\+File\+Header}]{header}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_acf45dbe8546d2d0b09d778ded28e3ae6}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a6ad57c4efb2f14b5639d384b39ef5ca9}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Alignment\+Type@{get\+Alignment\+Type}}
+\index{get\+Alignment\+Type@{get\+Alignment\+Type}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Alignment\+Type}]{\setlength{\rightskip}{0pt plus 5cm}Alignment\+Type umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Alignment\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a6ad57c4efb2f14b5639d384b39ef5ca9}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a0053947945b1d82abb79ab943c78e0e9}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Header}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+M\+File\+Header umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a0053947945b1d82abb79ab943c78e0e9}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a46eda7e5fccfc727a3164ced595a9384}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Or\+Create\+Paired\+End\+File@{get\+Or\+Create\+Paired\+End\+File}}
+\index{get\+Or\+Create\+Paired\+End\+File@{get\+Or\+Create\+Paired\+End\+File}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Or\+Create\+Paired\+End\+File}]{\setlength{\rightskip}{0pt plus 5cm}static String umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Or\+Create\+Paired\+End\+File (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+To\+Check, }
+\item[{Transcription\+Read}]{txn\+Read}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a46eda7e5fccfc727a3164ced595a9384}
+Finds a paired end file or creates one if it doesn't exist 
+\begin{DoxyParams}{Parameters}
+{\em file\+To\+Check} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_afaaf969aed6aaa75928ba7e6e17586e7}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Paired\+End\+File@{get\+Paired\+End\+File}}
+\index{get\+Paired\+End\+File@{get\+Paired\+End\+File}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Paired\+End\+File}]{\setlength{\rightskip}{0pt plus 5cm}static String umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Paired\+End\+File (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+To\+Check}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_afaaf969aed6aaa75928ba7e6e17586e7}
+Returns the file itself or the file plus the default
+\begin{DoxyCode}
+PAIRED\_END\_EXTENSION 
+\end{DoxyCode}
+ if either is in paired end format. If neither is in paired end format, returns null. 
+\begin{DoxyParams}{Parameters}
+{\em file\+To\+Check} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_ae867912b0cab94b20481eee1eb5390b8}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Ref\+Sequence\+Lengths@{get\+Ref\+Sequence\+Lengths}}
+\index{get\+Ref\+Sequence\+Lengths@{get\+Ref\+Sequence\+Lengths}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Ref\+Sequence\+Lengths}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Ref\+Sequence\+Lengths (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_ae867912b0cab94b20481eee1eb5390b8}
+Get the lengths of the reference sequences 
+\begin{DoxyParams}{Parameters}
+{\em chr} & the chromsoome to query size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map associating each reference name with sequence length 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a43aff465a170901ce11a079f921065a1}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Ref\+Sequence\+Lengths@{get\+Ref\+Sequence\+Lengths}}
+\index{get\+Ref\+Sequence\+Lengths@{get\+Ref\+Sequence\+Lengths}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Ref\+Sequence\+Lengths}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Integer$>$ umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Ref\+Sequence\+Lengths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a43aff465a170901ce11a079f921065a1}
+Get the lengths of the reference sequences \begin{DoxyReturn}{Returns}
+Map associating each reference name with sequence length 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a3126e03ea603485ecd7eb0f8dc3381a1}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!get\+Sequence\+Names@{get\+Sequence\+Names}}
+\index{get\+Sequence\+Names@{get\+Sequence\+Names}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{get\+Sequence\+Names}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$String$>$ umms.\+core.\+readers.\+Paired\+End\+Reader.\+get\+Sequence\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a3126e03ea603485ecd7eb0f8dc3381a1}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a4a619c059deea10d30eff2772cea317b}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!has\+Index@{has\+Index}}
+\index{has\+Index@{has\+Index}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{has\+Index}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+readers.\+Paired\+End\+Reader.\+has\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a4a619c059deea10d30eff2772cea317b}
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a90d2c33b061d7e411d931933247ab9c3}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!is\+Paired\+End\+Format@{is\+Paired\+End\+Format}}
+\index{is\+Paired\+End\+Format@{is\+Paired\+End\+Format}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{is\+Paired\+End\+Format}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+readers.\+Paired\+End\+Reader.\+is\+Paired\+End\+Format (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+To\+Check}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a90d2c33b061d7e411d931933247ab9c3}
+Returns
+\begin{DoxyCode}
+\textcolor{keyword}{true} 
+\end{DoxyCode}
+ if the given S\+A\+M file is in paired end format (has the mate\+Line) attribute. Will also check the file with the default extension. 
+\begin{DoxyParams}{Parameters}
+{\em file\+To\+Check} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_ab050bf528b5fe9e7b2011ba41d41e9cc}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!iterator@{iterator}}
+\index{iterator@{iterator}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+readers.\+Paired\+End\+Reader.\+iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_ab050bf528b5fe9e7b2011ba41d41e9cc}
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_a25032e390568784979e93728bdd69fcd}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!main@{main}}
+\index{main@{main}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+core.\+readers.\+Paired\+End\+Reader.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_a25032e390568784979e93728bdd69fcd}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_ae312b03d46913edc1082f184d47baf82}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!query@{query}}
+\index{query@{query}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+readers.\+Paired\+End\+Reader.\+query (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{a, }
+\item[{boolean}]{contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_ae312b03d46913edc1082f184d47baf82}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1readers_1_1_paired_end_reader_aaeab070b5abd537741ffcd9d3a51ed88}{\index{umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}!set\+Fragment\+Flag@{set\+Fragment\+Flag}}
+\index{set\+Fragment\+Flag@{set\+Fragment\+Flag}!umms\+::core\+::readers\+::\+Paired\+End\+Reader@{umms\+::core\+::readers\+::\+Paired\+End\+Reader}}
+\subsubsection[{set\+Fragment\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+readers.\+Paired\+End\+Reader.\+set\+Fragment\+Flag (
+\begin{DoxyParamCaption}
+\item[{boolean}]{fra}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1readers_1_1_paired_end_reader_aaeab070b5abd537741ffcd9d3a51ed88}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/readers/\hyperlink{_paired_end_reader_8java}{Paired\+End\+Reader.\+java}\end{DoxyCompactItemize}

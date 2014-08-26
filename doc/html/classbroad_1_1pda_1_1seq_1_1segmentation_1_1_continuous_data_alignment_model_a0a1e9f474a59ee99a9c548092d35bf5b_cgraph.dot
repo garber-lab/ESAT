@@ -1,0 +1,9 @@
+digraph "broad.pda.seq.segmentation.ContinuousDataAlignmentModel.getDataForGene"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.segmentation.\lContinuousDataAlignmentModel.get\lDataForGene",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.seq.segmentation.\lContinuousDataAlignmentModel.get\lCountsPerBp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_continuous_data_alignment_model.html#acd9c8501fd75af7cb102cd6886cbe15b"];
+}

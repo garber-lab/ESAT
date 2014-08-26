@@ -1,0 +1,21 @@
+digraph "umms.core.alignment.AbstractPairedEndAlignment.getFirstMate"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getFirstMate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getReadMates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#adeb9200fe5412ef288d4715b1622323c"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.alignment.Abstract\lPairedEndAlignment.setHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#aac3271f5fbb76f0150766972b37b3e91"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#a7c244aba0fae3e4a4affd9a2d018c888"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.alignment.Fragment\lAlignment.equals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_fragment_alignment.html#ab756a9084fafcf8a04cf91ae604daab4"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="umms.core.alignment.Fragment\lAlignment.hashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_fragment_alignment.html#a073d4dcb47e92fba08a8e4c719062359"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="umms.core.alignment.Paired\lReadAlignment.equals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_paired_read_alignment.html#ae4d531f72cc51dcf9845f958eadff207"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="umms.core.alignment.Paired\lReadAlignment.hashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_paired_read_alignment.html#a86b43049ea137bd9ed11490bfb35ab51"];
+}

@@ -1,0 +1,205 @@
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions}{\section{broad.\+core.\+sequence.\+Transcribed\+Regions Class Reference}
+\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions}\index{broad.\+core.\+sequence.\+Transcribed\+Regions@{broad.\+core.\+sequence.\+Transcribed\+Regions}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a1543ff9c85d58d2a8157e63b01edcede}{Transcribed\+Regions} (String genome\+Fasta, String bed\+File)  throws I\+O\+Exception 
+\item 
+Map$<$ String, Collection$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a90654b16eed66a82727aae8abe59587c}{get\+Genes} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_aeec2d82099da998442a46c749447fdad}{shift\+Position} (String chr, int pos, int offset)
+\item 
+Strand \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a065fbc2f6f4b0de5564df618b9ca8376}{get\+Orientation} (String chr, int pos)
+\item 
+char \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_ad930ec63439d92b88207511295100f82}{get\+Transcribed\+Base} (String chr, int pos, Strand strand)  throws I\+O\+Exception 
+\item 
+char \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a14f86661f3200488c758ba74caa9e0d3}{get\+Transcribed\+Base} (String chr, int pos)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a4792cac14f26c00b690a0a93a197f3c4}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a1543ff9c85d58d2a8157e63b01edcede}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}!Transcribed\+Regions@{Transcribed\+Regions}}
+\index{Transcribed\+Regions@{Transcribed\+Regions}!broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}}
+\subsubsection[{Transcribed\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Transcribed\+Regions.\+Transcribed\+Regions (
+\begin{DoxyParamCaption}
+\item[{String}]{genome\+Fasta, }
+\item[{String}]{bed\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a1543ff9c85d58d2a8157e63b01edcede}
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+Fasta} & Genome fasta file \\
+\hline
+{\em bed\+File} & Bed gene annotation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a90654b16eed66a82727aae8abe59587c}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}!get\+Genes@{get\+Genes}}
+\index{get\+Genes@{get\+Genes}!broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}}
+\subsubsection[{get\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<$Gene$>$ $>$ broad.\+core.\+sequence.\+Transcribed\+Regions.\+get\+Genes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a90654b16eed66a82727aae8abe59587c}
+Get the genes \begin{DoxyReturn}{Returns}
+Genes by chromosome 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a065fbc2f6f4b0de5564df618b9ca8376}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}}
+\subsubsection[{get\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}Strand broad.\+core.\+sequence.\+Transcribed\+Regions.\+get\+Orientation (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a065fbc2f6f4b0de5564df618b9ca8376}
+Get the transcribed orientation of the position based on the gene set Returns unknown if the position does not overlap a gene or strand is ambiguous 
+\begin{DoxyParams}{Parameters}
+{\em chr} & Chromosome \\
+\hline
+{\em pos} & Position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The orientation 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_ad930ec63439d92b88207511295100f82}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}!get\+Transcribed\+Base@{get\+Transcribed\+Base}}
+\index{get\+Transcribed\+Base@{get\+Transcribed\+Base}!broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}}
+\subsubsection[{get\+Transcribed\+Base}]{\setlength{\rightskip}{0pt plus 5cm}char broad.\+core.\+sequence.\+Transcribed\+Regions.\+get\+Transcribed\+Base (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{pos, }
+\item[{Strand}]{strand}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_ad930ec63439d92b88207511295100f82}
+Get the oriented transcribed base at the position based on orientation provided or based on orientation of overlapping exon if orientation provided is null 
+\begin{DoxyParams}{Parameters}
+{\em chr} & Chromosome \\
+\hline
+{\em pos} & Position \\
+\hline
+{\em strand} & Strand or null if get from annotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transcribed base 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a14f86661f3200488c758ba74caa9e0d3}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}!get\+Transcribed\+Base@{get\+Transcribed\+Base}}
+\index{get\+Transcribed\+Base@{get\+Transcribed\+Base}!broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}}
+\subsubsection[{get\+Transcribed\+Base}]{\setlength{\rightskip}{0pt plus 5cm}char broad.\+core.\+sequence.\+Transcribed\+Regions.\+get\+Transcribed\+Base (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a14f86661f3200488c758ba74caa9e0d3}
+Get the oriented transcribed base at the position based on orientation of overlapping exon 
+\begin{DoxyParams}{Parameters}
+{\em chr} & Chromosome \\
+\hline
+{\em pos} & Position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transcribed base 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a4792cac14f26c00b690a0a93a197f3c4}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}!main@{main}}
+\index{main@{main}!broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+sequence.\+Transcribed\+Regions.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_a4792cac14f26c00b690a0a93a197f3c4}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_aeec2d82099da998442a46c749447fdad}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}!shift\+Position@{shift\+Position}}
+\index{shift\+Position@{shift\+Position}!broad\+::core\+::sequence\+::\+Transcribed\+Regions@{broad\+::core\+::sequence\+::\+Transcribed\+Regions}}
+\subsubsection[{shift\+Position}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+sequence.\+Transcribed\+Regions.\+shift\+Position (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{pos, }
+\item[{int}]{offset}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_regions_aeec2d82099da998442a46c749447fdad}
+Shift a position along the direction of transcription If the shifted position is not in the same block as the original position, this method currently throws an exception Throws an exception if the position is not in any transcribed interval 
+\begin{DoxyParams}{Parameters}
+{\em chr} & Chromosome \\
+\hline
+{\em pos} & Original position \\
+\hline
+{\em offset} & Offset along direction of transcription (can be negative) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shifted position within the transcript 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/sequence/\hyperlink{_transcribed_regions_8java}{Transcribed\+Regions.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,402 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup}{\section{broad.\+pda.\+seq.\+clip.\+Pileup Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup}\index{broad.\+pda.\+seq.\+clip.\+Pileup@{broad.\+pda.\+seq.\+clip.\+Pileup}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+clip.\+Pileup\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a21189ad218d6b720b568c74b4270884d}{Pileup} (String bam\+File, String annotation\+Bed\+File, String subregion\+Bed\+File, String genome\+Fasta, Collection$<$ Predicate$<$ Alignment $>$$>$ read\+Filters)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_af08c5950bd4da328783f0d86f773b847}{Pileup} (String bam\+File, String fragment\+End\+Wig, String annotation\+Bed\+File, String subregion\+Bed\+File, String genome\+Fasta, String region\+Overlapper\+Count\+File, String peak\+Region\+Bed\+File, Collection$<$ Predicate$<$ Alignment $>$$>$ read\+Filters)  throws I\+O\+Exception 
+\item 
+Map$<$ Annotation, Collection\\*
+$<$ \hyperlink{classbroad_1_1core_1_1math_1_1_empirical_distribution}{Empirical\+Distribution} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a3192137e746edd357a296f5d823f8e2f}{get\+Shuffled\+Positions\+All\+Regions} (boolean fully\+Contained, Map$<$ String, Double $>$ nuc\+Probs, int num\+Permutations)
+\item 
+Map$<$ Annotation, Double $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a75369d564eda2373e41b0fd60451fda8}{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+All\+Regions\+Bam} (boolean fully\+Contained, Map$<$ String, Double $>$ nuc\+Probs, int num\+Permutations, boolean five\+Prime\+End)
+\item 
+Map$<$ Integer, Double $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a2f2ec59cc7fdb4ced9c11014070fa10a}{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+Wig} (Annotation region, boolean fully\+Contained, Map$<$ String, Double $>$ nuc\+Probs, int num\+Permutations)
+\item 
+Map$<$ Annotation, Map$<$ Integer, \\*
+Double $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_ae5bf54f9ea963c4d704bb7f2dd98c0ee}{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig} (boolean fully\+Contained, Map$<$ String, Double $>$ nuc\+Probs, int num\+Permutations)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_ac4e8a5dd5705c5e479d1ed70e1d1852f}{write\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig} (String out\+Table, String out\+Bed, double pval\+Cutoff\+For\+Bed, boolean fully\+Contained, Map$<$ String, Double $>$ nuc\+Probs, int num\+Permutations)  throws I\+O\+Exception 
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_af7726e161df33f1675b770110193078f}{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+Bam} (Annotation region, boolean fully\+Contained, Map$<$ String, Double $>$ nuc\+Probs, int num\+Permutations, boolean five\+Prime\+End)
+\item 
+Collection$<$ \hyperlink{classbroad_1_1core_1_1math_1_1_empirical_distribution}{Empirical\+Distribution} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a9da41d6224e8d98d57989bf58c16190a}{get\+Shuffled\+Positions} (Annotation region, boolean fully\+Contained, Map$<$ String, Double $>$ nuc\+Probs, int num\+Permutations)
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_empirical_distribution}{Empirical\+Distribution} \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a9d35efcf06921f02594aef226c6862d4}{get\+Fragment\+Ends\+From\+Bam\+File} (Annotation region, boolean fully\+Contained, boolean five\+Prime\+End)
+\item 
+Map$<$ String, Collection$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a25885ff6ffd5befe82971e505b35ce81}{get\+Annotation} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_adb48168b821ea257a6510ed8af7cd09a}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a21189ad218d6b720b568c74b4270884d}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!Pileup@{Pileup}}
+\index{Pileup@{Pileup}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{Pileup}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+clip.\+Pileup.\+Pileup (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{String}]{annotation\+Bed\+File, }
+\item[{String}]{subregion\+Bed\+File, }
+\item[{String}]{genome\+Fasta, }
+\item[{Collection$<$ Predicate$<$ Alignment $>$$>$}]{read\+Filters}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a21189ad218d6b720b568c74b4270884d}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Bam file of alignments \\
+\hline
+{\em annotation\+Bed\+File} & Bed transcriptome annotation \\
+\hline
+{\em genome\+Fasta} & Fasta file of genome \\
+\hline
+{\em read\+Filters} & Read filters to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_af08c5950bd4da328783f0d86f773b847}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!Pileup@{Pileup}}
+\index{Pileup@{Pileup}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{Pileup}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+clip.\+Pileup.\+Pileup (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{String}]{fragment\+End\+Wig, }
+\item[{String}]{annotation\+Bed\+File, }
+\item[{String}]{subregion\+Bed\+File, }
+\item[{String}]{genome\+Fasta, }
+\item[{String}]{region\+Overlapper\+Count\+File, }
+\item[{String}]{peak\+Region\+Bed\+File, }
+\item[{Collection$<$ Predicate$<$ Alignment $>$$>$}]{read\+Filters}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_af08c5950bd4da328783f0d86f773b847}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Bam file of alignments \\
+\hline
+{\em annotation\+Bed\+File} & Bed transcriptome annotation \\
+\hline
+{\em genome\+Fasta} & Fasta file of genome \\
+\hline
+{\em region\+Overlapper\+Count\+File} & File of overlapper counts for regions (can be incomplete) \\
+\hline
+{\em peak\+Region\+Bed\+File} & Bed file of peak region (subregion of the parent gene enclosing all reads overlapping the region) corresponding to each region. Bed name is the same as region name. \\
+\hline
+{\em read\+Filters} & Read filters to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a25885ff6ffd5befe82971e505b35ce81}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Annotation@{get\+Annotation}}
+\index{get\+Annotation@{get\+Annotation}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<$Gene$>$ $>$ broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Annotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a25885ff6ffd5befe82971e505b35ce81}
+Get the transcriptome annotation \begin{DoxyReturn}{Returns}
+The annotation 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a9d35efcf06921f02594aef226c6862d4}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Fragment\+Ends\+From\+Bam\+File@{get\+Fragment\+Ends\+From\+Bam\+File}}
+\index{get\+Fragment\+Ends\+From\+Bam\+File@{get\+Fragment\+Ends\+From\+Bam\+File}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Fragment\+Ends\+From\+Bam\+File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Empirical\+Distribution} broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Fragment\+Ends\+From\+Bam\+File (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{region, }
+\item[{boolean}]{fully\+Contained, }
+\item[{boolean}]{five\+Prime\+End}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a9d35efcf06921f02594aef226c6862d4}
+Get an empirical distribution storing the fragment ends of all fragments overlapping the region Fragment ends are in transcript coordinates with respect to the parent transcript 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent gene \\
+\hline
+{\em region} & Region within parent to get pileup over \\
+\hline
+{\em fully\+Contained} & Only include fragments that are fully contained in the subregion \\
+\hline
+{\em five\+Prime\+End} & Report the 5' end of fragments (if false, reports 3' end) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distribution of fragment endpoints in transcript coordinates 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a75369d564eda2373e41b0fd60451fda8}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+All\+Regions\+Bam@{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+All\+Regions\+Bam}}
+\index{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+All\+Regions\+Bam@{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+All\+Regions\+Bam}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+All\+Regions\+Bam}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Annotation, Double$>$ broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+All\+Regions\+Bam (
+\begin{DoxyParamCaption}
+\item[{boolean}]{fully\+Contained, }
+\item[{Map$<$ String, Double $>$}]{nuc\+Probs, }
+\item[{int}]{num\+Permutations, }
+\item[{boolean}]{five\+Prime\+End}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a75369d564eda2373e41b0fd60451fda8}
+For each region, find the highest fragment end pileup from the bam file. Randomly permute the fragments in a biased way according to background nucleotide probabilities. Get a scan P value for the real highest pileup in the region. 
+\begin{DoxyParams}{Parameters}
+{\em fully\+Contained} & When computing number of fragments and peak region, include fully contained fragments only \\
+\hline
+{\em nuc\+Probs} & Background nucleotide probabilities \\
+\hline
+{\em num\+Permutations} & Number of permutations per region \\
+\hline
+{\em five\+Prime\+End} & Use the 5' end of fragments (if false, use 3' end) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of region to P value 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_af7726e161df33f1675b770110193078f}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+Bam@{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+Bam}}
+\index{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+Bam@{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+Bam}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+Bam}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Scan\+Pval\+Fragment\+Ends\+Max\+Position\+Bam (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{region, }
+\item[{boolean}]{fully\+Contained, }
+\item[{Map$<$ String, Double $>$}]{nuc\+Probs, }
+\item[{int}]{num\+Permutations, }
+\item[{boolean}]{five\+Prime\+End}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_af7726e161df33f1675b770110193078f}
+Find the highest fragment end pileup in the region from the bam file. Randomly permute the fragments in a biased way according to background nucleotide probabilities. Get a scan P value for the real highest pileup in the region. 
+\begin{DoxyParams}{Parameters}
+{\em region} & The region \\
+\hline
+{\em fully\+Contained} & When computing number of fragments and peak region, include fully contained fragments only \\
+\hline
+{\em nuc\+Probs} & Background nucleotide probabilities \\
+\hline
+{\em num\+Permutations} & Number of permutations per region \\
+\hline
+{\em five\+Prime\+End} & Use the 5' end of fragments (if false, use 3' end) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of region to P value 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_ae5bf54f9ea963c4d704bb7f2dd98c0ee}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig@{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig}}
+\index{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig@{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Annotation, Map$<$Integer, Double$>$ $>$ broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig (
+\begin{DoxyParamCaption}
+\item[{boolean}]{fully\+Contained, }
+\item[{Map$<$ String, Double $>$}]{nuc\+Probs, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_ae5bf54f9ea963c4d704bb7f2dd98c0ee}
+Randomly permute the fragments in a biased way according to background nucleotide probabilities. For each region get a scan P value for pileup height of each position in the region as read from wig file. 
+\begin{DoxyParams}{Parameters}
+{\em fully\+Contained} & If computing peak regions from the bam file, include fully contained fragments only \\
+\hline
+{\em nuc\+Probs} & Background nucleotide probabilities \\
+\hline
+{\em num\+Permutations} & Number of permutations per region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of region to scan P value for each position in region 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a2f2ec59cc7fdb4ced9c11014070fa10a}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Scan\+Pvals\+Fragment\+End\+Pileups\+Wig@{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+Wig}}
+\index{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+Wig@{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+Wig}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Scan\+Pvals\+Fragment\+End\+Pileups\+Wig}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Integer, Double$>$ broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Scan\+Pvals\+Fragment\+End\+Pileups\+Wig (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{region, }
+\item[{boolean}]{fully\+Contained, }
+\item[{Map$<$ String, Double $>$}]{nuc\+Probs, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a2f2ec59cc7fdb4ced9c11014070fa10a}
+Randomly permute the fragments in a biased way according to background nucleotide probabilities. Get a scan P value for pileup height of each position in the region as read from wig file. 
+\begin{DoxyParams}{Parameters}
+{\em region} & The region \\
+\hline
+{\em fully\+Contained} & If computing peak region from the bam file, include fully contained fragments only \\
+\hline
+{\em nuc\+Probs} & Background nucleotide probabilities \\
+\hline
+{\em num\+Permutations} & Number of permutations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scan P value for each position in region 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a9da41d6224e8d98d57989bf58c16190a}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Shuffled\+Positions@{get\+Shuffled\+Positions}}
+\index{get\+Shuffled\+Positions@{get\+Shuffled\+Positions}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Shuffled\+Positions}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Empirical\+Distribution}$>$ broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Shuffled\+Positions (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{region, }
+\item[{boolean}]{fully\+Contained, }
+\item[{Map$<$ String, Double $>$}]{nuc\+Probs, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a9da41d6224e8d98d57989bf58c16190a}
+Get shuffled sets of positions within the span covered by fragments overlapping the region Each set contains a number of positions equal to the number of fragments overlapping the region Random shuffled positions are biased by nucleotide 
+\begin{DoxyParams}{Parameters}
+{\em region} & Region within parent gene \\
+\hline
+{\em fully\+Contained} & When getting the span covered by fragments overlapping the region, include fully contained fragments only \\
+\hline
+{\em nuc\+Probs} & Background probabilities of each nucleotide; must add up to 1 \\
+\hline
+{\em num\+Permutations} & Number of random sets to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Collection of random position sets; each set is presented in an empirical distribution 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a3192137e746edd357a296f5d823f8e2f}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!get\+Shuffled\+Positions\+All\+Regions@{get\+Shuffled\+Positions\+All\+Regions}}
+\index{get\+Shuffled\+Positions\+All\+Regions@{get\+Shuffled\+Positions\+All\+Regions}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{get\+Shuffled\+Positions\+All\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Annotation, Collection$<${\bf Empirical\+Distribution}$>$ $>$ broad.\+pda.\+seq.\+clip.\+Pileup.\+get\+Shuffled\+Positions\+All\+Regions (
+\begin{DoxyParamCaption}
+\item[{boolean}]{fully\+Contained, }
+\item[{Map$<$ String, Double $>$}]{nuc\+Probs, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_a3192137e746edd357a296f5d823f8e2f}
+For each region get several shufflings of the positions 
+\begin{DoxyParams}{Parameters}
+{\em fully\+Contained} & When computing number of fragments and peak region, include fully contained fragments only \\
+\hline
+{\em nuc\+Probs} & Background nucleotide probabilities \\
+\hline
+{\em num\+Permutations} & Number of permutations per region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of region to collection of random permutations 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_adb48168b821ea257a6510ed8af7cd09a}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!main@{main}}
+\index{main@{main}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+seq.\+clip.\+Pileup.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_adb48168b821ea257a6510ed8af7cd09a}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_ac4e8a5dd5705c5e479d1ed70e1d1852f}{\index{broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}!write\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig@{write\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig}}
+\index{write\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig@{write\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig}!broad\+::pda\+::seq\+::clip\+::\+Pileup@{broad\+::pda\+::seq\+::clip\+::\+Pileup}}
+\subsubsection[{write\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+clip.\+Pileup.\+write\+Scan\+Pvals\+Fragment\+End\+Pileups\+All\+Regions\+Wig (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+Table, }
+\item[{String}]{out\+Bed, }
+\item[{double}]{pval\+Cutoff\+For\+Bed, }
+\item[{boolean}]{fully\+Contained, }
+\item[{Map$<$ String, Double $>$}]{nuc\+Probs, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_pileup_ac4e8a5dd5705c5e479d1ed70e1d1852f}
+Randomly permute the fragments in a biased way according to background nucleotide probabilities. For each region get a scan P value for pileup height of each position in the region as read from wig file. Write information to a table. 
+\begin{DoxyParams}{Parameters}
+{\em out\+Table} & Output table file \\
+\hline
+{\em out\+Bed} & Bed file for significant positions \\
+\hline
+{\em pval\+Cutoff\+For\+Bed} & P value cutoff for significant position \\
+\hline
+{\em fully\+Contained} & If computing peak regions from the bam file, include fully contained fragments only \\
+\hline
+{\em nuc\+Probs} & Background nucleotide probabilities \\
+\hline
+{\em num\+Permutations} & Number of permutations per region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of region to scan P value for each position in region 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/clip/\hyperlink{_pileup_8java}{Pileup.\+java}\end{DoxyCompactItemize}

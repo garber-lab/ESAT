@@ -1,0 +1,1573 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t}{\section{broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t}\index{broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T\+:
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Bubble\+Edge}
+\item 
+enum \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type}
+\item 
+class {\bfseries Forward\+And\+Back\+Iterator}
+\item 
+class {\bfseries Min\+Read\+Filter}
+\item 
+class {\bfseries Region\+Read\+Filter}
+\item 
+class {\bfseries Reverse\+Window\+Iterator}
+\item 
+class {\bfseries Window\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aac13df74ce52fd9243d7f79b623cb314}{Chromosome\+With\+Bubbles\+J\+Graph\+T} (String name)
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aefd5f83d05ffd142b010826ea8903199}{Chromosome\+With\+Bubbles\+J\+Graph\+T} (String name, int start, int end)
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a16943b77a60f60314c4347bec8dbc694}{Chromosome\+With\+Bubbles\+J\+Graph\+T} (String name, Collection$<$?extends Annotation $>$ vertices, Collection$<$?extends Annotation $>$ edges, Map$<$?extends Annotation, Double $>$ edge\+Counts, Map$<$?extends Annotation, Double $>$ node\+Counts, double lambda, double num\+Markers, double num\+Reads, int min\+Splices)  throws Illegal\+Argument\+Exception
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab87ded96fed48f813431f3b2922478c6}{Chromosome\+With\+Bubbles\+J\+Graph\+T} (String name, Collection$<$?extends Annotation $>$ vertices, Collection$<$?extends Annotation $>$ edges)  throws Illegal\+Argument\+Exception
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4bf2c00686aabf592c26ded4e0da3c0d}{Chromosome\+With\+Bubbles\+J\+Graph\+T} (String name, Map$<$?extends Annotation, Double $>$ nodes, Map$<$ Bubble\+Edge, Double $>$ edges, double lambda, double num\+Markers, double num\+Reads, double min\+Edge\+Support)
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5f6e3d0b7ac0edf67e8e3c7ac622f339}{Chromosome\+With\+Bubbles\+J\+Graph\+T} (String name, Collection$<$?extends Annotation $>$ nodes, Collection$<$?extends Annotation $>$ edges, double lambda, double num\+Markers, double num\+Reads, int min\+Splices)  throws Illegal\+Argument\+Exception
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a75dcac62d0b06c6297961055eae8e38a}{add\+Edge} (Annotation v1, Annotation v2, Bubble\+Edge e)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a43d023ca377566d0b81c87ccbb39f3a5}{add\+New\+Edge} (Bubble\+Edge e, Annotation v1, Annotation v2)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a2812dbd00d83fed8abb63aa99abe0b77}{add\+Vertex} (Annotation v)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a7466db78d94e9436f2a4850a32435de2}{get\+Gene\+Paths} (double alpha)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a9d2556505217ab0b453f84da0153fca4}{get\+Gene\+Paths} (double alpha, double min\+Splice\+Frequency)
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a38e4b4f6ca631176279b4718e960af5b}{get\+All\+Paths} ()
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a3cc78f0b8d52ca70104190effddf8ba1}{get\+All\+Paths} (double min\+Splice\+Frequency)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a971a1afc17edfd3822cf93cb00011161}{get\+Orphan\+Nodes} ()
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5458052a44ce572c566c5a8425860a80}{get\+Orphan\+Nodes} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} region)
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_abfc48453fd3cd296b35eebd812cf471e}{get\+Orphan\+Paths} ()
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a036fbb7575abb0eb4b267eb94e352a93}{get\+Paths} (double alpha)
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab63a00a2c99d961006c1aa684c9ff508}{get\+Paths} (double alpha, double min\+Splice\+Frequency)
+\item 
+Set$<$ Bubble\+Edge $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad1aa68a9922bef912e0641e7221cd2b2}{get\+Edges} (Collection$<$ Annotation $>$ vertices)
+\item 
+Collection$<$ Annotation $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5c3772f97a244c6bf2ff6f9e54667047}{find\+Reachable\+Target\+Vertices} (Annotation source, Collection$<$ Annotation $>$ already\+Traversed, Collection$<$ Annotation $>$ sink\+Vertices, Collection$<$ Annotation $>$ reachable\+Sinks, int counter, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+List$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5e23cbd466e6e704ff6b426499c674fa}{get\+Paths} (Annotation start\+Node, Annotation end\+Node, double alpha, double min\+Splice\+Freq, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+List$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aaa73d80e64fde591be1675c3927c9caf}{get\+Paths} (Annotation start\+Node, Annotation end\+Node, double alpha, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Edge\+Types, double min\+Splice\+Freq, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab57a595f55e990b71c2f71a86bec4043}{check\+Orientation} (Collection$<$ Bubble\+Edge $>$ edges)
+\item 
+Annotation \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a25152ad6fcc6df9039f78c2b408fc717}{get\+Opposite\+Vertex} (Annotation v, Bubble\+Edge e)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad4e7ff19a4c900b15895711290ab4755}{get\+Paths} (int start, int end)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ada55ff6fa49d59b321048b70b33b6d5f}{get\+Paths} (int start, int end, boolean forward)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aa189999760ab15088e48c7fbcdc88bf0}{get\+Paths} (int start, int end, double alpha, boolean forward)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afe50a9035a3a399d97bc80e5d68ae3ca}{get\+Paths} (int start, int end, double alpha, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aeaf8d68a1b24e160b4ec49198d8029e5}{get\+Backward\+Paths} (int start, int end, double alpha, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types)
+\item 
+Collection$<$ Bubble\+Edge $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_affa018ef5e00f853738fd8a21f32c949}{get\+Backward\+Edges} (Annotation vertex, double alpha, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4fec10d865ea7836e3a74bb8875229de}{set\+Splice\+Weight} (double splice\+Weight)
+\item 
+Collection$<$ Bubble\+Edge $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a445a09bc5b15d604661680071b926a38}{get\+Incident\+Edges} (Annotation vertex)
+\item 
+Collection$<$ Annotation $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad770bae6ab4a2477e609fa450d5a9bdf}{get\+Source\+Vertices} (Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+Collection$<$ Annotation $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a8e54ddc31c8dff5537cd771bbb0a10e7}{get\+Sink\+Vertices} (Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+Collection$<$ Bubble\+Edge $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afea269e94ab8a39ab2df12ff9d104062}{get\+Forward\+Edges} (Annotation vertex, double alpha, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types)
+\item 
+Collection$<$ Bubble\+Edge $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_af2b3ad769c7da3c808548c2099d8e3a1}{get\+Valid\+Outgoing\+Edges} (Annotation vertex, double alpha, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4d7680c735522fe96b8f19c6901d0d83}{in\+Oriented\+Degree} (Annotation v, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ae00bb732a630891f7bd8586589de0c26}{out\+Oriented\+Degree} (Annotation v, Collection$<$ \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} $>$ valid\+Types, Directed\+Graph$<$ Annotation, Bubble\+Edge $>$ g)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac8a3ce5c61ee9ab7759b97b809b9099f}{is\+Spanning\+Gap} (int start, int end)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab0d12e3df82e16fecdf3fa3a15f1988d}{is\+Gap} (int start, int end)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a328f7944789466e63a8f6816409bcd41}{is\+In\+All\+Gaps} (int start, int end)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a29adad576953ed36d106f54f79020aa8}{remove\+Spanning\+Gap\+Nodes} ()
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aab3c4ae39a708c76a0fb942f17b125cb}{remove\+Vertex} (Annotation vertex)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a1177f3eca6d4636e1e418e6ff41af7a3}{remove\+Edge} (Bubble\+Edge e)
+\item 
+Collection$<$ Bubble\+Edge $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aceaf71f4821bdafa6bd63423762ef9fc}{get\+Out\+Or\+Unoriented\+Edges} (Annotation v)
+\item 
+Collection$<$ Bubble\+Edge $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac11519a79446df006a85aa51487d9171}{get\+In\+Or\+Unoriented\+Edges} (Annotation v)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_acefbfff6a2a745f7cf420f8d4c5a0e15}{add\+Edge\+Adding\+Missing\+Vertices} (Annotation intron, float count)
+\item 
+Annotation \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_adde361815cc1da20749f47b5074e7101}{find\+Edge} (int start, int end)
+\item 
+List$<$ Annotation $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aeeeb5f64b18f9125c5dcb3b392dbfb7c}{get\+Overlapping\+Vertices} (int start, int end)
+\item 
+Bubble\+Edge \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aa00423c00a6b114c4b1146278a8ec66d}{create\+Edge} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} connection, Annotation v1, Annotation v2, Integer count, \hyperlink{enumbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_1_1_edge_source_type}{Edge\+Source\+Type} type)
+\item 
+Vertex\+Pair$<$ Annotation $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a94688ea637f3ddea7183104a100f3d60}{get\+Node\+Pair} (Bubble\+Edge edge)
+\item 
+Window\+Iterator \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a35b4ae76c25f67ebad6f30d8f0457e59}{iterator} (int window\+Size, int start, int overlap)
+\item 
+Window\+Iterator \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a8cfa2b58cf5ca0466c67439292d04442}{iterator} (int window\+Size, int start, int overlap, boolean skip\+Gap\+Spanning\+Windows)
+\item 
+Window\+Iterator \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad93630c30d07df9cb9a639e656a0851c}{iterator} (int window\+Size, int start)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_adda80fdb6e6d20255389643e6cb4d3a2}{get\+Local\+Rate} (Annotation exon)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a7d20d81fde6834294a8876c1e1a1c12d}{get\+Lambda} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a069b16c959ceace301b673830ab49e1e}{get\+Relative\+Genome\+Length} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4c0a0f55287f464249e043a627acc561}{get\+Number\+Of\+Markers} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a37fc1481c4cc33dd1f711370017c5231}{get\+Number\+Of\+Reads} ()
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a684dcbe674fa90359576b194050d3681}{get\+Name} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a2cfac25b852dd32fc35288340e02e4b3}{get\+R\+P\+K\+M\+Constant} ()
+\item 
+Map$<$ Annotation, Double $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac33505d2b9bf26961b4406c6e3b793d3}{get\+Local\+Rate} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a0837c3a39bc327a0e2e249a92c98a1aa}{get\+End} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a64465fbdfb57e6549113e47877c9b37a}{get\+Start} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad475cd8839a0836c9939bb17a1235d5b}{set\+Start} (int start)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afebca982cb0e0752e8ec6749f1238bc3}{set\+End} (int end)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a3e8f397fe2620928de69b3165ecc1fde}{get\+Splice\+Weight} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a58e438f245b1e95a11dd93e38c611f49}{get\+Chromosome\+Length} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5255b57645f44f82c704a21f6e6932f9}{set\+Local\+Rate} (Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_path}{Path} $>$ paths)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a053a45485376c1cb877c7f5d9266dcb8}{set\+Local\+Rate} (Map$<$ Annotation, Double $>$ local\+Rate\+Map)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a6c445a5adf8ec62e7b16f024a561b222}{set\+R\+P\+K\+M\+Constant} (double num)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad0922edaa38d4478835466e3bb2a9cbc}{set\+Exon\+Scores} (Annotation node, Double score)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab396983719c5ddc6d2cd9ce108b131ea}{set\+Chromosome\+Length} (int chromosome\+Length)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a681e4b8694942aa7549a13cf1ae17860}{write\+Graph} (String save, boolean set\+Up\+Short\+Exon\+Labels)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a976419a5dce3edbd55467820fbc8943e}{write\+Graph} (String save)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aae04a03e6e6a8131c5af4bbe91a813e8}{write\+Graph} (String save, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} region)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a90d2753376f6aad44e9da33c12083875}{write\+Graph} (String save, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} region, boolean set\+Up\+Short\+Exon\+Labels)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a9ef14344582b93bdaf0415e244cd0b7c}{write\+Graph} (String save, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} region, boolean set\+Up\+Short\+Exon\+Labels, String graph\+Name)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements jung.\+Graph for Dijkstra (F\+O\+R N\+O\+W O\+N\+L\+Y) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aac13df74ce52fd9243d7f79b623cb314}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\index{Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{Chromosome\+With\+Bubbles\+J\+Graph\+T}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+Chromosome\+With\+Bubbles\+J\+Graph\+T (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aac13df74ce52fd9243d7f79b623cb314}
+C\+O\+N\+S\+T\+R\+U\+C\+T\+O\+R\+S T\+O\+D\+O\+: A constructor that instantiates the class with a graph. Application\+: subgraph \hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aefd5f83d05ffd142b010826ea8903199}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\index{Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{Chromosome\+With\+Bubbles\+J\+Graph\+T}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+Chromosome\+With\+Bubbles\+J\+Graph\+T (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aefd5f83d05ffd142b010826ea8903199}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a16943b77a60f60314c4347bec8dbc694}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\index{Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{Chromosome\+With\+Bubbles\+J\+Graph\+T}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+Chromosome\+With\+Bubbles\+J\+Graph\+T (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{Collection$<$?extends Annotation $>$}]{vertices, }
+\item[{Collection$<$?extends Annotation $>$}]{edges, }
+\item[{Map$<$?extends Annotation, Double $>$}]{edge\+Counts, }
+\item[{Map$<$?extends Annotation, Double $>$}]{node\+Counts, }
+\item[{double}]{lambda, }
+\item[{double}]{num\+Markers, }
+\item[{double}]{num\+Reads, }
+\item[{int}]{min\+Splices}
+\end{DoxyParamCaption}
+) throws Illegal\+Argument\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a16943b77a60f60314c4347bec8dbc694}
+Constructs a chromosome with bubbles with a given set of nodes and connections between them. The graph will keep track of how many times a given edge has been added. Nodes in this case are though as exons of putative transcripts. 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ Name of the chromosome. \\
+\hline
+{\em vertices} & Collection of nodes, note than duplicate nodes will be ignored \\
+\hline
+{\em edges} & Collection of edges connecting nodes. We assume a close-\/open( \mbox{[}start, end) ) specification of the annotation, thus edge connects two nodes if the start of the edge is node1.\+get\+End() and the end of the edge is node2.\+get\+Start() -\/ 1. {\bfseries Edges must be sorted}. \\
+\hline
+{\em edge\+Counts} & Map of edges to their counts \\
+\hline
+{\em node\+Counts} & Map of vertices to their counts \\
+\hline
+{\em lambda} & \\
+\hline
+{\em num\+Markers} & \\
+\hline
+{\em num\+Reads} & \\
+\hline
+{\em min\+Splices} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & if a node or and edge are on a different chromsome than the chromosome\+With\+Bubbles instance. \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab87ded96fed48f813431f3b2922478c6}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\index{Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{Chromosome\+With\+Bubbles\+J\+Graph\+T}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+Chromosome\+With\+Bubbles\+J\+Graph\+T (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{Collection$<$?extends Annotation $>$}]{vertices, }
+\item[{Collection$<$?extends Annotation $>$}]{edges}
+\end{DoxyParamCaption}
+) throws Illegal\+Argument\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab87ded96fed48f813431f3b2922478c6}
+Constructs a chromosome with bubbles with a given set of nodes and connections between them. The graph will keep track of how many times a given edge has been added. Nodes in this case are though as exons of putative transcripts. 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ Name of the chromosome. \\
+\hline
+{\em vertices} & Collection of nodes, note than duplicate nodes will be ignored \\
+\hline
+{\em edges} & Collection of edges connecting nodes. We assume a close-\/open( \mbox{[}start, end) ) specification of the annotation, thus edge connects two nodes if the start of the edge is node1.\+get\+End() and the end of the edge is node2.\+get\+Start() -\/ 1. {\bfseries Edges must be sorted}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & if a node or and edge are on a different chromsome than the chromosome\+With\+Bubbles instance. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4bf2c00686aabf592c26ded4e0da3c0d}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\index{Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{Chromosome\+With\+Bubbles\+J\+Graph\+T}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+Chromosome\+With\+Bubbles\+J\+Graph\+T (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{Map$<$?extends Annotation, Double $>$}]{nodes, }
+\item[{Map$<$ Bubble\+Edge, Double $>$}]{edges, }
+\item[{double}]{lambda, }
+\item[{double}]{num\+Markers, }
+\item[{double}]{num\+Reads, }
+\item[{double}]{min\+Edge\+Support}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4bf2c00686aabf592c26ded4e0da3c0d}
+Constructs a chromosome with bubbles with a given set of nodes, edges. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the chromosome. \\
+\hline
+{\em nodes} & Collection of nodes, note than duplicate nodes will be ignored \\
+\hline
+{\em edges} & Collection of edges connecting nodes. We assume a close-\/open( \mbox{[}start, end) ) specification of the annotation, thus edge connects two nodes if the start of the edge is node1.\+get\+End() and the end of the edge is node2.\+get\+Start() -\/ 1. {\bfseries Edges must be sorted}. \\
+\hline
+{\em lambda} & \\
+\hline
+{\em num\+Markers} & \\
+\hline
+{\em num\+Reads} & \\
+\hline
+{\em min\+Edge\+Support} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5f6e3d0b7ac0edf67e8e3c7ac622f339}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\index{Chromosome\+With\+Bubbles\+J\+Graph\+T@{Chromosome\+With\+Bubbles\+J\+Graph\+T}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{Chromosome\+With\+Bubbles\+J\+Graph\+T}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+Chromosome\+With\+Bubbles\+J\+Graph\+T (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{Collection$<$?extends Annotation $>$}]{nodes, }
+\item[{Collection$<$?extends Annotation $>$}]{edges, }
+\item[{double}]{lambda, }
+\item[{double}]{num\+Markers, }
+\item[{double}]{num\+Reads, }
+\item[{int}]{min\+Splices}
+\end{DoxyParamCaption}
+) throws Illegal\+Argument\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5f6e3d0b7ac0edf67e8e3c7ac622f339}
+//??? This constructor is not used. And does not return the correct paths 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em nodes} & \\
+\hline
+{\em edges} & \\
+\hline
+{\em from\+B\+E} & //??? //\+N\+O\+T U\+S\+E\+D \\
+\hline
+{\em lambda} & \\
+\hline
+{\em num\+Markers} & \\
+\hline
+{\em num\+Reads} & ??? This will always return a Null Pointer Exception \\
+\hline
+{\em name} & \\
+\hline
+{\em nodes} & \\
+\hline
+{\em edges} & \\
+\hline
+{\em lambda} & \\
+\hline
+{\em num\+Markers} & \\
+\hline
+{\em num\+Reads} & \\
+\hline
+{\em min\+Splices} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a75dcac62d0b06c6297961055eae8e38a}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{add\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+add\+Edge (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{v1, }
+\item[{Annotation}]{v2, }
+\item[{Bubble\+Edge}]{e}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a75dcac62d0b06c6297961055eae8e38a}
+Adds an edge e between vertices v1 and v2 
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+{\em v1} & \\
+\hline
+{\em v2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_acefbfff6a2a745f7cf420f8d4c5a0e15}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!add\+Edge\+Adding\+Missing\+Vertices@{add\+Edge\+Adding\+Missing\+Vertices}}
+\index{add\+Edge\+Adding\+Missing\+Vertices@{add\+Edge\+Adding\+Missing\+Vertices}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{add\+Edge\+Adding\+Missing\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+add\+Edge\+Adding\+Missing\+Vertices (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{intron, }
+\item[{float}]{count}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_acefbfff6a2a745f7cf420f8d4c5a0e15}
+Returns a collection of edges of the allowed edge types that originate at the specified vertex (if oriented) or have the specified vertex as an end point 
+\begin{DoxyParams}{Parameters}
+{\em v} & Specified vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+collection of edges Creates bubbles that connect the splice junctions specified in the data model. Nodes in the graphs (bubbles) are single base pairs indicating the splice junction. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em min\+Aligment\+Gap} & Adds an edge to the graph, adding missing vertices to the graph. \\
+\hline
+{\em intron} & \\
+\hline
+{\em count} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a43d023ca377566d0b81c87ccbb39f3a5}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!add\+New\+Edge@{add\+New\+Edge}}
+\index{add\+New\+Edge@{add\+New\+Edge}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{add\+New\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+add\+New\+Edge (
+\begin{DoxyParamCaption}
+\item[{Bubble\+Edge}]{e, }
+\item[{Annotation}]{v1, }
+\item[{Annotation}]{v2}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a43d023ca377566d0b81c87ccbb39f3a5}
+Adds a new edge between v1 and v2 
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+{\em v1} & \\
+\hline
+{\em v2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a2812dbd00d83fed8abb63aa99abe0b77}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!add\+Vertex@{add\+Vertex}}
+\index{add\+Vertex@{add\+Vertex}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{add\+Vertex}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+add\+Vertex (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{v}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a2812dbd00d83fed8abb63aa99abe0b77}
+Adds vertex v to the graph 
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab57a595f55e990b71c2f71a86bec4043}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!check\+Orientation@{check\+Orientation}}
+\index{check\+Orientation@{check\+Orientation}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{check\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+check\+Orientation (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Bubble\+Edge $>$}]{edges}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab57a595f55e990b71c2f71a86bec4043}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aa00423c00a6b114c4b1146278a8ec66d}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!create\+Edge@{create\+Edge}}
+\index{create\+Edge@{create\+Edge}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{create\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}Bubble\+Edge broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+create\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Alignments}}]{connection, }
+\item[{Annotation}]{v1, }
+\item[{Annotation}]{v2, }
+\item[{Integer}]{count, }
+\item[{{\bf Edge\+Source\+Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aa00423c00a6b114c4b1146278a8ec66d}
+Creates an edge of type between v1 and v2 for connection alignment with weight 
+\begin{DoxyParams}{Parameters}
+{\em connection} & \\
+\hline
+{\em v1} & \\
+\hline
+{\em v2} & \\
+\hline
+{\em count} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_adde361815cc1da20749f47b5074e7101}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!find\+Edge@{find\+Edge}}
+\index{find\+Edge@{find\+Edge}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{find\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}Annotation broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+find\+Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_adde361815cc1da20749f47b5074e7101}
+Returns edge between start and end 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5c3772f97a244c6bf2ff6f9e54667047}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!find\+Reachable\+Target\+Vertices@{find\+Reachable\+Target\+Vertices}}
+\index{find\+Reachable\+Target\+Vertices@{find\+Reachable\+Target\+Vertices}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{find\+Reachable\+Target\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Annotation$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+find\+Reachable\+Target\+Vertices (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{source, }
+\item[{Collection$<$ Annotation $>$}]{already\+Traversed, }
+\item[{Collection$<$ Annotation $>$}]{sink\+Vertices, }
+\item[{Collection$<$ Annotation $>$}]{reachable\+Sinks, }
+\item[{int}]{counter, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5c3772f97a244c6bf2ff6f9e54667047}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a38e4b4f6ca631176279b4718e960af5b}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+All\+Paths@{get\+All\+Paths}}
+\index{get\+All\+Paths@{get\+All\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+All\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Path}$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+All\+Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a38e4b4f6ca631176279b4718e960af5b}
+Returns the collection of Paths through the graph. Will call get\+All\+Paths with 0 minimum splicing frequency. \begin{DoxyReturn}{Returns}
+collection of paths 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a3cc78f0b8d52ca70104190effddf8ba1}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+All\+Paths@{get\+All\+Paths}}
+\index{get\+All\+Paths@{get\+All\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+All\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Path}$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+All\+Paths (
+\begin{DoxyParamCaption}
+\item[{double}]{min\+Splice\+Frequency}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a3cc78f0b8d52ca70104190effddf8ba1}
+Returns the collection of Paths through the graph with the minimum splice frequency 
+\begin{DoxyParams}{Parameters}
+{\em min\+Splice\+Frequency} & minimum splice frequency for the edges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_affa018ef5e00f853738fd8a21f32c949}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Backward\+Edges@{get\+Backward\+Edges}}
+\index{get\+Backward\+Edges@{get\+Backward\+Edges}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Backward\+Edges}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Bubble\+Edge$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Backward\+Edges (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{vertex, }
+\item[{double}]{alpha, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_affa018ef5e00f853738fd8a21f32c949}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aeaf8d68a1b24e160b4ec49198d8029e5}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Backward\+Paths@{get\+Backward\+Paths}}
+\index{get\+Backward\+Paths@{get\+Backward\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Backward\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Backward\+Paths (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{double}]{alpha, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aeaf8d68a1b24e160b4ec49198d8029e5}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a58e438f245b1e95a11dd93e38c611f49}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Chromosome\+Length@{get\+Chromosome\+Length}}
+\index{get\+Chromosome\+Length@{get\+Chromosome\+Length}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Chromosome\+Length}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Chromosome\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a58e438f245b1e95a11dd93e38c611f49}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad1aa68a9922bef912e0641e7221cd2b2}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Edges@{get\+Edges}}
+\index{get\+Edges@{get\+Edges}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Edges}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$Bubble\+Edge$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Edges (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Annotation $>$}]{vertices}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad1aa68a9922bef912e0641e7221cd2b2}
+Returns all edges connecting the specified vertices 
+\begin{DoxyParams}{Parameters}
+{\em vertices} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a0837c3a39bc327a0e2e249a92c98a1aa}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+End@{get\+End}}
+\index{get\+End@{get\+End}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+End}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a0837c3a39bc327a0e2e249a92c98a1aa}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afea269e94ab8a39ab2df12ff9d104062}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Forward\+Edges@{get\+Forward\+Edges}}
+\index{get\+Forward\+Edges@{get\+Forward\+Edges}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Forward\+Edges}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Bubble\+Edge$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Forward\+Edges (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{vertex, }
+\item[{double}]{alpha, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afea269e94ab8a39ab2df12ff9d104062}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a7466db78d94e9436f2a4850a32435de2}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Gene\+Paths@{get\+Gene\+Paths}}
+\index{get\+Gene\+Paths@{get\+Gene\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Gene\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Gene\+Paths (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a7466db78d94e9436f2a4850a32435de2}
+Returns a collection of paired end edges \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a9d2556505217ab0b453f84da0153fca4}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Gene\+Paths@{get\+Gene\+Paths}}
+\index{get\+Gene\+Paths@{get\+Gene\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Gene\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Gene\+Paths (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha, }
+\item[{double}]{min\+Splice\+Frequency}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a9d2556505217ab0b453f84da0153fca4}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a445a09bc5b15d604661680071b926a38}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Incident\+Edges@{get\+Incident\+Edges}}
+\index{get\+Incident\+Edges@{get\+Incident\+Edges}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Incident\+Edges}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Bubble\+Edge$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Incident\+Edges (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{vertex}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a445a09bc5b15d604661680071b926a38}
+Returns a collection of all incoming and outgoing edges of specified vertex 
+\begin{DoxyParams}{Parameters}
+{\em vertex} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+collection of all edges for specified vertex 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac11519a79446df006a85aa51487d9171}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+In\+Or\+Unoriented\+Edges@{get\+In\+Or\+Unoriented\+Edges}}
+\index{get\+In\+Or\+Unoriented\+Edges@{get\+In\+Or\+Unoriented\+Edges}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+In\+Or\+Unoriented\+Edges}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Bubble\+Edge$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+In\+Or\+Unoriented\+Edges (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{v}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac11519a79446df006a85aa51487d9171}
+Returns a collection of edges that terminate at the specified vertex (if oriented) or have the specified vertex as an end point 
+\begin{DoxyParams}{Parameters}
+{\em v} & Specified vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+collection of edges 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a7d20d81fde6834294a8876c1e1a1c12d}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Lambda@{get\+Lambda}}
+\index{get\+Lambda@{get\+Lambda}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Lambda}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Lambda (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a7d20d81fde6834294a8876c1e1a1c12d}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_adda80fdb6e6d20255389643e6cb4d3a2}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Local\+Rate@{get\+Local\+Rate}}
+\index{get\+Local\+Rate@{get\+Local\+Rate}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Local\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Local\+Rate (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{exon}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_adda80fdb6e6d20255389643e6cb4d3a2}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac33505d2b9bf26961b4406c6e3b793d3}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Local\+Rate@{get\+Local\+Rate}}
+\index{get\+Local\+Rate@{get\+Local\+Rate}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Local\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Annotation, Double$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Local\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac33505d2b9bf26961b4406c6e3b793d3}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a684dcbe674fa90359576b194050d3681}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a684dcbe674fa90359576b194050d3681}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a94688ea637f3ddea7183104a100f3d60}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Node\+Pair@{get\+Node\+Pair}}
+\index{get\+Node\+Pair@{get\+Node\+Pair}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Node\+Pair}]{\setlength{\rightskip}{0pt plus 5cm}Vertex\+Pair$<$Annotation$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Node\+Pair (
+\begin{DoxyParamCaption}
+\item[{Bubble\+Edge}]{edge}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a94688ea637f3ddea7183104a100f3d60}
+Returns the pair of vertices for a specified edge 
+\begin{DoxyParams}{Parameters}
+{\em edge} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4c0a0f55287f464249e043a627acc561}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Number\+Of\+Markers@{get\+Number\+Of\+Markers}}
+\index{get\+Number\+Of\+Markers@{get\+Number\+Of\+Markers}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Number\+Of\+Markers}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Number\+Of\+Markers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4c0a0f55287f464249e043a627acc561}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a37fc1481c4cc33dd1f711370017c5231}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Number\+Of\+Reads@{get\+Number\+Of\+Reads}}
+\index{get\+Number\+Of\+Reads@{get\+Number\+Of\+Reads}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Number\+Of\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Number\+Of\+Reads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a37fc1481c4cc33dd1f711370017c5231}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a25152ad6fcc6df9039f78c2b408fc717}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Opposite\+Vertex@{get\+Opposite\+Vertex}}
+\index{get\+Opposite\+Vertex@{get\+Opposite\+Vertex}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Opposite\+Vertex}]{\setlength{\rightskip}{0pt plus 5cm}Annotation broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Opposite\+Vertex (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{v, }
+\item[{Bubble\+Edge}]{e}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a25152ad6fcc6df9039f78c2b408fc717}
+Returns the opposite vertex of the edge e from the vertex v 
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a971a1afc17edfd3822cf93cb00011161}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Orphan\+Nodes@{get\+Orphan\+Nodes}}
+\index{get\+Orphan\+Nodes@{get\+Orphan\+Nodes}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Orphan\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Orphan\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a971a1afc17edfd3822cf93cb00011161}
+Returns all orphan nodes in graph (Vertices without any edges orphan vertices) \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5458052a44ce572c566c5a8425860a80}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Orphan\+Nodes@{get\+Orphan\+Nodes}}
+\index{get\+Orphan\+Nodes@{get\+Orphan\+Nodes}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Orphan\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Orphan\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Alignments}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5458052a44ce572c566c5a8425860a80}
+Returns all orphan nodes in region (Vertices without any edges orphan vertices) 
+\begin{DoxyParams}{Parameters}
+{\em region} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_abfc48453fd3cd296b35eebd812cf471e}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Orphan\+Paths@{get\+Orphan\+Paths}}
+\index{get\+Orphan\+Paths@{get\+Orphan\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Orphan\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Path}$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Orphan\+Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_abfc48453fd3cd296b35eebd812cf471e}
+Returns all orphan paths in graph (self edges for orphan vertices) \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aceaf71f4821bdafa6bd63423762ef9fc}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Out\+Or\+Unoriented\+Edges@{get\+Out\+Or\+Unoriented\+Edges}}
+\index{get\+Out\+Or\+Unoriented\+Edges@{get\+Out\+Or\+Unoriented\+Edges}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Out\+Or\+Unoriented\+Edges}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Bubble\+Edge$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Out\+Or\+Unoriented\+Edges (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{v}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aceaf71f4821bdafa6bd63423762ef9fc}
+Returns a collection of edges that are of the allowed edge types. 
+\begin{DoxyParams}{Parameters}
+{\em edge\+List} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+filtered edges Returns a collection of edges that originate at the specified vertex (if oriented) or have the specified vertex as an end point 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Specified vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+collection of edges 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aeeeb5f64b18f9125c5dcb3b392dbfb7c}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Overlapping\+Vertices@{get\+Overlapping\+Vertices}}
+\index{get\+Overlapping\+Vertices@{get\+Overlapping\+Vertices}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Overlapping\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Annotation$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Overlapping\+Vertices (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aeeeb5f64b18f9125c5dcb3b392dbfb7c}
+Returns a list of all vertices overlapping region between start and end 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a036fbb7575abb0eb4b267eb94e352a93}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Path}$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a036fbb7575abb0eb4b267eb94e352a93}
+Returns a collection of paths with alpha 
+\begin{DoxyParams}{Parameters}
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab63a00a2c99d961006c1aa684c9ff508}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Path}$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha, }
+\item[{double}]{min\+Splice\+Frequency}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab63a00a2c99d961006c1aa684c9ff508}
+Returns a collection of paths with alpha and minimum spicing frequency 
+\begin{DoxyParams}{Parameters}
+{\em alpha} & \\
+\hline
+{\em min\+Splice\+Frequency} & minimum splicing frequency \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5e23cbd466e6e704ff6b426499c674fa}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Path}$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{start\+Node, }
+\item[{Annotation}]{end\+Node, }
+\item[{double}]{alpha, }
+\item[{double}]{min\+Splice\+Freq, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5e23cbd466e6e704ff6b426499c674fa}
+Returns a collection of all paths starting from start\+Node with alpha and minimum splicing frequency 
+\begin{DoxyParams}{Parameters}
+{\em start\+Node} & \\
+\hline
+{\em alpha} & \\
+\hline
+{\em min\+Splice\+Freq} & minimum splicing frequency \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aaa73d80e64fde591be1675c3927c9caf}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Path}$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{start\+Node, }
+\item[{Annotation}]{end\+Node, }
+\item[{double}]{alpha, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Edge\+Types, }
+\item[{double}]{min\+Splice\+Freq, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aaa73d80e64fde591be1675c3927c9caf}
+Returns a collection of all paths starting from start\+Node having the specified valid edge types 
+\begin{DoxyParams}{Parameters}
+{\em start\+Node} & \\
+\hline
+{\em alpha} & \\
+\hline
+{\em valid\+Edge\+Types} & \\
+\hline
+{\em min\+Splice\+Freq} & minimum splicing frequency \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad4e7ff19a4c900b15895711290ab4755}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad4e7ff19a4c900b15895711290ab4755}
+D\+O W\+E N\+E\+E\+D T\+H\+I\+S???? Returns collection of genes between start and end 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ada55ff6fa49d59b321048b70b33b6d5f}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{boolean}]{forward}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ada55ff6fa49d59b321048b70b33b6d5f}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aa189999760ab15088e48c7fbcdc88bf0}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{double}]{alpha, }
+\item[{boolean}]{forward}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aa189999760ab15088e48c7fbcdc88bf0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afe50a9035a3a399d97bc80e5d68ae3ca}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Paths (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{double}]{alpha, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afe50a9035a3a399d97bc80e5d68ae3ca}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a069b16c959ceace301b673830ab49e1e}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Relative\+Genome\+Length@{get\+Relative\+Genome\+Length}}
+\index{get\+Relative\+Genome\+Length@{get\+Relative\+Genome\+Length}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Relative\+Genome\+Length}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Relative\+Genome\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a069b16c959ceace301b673830ab49e1e}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a2cfac25b852dd32fc35288340e02e4b3}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+R\+P\+K\+M\+Constant@{get\+R\+P\+K\+M\+Constant}}
+\index{get\+R\+P\+K\+M\+Constant@{get\+R\+P\+K\+M\+Constant}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+R\+P\+K\+M\+Constant}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+R\+P\+K\+M\+Constant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a2cfac25b852dd32fc35288340e02e4b3}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a8e54ddc31c8dff5537cd771bbb0a10e7}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Sink\+Vertices@{get\+Sink\+Vertices}}
+\index{get\+Sink\+Vertices@{get\+Sink\+Vertices}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Sink\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Annotation$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Sink\+Vertices (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a8e54ddc31c8dff5537cd771bbb0a10e7}
+Returns a collection of all the possible target/end vertices for this graph. 
+\begin{DoxyParams}{Parameters}
+{\em valid\+Types} & List of allowed edge types. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+All vertices having allowed edge types. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad770bae6ab4a2477e609fa450d5a9bdf}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Source\+Vertices@{get\+Source\+Vertices}}
+\index{get\+Source\+Vertices@{get\+Source\+Vertices}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Source\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Annotation$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Source\+Vertices (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad770bae6ab4a2477e609fa450d5a9bdf}
+Returns a collection of all the possible source/start vertices for the specified graph. 
+\begin{DoxyParams}{Parameters}
+{\em valid\+Types} & List of allowed edge types. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+All vertices having allowed edge types. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a3e8f397fe2620928de69b3165ecc1fde}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Splice\+Weight@{get\+Splice\+Weight}}
+\index{get\+Splice\+Weight@{get\+Splice\+Weight}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Splice\+Weight}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Splice\+Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a3e8f397fe2620928de69b3165ecc1fde}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a64465fbdfb57e6549113e47877c9b37a}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Start@{get\+Start}}
+\index{get\+Start@{get\+Start}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a64465fbdfb57e6549113e47877c9b37a}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_af2b3ad769c7da3c808548c2099d8e3a1}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!get\+Valid\+Outgoing\+Edges@{get\+Valid\+Outgoing\+Edges}}
+\index{get\+Valid\+Outgoing\+Edges@{get\+Valid\+Outgoing\+Edges}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{get\+Valid\+Outgoing\+Edges}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Bubble\+Edge$>$ broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+get\+Valid\+Outgoing\+Edges (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{vertex, }
+\item[{double}]{alpha, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_af2b3ad769c7da3c808548c2099d8e3a1}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4d7680c735522fe96b8f19c6901d0d83}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!in\+Oriented\+Degree@{in\+Oriented\+Degree}}
+\index{in\+Oriented\+Degree@{in\+Oriented\+Degree}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{in\+Oriented\+Degree}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+in\+Oriented\+Degree (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{v, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4d7680c735522fe96b8f19c6901d0d83}
+Returns the in degree of the given vertex for a list of allowed edge types 
+\begin{DoxyParams}{Parameters}
+{\em v} & specific vertex \\
+\hline
+{\em valid\+Types} & Collections of allowed edge types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+in degree of given vertex 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab0d12e3df82e16fecdf3fa3a15f1988d}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!is\+Gap@{is\+Gap}}
+\index{is\+Gap@{is\+Gap}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{is\+Gap}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+is\+Gap (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab0d12e3df82e16fecdf3fa3a15f1988d}
+Returns true if position starts in gap but goes past gap 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a328f7944789466e63a8f6816409bcd41}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!is\+In\+All\+Gaps@{is\+In\+All\+Gaps}}
+\index{is\+In\+All\+Gaps@{is\+In\+All\+Gaps}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{is\+In\+All\+Gaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+is\+In\+All\+Gaps (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a328f7944789466e63a8f6816409bcd41}
+Returns true if the start and end positions are all found in gaps (introns??) 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac8a3ce5c61ee9ab7759b97b809b9099f}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!is\+Spanning\+Gap@{is\+Spanning\+Gap}}
+\index{is\+Spanning\+Gap@{is\+Spanning\+Gap}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{is\+Spanning\+Gap}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+is\+Spanning\+Gap (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ac8a3ce5c61ee9ab7759b97b809b9099f}
+Returns true if this region spans an intron. Also, returns true if the position starts in gap but goes past gap. 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a35b4ae76c25f67ebad6f30d8f0457e59}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!iterator@{iterator}}
+\index{iterator@{iterator}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Iterator broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{start, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a35b4ae76c25f67ebad6f30d8f0457e59}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a8cfa2b58cf5ca0466c67439292d04442}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!iterator@{iterator}}
+\index{iterator@{iterator}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Iterator broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{start, }
+\item[{int}]{overlap, }
+\item[{boolean}]{skip\+Gap\+Spanning\+Windows}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a8cfa2b58cf5ca0466c67439292d04442}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad93630c30d07df9cb9a639e656a0851c}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!iterator@{iterator}}
+\index{iterator@{iterator}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Iterator broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad93630c30d07df9cb9a639e656a0851c}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ae00bb732a630891f7bd8586589de0c26}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!out\+Oriented\+Degree@{out\+Oriented\+Degree}}
+\index{out\+Oriented\+Degree@{out\+Oriented\+Degree}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{out\+Oriented\+Degree}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+out\+Oriented\+Degree (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{v, }
+\item[{Collection$<$ {\bf Edge\+Source\+Type} $>$}]{valid\+Types, }
+\item[{Directed\+Graph$<$ Annotation, Bubble\+Edge $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ae00bb732a630891f7bd8586589de0c26}
+Returns the out degree of the given vertex for a list of allowed edge types 
+\begin{DoxyParams}{Parameters}
+{\em v} & specific vertex \\
+\hline
+{\em valid\+Types} & Collections of allowed edge types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+out degree of given vertex 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a1177f3eca6d4636e1e418e6ff41af7a3}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!remove\+Edge@{remove\+Edge}}
+\index{remove\+Edge@{remove\+Edge}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{remove\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+remove\+Edge (
+\begin{DoxyParamCaption}
+\item[{Bubble\+Edge}]{e}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a1177f3eca6d4636e1e418e6ff41af7a3}
+Removes edge from graph 
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a29adad576953ed36d106f54f79020aa8}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!remove\+Spanning\+Gap\+Nodes@{remove\+Spanning\+Gap\+Nodes}}
+\index{remove\+Spanning\+Gap\+Nodes@{remove\+Spanning\+Gap\+Nodes}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{remove\+Spanning\+Gap\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+remove\+Spanning\+Gap\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a29adad576953ed36d106f54f79020aa8}
+Removes all nodes that span a gap 
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aab3c4ae39a708c76a0fb942f17b125cb}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!remove\+Vertex@{remove\+Vertex}}
+\index{remove\+Vertex@{remove\+Vertex}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{remove\+Vertex}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+remove\+Vertex (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{vertex}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aab3c4ae39a708c76a0fb942f17b125cb}
+Removes vertex from graph 
+\begin{DoxyParams}{Parameters}
+{\em vertex} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab396983719c5ddc6d2cd9ce108b131ea}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+Chromosome\+Length@{set\+Chromosome\+Length}}
+\index{set\+Chromosome\+Length@{set\+Chromosome\+Length}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+Chromosome\+Length}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+Chromosome\+Length (
+\begin{DoxyParamCaption}
+\item[{int}]{chromosome\+Length}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ab396983719c5ddc6d2cd9ce108b131ea}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afebca982cb0e0752e8ec6749f1238bc3}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+End@{set\+End}}
+\index{set\+End@{set\+End}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+End}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+End (
+\begin{DoxyParamCaption}
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_afebca982cb0e0752e8ec6749f1238bc3}
+Sets the end of this graph 
+\begin{DoxyParams}{Parameters}
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad0922edaa38d4478835466e3bb2a9cbc}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+Exon\+Scores@{set\+Exon\+Scores}}
+\index{set\+Exon\+Scores@{set\+Exon\+Scores}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+Exon\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+Exon\+Scores (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{node, }
+\item[{Double}]{score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad0922edaa38d4478835466e3bb2a9cbc}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5255b57645f44f82c704a21f6e6932f9}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+Local\+Rate@{set\+Local\+Rate}}
+\index{set\+Local\+Rate@{set\+Local\+Rate}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+Local\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+Local\+Rate (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Path} $>$}]{paths}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a5255b57645f44f82c704a21f6e6932f9}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a053a45485376c1cb877c7f5d9266dcb8}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+Local\+Rate@{set\+Local\+Rate}}
+\index{set\+Local\+Rate@{set\+Local\+Rate}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+Local\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+Local\+Rate (
+\begin{DoxyParamCaption}
+\item[{Map$<$ Annotation, Double $>$}]{local\+Rate\+Map}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a053a45485376c1cb877c7f5d9266dcb8}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a6c445a5adf8ec62e7b16f024a561b222}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+R\+P\+K\+M\+Constant@{set\+R\+P\+K\+M\+Constant}}
+\index{set\+R\+P\+K\+M\+Constant@{set\+R\+P\+K\+M\+Constant}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+R\+P\+K\+M\+Constant}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+R\+P\+K\+M\+Constant (
+\begin{DoxyParamCaption}
+\item[{double}]{num}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a6c445a5adf8ec62e7b16f024a561b222}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4fec10d865ea7836e3a74bb8875229de}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+Splice\+Weight@{set\+Splice\+Weight}}
+\index{set\+Splice\+Weight@{set\+Splice\+Weight}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+Splice\+Weight}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+Splice\+Weight (
+\begin{DoxyParamCaption}
+\item[{double}]{splice\+Weight}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a4fec10d865ea7836e3a74bb8875229de}
+Sets the splice weight for this graph 
+\begin{DoxyParams}{Parameters}
+{\em splice\+Weight} & Value for splice weight \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad475cd8839a0836c9939bb17a1235d5b}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!set\+Start@{set\+Start}}
+\index{set\+Start@{set\+Start}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{set\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+set\+Start (
+\begin{DoxyParamCaption}
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_ad475cd8839a0836c9939bb17a1235d5b}
+Sets the start of this graph 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a681e4b8694942aa7549a13cf1ae17860}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!write\+Graph@{write\+Graph}}
+\index{write\+Graph@{write\+Graph}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{write\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+write\+Graph (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{boolean}]{set\+Up\+Short\+Exon\+Labels}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a681e4b8694942aa7549a13cf1ae17860}
+Write the graph as a D\+O\+T format 
+\begin{DoxyParams}{Parameters}
+{\em save} & \\
+\hline
+{\em set\+Up\+Short\+Exon\+Labels} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a976419a5dce3edbd55467820fbc8943e}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!write\+Graph@{write\+Graph}}
+\index{write\+Graph@{write\+Graph}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{write\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+write\+Graph (
+\begin{DoxyParamCaption}
+\item[{String}]{save}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a976419a5dce3edbd55467820fbc8943e}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aae04a03e6e6a8131c5af4bbe91a813e8}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!write\+Graph@{write\+Graph}}
+\index{write\+Graph@{write\+Graph}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{write\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+write\+Graph (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{{\bf Alignments}}]{region}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_aae04a03e6e6a8131c5af4bbe91a813e8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a90d2753376f6aad44e9da33c12083875}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!write\+Graph@{write\+Graph}}
+\index{write\+Graph@{write\+Graph}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{write\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+write\+Graph (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{{\bf Alignments}}]{region, }
+\item[{boolean}]{set\+Up\+Short\+Exon\+Labels}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a90d2753376f6aad44e9da33c12083875}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a9ef14344582b93bdaf0415e244cd0b7c}{\index{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}!write\+Graph@{write\+Graph}}
+\index{write\+Graph@{write\+Graph}!broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T@{broad\+::pda\+::seq\+::graph\+::\+Chromosome\+With\+Bubbles\+J\+Graph\+T}}
+\subsubsection[{write\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+graph.\+Chromosome\+With\+Bubbles\+J\+Graph\+T.\+write\+Graph (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{{\bf Alignments}}]{region, }
+\item[{boolean}]{set\+Up\+Short\+Exon\+Labels, }
+\item[{String}]{graph\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t_a9ef14344582b93bdaf0415e244cd0b7c}
+Writes the graph to a file 
+\begin{DoxyParams}{Parameters}
+{\em save} & \\
+\hline
+{\em region} & \\
+\hline
+{\em set\+Up\+Short\+Exon\+Labels} & \\
+\hline
+{\em graph\+Name} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/graph/\hyperlink{_chromosome_with_bubbles_j_graph_t_8java}{Chromosome\+With\+Bubbles\+J\+Graph\+T.\+java}\end{DoxyCompactItemize}

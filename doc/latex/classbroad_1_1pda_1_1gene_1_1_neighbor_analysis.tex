@@ -1,0 +1,177 @@
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis}{\section{broad.\+pda.\+gene.\+Neighbor\+Analysis Class Reference}
+\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis}\index{broad.\+pda.\+gene.\+Neighbor\+Analysis@{broad.\+pda.\+gene.\+Neighbor\+Analysis}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2b240746e1db83693c2505bae8397bfe}{Neighbor\+Analysis} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a6327b3934bb67fb7e4914cc6a4ca2855}{Neighbor\+Analysis} (String setname, String refname)  throws I\+O\+Exception
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a5f32f248d1e5093bfa1fa1118d0b61d2}{Neighbor\+Analysis} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} new\+Gene\+Set, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} new\+Ref\+Set)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2abf85f1d2a44ca1f234a5aeb88c7c7a}{get\+Neighbors} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} neighbors\+Bed, Buffered\+Writer bw, boolean to\+Write, double dist\+Threshold)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2f78da6069950c839dfa7628d0bd77bb}{update\+Distance\+To\+Neighbors} ()  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms}\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a8b56a8b65222eacfd043c75f4ef99e00}{get\+Neighbors} (Gene g)  throws I\+O\+Exception
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a9121f0c290ec779569131366cf39f2d9}{get\+Neighbor\+Distance} (Gene g)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a6b06c50aaa94140f80b08a993b7a7054}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception  
+\item 
+static \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2da854d4918421bfe33bc4883b6d5edc}{get\+Left\+Neighbor} (Gene g, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} ref)
+\item 
+static \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a8594ddc3a3a3ba948613c1084652c271}{get\+Right\+Neighbor} (Gene g, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} ref)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2b240746e1db83693c2505bae8397bfe}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!Neighbor\+Analysis@{Neighbor\+Analysis}}
+\index{Neighbor\+Analysis@{Neighbor\+Analysis}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{Neighbor\+Analysis}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+gene.\+Neighbor\+Analysis.\+Neighbor\+Analysis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2b240746e1db83693c2505bae8397bfe}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a6327b3934bb67fb7e4914cc6a4ca2855}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!Neighbor\+Analysis@{Neighbor\+Analysis}}
+\index{Neighbor\+Analysis@{Neighbor\+Analysis}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{Neighbor\+Analysis}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+gene.\+Neighbor\+Analysis.\+Neighbor\+Analysis (
+\begin{DoxyParamCaption}
+\item[{String}]{setname, }
+\item[{String}]{refname}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a6327b3934bb67fb7e4914cc6a4ca2855}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a5f32f248d1e5093bfa1fa1118d0b61d2}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!Neighbor\+Analysis@{Neighbor\+Analysis}}
+\index{Neighbor\+Analysis@{Neighbor\+Analysis}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{Neighbor\+Analysis}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+gene.\+Neighbor\+Analysis.\+Neighbor\+Analysis (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{new\+Gene\+Set, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{new\+Ref\+Set}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a5f32f248d1e5093bfa1fa1118d0b61d2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2da854d4918421bfe33bc4883b6d5edc}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!get\+Left\+Neighbor@{get\+Left\+Neighbor}}
+\index{get\+Left\+Neighbor@{get\+Left\+Neighbor}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{get\+Left\+Neighbor}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene\+With\+Isoforms} broad.\+pda.\+gene.\+Neighbor\+Analysis.\+get\+Left\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{Gene}]{g, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{ref}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2da854d4918421bfe33bc4883b6d5edc}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a9121f0c290ec779569131366cf39f2d9}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!get\+Neighbor\+Distance@{get\+Neighbor\+Distance}}
+\index{get\+Neighbor\+Distance@{get\+Neighbor\+Distance}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{get\+Neighbor\+Distance}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} broad.\+pda.\+gene.\+Neighbor\+Analysis.\+get\+Neighbor\+Distance (
+\begin{DoxyParamCaption}
+\item[{Gene}]{g}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a9121f0c290ec779569131366cf39f2d9}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2abf85f1d2a44ca1f234a5aeb88c7c7a}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!get\+Neighbors@{get\+Neighbors}}
+\index{get\+Neighbors@{get\+Neighbors}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{get\+Neighbors}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+Neighbor\+Analysis.\+get\+Neighbors (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{neighbors\+Bed, }
+\item[{Buffered\+Writer}]{bw, }
+\item[{boolean}]{to\+Write, }
+\item[{double}]{dist\+Threshold}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2abf85f1d2a44ca1f234a5aeb88c7c7a}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a8b56a8b65222eacfd043c75f4ef99e00}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!get\+Neighbors@{get\+Neighbors}}
+\index{get\+Neighbors@{get\+Neighbors}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{get\+Neighbors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} \mbox{[}$\,$\mbox{]} broad.\+pda.\+gene.\+Neighbor\+Analysis.\+get\+Neighbors (
+\begin{DoxyParamCaption}
+\item[{Gene}]{g}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a8b56a8b65222eacfd043c75f4ef99e00}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a8594ddc3a3a3ba948613c1084652c271}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!get\+Right\+Neighbor@{get\+Right\+Neighbor}}
+\index{get\+Right\+Neighbor@{get\+Right\+Neighbor}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{get\+Right\+Neighbor}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene\+With\+Isoforms} broad.\+pda.\+gene.\+Neighbor\+Analysis.\+get\+Right\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{Gene}]{g, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{ref}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a8594ddc3a3a3ba948613c1084652c271}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a6b06c50aaa94140f80b08a993b7a7054}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!main@{main}}
+\index{main@{main}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+gene.\+Neighbor\+Analysis.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a6b06c50aaa94140f80b08a993b7a7054}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2f78da6069950c839dfa7628d0bd77bb}{\index{broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}!update\+Distance\+To\+Neighbors@{update\+Distance\+To\+Neighbors}}
+\index{update\+Distance\+To\+Neighbors@{update\+Distance\+To\+Neighbors}!broad\+::pda\+::gene\+::\+Neighbor\+Analysis@{broad\+::pda\+::gene\+::\+Neighbor\+Analysis}}
+\subsubsection[{update\+Distance\+To\+Neighbors}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+Neighbor\+Analysis.\+update\+Distance\+To\+Neighbors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbor_analysis_a2f78da6069950c839dfa7628d0bd77bb}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/gene/\hyperlink{_neighbor_analysis_8java}{Neighbor\+Analysis.\+java}\end{DoxyCompactItemize}

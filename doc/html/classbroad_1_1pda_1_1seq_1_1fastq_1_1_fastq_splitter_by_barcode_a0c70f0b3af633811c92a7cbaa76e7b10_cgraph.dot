@@ -1,0 +1,9 @@
+digraph "broad.pda.seq.fastq.FastqSplitterByBarcode.stop"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.fastq.Fastq\lSplitterByBarcode.stop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.seq.fastq.Fastq\lSplitterByBarcode.isPaired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_splitter_by_barcode.html#abf92378a2b0e63fe01228f308ff0cdd4"];
+}

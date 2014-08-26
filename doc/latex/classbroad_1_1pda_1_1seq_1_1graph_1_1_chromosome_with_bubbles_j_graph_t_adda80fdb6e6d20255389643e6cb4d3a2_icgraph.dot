@@ -1,0 +1,9 @@
+digraph "broad.pda.seq.graph.ChromosomeWithBubblesJGraphT.getLocalRate"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.getLocalRate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.seq.segmentation.\lContinuousDataAlignmentModel.scorePaths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_continuous_data_alignment_model.html#a1353042a53391b6ba89d333fdd5fab11"];
+}

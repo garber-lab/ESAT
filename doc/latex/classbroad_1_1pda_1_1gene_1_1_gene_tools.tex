@@ -1,0 +1,168 @@
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools}{\section{broad.\+pda.\+gene.\+Gene\+Tools Class Reference}
+\label{classbroad_1_1pda_1_1gene_1_1_gene_tools}\index{broad.\+pda.\+gene.\+Gene\+Tools@{broad.\+pda.\+gene.\+Gene\+Tools}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+gene.\+Gene\+Tools\+:
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_aa133325339cd1c1f462c63c79eb16614}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception  
+\item 
+static Map$<$ String, \\*
+Interval\+Tree$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_a2685fed73a7ac2f3844e0e1bec280149}{merge} (Map$<$ String, Collection$<$ Gene $>$$>$ original\+Map)
+\item 
+static Interval\+Tree$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_ab23789788fe7d8da95ca3fb2b684deb6}{merge} (Collection$<$ Gene $>$ original)
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_a12ca89dece48d5d731b23700eab1c826}{orientation\+For\+Gene} (Gene g, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} c\+Seq)
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_a989535c5ffe26229bcb40967f70cf35a}{orientation\+From\+Splice\+Sites} (Annotation introns, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq, boolean only\+Canonical)
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_a2ec28016133f8194c34d96bca57049c5}{orientation\+From\+Splice\+Sites} (Annotation introns, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} chr\+Seq)
+\item 
+static Map$<$ String, \\*
+Interval\+Tree$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_ae769dde9735577da2a6ad4099d03eda9}{overlap} (Map$<$ String, Interval\+Tree$<$ Gene $>$$>$ set1, Map$<$ String, Interval\+Tree$<$ Gene $>$$>$set2, Boolean by\+Exon)
+\item 
+static Map$<$ String, \\*
+Interval\+Tree$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_a95b3b562d7d5711676b4cb8aeff56002}{merge\+Sets} (Map$<$ String, Interval\+Tree$<$ Gene $>$$>$ set1, Map$<$ String, Interval\+Tree$<$ Gene $>$$>$ set2)
+\item 
+static Gene \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_a4411d849943390917a369f9075cb660d}{select\+High\+Scoring\+Isoform} (Gene transcript, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} set)
+\item 
+static \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_aee194b8ea30b7cfb58c76bf8beb898c4}{merge\+By\+Gtf\+Gene\+Id} (String in\+File, String out\+File, String out\+Format, String src, boolean write\+Mode)  throws Exception 
+\item 
+static \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_tools_a05bf75f8d1e4bf0f75949574d0031a73}{intersect\+Gene\+Sets} (Collection$<$ Gene $>$ set1, Collection$<$ Gene $>$ set2, boolean take\+Complement)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_a05bf75f8d1e4bf0f75949574d0031a73}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!intersect\+Gene\+Sets@{intersect\+Gene\+Sets}}
+\index{intersect\+Gene\+Sets@{intersect\+Gene\+Sets}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{intersect\+Gene\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf B\+E\+D\+File\+Parser} broad.\+pda.\+gene.\+Gene\+Tools.\+intersect\+Gene\+Sets (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Gene $>$}]{set1, }
+\item[{Collection$<$ Gene $>$}]{set2, }
+\item[{boolean}]{take\+Complement}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_a05bf75f8d1e4bf0f75949574d0031a73}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_aa133325339cd1c1f462c63c79eb16614}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!main@{main}}
+\index{main@{main}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+gene.\+Gene\+Tools.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_aa133325339cd1c1f462c63c79eb16614}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_a2685fed73a7ac2f3844e0e1bec280149}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!merge@{merge}}
+\index{merge@{merge}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{merge}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Interval\+Tree$<$Gene$>$ $>$ broad.\+pda.\+gene.\+Gene\+Tools.\+merge (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{original\+Map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_a2685fed73a7ac2f3844e0e1bec280149}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_ab23789788fe7d8da95ca3fb2b684deb6}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!merge@{merge}}
+\index{merge@{merge}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{merge}]{\setlength{\rightskip}{0pt plus 5cm}static Interval\+Tree$<$Gene$>$ broad.\+pda.\+gene.\+Gene\+Tools.\+merge (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Gene $>$}]{original}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_ab23789788fe7d8da95ca3fb2b684deb6}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_aee194b8ea30b7cfb58c76bf8beb898c4}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!merge\+By\+Gtf\+Gene\+Id@{merge\+By\+Gtf\+Gene\+Id}}
+\index{merge\+By\+Gtf\+Gene\+Id@{merge\+By\+Gtf\+Gene\+Id}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{merge\+By\+Gtf\+Gene\+Id}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf B\+E\+D\+File\+Parser} broad.\+pda.\+gene.\+Gene\+Tools.\+merge\+By\+Gtf\+Gene\+Id (
+\begin{DoxyParamCaption}
+\item[{String}]{in\+File, }
+\item[{String}]{out\+File, }
+\item[{String}]{out\+Format, }
+\item[{String}]{src, }
+\item[{boolean}]{write\+Mode}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_aee194b8ea30b7cfb58c76bf8beb898c4}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_a95b3b562d7d5711676b4cb8aeff56002}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!merge\+Sets@{merge\+Sets}}
+\index{merge\+Sets@{merge\+Sets}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{merge\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Interval\+Tree$<$Gene$>$ $>$ broad.\+pda.\+gene.\+Gene\+Tools.\+merge\+Sets (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Interval\+Tree$<$ Gene $>$$>$}]{set1, }
+\item[{Map$<$ String, Interval\+Tree$<$ Gene $>$$>$}]{set2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_a95b3b562d7d5711676b4cb8aeff56002}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_a12ca89dece48d5d731b23700eab1c826}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!orientation\+For\+Gene@{orientation\+For\+Gene}}
+\index{orientation\+For\+Gene@{orientation\+For\+Gene}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{orientation\+For\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+gene.\+Gene\+Tools.\+orientation\+For\+Gene (
+\begin{DoxyParamCaption}
+\item[{Gene}]{g, }
+\item[{{\bf Sequence}}]{c\+Seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_a12ca89dece48d5d731b23700eab1c826}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_a989535c5ffe26229bcb40967f70cf35a}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!orientation\+From\+Splice\+Sites@{orientation\+From\+Splice\+Sites}}
+\index{orientation\+From\+Splice\+Sites@{orientation\+From\+Splice\+Sites}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{orientation\+From\+Splice\+Sites}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+gene.\+Gene\+Tools.\+orientation\+From\+Splice\+Sites (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{introns, }
+\item[{{\bf Sequence}}]{seq, }
+\item[{boolean}]{only\+Canonical}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_a989535c5ffe26229bcb40967f70cf35a}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_a2ec28016133f8194c34d96bca57049c5}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!orientation\+From\+Splice\+Sites@{orientation\+From\+Splice\+Sites}}
+\index{orientation\+From\+Splice\+Sites@{orientation\+From\+Splice\+Sites}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{orientation\+From\+Splice\+Sites}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+gene.\+Gene\+Tools.\+orientation\+From\+Splice\+Sites (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{introns, }
+\item[{{\bf Sequence}}]{chr\+Seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_a2ec28016133f8194c34d96bca57049c5}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_ae769dde9735577da2a6ad4099d03eda9}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!overlap@{overlap}}
+\index{overlap@{overlap}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{overlap}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Interval\+Tree$<$Gene$>$ $>$ broad.\+pda.\+gene.\+Gene\+Tools.\+overlap (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Interval\+Tree$<$ Gene $>$$>$}]{set1, }
+\item[{Map$<$ String, Interval\+Tree$<$ Gene $>$$>$}]{set2, }
+\item[{Boolean}]{by\+Exon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_ae769dde9735577da2a6ad4099d03eda9}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_gene_tools_a4411d849943390917a369f9075cb660d}{\index{broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}!select\+High\+Scoring\+Isoform@{select\+High\+Scoring\+Isoform}}
+\index{select\+High\+Scoring\+Isoform@{select\+High\+Scoring\+Isoform}!broad\+::pda\+::gene\+::\+Gene\+Tools@{broad\+::pda\+::gene\+::\+Gene\+Tools}}
+\subsubsection[{select\+High\+Scoring\+Isoform}]{\setlength{\rightskip}{0pt plus 5cm}static Gene broad.\+pda.\+gene.\+Gene\+Tools.\+select\+High\+Scoring\+Isoform (
+\begin{DoxyParamCaption}
+\item[{Gene}]{transcript, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1_gene_tools_a4411d849943390917a369f9075cb660d}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/gene/\hyperlink{_gene_tools_8java}{Gene\+Tools.\+java}\end{DoxyCompactItemize}

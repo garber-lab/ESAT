@@ -1,0 +1,197 @@
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer}{\section{umms.\+core.\+writers.\+Paired\+End\+Writer Class Reference}
+\label{classumms_1_1core_1_1writers_1_1_paired_end_writer}\index{umms.\+core.\+writers.\+Paired\+End\+Writer@{umms.\+core.\+writers.\+Paired\+End\+Writer}}
+}
+
+
+Collaboration diagram for umms.\+core.\+writers.\+Paired\+End\+Writer\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a9dec4cc1ae7d65d0ce3d4e586db9681d}{Paired\+End\+Writer} (File bam\+File)
+\item 
+\hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a65b3ac521ffa6cda84f27ee2e4d33e1f}{Paired\+End\+Writer} (File bam\+File, String output)
+\item 
+void \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_af311259728eda69307c90e2c7bb01057}{set\+Max\+Allowable\+Insert} (int x)
+\item 
+void \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_accda9db268398e2d01de77a971db2231}{convert\+Input\+To\+Paired\+End} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a7681512eb93745733ef348dbccf184ba}{convert\+Input\+To\+Paired\+End} (Transcription\+Read txn\+Read)
+\item 
+String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a5ca002632fb9f4f13cf7883b1d5fce66}{get\+Output\+File} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a29ba6b639ded42279e167c354987710b}{add\+Alignment} (final \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} alignment)
+\item 
+void \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a55e98abca6fad4207f826be2a82d8319}{add\+Record} (final S\+A\+M\+Record record)
+\item 
+void \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a5d5be508ea6ea765331fd61ec7ddcbdc}{close} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a1c122086a58a6837457e7b63eef0cb14}{get\+Default\+File} (String file)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a47179fdb22f7088adbe4f3261169a073}{P\+A\+I\+R\+E\+D\+\_\+\+E\+N\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N} = \char`\"{}.Paired\+End.\+bam\char`\"{}
+\item 
+static final String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a309aa28eba64f3d1db4dc03b7d52a571}{mate\+Sequence\+Flag} =\char`\"{}ms\char`\"{}
+\item 
+static final String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a1d3bbf405e811cac7e24b8a52007e027}{mate\+Cigar\+Flag} =\char`\"{}mc\char`\"{}
+\item 
+static final String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_ad1befee1e7c0717e31504e8290e34924}{read\+Start\+Flag} =\char`\"{}rs\char`\"{}
+\item 
+static final String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a9cb1bbd483adac9d696ce15ce4472900}{read\+Cigar\+Flag} =\char`\"{}rc\char`\"{}
+\item 
+static final String \hyperlink{classumms_1_1core_1_1writers_1_1_paired_end_writer_a836d5879ccb102f95c318813393a8fb6}{mate\+Line\+Flag} =\char`\"{}mate\+Line\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a9dec4cc1ae7d65d0ce3d4e586db9681d}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!Paired\+End\+Writer@{Paired\+End\+Writer}}
+\index{Paired\+End\+Writer@{Paired\+End\+Writer}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{Paired\+End\+Writer}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+writers.\+Paired\+End\+Writer.\+Paired\+End\+Writer (
+\begin{DoxyParamCaption}
+\item[{File}]{bam\+File}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a9dec4cc1ae7d65d0ce3d4e586db9681d}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Input S\+A\+M or B\+A\+M file to extract header and/or reads from. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a65b3ac521ffa6cda84f27ee2e4d33e1f}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!Paired\+End\+Writer@{Paired\+End\+Writer}}
+\index{Paired\+End\+Writer@{Paired\+End\+Writer}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{Paired\+End\+Writer}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+writers.\+Paired\+End\+Writer.\+Paired\+End\+Writer (
+\begin{DoxyParamCaption}
+\item[{File}]{bam\+File, }
+\item[{String}]{output}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a65b3ac521ffa6cda84f27ee2e4d33e1f}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Input S\+A\+M or B\+A\+M file to extract header and/or reads from. \\
+\hline
+{\em output} & Output path \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a29ba6b639ded42279e167c354987710b}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!add\+Alignment@{add\+Alignment}}
+\index{add\+Alignment@{add\+Alignment}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{add\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+writers.\+Paired\+End\+Writer.\+add\+Alignment (
+\begin{DoxyParamCaption}
+\item[{final {\bf Alignment}}]{alignment}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a29ba6b639ded42279e167c354987710b}
+Write a single Alignment 
+\begin{DoxyParams}{Parameters}
+{\em alignment} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a55e98abca6fad4207f826be2a82d8319}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!add\+Record@{add\+Record}}
+\index{add\+Record@{add\+Record}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{add\+Record}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+writers.\+Paired\+End\+Writer.\+add\+Record (
+\begin{DoxyParamCaption}
+\item[{final S\+A\+M\+Record}]{record}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a55e98abca6fad4207f826be2a82d8319}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a5d5be508ea6ea765331fd61ec7ddcbdc}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!close@{close}}
+\index{close@{close}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+writers.\+Paired\+End\+Writer.\+close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a5d5be508ea6ea765331fd61ec7ddcbdc}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_accda9db268398e2d01de77a971db2231}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!convert\+Input\+To\+Paired\+End@{convert\+Input\+To\+Paired\+End}}
+\index{convert\+Input\+To\+Paired\+End@{convert\+Input\+To\+Paired\+End}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{convert\+Input\+To\+Paired\+End}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+writers.\+Paired\+End\+Writer.\+convert\+Input\+To\+Paired\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_accda9db268398e2d01de77a971db2231}
+Convert the bam\+File provided in the constructor to paired end format. If no transcription read is supplied, set to unstranded \hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a7681512eb93745733ef348dbccf184ba}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!convert\+Input\+To\+Paired\+End@{convert\+Input\+To\+Paired\+End}}
+\index{convert\+Input\+To\+Paired\+End@{convert\+Input\+To\+Paired\+End}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{convert\+Input\+To\+Paired\+End}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+writers.\+Paired\+End\+Writer.\+convert\+Input\+To\+Paired\+End (
+\begin{DoxyParamCaption}
+\item[{Transcription\+Read}]{txn\+Read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a7681512eb93745733ef348dbccf184ba}
+Convert the bam\+File provided in the constructor to paired end format. Convert the bam\+File provided in the constructor to paired end format. 
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a1c122086a58a6837457e7b63eef0cb14}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!get\+Default\+File@{get\+Default\+File}}
+\index{get\+Default\+File@{get\+Default\+File}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{get\+Default\+File}]{\setlength{\rightskip}{0pt plus 5cm}static String umms.\+core.\+writers.\+Paired\+End\+Writer.\+get\+Default\+File (
+\begin{DoxyParamCaption}
+\item[{String}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a1c122086a58a6837457e7b63eef0cb14}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a5ca002632fb9f4f13cf7883b1d5fce66}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!get\+Output\+File@{get\+Output\+File}}
+\index{get\+Output\+File@{get\+Output\+File}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{get\+Output\+File}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+writers.\+Paired\+End\+Writer.\+get\+Output\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a5ca002632fb9f4f13cf7883b1d5fce66}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_af311259728eda69307c90e2c7bb01057}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!set\+Max\+Allowable\+Insert@{set\+Max\+Allowable\+Insert}}
+\index{set\+Max\+Allowable\+Insert@{set\+Max\+Allowable\+Insert}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{set\+Max\+Allowable\+Insert}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+writers.\+Paired\+End\+Writer.\+set\+Max\+Allowable\+Insert (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_af311259728eda69307c90e2c7bb01057}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a1d3bbf405e811cac7e24b8a52007e027}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!mate\+Cigar\+Flag@{mate\+Cigar\+Flag}}
+\index{mate\+Cigar\+Flag@{mate\+Cigar\+Flag}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{mate\+Cigar\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}final String umms.\+core.\+writers.\+Paired\+End\+Writer.\+mate\+Cigar\+Flag =\char`\"{}mc\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a1d3bbf405e811cac7e24b8a52007e027}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a836d5879ccb102f95c318813393a8fb6}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!mate\+Line\+Flag@{mate\+Line\+Flag}}
+\index{mate\+Line\+Flag@{mate\+Line\+Flag}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{mate\+Line\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}final String umms.\+core.\+writers.\+Paired\+End\+Writer.\+mate\+Line\+Flag =\char`\"{}mate\+Line\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a836d5879ccb102f95c318813393a8fb6}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a309aa28eba64f3d1db4dc03b7d52a571}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!mate\+Sequence\+Flag@{mate\+Sequence\+Flag}}
+\index{mate\+Sequence\+Flag@{mate\+Sequence\+Flag}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{mate\+Sequence\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}final String umms.\+core.\+writers.\+Paired\+End\+Writer.\+mate\+Sequence\+Flag =\char`\"{}ms\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a309aa28eba64f3d1db4dc03b7d52a571}
+Writes a file to represent a B\+A\+M file where the paired end reads are concatenated We will represent the basic alignment start and end for the whole fragment The attributes will have information for the component parts \hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a47179fdb22f7088adbe4f3261169a073}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!P\+A\+I\+R\+E\+D\+\_\+\+E\+N\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N@{P\+A\+I\+R\+E\+D\+\_\+\+E\+N\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N}}
+\index{P\+A\+I\+R\+E\+D\+\_\+\+E\+N\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N@{P\+A\+I\+R\+E\+D\+\_\+\+E\+N\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{P\+A\+I\+R\+E\+D\+\_\+\+E\+N\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+writers.\+Paired\+End\+Writer.\+P\+A\+I\+R\+E\+D\+\_\+\+E\+N\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N = \char`\"{}.Paired\+End.\+bam\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a47179fdb22f7088adbe4f3261169a073}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_a9cb1bbd483adac9d696ce15ce4472900}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!read\+Cigar\+Flag@{read\+Cigar\+Flag}}
+\index{read\+Cigar\+Flag@{read\+Cigar\+Flag}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{read\+Cigar\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}final String umms.\+core.\+writers.\+Paired\+End\+Writer.\+read\+Cigar\+Flag =\char`\"{}rc\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_a9cb1bbd483adac9d696ce15ce4472900}
+\hypertarget{classumms_1_1core_1_1writers_1_1_paired_end_writer_ad1befee1e7c0717e31504e8290e34924}{\index{umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}!read\+Start\+Flag@{read\+Start\+Flag}}
+\index{read\+Start\+Flag@{read\+Start\+Flag}!umms\+::core\+::writers\+::\+Paired\+End\+Writer@{umms\+::core\+::writers\+::\+Paired\+End\+Writer}}
+\subsubsection[{read\+Start\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}final String umms.\+core.\+writers.\+Paired\+End\+Writer.\+read\+Start\+Flag =\char`\"{}rs\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1writers_1_1_paired_end_writer_ad1befee1e7c0717e31504e8290e34924}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/writers/\hyperlink{_paired_end_writer_8java}{Paired\+End\+Writer.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+digraph "broad.core.motif.misc.ScoreMotifInstances.ScoreMotifInstances"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.motif.misc.Score\lMotifInstances.ScoreMotifInstances",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.motif.misc.Score\lMotifInstances.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1misc_1_1_score_motif_instances.html#abbc985d2c658fd586e8bb2d5732b994c"];
+}

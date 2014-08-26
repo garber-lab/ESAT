@@ -1,0 +1,15 @@
+digraph "broad.core.multiplealignment.MultipleAlignment.getAlignedSequences"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lMultipleAlignment.getAlignedSequences",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.multiplealignment.\lMultipleAlignment.compress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#ad475a9fa42f4aaa5fc128fd3688f9c38"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.multiplealignment.\lMultipleAlignment.getNumberOfAligning\lSequences",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a342692470eca8bfd3fc0d8227f66e0e3"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.multiplealignment.\lMultipleAlignment.getSubAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#ad8b69760ca48a1009539fd5fbf7c8c48"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.multiplealignment.\lMultipleAlignment.append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a3d86dc775bd25f65cd6e97b5ef8b4411"];
+}

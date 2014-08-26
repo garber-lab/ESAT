@@ -1,0 +1,535 @@
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{\section{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation Interface Reference}
+\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}\index{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation@{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}}
+}
+
+
+Inheritance diagram for broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation\+:
+
+
+Collaboration diagram for broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa09c2220d181284077c5c020f2721b63}{get\+Start} ()
+\item 
+int \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a68b4fd4cda3321ffd91dd427df9b24a7}{get\+End} ()
+\item 
+long \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa67e2c999b69ce3f322f88c4c8d67b3f}{get\+Middle} ()
+\item 
+double \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1331acfee9aa44b1987937f227be0885}{get\+Score} ()
+\item 
+String \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_af3d71fb0469ff283d3a4c4b539f58406}{get\+Name} ()
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aff1d4a7789e8fee0258a91aaad66111d}{set\+Score} (double score)
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a28cc1992e605bbd4b743e8cf6562fe01}{set\+Name} (String name)
+\item 
+\hyperlink{enumumms_1_1core_1_1annotation_1_1_annotation_1_1_strand}{Strand} \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1179b529806740f0a0302f8cd1c44b2d}{get\+Orientation} ()
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a6bed3a14fbbcb700693200c4a634f69d}{set\+Orientation} (String orientation)
+\item 
+int \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a25da9936b0e579e27596aa88f25d78cc}{length} ()
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa9663ad49b8a37f51e23928b94702d94}{set\+Start} (int start)
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_afa510429319c0efc147c5da446cab166}{set\+End} (int end)
+\item 
+String \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a11b7345e12c3842e8b12530dfdf0e40c}{get\+Chromosome} ()
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_ade7adfb7a7597f976d547736ce83a48d}{set\+Chromosome} (String chr)
+\item 
+boolean \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aacaec867ef129abbfb9e96d2dfb5630f}{in\+Reversed\+Orientation} ()
+\item 
+int \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a7b51d8f731634b924bd1fd8507acf416}{get\+Distance\+To} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} other)
+\item 
+String \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3dd25602f0a402d70a9082bb43e479b8}{to\+U\+C\+S\+C} ()
+\item 
+int \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a0a033cc9a97af87142b83afa0317668c}{get\+Overlap} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} other)
+\item 
+boolean \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a2987707b47ff3712738f13421c153f1f}{contains} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} other)
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a715faaebac5a1b2fc77e288f78a497e0}{take\+Intersection} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} other)
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a60f452f5cd3a0a29b2dec762fd61d763}{take\+Union} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} other)
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a5649ce7db12f7377ae3a858884fca5af}{stitch\+To} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} other)
+\item 
+String \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a5ab11d683bcfed2572c3914ee5ba5a24}{get\+Chromosome\+String} ()
+\item 
+double \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a9f830dce45015975df71e4babf9d811b}{get\+Extra\+Score} (int i)
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_af562b75a5629f3792278a8cf98cf5e5b}{add\+Extra\+Score} (double score)
+\item 
+List$<$ Double $>$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3b41240f5758c0c98f9238520bbb203b}{get\+Extra\+Scores} ()
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a84c674ed4b8b8a2c050a47d15e18614f}{remove\+Extra\+Scores} ()
+\item 
+boolean \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3c34d88dbd8182161070dd027a253529}{almost\+Equal} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} other, int fudge)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_af562b75a5629f3792278a8cf98cf5e5b}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!add\+Extra\+Score@{add\+Extra\+Score}}
+\index{add\+Extra\+Score@{add\+Extra\+Score}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{add\+Extra\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+add\+Extra\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{score}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_af562b75a5629f3792278a8cf98cf5e5b}
+Adds a new extra score 
+\begin{DoxyParams}{Parameters}
+{\em score} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a1abe79cd3414963158adf687374d6527}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3c34d88dbd8182161070dd027a253529}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!almost\+Equal@{almost\+Equal}}
+\index{almost\+Equal@{almost\+Equal}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{almost\+Equal}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+almost\+Equal (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{other, }
+\item[{int}]{fudge}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3c34d88dbd8182161070dd027a253529}
+Checks whether two annotations differ by a small (fudge) factor 
+\begin{DoxyParams}{Parameters}
+{\em other} & The other annotation \\
+\hline
+{\em fudge} & Maximum difference at either end or start to consider similar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a5e6e46ebe27fc102535d6d93aa6f5ac7}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a2987707b47ff3712738f13421c153f1f}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!contains@{contains}}
+\index{contains@{contains}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a2987707b47ff3712738f13421c153f1f}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a768dd90feef065f8b04a253c2d1c3e1e}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a11b7345e12c3842e8b12530dfdf0e40c}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Chromosome@{get\+Chromosome}}
+\index{get\+Chromosome@{get\+Chromosome}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Chromosome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a11b7345e12c3842e8b12530dfdf0e40c}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a3c3c393894b2c4d90334dda13a148eec}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a5ab11d683bcfed2572c3914ee5ba5a24}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Chromosome\+String@{get\+Chromosome\+String}}
+\index{get\+Chromosome\+String@{get\+Chromosome\+String}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Chromosome\+String}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Chromosome\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a5ab11d683bcfed2572c3914ee5ba5a24}
+Returns the usual way to write a chromosome\+: chr\+Symbol if a chromosome or the full name of the scaffold 
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a713c14e80c68be53c7175c08a4042f10}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a7b51d8f731634b924bd1fd8507acf416}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Distance\+To@{get\+Distance\+To}}
+\index{get\+Distance\+To@{get\+Distance\+To}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Distance\+To}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Distance\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a7b51d8f731634b924bd1fd8507acf416}
+Calculates the distance to the another genomic annotation. \begin{DoxyReturn}{Returns}
+0 if the annotations overlap or the minimum between the edges otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a944575391d1ef0c562e3beeb4d493925}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a68b4fd4cda3321ffd91dd427df9b24a7}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+End@{get\+End}}
+\index{get\+End@{get\+End}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+End}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a68b4fd4cda3321ffd91dd427df9b24a7}
+\begin{DoxyReturn}{Returns}
+end of the annotation (exclusive) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a51310d48912558d549d21cbf92ab946a}{umms.\+core.\+annotation.\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a9f830dce45015975df71e4babf9d811b}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Extra\+Score@{get\+Extra\+Score}}
+\index{get\+Extra\+Score@{get\+Extra\+Score}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Extra\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Extra\+Score (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a9f830dce45015975df71e4babf9d811b}
+Returns the ith extra score 
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a29f10b679f86820e035e1f8071ce552d}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3b41240f5758c0c98f9238520bbb203b}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Extra\+Scores@{get\+Extra\+Scores}}
+\index{get\+Extra\+Scores@{get\+Extra\+Scores}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Extra\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Double$>$ broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Extra\+Scores (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3b41240f5758c0c98f9238520bbb203b}
+\begin{DoxyReturn}{Returns}
+all extra scores 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a2730f74d634af4832bc9a7c4071316cb}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa67e2c999b69ce3f322f88c4c8d67b3f}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Middle@{get\+Middle}}
+\index{get\+Middle@{get\+Middle}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Middle}]{\setlength{\rightskip}{0pt plus 5cm}long broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Middle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa67e2c999b69ce3f322f88c4c8d67b3f}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_ae3d92f493e84b236a38aac116bff28d3}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_af3d71fb0469ff283d3a4c4b539f58406}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_af3d71fb0469ff283d3a4c4b539f58406}
+\begin{DoxyReturn}{Returns}
+the name of the annotation 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_adf055d923b7239351f4dd5908a1eebeb}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1179b529806740f0a0302f8cd1c44b2d}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Strand} broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1179b529806740f0a0302f8cd1c44b2d}
+\begin{DoxyReturn}{Returns}
+orientation or strand 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad5125f9609856d2a1b8e788664551558}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Implemented in \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation_a36373aa2575e846905204c09bf74f041}{broad.\+core.\+annotation.\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a0a033cc9a97af87142b83afa0317668c}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Overlap@{get\+Overlap}}
+\index{get\+Overlap@{get\+Overlap}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Overlap (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a0a033cc9a97af87142b83afa0317668c}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} to check of overlap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the current instance overlaps with the other one. Returns the number of bases that overlap between the two annotations. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a37f37590e75f2cbbb1268a59b8a686f5}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1331acfee9aa44b1987937f227be0885}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1331acfee9aa44b1987937f227be0885}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a117f218fd9f4b0bbe5e183647c9d4826}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a09f0b0f3e4eab4d2ed93ffeb7419646d}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, and \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_ad035b618294c2b18a553049446b814f5}{broad.\+pda.\+datastructures.\+Alignments}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa09c2220d181284077c5c020f2721b63}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!get\+Start@{get\+Start}}
+\index{get\+Start@{get\+Start}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{get\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+get\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa09c2220d181284077c5c020f2721b63}
+\begin{DoxyReturn}{Returns}
+start of the annotation (inclusive) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a4fc0345d5a95dfb0bfd018cc0d9d400f}{umms.\+core.\+annotation.\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aacaec867ef129abbfb9e96d2dfb5630f}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!in\+Reversed\+Orientation@{in\+Reversed\+Orientation}}
+\index{in\+Reversed\+Orientation@{in\+Reversed\+Orientation}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{in\+Reversed\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+in\+Reversed\+Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aacaec867ef129abbfb9e96d2dfb5630f}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a1d9bc8dac1004a062ae4aca4c8cfbfba}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a25da9936b0e579e27596aa88f25d78cc}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!length@{length}}
+\index{length@{length}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a25da9936b0e579e27596aa88f25d78cc}
+\begin{DoxyReturn}{Returns}
+length of the Annotation; if it has blocks, the gaps between blocks are not included 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5431a247302386cf5f607121fe256eb6}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a3a88df9b3819805512b53a4c054785c9}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, and \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_a1e008aad6fcf252184b0b623ac992ac3}{broad.\+pda.\+datastructures.\+Alignments}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a84c674ed4b8b8a2c050a47d15e18614f}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!remove\+Extra\+Scores@{remove\+Extra\+Scores}}
+\index{remove\+Extra\+Scores@{remove\+Extra\+Scores}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{remove\+Extra\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+remove\+Extra\+Scores (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a84c674ed4b8b8a2c050a47d15e18614f}
+removes extra scores 
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_aa8d2b0cfe4dbbdae3461db23f0633700}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_ade7adfb7a7597f976d547736ce83a48d}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!set\+Chromosome@{set\+Chromosome}}
+\index{set\+Chromosome@{set\+Chromosome}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{set\+Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+set\+Chromosome (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_ade7adfb7a7597f976d547736ce83a48d}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_aeb96f44edbf4809956fe995a5cb3fc36}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_afa510429319c0efc147c5da446cab166}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!set\+End@{set\+End}}
+\index{set\+End@{set\+End}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{set\+End}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+set\+End (
+\begin{DoxyParamCaption}
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_afa510429319c0efc147c5da446cab166}
+Sets a new end position. Will delete and/or truncate blocks if the new end position is less than the old one. Will extend the last block if the new end position is greater than old one. 
+\begin{DoxyParams}{Parameters}
+{\em new} & end position (ignoring orientation) of the annotation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a149e821da8f19e0fad6c3a52edf61728}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a28cc1992e605bbd4b743e8cf6562fe01}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+set\+Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a28cc1992e605bbd4b743e8cf6562fe01}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the annotation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a91fac76eec98277eca2e0a12d4b4fe77}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a6bed3a14fbbcb700693200c4a634f69d}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!set\+Orientation@{set\+Orientation}}
+\index{set\+Orientation@{set\+Orientation}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{set\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+set\+Orientation (
+\begin{DoxyParamCaption}
+\item[{String}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a6bed3a14fbbcb700693200c4a634f69d}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a4fc2bd00d303328100e8bd20d2c6dd49}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation_a6155b08fe0145a5ca451a4f49b18d167}{broad.\+core.\+annotation.\+Genomic\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aff1d4a7789e8fee0258a91aaad66111d}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!set\+Score@{set\+Score}}
+\index{set\+Score@{set\+Score}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{set\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+set\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{score}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aff1d4a7789e8fee0258a91aaad66111d}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa46bc7126d4e5f9df374c6525cfcee14}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_aeb06d309e53ec158338164b8945b9949}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa9663ad49b8a37f51e23928b94702d94}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!set\+Start@{set\+Start}}
+\index{set\+Start@{set\+Start}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{set\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+set\+Start (
+\begin{DoxyParamCaption}
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa9663ad49b8a37f51e23928b94702d94}
+Sets a new start position. Will delete and/or truncate blocks if the new start position is greater than the old one. Will extend the first block if the new start position is less than old one. 
+\begin{DoxyParams}{Parameters}
+{\em new} & start position (ignoring orientation) of the annotation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae077ebc7788964176739ff85bf29b560}{umms.\+core.\+annotation.\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a5649ce7db12f7377ae3a858884fca5af}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!stitch\+To@{stitch\+To}}
+\index{stitch\+To@{stitch\+To}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{stitch\+To}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+stitch\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a5649ce7db12f7377ae3a858884fca5af}
+Enlarges this annotation by 
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a91baf63b1c0a9334fa9a292f8064ed2b}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a715faaebac5a1b2fc77e288f78a497e0}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!take\+Intersection@{take\+Intersection}}
+\index{take\+Intersection@{take\+Intersection}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{take\+Intersection}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+take\+Intersection (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a715faaebac5a1b2fc77e288f78a497e0}
+Change the current instance to represent its intersection with the provided annotation 
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_af01c10d4a47dfaab7759d18b4281c09b}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a60f452f5cd3a0a29b2dec762fd61d763}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!take\+Union@{take\+Union}}
+\index{take\+Union@{take\+Union}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{take\+Union}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+take\+Union (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a60f452f5cd3a0a29b2dec762fd61d763}
+Change the current instance to represent its union with the provided annotation 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation}} & other \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_adfbce23fbb97636400eab0f450f3f828}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}.
+
+\hypertarget{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3dd25602f0a402d70a9082bb43e479b8}{\index{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}!to\+U\+C\+S\+C@{to\+U\+C\+S\+C}}
+\index{to\+U\+C\+S\+C@{to\+U\+C\+S\+C}!broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation@{broad\+::core\+::annotation\+::\+Lightweight\+Genomic\+Annotation}}
+\subsubsection[{to\+U\+C\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation.\+to\+U\+C\+S\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3dd25602f0a402d70a9082bb43e479b8}
+Similar to get\+Location\+String() \begin{DoxySeeAlso}{See also}
+get\+Location\+String and provided only for backwards compatibility. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6be4427ca02f0d1f6cfeb9481ba09e0f}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a82903ca4b9f07f9b7bcafe7ef43afd82}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, and \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_afc4c11e6eb0231559d46afc7a61fa6da}{broad.\+pda.\+datastructures.\+Alignments}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/annotation/\hyperlink{_lightweight_genomic_annotation_8java}{Lightweight\+Genomic\+Annotation.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+digraph "broad.core.util.CollapseByIntersection.makeIntervalTree"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.util.Collapse\lByIntersection.makeIntervalTree",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.util.Collapse\lByIntersection.collapseByIntersection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#acca4135dc1d9cafa4a07b0be84b00e67"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.util.Collapse\lByIntersection.CollapseGenes\lByIntersection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#a36614cce291e2f9b03e50803b52a27ec"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.util.Collapse\lByIntersection.DecollapseByIntron\lLocation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#a591dc5b6fcf322d9939c9622ab004cd0"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.core.util.Collapse\lByIntersection.DecollapseByIntron\lLocation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#a2bbd704922af338724d81573e25c601e"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="broad.core.util.Collapse\lByIntersection.DecollapseByIntron\lLocationOld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#a26b13b1e360adc09bc5fc35c19830c1c"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="broad.core.util.Collapse\lByIntersection.DecollapseByIntron\lLocationWorking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#a666762b918009084be93463151713e3d"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="broad.core.util.Collapse\lByIntersection.makeIntervalTree\lForGeneExons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#a8ffcc7f3ad85416198a8588bfaa95604"];
+}

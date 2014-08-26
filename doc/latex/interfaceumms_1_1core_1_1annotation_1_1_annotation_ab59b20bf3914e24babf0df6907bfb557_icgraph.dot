@@ -1,0 +1,19 @@
+digraph "umms.core.annotation.Annotation.size"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Annotation.size",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.annotation.GFF.get\lFirstValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#a4bbeab1dc47ec4c302cfc3aca1fe9c53"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.GFF.set\lAttributes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#a896fe7c925e9513bd06cde675fdfa617"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.annotation.GFF.GFF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#af6eec864fda16bb18f36c6fde1c067e2"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.multiplealignment.\lAlignmentExtractor.extractGFFRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_alignment_extractor.html#a953ec88a63df9ac98e99814792206a06"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.multiplealignment.\lAlignmentExtractor.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_alignment_extractor.html#a48d2b8b5d5fdbcc0caae3d2e29e049f2"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.annotation.GFF.to\lString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#adbcf19a0f8333df39e5360afa326bc4c"];
+}

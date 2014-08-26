@@ -1,0 +1,11 @@
+digraph "umms.core.annotation.SingleInterval.SingleInterval"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Single\lInterval.SingleInterval",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Single\lInterval.intersect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_single_interval.html#a924417b81926218be5df0a4886c2818d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Single\lInterval.union",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_single_interval.html#af44452eabde12b58440724fe802c6d50"];
+}

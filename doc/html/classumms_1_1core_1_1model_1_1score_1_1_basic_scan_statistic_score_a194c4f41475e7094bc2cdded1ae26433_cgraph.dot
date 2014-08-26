@@ -1,0 +1,22 @@
+digraph "umms.core.model.score.BasicScanStatisticScore.toString"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.Basic\lScanStatisticScore.toString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.model.score.Basic\lScanStatisticScore.getScanPvalue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#abed9c5b27dd0af8fa6bb652d2964ebd8"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.model.score.Basic\lScanStatisticScore.getGlobalLambda",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#a6ebdc7a57a5a409e58a233de615036c2"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.model.score.Count\lScore.getTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a4668d5a19912f7f9bf52c6c3b8fe2b2c"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.model.score.Basic\lScanStatisticScore.getGlobalLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#aea3afb594bc9f8eda886e0987285b504"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="umms.core.model.score.Basic\lScanStatisticScore.getLocalLambda",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#a67c56ac3e65e0c7868f64c05a5f8816c"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="umms.core.model.score.Count\lScore.getRegionTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a067ecd35931600525a2fcd10c25d0f7a"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="umms.core.model.score.Basic\lScanStatisticScore.getRegionLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#a1511649a2bcc63582bd0716df87fc2f8"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,11 @@
+digraph "broad.core.sequence.FastaSequenceIO.extractRegions"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.sequence.Fasta\lSequenceIO.extractRegions",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.sequence.Fasta\lSequenceIO.extractRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o.html#a60b0ea063f9b4f160f4b3ed1daa012ab"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.sequence.Fasta\lSequenceIO.extractRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o.html#ae6492131e43a789e70d89651462c9616"];
+}

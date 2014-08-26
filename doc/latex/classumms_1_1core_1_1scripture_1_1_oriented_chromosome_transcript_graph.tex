@@ -1,0 +1,291 @@
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph}{\section{umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph Class Reference}
+\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph}\index{umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph@{umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph}}
+}
+
+
+Inheritance diagram for umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph\+:
+
+
+Collaboration diagram for umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Transcript\+Graph\+Edge}
+\item 
+class {\bfseries Transcript\+Graph\+Edge\+Factory}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a25dbca06eccc2ed74c63cd82527e1337}{Oriented\+Chromosome\+Transcript\+Graph} (String name, String orientation)
+\item 
+Transcript\+Graph\+Edge \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_aba8a22ce99ff63b98548903d4615ba6b}{add\+Edge} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} v1, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} v2)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a2d265cc21a1b11e2a089c5d8f2d9a872}{add\+Annotation\+To\+Graph} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} a)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6e0e951bd8fa8e83f453b8050e742b9c}{add\+Vertex} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} v)
+\item 
+int \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6da3579b3d2cd6a0de92d18839d2cac8}{connect\+Vertex\+To\+Graph} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} v)
+\item 
+Transcript\+Graph\+Edge \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_af7151fcd597da49a20437036909bd294}{add\+Edge} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} v1, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} v2, boolean augment\+Count)
+\item 
+List$<$ Graph\+Path$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, \\*
+Transcript\+Graph\+Edge $>$ $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a052d51d6c53b23588f9cec5df1af36b8}{get\+Paths} ()
+\item 
+Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a2d2b4ae004f53c19e4890cb3351be976}{get\+Source\+Vertices} ()
+\item 
+Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_ade41013e156feeae401801be1ab08c03}{get\+Sink\+Vertices} ()
+\item 
+Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a3d428fc8927b3ebb4051f4d3858cc0ac}{get\+Orphan\+Vertices} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6c482f812c7d5dd219106fe0824fbf6e}{write\+Graph} (String save, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} region, boolean set\+Up\+Short\+Exon\+Labels, String graph\+Name)  throws I\+O\+Exception 
+\item 
+Vertex\+Pair$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a3e30facaf439c3a3b0730e1fbcdfcab2}{get\+Node\+Pair} (Transcript\+Graph\+Edge edge)
+\item 
+Collection$<$ Graph\+Path\\*
+$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, \\*
+Transcript\+Graph\+Edge $>$ $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a4d84a0c47daf982d58aa6057531e0294}{get\+Orphan\+Paths} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_aca369a009088258a38a5ec259602b2a2}{path\+To\+Gene} (Graph\+Path$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, Transcript\+Graph\+Edge $>$ gp)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_af9386292113ce7463c996738ee129d18}{Oriented\+Chromosome\+Transcript\+Graph} (Edge\+Factory$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, Transcript\+Graph\+Edge $>$ edge\+Factory)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_af9386292113ce7463c996738ee129d18}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!Oriented\+Chromosome\+Transcript\+Graph@{Oriented\+Chromosome\+Transcript\+Graph}}
+\index{Oriented\+Chromosome\+Transcript\+Graph@{Oriented\+Chromosome\+Transcript\+Graph}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{Oriented\+Chromosome\+Transcript\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+Oriented\+Chromosome\+Transcript\+Graph (
+\begin{DoxyParamCaption}
+\item[{Edge\+Factory$<$ {\bf Annotation}, Transcript\+Graph\+Edge $>$}]{edge\+Factory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_af9386292113ce7463c996738ee129d18}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a25dbca06eccc2ed74c63cd82527e1337}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!Oriented\+Chromosome\+Transcript\+Graph@{Oriented\+Chromosome\+Transcript\+Graph}}
+\index{Oriented\+Chromosome\+Transcript\+Graph@{Oriented\+Chromosome\+Transcript\+Graph}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{Oriented\+Chromosome\+Transcript\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+Oriented\+Chromosome\+Transcript\+Graph (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{String}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a25dbca06eccc2ed74c63cd82527e1337}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a2d265cc21a1b11e2a089c5d8f2d9a872}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!add\+Annotation\+To\+Graph@{add\+Annotation\+To\+Graph}}
+\index{add\+Annotation\+To\+Graph@{add\+Annotation\+To\+Graph}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{add\+Annotation\+To\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+add\+Annotation\+To\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a2d265cc21a1b11e2a089c5d8f2d9a872}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_aba8a22ce99ff63b98548903d4615ba6b}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{add\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}Transcript\+Graph\+Edge umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+add\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{v1, }
+\item[{{\bf Annotation}}]{v2}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_aba8a22ce99ff63b98548903d4615ba6b}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_af7151fcd597da49a20437036909bd294}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{add\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}Transcript\+Graph\+Edge umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+add\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{v1, }
+\item[{{\bf Annotation}}]{v2, }
+\item[{boolean}]{augment\+Count}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_af7151fcd597da49a20437036909bd294}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6e0e951bd8fa8e83f453b8050e742b9c}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!add\+Vertex@{add\+Vertex}}
+\index{add\+Vertex@{add\+Vertex}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{add\+Vertex}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+add\+Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{v}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6e0e951bd8fa8e83f453b8050e742b9c}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6da3579b3d2cd6a0de92d18839d2cac8}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!connect\+Vertex\+To\+Graph@{connect\+Vertex\+To\+Graph}}
+\index{connect\+Vertex\+To\+Graph@{connect\+Vertex\+To\+Graph}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{connect\+Vertex\+To\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+connect\+Vertex\+To\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{v}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6da3579b3d2cd6a0de92d18839d2cac8}
+Adds an exon to a graph 
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a3e30facaf439c3a3b0730e1fbcdfcab2}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!get\+Node\+Pair@{get\+Node\+Pair}}
+\index{get\+Node\+Pair@{get\+Node\+Pair}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{get\+Node\+Pair}]{\setlength{\rightskip}{0pt plus 5cm}Vertex\+Pair$<${\bf Annotation}$>$ umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+get\+Node\+Pair (
+\begin{DoxyParamCaption}
+\item[{Transcript\+Graph\+Edge}]{edge}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a3e30facaf439c3a3b0730e1fbcdfcab2}
+Returns the pair of vertices for a specified edge 
+\begin{DoxyParams}{Parameters}
+{\em edge} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a4d84a0c47daf982d58aa6057531e0294}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!get\+Orphan\+Paths@{get\+Orphan\+Paths}}
+\index{get\+Orphan\+Paths@{get\+Orphan\+Paths}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{get\+Orphan\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Graph\+Path$<${\bf Annotation}, Transcript\+Graph\+Edge$>$ $>$ umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+get\+Orphan\+Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a4d84a0c47daf982d58aa6057531e0294}
+Returns all orphan paths in graph (self edges for orphan vertices) \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a3d428fc8927b3ebb4051f4d3858cc0ac}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!get\+Orphan\+Vertices@{get\+Orphan\+Vertices}}
+\index{get\+Orphan\+Vertices@{get\+Orphan\+Vertices}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{get\+Orphan\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Annotation}$>$ umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+get\+Orphan\+Vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a3d428fc8927b3ebb4051f4d3858cc0ac}
+Returns a collection of all orphan vertices.
+
+\begin{DoxyReturn}{Returns}
+All vertices having allowed edge types. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a052d51d6c53b23588f9cec5df1af36b8}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Graph\+Path$<${\bf Annotation}, Transcript\+Graph\+Edge$>$ $>$ umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+get\+Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a052d51d6c53b23588f9cec5df1af36b8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_ade41013e156feeae401801be1ab08c03}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!get\+Sink\+Vertices@{get\+Sink\+Vertices}}
+\index{get\+Sink\+Vertices@{get\+Sink\+Vertices}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{get\+Sink\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Annotation}$>$ umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+get\+Sink\+Vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_ade41013e156feeae401801be1ab08c03}
+Returns a collection of all the possible target/end vertices for this graph.
+
+\begin{DoxyReturn}{Returns}
+All vertices having allowed edge types. 
+\end{DoxyReturn}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a2d2b4ae004f53c19e4890cb3351be976}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!get\+Source\+Vertices@{get\+Source\+Vertices}}
+\index{get\+Source\+Vertices@{get\+Source\+Vertices}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{get\+Source\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Annotation}$>$ umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+get\+Source\+Vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a2d2b4ae004f53c19e4890cb3351be976}
+Returns a collection of all the possible source/start vertices for the specified graph.
+
+\begin{DoxyReturn}{Returns}
+All vertices having allowed edge types. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_aca369a009088258a38a5ec259602b2a2}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!path\+To\+Gene@{path\+To\+Gene}}
+\index{path\+To\+Gene@{path\+To\+Gene}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{path\+To\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene} umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+path\+To\+Gene (
+\begin{DoxyParamCaption}
+\item[{Graph\+Path$<$ {\bf Annotation}, Transcript\+Graph\+Edge $>$}]{gp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_aca369a009088258a38a5ec259602b2a2}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6c482f812c7d5dd219106fe0824fbf6e}{\index{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}!write\+Graph@{write\+Graph}}
+\index{write\+Graph@{write\+Graph}!umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph@{umms\+::core\+::scripture\+::\+Oriented\+Chromosome\+Transcript\+Graph}}
+\subsubsection[{write\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+scripture.\+Oriented\+Chromosome\+Transcript\+Graph.\+write\+Graph (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{{\bf Alignments}}]{region, }
+\item[{boolean}]{set\+Up\+Short\+Exon\+Labels, }
+\item[{String}]{graph\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph_a6c482f812c7d5dd219106fe0824fbf6e}
+Writes the graph to a file 
+\begin{DoxyParams}{Parameters}
+{\em save} & \\
+\hline
+{\em region} & \\
+\hline
+{\em set\+Up\+Short\+Exon\+Labels} & \\
+\hline
+{\em graph\+Name} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/scripture/\hyperlink{_oriented_chromosome_transcript_graph_8java}{Oriented\+Chromosome\+Transcript\+Graph.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,564 @@
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect}{\section{broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect Class Reference}
+\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect}\index{broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect@{broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Map$<$ String, Map$<$ Gene, \\*
+Collection$<$ Gene $>$ $>$ $>$ \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a5d44a2686992401cbd3cf23b0a79f3cb}{map\+Genes\+To\+Overlappers} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set)
+\item 
+static Map$<$ String, Collection\\*
+$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af40f199698b8f8ae56e31ccfb162e5e5}{get\+Overlap} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set)
+\item 
+static Map$<$ String, Collection\\*
+$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa98d0fc676ae1ac2eb1bd21772eb1ff1}{get\+Overlap} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set, boolean verbose)
+\item 
+static Map$<$ String, Collection\\*
+$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa1485b48f6a1d47327c251a455046896}{get\+Overlap} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set, Map$<$ String, Collection$<$ Gene $>$$>$ exclude\+Set)
+\item 
+static Map$<$ String, Collection\\*
+$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a769e53d9854cb10aa275735ed22fca37}{get\+Overlap} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set, Map$<$ String, Collection$<$ Gene $>$$>$ exclude\+Set, boolean verbose)
+\item 
+static int \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af100c23d53648e28a28c44a0f39f7793}{count\+Overlappers} (Map$<$ String, Collection$<$ Gene $>$$>$ regions\+To\+Count, Map$<$ String, Collection$<$ Gene $>$$>$ regions\+To\+Overlap\+With)
+\item 
+static int \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a8fdf9a00a09d928137c033175041c778}{count\+Overlappers} (Map$<$ String, Collection$<$ Gene $>$$>$ regions\+To\+Count, Map$<$ String, Collection$<$ Gene $>$$>$ regions\+To\+Overlap\+With, Map$<$ String, Collection$<$ Gene $>$$>$ exclude\+Set)
+\item 
+static Map$<$ String, Collection\\*
+$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_ac93739572a200cb1ab294d3145f1e902}{get\+Overlap\+With\+Randomized\+Positions} (Map$<$ String, Collection$<$ Gene $>$$>$ regions, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Genes)
+\item 
+static Map$<$ String, Collection\\*
+$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a00354a59179e3fc2e4577537942db2e0}{get\+Overlap\+With\+Randomized\+Positions} (Map$<$ String, Collection$<$ Gene $>$$>$ regions, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Genes, Map$<$ String, Collection$<$ Gene $>$$>$ exclude\+Features)
+\item 
+static int \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a0d7c1260e14a6fccb8fbb735f30a0fce}{num\+Overlapping\+Bases} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set)
+\item 
+static int \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_adf8ca4370f3a6d8b211126f85d865a7b}{num\+Overlapping\+Bases} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set, Map$<$ String, Collection$<$ Gene $>$$>$ exclude\+Set)
+\item 
+static int \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a1722a4a5c4eb60dd7ed6d634f41cf1b9}{num\+Overlapping\+Genes} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set)
+\item 
+static int \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_ada0235bbe25a54918f63ab212d13a6ac}{num\+Overlapping\+Genes} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set, Map$<$ String, Collection$<$ Gene $>$$>$ exclude\+Genes)
+\item 
+static void \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a61ad48b4e324f1fc9620ab3718fe469e}{write\+Overlap} (String gene\+File, String intersect\+File, String out\+File, boolean randomize\+Positions\+Within\+Each\+Gene)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a788f9d9f0f1bd9353eb23d57722ed91c}{write\+Overlap} (String gene\+File, String intersect\+File, String exclude\+File, String out\+File, boolean randomize\+Positions\+Within\+Each\+Gene)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af88440b2a81ec8dd109eead3456d0d7c}{write\+Overlap} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set, String out\+File, boolean randomize\+Positions\+Within\+Each\+Gene)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a5910a1ac4f471d727490c1b3ae1d849c}{write\+Overlap} (Map$<$ String, Collection$<$ Gene $>$$>$ genes, Map$<$ String, Collection$<$ Gene $>$$>$ intersect\+Set, Map$<$ String, Collection$<$ Gene $>$$>$ exclude\+Set, String out\+File, boolean randomize\+Positions\+Within\+Each\+Gene)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa8943bc443c29e9d8ea16802818cdf0a}{write\+General\+Stats} (String gene\+File, String intersect\+File1, String intersect\+File2, String exclude\+File, String out\+File)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a033cf8b0d21c5945f316db8edbf9d1e7}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af100c23d53648e28a28c44a0f39f7793}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!count\+Overlappers@{count\+Overlappers}}
+\index{count\+Overlappers@{count\+Overlappers}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{count\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}static int broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+count\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{regions\+To\+Count, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{regions\+To\+Overlap\+With}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af100c23d53648e28a28c44a0f39f7793}
+Count number of regions that overlap at least one region in other set 
+\begin{DoxyParams}{Parameters}
+{\em regions\+To\+Count} & Regions to count \\
+\hline
+{\em regions\+To\+Overlap\+With} & Potential overlappers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of regions in the first set that overlap at least one region in other set 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a8fdf9a00a09d928137c033175041c778}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!count\+Overlappers@{count\+Overlappers}}
+\index{count\+Overlappers@{count\+Overlappers}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{count\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}static int broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+count\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{regions\+To\+Count, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{regions\+To\+Overlap\+With, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{exclude\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a8fdf9a00a09d928137c033175041c778}
+Count number of regions that overlap at least one region in other set 
+\begin{DoxyParams}{Parameters}
+{\em regions\+To\+Count} & Regions to count \\
+\hline
+{\em regions\+To\+Overlap\+With} & Potential overlappers \\
+\hline
+{\em exclude\+Set} & Exclude regions from first set if they overlap a region in this set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of regions in the first set that overlap at least one region in other set 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af40f199698b8f8ae56e31ccfb162e5e5}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!get\+Overlap@{get\+Overlap}}
+\index{get\+Overlap@{get\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{get\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<$Gene$>$ $>$ broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+get\+Overlap (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af40f199698b8f8ae56e31ccfb162e5e5}
+Get overlap between two gene sets 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of Gene objects representing the overlaps 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa98d0fc676ae1ac2eb1bd21772eb1ff1}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!get\+Overlap@{get\+Overlap}}
+\index{get\+Overlap@{get\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{get\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<$Gene$>$ $>$ broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+get\+Overlap (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set, }
+\item[{boolean}]{verbose}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa98d0fc676ae1ac2eb1bd21772eb1ff1}
+Get overlap between two gene sets 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+{\em verbose} & Print messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of Gene objects representing the overlaps 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa1485b48f6a1d47327c251a455046896}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!get\+Overlap@{get\+Overlap}}
+\index{get\+Overlap@{get\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{get\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<$Gene$>$ $>$ broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+get\+Overlap (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{exclude\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa1485b48f6a1d47327c251a455046896}
+Get overlap between two gene sets and automatically exclude all genes in a set 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+{\em exclude\+Set} & Exclude genes if they overlap a region from this set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of Gene objects representing the overlaps 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a769e53d9854cb10aa275735ed22fca37}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!get\+Overlap@{get\+Overlap}}
+\index{get\+Overlap@{get\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{get\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<$Gene$>$ $>$ broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+get\+Overlap (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{exclude\+Set, }
+\item[{boolean}]{verbose}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a769e53d9854cb10aa275735ed22fca37}
+Get overlap between two gene sets and automatically exclude all genes in a set 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+{\em exclude\+Set} & Exclude genes from first gene set if they overlap a gene from this set \\
+\hline
+{\em verbose} & Print messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of Gene objects representing the overlaps 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_ac93739572a200cb1ab294d3145f1e902}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!get\+Overlap\+With\+Randomized\+Positions@{get\+Overlap\+With\+Randomized\+Positions}}
+\index{get\+Overlap\+With\+Randomized\+Positions@{get\+Overlap\+With\+Randomized\+Positions}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{get\+Overlap\+With\+Randomized\+Positions}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<$Gene$>$ $>$ broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+get\+Overlap\+With\+Randomized\+Positions (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{regions, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_ac93739572a200cb1ab294d3145f1e902}
+Intersect a set of regions with another set of genes and randomize positions of the regions within each gene 
+\begin{DoxyParams}{Parameters}
+{\em regions} & The regions of interest \\
+\hline
+{\em intersect\+Genes} & The genes to intersect with and randomize within \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Regions that have been intersected with the gene set and then randomized within each intersect gene 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a00354a59179e3fc2e4577537942db2e0}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!get\+Overlap\+With\+Randomized\+Positions@{get\+Overlap\+With\+Randomized\+Positions}}
+\index{get\+Overlap\+With\+Randomized\+Positions@{get\+Overlap\+With\+Randomized\+Positions}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{get\+Overlap\+With\+Randomized\+Positions}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<$Gene$>$ $>$ broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+get\+Overlap\+With\+Randomized\+Positions (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{regions, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{exclude\+Features}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a00354a59179e3fc2e4577537942db2e0}
+Intersect a set of regions with another set of genes and randomize positions of the regions within each gene 
+\begin{DoxyParams}{Parameters}
+{\em regions} & The regions of interest \\
+\hline
+{\em intersect\+Genes} & The genes to intersect with and randomize within \\
+\hline
+{\em exclude\+Features} & Do not consider features that overlap one of these \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Regions that have been intersected with the gene set and then randomized within each intersect gene 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a033cf8b0d21c5945f316db8edbf9d1e7}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!main@{main}}
+\index{main@{main}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a033cf8b0d21c5945f316db8edbf9d1e7}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a5d44a2686992401cbd3cf23b0a79f3cb}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!map\+Genes\+To\+Overlappers@{map\+Genes\+To\+Overlappers}}
+\index{map\+Genes\+To\+Overlappers@{map\+Genes\+To\+Overlappers}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{map\+Genes\+To\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Map$<$Gene, Collection$<$Gene$>$ $>$ $>$ broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+map\+Genes\+To\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a5d44a2686992401cbd3cf23b0a79f3cb}
+Map each gene to the collection of overlappers in another set 
+\begin{DoxyParams}{Parameters}
+{\em genes} & The genes by chromosome \\
+\hline
+{\em intersect\+Set} & The other set by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+By chromosome\+: map of each gene that has overlappers in the other set to its overlappers 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a0d7c1260e14a6fccb8fbb735f30a0fce}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!num\+Overlapping\+Bases@{num\+Overlapping\+Bases}}
+\index{num\+Overlapping\+Bases@{num\+Overlapping\+Bases}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{num\+Overlapping\+Bases}]{\setlength{\rightskip}{0pt plus 5cm}static int broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+num\+Overlapping\+Bases (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a0d7c1260e14a6fccb8fbb735f30a0fce}
+Get number of overlapping bases between two gene sets 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total number of overlapping bases 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_adf8ca4370f3a6d8b211126f85d865a7b}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!num\+Overlapping\+Bases@{num\+Overlapping\+Bases}}
+\index{num\+Overlapping\+Bases@{num\+Overlapping\+Bases}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{num\+Overlapping\+Bases}]{\setlength{\rightskip}{0pt plus 5cm}static int broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+num\+Overlapping\+Bases (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{exclude\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_adf8ca4370f3a6d8b211126f85d865a7b}
+Get number of overlapping bases between two gene sets and automatically exclude all genes in a set 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+{\em exclude\+Set} & Exclude genes if they overlap a gene from this set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total number of overlapping bases 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a1722a4a5c4eb60dd7ed6d634f41cf1b9}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!num\+Overlapping\+Genes@{num\+Overlapping\+Genes}}
+\index{num\+Overlapping\+Genes@{num\+Overlapping\+Genes}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{num\+Overlapping\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}static int broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+num\+Overlapping\+Genes (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a1722a4a5c4eb60dd7ed6d634f41cf1b9}
+Get number of overlapping genes between two gene sets 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total number of overlapping bases 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_ada0235bbe25a54918f63ab212d13a6ac}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!num\+Overlapping\+Genes@{num\+Overlapping\+Genes}}
+\index{num\+Overlapping\+Genes@{num\+Overlapping\+Genes}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{num\+Overlapping\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}static int broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+num\+Overlapping\+Genes (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{exclude\+Genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_ada0235bbe25a54918f63ab212d13a6ac}
+Get number of overlapping genes between two gene sets and automatically exclude all genes in a set 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+{\em exclude\+Genes} & Exclude genes from first gene set if they overlap a gene from this set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total number of overlapping bases 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa8943bc443c29e9d8ea16802818cdf0a}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!write\+General\+Stats@{write\+General\+Stats}}
+\index{write\+General\+Stats@{write\+General\+Stats}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{write\+General\+Stats}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+write\+General\+Stats (
+\begin{DoxyParamCaption}
+\item[{String}]{gene\+File, }
+\item[{String}]{intersect\+File1, }
+\item[{String}]{intersect\+File2, }
+\item[{String}]{exclude\+File, }
+\item[{String}]{out\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_aa8943bc443c29e9d8ea16802818cdf0a}
+Write basic overlap stats to a file 
+\begin{DoxyParams}{Parameters}
+{\em gene\+File} & Gene bed file \\
+\hline
+{\em intersect\+File1} & Intersect set 1 bed file \\
+\hline
+{\em intersect\+File2} & Intersect set 2 bed file \\
+\hline
+{\em exclude\+File} & Exclude genes if they overlap a gene in this bed file \\
+\hline
+{\em out\+File} & Output file of stats \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a61ad48b4e324f1fc9620ab3718fe469e}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!write\+Overlap@{write\+Overlap}}
+\index{write\+Overlap@{write\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{write\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+write\+Overlap (
+\begin{DoxyParamCaption}
+\item[{String}]{gene\+File, }
+\item[{String}]{intersect\+File, }
+\item[{String}]{out\+File, }
+\item[{boolean}]{randomize\+Positions\+Within\+Each\+Gene}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a61ad48b4e324f1fc9620ab3718fe469e}
+Get overlap between two gene sets specified in bed files and write to a file 
+\begin{DoxyParams}{Parameters}
+{\em gene\+File} & Bed file of genes \\
+\hline
+{\em intersect\+File} & Bed file of regions to intersect with \\
+\hline
+{\em out\+File} & Output bed file to write genes representing the overlaps \\
+\hline
+{\em randomize\+Positions\+Within\+Each\+Gene} & Whether to randomize the position of each overlap within the gene \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a788f9d9f0f1bd9353eb23d57722ed91c}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!write\+Overlap@{write\+Overlap}}
+\index{write\+Overlap@{write\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{write\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+write\+Overlap (
+\begin{DoxyParamCaption}
+\item[{String}]{gene\+File, }
+\item[{String}]{intersect\+File, }
+\item[{String}]{exclude\+File, }
+\item[{String}]{out\+File, }
+\item[{boolean}]{randomize\+Positions\+Within\+Each\+Gene}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a788f9d9f0f1bd9353eb23d57722ed91c}
+Get overlap between two gene sets specified in bed files, automatically excluding all genes in a set, and write to a file 
+\begin{DoxyParams}{Parameters}
+{\em gene\+File} & Bed file of genes \\
+\hline
+{\em intersect\+File} & Bed file of regions to intersect with \\
+\hline
+{\em exclude\+File} & Exclude genes if they overlap a gene from this set \\
+\hline
+{\em out\+File} & Output bed file to write Genes representing the overlaps \\
+\hline
+{\em randomize\+Positions\+Within\+Each\+Gene} & Whether to randomize the position of each overlap within the gene \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af88440b2a81ec8dd109eead3456d0d7c}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!write\+Overlap@{write\+Overlap}}
+\index{write\+Overlap@{write\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{write\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+write\+Overlap (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set, }
+\item[{String}]{out\+File, }
+\item[{boolean}]{randomize\+Positions\+Within\+Each\+Gene}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_af88440b2a81ec8dd109eead3456d0d7c}
+Get overlap between two gene sets and write to a file 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+{\em out\+File} & Output bed file to write Genes representing the overlaps \\
+\hline
+{\em randomize\+Positions\+Within\+Each\+Gene} & Whether to randomize the position of each overlap within the gene \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a5910a1ac4f471d727490c1b3ae1d849c}{\index{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}!write\+Overlap@{write\+Overlap}}
+\index{write\+Overlap@{write\+Overlap}!broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect@{broad\+::core\+::overlaputils\+::\+Gene\+Set\+Intersect}}
+\subsubsection[{write\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+overlaputils.\+Gene\+Set\+Intersect.\+write\+Overlap (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{intersect\+Set, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{exclude\+Set, }
+\item[{String}]{out\+File, }
+\item[{boolean}]{randomize\+Positions\+Within\+Each\+Gene}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1overlaputils_1_1_gene_set_intersect_a5910a1ac4f471d727490c1b3ae1d849c}
+Get overlap between two gene sets, automatically excluding all genes in a set, and write to a file 
+\begin{DoxyParams}{Parameters}
+{\em genes} & Genes by chromosome \\
+\hline
+{\em intersect\+Set} & Set to intersect with by chromosome \\
+\hline
+{\em exclude\+Set} & Exclude genes if they overlap a gene from this set \\
+\hline
+{\em out\+File} & Output bed file to write Genes representing the overlaps \\
+\hline
+{\em randomize\+Positions\+Within\+Each\+Gene} & Whether to randomize the position of each overlap within the gene \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/overlaputils/\hyperlink{_gene_set_intersect_8java}{Gene\+Set\+Intersect.\+java}\end{DoxyCompactItemize}

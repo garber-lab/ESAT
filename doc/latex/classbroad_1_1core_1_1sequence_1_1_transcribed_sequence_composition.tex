@@ -1,0 +1,156 @@
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition}{\section{broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition Class Reference}
+\label{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition}\index{broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition@{broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition}}
+}
+
+
+Collaboration diagram for broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ae9455cd7053b985e3e51243b0b77d644}{Transcribed\+Sequence\+Composition} (String bam\+File, String gene\+Bed\+File, String genome\+Fasta, Transcription\+Read transcription\+Read)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ab12ddbcae5506733fc1031523e0ab8f0}{Transcribed\+Sequence\+Composition} (String bam\+File, String gene\+Bed\+File, String bed\+File\+Regions\+Of\+Interest, String genome\+Fasta, Transcription\+Read transcription\+Read)  throws I\+O\+Exception 
+\item 
+char \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_a1ac885628c31fd901c8dbe3494de0e55}{get\+Transcribed\+Base\+At\+Beginning\+Position} (Gene parent, Alignment read, int offset)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ac14fe8aa4e8d4daa8429cef414e654a8}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Collection$<$ String $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_a4fb033e07d832446aed4745cdcee9241}{all\+Nucleotides}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ae9455cd7053b985e3e51243b0b77d644}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}!Transcribed\+Sequence\+Composition@{Transcribed\+Sequence\+Composition}}
+\index{Transcribed\+Sequence\+Composition@{Transcribed\+Sequence\+Composition}!broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}}
+\subsubsection[{Transcribed\+Sequence\+Composition}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition.\+Transcribed\+Sequence\+Composition (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{String}]{gene\+Bed\+File, }
+\item[{String}]{genome\+Fasta, }
+\item[{Transcription\+Read}]{transcription\+Read}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ae9455cd7053b985e3e51243b0b77d644}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Bam file \\
+\hline
+{\em gene\+Bed\+File} & Bed file of genes \\
+\hline
+{\em genome\+Fasta} & Genome fasta file \\
+\hline
+{\em transcription\+Read} & Transcription read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ab12ddbcae5506733fc1031523e0ab8f0}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}!Transcribed\+Sequence\+Composition@{Transcribed\+Sequence\+Composition}}
+\index{Transcribed\+Sequence\+Composition@{Transcribed\+Sequence\+Composition}!broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}}
+\subsubsection[{Transcribed\+Sequence\+Composition}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition.\+Transcribed\+Sequence\+Composition (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{String}]{gene\+Bed\+File, }
+\item[{String}]{bed\+File\+Regions\+Of\+Interest, }
+\item[{String}]{genome\+Fasta, }
+\item[{Transcription\+Read}]{transcription\+Read}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ab12ddbcae5506733fc1031523e0ab8f0}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Bam file \\
+\hline
+{\em gene\+Bed\+File} & Bed file of genes \\
+\hline
+{\em bed\+File\+Regions\+Of\+Interest} & Bed file of regions within genes \\
+\hline
+{\em genome\+Fasta} & Genome fasta file \\
+\hline
+{\em transcription\+Read} & Transcription read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_a1ac885628c31fd901c8dbe3494de0e55}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}!get\+Transcribed\+Base\+At\+Beginning\+Position@{get\+Transcribed\+Base\+At\+Beginning\+Position}}
+\index{get\+Transcribed\+Base\+At\+Beginning\+Position@{get\+Transcribed\+Base\+At\+Beginning\+Position}!broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}}
+\subsubsection[{get\+Transcribed\+Base\+At\+Beginning\+Position}]{\setlength{\rightskip}{0pt plus 5cm}char broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition.\+get\+Transcribed\+Base\+At\+Beginning\+Position (
+\begin{DoxyParamCaption}
+\item[{Gene}]{parent, }
+\item[{Alignment}]{read, }
+\item[{int}]{offset}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_a1ac885628c31fd901c8dbe3494de0e55}
+Get transcribed base of parent gene at first position of alignment 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent gene \\
+\hline
+{\em read} & Alignment \\
+\hline
+{\em offset} & Offset along the parent transcript from the beginning position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transcribed base or N if read orientation does not match parent gene strand 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ac14fe8aa4e8d4daa8429cef414e654a8}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}!main@{main}}
+\index{main@{main}!broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_ac14fe8aa4e8d4daa8429cef414e654a8}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_a4fb033e07d832446aed4745cdcee9241}{\index{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}!all\+Nucleotides@{all\+Nucleotides}}
+\index{all\+Nucleotides@{all\+Nucleotides}!broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition@{broad\+::core\+::sequence\+::\+Transcribed\+Sequence\+Composition}}
+\subsubsection[{all\+Nucleotides}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$String$>$ broad.\+core.\+sequence.\+Transcribed\+Sequence\+Composition.\+all\+Nucleotides\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1sequence_1_1_transcribed_sequence_composition_a4fb033e07d832446aed4745cdcee9241}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/sequence/\hyperlink{_transcribed_sequence_composition_8java}{Transcribed\+Sequence\+Composition.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+\hypertarget{classumms_1_1core_1_1annotation_1_1_annotation_file_reader}{\section{umms.\+core.\+annotation.\+Annotation\+File\+Reader Class Reference}
+\label{classumms_1_1core_1_1annotation_1_1_annotation_file_reader}\index{umms.\+core.\+annotation.\+Annotation\+File\+Reader@{umms.\+core.\+annotation.\+Annotation\+File\+Reader}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Annotation\+List$<$ T $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_af94b7d17ba2177ba57de582643bccbd3}{load} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory)  throws I\+O\+Exception 
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Annotation\+List$<$ T $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a642392bcda0860d984a6ff9d8620d12d}{load} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} cs)  throws I\+O\+Exception 
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Annotation\+List$<$ T $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_ab7bfe8a443d18a02c6fe127d999e9588}{load} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} cs, Collection$<$ Predicate$<$?super T $>$$>$ filters)  throws I\+O\+Exception 
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Annotation\+List$<$ T $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a047b4bf9b5873f68166b9457b34402d3}{load} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} cs, Predicate$<$?super T $>$ filter)  throws I\+O\+Exception 
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Closeable\+Iterator$<$ T $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_aa7fbda157c32e88e387c8a52d073f79a}{read} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory, Predicate$<$?super T $>$ filter)  throws I\+O\+Exception 
+\item 
+static$<$ Textends\+Annotation $>$\\*
+ Closeable\+Iterator$<$ T $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a8d00b05e3402445756951e1314d3558e}{read} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory)  throws I\+O\+Exception  
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz This class is responsible for reading annotation files and generating Annotation\+Lists from them. Parsing logic is partially copied from broad.\+core.\+annotation.\+Annotation\+Reader 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_af94b7d17ba2177ba57de582643bccbd3}{\index{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}!load@{load}}
+\index{load@{load}!umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Annotation\+List$<$T$>$ umms.\+core.\+annotation.\+Annotation\+File\+Reader.\+load (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_af94b7d17ba2177ba57de582643bccbd3}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a642392bcda0860d984a6ff9d8620d12d}{\index{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}!load@{load}}
+\index{load@{load}!umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Annotation\+List$<$T$>$ umms.\+core.\+annotation.\+Annotation\+File\+Reader.\+load (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory, }
+\item[{{\bf Coordinate\+Space}}]{cs}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a642392bcda0860d984a6ff9d8620d12d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_ab7bfe8a443d18a02c6fe127d999e9588}{\index{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}!load@{load}}
+\index{load@{load}!umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Annotation\+List$<$T$>$ umms.\+core.\+annotation.\+Annotation\+File\+Reader.\+load (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory, }
+\item[{{\bf Coordinate\+Space}}]{cs, }
+\item[{Collection$<$ Predicate$<$?super T $>$$>$}]{filters}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_ab7bfe8a443d18a02c6fe127d999e9588}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a047b4bf9b5873f68166b9457b34402d3}{\index{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}!load@{load}}
+\index{load@{load}!umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Annotation\+List$<$T$>$ umms.\+core.\+annotation.\+Annotation\+File\+Reader.\+load (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory, }
+\item[{{\bf Coordinate\+Space}}]{cs, }
+\item[{Predicate$<$?super T $>$}]{filter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a047b4bf9b5873f68166b9457b34402d3}
+Reads an \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} file line by line and return an Annotation\+List containing the results 
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & \\
+\hline
+{\em file} & File containing annotations \\
+\hline
+{\em clazz} & The class of the desired Annotation\+List \\
+\hline
+{\em cs} & Coordinate\+Space with which to initialize the Annotation\+List. Can be null. \\
+\hline
+{\em factory} & Factory for parsing and creating the annotation type \\
+\hline
+{\em filter} & \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} filters to control the subset of annotations that are stored in the Annotation\+List. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Annotation\+List containing all annotations from file that pass the filter 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_aa7fbda157c32e88e387c8a52d073f79a}{\index{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}!read@{read}}
+\index{read@{read}!umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Closeable\+Iterator$<$T$>$ umms.\+core.\+annotation.\+Annotation\+File\+Reader.\+read (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory, }
+\item[{Predicate$<$?super T $>$}]{filter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_aa7fbda157c32e88e387c8a52d073f79a}
+Read an \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} file line by line in a buffered format and return an iterator over the results. Should be refactored with the \char`\"{}load\char`\"{} function as appropriate (\char`\"{}load\char`\"{} can call this function and then add it to its \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} list) 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+{\em clazz} & \\
+\hline
+{\em factory} & \\
+\hline
+{\em cs} & \\
+\hline
+{\em filter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a8d00b05e3402445756951e1314d3558e}{\index{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}!read@{read}}
+\index{read@{read}!umms\+::core\+::annotation\+::\+Annotation\+File\+Reader@{umms\+::core\+::annotation\+::\+Annotation\+File\+Reader}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}static $<$Textends\+Annotation$>$ Closeable\+Iterator$<$T$>$ umms.\+core.\+annotation.\+Annotation\+File\+Reader.\+read (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1annotation_1_1_annotation_file_reader_a8d00b05e3402445756951e1314d3558e}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/annotation/\hyperlink{_annotation_file_reader_8java}{Annotation\+File\+Reader.\+java}\end{DoxyCompactItemize}

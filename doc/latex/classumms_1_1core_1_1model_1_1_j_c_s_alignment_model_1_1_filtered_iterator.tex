@@ -1,0 +1,121 @@
+\hypertarget{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator}{\section{umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator Class Reference}
+\label{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator}\index{umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator@{umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator}}
+}
+
+
+Inheritance diagram for umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator\+:
+
+
+Collaboration diagram for umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a2a026e7435d7f4241b11b4b48a2c0490}{Filtered\+Iterator} (Closeable\+Iterator$<$ \hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_alignment_count}{Alignment\+Count} $>$ overlappers, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} cs, boolean fully\+Contained)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a8c7573f9070f175f4572f88dbbde770b}{Filtered\+Iterator} (Closeable\+Iterator$<$ \hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_alignment_count}{Alignment\+Count} $>$ reads)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_ac7b5d4d17b77a32c444767fd37397388}{has\+Next} ()
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_alignment_count}{Alignment\+Count} \hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a2b0774eae119ff618bb8fc5b576fdf1e}{next} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a80f925324ce2050ce78ccfc7342f2960}{remove} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_ac131b52f17f049cb7ca31b1fae0918e1}{close} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will represent an iterator over the filtered reads To make it efficient it will need to precompute the region in coordinate space It will also need to know the next element to compute the has\+Next and get\+Next() functions \begin{DoxyAuthor}{Author}
+mguttman 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a2a026e7435d7f4241b11b4b48a2c0490}{\index{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}!Filtered\+Iterator@{Filtered\+Iterator}}
+\index{Filtered\+Iterator@{Filtered\+Iterator}!umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}}
+\subsubsection[{Filtered\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator.\+Filtered\+Iterator (
+\begin{DoxyParamCaption}
+\item[{Closeable\+Iterator$<$ {\bf Alignment\+Count} $>$}]{overlappers, }
+\item[{{\bf Annotation}}]{region, }
+\item[{{\bf Coordinate\+Space}}]{cs, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a2a026e7435d7f4241b11b4b48a2c0490}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a8c7573f9070f175f4572f88dbbde770b}{\index{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}!Filtered\+Iterator@{Filtered\+Iterator}}
+\index{Filtered\+Iterator@{Filtered\+Iterator}!umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}}
+\subsubsection[{Filtered\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator.\+Filtered\+Iterator (
+\begin{DoxyParamCaption}
+\item[{Closeable\+Iterator$<$ {\bf Alignment\+Count} $>$}]{reads}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a8c7573f9070f175f4572f88dbbde770b}
+This is the constructor for all reads other parms not meaningful 
+\begin{DoxyParams}{Parameters}
+{\em reads} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_ac131b52f17f049cb7ca31b1fae0918e1}{\index{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}!close@{close}}
+\index{close@{close}!umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator.\+close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_ac131b52f17f049cb7ca31b1fae0918e1}
+\hypertarget{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_ac7b5d4d17b77a32c444767fd37397388}{\index{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}!has\+Next@{has\+Next}}
+\index{has\+Next@{has\+Next}!umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}}
+\subsubsection[{has\+Next}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator.\+has\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_ac7b5d4d17b77a32c444767fd37397388}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a2b0774eae119ff618bb8fc5b576fdf1e}{\index{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}!next@{next}}
+\index{next@{next}!umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment\+Count} umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator.\+next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a2b0774eae119ff618bb8fc5b576fdf1e}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a80f925324ce2050ce78ccfc7342f2960}{\index{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}!remove@{remove}}
+\index{remove@{remove}!umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator@{umms\+::core\+::model\+::\+J\+C\+S\+Alignment\+Model\+::\+Filtered\+Iterator}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+J\+C\+S\+Alignment\+Model.\+Filtered\+Iterator.\+remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator_a80f925324ce2050ce78ccfc7342f2960}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/model/\hyperlink{_j_c_s_alignment_model_8java}{J\+C\+S\+Alignment\+Model.\+java}\end{DoxyCompactItemize}

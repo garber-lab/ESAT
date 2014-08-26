@@ -1,0 +1,141 @@
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression}{\section{broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression Class Reference}
+\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression}\index{broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression@{broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} \hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a1d50d6f1bd2701f326827fc3af431e8b}{get\+Results} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_acffc5b6663c41061b126f27746671a0e}{write\+Results} (String out\+File)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a844f42ad88a9b879ee02093eccc26589}{Run\+Differential\+Expression} (File gct\+File, File experiment\+Info\+File, File chip\+File, String save, boolean preprocess, double alpha, int perm)  throws I\+O\+Exception, Parse\+Exception
+\item 
+\hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_ae6c2b622775bbffaf64c1e66743e37c4}{Run\+Differential\+Expression} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} data, Collection$<$ String $>$ group1, Collection$<$ String $>$ group2, int num\+Perm, double alpha)
+\item 
+\hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a6f344924d6eb0002ce78bf1695da7580}{Run\+Differential\+Expression} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} data, Map$<$ String, Collection$<$ String $>$$>$ groups, int num\+Perm, double alpha)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} \hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_aca16939cef4d396c0f7ff7fb4acb1bd1}{get\+Genes\+Passing\+F\+D\+R} (double alpha)
+\item 
+\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} \hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a3e1b89e0a26f78383d03fa7aab42ddfe}{get\+F\+D\+R} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a588242a1bb9d0f75a6349cd664892c73}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception, Parse\+Exception
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a844f42ad88a9b879ee02093eccc26589}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!Run\+Differential\+Expression@{Run\+Differential\+Expression}}
+\index{Run\+Differential\+Expression@{Run\+Differential\+Expression}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{Run\+Differential\+Expression}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+Run\+Differential\+Expression (
+\begin{DoxyParamCaption}
+\item[{File}]{gct\+File, }
+\item[{File}]{experiment\+Info\+File, }
+\item[{File}]{chip\+File, }
+\item[{String}]{save, }
+\item[{boolean}]{preprocess, }
+\item[{double}]{alpha, }
+\item[{int}]{perm}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a844f42ad88a9b879ee02093eccc26589}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_ae6c2b622775bbffaf64c1e66743e37c4}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!Run\+Differential\+Expression@{Run\+Differential\+Expression}}
+\index{Run\+Differential\+Expression@{Run\+Differential\+Expression}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{Run\+Differential\+Expression}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+Run\+Differential\+Expression (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{data, }
+\item[{Collection$<$ String $>$}]{group1, }
+\item[{Collection$<$ String $>$}]{group2, }
+\item[{int}]{num\+Perm, }
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_ae6c2b622775bbffaf64c1e66743e37c4}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data set in which to find differentially expressed genes \\
+\hline
+{\em group1} & The list of samples (columns in the data matrix) of group 1 \\
+\hline
+{\em group2} & The list of samples (columns in the data matrix) of group 2 \\
+\hline
+{\em num\+Perm} & Number of permutations to perform. Specify 0 to perform the maximal number of permutations \\
+\hline
+{\em alpha} & Significance level \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a6f344924d6eb0002ce78bf1695da7580}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!Run\+Differential\+Expression@{Run\+Differential\+Expression}}
+\index{Run\+Differential\+Expression@{Run\+Differential\+Expression}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{Run\+Differential\+Expression}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+Run\+Differential\+Expression (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{data, }
+\item[{Map$<$ String, Collection$<$ String $>$$>$}]{groups, }
+\item[{int}]{num\+Perm, }
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a6f344924d6eb0002ce78bf1695da7580}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a3e1b89e0a26f78383d03fa7aab42ddfe}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!get\+F\+D\+R@{get\+F\+D\+R}}
+\index{get\+F\+D\+R@{get\+F\+D\+R}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{get\+F\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+With\+Headers} broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+get\+F\+D\+R (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a3e1b89e0a26f78383d03fa7aab42ddfe}
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_aca16939cef4d396c0f7ff7fb4acb1bd1}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!get\+Genes\+Passing\+F\+D\+R@{get\+Genes\+Passing\+F\+D\+R}}
+\index{get\+Genes\+Passing\+F\+D\+R@{get\+Genes\+Passing\+F\+D\+R}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{get\+Genes\+Passing\+F\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+With\+Headers} broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+get\+Genes\+Passing\+F\+D\+R (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_aca16939cef4d396c0f7ff7fb4acb1bd1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a1d50d6f1bd2701f326827fc3af431e8b}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!get\+Results@{get\+Results}}
+\index{get\+Results@{get\+Results}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{get\+Results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+With\+Headers} broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+get\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a1d50d6f1bd2701f326827fc3af431e8b}
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a588242a1bb9d0f75a6349cd664892c73}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!main@{main}}
+\index{main@{main}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_a588242a1bb9d0f75a6349cd664892c73}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_acffc5b6663c41061b126f27746671a0e}{\index{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}!write\+Results@{write\+Results}}
+\index{write\+Results@{write\+Results}!broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression@{broad\+::pda\+::differential\+Expression\+::\+Run\+Differential\+Expression}}
+\subsubsection[{write\+Results}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+differential\+Expression.\+Run\+Differential\+Expression.\+write\+Results (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1differential_expression_1_1_run_differential_expression_acffc5b6663c41061b126f27746671a0e}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/differential\+Expression/\hyperlink{_run_differential_expression_8java}{Run\+Differential\+Expression.\+java}\end{DoxyCompactItemize}

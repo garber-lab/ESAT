@@ -1,0 +1,11 @@
+digraph "umms.core.readers.PairedEndReader.isPairedEndFormat"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.readers.Paired\lEndReader.isPairedEndFormat",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.readers.Paired\lEndReader.getPairedEndFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1readers_1_1_paired_end_reader.html#afaaf969aed6aaa75928ba7e6e17586e7"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.readers.Paired\lEndReader.getAlignmentType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1readers_1_1_paired_end_reader.html#a6ad57c4efb2f14b5639d384b39ef5ca9"];
+}

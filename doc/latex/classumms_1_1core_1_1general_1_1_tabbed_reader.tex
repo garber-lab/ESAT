@@ -1,0 +1,107 @@
+\hypertarget{classumms_1_1core_1_1general_1_1_tabbed_reader}{\section{umms.\+core.\+general.\+Tabbed\+Reader Class Reference}
+\label{classumms_1_1core_1_1general_1_1_tabbed_reader}\index{umms.\+core.\+general.\+Tabbed\+Reader@{umms.\+core.\+general.\+Tabbed\+Reader}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \hyperlink{interfaceumms_1_1core_1_1general_1_1_tabbed_reader_1_1_factory_3_01_t_01_4}{Factory$<$ T $>$}
+\item 
+class {\bfseries Tabbed\+Iterator$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static$<$ T $>$ Closeable\+Iterator$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_tabbed_reader_ac1acfdb8f7a47bb5c54a21fe166ad86a}{read} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory, Predicate$<$?super T $>$ filter, int skip\+Rows)  throws I\+O\+Exception 
+\item 
+static$<$ T $>$ Closeable\+Iterator$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_tabbed_reader_a2f9792bca4b9046a0c94f4176d46593c}{read} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory, Predicate$<$?super T $>$ filter)  throws I\+O\+Exception 
+\item 
+static$<$ T $>$ Closeable\+Iterator$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_tabbed_reader_acaebc610a8a7e5448c8a72b97c7cdf80}{read} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory, int skip\+Rows)  throws I\+O\+Exception 
+\item 
+static$<$ T $>$ Closeable\+Iterator$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_tabbed_reader_a6dd5085ce10a90a0607d28d178070635}{read} (File file, Class$<$ T $>$ clazz, Tabbed\+Reader.\+Factory$<$?extends T $>$ factory)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1general_1_1_tabbed_reader_ac1acfdb8f7a47bb5c54a21fe166ad86a}{\index{umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}!read@{read}}
+\index{read@{read}!umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Closeable\+Iterator$<$T$>$ umms.\+core.\+general.\+Tabbed\+Reader.\+read (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory, }
+\item[{Predicate$<$?super T $>$}]{filter, }
+\item[{int}]{skip\+Rows}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_tabbed_reader_ac1acfdb8f7a47bb5c54a21fe166ad86a}
+Read an Annotation file line by line in a buffered format and return an iterator over the results. Should be refactored with the \char`\"{}load\char`\"{} function as appropriate (\char`\"{}load\char`\"{} can call this function and then add it to its Annotation list) 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+{\em clazz} & \\
+\hline
+{\em factory} & \\
+\hline
+{\em cs} & \\
+\hline
+{\em filter} & \\
+\hline
+{\em skip\+Rows} & number of rows to skip at the beginning of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1general_1_1_tabbed_reader_a2f9792bca4b9046a0c94f4176d46593c}{\index{umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}!read@{read}}
+\index{read@{read}!umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Closeable\+Iterator$<$T$>$ umms.\+core.\+general.\+Tabbed\+Reader.\+read (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory, }
+\item[{Predicate$<$?super T $>$}]{filter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_tabbed_reader_a2f9792bca4b9046a0c94f4176d46593c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1general_1_1_tabbed_reader_acaebc610a8a7e5448c8a72b97c7cdf80}{\index{umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}!read@{read}}
+\index{read@{read}!umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Closeable\+Iterator$<$T$>$ umms.\+core.\+general.\+Tabbed\+Reader.\+read (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory, }
+\item[{int}]{skip\+Rows}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_tabbed_reader_acaebc610a8a7e5448c8a72b97c7cdf80}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1general_1_1_tabbed_reader_a6dd5085ce10a90a0607d28d178070635}{\index{umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}!read@{read}}
+\index{read@{read}!umms\+::core\+::general\+::\+Tabbed\+Reader@{umms\+::core\+::general\+::\+Tabbed\+Reader}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Closeable\+Iterator$<$T$>$ umms.\+core.\+general.\+Tabbed\+Reader.\+read (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Class$<$ T $>$}]{clazz, }
+\item[{Tabbed\+Reader.\+Factory$<$?extends T $>$}]{factory}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_tabbed_reader_a6dd5085ce10a90a0607d28d178070635}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/general/\hyperlink{_tabbed_reader_8java}{Tabbed\+Reader.\+java}\end{DoxyCompactItemize}

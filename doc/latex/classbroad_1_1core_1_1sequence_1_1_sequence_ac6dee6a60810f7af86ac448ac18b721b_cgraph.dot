@@ -1,0 +1,20 @@
+digraph "broad.core.sequence.Sequence.getSubsequence"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.sequence.Sequence.get\lSubsequence",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.sequence.Sequence.\lSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#a3f5ed7a6ae3513ae7eb2bae8789a6f10"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.sequence.Sequence.get\lSubSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#ab03732869550e07296a989208b50c100"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.sequence.Sequence\lRegion.getName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#abe729e8af2a1d244f41ddf93373ca829"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.sequence.Sequence\lRegion.getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a3a81800b533cb2f0a880c5158741ebd0"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.sequence.Sequence\lRegion.getStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#afcca12aead494125f57be12abe9e2adb"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.sequence.Sequence\lRegion.getEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a1f2cbaafc85940a5c2719243f4640249"];
+}

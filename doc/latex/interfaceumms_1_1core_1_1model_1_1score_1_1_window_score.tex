@@ -1,0 +1,54 @@
+\hypertarget{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score}{\section{umms.\+core.\+model.\+score.\+Window\+Score Interface Reference}
+\label{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score}\index{umms.\+core.\+model.\+score.\+Window\+Score@{umms.\+core.\+model.\+score.\+Window\+Score}}
+}
+
+
+Inheritance diagram for umms.\+core.\+model.\+score.\+Window\+Score\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_window_score_1_1_abstract_window_score}{Abstract\+Window\+Score}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score_ade117fa7e14c8e6839af41f8a9f1cbb2}{get\+Annotation} ()
+\item 
+double \hyperlink{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score_a5232038f3397874511f1e8d83df72e97}{get\+Score} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a window scoring object. All of the code for calculating scores should be included in implementers of this class 
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score_ade117fa7e14c8e6839af41f8a9f1cbb2}{\index{umms\+::core\+::model\+::score\+::\+Window\+Score@{umms\+::core\+::model\+::score\+::\+Window\+Score}!get\+Annotation@{get\+Annotation}}
+\index{get\+Annotation@{get\+Annotation}!umms\+::core\+::model\+::score\+::\+Window\+Score@{umms\+::core\+::model\+::score\+::\+Window\+Score}}
+\subsubsection[{get\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+model.\+score.\+Window\+Score.\+get\+Annotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score_ade117fa7e14c8e6839af41f8a9f1cbb2}
+Returns the underlying window 
+
+Implemented in \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_window_score_1_1_abstract_window_score_a1005010d00c6d09f70b39da815c3ee38}{umms.\+core.\+model.\+score.\+Window\+Score.\+Abstract\+Window\+Score}.
+
+\hypertarget{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score_a5232038f3397874511f1e8d83df72e97}{\index{umms\+::core\+::model\+::score\+::\+Window\+Score@{umms\+::core\+::model\+::score\+::\+Window\+Score}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!umms\+::core\+::model\+::score\+::\+Window\+Score@{umms\+::core\+::model\+::score\+::\+Window\+Score}}
+\subsubsection[{get\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Window\+Score.\+get\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score_a5232038f3397874511f1e8d83df72e97}
+Returns the number of reads overlapping this region \begin{DoxyReturn}{Returns}
+number of reds overlapping this window Returns the \char`\"{}score\char`\"{} as defined by each subclass (e.\+g. count, ratio, sum of annotation scores, etc.) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_count_score_a1308c7c7d75f339947c29575099d41c3}{umms.\+core.\+model.\+score.\+Count\+Score}, \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_window_all_score_a43b3c23abd2ac3c3bd49691656048433}{umms.\+core.\+model.\+score.\+Window\+All\+Score}, \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a65ac8a6fe0603eb99cd0ba1de0302097}{umms.\+core.\+model.\+score.\+Ratio\+Score}, \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score_abc8dd462110ee0768011709ea84b9346}{umms.\+core.\+model.\+score.\+New\+Ratio\+Score}, \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_sum_score_af2ac743d89d631a5f6bf69d6bd74db8a}{umms.\+core.\+model.\+score.\+Sum\+Score}, \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_end_in_window_count_score_a54e9f7ec3a667641fab13fa15b162f7c}{umms.\+core.\+model.\+score.\+End\+In\+Window\+Count\+Score}, \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_start_in_window_count_score_ac19f44fe80ce3d2ad0c236bb62d67c5c}{umms.\+core.\+model.\+score.\+Start\+In\+Window\+Count\+Score}, and \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_abstract_list_score_a2927a97c83af8b901402b0c84c414a07}{umms.\+core.\+model.\+score.\+Abstract\+List\+Score}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/model/score/\hyperlink{_window_score_8java}{Window\+Score.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+digraph "umms.core.model.score.MultiScore.MultiScore"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.Multi\lScore.MultiScore",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.model.score.Multi\lScore.setSampleRegionCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_multi_score.html#aed5f43ead6121b5314edbf0861165631"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.model.score.Multi\lScore.setCtrlRegionCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_multi_score.html#a8be96706ce0566b740b6f6b72398d418"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.model.score.Multi\lScore.updateScores",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_multi_score.html#a3a05bf1336e0fb28997b3d40610c3fcf"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.model.score.Count\lScore.getScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a1308c7c7d75f339947c29575099d41c3"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="umms.core.model.score.Count\lScore.getCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a906acf2141cba6fab150c85de37ca2b5"];
+}

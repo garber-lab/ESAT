@@ -1,0 +1,26 @@
+digraph "umms.core.annotation.Gene.get5Utr"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Gene.get5Utr",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.annotation.Gene.get5\lUtrIncludingIntrons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#aeacc46ef311ac493dc1c5f1d82190a8e"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.annotation.Basic\lAnnotation.getOrientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#aa5ccd2fae3fd4bd937ba202512db8030"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.annotation.Basic\lAnnotation.BasicAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#a210147f31fba19c7811032e1b651c1d0"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.annotation.Abstract\lAnnotation.getChr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_abstract_annotation.html#abe1735bf83ddb3aae45c734149c50eb1"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="umms.core.annotation.Annotation.get\lReferenceName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a2dd53f6e6ab4a573c0e93ef42e223b93"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="umms.core.annotation.Gene.get\lCDSRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a2bbe2bac12a9b9f09bfb2962e8a72d67"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="umms.core.annotation.Basic\lAnnotation.getEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#a3fe8028115f96664761b63a9d16926cf"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="umms.core.annotation.Basic\lAnnotation.getStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#a2f52387ec04cec413c4fea644ad6dd9f"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="umms.core.annotation.Basic\lAnnotation.getBlocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#a59ef0358ee04952f6ddd2c2bd4e448f7"];
+}

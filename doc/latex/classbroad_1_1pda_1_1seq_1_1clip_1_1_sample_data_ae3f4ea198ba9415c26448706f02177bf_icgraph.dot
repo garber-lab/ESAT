@@ -1,0 +1,11 @@
+digraph "broad.pda.seq.clip.SampleData.getGeneAverageCoverage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.clip.Sample\lData.getGeneAverageCoverage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.seq.clip.Sample\lData.isExpressed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data.html#a20bd1f5c944414c4305844a15c35f8a1"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.seq.clip.Sample\lData.getEnrichmentOverGene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data.html#a83006fe4a56566ac14690adc205bf797"];
+}

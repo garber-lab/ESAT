@@ -1,0 +1,13 @@
+digraph "umms.core.model.AlignmentModel.getReadIterator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.Alignment\lModel.getReadIterator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.Alignment\lModel.getReadSizeDistribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#ac8a2dfade7662d69c9abae1712c52d2f"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.Alignment\lModel.getReadSizeDistribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a34775ceefaa53bc37208bba747debe4b"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.model.Alignment\lModel.getMedianReadSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#ac8db2149ef23944b52d4fc6080b5fc48"];
+}

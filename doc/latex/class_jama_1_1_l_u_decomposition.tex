@@ -1,0 +1,158 @@
+\hypertarget{class_jama_1_1_l_u_decomposition}{\section{Jama.\+L\+U\+Decomposition Class Reference}
+\label{class_jama_1_1_l_u_decomposition}\index{Jama.\+L\+U\+Decomposition@{Jama.\+L\+U\+Decomposition}}
+}
+
+
+Inheritance diagram for Jama.\+L\+U\+Decomposition\+:
+
+
+Collaboration diagram for Jama.\+L\+U\+Decomposition\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jama_1_1_l_u_decomposition_a50f7807a81de88f318886dfd0eb44cf8}{L\+U\+Decomposition} (\hyperlink{class_jama_1_1_matrix}{Matrix} A)
+\item 
+boolean \hyperlink{class_jama_1_1_l_u_decomposition_aa5a58918751ee6b2abc858542fb5ae47}{is\+Nonsingular} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_l_u_decomposition_ac24a98b938dd29b58fa0e9db41618242}{get\+L} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_l_u_decomposition_a1e7898faf116eb7997e75eefa00f2d01}{get\+U} ()
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_l_u_decomposition_aa85e93ba287bc938514395c92c6c54cb}{get\+Pivot} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_l_u_decomposition_a69d68d7f0bcaa3b7bf005b1d8ce285c1}{get\+Double\+Pivot} ()
+\item 
+double \hyperlink{class_jama_1_1_l_u_decomposition_a474e4b7bd8370a40e96ecb4ea0694b46}{det} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_l_u_decomposition_ad8dde76b65b15ce3839648708f4b9b41}{solve} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+U Decomposition. 
+
+For an m-\/by-\/n matrix A with m $>$= n, the L\+U decomposition is an m-\/by-\/n unit lower triangular matrix L, an n-\/by-\/n upper triangular matrix U, and a permutation vector piv of length m so that A(piv,\+:) = L$\ast$\+U. If m $<$ n, then L is m-\/by-\/m and U is m-\/by-\/n. 
+
+The L\+U decompostion with pivoting always exists, even if the matrix is singular, so the constructor will never fail. The primary use of the L\+U decomposition is in the solution of square systems of simultaneous linear equations. This will fail if \hyperlink{class_jama_1_1_l_u_decomposition_aa5a58918751ee6b2abc858542fb5ae47}{is\+Nonsingular()} returns false. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_jama_1_1_l_u_decomposition_a50f7807a81de88f318886dfd0eb44cf8}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!L\+U\+Decomposition@{L\+U\+Decomposition}}
+\index{L\+U\+Decomposition@{L\+U\+Decomposition}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{L\+U\+Decomposition}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+L\+U\+Decomposition.\+L\+U\+Decomposition (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{A}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_a50f7807a81de88f318886dfd0eb44cf8}
+L\+U Decomposition 
+\begin{DoxyParams}{Parameters}
+{\em A} & Rectangular matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Structure to access L, U and piv. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_jama_1_1_l_u_decomposition_a474e4b7bd8370a40e96ecb4ea0694b46}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!det@{det}}
+\index{det@{det}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{det}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+L\+U\+Decomposition.\+det (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_a474e4b7bd8370a40e96ecb4ea0694b46}
+Determinant \begin{DoxyReturn}{Returns}
+det(\+A) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} must be square \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_jama_1_1_l_u_decomposition_a69d68d7f0bcaa3b7bf005b1d8ce285c1}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!get\+Double\+Pivot@{get\+Double\+Pivot}}
+\index{get\+Double\+Pivot@{get\+Double\+Pivot}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{get\+Double\+Pivot}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+L\+U\+Decomposition.\+get\+Double\+Pivot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_a69d68d7f0bcaa3b7bf005b1d8ce285c1}
+Return pivot permutation vector as a one-\/dimensional double array \begin{DoxyReturn}{Returns}
+(double) piv 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_l_u_decomposition_ac24a98b938dd29b58fa0e9db41618242}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!get\+L@{get\+L}}
+\index{get\+L@{get\+L}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{get\+L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+L\+U\+Decomposition.\+get\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_ac24a98b938dd29b58fa0e9db41618242}
+Return lower triangular factor \begin{DoxyReturn}{Returns}
+L 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_l_u_decomposition_aa85e93ba287bc938514395c92c6c54cb}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!get\+Pivot@{get\+Pivot}}
+\index{get\+Pivot@{get\+Pivot}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{get\+Pivot}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Jama.\+L\+U\+Decomposition.\+get\+Pivot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_aa85e93ba287bc938514395c92c6c54cb}
+Return pivot permutation vector \begin{DoxyReturn}{Returns}
+piv 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_l_u_decomposition_a1e7898faf116eb7997e75eefa00f2d01}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!get\+U@{get\+U}}
+\index{get\+U@{get\+U}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{get\+U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+L\+U\+Decomposition.\+get\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_a1e7898faf116eb7997e75eefa00f2d01}
+Return upper triangular factor \begin{DoxyReturn}{Returns}
+U 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_l_u_decomposition_aa5a58918751ee6b2abc858542fb5ae47}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!is\+Nonsingular@{is\+Nonsingular}}
+\index{is\+Nonsingular@{is\+Nonsingular}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{is\+Nonsingular}]{\setlength{\rightskip}{0pt plus 5cm}boolean Jama.\+L\+U\+Decomposition.\+is\+Nonsingular (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_aa5a58918751ee6b2abc858542fb5ae47}
+Is the matrix nonsingular? \begin{DoxyReturn}{Returns}
+true if U, and hence A, is nonsingular. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_l_u_decomposition_ad8dde76b65b15ce3839648708f4b9b41}{\index{Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}!solve@{solve}}
+\index{solve@{solve}!Jama\+::\+L\+U\+Decomposition@{Jama\+::\+L\+U\+Decomposition}}
+\subsubsection[{solve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+L\+U\+Decomposition.\+solve (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_l_u_decomposition_ad8dde76b65b15ce3839648708f4b9b41}
+Solve A$\ast$\+X = B 
+\begin{DoxyParams}{Parameters}
+{\em B} & A \hyperlink{class_jama_1_1_matrix}{Matrix} with as many rows as A and any number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X so that L$\ast$\+U$\ast$\+X = B(piv,\+:) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} row dimensions must agree. \\
+\hline
+{\em Runtime\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} is singular. \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/\+Jama/\hyperlink{_l_u_decomposition_8java}{L\+U\+Decomposition.\+java}\end{DoxyCompactItemize}

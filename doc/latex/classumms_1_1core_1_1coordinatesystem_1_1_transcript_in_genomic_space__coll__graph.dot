@@ -1,0 +1,15 @@
+digraph "umms.core.coordinatesystem.TranscriptInGenomicSpace"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.coordinatesystem.\lCoordinateSpace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger" ];
+  Node3 [label="Logger",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" maskedRegions" ];
+  Node4 [label="AnnotationList\< umms.core.annotation.\lAnnotation \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" chromosomeSizes" ];
+  Node5 [label="Map\< String, Integer \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

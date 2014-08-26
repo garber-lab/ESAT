@@ -1,0 +1,86 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores}{\section{broad.\+pda.\+seq.\+protection.\+Window\+Scores Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores}\index{broad.\+pda.\+seq.\+protection.\+Window\+Scores@{broad.\+pda.\+seq.\+protection.\+Window\+Scores}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+protection.\+Window\+Scores\+:
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a10f405eec7644a33de7c07bb0c8e4caa}{sample}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_adbea63ef3f80374592309593aff3eeac}{ctrl}
+\item 
+Map$<$ Gene, Count\+Score $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a6692ac429e881e1420d05811d1b3f04e}{gene\+Scores}
+\item 
+Map$<$ Gene, Double $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a0e6068b9b298dfc039ca118061817e0b}{gene\+Avg\+Coverage}
+\item 
+Map$<$ Gene, Map$<$ Annotation, \\*
+Count\+Score $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_ae7ddb2ee427f84272fd8cf7909fcdf09}{window\+Scores}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa32278d86f1cf46f29e61c13c41375bc}{window\+Size}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a9801a4f13246cf58d640e22a93b02c4d}{step\+Size}
+\item 
+Map$<$ String, Collection$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa32bcf4ca6a247e092ca644a0b958237}{genes\+By\+Chr}
+\item 
+Map$<$ String, Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_ad1359f7b732916942358a4e3fb15e57c}{genes\+By\+Name}
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_adddc2f2c96c1864ccf74cb15057f21be}{expression\+Cutoff\+Value}
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa39e5bcacff6e7020237153e53d2002a}{expression\+By\+Pval}
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a36bd088a28a7eeebb5f43064a6ee7f7d}{fully\+Contained\+Reads}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Logger \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_af0e533777e4578717554e97ab7b8a1ad}{logger} = Logger.\+get\+Logger(Sample\+Data.\+class.\+get\+Name())
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_adbea63ef3f80374592309593aff3eeac}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!ctrl@{ctrl}}
+\index{ctrl@{ctrl}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{ctrl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sample\+Data} broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+ctrl\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_adbea63ef3f80374592309593aff3eeac}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa39e5bcacff6e7020237153e53d2002a}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!expression\+By\+Pval@{expression\+By\+Pval}}
+\index{expression\+By\+Pval@{expression\+By\+Pval}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{expression\+By\+Pval}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+expression\+By\+Pval\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa39e5bcacff6e7020237153e53d2002a}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_adddc2f2c96c1864ccf74cb15057f21be}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!expression\+Cutoff\+Value@{expression\+Cutoff\+Value}}
+\index{expression\+Cutoff\+Value@{expression\+Cutoff\+Value}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{expression\+Cutoff\+Value}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+expression\+Cutoff\+Value\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_adddc2f2c96c1864ccf74cb15057f21be}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a36bd088a28a7eeebb5f43064a6ee7f7d}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!fully\+Contained\+Reads@{fully\+Contained\+Reads}}
+\index{fully\+Contained\+Reads@{fully\+Contained\+Reads}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{fully\+Contained\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+fully\+Contained\+Reads\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a36bd088a28a7eeebb5f43064a6ee7f7d}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a0e6068b9b298dfc039ca118061817e0b}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!gene\+Avg\+Coverage@{gene\+Avg\+Coverage}}
+\index{gene\+Avg\+Coverage@{gene\+Avg\+Coverage}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{gene\+Avg\+Coverage}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Gene, Double$>$ broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+gene\+Avg\+Coverage\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a0e6068b9b298dfc039ca118061817e0b}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa32bcf4ca6a247e092ca644a0b958237}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!genes\+By\+Chr@{genes\+By\+Chr}}
+\index{genes\+By\+Chr@{genes\+By\+Chr}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{genes\+By\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<$Gene$>$ $>$ broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+genes\+By\+Chr\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa32bcf4ca6a247e092ca644a0b958237}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_ad1359f7b732916942358a4e3fb15e57c}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!genes\+By\+Name@{genes\+By\+Name}}
+\index{genes\+By\+Name@{genes\+By\+Name}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{genes\+By\+Name}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Gene$>$ broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+genes\+By\+Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_ad1359f7b732916942358a4e3fb15e57c}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a6692ac429e881e1420d05811d1b3f04e}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!gene\+Scores@{gene\+Scores}}
+\index{gene\+Scores@{gene\+Scores}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{gene\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Gene, Count\+Score$>$ broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+gene\+Scores\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a6692ac429e881e1420d05811d1b3f04e}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_af0e533777e4578717554e97ab7b8a1ad}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!logger@{logger}}
+\index{logger@{logger}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+logger = Logger.\+get\+Logger(Sample\+Data.\+class.\+get\+Name())\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_af0e533777e4578717554e97ab7b8a1ad}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a10f405eec7644a33de7c07bb0c8e4caa}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!sample@{sample}}
+\index{sample@{sample}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sample\+Data} broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+sample\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a10f405eec7644a33de7c07bb0c8e4caa}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a9801a4f13246cf58d640e22a93b02c4d}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!step\+Size@{step\+Size}}
+\index{step\+Size@{step\+Size}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{step\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+step\+Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_a9801a4f13246cf58d640e22a93b02c4d}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_ae7ddb2ee427f84272fd8cf7909fcdf09}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!window\+Scores@{window\+Scores}}
+\index{window\+Scores@{window\+Scores}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{window\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Gene, Map$<$Annotation, Count\+Score$>$ $>$ broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+window\+Scores\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_ae7ddb2ee427f84272fd8cf7909fcdf09}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa32278d86f1cf46f29e61c13c41375bc}{\index{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}!window\+Size@{window\+Size}}
+\index{window\+Size@{window\+Size}!broad\+::pda\+::seq\+::protection\+::\+Window\+Scores@{broad\+::pda\+::seq\+::protection\+::\+Window\+Scores}}
+\subsubsection[{window\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Window\+Scores.\+window\+Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_window_scores_aa32278d86f1cf46f29e61c13c41375bc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/protection/\hyperlink{_window_scores_8java}{Window\+Scores.\+java}\end{DoxyCompactItemize}

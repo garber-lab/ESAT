@@ -1,0 +1,140 @@
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation}{\section{broad.\+pda.\+gene.\+functional\+Annotation Class Reference}
+\label{classbroad_1_1pda_1_1gene_1_1functional_annotation}\index{broad.\+pda.\+gene.\+functional\+Annotation@{broad.\+pda.\+gene.\+functional\+Annotation}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+gene.\+functional\+Annotation\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_a610cf5380473ec0fda037c2ab921003e}{functional\+Annotation} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_a9577d6182490e3abafc8fbd513e2f283}{load\+Go\+Map} (String gofile, String goformat, int go\+Size\+Threshold)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_a5c2ba1d1acf76ae8f19dbbf79c775984}{calc\+All\+Terms\+Enrichment} (Collection$<$ Gene $>$ gene\+Set, Linked\+List$<$ Collection$<$ Gene $>$$>$ random\+Gene\+Sets)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_aa3f877452e95fde1ff2eb5520e318856}{calc\+Term\+Enrichment} (String term, Hash\+Map$<$ String, String $>$ gene\+Set, Linked\+List$<$ Hash\+Map$<$ String, String $>$$>$ random\+Sets, Double\mbox{[}$\,$\mbox{]} perm\+Pval, Double\mbox{[}$\,$\mbox{]} fischer\+Exact, Integer\mbox{[}$\,$\mbox{]} num\+Overlap, Linked\+List$<$ Double $>$ random\+Fischer\+Exact, Linked\+List$<$ Integer $>$ random\+Overlap)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_a301b4ade3bdb606e88102eba5a51ac8a}{write\+Terms\+Enrichments} (String filename, int size\+Threshold, String str, Array\+List$<$ String $>$ terms\+Sorted)  throws I\+O\+Exception
+\item 
+Set$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_ac25fe9ebfabb92cd739c154cdc55d2e2}{get\+Term\+Genes} (String go\+Term, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} ref)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_ae3defaf3a97da64e6a65d2d86e7919df}{parse\+Go\+Raw\+Files} (String Ontology, String Annotation, String pid2gid, String nm2pid\+F, int nm\+Col, int pid\+Col, String outf)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1gene_1_1functional_annotation_a7669ae458c2aa99b85c07fd0538a7e58}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception  
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_a610cf5380473ec0fda037c2ab921003e}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!functional\+Annotation@{functional\+Annotation}}
+\index{functional\+Annotation@{functional\+Annotation}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{functional\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+gene.\+functional\+Annotation.\+functional\+Annotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_a610cf5380473ec0fda037c2ab921003e}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_a5c2ba1d1acf76ae8f19dbbf79c775984}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!calc\+All\+Terms\+Enrichment@{calc\+All\+Terms\+Enrichment}}
+\index{calc\+All\+Terms\+Enrichment@{calc\+All\+Terms\+Enrichment}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{calc\+All\+Terms\+Enrichment}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+functional\+Annotation.\+calc\+All\+Terms\+Enrichment (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Gene $>$}]{gene\+Set, }
+\item[{Linked\+List$<$ Collection$<$ Gene $>$$>$}]{random\+Gene\+Sets}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_a5c2ba1d1acf76ae8f19dbbf79c775984}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_aa3f877452e95fde1ff2eb5520e318856}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!calc\+Term\+Enrichment@{calc\+Term\+Enrichment}}
+\index{calc\+Term\+Enrichment@{calc\+Term\+Enrichment}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{calc\+Term\+Enrichment}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+functional\+Annotation.\+calc\+Term\+Enrichment (
+\begin{DoxyParamCaption}
+\item[{String}]{term, }
+\item[{Hash\+Map$<$ String, String $>$}]{gene\+Set, }
+\item[{Linked\+List$<$ Hash\+Map$<$ String, String $>$$>$}]{random\+Sets, }
+\item[{Double\mbox{[}$\,$\mbox{]}}]{perm\+Pval, }
+\item[{Double\mbox{[}$\,$\mbox{]}}]{fischer\+Exact, }
+\item[{Integer\mbox{[}$\,$\mbox{]}}]{num\+Overlap, }
+\item[{Linked\+List$<$ Double $>$}]{random\+Fischer\+Exact, }
+\item[{Linked\+List$<$ Integer $>$}]{random\+Overlap}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_aa3f877452e95fde1ff2eb5520e318856}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_ac25fe9ebfabb92cd739c154cdc55d2e2}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!get\+Term\+Genes@{get\+Term\+Genes}}
+\index{get\+Term\+Genes@{get\+Term\+Genes}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{get\+Term\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$Gene$>$ broad.\+pda.\+gene.\+functional\+Annotation.\+get\+Term\+Genes (
+\begin{DoxyParamCaption}
+\item[{String}]{go\+Term, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{ref}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_ac25fe9ebfabb92cd739c154cdc55d2e2}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_a9577d6182490e3abafc8fbd513e2f283}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!load\+Go\+Map@{load\+Go\+Map}}
+\index{load\+Go\+Map@{load\+Go\+Map}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{load\+Go\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+functional\+Annotation.\+load\+Go\+Map (
+\begin{DoxyParamCaption}
+\item[{String}]{gofile, }
+\item[{String}]{goformat, }
+\item[{int}]{go\+Size\+Threshold}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_a9577d6182490e3abafc8fbd513e2f283}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_a7669ae458c2aa99b85c07fd0538a7e58}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!main@{main}}
+\index{main@{main}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+gene.\+functional\+Annotation.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_a7669ae458c2aa99b85c07fd0538a7e58}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_ae3defaf3a97da64e6a65d2d86e7919df}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!parse\+Go\+Raw\+Files@{parse\+Go\+Raw\+Files}}
+\index{parse\+Go\+Raw\+Files@{parse\+Go\+Raw\+Files}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{parse\+Go\+Raw\+Files}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+gene.\+functional\+Annotation.\+parse\+Go\+Raw\+Files (
+\begin{DoxyParamCaption}
+\item[{String}]{Ontology, }
+\item[{String}]{Annotation, }
+\item[{String}]{pid2gid, }
+\item[{String}]{nm2pid\+F, }
+\item[{int}]{nm\+Col, }
+\item[{int}]{pid\+Col, }
+\item[{String}]{outf}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_ae3defaf3a97da64e6a65d2d86e7919df}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1functional_annotation_a301b4ade3bdb606e88102eba5a51ac8a}{\index{broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}!write\+Terms\+Enrichments@{write\+Terms\+Enrichments}}
+\index{write\+Terms\+Enrichments@{write\+Terms\+Enrichments}!broad\+::pda\+::gene\+::functional\+Annotation@{broad\+::pda\+::gene\+::functional\+Annotation}}
+\subsubsection[{write\+Terms\+Enrichments}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+functional\+Annotation.\+write\+Terms\+Enrichments (
+\begin{DoxyParamCaption}
+\item[{String}]{filename, }
+\item[{int}]{size\+Threshold, }
+\item[{String}]{str, }
+\item[{Array\+List$<$ String $>$}]{terms\+Sorted}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1functional_annotation_a301b4ade3bdb606e88102eba5a51ac8a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/gene/\hyperlink{functional_annotation_8java}{functional\+Annotation.\+java}\end{DoxyCompactItemize}

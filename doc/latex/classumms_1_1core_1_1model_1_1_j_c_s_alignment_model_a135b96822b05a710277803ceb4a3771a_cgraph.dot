@@ -1,0 +1,19 @@
+digraph "umms.core.model.JCSAlignmentModel.getCount"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.JCSAlignment\lModel.getCount",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Annotation.equals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a0515e1f20b4e9e913b4f7f329a6c11ad"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.JCSAlignment\lModel.computeGlobalStats",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#a6bba3f6088806514166bc1109d3c6209"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.coordinatesystem.\lCoordinateSpace.getLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space.html#a5a1a16d1a6043ea09efe1084b5a9c84c"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.coordinatesystem.\lCoordinateSpace.getChromosomeNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space.html#ae60b7522b8aa973dd48bae33aef80ff0"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.model.JCSAlignment\lModel.getOverlappingReadCounts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#a554eedd0b97cb7567223f951394082ea"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.model.JCSAlignment\lModel.getCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#a59b33d5479e284503ad2fdc5eea86958"];
+}

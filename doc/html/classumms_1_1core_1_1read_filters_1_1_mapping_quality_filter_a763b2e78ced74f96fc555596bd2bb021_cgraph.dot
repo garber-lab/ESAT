@@ -1,0 +1,11 @@
+digraph "umms.core.readFilters.MappingQualityFilter.evaluate"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.readFilters.Mapping\lQualityFilter.evaluate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.alignment.Alignment.is\lPaired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1alignment_1_1_alignment.html#aed4467c1090c04d0a76946b0b65a946d"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.alignment.Alignment.get\lMappingQuality",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1alignment_1_1_alignment.html#a3fd5709cfe830908e7e0660c91bd4daa"];
+}

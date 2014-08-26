@@ -1,0 +1,15 @@
+digraph "broad.core.datastructures.MatrixWithHeaders.submatrixByColumnNames"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByColumnNames",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.datastructures.\lMatrixWithHeaders.MatrixWithHeaders",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a42a72c4a4dfca058d787728bbeabd106"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.datastructures.\lMatrixWithHeaders.getRowNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a5ed12303338cc6bb92792d8fea575231"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.datastructures.\lMatrixWithHeaders.getColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#ad71f3a9dbda2f1969161bf6cb8a176c1"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.core.datastructures.\lMatrixWithHeaders.rowDimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a0b830d324ce75f9a2250a2d7cd8cf30c"];
+}

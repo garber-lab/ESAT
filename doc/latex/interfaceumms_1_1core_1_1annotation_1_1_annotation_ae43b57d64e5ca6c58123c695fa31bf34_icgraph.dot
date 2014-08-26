@@ -1,0 +1,19 @@
+digraph "umms.core.annotation.Annotation.getStrand"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Annotation.get\lStrand",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Abstract\lAnnotation.trim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_abstract_annotation.html#a7101ed1a3444755c06346f6bdb4bdbd0"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.esat.ESAT.getSubAnnotation\lFromEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t.html#aeb4346e593752ad30a10e4c59026e85d"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.esat.ESAT.getSubAnnotation\lFromStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t.html#a46150c22de56265a4175d196b4f50ae2"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.esat.ESATDistanceCalculator.get\lSubAnnotationFromEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t_distance_calculator.html#a8991dbfa8390362b7401aa10aa78a753"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.esat.ESATDistanceCalculator.get\lSubAnnotationFromStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t_distance_calculator.html#aa651a5a0773a942db8851c56201b1316"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.scripture.Oriented\lChromosomeTranscriptGraph.addAnnotation\lToGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph.html#a2d265cc21a1b11e2a089c5d8f2d9a872"];
+}

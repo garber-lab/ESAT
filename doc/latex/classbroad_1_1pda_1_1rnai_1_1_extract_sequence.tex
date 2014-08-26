@@ -1,0 +1,253 @@
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence}{\section{broad.\+pda.\+rnai.\+Extract\+Sequence Class Reference}
+\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence}\index{broad.\+pda.\+rnai.\+Extract\+Sequence@{broad.\+pda.\+rnai.\+Extract\+Sequence}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Map \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a59fc486013a478291335961ccf47b5dd}{get\+Sequence\+For\+Gene} (Collection$<$ Gene $>$ alignments, String genome\+Directory, boolean repeat\+Mask, Map$<$ String, Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$$>$ ok\+Repeats)  throws Exception
+\item 
+static \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a6adfa50f391f4e203f935ab99b8869b3}{get\+First\+Sequence} (String fasta\+File)  throws I\+O\+Exception 
+\item 
+static Map \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a9c14a04f57f62be107bd1c5f9c365f8d}{split\+By\+Chr} (Collection$<$ Gene $>$ genes)
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a1c601f128f80203b1f18d782e08c5fd9}{get\+Sequence\+For\+Gene} (Gene gene, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} chrom, boolean repeat\+Mask, Map$<$ String, Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$$>$ ok\+Repeats, boolean stranded)  throws Exception
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_ac0527b9f32e6da913fd16225d6d27a5a}{get\+Sequence\+For\+Gene} (Gene gene, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} chrom, boolean repeat\+Mask, Map$<$ String, Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$$>$ ok\+Repeats)  throws Exception
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a28a4bd210bd1c447a44144c25ad2700a}{get\+Sequence\+Unoriented} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} align, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} chrom, boolean repeat\+Mask, Map$<$ String, Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$$>$ ok\+Repeats)  throws Exception
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_aca3dde68780e27cb0abef06e4bc17edc}{get\+Sequence\+Unoriented} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} align, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} chrom, boolean repeat\+Mask)  throws Exception
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a086dda3c43c13dc2bb40a0a1f54e1631}{get\+Sequence\+For\+Gene} (Gene gene, String genome\+Directory, boolean repeat\+Mask)  throws Exception
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_aaf80072fdbceac344f758b410f9001b2}{get\+Genome\+Sequence} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} annot, String genome\+Directory, boolean repeat\+Mask)  throws Exception 
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a3dd5cc663c39b380686655f256035fa3}{get\+Sequence\+Unoriented} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} align, String genome\+Directory, boolean repeat\+Mask, Map$<$ String, Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$$>$ ok\+Repeats)  throws Exception
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a64d8ff8c0584903be975e781630b8736}{reverse\+Complement} (String seq)
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_acd8fb7b2a36ea851fed12a8b7b1bf1b6}{write\+Fasta} (String save, Map$<$ String, Collection$<$ Gene $>$$>$ genes\+By\+Chr, String genome\+Dir, boolean repeat\+Mask)  throws Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a64eae6b9137fc522b16e2710dde38db4}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a6adfa50f391f4e203f935ab99b8869b3}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+First\+Sequence@{get\+First\+Sequence}}
+\index{get\+First\+Sequence@{get\+First\+Sequence}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+First\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Sequence} broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+First\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{fasta\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a6adfa50f391f4e203f935ab99b8869b3}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_aaf80072fdbceac344f758b410f9001b2}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Genome\+Sequence@{get\+Genome\+Sequence}}
+\index{get\+Genome\+Sequence@{get\+Genome\+Sequence}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Genome\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Genome\+Sequence (
+\begin{DoxyParamCaption}
+\item[{{\bf Genomic\+Annotation}}]{annot, }
+\item[{String}]{genome\+Directory, }
+\item[{boolean}]{repeat\+Mask}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_aaf80072fdbceac344f758b410f9001b2}
+Suggestion\+: Use classes in net.\+sf.\+picard.\+reference instead, which are W\+A\+Y faster because they use an indexed F\+A\+S\+T\+A file 
+\begin{DoxyParams}{Parameters}
+{\em annot} & \\
+\hline
+{\em genome\+Directory} & \\
+\hline
+{\em repeat\+Mask} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a59fc486013a478291335961ccf47b5dd}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}}
+\index{get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Sequence\+For\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static Map broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Sequence\+For\+Gene (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Gene $>$}]{alignments, }
+\item[{String}]{genome\+Directory, }
+\item[{boolean}]{repeat\+Mask, }
+\item[{Map$<$ String, Interval\+Tree$<$ {\bf Alignments} $>$$>$}]{ok\+Repeats}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a59fc486013a478291335961ccf47b5dd}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a1c601f128f80203b1f18d782e08c5fd9}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}}
+\index{get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Sequence\+For\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Sequence\+For\+Gene (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene, }
+\item[{{\bf Sequence}}]{chrom, }
+\item[{boolean}]{repeat\+Mask, }
+\item[{Map$<$ String, Interval\+Tree$<$ {\bf Alignments} $>$$>$}]{ok\+Repeats, }
+\item[{boolean}]{stranded}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a1c601f128f80203b1f18d782e08c5fd9}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_ac0527b9f32e6da913fd16225d6d27a5a}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}}
+\index{get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Sequence\+For\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Sequence\+For\+Gene (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene, }
+\item[{{\bf Sequence}}]{chrom, }
+\item[{boolean}]{repeat\+Mask, }
+\item[{Map$<$ String, Interval\+Tree$<$ {\bf Alignments} $>$$>$}]{ok\+Repeats}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_ac0527b9f32e6da913fd16225d6d27a5a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a086dda3c43c13dc2bb40a0a1f54e1631}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}}
+\index{get\+Sequence\+For\+Gene@{get\+Sequence\+For\+Gene}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Sequence\+For\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Sequence\+For\+Gene (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene, }
+\item[{String}]{genome\+Directory, }
+\item[{boolean}]{repeat\+Mask}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a086dda3c43c13dc2bb40a0a1f54e1631}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a28a4bd210bd1c447a44144c25ad2700a}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Sequence\+Unoriented@{get\+Sequence\+Unoriented}}
+\index{get\+Sequence\+Unoriented@{get\+Sequence\+Unoriented}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Sequence\+Unoriented}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Sequence\+Unoriented (
+\begin{DoxyParamCaption}
+\item[{{\bf Alignments}}]{align, }
+\item[{{\bf Sequence}}]{chrom, }
+\item[{boolean}]{repeat\+Mask, }
+\item[{Map$<$ String, Interval\+Tree$<$ {\bf Alignments} $>$$>$}]{ok\+Repeats}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a28a4bd210bd1c447a44144c25ad2700a}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_aca3dde68780e27cb0abef06e4bc17edc}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Sequence\+Unoriented@{get\+Sequence\+Unoriented}}
+\index{get\+Sequence\+Unoriented@{get\+Sequence\+Unoriented}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Sequence\+Unoriented}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Sequence\+Unoriented (
+\begin{DoxyParamCaption}
+\item[{{\bf Alignments}}]{align, }
+\item[{{\bf Sequence}}]{chrom, }
+\item[{boolean}]{repeat\+Mask}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_aca3dde68780e27cb0abef06e4bc17edc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a3dd5cc663c39b380686655f256035fa3}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!get\+Sequence\+Unoriented@{get\+Sequence\+Unoriented}}
+\index{get\+Sequence\+Unoriented@{get\+Sequence\+Unoriented}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{get\+Sequence\+Unoriented}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+get\+Sequence\+Unoriented (
+\begin{DoxyParamCaption}
+\item[{{\bf Alignments}}]{align, }
+\item[{String}]{genome\+Directory, }
+\item[{boolean}]{repeat\+Mask, }
+\item[{Map$<$ String, Interval\+Tree$<$ {\bf Alignments} $>$$>$}]{ok\+Repeats}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a3dd5cc663c39b380686655f256035fa3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a64eae6b9137fc522b16e2710dde38db4}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!main@{main}}
+\index{main@{main}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+rnai.\+Extract\+Sequence.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a64eae6b9137fc522b16e2710dde38db4}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a64d8ff8c0584903be975e781630b8736}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!reverse\+Complement@{reverse\+Complement}}
+\index{reverse\+Complement@{reverse\+Complement}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{reverse\+Complement}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+rnai.\+Extract\+Sequence.\+reverse\+Complement (
+\begin{DoxyParamCaption}
+\item[{String}]{seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a64d8ff8c0584903be975e781630b8736}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a9c14a04f57f62be107bd1c5f9c365f8d}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!split\+By\+Chr@{split\+By\+Chr}}
+\index{split\+By\+Chr@{split\+By\+Chr}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{split\+By\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}static Map broad.\+pda.\+rnai.\+Extract\+Sequence.\+split\+By\+Chr (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Gene $>$}]{genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_a9c14a04f57f62be107bd1c5f9c365f8d}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_acd8fb7b2a36ea851fed12a8b7b1bf1b6}{\index{broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}!write\+Fasta@{write\+Fasta}}
+\index{write\+Fasta@{write\+Fasta}!broad\+::pda\+::rnai\+::\+Extract\+Sequence@{broad\+::pda\+::rnai\+::\+Extract\+Sequence}}
+\subsubsection[{write\+Fasta}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+rnai.\+Extract\+Sequence.\+write\+Fasta (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes\+By\+Chr, }
+\item[{String}]{genome\+Dir, }
+\item[{boolean}]{repeat\+Mask}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1rnai_1_1_extract_sequence_acd8fb7b2a36ea851fed12a8b7b1bf1b6}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/rnai/\hyperlink{_extract_sequence_8java}{Extract\+Sequence.\+java}\end{DoxyCompactItemize}

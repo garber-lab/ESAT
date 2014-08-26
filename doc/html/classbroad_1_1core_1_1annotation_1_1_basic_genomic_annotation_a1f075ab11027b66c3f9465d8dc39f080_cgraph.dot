@@ -1,0 +1,11 @@
+digraph "broad.core.annotation.BasicGenomicAnnotation.BasicGenomicAnnotation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.Basic\lGenomicAnnotation.BasicGenomicAnnotation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.annotation.Basic\lGenomicAnnotation.setSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#a93be2deada3f253081b40fdb92e6f67a"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.annotation.Genomic\lAnnotation.getSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation.html#ae913593fc234e211b353d1bd6b475728"];
+}

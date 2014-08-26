@@ -1,0 +1,13 @@
+digraph "umms.esat.ESATDistanceCalculator.writeNormalizedMatrix"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.esat.ESATDistanceCalculator.write\lNormalizedMatrix",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.esat.ESATDistanceCalculator.calculate\lNormalizationFactors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t_distance_calculator.html#a82606cd46ae4f4570afac64befafb941"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.datastructures.\lMatrixWithHeaders.getColumnNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a488a21c1993afb6381f59f5b133c8f1c"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.esat.ESATDistanceCalculator.array2List",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t_distance_calculator.html#ae04e6c798467dc11a0da7a31deed54ed"];
+}

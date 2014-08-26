@@ -1,0 +1,21 @@
+digraph "umms.core.model.score.RatioScore.getEnrichmentBinomialScore"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.Ratio\lScore.getEnrichmentBinomialScore",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.score.Ratio\lScore.getEnrichmentBinomialPValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_ratio_score.html#a33c05dfce5f5378a5abf2b8611b7efcd"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.score.Ratio\lScore.getNumeratorCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_ratio_score.html#af7b4d14fef9b8f950b5b6d42d74db4bb"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.model.score.Count\lScore.getCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a906acf2141cba6fab150c85de37ca2b5"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.model.score.Ratio\lScore.getDenominatorCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_ratio_score.html#a016968c6cc0959776ace843c2c784616"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.model.score.Ratio\lScore.getNumeratorTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_ratio_score.html#acb1ab9baaeec7bc88420b065a09a4060"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.model.score.Count\lScore.getTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a4668d5a19912f7f9bf52c6c3b8fe2b2c"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="umms.core.model.score.Ratio\lScore.getDenominatorTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_ratio_score.html#a97082aeb1ae49329276a789ba12124cb"];
+}

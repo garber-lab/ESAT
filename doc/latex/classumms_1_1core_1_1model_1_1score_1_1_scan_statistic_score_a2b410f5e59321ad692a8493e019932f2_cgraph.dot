@@ -1,0 +1,17 @@
+digraph "umms.core.model.score.ScanStatisticScore.getEnrichment"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.Scan\lStatisticScore.getEnrichment",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.score.Scan\lStatisticScore.getAverageCoverage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_scan_statistic_score.html#a55e96afcf845400a7fbca4eb67874791"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.score.Window\lScore.AbstractWindowScore.getAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_window_score_1_1_abstract_window_score.html#a1005010d00c6d09f70b39da815c3ee38"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.model.score.Scan\lStatisticScore.getLocalLambda",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_scan_statistic_score.html#ade266a940c29a1911ff8252fdd6b1d73"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.model.score.Count\lScore.getRegionTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a067ecd35931600525a2fcd10c25d0f7a"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.model.score.Scan\lStatisticScore.getRegionLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_scan_statistic_score.html#adb697c290aecf4aab182532829f75c6b"];
+}

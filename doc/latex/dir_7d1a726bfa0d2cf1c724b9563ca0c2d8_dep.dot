@@ -1,0 +1,9 @@
+digraph "java/broad/core/motif/misc" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8d567d12c26a77b5ab4a1b62934a44ea {
+    graph [ bgcolor="#ddddee", pencolor="black", label="motif" fontname="Helvetica", fontsize="10", URL="dir_8d567d12c26a77b5ab4a1b62934a44ea.html"]
+  dir_7d1a726bfa0d2cf1c724b9563ca0c2d8 [shape=box, label="misc", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_7d1a726bfa0d2cf1c724b9563ca0c2d8.html"];
+  }
+}

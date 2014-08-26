@@ -1,0 +1,114 @@
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader}{\section{broad.\+pda.\+datastructures.\+Alignments\+Reader Class Reference}
+\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader}\index{broad.\+pda.\+datastructures.\+Alignments\+Reader@{broad.\+pda.\+datastructures.\+Alignments\+Reader}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+datastructures.\+Alignments\+Reader\+:
+
+
+Collaboration diagram for broad.\+pda.\+datastructures.\+Alignments\+Reader\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_ab1bc7b4b083a051beaf9d76fd67ea7c9}{Alignments\+Reader} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a75d9fadbd719e1e177ba1b094e435322}{Alignments\+Reader} (Collection$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$ annot)
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_aad8f8db4324bc65f53b0c936fad81be4}{Alignments\+Reader} (Buffered\+Reader br)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1ddd8995cc8501db45ac70ea6d6c2c21}{Alignments\+Reader} (String input)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1887a64862d626da7a749819ec45a50d}{load} (Buffered\+Reader br)  throws I\+O\+Exception, Parse\+Exception 
+\item 
+int \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a8463fb48d9ac9c7be46a4451d2bfc165}{parse} (Buffered\+Reader br, Genomic\+Annotation\+Filter$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a248dffdc961399ecbf3103abc357ee49}{create\+Annotation} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} a)
+\item 
+int \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1ac2171ed9ec4929050891bfd3f51e07}{parse} (String file, Genomic\+Annotation\+Filter$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a3b3aa616f2fdc33d135c46b84a7a1bf9}{write} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz Wrapper class to take advantage of all the code in Annotation\+Reader for \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_ab1bc7b4b083a051beaf9d76fd67ea7c9}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!Alignments\+Reader@{Alignments\+Reader}}
+\index{Alignments\+Reader@{Alignments\+Reader}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{Alignments\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Alignments\+Reader.\+Alignments\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_ab1bc7b4b083a051beaf9d76fd67ea7c9}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a75d9fadbd719e1e177ba1b094e435322}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!Alignments\+Reader@{Alignments\+Reader}}
+\index{Alignments\+Reader@{Alignments\+Reader}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{Alignments\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Alignments\+Reader.\+Alignments\+Reader (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Alignments} $>$}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a75d9fadbd719e1e177ba1b094e435322}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_aad8f8db4324bc65f53b0c936fad81be4}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!Alignments\+Reader@{Alignments\+Reader}}
+\index{Alignments\+Reader@{Alignments\+Reader}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{Alignments\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Alignments\+Reader.\+Alignments\+Reader (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_aad8f8db4324bc65f53b0c936fad81be4}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1ddd8995cc8501db45ac70ea6d6c2c21}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!Alignments\+Reader@{Alignments\+Reader}}
+\index{Alignments\+Reader@{Alignments\+Reader}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{Alignments\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Alignments\+Reader.\+Alignments\+Reader (
+\begin{DoxyParamCaption}
+\item[{String}]{input}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1ddd8995cc8501db45ac70ea6d6c2c21}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a248dffdc961399ecbf3103abc357ee49}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!create\+Annotation@{create\+Annotation}}
+\index{create\+Annotation@{create\+Annotation}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{create\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignments} broad.\+pda.\+datastructures.\+Alignments\+Reader.\+create\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Genomic\+Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a248dffdc961399ecbf3103abc357ee49}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1887a64862d626da7a749819ec45a50d}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!load@{load}}
+\index{load@{load}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Alignments\+Reader.\+load (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1887a64862d626da7a749819ec45a50d}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a8463fb48d9ac9c7be46a4451d2bfc165}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!parse@{parse}}
+\index{parse@{parse}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+datastructures.\+Alignments\+Reader.\+parse (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{Genomic\+Annotation\+Filter$<$ {\bf Alignments} $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a8463fb48d9ac9c7be46a4451d2bfc165}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1ac2171ed9ec4929050891bfd3f51e07}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!parse@{parse}}
+\index{parse@{parse}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+datastructures.\+Alignments\+Reader.\+parse (
+\begin{DoxyParamCaption}
+\item[{String}]{file, }
+\item[{Genomic\+Annotation\+Filter$<$ {\bf Alignments} $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a1ac2171ed9ec4929050891bfd3f51e07}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a3b3aa616f2fdc33d135c46b84a7a1bf9}{\index{broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}!write@{write}}
+\index{write@{write}!broad\+::pda\+::datastructures\+::\+Alignments\+Reader@{broad\+::pda\+::datastructures\+::\+Alignments\+Reader}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Alignments\+Reader.\+write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1datastructures_1_1_alignments_reader_a3b3aa616f2fdc33d135c46b84a7a1bf9}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/datastructures/\hyperlink{_alignments_reader_8java}{Alignments\+Reader.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,517 @@
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column}{\section{broad.\+core.\+motif.\+Position\+Weight\+Column Class Reference}
+\label{classbroad_1_1core_1_1motif_1_1_position_weight_column}\index{broad.\+core.\+motif.\+Position\+Weight\+Column@{broad.\+core.\+motif.\+Position\+Weight\+Column}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a3f6de7b7a5d85e2e35becc1ade7b4549}{Position\+Weight\+Column} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a9cdd51008dd45f606b1467484c0b21a7}{Position\+Weight\+Column} (String\mbox{[}$\,$\mbox{]} raw\+Data)
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_ae18f2a79348c2617a646dccfcc75b994}{Position\+Weight\+Column} (int\mbox{[}$\,$\mbox{]} n)
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5baf30adf4feb6bc792f5e3a3f07a453}{Position\+Weight\+Column} (int n\+A, int n\+C, int n\+G, int n\+T)
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a9378785c367ea7045b53febac477df5b}{Position\+Weight\+Column} (double\mbox{[}$\,$\mbox{]} freq)
+\item 
+char \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a82b21c847d46a9ad142aace82bc115d2}{get\+Base\+I\+U\+B} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a51ef60325e0fb8d1b2487cc9a6741748}{reset\+Prob\+With\+Null\+Prior\+Prob} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a6a093c62c5e480fdb2896978d4fb97cd}{set\+Num} (int\mbox{[}$\,$\mbox{]} n)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a8643e8c7c0bc412bf6c8f7690931115c}{set\+Num} (int n\+A, int n\+C, int n\+G, int n\+T)
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column}{Position\+Weight\+Column} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a3b8fc8d22e61e6e7d681c7e200dc4e5d}{get\+Complement} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_ae153a2a5518ba867a38f580bf936187a}{init} (int alphabet\+Size)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_af48227030027d230fa1bb09409a9c3e0}{init} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_acc95c9927ec2eb0099868cd6cf56acfd}{get\+Log\+Ratio} (char ch)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a585fabfe6c110fee519aa51ceda7fd81}{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy} (char ch)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_af17d5c4039831262d7716ce3c80c77cc}{get\+Log\+Prob} (char ch)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa5bf75a68363f237582b362d3f44e648}{get\+Log\+Prob} (int base\+Idx)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa1c34e4df6a34f13e3ed272f1eaffebc}{get\+Log\+Ratio} (char i, boolean is\+Num\+Seq)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a219912bf0dca3ef55520d40cf2e30898}{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy} (char i, boolean is\+Num\+Seq)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a43ec5b48d9467a142242c9e3c4e4863e}{compute\+Prob} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1ca0b6c53be56651b221416797055320}{print\+Prob} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a0dd23bc82d78d538874827c25cec10e3}{print} ()
+\item 
+char \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a66a4df9e60746c26f9b04962364ef26f}{to\+Consensus} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_ac3d42c98e9344071ac290237548d7337}{get\+Information\+Content} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1900813fbbbfb3b2b4a80fb1a168698c}{flat\+Weight} (double info\+Th)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a526ed9055573827b2ccff975140a362f}{reset\+To\+Uniform\+Prob} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a11cdf460bc71b967f82f8beff5425ee1}{get\+Weight} (int letter\+Index)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_ab4c32a7c518a414824ead8566a550762}{write} (Buffered\+Writer bw, Number\+Format formatter)  throws I\+O\+Exception 
+\item 
+String \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5fd84a54189f40058feb2c570a427fd9}{to\+String} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1018f31a29569c2ecf2350c363bd2c75}{get\+Probability} (int base\+Index)
+\item 
+int \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a629eb4fe6442a462bc5b5c7352576364}{get\+Alphabet\+Size} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_ace1830010f357d09410350f2676d9f38}{add\+Pseudo\+Counts} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5591c51cf8e638045e2a3694bc06b10c}{kullback\+Leiber} (\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column}{Position\+Weight\+Column} pwc)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_a62a73e5a7bf13dd6eed61c92f841a822}{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+L\+P\+H\+A\+B\+E\+T\+\_\+\+S\+I\+Z\+E} = 4
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa264b4ccb3a80288204ac503d629cda3}{set\+From\+Counts} (int\mbox{[}$\,$\mbox{]} n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a3f6de7b7a5d85e2e35becc1ade7b4549}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!Position\+Weight\+Column@{Position\+Weight\+Column}}
+\index{Position\+Weight\+Column@{Position\+Weight\+Column}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{Position\+Weight\+Column}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+motif.\+Position\+Weight\+Column.\+Position\+Weight\+Column (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a3f6de7b7a5d85e2e35becc1ade7b4549}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a9cdd51008dd45f606b1467484c0b21a7}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!Position\+Weight\+Column@{Position\+Weight\+Column}}
+\index{Position\+Weight\+Column@{Position\+Weight\+Column}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{Position\+Weight\+Column}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+motif.\+Position\+Weight\+Column.\+Position\+Weight\+Column (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{raw\+Data}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a9cdd51008dd45f606b1467484c0b21a7}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_ae18f2a79348c2617a646dccfcc75b994}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!Position\+Weight\+Column@{Position\+Weight\+Column}}
+\index{Position\+Weight\+Column@{Position\+Weight\+Column}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{Position\+Weight\+Column}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+motif.\+Position\+Weight\+Column.\+Position\+Weight\+Column (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{n}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_ae18f2a79348c2617a646dccfcc75b994}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5baf30adf4feb6bc792f5e3a3f07a453}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!Position\+Weight\+Column@{Position\+Weight\+Column}}
+\index{Position\+Weight\+Column@{Position\+Weight\+Column}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{Position\+Weight\+Column}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+motif.\+Position\+Weight\+Column.\+Position\+Weight\+Column (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+A, }
+\item[{int}]{n\+C, }
+\item[{int}]{n\+G, }
+\item[{int}]{n\+T}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5baf30adf4feb6bc792f5e3a3f07a453}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a9378785c367ea7045b53febac477df5b}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!Position\+Weight\+Column@{Position\+Weight\+Column}}
+\index{Position\+Weight\+Column@{Position\+Weight\+Column}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{Position\+Weight\+Column}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+motif.\+Position\+Weight\+Column.\+Position\+Weight\+Column (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{freq}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a9378785c367ea7045b53febac477df5b}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_ace1830010f357d09410350f2676d9f38}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!add\+Pseudo\+Counts@{add\+Pseudo\+Counts}}
+\index{add\+Pseudo\+Counts@{add\+Pseudo\+Counts}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{add\+Pseudo\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+add\+Pseudo\+Counts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_ace1830010f357d09410350f2676d9f38}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a43ec5b48d9467a142242c9e3c4e4863e}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!compute\+Prob@{compute\+Prob}}
+\index{compute\+Prob@{compute\+Prob}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{compute\+Prob}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+compute\+Prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a43ec5b48d9467a142242c9e3c4e4863e}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1900813fbbbfb3b2b4a80fb1a168698c}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!flat\+Weight@{flat\+Weight}}
+\index{flat\+Weight@{flat\+Weight}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{flat\+Weight}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+flat\+Weight (
+\begin{DoxyParamCaption}
+\item[{double}]{info\+Th}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1900813fbbbfb3b2b4a80fb1a168698c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a629eb4fe6442a462bc5b5c7352576364}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Alphabet\+Size@{get\+Alphabet\+Size}}
+\index{get\+Alphabet\+Size@{get\+Alphabet\+Size}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Alphabet\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Alphabet\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a629eb4fe6442a462bc5b5c7352576364}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a82b21c847d46a9ad142aace82bc115d2}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Base\+I\+U\+B@{get\+Base\+I\+U\+B}}
+\index{get\+Base\+I\+U\+B@{get\+Base\+I\+U\+B}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Base\+I\+U\+B}]{\setlength{\rightskip}{0pt plus 5cm}char broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Base\+I\+U\+B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a82b21c847d46a9ad142aace82bc115d2}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a3b8fc8d22e61e6e7d681c7e200dc4e5d}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Complement@{get\+Complement}}
+\index{get\+Complement@{get\+Complement}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Complement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Weight\+Column} broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Complement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a3b8fc8d22e61e6e7d681c7e200dc4e5d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_ac3d42c98e9344071ac290237548d7337}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Information\+Content@{get\+Information\+Content}}
+\index{get\+Information\+Content@{get\+Information\+Content}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Information\+Content}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Information\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_ac3d42c98e9344071ac290237548d7337}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_af17d5c4039831262d7716ce3c80c77cc}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Log\+Prob@{get\+Log\+Prob}}
+\index{get\+Log\+Prob@{get\+Log\+Prob}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Log\+Prob}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Log\+Prob (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_af17d5c4039831262d7716ce3c80c77cc}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa5bf75a68363f237582b362d3f44e648}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Log\+Prob@{get\+Log\+Prob}}
+\index{get\+Log\+Prob@{get\+Log\+Prob}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Log\+Prob}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Log\+Prob (
+\begin{DoxyParamCaption}
+\item[{int}]{base\+Idx}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa5bf75a68363f237582b362d3f44e648}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_acc95c9927ec2eb0099868cd6cf56acfd}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Log\+Ratio@{get\+Log\+Ratio}}
+\index{get\+Log\+Ratio@{get\+Log\+Ratio}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Log\+Ratio}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Log\+Ratio (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_acc95c9927ec2eb0099868cd6cf56acfd}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa1c34e4df6a34f13e3ed272f1eaffebc}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Log\+Ratio@{get\+Log\+Ratio}}
+\index{get\+Log\+Ratio@{get\+Log\+Ratio}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Log\+Ratio}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Log\+Ratio (
+\begin{DoxyParamCaption}
+\item[{char}]{i, }
+\item[{boolean}]{is\+Num\+Seq}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa1c34e4df6a34f13e3ed272f1eaffebc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a585fabfe6c110fee519aa51ceda7fd81}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy@{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy}}
+\index{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy@{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a585fabfe6c110fee519aa51ceda7fd81}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a219912bf0dca3ef55520d40cf2e30898}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy@{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy}}
+\index{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy@{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Log\+Ratio\+Weighted\+By\+Neg\+Entropy (
+\begin{DoxyParamCaption}
+\item[{char}]{i, }
+\item[{boolean}]{is\+Num\+Seq}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a219912bf0dca3ef55520d40cf2e30898}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1018f31a29569c2ecf2350c363bd2c75}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Probability@{get\+Probability}}
+\index{get\+Probability@{get\+Probability}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Probability}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Probability (
+\begin{DoxyParamCaption}
+\item[{int}]{base\+Index}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1018f31a29569c2ecf2350c363bd2c75}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a11cdf460bc71b967f82f8beff5425ee1}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!get\+Weight@{get\+Weight}}
+\index{get\+Weight@{get\+Weight}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{get\+Weight}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+get\+Weight (
+\begin{DoxyParamCaption}
+\item[{int}]{letter\+Index}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a11cdf460bc71b967f82f8beff5425ee1}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_ae153a2a5518ba867a38f580bf936187a}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!init@{init}}
+\index{init@{init}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{alphabet\+Size}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_ae153a2a5518ba867a38f580bf936187a}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_af48227030027d230fa1bb09409a9c3e0}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!init@{init}}
+\index{init@{init}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_af48227030027d230fa1bb09409a9c3e0}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5591c51cf8e638045e2a3694bc06b10c}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!kullback\+Leiber@{kullback\+Leiber}}
+\index{kullback\+Leiber@{kullback\+Leiber}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{kullback\+Leiber}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Column.\+kullback\+Leiber (
+\begin{DoxyParamCaption}
+\item[{{\bf Position\+Weight\+Column}}]{pwc}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5591c51cf8e638045e2a3694bc06b10c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a0dd23bc82d78d538874827c25cec10e3}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!print@{print}}
+\index{print@{print}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a0dd23bc82d78d538874827c25cec10e3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1ca0b6c53be56651b221416797055320}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!print\+Prob@{print\+Prob}}
+\index{print\+Prob@{print\+Prob}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{print\+Prob}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+print\+Prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a1ca0b6c53be56651b221416797055320}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a51ef60325e0fb8d1b2487cc9a6741748}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!reset\+Prob\+With\+Null\+Prior\+Prob@{reset\+Prob\+With\+Null\+Prior\+Prob}}
+\index{reset\+Prob\+With\+Null\+Prior\+Prob@{reset\+Prob\+With\+Null\+Prior\+Prob}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{reset\+Prob\+With\+Null\+Prior\+Prob}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+reset\+Prob\+With\+Null\+Prior\+Prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a51ef60325e0fb8d1b2487cc9a6741748}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a526ed9055573827b2ccff975140a362f}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!reset\+To\+Uniform\+Prob@{reset\+To\+Uniform\+Prob}}
+\index{reset\+To\+Uniform\+Prob@{reset\+To\+Uniform\+Prob}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{reset\+To\+Uniform\+Prob}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+reset\+To\+Uniform\+Prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a526ed9055573827b2ccff975140a362f}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa264b4ccb3a80288204ac503d629cda3}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!set\+From\+Counts@{set\+From\+Counts}}
+\index{set\+From\+Counts@{set\+From\+Counts}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{set\+From\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+set\+From\+Counts (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_aa264b4ccb3a80288204ac503d629cda3}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a6a093c62c5e480fdb2896978d4fb97cd}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!set\+Num@{set\+Num}}
+\index{set\+Num@{set\+Num}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{set\+Num}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+set\+Num (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{n}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a6a093c62c5e480fdb2896978d4fb97cd}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a8643e8c7c0bc412bf6c8f7690931115c}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!set\+Num@{set\+Num}}
+\index{set\+Num@{set\+Num}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{set\+Num}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+set\+Num (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+A, }
+\item[{int}]{n\+C, }
+\item[{int}]{n\+G, }
+\item[{int}]{n\+T}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a8643e8c7c0bc412bf6c8f7690931115c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a66a4df9e60746c26f9b04962364ef26f}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!to\+Consensus@{to\+Consensus}}
+\index{to\+Consensus@{to\+Consensus}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{to\+Consensus}]{\setlength{\rightskip}{0pt plus 5cm}char broad.\+core.\+motif.\+Position\+Weight\+Column.\+to\+Consensus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a66a4df9e60746c26f9b04962364ef26f}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5fd84a54189f40058feb2c570a427fd9}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+motif.\+Position\+Weight\+Column.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a5fd84a54189f40058feb2c570a427fd9}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_ab4c32a7c518a414824ead8566a550762}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!write@{write}}
+\index{write@{write}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Column.\+write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{Number\+Format}]{formatter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_ab4c32a7c518a414824ead8566a550762}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_column_a62a73e5a7bf13dd6eed61c92f841a822}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}!D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+L\+P\+H\+A\+B\+E\+T\+\_\+\+S\+I\+Z\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+L\+P\+H\+A\+B\+E\+T\+\_\+\+S\+I\+Z\+E}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+L\+P\+H\+A\+B\+E\+T\+\_\+\+S\+I\+Z\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+L\+P\+H\+A\+B\+E\+T\+\_\+\+S\+I\+Z\+E}!broad\+::core\+::motif\+::\+Position\+Weight\+Column@{broad\+::core\+::motif\+::\+Position\+Weight\+Column}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+L\+P\+H\+A\+B\+E\+T\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}final int broad.\+core.\+motif.\+Position\+Weight\+Column.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+L\+P\+H\+A\+B\+E\+T\+\_\+\+S\+I\+Z\+E = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_column_a62a73e5a7bf13dd6eed61c92f841a822}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/motif/\hyperlink{_position_weight_column_8java}{Position\+Weight\+Column.\+java}\end{DoxyCompactItemize}

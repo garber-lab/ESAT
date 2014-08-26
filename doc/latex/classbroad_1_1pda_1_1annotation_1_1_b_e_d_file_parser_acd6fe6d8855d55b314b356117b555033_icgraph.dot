@@ -1,0 +1,25 @@
+digraph "broad.pda.annotation.BEDFileParser.BEDFileParser"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.annotation.BEDFile\lParser.BEDFileParser",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.annotation.BEDFile\lParser.getMergedCopy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#ae1e1428140172568cf8a2b3fcafd7a5f"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.annotation.BEDFile\lParser.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a0449ae4d64ca760468587a0a03144864"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.annotation.BEDFile\lParser.overlap_GenomicLevel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#ad26670b10bbe5428e4b6bf362a4f59e8"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.pda.annotation.BEDFile\lParser.mergeByGtfGeneId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#af406253e663a33e6635ef5056d91221e"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.pda.annotation.BEDFile\lParser.uploadSetOfFiles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a67089f9c331c88c265b2497e00570838"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.pda.annotation.BEDFile\lParser.expanedUtrs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#aeb7ff6d87763c08b8fd2ea26ccdec9b4"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.pda.annotation.BEDFile\lParser.readSiphyOutToBed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#abd360124c8927f470f35d09beed22cbe"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.pda.annotation.BEDFile\lParser.removeSmallTranscripts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a509eea26bf47a59f6d0b34dbe6232f3b"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="broad.pda.annotation.BEDFile\lParser.removeSingeleExon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a75f7e2603b219a99a583421044f9d7f5"];
+}

@@ -1,0 +1,9 @@
+digraph "umms.core.coordinatesystem.TranscriptInGenomicSpace.setPercentMaskedAllowed"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace.setPercent\lMaskedAllowed",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.coordinatesystem.\lTranscriptInGenomicSpace.Transcript\lInGenomicSpace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1coordinatesystem_1_1_transcript_in_genomic_space.html#a851dd33c3b6f698b6ba45ef4dd30d912"];
+}

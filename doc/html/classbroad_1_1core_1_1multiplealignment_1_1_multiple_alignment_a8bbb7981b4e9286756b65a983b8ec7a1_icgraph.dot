@@ -1,0 +1,11 @@
+digraph "broad.core.multiplealignment.MultipleAlignment.isRefGapped"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lMultipleAlignment.isRefGapped",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.multiplealignment.\lMultipleAlignment.setRefGapped",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#abec1f2b36b5b61d36491db003ad702cf"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.multiplealignment.\lMultipleAlignment.compress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#ad475a9fa42f4aaa5fc128fd3688f9c38"];
+}

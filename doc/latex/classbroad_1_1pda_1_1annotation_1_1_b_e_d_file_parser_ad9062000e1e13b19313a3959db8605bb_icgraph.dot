@@ -1,0 +1,35 @@
+digraph "broad.pda.annotation.BEDFileParser.getChrTree"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.annotation.BEDFile\lParser.getChrTree",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.annotation.BEDFile\lParser.getMergedAnnotationMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#ab4cead55423bc92714e6761c144bc2a8"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.annotation.BEDFile\lParser.getMergedAnnotationMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#acee04f1f087d3e473c830d92b5e23fd0"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.annotation.BEDFile\lParser.makeGenes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a0d1ef53e95c6fc5fd889fdd566d307e8"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.pda.annotation.BEDFile\lParser.merge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a75d88890a89e815e0dd41134c8eb29e1"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.pda.annotation.BEDFile\lParser.get3PRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a592f7b9ad8d50ffd4487ecc496469bb4"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.pda.annotation.BEDFile\lParser.getPromoters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#ae7ce27123546bfe5c63beeea33443ff3"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.pda.annotation.BEDFile\lParser.writeFullBed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#aef3f450e2db898bb6efc32c951f0c6dc"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.pda.annotation.BEDFile\lParser.collapseSingleExonTranscripts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a45ec37aa431467c0b765680ef53aefcc"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="broad.pda.annotation.BEDFile\lParser.remove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a56e9eebf08809a7ff512853b513956d2"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="broad.pda.annotation.BEDFile\lParser.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a0449ae4d64ca760468587a0a03144864"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="broad.pda.annotation.BEDFile\lParser.getClosestUpstream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a01bdda303f0aa5c707342733e3bb09c2"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="broad.pda.annotation.BEDFile\lParser.getClosestDownstream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a17134d7932aab01f1cb7783f60bbded9"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="broad.pda.annotation.GTFFile\lParser.write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_g_t_f_file_parser.html#acebb6941060051342ee18e0a76ad0c03"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="broad.pda.gene.Neighbors\lNullModel.makeNaiveRandModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1gene_1_1_neighbors_null_model.html#a133ed88074e18109890f5b91d37ffaf9"];
+}

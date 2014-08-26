@@ -1,0 +1,36 @@
+digraph "broad.core.sequence.SequenceRegion.getStart"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.sequence.Sequence\lRegion.getStart",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.primer3.Hairpin\lKmer.maxSelfComplementarity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1primer3_1_1_hairpin_kmer.html#ada34732d5709df1afba5b4064bd0353a"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.sequence.Fasta\lSequenceIO.extractRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o.html#a1dc3bdc056f3b5abf31667bac3cca310"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.sequence.Sequence.get\lRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#aedcfb7c619bf8d261062e3005f1b23f8"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.sequence.Sequence\lRegion.length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a29a5e3028670cb9095a5181e2b2b191b"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.sequence.Sequence\lRegion.getLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a73892ab0e9b260c5f518481a47fdba82"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.pda.feature.genome.\lChromosome.insert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_chromosome.html#ab295584fcacd051aaf615cffc19376ea"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.core.sequence.Sequence\lRegion.getMidpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a2349bf9ffd84ef978ecc06e0db1804d4"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.core.sequence.Sequence\lRegion.getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a3a81800b533cb2f0a880c5158741ebd0"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="broad.core.sequence.Sequence\lRegion.getName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#abe729e8af2a1d244f41ddf93373ca829"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="broad.core.sequence.Sequence.get\lSubSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#ab03732869550e07296a989208b50c100"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="broad.core.sequence.Sequence.get\lMatches",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#a69dcd323117fd945585a71236ffef9e9"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="broad.core.sequence.Sequence.get\lSubSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#a5af216e57b3a21de28ff79b81a51af25"];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="broad.core.sequence.Sequence.get\lSubsequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#aea523aacfd70e1301e61ce005db9fd68"];
+  Node10 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="broad.pda.feature.genome.\lDirectoryInstalledGenomeAssembly.translocate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_directory_installed_genome_assembly.html#ac15ba0b30a7ba5d2829da1bd873c7a53"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,0 +1,255 @@
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t}{\section{umms.\+esat.\+E\+S\+A\+T Class Reference}
+\label{classumms_1_1esat_1_1_e_s_a_t}\index{umms.\+esat.\+E\+S\+A\+T@{umms.\+esat.\+E\+S\+A\+T}}
+}
+
+
+Collaboration diagram for umms.\+esat.\+E\+S\+A\+T\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1esat_1_1_e_s_a_t_aeb2c38157e875926fe8f3a4949d600b4}{E\+S\+A\+T} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception, Parse\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classumms_1_1esat_1_1_e_s_a_t_a0c0805cb33f787baa8c74f6b382bfaa7}{write\+Normalized\+Matrix} (String file\+Name, \hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} result\+Matrix)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Double $>$ \hyperlink{classumms_1_1esat_1_1_e_s_a_t_a36fc452b596f2408460fc28d50f98d4f}{calculate\+Normalization\+Factors} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} mat)
+\item 
+static List$<$ Double $>$ \hyperlink{classumms_1_1esat_1_1_e_s_a_t_aa50134cfa33375dd6440974c7915cd9c}{array2\+List} (double\mbox{[}$\,$\mbox{]} array)
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classumms_1_1esat_1_1_e_s_a_t_aeb4346e593752ad30a10e4c59026e85d}{get\+Sub\+Annotation\+From\+End} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} annotation, int length, int distance\+From\+Transcript\+End)
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classumms_1_1esat_1_1_e_s_a_t_a46150c22de56265a4175d196b4f50ae2}{get\+Sub\+Annotation\+From\+Start} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} annotation, int length, int distance\+From\+Transcript\+Start)
+\item 
+static \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classumms_1_1esat_1_1_e_s_a_t_aa9024ccb95db2d1a32965900440c3fd5}{reconstruct\+Gene\+Ends} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} complete\+Reconstruction, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} annotations, String annotation\+File)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classumms_1_1esat_1_1_e_s_a_t_af92b8b50582e8db464efe59683a5b709}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Parse\+Exception, I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{classumms_1_1esat_1_1_e_s_a_t_a93155d1747d9b0ed664ff516e3082eda}{whitespace\+Delimiter} = \char`\"{}\textbackslash{}\textbackslash{}s++\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+skadri 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_aeb2c38157e875926fe8f3a4949d600b4}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!E\+S\+A\+T@{E\+S\+A\+T}}
+\index{E\+S\+A\+T@{E\+S\+A\+T}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{E\+S\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+esat.\+E\+S\+A\+T.\+E\+S\+A\+T (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classumms_1_1esat_1_1_e_s_a_t_aeb2c38157e875926fe8f3a4949d600b4}
+If user wants to reconstruct gene ends.
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_aa50134cfa33375dd6440974c7915cd9c}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!array2\+List@{array2\+List}}
+\index{array2\+List@{array2\+List}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{array2\+List}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$Double$>$ umms.\+esat.\+E\+S\+A\+T.\+array2\+List (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_aa50134cfa33375dd6440974c7915cd9c}
+This function converts an array of double to List of type Double 
+\begin{DoxyParams}{Parameters}
+{\em double\mbox{[}$\,$\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_a36fc452b596f2408460fc28d50f98d4f}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!calculate\+Normalization\+Factors@{calculate\+Normalization\+Factors}}
+\index{calculate\+Normalization\+Factors@{calculate\+Normalization\+Factors}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{calculate\+Normalization\+Factors}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String,Double$>$ umms.\+esat.\+E\+S\+A\+T.\+calculate\+Normalization\+Factors (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_a36fc452b596f2408460fc28d50f98d4f}
+Calculates the scaling factor for each column of the specified matrix, using the normalization method used by D\+E\+Seq. 
+\begin{DoxyParams}{Parameters}
+{\em mat} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_aeb4346e593752ad30a10e4c59026e85d}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!get\+Sub\+Annotation\+From\+End@{get\+Sub\+Annotation\+From\+End}}
+\index{get\+Sub\+Annotation\+From\+End@{get\+Sub\+Annotation\+From\+End}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{get\+Sub\+Annotation\+From\+End}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene} umms.\+esat.\+E\+S\+A\+T.\+get\+Sub\+Annotation\+From\+End (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{annotation, }
+\item[{int}]{length, }
+\item[{int}]{distance\+From\+Transcript\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_aeb4346e593752ad30a10e4c59026e85d}
+Returns the subannotation of length \char`\"{}length\char`\"{} at a distance \char`\"{}distance\+From\+Transcript\+End\char`\"{} from the 3' end of the gene 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+{\em length} & \\
+\hline
+{\em distance\+From\+Transcript\+End} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_a46150c22de56265a4175d196b4f50ae2}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!get\+Sub\+Annotation\+From\+Start@{get\+Sub\+Annotation\+From\+Start}}
+\index{get\+Sub\+Annotation\+From\+Start@{get\+Sub\+Annotation\+From\+Start}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{get\+Sub\+Annotation\+From\+Start}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene} umms.\+esat.\+E\+S\+A\+T.\+get\+Sub\+Annotation\+From\+Start (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{annotation, }
+\item[{int}]{length, }
+\item[{int}]{distance\+From\+Transcript\+Start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_a46150c22de56265a4175d196b4f50ae2}
+Returns the subannotation of length \char`\"{}length\char`\"{} at a distance \char`\"{}distance\+From\+Transcript\+Start\char`\"{} from the 5' end of the gene 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+{\em length} & \\
+\hline
+{\em distance\+From\+Transcript\+End} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_af92b8b50582e8db464efe59683a5b709}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!main@{main}}
+\index{main@{main}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+esat.\+E\+S\+A\+T.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_af92b8b50582e8db464efe59683a5b709}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+{\em Parse\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_aa9024ccb95db2d1a32965900440c3fd5}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!reconstruct\+Gene\+Ends@{reconstruct\+Gene\+Ends}}
+\index{reconstruct\+Gene\+Ends@{reconstruct\+Gene\+Ends}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{reconstruct\+Gene\+Ends}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf B\+E\+D\+File\+Parser} umms.\+esat.\+E\+S\+A\+T.\+reconstruct\+Gene\+Ends (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{complete\+Reconstruction, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{annotations, }
+\item[{String}]{annotation\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_aa9024ccb95db2d1a32965900440c3fd5}
+Returns the reconstructed annotation set based on the reconstruction provided 
+\begin{DoxyParams}{Parameters}
+{\em complete\+Reconstruction} & \\
+\hline
+{\em annotations} & \\
+\hline
+{\em annotation\+File} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_a0c0805cb33f787baa8c74f6b382bfaa7}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!write\+Normalized\+Matrix@{write\+Normalized\+Matrix}}
+\index{write\+Normalized\+Matrix@{write\+Normalized\+Matrix}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{write\+Normalized\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+esat.\+E\+S\+A\+T.\+write\+Normalized\+Matrix (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name, }
+\item[{{\bf Matrix\+With\+Headers}}]{result\+Matrix}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_a0c0805cb33f787baa8c74f6b382bfaa7}
+This function takes an input count matrix and returns a normalized matrix, where a scaling factor is calculated for each sample, and all genes for that sample are scaled by this factor. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \\
+\hline
+{\em result\+Matrix} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_a93155d1747d9b0ed664ff516e3082eda}{\index{umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}!whitespace\+Delimiter@{whitespace\+Delimiter}}
+\index{whitespace\+Delimiter@{whitespace\+Delimiter}!umms\+::esat\+::\+E\+S\+A\+T@{umms\+::esat\+::\+E\+S\+A\+T}}
+\subsubsection[{whitespace\+Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+esat.\+E\+S\+A\+T.\+whitespace\+Delimiter = \char`\"{}\textbackslash{}\textbackslash{}s++\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_a93155d1747d9b0ed664ff516e3082eda}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/esat/\hyperlink{_e_s_a_t_8java}{E\+S\+A\+T.\+java}\end{DoxyCompactItemize}

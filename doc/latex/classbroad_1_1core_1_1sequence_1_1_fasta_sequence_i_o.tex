@@ -1,0 +1,666 @@
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o}{\section{broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O Class Reference}
+\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o}\index{broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O@{broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O}}
+}
+
+
+Inheritance diagram for broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O\+:
+
+
+Collaboration diagram for broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a07d0added6b1ecfe9d0cfa10d182b949}{Fasta\+Sequence\+I\+O} (String file\+Name)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0bd9835f2db17b755ccb9ead8e49c981}{Fasta\+Sequence\+I\+O} (File file)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a63879fc2ecf70ce75440e723c1e4e370}{Fasta\+Sequence\+I\+O} ()
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aef2c94f97fc18b53b799cc878bbf5323}{load\+All} ()  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a92863f4a02b932682c5c8d8bc4b9fa78}{load\+All} (Input\+Stream is)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a94c1360dfeb1f00535073c168c94dd35}{extract\+Records\+Into\+Sequence\+List} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ sequence\+List)  throws Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_af154ff4095e0c7d558b4259bf3752b45}{merge\+Records} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq, String reg\+Ex)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0c295bd33475eac47a3d7f8e95c55ab6}{write\+Records\+With\+Min\+Length} (int minimum\+Length, Input\+Stream in\+Is, Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab8bbce97f9449f0f65584dba5dfda6a2}{extract\+Records\+With\+I\+Ds\+Matching} (List$<$ String $>$ reg\+Exs, boolean encode)  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a038f09d76755f5e834da504a138bb958}{extract\+Records\+With\+I\+Ds\+Matching} (List$<$ String $>$ reg\+Exs, boolean encode, int expected\+Size)  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0b3c106b3efe0286a3fdc77837423f44}{extract\+Records\+With\+I\+D\+Like} (String reg\+Ex, boolean encode)  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_af6b2eb6246973952e55d45ed01942fe9}{extract\+Records\+With\+I\+D\+Like} (String reg\+Ex, boolean encode, int expected\+Size)  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aec0fe9f895133ca55cce3f762acc53d7}{extract\+Records} (Collection$<$ String $>$ record\+Id\+List, Input\+Stream is)  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae87ed7921463d5f53e471b24e99846c4}{extract\+Records} (Collection$<$ String $>$ record\+Id\+List, Input\+Stream is, boolean large\+Sequences)  throws I\+O\+Exception 
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab668998a9be3a1b7c26796ddc1c9af44}{extract\+Records} (Collection$<$ String $>$ record\+Id\+List)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a60b0ea063f9b4f160f4b3ed1daa012ab}{extract\+Region} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} region)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a6b5afc9ded857a8436cd33d6ab34c230}{extract\+Regions} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} $>$ regions)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae6492131e43a789e70d89651462c9616}{extract\+Regions} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} $>$ regions, boolean use\+Region\+Orientation)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a1dc3bdc056f3b5abf31667bac3cca310}{extract\+Regions} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} $>$ regions, boolean use\+Region\+Orientation, Input\+Stream is)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a51b41e65ea299c8d55095a3143705746}{write} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ seqs, int line\+Length)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a13ddcf5f555eb5f54fbf64a5f4598228}{write} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ seqs)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a731d49cafdfb0fb901cecbe8bd5bb53d}{write} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae724528e8d020b01437c10aeae9d68a9}{write} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq, String file\+Name)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ad6f4da2133f3c03f22f20a826ed9be36}{append} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ records, String file\+Name)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_acb32eb4f18d008ff3e4d3d10ffdf2d04}{append} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq, String output)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ad2ea4040ed62b7c01f299af1f92c7771}{write} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ seqs, String file\+Name)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a6bc2f692aabf0340a841edeb498d4291}{write} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ seqs, String file\+Name, int line\+Length)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae7d949db84d5959cf527f12a106f2668}{write} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ seqs, Buffered\+Writer bw, int line\+Length)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae2883033cbedcc43c948cb0cc2bc93f5}{write} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ seqs, Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aa8c45077fa56bb1da040fb7d4edc4c25}{write} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ seqs, Buffered\+Writer bw, Map$<$ String, String $>$ names, String ref\+I\+D, String pos)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a1e92c89090b293611ce94032ff5bfb89}{write} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq, Buffered\+Writer bw, int line\+Length)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a96090898406872c8a57ff30658b67252}{write} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq, Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a38d5e9db349c14c25989db4161afe9b2}{unchunk} (File\mbox{[}$\,$\mbox{]} in\+Dir\+List, int chunk\+Size, String unchunk\+Seq\+Name, String output\+File)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab7b87ab64cd3b0daa838d666c711815c}{set\+Source} (File new\+Source)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_abff930d8d313b70d09e2575c8c7d61ac}{break\+Up\+Multifile} (final int size\+To\+Breakup)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aa49fdc72d0f25d8fb26868672544d649}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\item 
+static Collection$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a913c4cd72c395a0d5c9365174847e4c5}{load\+Sequences} (File fasta)  throws I\+O\+Exception 
+\item 
+static Map$<$ String, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a82288b1cd1dad27bd6c50b8ed45f3ca4}{load\+Sequences\+By\+Name\+From\+Directory} (File sequence\+Directory)  throws Exception 
+\item 
+static Map$<$ String, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a900998320d79a2aaa3d9fff9431ceb67}{load\+Sequences\+By\+Name\+From\+Directory} (File sequence\+Directory, boolean nonrandom\+Only)  throws Exception 
+\item 
+static Collection$<$ String $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_add110f97ffec320326f68e49728a41a3}{get\+Sequence\+Names} (String fasta)  throws I\+O\+Exception 
+\item 
+static Map$<$ String, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a933ca0d02c96ba0321e334ad3431a6cd}{get\+Chr\+Sequences\+From\+Fasta} (String genome\+Fasta)  throws I\+O\+Exception 
+\item 
+static String \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a68327781ab4dee01efe5ff346951f325}{create\+Size\+File} (String ref\+Fasta)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a9fd2a01250cf7c4adeda3bb321c0df44}{L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+T\+H} = 60
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a4447a6df61c89173e8a6bd1fe5eafdbf}{write\+Sequence\+Id} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq, Buffered\+Writer bw)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Suppose to be a very generic and smart Fasta manipulation Class. It is meant to handle both small and very large, multi and single fasta files.
+
+As ussual its initial version will be soooo much less ambitious.
+
+\begin{DoxyAuthor}{Author}
+M\+Garber 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a07d0added6b1ecfe9d0cfa10d182b949}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!Fasta\+Sequence\+I\+O@{Fasta\+Sequence\+I\+O}}
+\index{Fasta\+Sequence\+I\+O@{Fasta\+Sequence\+I\+O}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{Fasta\+Sequence\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+Fasta\+Sequence\+I\+O (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a07d0added6b1ecfe9d0cfa10d182b949}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0bd9835f2db17b755ccb9ead8e49c981}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!Fasta\+Sequence\+I\+O@{Fasta\+Sequence\+I\+O}}
+\index{Fasta\+Sequence\+I\+O@{Fasta\+Sequence\+I\+O}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{Fasta\+Sequence\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+Fasta\+Sequence\+I\+O (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0bd9835f2db17b755ccb9ead8e49c981}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a63879fc2ecf70ce75440e723c1e4e370}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!Fasta\+Sequence\+I\+O@{Fasta\+Sequence\+I\+O}}
+\index{Fasta\+Sequence\+I\+O@{Fasta\+Sequence\+I\+O}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{Fasta\+Sequence\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+Fasta\+Sequence\+I\+O (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a63879fc2ecf70ce75440e723c1e4e370}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ad6f4da2133f3c03f22f20a826ed9be36}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!append@{append}}
+\index{append@{append}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+append (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{records, }
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ad6f4da2133f3c03f22f20a826ed9be36}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_acb32eb4f18d008ff3e4d3d10ffdf2d04}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!append@{append}}
+\index{append@{append}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+append (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq, }
+\item[{String}]{output}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_acb32eb4f18d008ff3e4d3d10ffdf2d04}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_abff930d8d313b70d09e2575c8c7d61ac}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!break\+Up\+Multifile@{break\+Up\+Multifile}}
+\index{break\+Up\+Multifile@{break\+Up\+Multifile}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{break\+Up\+Multifile}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+break\+Up\+Multifile (
+\begin{DoxyParamCaption}
+\item[{final int}]{size\+To\+Breakup}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_abff930d8d313b70d09e2575c8c7d61ac}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a68327781ab4dee01efe5ff346951f325}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!create\+Size\+File@{create\+Size\+File}}
+\index{create\+Size\+File@{create\+Size\+File}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{create\+Size\+File}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+create\+Size\+File (
+\begin{DoxyParamCaption}
+\item[{String}]{ref\+Fasta}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a68327781ab4dee01efe5ff346951f325}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aec0fe9f895133ca55cce3f762acc53d7}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records@{extract\+Records}}
+\index{extract\+Records@{extract\+Records}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ String $>$}]{record\+Id\+List, }
+\item[{Input\+Stream}]{is}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aec0fe9f895133ca55cce3f762acc53d7}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae87ed7921463d5f53e471b24e99846c4}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records@{extract\+Records}}
+\index{extract\+Records@{extract\+Records}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ String $>$}]{record\+Id\+List, }
+\item[{Input\+Stream}]{is, }
+\item[{boolean}]{large\+Sequences}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae87ed7921463d5f53e471b24e99846c4}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab668998a9be3a1b7c26796ddc1c9af44}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records@{extract\+Records}}
+\index{extract\+Records@{extract\+Records}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ String $>$}]{record\+Id\+List}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab668998a9be3a1b7c26796ddc1c9af44}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a94c1360dfeb1f00535073c168c94dd35}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records\+Into\+Sequence\+List@{extract\+Records\+Into\+Sequence\+List}}
+\index{extract\+Records\+Into\+Sequence\+List@{extract\+Records\+Into\+Sequence\+List}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records\+Into\+Sequence\+List}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records\+Into\+Sequence\+List (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{sequence\+List}
+\end{DoxyParamCaption}
+) throws Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a94c1360dfeb1f00535073c168c94dd35}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0b3c106b3efe0286a3fdc77837423f44}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records\+With\+I\+D\+Like@{extract\+Records\+With\+I\+D\+Like}}
+\index{extract\+Records\+With\+I\+D\+Like@{extract\+Records\+With\+I\+D\+Like}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records\+With\+I\+D\+Like}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records\+With\+I\+D\+Like (
+\begin{DoxyParamCaption}
+\item[{String}]{reg\+Ex, }
+\item[{boolean}]{encode}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0b3c106b3efe0286a3fdc77837423f44}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_af6b2eb6246973952e55d45ed01942fe9}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records\+With\+I\+D\+Like@{extract\+Records\+With\+I\+D\+Like}}
+\index{extract\+Records\+With\+I\+D\+Like@{extract\+Records\+With\+I\+D\+Like}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records\+With\+I\+D\+Like}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records\+With\+I\+D\+Like (
+\begin{DoxyParamCaption}
+\item[{String}]{reg\+Ex, }
+\item[{boolean}]{encode, }
+\item[{int}]{expected\+Size}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_af6b2eb6246973952e55d45ed01942fe9}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab8bbce97f9449f0f65584dba5dfda6a2}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records\+With\+I\+Ds\+Matching@{extract\+Records\+With\+I\+Ds\+Matching}}
+\index{extract\+Records\+With\+I\+Ds\+Matching@{extract\+Records\+With\+I\+Ds\+Matching}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records\+With\+I\+Ds\+Matching}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records\+With\+I\+Ds\+Matching (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{reg\+Exs, }
+\item[{boolean}]{encode}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab8bbce97f9449f0f65584dba5dfda6a2}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a038f09d76755f5e834da504a138bb958}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Records\+With\+I\+Ds\+Matching@{extract\+Records\+With\+I\+Ds\+Matching}}
+\index{extract\+Records\+With\+I\+Ds\+Matching@{extract\+Records\+With\+I\+Ds\+Matching}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Records\+With\+I\+Ds\+Matching}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Records\+With\+I\+Ds\+Matching (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{reg\+Exs, }
+\item[{boolean}]{encode, }
+\item[{int}]{expected\+Size}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a038f09d76755f5e834da504a138bb958}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a60b0ea063f9b4f160f4b3ed1daa012ab}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Region@{extract\+Region}}
+\index{extract\+Region@{extract\+Region}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Region}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\+Region}}]{region}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a60b0ea063f9b4f160f4b3ed1daa012ab}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a6b5afc9ded857a8436cd33d6ab34c230}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Regions@{extract\+Regions}}
+\index{extract\+Regions@{extract\+Regions}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Regions (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence\+Region} $>$}]{regions}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a6b5afc9ded857a8436cd33d6ab34c230}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae6492131e43a789e70d89651462c9616}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Regions@{extract\+Regions}}
+\index{extract\+Regions@{extract\+Regions}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Regions (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence\+Region} $>$}]{regions, }
+\item[{boolean}]{use\+Region\+Orientation}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae6492131e43a789e70d89651462c9616}
+Extracts sequence regions from fasta file into 
+\begin{DoxyParams}{Parameters}
+{\em regions} & \\
+\hline
+{\em use\+Region\+Orientation} & if true it reverses the sequence extracted. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a1dc3bdc056f3b5abf31667bac3cca310}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!extract\+Regions@{extract\+Regions}}
+\index{extract\+Regions@{extract\+Regions}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{extract\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+extract\+Regions (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence\+Region} $>$}]{regions, }
+\item[{boolean}]{use\+Region\+Orientation, }
+\item[{Input\+Stream}]{is}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a1dc3bdc056f3b5abf31667bac3cca310}
+Extracts sequence regions from fasta file into 
+\begin{DoxyParams}{Parameters}
+{\em regions} & \\
+\hline
+{\em use\+Region\+Orientation} & if true it reverses the sequence extracted. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a933ca0d02c96ba0321e334ad3431a6cd}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!get\+Chr\+Sequences\+From\+Fasta@{get\+Chr\+Sequences\+From\+Fasta}}
+\index{get\+Chr\+Sequences\+From\+Fasta@{get\+Chr\+Sequences\+From\+Fasta}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{get\+Chr\+Sequences\+From\+Fasta}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, {\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+get\+Chr\+Sequences\+From\+Fasta (
+\begin{DoxyParamCaption}
+\item[{String}]{genome\+Fasta}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a933ca0d02c96ba0321e334ad3431a6cd}
+
+\begin{DoxyParams}{Parameters}
+{\em genome\+Fasta} & Fasta file of chromosomes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of chromosome name to sequence 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_add110f97ffec320326f68e49728a41a3}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!get\+Sequence\+Names@{get\+Sequence\+Names}}
+\index{get\+Sequence\+Names@{get\+Sequence\+Names}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{get\+Sequence\+Names}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<$String$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+get\+Sequence\+Names (
+\begin{DoxyParamCaption}
+\item[{String}]{fasta}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_add110f97ffec320326f68e49728a41a3}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aef2c94f97fc18b53b799cc878bbf5323}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!load\+All@{load\+All}}
+\index{load\+All@{load\+All}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{load\+All}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+load\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aef2c94f97fc18b53b799cc878bbf5323}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a92863f4a02b932682c5c8d8bc4b9fa78}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!load\+All@{load\+All}}
+\index{load\+All@{load\+All}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{load\+All}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+load\+All (
+\begin{DoxyParamCaption}
+\item[{Input\+Stream}]{is}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a92863f4a02b932682c5c8d8bc4b9fa78}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a913c4cd72c395a0d5c9365174847e4c5}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!load\+Sequences@{load\+Sequences}}
+\index{load\+Sequences@{load\+Sequences}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{load\+Sequences}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<${\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+load\+Sequences (
+\begin{DoxyParamCaption}
+\item[{File}]{fasta}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a913c4cd72c395a0d5c9365174847e4c5}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a82288b1cd1dad27bd6c50b8ed45f3ca4}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!load\+Sequences\+By\+Name\+From\+Directory@{load\+Sequences\+By\+Name\+From\+Directory}}
+\index{load\+Sequences\+By\+Name\+From\+Directory@{load\+Sequences\+By\+Name\+From\+Directory}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{load\+Sequences\+By\+Name\+From\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, {\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+load\+Sequences\+By\+Name\+From\+Directory (
+\begin{DoxyParamCaption}
+\item[{File}]{sequence\+Directory}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a82288b1cd1dad27bd6c50b8ed45f3ca4}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a900998320d79a2aaa3d9fff9431ceb67}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!load\+Sequences\+By\+Name\+From\+Directory@{load\+Sequences\+By\+Name\+From\+Directory}}
+\index{load\+Sequences\+By\+Name\+From\+Directory@{load\+Sequences\+By\+Name\+From\+Directory}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{load\+Sequences\+By\+Name\+From\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, {\bf Sequence}$>$ broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+load\+Sequences\+By\+Name\+From\+Directory (
+\begin{DoxyParamCaption}
+\item[{File}]{sequence\+Directory, }
+\item[{boolean}]{nonrandom\+Only}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a900998320d79a2aaa3d9fff9431ceb67}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aa49fdc72d0f25d8fb26868672544d649}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!main@{main}}
+\index{main@{main}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aa49fdc72d0f25d8fb26868672544d649}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_af154ff4095e0c7d558b4259bf3752b45}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!merge\+Records@{merge\+Records}}
+\index{merge\+Records@{merge\+Records}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{merge\+Records}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+merge\+Records (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq, }
+\item[{String}]{reg\+Ex}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_af154ff4095e0c7d558b4259bf3752b45}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab7b87ab64cd3b0daa838d666c711815c}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!set\+Source@{set\+Source}}
+\index{set\+Source@{set\+Source}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{set\+Source}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+set\+Source (
+\begin{DoxyParamCaption}
+\item[{File}]{new\+Source}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ab7b87ab64cd3b0daa838d666c711815c}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a38d5e9db349c14c25989db4161afe9b2}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!unchunk@{unchunk}}
+\index{unchunk@{unchunk}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{unchunk}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+unchunk (
+\begin{DoxyParamCaption}
+\item[{File\mbox{[}$\,$\mbox{]}}]{in\+Dir\+List, }
+\item[{int}]{chunk\+Size, }
+\item[{String}]{unchunk\+Seq\+Name, }
+\item[{String}]{output\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a38d5e9db349c14c25989db4161afe9b2}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a51b41e65ea299c8d55095a3143705746}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{seqs, }
+\item[{int}]{line\+Length}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a51b41e65ea299c8d55095a3143705746}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a13ddcf5f555eb5f54fbf64a5f4598228}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{seqs}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a13ddcf5f555eb5f54fbf64a5f4598228}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a731d49cafdfb0fb901cecbe8bd5bb53d}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a731d49cafdfb0fb901cecbe8bd5bb53d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae724528e8d020b01437c10aeae9d68a9}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq, }
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae724528e8d020b01437c10aeae9d68a9}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ad2ea4040ed62b7c01f299af1f92c7771}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{seqs, }
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ad2ea4040ed62b7c01f299af1f92c7771}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a6bc2f692aabf0340a841edeb498d4291}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{seqs, }
+\item[{String}]{file\+Name, }
+\item[{int}]{line\+Length}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a6bc2f692aabf0340a841edeb498d4291}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae7d949db84d5959cf527f12a106f2668}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{seqs, }
+\item[{Buffered\+Writer}]{bw, }
+\item[{int}]{line\+Length}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae7d949db84d5959cf527f12a106f2668}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae2883033cbedcc43c948cb0cc2bc93f5}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{seqs, }
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_ae2883033cbedcc43c948cb0cc2bc93f5}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aa8c45077fa56bb1da040fb7d4edc4c25}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence} $>$}]{seqs, }
+\item[{Buffered\+Writer}]{bw, }
+\item[{Map$<$ String, String $>$}]{names, }
+\item[{String}]{ref\+I\+D, }
+\item[{String}]{pos}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_aa8c45077fa56bb1da040fb7d4edc4c25}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a1e92c89090b293611ce94032ff5bfb89}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq, }
+\item[{Buffered\+Writer}]{bw, }
+\item[{int}]{line\+Length}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a1e92c89090b293611ce94032ff5bfb89}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a96090898406872c8a57ff30658b67252}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq, }
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a96090898406872c8a57ff30658b67252}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0c295bd33475eac47a3d7f8e95c55ab6}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write\+Records\+With\+Min\+Length@{write\+Records\+With\+Min\+Length}}
+\index{write\+Records\+With\+Min\+Length@{write\+Records\+With\+Min\+Length}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write\+Records\+With\+Min\+Length}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write\+Records\+With\+Min\+Length (
+\begin{DoxyParamCaption}
+\item[{int}]{minimum\+Length, }
+\item[{Input\+Stream}]{in\+Is, }
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a0c295bd33475eac47a3d7f8e95c55ab6}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a4447a6df61c89173e8a6bd1fe5eafdbf}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!write\+Sequence\+Id@{write\+Sequence\+Id}}
+\index{write\+Sequence\+Id@{write\+Sequence\+Id}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{write\+Sequence\+Id}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+write\+Sequence\+Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq, }
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a4447a6df61c89173e8a6bd1fe5eafdbf}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a9fd2a01250cf7c4adeda3bb321c0df44}{\index{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}!L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+T\+H@{L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+T\+H@{L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+T\+H}!broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O@{broad\+::core\+::sequence\+::\+Fasta\+Sequence\+I\+O}}
+\subsubsection[{L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}final int broad.\+core.\+sequence.\+Fasta\+Sequence\+I\+O.\+L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+T\+H = 60\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_fasta_sequence_i_o_a9fd2a01250cf7c4adeda3bb321c0df44}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/sequence/\hyperlink{_fasta_sequence_i_o_8java}{Fasta\+Sequence\+I\+O.\+java}\end{DoxyCompactItemize}

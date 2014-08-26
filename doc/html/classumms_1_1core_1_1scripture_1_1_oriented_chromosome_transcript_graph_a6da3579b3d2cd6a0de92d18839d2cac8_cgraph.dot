@@ -1,0 +1,13 @@
+digraph "umms.core.scripture.OrientedChromosomeTranscriptGraph.connectVertexToGraph"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.scripture.Oriented\lChromosomeTranscriptGraph.connect\lVertexToGraph",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.scripture.Oriented\lChromosomeTranscriptGraph.addVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph.html#a6e0e951bd8fa8e83f453b8050e742b9c"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.annotation.Annotation.getEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a51310d48912558d549d21cbf92ab946a"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.annotation.Annotation.is\lUnoriented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a796b34bf340d8ebe30937eb5b0b5d8d2"];
+}

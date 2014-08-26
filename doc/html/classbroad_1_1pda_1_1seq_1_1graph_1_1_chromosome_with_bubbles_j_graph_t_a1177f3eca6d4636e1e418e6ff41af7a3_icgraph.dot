@@ -1,0 +1,11 @@
+digraph "broad.pda.seq.graph.ChromosomeWithBubblesJGraphT.removeEdge"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.removeEdge",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.removeVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#aab3c4ae39a708c76a0fb942f17b125cb"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.removeSpanning\lGapNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#a29adad576953ed36d106f54f79020aa8"];
+}

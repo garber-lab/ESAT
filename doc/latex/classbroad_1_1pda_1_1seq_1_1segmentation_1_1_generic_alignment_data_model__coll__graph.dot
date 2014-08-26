@@ -1,0 +1,23 @@
+digraph "broad.pda.seq.segmentation.GenericAlignmentDataModel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.segmentation.\lGenericAlignmentDataModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.seq.segmentation.\lAlignmentDataModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1pda_1_1seq_1_1segmentation_1_1_alignment_data_model.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger" ];
+  Node3 [label="Logger",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fullAlignmentTreesAsAnnotation\lCached\ncachingScoringTrees\ngapTree" ];
+  Node4 [label="Map\< String, IntervalTree\l\< Annotation \> \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" chunkAlignmentTree" ];
+  Node5 [label="IntervalTree\< Alignment \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" reader" ];
+  Node6 [label="AlignmentQueryReader",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currentAlignment" ];
+  Node7 [label="Node\< Alignment \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" chromosomeSizes" ];
+  Node8 [label="Map\< String, Integer \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" readIterator" ];
+  Node9 [label="CloseableIterator\<\l Alignment \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

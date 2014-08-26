@@ -1,0 +1,27 @@
+digraph "umms.core.annotation.Annotation.overlaps"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Annotation.overlaps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.utils.Annotation\lUtils.mergeOverlappingBlocksSingle\lOrientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1utils_1_1_annotation_utils.html#a73c090856164c0c8917b1dad326e515f"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.utils.Annotation\lUtils.mergeOverlappingBlocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1utils_1_1_annotation_utils.html#afa2cbf048459a0670cccff99e9140b6e"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.annotation.Basic\lGenomicAnnotation.disect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#a84d5b1f3fb2649e5ea53442edebd65b3"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.core.annotation.Basic\lGenomicAnnotation.isFlankedBy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#a2b03867be090a45c5526631d5e661916"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="broad.core.annotation.BED.\lIntersectBlocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d.html#a300061669e13aa1072380dd85d1c5796"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="umms.core.annotation.Gene.find\lAllORFs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a9ee9efb63f7d3cfd37e9f4300e026486"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="umms.core.annotation.Gene.find\lAllStartCodons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#aaea8a567b50a5856f3d1be57678cb8a0"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="umms.core.annotation.Gene.find\lAllORFs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ac75924ad96922b01c085759027ee5785"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="umms.core.annotation.Gene.find\lLongestORF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a7dd93cc2efc0a68674a9e88f3e6d9ac9"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="umms.core.scripture.Oriented\lChromosomeTranscriptGraph.writeGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1_oriented_chromosome_transcript_graph.html#a6c482f812c7d5dd219106fe0824fbf6e"];
+}

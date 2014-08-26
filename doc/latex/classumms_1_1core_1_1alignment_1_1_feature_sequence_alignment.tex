@@ -1,0 +1,400 @@
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment}{\section{umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment Class Reference}
+\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment}\index{umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment@{umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_1_1_unordered_gene_pair}{Unordered\+Gene\+Pair}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_ab35fcf26aae378b32764e85217562ba1}{Feature\+Sequence\+Alignment} (String feature\+Bed\+File, String genome\+Fasta)  throws I\+O\+Exception 
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a11d8045bdeea5ef20ae6437a1db80e96}{Feature\+Sequence\+Alignment} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes, String genome\+Fasta)  throws I\+O\+Exception 
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aaaff665576cdbcf265e150ff167dfabb}{Feature\+Sequence\+Alignment} (String feature\+Bed\+File, String genome\+Fasta, float match\+Score, float mismatch\+Score, float gap\+Open\+Penalty, float gap\+Extend\+Penalty)  throws I\+O\+Exception 
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a33614e453036f115a7755c4d809cd768}{Feature\+Sequence\+Alignment} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes, Map$<$ String, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{broad.\+core.\+sequence.\+Sequence} $>$ chrs, float match\+Score, float mismatch\+Score, float gap\+Open\+Penalty, float gap\+Extend\+Penalty)  throws I\+O\+Exception 
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aec32e5a32e6a269fd93d9e62db8d5922}{Feature\+Sequence\+Alignment} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes, String genome\+Fasta, float match\+Score, float mismatch\+Score, float gap\+Open\+Penalty, float gap\+Extend\+Penalty)  throws I\+O\+Exception 
+\item 
+Map$<$ \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_1_1_unordered_gene_pair}{Unordered\+Gene\+Pair}, \\*
+\hyperlink{classjaligner_1_1_alignment}{jaligner.\+Alignment} $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a335945731d4a8ddcca3b130106172247}{get\+All\+Pairwise\+Sense\+Alignments} (float min\+Align\+Length, float min\+Pct\+Identity)
+\item 
+Map$<$ \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_1_1_unordered_gene_pair}{Unordered\+Gene\+Pair}, \\*
+\hyperlink{classjaligner_1_1_alignment}{jaligner.\+Alignment} $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_ab6151110c36c6f03905a49d791fd56f1}{get\+All\+Pairwise\+Antisense\+Alignments} (float min\+Align\+Length, float min\+Pct\+Identity)
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a61e3263283cf027e28d2b280b53aa5ea}{write\+All\+Sense\+Alignments\+To\+Bed} (String out\+Bed\+File, int min\+Align\+Length, float min\+Pct\+Identity)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_adfc91ae05ecb83e8d09963f5ffe8e2ea}{write\+All\+Antisense\+Alignments\+To\+Bed} (String out\+Bed\+File, int min\+Align\+Length, float min\+Pct\+Identity)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_af19b7baf1e78ec683d89359f06fc4327}{write\+All\+Sense\+Alignments\+To\+Bed} (String out\+Bed\+File, boolean append, int min\+Align\+Length, float min\+Pct\+Identity)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aec99809f0d839cd75596dd97f5f33305}{write\+All\+Antisense\+Alignments\+To\+Bed} (String out\+Bed\+File, boolean append, int min\+Align\+Length, float min\+Pct\+Identity)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a09afca590c8f7c9a6adcb2289b911fa5}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a632fe2de8b604500533be5ea8139473f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E} = 5
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a21bd1298e50fa041cd652da22e37770a}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E} = -\/4
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_adb8e26dc3dd4ee0cdba1f3d7ae1bbfff}{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y} = 8
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a2a3d43f6bdf98dc290930f48c791fceb}{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_ab35fcf26aae378b32764e85217562ba1}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}}
+\index{Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{Feature\+Sequence\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+Feature\+Sequence\+Alignment (
+\begin{DoxyParamCaption}
+\item[{String}]{feature\+Bed\+File, }
+\item[{String}]{genome\+Fasta}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_ab35fcf26aae378b32764e85217562ba1}
+
+\begin{DoxyParams}{Parameters}
+{\em feature\+Bed\+File} & Bed file of features \\
+\hline
+{\em genome\+Fasta} & Genome fasta file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a11d8045bdeea5ef20ae6437a1db80e96}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}}
+\index{Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{Feature\+Sequence\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+Feature\+Sequence\+Alignment (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{genes, }
+\item[{String}]{genome\+Fasta}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a11d8045bdeea5ef20ae6437a1db80e96}
+
+\begin{DoxyParams}{Parameters}
+{\em genes} & Set of features \\
+\hline
+{\em genome\+Fasta} & Genome fasta file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aaaff665576cdbcf265e150ff167dfabb}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}}
+\index{Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{Feature\+Sequence\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+Feature\+Sequence\+Alignment (
+\begin{DoxyParamCaption}
+\item[{String}]{feature\+Bed\+File, }
+\item[{String}]{genome\+Fasta, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{float}]{gap\+Open\+Penalty, }
+\item[{float}]{gap\+Extend\+Penalty}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aaaff665576cdbcf265e150ff167dfabb}
+
+\begin{DoxyParams}{Parameters}
+{\em feature\+Bed\+File} & Bed file of features \\
+\hline
+{\em genome\+Fasta} & Genome fasta file \\
+\hline
+{\em match\+Score} & Match score for Smith Waterman \\
+\hline
+{\em mismatch\+Score} & Mismatch score for Smith Waterman \\
+\hline
+{\em gap\+Open\+Penalty} & Gap open penalty for Smith Waterman \\
+\hline
+{\em gap\+Extend\+Penalty} & Gap extend penalty for Smith Waterman \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a33614e453036f115a7755c4d809cd768}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}}
+\index{Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{Feature\+Sequence\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+Feature\+Sequence\+Alignment (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{genes, }
+\item[{Map$<$ String, {\bf broad.\+core.\+sequence.\+Sequence} $>$}]{chrs, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{float}]{gap\+Open\+Penalty, }
+\item[{float}]{gap\+Extend\+Penalty}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a33614e453036f115a7755c4d809cd768}
+
+\begin{DoxyParams}{Parameters}
+{\em genes} & The features \\
+\hline
+{\em chrs} & Map of chromosome names to sequences \\
+\hline
+{\em match\+Score} & Match score for Smith Waterman \\
+\hline
+{\em mismatch\+Score} & Mismatch score for Smith Waterman \\
+\hline
+{\em gap\+Open\+Penalty} & Gap open penalty for Smith Waterman \\
+\hline
+{\em gap\+Extend\+Penalty} & Gap extend penalty for Smith Waterman \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aec32e5a32e6a269fd93d9e62db8d5922}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}}
+\index{Feature\+Sequence\+Alignment@{Feature\+Sequence\+Alignment}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{Feature\+Sequence\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+Feature\+Sequence\+Alignment (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{genes, }
+\item[{String}]{genome\+Fasta, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{float}]{gap\+Open\+Penalty, }
+\item[{float}]{gap\+Extend\+Penalty}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aec32e5a32e6a269fd93d9e62db8d5922}
+
+\begin{DoxyParams}{Parameters}
+{\em genes} & Set of features \\
+\hline
+{\em genome\+Fasta} & Genome fasta file \\
+\hline
+{\em match\+Score} & Match score for Smith Waterman \\
+\hline
+{\em mismatch\+Score} & Mismatch score for Smith Waterman \\
+\hline
+{\em gap\+Open\+Penalty} & Gap open penalty for Smith Waterman \\
+\hline
+{\em gap\+Extend\+Penalty} & Gap extend penalty for Smith Waterman \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_ab6151110c36c6f03905a49d791fd56f1}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!get\+All\+Pairwise\+Antisense\+Alignments@{get\+All\+Pairwise\+Antisense\+Alignments}}
+\index{get\+All\+Pairwise\+Antisense\+Alignments@{get\+All\+Pairwise\+Antisense\+Alignments}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{get\+All\+Pairwise\+Antisense\+Alignments}]{\setlength{\rightskip}{0pt plus 5cm}Map$<${\bf Unordered\+Gene\+Pair}, {\bf jaligner.\+Alignment}$>$ umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+get\+All\+Pairwise\+Antisense\+Alignments (
+\begin{DoxyParamCaption}
+\item[{float}]{min\+Align\+Length, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_ab6151110c36c6f03905a49d791fd56f1}
+Get all antisense direction alignments passing thresholds 
+\begin{DoxyParams}{Parameters}
+{\em min\+Align\+Length} & Min alignment length \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+All antisense alignments of unordered gene pair passing criteria 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a335945731d4a8ddcca3b130106172247}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!get\+All\+Pairwise\+Sense\+Alignments@{get\+All\+Pairwise\+Sense\+Alignments}}
+\index{get\+All\+Pairwise\+Sense\+Alignments@{get\+All\+Pairwise\+Sense\+Alignments}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{get\+All\+Pairwise\+Sense\+Alignments}]{\setlength{\rightskip}{0pt plus 5cm}Map$<${\bf Unordered\+Gene\+Pair}, {\bf jaligner.\+Alignment}$>$ umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+get\+All\+Pairwise\+Sense\+Alignments (
+\begin{DoxyParamCaption}
+\item[{float}]{min\+Align\+Length, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a335945731d4a8ddcca3b130106172247}
+Get all sense direction alignments passing thresholds 
+\begin{DoxyParams}{Parameters}
+{\em min\+Align\+Length} & Min alignment length \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+All sense alignments of unordered gene pair passing criteria 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a09afca590c8f7c9a6adcb2289b911fa5}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!main@{main}}
+\index{main@{main}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a09afca590c8f7c9a6adcb2289b911fa5}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_adfc91ae05ecb83e8d09963f5ffe8e2ea}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!write\+All\+Antisense\+Alignments\+To\+Bed@{write\+All\+Antisense\+Alignments\+To\+Bed}}
+\index{write\+All\+Antisense\+Alignments\+To\+Bed@{write\+All\+Antisense\+Alignments\+To\+Bed}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{write\+All\+Antisense\+Alignments\+To\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+write\+All\+Antisense\+Alignments\+To\+Bed (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+Bed\+File, }
+\item[{int}]{min\+Align\+Length, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_adfc91ae05ecb83e8d09963f5ffe8e2ea}
+Write all pairwise alignments (antisense direction only) to bed file in genome coordinates 
+\begin{DoxyParams}{Parameters}
+{\em out\+Bed\+File} & Output bed file \\
+\hline
+{\em min\+Align\+Length} & Min alignment length to keep \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity to keep \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aec99809f0d839cd75596dd97f5f33305}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!write\+All\+Antisense\+Alignments\+To\+Bed@{write\+All\+Antisense\+Alignments\+To\+Bed}}
+\index{write\+All\+Antisense\+Alignments\+To\+Bed@{write\+All\+Antisense\+Alignments\+To\+Bed}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{write\+All\+Antisense\+Alignments\+To\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+write\+All\+Antisense\+Alignments\+To\+Bed (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+Bed\+File, }
+\item[{boolean}]{append, }
+\item[{int}]{min\+Align\+Length, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_aec99809f0d839cd75596dd97f5f33305}
+Write all pairwise alignments (antisense direction only) to bed file in genome coordinates 
+\begin{DoxyParams}{Parameters}
+{\em out\+Bed\+File} & Output bed file \\
+\hline
+{\em append} & Write to end of file rather than beginning \\
+\hline
+{\em min\+Align\+Length} & Min alignment length to keep \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity to keep \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a61e3263283cf027e28d2b280b53aa5ea}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!write\+All\+Sense\+Alignments\+To\+Bed@{write\+All\+Sense\+Alignments\+To\+Bed}}
+\index{write\+All\+Sense\+Alignments\+To\+Bed@{write\+All\+Sense\+Alignments\+To\+Bed}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{write\+All\+Sense\+Alignments\+To\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+write\+All\+Sense\+Alignments\+To\+Bed (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+Bed\+File, }
+\item[{int}]{min\+Align\+Length, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a61e3263283cf027e28d2b280b53aa5ea}
+Write all pairwise alignments (sense direction only) to bed file in genome coordinates 
+\begin{DoxyParams}{Parameters}
+{\em out\+Bed\+File} & Output bed file \\
+\hline
+{\em min\+Align\+Length} & Min alignment length to keep \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity to keep \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_af19b7baf1e78ec683d89359f06fc4327}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!write\+All\+Sense\+Alignments\+To\+Bed@{write\+All\+Sense\+Alignments\+To\+Bed}}
+\index{write\+All\+Sense\+Alignments\+To\+Bed@{write\+All\+Sense\+Alignments\+To\+Bed}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{write\+All\+Sense\+Alignments\+To\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+write\+All\+Sense\+Alignments\+To\+Bed (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+Bed\+File, }
+\item[{boolean}]{append, }
+\item[{int}]{min\+Align\+Length, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_af19b7baf1e78ec683d89359f06fc4327}
+Write all pairwise alignments (sense direction only) to bed file in genome coordinates 
+\begin{DoxyParams}{Parameters}
+{\em out\+Bed\+File} & Output bed file \\
+\hline
+{\em append} & Write to end of file rather than beginning \\
+\hline
+{\em min\+Align\+Length} & Min alignment length to keep \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity to keep \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a2a3d43f6bdf98dc290930f48c791fceb}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a2a3d43f6bdf98dc290930f48c791fceb}
+Default gap extend penalty for Smith Waterman \hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_adb8e26dc3dd4ee0cdba1f3d7ae1bbfff}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y = 8\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_adb8e26dc3dd4ee0cdba1f3d7ae1bbfff}
+Default gap open penalty for Smith Waterman \hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a632fe2de8b604500533be5ea8139473f}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a632fe2de8b604500533be5ea8139473f}
+Default match score for Smith Waterman \hypertarget{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a21bd1298e50fa041cd652da22e37770a}{\index{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}!umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment@{umms\+::core\+::alignment\+::\+Feature\+Sequence\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Feature\+Sequence\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E = -\/4\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_a21bd1298e50fa041cd652da22e37770a}
+Default mismatch score for Smith Waterman 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/alignment/\hyperlink{_feature_sequence_alignment_8java}{Feature\+Sequence\+Alignment.\+java}\end{DoxyCompactItemize}

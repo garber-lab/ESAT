@@ -1,0 +1,75 @@
+\hypertarget{classjaligner_1_1_smith_waterman_gotoh}{\section{jaligner.\+Smith\+Waterman\+Gotoh Class Reference}
+\label{classjaligner_1_1_smith_waterman_gotoh}\index{jaligner.\+Smith\+Waterman\+Gotoh@{jaligner.\+Smith\+Waterman\+Gotoh}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classjaligner_1_1_alignment}{Alignment} \hyperlink{classjaligner_1_1_smith_waterman_gotoh_ad1c29c75816ad909e66f2134e7053874}{align} (\hyperlink{classjaligner_1_1_sequence}{Sequence} s1, \hyperlink{classjaligner_1_1_sequence}{Sequence} s2, \hyperlink{classjaligner_1_1matrix_1_1_matrix}{Matrix} matrix, float o, float e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An implementation of the Smith-\/\+Waterman algorithm with Gotoh's improvement for biological local pairwise sequence alignment.
+
+{\bfseries Recursive definition\+:} 
+\begin{DoxyItemize}
+\item {\bfseries Base conditions\+:} 
+\begin{DoxyItemize}
+\item {\ttfamily V(0, 0) = 0} 
+\item {\ttfamily V(i, 0) = E(i, 0) = W\textsubscript{g} + i\+W\textsubscript{s}} 
+\item {\ttfamily V(0, j) = F(0, j) = W\textsubscript{g} + j\+W\textsubscript{s}} 
+\end{DoxyItemize}
+\item {\bfseries Recurrence relation\+:} 
+\begin{DoxyItemize}
+\item {\ttfamily V(i, j) = max\{E(i, j), F(i, j), G(i, j)\}}, where\+: 
+\item {\ttfamily G(i, j) = V(i -\/ 1, j -\/ 1) + similarity(S\textsubscript{i}, T\textsubscript{j})} 
+\item {\ttfamily E(i, j) = max\{E(i, j -\/ 1) + W\textsubscript{s}, V(i, j -\/ 1) + W\textsubscript{g} + W\textsubscript{s}\}} 
+\item {\ttfamily F(i, j) = max\{F(i -\/ 1, j) + W\textsubscript{s}, V(i -\/ 1, j) + W\textsubscript{g} + W\textsubscript{s}\}} 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Ahmed Moustafa (\href{mailto:ahmed@users.sf.net}{\tt ahmed@users.\+sf.\+net}) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classjaligner_1_1_smith_waterman_gotoh_ad1c29c75816ad909e66f2134e7053874}{\index{jaligner\+::\+Smith\+Waterman\+Gotoh@{jaligner\+::\+Smith\+Waterman\+Gotoh}!align@{align}}
+\index{align@{align}!jaligner\+::\+Smith\+Waterman\+Gotoh@{jaligner\+::\+Smith\+Waterman\+Gotoh}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Alignment} jaligner.\+Smith\+Waterman\+Gotoh.\+align (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{s1, }
+\item[{{\bf Sequence}}]{s2, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{float}]{o, }
+\item[{float}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classjaligner_1_1_smith_waterman_gotoh_ad1c29c75816ad909e66f2134e7053874}
+Logger Aligns two sequences by Smith-\/\+Waterman (local)
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & sequene \#1 (\hyperlink{classjaligner_1_1_sequence}{Sequence}) \\
+\hline
+{\em s2} & sequene \#2 (\hyperlink{classjaligner_1_1_sequence}{Sequence}) \\
+\hline
+{\em matrix} & scoring matrix (\hyperlink{}{Matrix}) \\
+\hline
+{\em o} & open gap penalty \\
+\hline
+{\em e} & extend gap penalty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+alignment object contains the two aligned sequences, the alignment score and alignment statistics 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classjaligner_1_1_sequence}{Sequence} 
+
+Matrix 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/jaligner/\hyperlink{_smith_waterman_gotoh_8java}{Smith\+Waterman\+Gotoh.\+java}\end{DoxyCompactItemize}

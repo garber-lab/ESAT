@@ -1,0 +1,77 @@
+\hypertarget{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4}{\section{broad.\+core.\+hmm.\+Markov\+State$<$ T $>$ Interface Reference}
+\label{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4}\index{broad.\+core.\+hmm.\+Markov\+State$<$ T $>$@{broad.\+core.\+hmm.\+Markov\+State$<$ T $>$}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_ad3cd6d7c27695c97397797dacc59d089}{get\+Emission\+Probability} (T observation)
+\item 
+String \hyperlink{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_ad499d0d3db6b9cafaf6c4207e329df67}{get\+Name} ()
+\item 
+double \hyperlink{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_a88fafaa54e0b0ffec841b7a9c3def406}{get\+Emission\+Log\+Probability} (T observation)
+\item 
+T \hyperlink{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_a37ab2b37cad71e079dc27f665e6a4c70}{emit\+Observation} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_a37ab2b37cad71e079dc27f665e6a4c70}{\index{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}!emit\+Observation@{emit\+Observation}}
+\index{emit\+Observation@{emit\+Observation}!broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}}
+\subsubsection[{emit\+Observation}]{\setlength{\rightskip}{0pt plus 5cm}T broad.\+core.\+hmm.\+Markov\+State$<$ T $>$.emit\+Observation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_a37ab2b37cad71e079dc27f665e6a4c70}
+Uses its background distribution to emit a sampled observation. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_a88fafaa54e0b0ffec841b7a9c3def406}{\index{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}!get\+Emission\+Log\+Probability@{get\+Emission\+Log\+Probability}}
+\index{get\+Emission\+Log\+Probability@{get\+Emission\+Log\+Probability}!broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}}
+\subsubsection[{get\+Emission\+Log\+Probability}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+hmm.\+Markov\+State$<$ T $>$.get\+Emission\+Log\+Probability (
+\begin{DoxyParamCaption}
+\item[{T}]{observation}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_a88fafaa54e0b0ffec841b7a9c3def406}
+In many cases the implementing class may be able to implement this method so that the logarithm is not on every call. 
+\begin{DoxyParams}{Parameters}
+{\em observation} & The roll of a dice, an alignment column, a nucleotide, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+natural log of P(observation $\vert$ this state) 
+\end{DoxyReturn}
+\hypertarget{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_ad3cd6d7c27695c97397797dacc59d089}{\index{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}!get\+Emission\+Probability@{get\+Emission\+Probability}}
+\index{get\+Emission\+Probability@{get\+Emission\+Probability}!broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}}
+\subsubsection[{get\+Emission\+Probability}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+hmm.\+Markov\+State$<$ T $>$.get\+Emission\+Probability (
+\begin{DoxyParamCaption}
+\item[{T}]{observation}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_ad3cd6d7c27695c97397797dacc59d089}
+
+\begin{DoxyParams}{Parameters}
+{\em observation} & The roll of a dice, an alignment column, a nucleotide, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P(observation $\vert$ this state) 
+\end{DoxyReturn}
+\hypertarget{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_ad499d0d3db6b9cafaf6c4207e329df67}{\index{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+State$<$ T $>$}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+hmm.\+Markov\+State$<$ T $>$.get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1hmm_1_1_markov_state_3_01_t_01_4_ad499d0d3db6b9cafaf6c4207e329df67}
+\begin{DoxyReturn}{Returns}
+The name of this Markov State 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/hmm/\hyperlink{_markov_state_8java}{Markov\+State.\+java}\end{DoxyCompactItemize}

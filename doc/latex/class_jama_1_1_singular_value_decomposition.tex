@@ -1,0 +1,133 @@
+\hypertarget{class_jama_1_1_singular_value_decomposition}{\section{Jama.\+Singular\+Value\+Decomposition Class Reference}
+\label{class_jama_1_1_singular_value_decomposition}\index{Jama.\+Singular\+Value\+Decomposition@{Jama.\+Singular\+Value\+Decomposition}}
+}
+
+
+Inheritance diagram for Jama.\+Singular\+Value\+Decomposition\+:
+
+
+Collaboration diagram for Jama.\+Singular\+Value\+Decomposition\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jama_1_1_singular_value_decomposition_a3f28de078519f131ef50e32e9f489708}{Singular\+Value\+Decomposition} (\hyperlink{class_jama_1_1_matrix}{Matrix} Arg)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_singular_value_decomposition_aa5f3a3541dc98ad8b9abb4b3ba07f0fc}{get\+U} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_singular_value_decomposition_ad0e8cf5267ef9a61fa97324fc8649d8e}{get\+V} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_singular_value_decomposition_a787358e07849a230154d02ed5009a9a1}{get\+Singular\+Values} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_singular_value_decomposition_a9806f3bbaf6404473ef1f19f58779cff}{get\+S} ()
+\item 
+double \hyperlink{class_jama_1_1_singular_value_decomposition_ad9cb6dcaefb3630b45512d48b0881db2}{norm2} ()
+\item 
+double \hyperlink{class_jama_1_1_singular_value_decomposition_a0193ef1cb3aa0361d897409a53a6e4c6}{cond} ()
+\item 
+int \hyperlink{class_jama_1_1_singular_value_decomposition_ae6d09f8cfe7ae5bb521d6f43405cb8ba}{rank} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singular Value Decomposition. 
+
+For an m-\/by-\/n matrix A with m $>$= n, the singular value decomposition is an m-\/by-\/n orthogonal matrix U, an n-\/by-\/n diagonal matrix S, and an n-\/by-\/n orthogonal matrix V so that A = U$\ast$\+S$\ast$\+V'. 
+
+The singular values, sigma\mbox{[}k\mbox{]} = S\mbox{[}k\mbox{]}\mbox{[}k\mbox{]}, are ordered so that sigma\mbox{[}0\mbox{]} $>$= sigma\mbox{[}1\mbox{]} $>$= ... $>$= sigma\mbox{[}n-\/1\mbox{]}. 
+
+The singular value decompostion always exists, so the constructor will never fail. The matrix condition number and the effective numerical rank can be computed from this decomposition. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_jama_1_1_singular_value_decomposition_a3f28de078519f131ef50e32e9f489708}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!Singular\+Value\+Decomposition@{Singular\+Value\+Decomposition}}
+\index{Singular\+Value\+Decomposition@{Singular\+Value\+Decomposition}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{Singular\+Value\+Decomposition}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Singular\+Value\+Decomposition.\+Singular\+Value\+Decomposition (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{Arg}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_a3f28de078519f131ef50e32e9f489708}
+Construct the singular value decomposition 
+\begin{DoxyParams}{Parameters}
+{\em A} & Rectangular matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Structure to access U, S and V. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_jama_1_1_singular_value_decomposition_a0193ef1cb3aa0361d897409a53a6e4c6}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!cond@{cond}}
+\index{cond@{cond}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{cond}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Singular\+Value\+Decomposition.\+cond (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_a0193ef1cb3aa0361d897409a53a6e4c6}
+Two norm condition number \begin{DoxyReturn}{Returns}
+max(\+S)/min(S) 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_singular_value_decomposition_a9806f3bbaf6404473ef1f19f58779cff}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!get\+S@{get\+S}}
+\index{get\+S@{get\+S}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{get\+S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Singular\+Value\+Decomposition.\+get\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_a9806f3bbaf6404473ef1f19f58779cff}
+Return the diagonal matrix of singular values \begin{DoxyReturn}{Returns}
+S 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_singular_value_decomposition_a787358e07849a230154d02ed5009a9a1}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!get\+Singular\+Values@{get\+Singular\+Values}}
+\index{get\+Singular\+Values@{get\+Singular\+Values}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{get\+Singular\+Values}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+Singular\+Value\+Decomposition.\+get\+Singular\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_a787358e07849a230154d02ed5009a9a1}
+Return the one-\/dimensional array of singular values \begin{DoxyReturn}{Returns}
+diagonal of S. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_singular_value_decomposition_aa5f3a3541dc98ad8b9abb4b3ba07f0fc}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!get\+U@{get\+U}}
+\index{get\+U@{get\+U}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{get\+U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Singular\+Value\+Decomposition.\+get\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_aa5f3a3541dc98ad8b9abb4b3ba07f0fc}
+Return the left singular vectors \begin{DoxyReturn}{Returns}
+U 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_singular_value_decomposition_ad0e8cf5267ef9a61fa97324fc8649d8e}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!get\+V@{get\+V}}
+\index{get\+V@{get\+V}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{get\+V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Singular\+Value\+Decomposition.\+get\+V (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_ad0e8cf5267ef9a61fa97324fc8649d8e}
+Return the right singular vectors \begin{DoxyReturn}{Returns}
+V 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_singular_value_decomposition_ad9cb6dcaefb3630b45512d48b0881db2}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!norm2@{norm2}}
+\index{norm2@{norm2}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{norm2}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Singular\+Value\+Decomposition.\+norm2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_ad9cb6dcaefb3630b45512d48b0881db2}
+Two norm \begin{DoxyReturn}{Returns}
+max(\+S) 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_singular_value_decomposition_ae6d09f8cfe7ae5bb521d6f43405cb8ba}{\index{Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}!rank@{rank}}
+\index{rank@{rank}!Jama\+::\+Singular\+Value\+Decomposition@{Jama\+::\+Singular\+Value\+Decomposition}}
+\subsubsection[{rank}]{\setlength{\rightskip}{0pt plus 5cm}int Jama.\+Singular\+Value\+Decomposition.\+rank (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_singular_value_decomposition_ae6d09f8cfe7ae5bb521d6f43405cb8ba}
+Effective numerical matrix rank \begin{DoxyReturn}{Returns}
+Number of nonnegligible singular values. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/\+Jama/\hyperlink{_singular_value_decomposition_8java}{Singular\+Value\+Decomposition.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classjaligner_1_1_needleman_wunsch_gotoh}{\section{jaligner.\+Needleman\+Wunsch\+Gotoh Class Reference}
+\label{classjaligner_1_1_needleman_wunsch_gotoh}\index{jaligner.\+Needleman\+Wunsch\+Gotoh@{jaligner.\+Needleman\+Wunsch\+Gotoh}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classjaligner_1_1_alignment}{Alignment} \hyperlink{classjaligner_1_1_needleman_wunsch_gotoh_ad306f9d40bb0f1f8169a38b01a546342}{align} (\hyperlink{classjaligner_1_1_sequence}{Sequence} s1, \hyperlink{classjaligner_1_1_sequence}{Sequence} s2, \hyperlink{classjaligner_1_1matrix_1_1_matrix}{Matrix} matrix, float o, float e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An implementation of the Needleman-\/\+Wunsch algorithm with Gotoh's improvement for biological global pairwise sequence alignment.
+
+\begin{DoxyAuthor}{Author}
+Ahmed Moustafa 
+
+Bram Minnaert 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+\begin{DoxyParagraph}{Revision}
+1.\+12 
+\end{DoxyParagraph}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classjaligner_1_1_needleman_wunsch_gotoh_ad306f9d40bb0f1f8169a38b01a546342}{\index{jaligner\+::\+Needleman\+Wunsch\+Gotoh@{jaligner\+::\+Needleman\+Wunsch\+Gotoh}!align@{align}}
+\index{align@{align}!jaligner\+::\+Needleman\+Wunsch\+Gotoh@{jaligner\+::\+Needleman\+Wunsch\+Gotoh}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Alignment} jaligner.\+Needleman\+Wunsch\+Gotoh.\+align (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{s1, }
+\item[{{\bf Sequence}}]{s2, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{float}]{o, }
+\item[{float}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classjaligner_1_1_needleman_wunsch_gotoh_ad306f9d40bb0f1f8169a38b01a546342}
+Aligns two sequences by Needleman-\/\+Wunsch (global)
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & sequene \#1 (\hyperlink{}{Read}) \\
+\hline
+{\em s2} & sequene \#2 (\hyperlink{}{Read}) \\
+\hline
+{\em matrix} & scoring matrix (\hyperlink{}{Matrix}) \\
+\hline
+{\em o} & open gap penalty \\
+\hline
+{\em e} & extend gap penalty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+alignment object contains the two aligned sequences, the alignment score and alignment statistics 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Read 
+
+Matrix 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/jaligner/\hyperlink{_needleman_wunsch_gotoh_8java}{Needleman\+Wunsch\+Gotoh.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+digraph "java/broad/pda/samtools" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8530d4a580cb4d50cf384308e0640be3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="pda" fontname="Helvetica", fontsize="10", URL="dir_8530d4a580cb4d50cf384308e0640be3.html"]
+  dir_0cb260f31f742d93669d9d6741ca4a65 [shape=box, label="samtools", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_0cb260f31f742d93669d9d6741ca4a65.html"];
+  }
+}

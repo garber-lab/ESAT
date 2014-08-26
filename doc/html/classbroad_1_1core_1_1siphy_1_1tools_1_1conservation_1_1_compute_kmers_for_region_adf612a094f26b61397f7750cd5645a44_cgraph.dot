@@ -1,0 +1,9 @@
+digraph "broad.core.siphy.tools.conservation.ComputeKmersForRegion.main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.siphy.tools.conservation.\lComputeKmersForRegion.main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.siphy.tools.conservation.\lComputeKmersForRegion.ComputeKmersForRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1tools_1_1conservation_1_1_compute_kmers_for_region.html#a22724955ca2aa57424d9707b3693b3b7"];
+}

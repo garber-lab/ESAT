@@ -1,0 +1,1484 @@
+\hypertarget{class_jama_1_1_matrix}{\section{Jama.\+Matrix Class Reference}
+\label{class_jama_1_1_matrix}\index{Jama.\+Matrix@{Jama.\+Matrix}}
+}
+
+
+Inheritance diagram for Jama.\+Matrix\+:
+
+
+Collaboration diagram for Jama.\+Matrix\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jama_1_1_matrix_a877dfa361af400fbf817b1046856e239}{Matrix} (int m, int n)
+\item 
+\hyperlink{class_jama_1_1_matrix_a979949a74163b836dda8f2dd45323613}{Matrix} (int m, int n, double s)
+\item 
+int \hyperlink{class_jama_1_1_matrix_a4dd1acb3763939c5efb6c10c3121818b}{get\+Num\+Rows} ()
+\item 
+int \hyperlink{class_jama_1_1_matrix_a37f5c3aa789c5f938013453ee1890c5b}{get\+Num\+Columns} ()
+\item 
+\hyperlink{class_jama_1_1_matrix_a6de2ea8e266ff674bb47d08cbc8ebdc4}{Matrix} (double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} A)
+\item 
+\hyperlink{class_jama_1_1_matrix_a8ec8988b6c3f1a33e79bd52b64b4c678}{Matrix} (double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} A, int m, int n)
+\item 
+\hyperlink{class_jama_1_1_matrix_a5cbbcd32401e7ce76297bfd2ad044b61}{Matrix} (double vals\mbox{[}$\,$\mbox{]}, int m)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a571128c206168d38c707a43b41bb9661}{copy} ()
+\item 
+Object \hyperlink{class_jama_1_1_matrix_a07d5a928a5a152a6f508cae88ac07c7d}{clone} ()
+\item 
+double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_matrix_a5129a7c385e943684b43d4bc2daa2b65}{get\+Array} ()
+\item 
+double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_matrix_a518944310c17f3315c0a226ab711e1bf}{get\+Array\+Copy} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_matrix_a62efb942093464fcf4d8c2bd557d51fa}{get\+Column\+Packed\+Copy} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_matrix_a4740d11abbac942d0f5873e55e1846c0}{get\+Row\+Packed\+Copy} ()
+\item 
+int \hyperlink{class_jama_1_1_matrix_a1696a4fbbbc49c0e4ac665d104b3af1d}{get\+Row\+Dimension} ()
+\item 
+int \hyperlink{class_jama_1_1_matrix_ab3d646f9fb632a02ebac93c9118ab16a}{get\+Column\+Dimension} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a4570cadbd1f4ccf87e21ecbcfe5f471f}{get} (int i, int j)
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_matrix_a2abc91fe8b387894bda1ff7a793c7b9d}{get\+Row} (int i)
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_matrix_a679eb65734d2d2922d833761da542345}{get\+Column} (int j)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a57f8f5d1829fee7c9de644e349283b9b}{get\+Matrix} (int i0, int i1, int j0, int j1)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a10b0003d78c24c1041712e0829d0b7f3}{get\+Matrix} (int\mbox{[}$\,$\mbox{]} r, int\mbox{[}$\,$\mbox{]} c)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_aa60bbca27d77dc5c9ae697e83885a4d8}{get\+Matrix} (int i0, int i1, int\mbox{[}$\,$\mbox{]} c)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a29c1e0ffd358c7294fa2195293dfad5b}{get\+Matrix} (int\mbox{[}$\,$\mbox{]} r, int j0, int j1)
+\item 
+void \hyperlink{class_jama_1_1_matrix_a46de3040517d1238ae802820acc3b2b5}{set} (int i, int j, double s)
+\item 
+void \hyperlink{class_jama_1_1_matrix_a80e1f77fbd4ddff32165524cd9c9b0b5}{set\+Matrix} (int i0, int i1, int j0, int j1, \hyperlink{class_jama_1_1_matrix}{Matrix} X)
+\item 
+void \hyperlink{class_jama_1_1_matrix_a1b2db3b489eb022db878ae121202c1e7}{set\+Matrix} (int\mbox{[}$\,$\mbox{]} r, int\mbox{[}$\,$\mbox{]} c, \hyperlink{class_jama_1_1_matrix}{Matrix} X)
+\item 
+void \hyperlink{class_jama_1_1_matrix_a1003d64f2b403909f74413745fc8fe93}{set\+Matrix} (int\mbox{[}$\,$\mbox{]} r, int j0, int j1, \hyperlink{class_jama_1_1_matrix}{Matrix} X)
+\item 
+void \hyperlink{class_jama_1_1_matrix_a0c326f12d09336f3b0d46c6e76cc6fc2}{set\+Matrix} (int i0, int i1, int\mbox{[}$\,$\mbox{]} c, \hyperlink{class_jama_1_1_matrix}{Matrix} X)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a9cb00b58a95db447b59656a8aa40445b}{transpose} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a66c3b66a80b318b5b45daf00889001fb}{norm1} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a2b1fe4347a446171f832698d5670732c}{norm2} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a901c4b15be02dbe2439be8deb85f53f8}{norm\+Inf} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a2a96d7ee038e91673c0b43c28304ba5f}{norm\+F} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_aadd8693971d8e156636214277c9f6121}{uminus} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a2c5edccd172a912532566f7fc5b66361}{plus} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a1bb76323469e35032c606346d579e0fb}{plus\+Equals} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a73fe15c75990210496725df14d7c1aad}{minus} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a665bb3ba66a0f8fc36b57cc9a3b86fe3}{minus\+Equals} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a71306a047ceaa72f4aa1c69966228c63}{array\+Times} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_afaba8a18f411bdb8fdcd2bd4bc30d751}{array\+Times\+Equals} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_ad87a79fe541e91a0d42b0dd6fb870d05}{array\+Right\+Divide} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a406e5df159235779a4daf8c7f03d99f4}{array\+Right\+Divide\+Equals} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a91d7f43868ad45441582d84737717310}{array\+Left\+Divide} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a6b15989d8788a7d8b1c009f2050df4c6}{array\+Left\+Divide\+Equals} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a501121f9faae04f5814a37173e8c186e}{times} (double s)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_ad05d4023973768f684fffb7726c5c0c7}{times\+Equals} (double s)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_ab3de28682fee833a5debb00c68503fe2}{times} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_l_u_decomposition}{L\+U\+Decomposition} \hyperlink{class_jama_1_1_matrix_ac20a6210f706179230357e59a92102bd}{lu} ()
+\item 
+\hyperlink{class_jama_1_1_q_r_decomposition}{Q\+R\+Decomposition} \hyperlink{class_jama_1_1_matrix_a71278074f6e76a762631b1919aaa4500}{qr} ()
+\item 
+\hyperlink{class_jama_1_1_cholesky_decomposition}{Cholesky\+Decomposition} \hyperlink{class_jama_1_1_matrix_aa8318d703898bcdad10235bf23566f2e}{chol} ()
+\item 
+\hyperlink{class_jama_1_1_singular_value_decomposition}{Singular\+Value\+Decomposition} \hyperlink{class_jama_1_1_matrix_a64d5b9b2faf9ee4f3fedfcc6423f7706}{svd} ()
+\item 
+\hyperlink{class_jama_1_1_eigenvalue_decomposition}{Eigenvalue\+Decomposition} \hyperlink{class_jama_1_1_matrix_ae54e821d5f2dd44734e14d8336f3ca9f}{eig} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a33aeb09e6d0099145841c9d6f82e0576}{solve} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_aac324c690f00efc5b6a1769d10a79722}{solve\+Transpose} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a51ae1c3a1dc5f2b9530757782e6e8a3b}{inverse} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a73763058e74bca2ec54b16f5fa742b53}{det} ()
+\item 
+int \hyperlink{class_jama_1_1_matrix_a9077405bb7b92c856e4372cd42abc020}{rank} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a531ae0d584b7861c5924efcc9d356741}{cond} ()
+\item 
+double \hyperlink{class_jama_1_1_matrix_a3ab61e6f9bd76233aa3520fccf3c7ed1}{trace} ()
+\item 
+void \hyperlink{class_jama_1_1_matrix_a4626967ae6a8fb4773f98a53a3a2f2a9}{print} (int w, int d)
+\item 
+void \hyperlink{class_jama_1_1_matrix_a30ed3c813df670d2baf376dc449c7519}{print} (Print\+Writer output, int w, int d)
+\item 
+void \hyperlink{class_jama_1_1_matrix_ae9242a19fa753bbe65d18feacc7a2485}{print} (Number\+Format format, int width)
+\item 
+void \hyperlink{class_jama_1_1_matrix_a6b9fef16419bcb7af05f1513f78938f4}{print} (Print\+Writer output, Number\+Format format, int width)
+\item 
+boolean \hyperlink{class_jama_1_1_matrix_a081f88a952b4efe65ca8ab758f6893fb}{is\+Symmetric} ()
+\item 
+boolean \hyperlink{class_jama_1_1_matrix_a1e03a02fb132e843e6ec9b08c9674fdd}{is\+Diagonal} ()
+\item 
+void \hyperlink{class_jama_1_1_matrix_a19550f24e4ea8ec323879e525d7f3f18}{quantile\+Normalize\+Columns} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_a9badd0bece3e57cab71286103370d79e}{sort\+Columns\+Keeping\+Index} (\hyperlink{class_jama_1_1_matrix}{Matrix} index)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_aefddb41d4a3265377a6e2c2aa8813d15}{sort\+Columns} ()
+\item 
+void \hyperlink{class_jama_1_1_matrix_a9d5823758d0a73cd1e729915d32db5ec}{set\+Column} (int column, double\mbox{[}$\,$\mbox{]} vals)
+\item 
+boolean \hyperlink{class_jama_1_1_matrix_a4c38cfb681b2d2a64c29467b2a08c045}{set\+Row} (int row, double\mbox{[}$\,$\mbox{]} vals)
+\item 
+boolean \hyperlink{class_jama_1_1_matrix_a30d87c7b754b5b871df11b88da50f870}{set\+Row} (int row, int\mbox{[}$\,$\mbox{]} vals)
+\item 
+String \hyperlink{class_jama_1_1_matrix_a61d6f187a44bdd9fd3426c12e993c49a}{to\+String} ()
+\item 
+void \hyperlink{class_jama_1_1_matrix_a54059fe342218e3bffd363cd11fc1855}{write} (String save, double\mbox{[}$\,$\mbox{]} observed)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_ad900a4fa94f188bd56f4f89a20f30f0c}{construct\+With\+Copy} (double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} A)
+\item 
+static \hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_abada6fa5511a4743b70ef4e4fc17e62b}{random} (int m, int n)
+\item 
+static \hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_aa137f0aa3f5b03e9da21cbf2981e3c20}{identity} (int m, int n)
+\item 
+static \hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_matrix_aa5cf5916ae60b1f6144853b7190ee624}{read} (Buffered\+Reader input)  throws java.\+io.\+I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_jama}{Jama} = Java \hyperlink{class_jama_1_1_matrix}{Matrix} class. 
+
+The Java \hyperlink{class_jama_1_1_matrix}{Matrix} Class provides the fundamental operations of numerical linear algebra. Various constructors create Matrices from two dimensional arrays of double precision floating point numbers. Various \char`\"{}gets\char`\"{} and \char`\"{}sets\char`\"{} provide access to submatrices and matrix elements. Several methods implement basic matrix arithmetic, including matrix addition and multiplication, matrix norms, and element-\/by-\/element array operations. Methods for reading and printing matrices are also included. All the operations in this version of the \hyperlink{class_jama_1_1_matrix}{Matrix} Class involve real matrices. Complex matrices may be handled in a future version. 
+
+Five fundamental matrix decompositions, which consist of pairs or triples of matrices, permutation vectors, and the like, produce results in five decomposition classes. These decompositions are accessed by the \hyperlink{class_jama_1_1_matrix}{Matrix} class to compute solutions of simultaneous linear equations, determinants, inverses and other matrix functions. The five decompositions are\+: 
+
+
+\begin{DoxyItemize}
+\item Cholesky Decomposition of symmetric, positive definite matrices. 
+\item L\+U Decomposition of rectangular matrices. 
+\item Q\+R Decomposition of rectangular matrices. 
+\item Singular Value Decomposition of rectangular matrices. 
+\item Eigenvalue Decomposition of both symmetric and nonsymmetric square matrices. 
+\end{DoxyItemize}
+\begin{DoxyDescription}
+\item[{\bfseries Example of use\+:}  ]Solve a linear system A x = b and compute the residual norm, $\vert$$\vert$b -\/ A x$\vert$$\vert$. 
+
+
+\begin{DoxyPre}
+      double[][] vals = \{\{1.,2.,3\},\{4.,5.,6.\},\{7.,8.,10.\}\};
+      \hyperlink{class_jama_1_1_matrix}{Matrix} A = new Matrix(vals);
+      \hyperlink{class_jama_1_1_matrix}{Matrix} b = Matrix.random(3,1);
+      \hyperlink{class_jama_1_1_matrix}{Matrix} x = A.solve(b);
+      \hyperlink{class_jama_1_1_matrix}{Matrix} r = A.times(x).minus(b);
+      double rnorm = r.normInf();
+\end{DoxyPre}
+ 
+\end{DoxyDescription}
+
+\begin{DoxyAuthor}{Author}
+The Math\+Works, Inc. and the National Institute of Standards and Technology. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+5 August 1998 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_jama_1_1_matrix_a877dfa361af400fbf817b1046856e239}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Matrix.\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a877dfa361af400fbf817b1046856e239}
+Construct an m-\/by-\/n matrix of zeros. 
+\begin{DoxyParams}{Parameters}
+{\em m} & Number of rows. \\
+\hline
+{\em n} & Number of colums. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a979949a74163b836dda8f2dd45323613}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Matrix.\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a979949a74163b836dda8f2dd45323613}
+Construct an m-\/by-\/n constant matrix. 
+\begin{DoxyParams}{Parameters}
+{\em m} & Number of rows. \\
+\hline
+{\em n} & Number of colums. \\
+\hline
+{\em s} & Fill the matrix with this scalar value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_jama_1_1_matrix_a6de2ea8e266ff674bb47d08cbc8ebdc4}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Matrix.\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{A\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a6de2ea8e266ff674bb47d08cbc8ebdc4}
+Construct a matrix from a 2-\/\+D array. 
+\begin{DoxyParams}{Parameters}
+{\em A} & Two-\/dimensional array of doubles. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & All rows must have the same length \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_jama_1_1_matrix_ad900a4fa94f188bd56f4f89a20f30f0c}{construct\+With\+Copy} 
+\end{DoxySeeAlso}
+\hypertarget{class_jama_1_1_matrix_a8ec8988b6c3f1a33e79bd52b64b4c678}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Matrix.\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{A\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a8ec8988b6c3f1a33e79bd52b64b4c678}
+Construct a matrix quickly without checking arguments. 
+\begin{DoxyParams}{Parameters}
+{\em A} & Two-\/dimensional array of doubles. \\
+\hline
+{\em m} & Number of rows. \\
+\hline
+{\em n} & Number of colums. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_jama_1_1_matrix_a5cbbcd32401e7ce76297bfd2ad044b61}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Matrix.\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{vals\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a5cbbcd32401e7ce76297bfd2ad044b61}
+Construct a matrix from a one-\/dimensional packed array 
+\begin{DoxyParams}{Parameters}
+{\em vals} & One-\/dimensional array of doubles, packed by columns (ala Fortran). \\
+\hline
+{\em m} & Number of rows. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & Array length must be a multiple of m. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_jama_1_1_matrix_a91d7f43868ad45441582d84737717310}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!array\+Left\+Divide@{array\+Left\+Divide}}
+\index{array\+Left\+Divide@{array\+Left\+Divide}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{array\+Left\+Divide}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+array\+Left\+Divide (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a91d7f43868ad45441582d84737717310}
+Element-\/by-\/element left division, C = A. 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a6b15989d8788a7d8b1c009f2050df4c6}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!array\+Left\+Divide\+Equals@{array\+Left\+Divide\+Equals}}
+\index{array\+Left\+Divide\+Equals@{array\+Left\+Divide\+Equals}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{array\+Left\+Divide\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+array\+Left\+Divide\+Equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a6b15989d8788a7d8b1c009f2050df4c6}
+Element-\/by-\/element left division in place, A = A. 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_ad87a79fe541e91a0d42b0dd6fb870d05}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!array\+Right\+Divide@{array\+Right\+Divide}}
+\index{array\+Right\+Divide@{array\+Right\+Divide}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{array\+Right\+Divide}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+array\+Right\+Divide (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_ad87a79fe541e91a0d42b0dd6fb870d05}
+Element-\/by-\/element right division, C = A./\+B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A./\+B 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a406e5df159235779a4daf8c7f03d99f4}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!array\+Right\+Divide\+Equals@{array\+Right\+Divide\+Equals}}
+\index{array\+Right\+Divide\+Equals@{array\+Right\+Divide\+Equals}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{array\+Right\+Divide\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+array\+Right\+Divide\+Equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a406e5df159235779a4daf8c7f03d99f4}
+Element-\/by-\/element right division in place, A = A./\+B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A./\+B 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a71306a047ceaa72f4aa1c69966228c63}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!array\+Times@{array\+Times}}
+\index{array\+Times@{array\+Times}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{array\+Times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+array\+Times (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a71306a047ceaa72f4aa1c69966228c63}
+Element-\/by-\/element multiplication, C = A.$\ast$\+B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A.$\ast$\+B 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_afaba8a18f411bdb8fdcd2bd4bc30d751}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!array\+Times\+Equals@{array\+Times\+Equals}}
+\index{array\+Times\+Equals@{array\+Times\+Equals}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{array\+Times\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+array\+Times\+Equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_afaba8a18f411bdb8fdcd2bd4bc30d751}
+Element-\/by-\/element multiplication in place, A = A.$\ast$\+B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A.$\ast$\+B 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_aa8318d703898bcdad10235bf23566f2e}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!chol@{chol}}
+\index{chol@{chol}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{chol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cholesky\+Decomposition} Jama.\+Matrix.\+chol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_aa8318d703898bcdad10235bf23566f2e}
+Cholesky Decomposition \begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_cholesky_decomposition}{Cholesky\+Decomposition} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_jama_1_1_cholesky_decomposition}{Cholesky\+Decomposition} 
+\end{DoxySeeAlso}
+\hypertarget{class_jama_1_1_matrix_a07d5a928a5a152a6f508cae88ac07c7d}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!clone@{clone}}
+\index{clone@{clone}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object Jama.\+Matrix.\+clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a07d5a928a5a152a6f508cae88ac07c7d}
+Clone the \hyperlink{class_jama_1_1_matrix}{Matrix} object. \hypertarget{class_jama_1_1_matrix_a531ae0d584b7861c5924efcc9d356741}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!cond@{cond}}
+\index{cond@{cond}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{cond}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+cond (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a531ae0d584b7861c5924efcc9d356741}
+\hyperlink{class_jama_1_1_matrix}{Matrix} condition (2 norm) \begin{DoxyReturn}{Returns}
+ratio of largest to smallest singular value. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_ad900a4fa94f188bd56f4f89a20f30f0c}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!construct\+With\+Copy@{construct\+With\+Copy}}
+\index{construct\+With\+Copy@{construct\+With\+Copy}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{construct\+With\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Matrix} Jama.\+Matrix.\+construct\+With\+Copy (
+\begin{DoxyParamCaption}
+\item[{double}]{A\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_jama_1_1_matrix_ad900a4fa94f188bd56f4f89a20f30f0c}
+Construct a matrix from a copy of a 2-\/\+D array. 
+\begin{DoxyParams}{Parameters}
+{\em A} & Two-\/dimensional array of doubles. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & All rows must have the same length \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a571128c206168d38c707a43b41bb9661}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!copy@{copy}}
+\index{copy@{copy}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a571128c206168d38c707a43b41bb9661}
+Make a deep copy of a matrix 
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a73763058e74bca2ec54b16f5fa742b53}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!det@{det}}
+\index{det@{det}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{det}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+det (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a73763058e74bca2ec54b16f5fa742b53}
+\hyperlink{class_jama_1_1_matrix}{Matrix} determinant \begin{DoxyReturn}{Returns}
+determinant 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_ae54e821d5f2dd44734e14d8336f3ca9f}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!eig@{eig}}
+\index{eig@{eig}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{eig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Eigenvalue\+Decomposition} Jama.\+Matrix.\+eig (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_ae54e821d5f2dd44734e14d8336f3ca9f}
+Eigenvalue Decomposition \begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_eigenvalue_decomposition}{Eigenvalue\+Decomposition} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_jama_1_1_eigenvalue_decomposition}{Eigenvalue\+Decomposition} 
+\end{DoxySeeAlso}
+\hypertarget{class_jama_1_1_matrix_a4570cadbd1f4ccf87e21ecbcfe5f471f}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get@{get}}
+\index{get@{get}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a4570cadbd1f4ccf87e21ecbcfe5f471f}
+Get a single element. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Row index. \\
+\hline
+{\em j} & Column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A(i,j) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a5129a7c385e943684b43d4bc2daa2b65}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Array@{get\+Array}}
+\index{get\+Array@{get\+Array}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Array}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Jama.\+Matrix.\+get\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a5129a7c385e943684b43d4bc2daa2b65}
+Access the internal two-\/dimensional array. \begin{DoxyReturn}{Returns}
+Pointer to the two-\/dimensional array of matrix elements. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a518944310c17f3315c0a226ab711e1bf}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Array\+Copy@{get\+Array\+Copy}}
+\index{get\+Array\+Copy@{get\+Array\+Copy}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Array\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Jama.\+Matrix.\+get\+Array\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a518944310c17f3315c0a226ab711e1bf}
+Copy the internal two-\/dimensional array. \begin{DoxyReturn}{Returns}
+Two-\/dimensional array copy of matrix elements. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a679eb65734d2d2922d833761da542345}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Column@{get\+Column}}
+\index{get\+Column@{get\+Column}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Column}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+Matrix.\+get\+Column (
+\begin{DoxyParamCaption}
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a679eb65734d2d2922d833761da542345}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_ab3d646f9fb632a02ebac93c9118ab16a}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Column\+Dimension@{get\+Column\+Dimension}}
+\index{get\+Column\+Dimension@{get\+Column\+Dimension}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Column\+Dimension}]{\setlength{\rightskip}{0pt plus 5cm}int Jama.\+Matrix.\+get\+Column\+Dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_ab3d646f9fb632a02ebac93c9118ab16a}
+Get column dimension. \begin{DoxyReturn}{Returns}
+n, the number of columns. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a62efb942093464fcf4d8c2bd557d51fa}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Column\+Packed\+Copy@{get\+Column\+Packed\+Copy}}
+\index{get\+Column\+Packed\+Copy@{get\+Column\+Packed\+Copy}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Column\+Packed\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+Matrix.\+get\+Column\+Packed\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a62efb942093464fcf4d8c2bd557d51fa}
+Make a one-\/dimensional column packed copy of the internal array. \begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_matrix}{Matrix} elements packed in a one-\/dimensional array by columns. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a57f8f5d1829fee7c9de644e349283b9b}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+get\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a57f8f5d1829fee7c9de644e349283b9b}
+Get a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em i0} & Initial row index \\
+\hline
+{\em i1} & Final row index \\
+\hline
+{\em j0} & Initial column index \\
+\hline
+{\em j1} & Final column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A(i0\+:i1,j0\+:j1) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a10b0003d78c24c1041712e0829d0b7f3}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+get\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{r, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{c}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a10b0003d78c24c1041712e0829d0b7f3}
+Get a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em r} & Array of row indices. \\
+\hline
+{\em c} & Array of column indices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A(r(\+:),c(\+:)) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_aa60bbca27d77dc5c9ae697e83885a4d8}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+get\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{c}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_aa60bbca27d77dc5c9ae697e83885a4d8}
+Get a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em i0} & Initial row index \\
+\hline
+{\em i1} & Final row index \\
+\hline
+{\em c} & Array of column indices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A(i0\+:i1,c(\+:)) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a29c1e0ffd358c7294fa2195293dfad5b}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+get\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{r, }
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a29c1e0ffd358c7294fa2195293dfad5b}
+Get a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em r} & Array of row indices. \\
+\hline
+{\em i0} & Initial column index \\
+\hline
+{\em i1} & Final column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A(r(\+:),j0\+:j1) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a37f5c3aa789c5f938013453ee1890c5b}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Num\+Columns@{get\+Num\+Columns}}
+\index{get\+Num\+Columns@{get\+Num\+Columns}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Num\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}int Jama.\+Matrix.\+get\+Num\+Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a37f5c3aa789c5f938013453ee1890c5b}
+\hypertarget{class_jama_1_1_matrix_a4dd1acb3763939c5efb6c10c3121818b}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Num\+Rows@{get\+Num\+Rows}}
+\index{get\+Num\+Rows@{get\+Num\+Rows}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Num\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Jama.\+Matrix.\+get\+Num\+Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a4dd1acb3763939c5efb6c10c3121818b}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a2abc91fe8b387894bda1ff7a793c7b9d}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Row@{get\+Row}}
+\index{get\+Row@{get\+Row}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Row}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+Matrix.\+get\+Row (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a2abc91fe8b387894bda1ff7a793c7b9d}
+\hypertarget{class_jama_1_1_matrix_a1696a4fbbbc49c0e4ac665d104b3af1d}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Row\+Dimension@{get\+Row\+Dimension}}
+\index{get\+Row\+Dimension@{get\+Row\+Dimension}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Row\+Dimension}]{\setlength{\rightskip}{0pt plus 5cm}int Jama.\+Matrix.\+get\+Row\+Dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a1696a4fbbbc49c0e4ac665d104b3af1d}
+Get row dimension. \begin{DoxyReturn}{Returns}
+m, the number of rows. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a4740d11abbac942d0f5873e55e1846c0}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!get\+Row\+Packed\+Copy@{get\+Row\+Packed\+Copy}}
+\index{get\+Row\+Packed\+Copy@{get\+Row\+Packed\+Copy}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{get\+Row\+Packed\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+Matrix.\+get\+Row\+Packed\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a4740d11abbac942d0f5873e55e1846c0}
+Make a one-\/dimensional row packed copy of the internal array. \begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_matrix}{Matrix} elements packed in a one-\/dimensional array by rows. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_aa137f0aa3f5b03e9da21cbf2981e3c20}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!identity@{identity}}
+\index{identity@{identity}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{identity}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Matrix} Jama.\+Matrix.\+identity (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_jama_1_1_matrix_aa137f0aa3f5b03e9da21cbf2981e3c20}
+Generate identity matrix 
+\begin{DoxyParams}{Parameters}
+{\em m} & Number of rows. \\
+\hline
+{\em n} & Number of colums. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An m-\/by-\/n matrix with ones on the diagonal and zeros elsewhere. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a51ae1c3a1dc5f2b9530757782e6e8a3b}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!inverse@{inverse}}
+\index{inverse@{inverse}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a51ae1c3a1dc5f2b9530757782e6e8a3b}
+\hyperlink{class_jama_1_1_matrix}{Matrix} inverse or pseudoinverse \begin{DoxyReturn}{Returns}
+inverse(\+A) if A is square, pseudoinverse otherwise. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a1e03a02fb132e843e6ec9b08c9674fdd}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!is\+Diagonal@{is\+Diagonal}}
+\index{is\+Diagonal@{is\+Diagonal}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{is\+Diagonal}]{\setlength{\rightskip}{0pt plus 5cm}boolean Jama.\+Matrix.\+is\+Diagonal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a1e03a02fb132e843e6ec9b08c9674fdd}
+\hypertarget{class_jama_1_1_matrix_a081f88a952b4efe65ca8ab758f6893fb}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!is\+Symmetric@{is\+Symmetric}}
+\index{is\+Symmetric@{is\+Symmetric}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{is\+Symmetric}]{\setlength{\rightskip}{0pt plus 5cm}boolean Jama.\+Matrix.\+is\+Symmetric (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a081f88a952b4efe65ca8ab758f6893fb}
+\hypertarget{class_jama_1_1_matrix_ac20a6210f706179230357e59a92102bd}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!lu@{lu}}
+\index{lu@{lu}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{lu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+U\+Decomposition} Jama.\+Matrix.\+lu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_ac20a6210f706179230357e59a92102bd}
+L\+U Decomposition \begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_l_u_decomposition}{L\+U\+Decomposition} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_jama_1_1_l_u_decomposition}{L\+U\+Decomposition} 
+\end{DoxySeeAlso}
+\hypertarget{class_jama_1_1_matrix_a73fe15c75990210496725df14d7c1aad}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!minus@{minus}}
+\index{minus@{minus}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{minus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+minus (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a73fe15c75990210496725df14d7c1aad}
+C = A -\/ B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A -\/ B 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a665bb3ba66a0f8fc36b57cc9a3b86fe3}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!minus\+Equals@{minus\+Equals}}
+\index{minus\+Equals@{minus\+Equals}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{minus\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+minus\+Equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a665bb3ba66a0f8fc36b57cc9a3b86fe3}
+A = A -\/ B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A -\/ B 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a66c3b66a80b318b5b45daf00889001fb}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!norm1@{norm1}}
+\index{norm1@{norm1}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{norm1}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+norm1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a66c3b66a80b318b5b45daf00889001fb}
+One norm \begin{DoxyReturn}{Returns}
+maximum column sum. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a2b1fe4347a446171f832698d5670732c}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!norm2@{norm2}}
+\index{norm2@{norm2}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{norm2}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+norm2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a2b1fe4347a446171f832698d5670732c}
+Two norm \begin{DoxyReturn}{Returns}
+maximum singular value. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a2a96d7ee038e91673c0b43c28304ba5f}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!norm\+F@{norm\+F}}
+\index{norm\+F@{norm\+F}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{norm\+F}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+norm\+F (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a2a96d7ee038e91673c0b43c28304ba5f}
+Frobenius norm \begin{DoxyReturn}{Returns}
+sqrt of sum of squares of all elements. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a901c4b15be02dbe2439be8deb85f53f8}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!norm\+Inf@{norm\+Inf}}
+\index{norm\+Inf@{norm\+Inf}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{norm\+Inf}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+norm\+Inf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a901c4b15be02dbe2439be8deb85f53f8}
+Infinity norm \begin{DoxyReturn}{Returns}
+maximum row sum. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a2c5edccd172a912532566f7fc5b66361}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!plus@{plus}}
+\index{plus@{plus}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{plus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+plus (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a2c5edccd172a912532566f7fc5b66361}
+C = A + B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A + B 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a1bb76323469e35032c606346d579e0fb}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!plus\+Equals@{plus\+Equals}}
+\index{plus\+Equals@{plus\+Equals}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{plus\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+plus\+Equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a1bb76323469e35032c606346d579e0fb}
+A = A + B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A + B 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a4626967ae6a8fb4773f98a53a3a2f2a9}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!print@{print}}
+\index{print@{print}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+print (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a4626967ae6a8fb4773f98a53a3a2f2a9}
+Print the matrix to stdout. Line the elements up in columns with a Fortran-\/like 'Fw.\+d' style format. 
+\begin{DoxyParams}{Parameters}
+{\em w} & Column width. \\
+\hline
+{\em d} & Number of digits after the decimal. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a30ed3c813df670d2baf376dc449c7519}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!print@{print}}
+\index{print@{print}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+print (
+\begin{DoxyParamCaption}
+\item[{Print\+Writer}]{output, }
+\item[{int}]{w, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a30ed3c813df670d2baf376dc449c7519}
+Print the matrix to the output stream. Line the elements up in columns with a Fortran-\/like 'Fw.\+d' style format. 
+\begin{DoxyParams}{Parameters}
+{\em output} & Output stream. \\
+\hline
+{\em w} & Column width. \\
+\hline
+{\em d} & Number of digits after the decimal. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_ae9242a19fa753bbe65d18feacc7a2485}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!print@{print}}
+\index{print@{print}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+print (
+\begin{DoxyParamCaption}
+\item[{Number\+Format}]{format, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_ae9242a19fa753bbe65d18feacc7a2485}
+Print the matrix to stdout. Line the elements up in columns. Use the format object, and right justify within columns of width characters. Note that is the matrix is to be read back in, you probably will want to use a Number\+Format that is set to U\+S Locale. 
+\begin{DoxyParams}{Parameters}
+{\em format} & A Formatting object for individual elements. \\
+\hline
+{\em width} & Field width for each column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+java.\+text.\+Decimal\+Format\+::set\+Decimal\+Format\+Symbols 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a6b9fef16419bcb7af05f1513f78938f4}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!print@{print}}
+\index{print@{print}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+print (
+\begin{DoxyParamCaption}
+\item[{Print\+Writer}]{output, }
+\item[{Number\+Format}]{format, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a6b9fef16419bcb7af05f1513f78938f4}
+Print the matrix to the output stream. Line the elements up in columns. Use the format object, and right justify within columns of width characters. Note that is the matrix is to be read back in, you probably will want to use a Number\+Format that is set to U\+S Locale. 
+\begin{DoxyParams}{Parameters}
+{\em output} & the output stream. \\
+\hline
+{\em format} & A formatting object to format the matrix elements \\
+\hline
+{\em width} & Column width. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+java.\+text.\+Decimal\+Format\+::set\+Decimal\+Format\+Symbols 
+\end{DoxySeeAlso}
+\hypertarget{class_jama_1_1_matrix_a71278074f6e76a762631b1919aaa4500}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!qr@{qr}}
+\index{qr@{qr}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{qr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+R\+Decomposition} Jama.\+Matrix.\+qr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a71278074f6e76a762631b1919aaa4500}
+Q\+R Decomposition \begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_q_r_decomposition}{Q\+R\+Decomposition} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_jama_1_1_q_r_decomposition}{Q\+R\+Decomposition} 
+\end{DoxySeeAlso}
+\hypertarget{class_jama_1_1_matrix_a19550f24e4ea8ec323879e525d7f3f18}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!quantile\+Normalize\+Columns@{quantile\+Normalize\+Columns}}
+\index{quantile\+Normalize\+Columns@{quantile\+Normalize\+Columns}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{quantile\+Normalize\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+quantile\+Normalize\+Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a19550f24e4ea8ec323879e525d7f3f18}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_abada6fa5511a4743b70ef4e4fc17e62b}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!random@{random}}
+\index{random@{random}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Matrix} Jama.\+Matrix.\+random (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_jama_1_1_matrix_abada6fa5511a4743b70ef4e4fc17e62b}
+Generate matrix with random elements 
+\begin{DoxyParams}{Parameters}
+{\em m} & Number of rows. \\
+\hline
+{\em n} & Number of colums. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An m-\/by-\/n matrix with uniformly distributed random elements. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a9077405bb7b92c856e4372cd42abc020}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!rank@{rank}}
+\index{rank@{rank}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{rank}]{\setlength{\rightskip}{0pt plus 5cm}int Jama.\+Matrix.\+rank (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a9077405bb7b92c856e4372cd42abc020}
+\hyperlink{class_jama_1_1_matrix}{Matrix} rank \begin{DoxyReturn}{Returns}
+effective numerical rank, obtained from S\+V\+D. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_aa5cf5916ae60b1f6144853b7190ee624}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!read@{read}}
+\index{read@{read}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Matrix} Jama.\+Matrix.\+read (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{input}
+\end{DoxyParamCaption}
+) throws java.\+io.\+I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{class_jama_1_1_matrix_aa5cf5916ae60b1f6144853b7190ee624}
+Read a matrix from a stream. The format is the same the print method, so printed matrices can be read back in (provided they were printed using U\+S Locale). Elements are separated by whitespace, all the elements for each row appear on a single line, the last row is followed by a blank line. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input stream. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a46de3040517d1238ae802820acc3b2b5}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set@{set}}
+\index{set@{set}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+set (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a46de3040517d1238ae802820acc3b2b5}
+Set a single element. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Row index. \\
+\hline
+{\em j} & Column index. \\
+\hline
+{\em s} & A(i,j). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a9d5823758d0a73cd1e729915d32db5ec}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set\+Column@{set\+Column}}
+\index{set\+Column@{set\+Column}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set\+Column}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+set\+Column (
+\begin{DoxyParamCaption}
+\item[{int}]{column, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{vals}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a9d5823758d0a73cd1e729915d32db5ec}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a80e1f77fbd4ddff32165524cd9c9b0b5}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int}]{j0, }
+\item[{int}]{j1, }
+\item[{{\bf Matrix}}]{X}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a80e1f77fbd4ddff32165524cd9c9b0b5}
+Set a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em i0} & Initial row index \\
+\hline
+{\em i1} & Final row index \\
+\hline
+{\em j0} & Initial column index \\
+\hline
+{\em j1} & Final column index \\
+\hline
+{\em X} & A(i0\+:i1,j0\+:j1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_jama_1_1_matrix_a1b2db3b489eb022db878ae121202c1e7}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{r, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{c, }
+\item[{{\bf Matrix}}]{X}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a1b2db3b489eb022db878ae121202c1e7}
+Set a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em r} & Array of row indices. \\
+\hline
+{\em c} & Array of column indices. \\
+\hline
+{\em X} & A(r(\+:),c(\+:)) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_jama_1_1_matrix_a1003d64f2b403909f74413745fc8fe93}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{r, }
+\item[{int}]{j0, }
+\item[{int}]{j1, }
+\item[{{\bf Matrix}}]{X}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a1003d64f2b403909f74413745fc8fe93}
+Set a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em r} & Array of row indices. \\
+\hline
+{\em j0} & Initial column index \\
+\hline
+{\em j1} & Final column index \\
+\hline
+{\em X} & A(r(\+:),j0\+:j1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_jama_1_1_matrix_a0c326f12d09336f3b0d46c6e76cc6fc2}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{c, }
+\item[{{\bf Matrix}}]{X}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a0c326f12d09336f3b0d46c6e76cc6fc2}
+Set a submatrix. 
+\begin{DoxyParams}{Parameters}
+{\em i0} & Initial row index \\
+\hline
+{\em i1} & Final row index \\
+\hline
+{\em c} & Array of column indices. \\
+\hline
+{\em X} & A(i0\+:i1,c(\+:)) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Array\+Index\+Out\+Of\+Bounds\+Exception} & Submatrix indices \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_jama_1_1_matrix_a4c38cfb681b2d2a64c29467b2a08c045}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set\+Row@{set\+Row}}
+\index{set\+Row@{set\+Row}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set\+Row}]{\setlength{\rightskip}{0pt plus 5cm}boolean Jama.\+Matrix.\+set\+Row (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{vals}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a4c38cfb681b2d2a64c29467b2a08c045}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a30d87c7b754b5b871df11b88da50f870}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!set\+Row@{set\+Row}}
+\index{set\+Row@{set\+Row}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{set\+Row}]{\setlength{\rightskip}{0pt plus 5cm}boolean Jama.\+Matrix.\+set\+Row (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{vals}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a30d87c7b754b5b871df11b88da50f870}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a33aeb09e6d0099145841c9d6f82e0576}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!solve@{solve}}
+\index{solve@{solve}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{solve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+solve (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a33aeb09e6d0099145841c9d6f82e0576}
+Solve A$\ast$\+X = B 
+\begin{DoxyParams}{Parameters}
+{\em B} & right hand side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+solution if A is square, least squares solution otherwise 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_aac324c690f00efc5b6a1769d10a79722}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!solve\+Transpose@{solve\+Transpose}}
+\index{solve\+Transpose@{solve\+Transpose}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{solve\+Transpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+solve\+Transpose (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_aac324c690f00efc5b6a1769d10a79722}
+Solve X$\ast$\+A = B, which is also A'$\ast$\+X' = B' 
+\begin{DoxyParams}{Parameters}
+{\em B} & right hand side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+solution if A is square, least squares solution otherwise. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_aefddb41d4a3265377a6e2c2aa8813d15}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!sort\+Columns@{sort\+Columns}}
+\index{sort\+Columns@{sort\+Columns}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{sort\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+sort\+Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_aefddb41d4a3265377a6e2c2aa8813d15}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a9badd0bece3e57cab71286103370d79e}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!sort\+Columns\+Keeping\+Index@{sort\+Columns\+Keeping\+Index}}
+\index{sort\+Columns\+Keeping\+Index@{sort\+Columns\+Keeping\+Index}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{sort\+Columns\+Keeping\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+sort\+Columns\+Keeping\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a9badd0bece3e57cab71286103370d79e}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a64d5b9b2faf9ee4f3fedfcc6423f7706}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!svd@{svd}}
+\index{svd@{svd}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{svd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Singular\+Value\+Decomposition} Jama.\+Matrix.\+svd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a64d5b9b2faf9ee4f3fedfcc6423f7706}
+Singular Value Decomposition \begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_singular_value_decomposition}{Singular\+Value\+Decomposition} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_jama_1_1_singular_value_decomposition}{Singular\+Value\+Decomposition} 
+\end{DoxySeeAlso}
+\hypertarget{class_jama_1_1_matrix_a501121f9faae04f5814a37173e8c186e}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!times@{times}}
+\index{times@{times}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+times (
+\begin{DoxyParamCaption}
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a501121f9faae04f5814a37173e8c186e}
+Multiply a matrix by a scalar, C = s$\ast$\+A 
+\begin{DoxyParams}{Parameters}
+{\em s} & scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s$\ast$\+A 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_ab3de28682fee833a5debb00c68503fe2}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!times@{times}}
+\index{times@{times}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+times (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_ab3de28682fee833a5debb00c68503fe2}
+Linear algebraic matrix multiplication, A $\ast$ B 
+\begin{DoxyParams}{Parameters}
+{\em B} & another matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_jama_1_1_matrix}{Matrix} product, A $\ast$ B 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} inner dimensions must agree. \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_ad05d4023973768f684fffb7726c5c0c7}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!times\+Equals@{times\+Equals}}
+\index{times\+Equals@{times\+Equals}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{times\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+times\+Equals (
+\begin{DoxyParamCaption}
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_ad05d4023973768f684fffb7726c5c0c7}
+Multiply a matrix by a scalar in place, A = s$\ast$\+A 
+\begin{DoxyParams}{Parameters}
+{\em s} & scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+replace A by s$\ast$\+A 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a61d6f187a44bdd9fd3426c12e993c49a}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}String Jama.\+Matrix.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a61d6f187a44bdd9fd3426c12e993c49a}
+\hypertarget{class_jama_1_1_matrix_a3ab61e6f9bd76233aa3520fccf3c7ed1}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!trace@{trace}}
+\index{trace@{trace}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{trace}]{\setlength{\rightskip}{0pt plus 5cm}double Jama.\+Matrix.\+trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a3ab61e6f9bd76233aa3520fccf3c7ed1}
+\hyperlink{class_jama_1_1_matrix}{Matrix} trace. \begin{DoxyReturn}{Returns}
+sum of the diagonal elements. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_matrix_a9cb00b58a95db447b59656a8aa40445b}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{transpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_a9cb00b58a95db447b59656a8aa40445b}
+\hyperlink{class_jama_1_1_matrix}{Matrix} transpose. \begin{DoxyReturn}{Returns}
+A' 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_aadd8693971d8e156636214277c9f6121}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!uminus@{uminus}}
+\index{uminus@{uminus}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{uminus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Matrix.\+uminus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_matrix_aadd8693971d8e156636214277c9f6121}
+Unary minus \begin{DoxyReturn}{Returns}
+-\/\+A 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_matrix_a54059fe342218e3bffd363cd11fc1855}{\index{Jama\+::\+Matrix@{Jama\+::\+Matrix}!write@{write}}
+\index{write@{write}!Jama\+::\+Matrix@{Jama\+::\+Matrix}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Jama.\+Matrix.\+write (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{observed}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{class_jama_1_1_matrix_a54059fe342218e3bffd363cd11fc1855}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/\+Jama/\hyperlink{_jama_2_matrix_8java}{Matrix.\+java}\end{DoxyCompactItemize}

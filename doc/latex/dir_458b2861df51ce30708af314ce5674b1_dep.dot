@@ -1,0 +1,14 @@
+digraph "java/umms" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_26f08a9d1141b214acdf9b84b4f0405e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="java" fontname="Helvetica", fontsize="10", URL="dir_26f08a9d1141b214acdf9b84b4f0405e.html"]
+  subgraph clusterdir_458b2861df51ce30708af314ce5674b1 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_458b2861df51ce30708af314ce5674b1.html"];
+    dir_458b2861df51ce30708af314ce5674b1 [shape=plaintext label="umms"];
+    dir_47922fae4b2d4f7c6f8e56f6907fad50 [shape=box label="core" color="red" fillcolor="white" style="filled" URL="dir_47922fae4b2d4f7c6f8e56f6907fad50.html"];
+    dir_69ac11776e5af6e2315274b603ef1a02 [shape=box label="esat" color="black" fillcolor="white" style="filled" URL="dir_69ac11776e5af6e2315274b603ef1a02.html"];
+  }
+  }
+}

@@ -1,0 +1,662 @@
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space}{\section{umms.\+core.\+coordinatesystem.\+Genomic\+Space Class Reference}
+\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space}\index{umms.\+core.\+coordinatesystem.\+Genomic\+Space@{umms.\+core.\+coordinatesystem.\+Genomic\+Space}}
+}
+
+
+Inheritance diagram for umms.\+core.\+coordinatesystem.\+Genomic\+Space\+:
+
+
+Collaboration diagram for umms.\+core.\+coordinatesystem.\+Genomic\+Space\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_accf612fa76269c990309129a2eaac792}{Genomic\+Space} (Map$<$ String, Integer $>$ chromosome\+Sizes)
+\item 
+\hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aa475f0dfd11975c8784ca5a0e1b91b6a}{Genomic\+Space} (String chromosome\+Sizes)
+\item 
+\hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a5d8c54e4a5f4cc5b4f4326b79f2094b5}{Genomic\+Space} (String chromosome\+Sizes, String masked\+Region\+File)
+\item 
+\hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aff94238ae6385e25a09e221ecca4aa40}{Genomic\+Space} (Map$<$ String, Integer $>$ chromosome\+Sizes, String masked\+Region\+File)
+\item 
+\hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a9b6cab6f9771be7e6193ba6574fcaef0}{Genomic\+Space} (String chromosome\+Sizes, String masked\+Region\+File, double pct\+Masked\+Allowed)
+\item 
+void \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a2a3d42d66612e6a78e335830a599a88a}{set\+Percent\+Masked\+Allowed} (double pct)
+\item 
+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a6634f9ac9b3c5e86166c004a63e74d6b}{get\+Overlapping\+Region} (String chr, int start, int end)
+\item 
+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ae42bc49e0d87709819e73a74eae06191}{get\+Window\+Iterator} (int window\+Size, String chr, int start, int end, int overlap)
+\item 
+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ad03d9a7ac129d8f4d45627f97958d89d}{get\+Window\+Iterator} (int window\+Size, String chr, int start, int end, int overlap, boolean backward)
+\item 
+Iterator$<$?extends \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ae5f884a776dfac3f5a84ceb7060ac71c}{get\+Window\+Iterator} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} window, int window\+Size, int overlap)
+\item 
+Iterator$<$?extends \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a92f232940d1bd938e6ead9c8780e8b17}{get\+Window\+Iterator} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} window, int window\+Size, int overlap, boolean consider\+Strand)
+\item 
+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a0059d839bd5849142644aa4cb1770dd5}{get\+Window\+Iterator} (String chr, int window\+Size, int overlap)
+\item 
+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aefc8258ac12034e853762e0d921d4058}{get\+Window\+Iterator} (int window\+Size, int overlap)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ac9bb06d851f3ce97d435b2af47a05b7e}{is\+Valid\+Window} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} window)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_afff244ec46e14018c2e7d7114ec266cb}{contains\+Data\+For} (String chromosome)
+\item 
+long \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aff9d1bad2aa51c3896bc90fafd5c6a42}{get\+Length} ()
+\item 
+long \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a08e8fc02a08d305b261703c804721860}{get\+Length} (String chr)
+\item 
+long \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a8f86806abc96d49a209969abee97be5e}{get\+Unmasked\+Length} (String chr)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a729042a51c379aad9b024c8b7943399f}{permute\+Annotation} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} a)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ad5c53a738849d61eb01ab450d2725cde}{has\+Chromosome} (String chr)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a3096f1aa961085946b4e9481de1e95af}{permute\+Annotation} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} a, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} bounds)
+\item 
+final Collection$<$ String $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a8f4a8587b9f12cb6644d9b2dc320259f}{get\+Reference\+Names} ()
+\item 
+final Collection$<$?extends \\*
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a9c50958fee98b103c73b8787d2818ac5}{get\+Reference\+Annotations} ()
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aed8d04961988d74e80e84061d202d9eb}{get\+Entire\+Chromosome} (String chr\+Name)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a791e805d7bcff80b9992473d7f3ce166}{get\+Reference\+Annotation} (String name)
+\item 
+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ada1e6c4f51d938cd0b378b5697f48803}{get\+Window\+Iterator} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ base\+Genes, int window\+Size, int overlap)
+\item 
+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_af398b7d440b6c3d7090232b6755a67f3}{get\+Fragment} (String chr, int start, int end)
+\item 
+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a1903e2d0df55618b1a2e31b604fbeeba}{get\+Fragment} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} annotation)
+\item 
+int \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a426572ebde2b646b760564f610a8e618}{get\+Size} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+Collection$<$ String $>$ \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_afbc8bbc4fdf502dc86864b70c01e942e}{get\+Chromosome\+Names} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a3d4fc4c0f29817931209f7b07f341838}{set\+Seed} (long seed)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a7fe9cbd77f774318fab0ad2ad65fa4ae}{P\+E\+R\+M\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz Class representing a genome with defined linear chromosomes. Masking behavior can be controlled through setting masked regions and percent masked allowed parameters, which will filter out windows that overlap masked regions. 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_accf612fa76269c990309129a2eaac792}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!Genomic\+Space@{Genomic\+Space}}
+\index{Genomic\+Space@{Genomic\+Space}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{Genomic\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+Genomic\+Space (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Integer $>$}]{chromosome\+Sizes}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_accf612fa76269c990309129a2eaac792}
+
+\begin{DoxyParams}{Parameters}
+{\em chromosome\+Sizes} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aa475f0dfd11975c8784ca5a0e1b91b6a}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!Genomic\+Space@{Genomic\+Space}}
+\index{Genomic\+Space@{Genomic\+Space}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{Genomic\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+Genomic\+Space (
+\begin{DoxyParamCaption}
+\item[{String}]{chromosome\+Sizes}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aa475f0dfd11975c8784ca5a0e1b91b6a}
+Chromosome name and accompanying sizes 
+\begin{DoxyParams}{Parameters}
+{\em chromosome\+Sizes} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a5d8c54e4a5f4cc5b4f4326b79f2094b5}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!Genomic\+Space@{Genomic\+Space}}
+\index{Genomic\+Space@{Genomic\+Space}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{Genomic\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+Genomic\+Space (
+\begin{DoxyParamCaption}
+\item[{String}]{chromosome\+Sizes, }
+\item[{String}]{masked\+Region\+File}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a5d8c54e4a5f4cc5b4f4326b79f2094b5}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aff94238ae6385e25a09e221ecca4aa40}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!Genomic\+Space@{Genomic\+Space}}
+\index{Genomic\+Space@{Genomic\+Space}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{Genomic\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+Genomic\+Space (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Integer $>$}]{chromosome\+Sizes, }
+\item[{String}]{masked\+Region\+File}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aff94238ae6385e25a09e221ecca4aa40}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a9b6cab6f9771be7e6193ba6574fcaef0}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!Genomic\+Space@{Genomic\+Space}}
+\index{Genomic\+Space@{Genomic\+Space}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{Genomic\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+Genomic\+Space (
+\begin{DoxyParamCaption}
+\item[{String}]{chromosome\+Sizes, }
+\item[{String}]{masked\+Region\+File, }
+\item[{double}]{pct\+Masked\+Allowed}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a9b6cab6f9771be7e6193ba6574fcaef0}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_afff244ec46e14018c2e7d7114ec266cb}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!contains\+Data\+For@{contains\+Data\+For}}
+\index{contains\+Data\+For@{contains\+Data\+For}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{contains\+Data\+For}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+contains\+Data\+For (
+\begin{DoxyParamCaption}
+\item[{String}]{chromosome}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_afff244ec46e14018c2e7d7114ec266cb}
+Returns true if this coordinate space contains data for the specified chromosome \hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_afbc8bbc4fdf502dc86864b70c01e942e}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Chromosome\+Names@{get\+Chromosome\+Names}}
+\index{get\+Chromosome\+Names@{get\+Chromosome\+Names}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Chromosome\+Names}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$String$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Chromosome\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_afbc8bbc4fdf502dc86864b70c01e942e}
+\begin{DoxyReturn}{Returns}
+A list of chromosome names contained in the coordinate space 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_ae60b7522b8aa973dd48bae33aef80ff0}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aed8d04961988d74e80e84061d202d9eb}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Entire\+Chromosome@{get\+Entire\+Chromosome}}
+\index{get\+Entire\+Chromosome@{get\+Entire\+Chromosome}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Entire\+Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Entire\+Chromosome (
+\begin{DoxyParamCaption}
+\item[{String}]{chr\+Name}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aed8d04961988d74e80e84061d202d9eb}
+Get an annotation spanning an entire chromosome 
+\begin{DoxyParams}{Parameters}
+{\em chr\+Name} & The chromosome name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Annotation consisting of the entire chromosome 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_ac20a537edec229754e0bc46408714f3c}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_af398b7d440b6c3d7090232b6755a67f3}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Fragment@{get\+Fragment}}
+\index{get\+Fragment@{get\+Fragment}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Fragment}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Fragment (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_af398b7d440b6c3d7090232b6755a67f3}
+Returns a fragment of type Window between start and end on chromosome 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_adebcb0b519d1c1d5d1b8bd23b9a7cad7}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a1903e2d0df55618b1a2e31b604fbeeba}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Fragment@{get\+Fragment}}
+\index{get\+Fragment@{get\+Fragment}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Fragment}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Fragment (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a1903e2d0df55618b1a2e31b604fbeeba}
+Returns a fragment of type Window between start and end on chromosome 
+\begin{DoxyParams}{Parameters}
+{\em Annotation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a0a6a644c7ebdfb80fa516d9c76a02a68}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aff9d1bad2aa51c3896bc90fafd5c6a42}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Length}]{\setlength{\rightskip}{0pt plus 5cm}long umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aff9d1bad2aa51c3896bc90fafd5c6a42}
+Returns the total number of positions in the coordinate space For non-\/contiguous coordinate spaces, this will return a collapsed count such that overlapping blocks are not double counted \begin{DoxyReturn}{Returns}
+number of positions in space 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a5a1a16d1a6043ea09efe1084b5a9c84c}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a08e8fc02a08d305b261703c804721860}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Length}]{\setlength{\rightskip}{0pt plus 5cm}long umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Length (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a08e8fc02a08d305b261703c804721860}
+Returns the total number of positions in the coordinate space For non-\/contiguous coordinate spaces, this will return a collapsed count such that overlapping blocks are not double counted 
+\begin{DoxyParams}{Parameters}
+{\em only} & positions on a given chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of positions in space 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_aa4263d7120f3af839c69144095bd4202}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a6634f9ac9b3c5e86166c004a63e74d6b}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Overlapping\+Region@{get\+Overlapping\+Region}}
+\index{get\+Overlapping\+Region@{get\+Overlapping\+Region}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Overlapping\+Region}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Overlapping\+Region (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a6634f9ac9b3c5e86166c004a63e74d6b}
+Returns an interval tree over the genomic region 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a41c8790447f098e8a88c44f8dd5c3b80}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a791e805d7bcff80b9992473d7f3ce166}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Reference\+Annotation@{get\+Reference\+Annotation}}
+\index{get\+Reference\+Annotation@{get\+Reference\+Annotation}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Reference\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Reference\+Annotation (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a791e805d7bcff80b9992473d7f3ce166}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The named reference as an annotation 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a481e6661291d17633dff9f06dd034b61}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a9c50958fee98b103c73b8787d2818ac5}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Reference\+Annotations@{get\+Reference\+Annotations}}
+\index{get\+Reference\+Annotations@{get\+Reference\+Annotations}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Reference\+Annotations}]{\setlength{\rightskip}{0pt plus 5cm}final Collection$<$? extends {\bf Annotation}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Reference\+Annotations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a9c50958fee98b103c73b8787d2818ac5}
+\begin{DoxyReturn}{Returns}
+The reference annotations contained in this coordinate space. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a50d49a54862b5c651d50a5c035ae2fd6}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a8f4a8587b9f12cb6644d9b2dc320259f}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Reference\+Names@{get\+Reference\+Names}}
+\index{get\+Reference\+Names@{get\+Reference\+Names}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Reference\+Names}]{\setlength{\rightskip}{0pt plus 5cm}final Collection$<$String$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Reference\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a8f4a8587b9f12cb6644d9b2dc320259f}
+\begin{DoxyReturn}{Returns}
+A list of reference names contained in the coordinate space (e.\+g. chr1, chr2, etc.) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_ac00dc2e5986d067615d65301bc93a63b}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a426572ebde2b646b760564f610a8e618}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a426572ebde2b646b760564f610a8e618}
+Get the size of the annotation with respect to the coordinate space 
+\begin{DoxyParams}{Parameters}
+{\em region} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_ab4c7b2a5fb8675ccf6e43e4fa7e0a7a7}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a8f86806abc96d49a209969abee97be5e}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Unmasked\+Length@{get\+Unmasked\+Length}}
+\index{get\+Unmasked\+Length@{get\+Unmasked\+Length}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Unmasked\+Length}]{\setlength{\rightskip}{0pt plus 5cm}long umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Unmasked\+Length (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a8f86806abc96d49a209969abee97be5e}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ae42bc49e0d87709819e73a74eae06191}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Window\+Iterator@{get\+Window\+Iterator}}
+\index{get\+Window\+Iterator@{get\+Window\+Iterator}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<${\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{String}]{chr, }
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ae42bc49e0d87709819e73a74eae06191}
+Returns an iterator on chromosome chr starting at start, ending at end, of size, window\+Size with overlap between consecutive windows 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_aa49b2170d4697219b7974ba20a0cf2fa}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ad03d9a7ac129d8f4d45627f97958d89d}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Window\+Iterator@{get\+Window\+Iterator}}
+\index{get\+Window\+Iterator@{get\+Window\+Iterator}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<${\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{String}]{chr, }
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{int}]{overlap, }
+\item[{boolean}]{backward}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ad03d9a7ac129d8f4d45627f97958d89d}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ae5f884a776dfac3f5a84ceb7060ac71c}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Window\+Iterator@{get\+Window\+Iterator}}
+\index{get\+Window\+Iterator@{get\+Window\+Iterator}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$? extends {\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{window, }
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ae5f884a776dfac3f5a84ceb7060ac71c}
+\begin{DoxyReturn}{Returns}
+returns an iterator over an annotation sequentially 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a7e18c144a21650e18b0aafef1940be7f}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a92f232940d1bd938e6ead9c8780e8b17}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Window\+Iterator@{get\+Window\+Iterator}}
+\index{get\+Window\+Iterator@{get\+Window\+Iterator}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$? extends {\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{window, }
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap, }
+\item[{boolean}]{consider\+Strand}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a92f232940d1bd938e6ead9c8780e8b17}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a0059d839bd5849142644aa4cb1770dd5}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Window\+Iterator@{get\+Window\+Iterator}}
+\index{get\+Window\+Iterator@{get\+Window\+Iterator}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<${\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a0059d839bd5849142644aa4cb1770dd5}
+Get a window iterator from start to finish on chromosome chr 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a251edfa76046cde3077b86a670ac6945}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aefc8258ac12034e853762e0d921d4058}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Window\+Iterator@{get\+Window\+Iterator}}
+\index{get\+Window\+Iterator@{get\+Window\+Iterator}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<${\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_aefc8258ac12034e853762e0d921d4058}
+Get a window iterator from start to finish in the entire space 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_aa948bd7624e066b77fc4603df26023df}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ada1e6c4f51d938cd0b378b5697f48803}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!get\+Window\+Iterator@{get\+Window\+Iterator}}
+\index{get\+Window\+Iterator@{get\+Window\+Iterator}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{get\+Window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<${\bf Window}$>$ umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+get\+Window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{base\+Genes, }
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ada1e6c4f51d938cd0b378b5697f48803}
+Get a window iterator over a collection of Gene\+Windows 
+\begin{DoxyParams}{Parameters}
+{\em base\+Genes} & The regions over which to iterate \\
+\hline
+{\em window\+Size} & Window size \\
+\hline
+{\em overlap} & Overlap size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator over windows on the collection of regions 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a5a010c2c047556dea3e8e8004241c341}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ad5c53a738849d61eb01ab450d2725cde}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!has\+Chromosome@{has\+Chromosome}}
+\index{has\+Chromosome@{has\+Chromosome}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{has\+Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+has\+Chromosome (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ad5c53a738849d61eb01ab450d2725cde}
+Returns true if the coordinate space contains any annotations on the queried chromosome 
+\begin{DoxyParams}{Parameters}
+{\em chr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a1e7da5501c20be84279abd8b2372403f}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ac9bb06d851f3ce97d435b2af47a05b7e}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!is\+Valid\+Window@{is\+Valid\+Window}}
+\index{is\+Valid\+Window@{is\+Valid\+Window}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{is\+Valid\+Window}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+is\+Valid\+Window (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{window}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_ac9bb06d851f3ce97d435b2af47a05b7e}
+Check if window in coordinate space and not masked 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_aaa00b0f98960c55359dd483367da6c46}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a729042a51c379aad9b024c8b7943399f}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!permute\+Annotation@{permute\+Annotation}}
+\index{permute\+Annotation@{permute\+Annotation}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{permute\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+permute\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a729042a51c379aad9b024c8b7943399f}
+Permutes an annotation to a new location on the same reference in the given coordinate space, preserving the length of the annotation and maintaining a consistent block structure. Does not check whether the given annotation was valid in the coordinate space in the first place. 
+\begin{DoxyParams}{Parameters}
+{\em a} & Annotation to permute. Will be modified. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The permuted Annotation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_permutation_not_found_exception}{Permutation\+Not\+Found\+Exception}} & if an annotation cannot be found \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a3bf9c42888d19a199c451251c7b96156}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a3096f1aa961085946b4e9481de1e95af}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!permute\+Annotation@{permute\+Annotation}}
+\index{permute\+Annotation@{permute\+Annotation}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{permute\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+permute\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{a, }
+\item[{{\bf Annotation}}]{bounds}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a3096f1aa961085946b4e9481de1e95af}
+Permutes an annotation to a new location within the given bounds, preserving the length of the annotation and maintaining a consistent block structure. Does not check whether the given annotation was valid in the coordinate space in the first place. 
+\begin{DoxyParams}{Parameters}
+{\em a} & Annotation to permute. Will be modified. \\
+\hline
+{\em bounds} & Boundaries within which the annotation will be permuted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The permuted Annotation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classumms_1_1core_1_1coordinatesystem_1_1_permutation_not_found_exception}{Permutation\+Not\+Found\+Exception}} & if a permuted location cannot be found \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space_a466ea37fcc195f06df37fb362dee11fb}{umms.\+core.\+coordinatesystem.\+Coordinate\+Space}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a2a3d42d66612e6a78e335830a599a88a}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!set\+Percent\+Masked\+Allowed@{set\+Percent\+Masked\+Allowed}}
+\index{set\+Percent\+Masked\+Allowed@{set\+Percent\+Masked\+Allowed}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{set\+Percent\+Masked\+Allowed}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+set\+Percent\+Masked\+Allowed (
+\begin{DoxyParamCaption}
+\item[{double}]{pct}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a2a3d42d66612e6a78e335830a599a88a}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a3d4fc4c0f29817931209f7b07f341838}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!set\+Seed@{set\+Seed}}
+\index{set\+Seed@{set\+Seed}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{set\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+set\+Seed (
+\begin{DoxyParamCaption}
+\item[{long}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a3d4fc4c0f29817931209f7b07f341838}
+Set the seed for the random generator (used for permuting regions). 
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a7fe9cbd77f774318fab0ad2ad65fa4ae}{\index{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}!P\+E\+R\+M\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S@{P\+E\+R\+M\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S}}
+\index{P\+E\+R\+M\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S@{P\+E\+R\+M\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S}!umms\+::core\+::coordinatesystem\+::\+Genomic\+Space@{umms\+::core\+::coordinatesystem\+::\+Genomic\+Space}}
+\subsubsection[{P\+E\+R\+M\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}final int umms.\+core.\+coordinatesystem.\+Genomic\+Space.\+P\+E\+R\+M\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S = 10\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1coordinatesystem_1_1_genomic_space_a7fe9cbd77f774318fab0ad2ad65fa4ae}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/coordinatesystem/\hyperlink{_genomic_space_8java}{Genomic\+Space.\+java}\end{DoxyCompactItemize}

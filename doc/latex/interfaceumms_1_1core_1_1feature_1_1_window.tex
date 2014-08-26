@@ -1,0 +1,78 @@
+\hypertarget{interfaceumms_1_1core_1_1feature_1_1_window}{\section{umms.\+core.\+feature.\+Window Interface Reference}
+\label{interfaceumms_1_1core_1_1feature_1_1_window}\index{umms.\+core.\+feature.\+Window@{umms.\+core.\+feature.\+Window}}
+}
+
+
+Inheritance diagram for umms.\+core.\+feature.\+Window\+:
+
+
+Collaboration diagram for umms.\+core.\+feature.\+Window\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window_a4e9977bfb99e20209f34c2c75120e8df}{add\+Source\+Annotation} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} annotation)
+\item 
+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window_a1de74ce8b62b8f273dc20df20fd97f39}{get\+Source\+Annotations} ()
+\item 
+Collection$<$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window_a8294e5f6fb17bf1f3354e543231ae5ec}{get\+Windows} (int window\+Size, int step\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceumms_1_1core_1_1feature_1_1_window_a4e9977bfb99e20209f34c2c75120e8df}{\index{umms\+::core\+::feature\+::\+Window@{umms\+::core\+::feature\+::\+Window}!add\+Source\+Annotation@{add\+Source\+Annotation}}
+\index{add\+Source\+Annotation@{add\+Source\+Annotation}!umms\+::core\+::feature\+::\+Window@{umms\+::core\+::feature\+::\+Window}}
+\subsubsection[{add\+Source\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+feature.\+Window.\+add\+Source\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1feature_1_1_window_a4e9977bfb99e20209f34c2c75120e8df}
+Add a pointer to the annotation from which this \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} originated 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1feature_1_1_gene_window_ad3b62a6fb13b8c40a85955fa863439a2}{umms.\+core.\+feature.\+Gene\+Window}, and \hyperlink{classumms_1_1core_1_1feature_1_1_genome_window_abf46dcce062e3fe8596caf393777d8b9}{umms.\+core.\+feature.\+Genome\+Window}.
+
+\hypertarget{interfaceumms_1_1core_1_1feature_1_1_window_a1de74ce8b62b8f273dc20df20fd97f39}{\index{umms\+::core\+::feature\+::\+Window@{umms\+::core\+::feature\+::\+Window}!get\+Source\+Annotations@{get\+Source\+Annotations}}
+\index{get\+Source\+Annotations@{get\+Source\+Annotations}!umms\+::core\+::feature\+::\+Window@{umms\+::core\+::feature\+::\+Window}}
+\subsubsection[{get\+Source\+Annotations}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Annotation}$>$ umms.\+core.\+feature.\+Window.\+get\+Source\+Annotations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1feature_1_1_window_a1de74ce8b62b8f273dc20df20fd97f39}
+\begin{DoxyReturn}{Returns}
+a collection of annotations from which this originated 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1feature_1_1_gene_window_a5cd5f91c2e7e2eaf0a4783d5a3746a01}{umms.\+core.\+feature.\+Gene\+Window}, and \hyperlink{classumms_1_1core_1_1feature_1_1_genome_window_ae2b7673478fa32fd3a28611f0e384b8e}{umms.\+core.\+feature.\+Genome\+Window}.
+
+\hypertarget{interfaceumms_1_1core_1_1feature_1_1_window_a8294e5f6fb17bf1f3354e543231ae5ec}{\index{umms\+::core\+::feature\+::\+Window@{umms\+::core\+::feature\+::\+Window}!get\+Windows@{get\+Windows}}
+\index{get\+Windows@{get\+Windows}!umms\+::core\+::feature\+::\+Window@{umms\+::core\+::feature\+::\+Window}}
+\subsubsection[{get\+Windows}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Window}$>$ umms.\+core.\+feature.\+Window.\+get\+Windows (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{step\+Size}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1feature_1_1_window_a8294e5f6fb17bf1f3354e543231ae5ec}
+Get collection of windows spanning the annotation 
+\begin{DoxyParams}{Parameters}
+{\em window\+Size} & \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} size \\
+\hline
+{\em step\+Size} & Step size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The collection of windows 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1feature_1_1_gene_window_af40fab362891f30799d0680beea273c1}{umms.\+core.\+feature.\+Gene\+Window}, and \hyperlink{classumms_1_1core_1_1feature_1_1_genome_window_aa03e0fb867f659eba10ca1144469063d}{umms.\+core.\+feature.\+Genome\+Window}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/feature/\hyperlink{_window_8java}{Window.\+java}\end{DoxyCompactItemize}

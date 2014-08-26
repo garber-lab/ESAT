@@ -1,0 +1,11 @@
+digraph "umms.core.annotation.BasicAnnotation.setName"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Basic\lAnnotation.setName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.alignment.Single\lEndAlignment.SingleEndAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_single_end_alignment.html#af6832ccae2d80001aea1e9fab6d071f1"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Basic\lAnnotation.BasicAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_basic_annotation.html#a2d9ba308c05e51125f286f4d575d0a60"];
+}

@@ -1,0 +1,9 @@
+digraph "java/broad/pda/seq/segmentation/utils" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_07f53aaccb63b7acbf71fb1fed3a7991 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="segmentation" fontname="Helvetica", fontsize="10", URL="dir_07f53aaccb63b7acbf71fb1fed3a7991.html"]
+  dir_ee35015ba009f45e2f33f483f222a08c [shape=box, label="utils", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ee35015ba009f45e2f33f483f222a08c.html"];
+  }
+}

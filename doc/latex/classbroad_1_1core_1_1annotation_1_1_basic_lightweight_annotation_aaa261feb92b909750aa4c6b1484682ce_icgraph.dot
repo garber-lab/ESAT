@@ -1,0 +1,25 @@
+digraph "broad.core.annotation.BasicLightweightAnnotation.overlaps"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.Basic\lLightweightAnnotation.overlaps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.annotation.Basic\lGenomicAnnotation.reduceToDifference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#aae52f0396a44e84344f41f23cb83022e"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.Basic\lGenomicAnnotation.disect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#a500d51a415b92e638ab83723af56dff0"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.annotation.Basic\lLightweightAnnotation.getDistanceTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#a944575391d1ef0c562e3beeb4d493925"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.annotation.Basic\lLightweightAnnotation.getOverlap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#a37f37590e75f2cbbb1268a59b8a686f5"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.annotation.Basic\lLightweightAnnotation.mergeAllOverlappers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#ab9c2cce66e01225f9f12dd3a1edde9da"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.annotation.Basic\lLightweightAnnotation.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#a8bcdc6badce8dafaee2e128b4cbc2266"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.core.annotation.Basic\lLightweightAnnotation.takeUnion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#adfbce23fbb97636400eab0f450f3f828"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.pda.datastructures.\lAlignments.overlapsCollection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1datastructures_1_1_alignments.html#a000660e9742f30bad37f072dcac3fdb4"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="umms.core.annotation.Gene.num\lOverlappingExons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#acf0b3ac17707c018c54c5943f3dc8d4a"];
+}

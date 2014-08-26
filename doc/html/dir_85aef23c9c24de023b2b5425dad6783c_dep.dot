@@ -1,0 +1,9 @@
+digraph "java/umms/core/general" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_47922fae4b2d4f7c6f8e56f6907fad50 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_47922fae4b2d4f7c6f8e56f6907fad50.html"]
+  dir_85aef23c9c24de023b2b5425dad6783c [shape=box, label="general", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_85aef23c9c24de023b2b5425dad6783c.html"];
+  }
+}

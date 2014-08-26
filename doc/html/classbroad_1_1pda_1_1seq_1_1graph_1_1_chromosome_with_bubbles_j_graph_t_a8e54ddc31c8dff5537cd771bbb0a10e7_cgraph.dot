@@ -1,0 +1,15 @@
+digraph "broad.pda.seq.graph.ChromosomeWithBubblesJGraphT.getSinkVertices"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.getSinkVertices",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.outOrientedDegree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#ae00bb732a630891f7bd8586589de0c26"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.inOrientedDegree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#a4d7680c735522fe96b8f19c6901d0d83"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.isSpanningGap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#ac8a3ce5c61ee9ab7759b97b809b9099f"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.isInAllGaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#a328f7944789466e63a8f6816409bcd41"];
+}

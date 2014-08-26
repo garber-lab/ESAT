@@ -1,0 +1,17 @@
+digraph "broad.pda.annotation.BEDFileParser.getChromosomeIterator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.annotation.BEDFile\lParser.getChromosomeIterator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.annotation.BEDFile\lParser.getNumberOfIsoforms",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a9e46c58133e627fe0f9d731b4fc84778"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.annotation.BEDFile\lParser.get3PRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a592f7b9ad8d50ffd4487ecc496469bb4"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.annotation.BEDFile\lParser.getPromoters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#ae7ce27123546bfe5c63beeea33443ff3"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.pda.annotation.BEDFile\lParser.collapseSingleExonTranscripts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a45ec37aa431467c0b765680ef53aefcc"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.pda.annotation.BEDFile\lParser.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a0449ae4d64ca760468587a0a03144864"];
+}

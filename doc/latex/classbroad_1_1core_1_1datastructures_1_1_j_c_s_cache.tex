@@ -1,0 +1,112 @@
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache}{\section{broad.\+core.\+datastructures.\+J\+C\+S\+Cache Class Reference}
+\label{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache}\index{broad.\+core.\+datastructures.\+J\+C\+S\+Cache@{broad.\+core.\+datastructures.\+J\+C\+S\+Cache}}
+}
+
+
+Collaboration diagram for broad.\+core.\+datastructures.\+J\+C\+S\+Cache\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_1_1_j_c_s_node_iterator}{J\+C\+S\+Node\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a210c4158f853efec66372c33229dc8a1}{J\+C\+S\+Cache} (Paired\+End\+Reader reader, int cache\+Size, J\+C\+S\+Alignment\+Model m)
+\item 
+Filtered\+Iterator \hyperlink{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a554654661a47ecf87a000581435d1eb2}{query} (Annotation window, boolean fully\+Contained, Coordinate\+Space cs)
+\item 
+Closeable\+Iterator$<$ Alignment\+Count $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a6f13ea81079bb23079fb1a5072298618}{get\+Reads} (Annotation w, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ Alignment\+Count $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_aba7253cf42c957d9e361c30f4ed4e1f9}{get\+Reads} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Integer \hyperlink{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_afad1ffec78cbe93d6b122122aa08bc33}{generate\+Random} (int length)
+\item 
+static void \hyperlink{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a996c7c8e03ea133a890c8f93d53c5a1a}{dispose} (String cache\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a210c4158f853efec66372c33229dc8a1}{\index{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}!J\+C\+S\+Cache@{J\+C\+S\+Cache}}
+\index{J\+C\+S\+Cache@{J\+C\+S\+Cache}!broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}}
+\subsubsection[{J\+C\+S\+Cache}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+datastructures.\+J\+C\+S\+Cache.\+J\+C\+S\+Cache (
+\begin{DoxyParamCaption}
+\item[{Paired\+End\+Reader}]{reader, }
+\item[{int}]{cache\+Size, }
+\item[{J\+C\+S\+Alignment\+Model}]{m}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a210c4158f853efec66372c33229dc8a1}
+Initializes the cache 
+\begin{DoxyParams}{Parameters}
+{\em reader} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a996c7c8e03ea133a890c8f93d53c5a1a}{\index{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}!dispose@{dispose}}
+\index{dispose@{dispose}!broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}}
+\subsubsection[{dispose}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+datastructures.\+J\+C\+S\+Cache.\+dispose (
+\begin{DoxyParamCaption}
+\item[{String}]{cache\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a996c7c8e03ea133a890c8f93d53c5a1a}
+Shuts down the specified cache, and removes it from the list of active caches so it can be created again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache\+Name} & The name of the cache to dispose of. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_afad1ffec78cbe93d6b122122aa08bc33}{\index{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}!generate\+Random@{generate\+Random}}
+\index{generate\+Random@{generate\+Random}!broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}}
+\subsubsection[{generate\+Random}]{\setlength{\rightskip}{0pt plus 5cm}static Integer broad.\+core.\+datastructures.\+J\+C\+S\+Cache.\+generate\+Random (
+\begin{DoxyParamCaption}
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_afad1ffec78cbe93d6b122122aa08bc33}
+Generates a Long random number of length \char`\"{}length\char`\"{}. We will use 10 digits 
+\begin{DoxyParams}{Parameters}
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a6f13ea81079bb23079fb1a5072298618}{\index{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}!get\+Reads@{get\+Reads}}
+\index{get\+Reads@{get\+Reads}!broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}}
+\subsubsection[{get\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<$Alignment\+Count$>$ broad.\+core.\+datastructures.\+J\+C\+S\+Cache.\+get\+Reads (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{w, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a6f13ea81079bb23079fb1a5072298618}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_aba7253cf42c957d9e361c30f4ed4e1f9}{\index{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}!get\+Reads@{get\+Reads}}
+\index{get\+Reads@{get\+Reads}!broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}}
+\subsubsection[{get\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<$Alignment\+Count$>$ broad.\+core.\+datastructures.\+J\+C\+S\+Cache.\+get\+Reads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_aba7253cf42c957d9e361c30f4ed4e1f9}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a554654661a47ecf87a000581435d1eb2}{\index{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}!query@{query}}
+\index{query@{query}!broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache@{broad\+::core\+::datastructures\+::\+J\+C\+S\+Cache}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}Filtered\+Iterator broad.\+core.\+datastructures.\+J\+C\+S\+Cache.\+query (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{window, }
+\item[{boolean}]{fully\+Contained, }
+\item[{Coordinate\+Space}]{cs}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache_a554654661a47ecf87a000581435d1eb2}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/datastructures/\hyperlink{_j_c_s_cache_8java}{J\+C\+S\+Cache.\+java}\end{DoxyCompactItemize}

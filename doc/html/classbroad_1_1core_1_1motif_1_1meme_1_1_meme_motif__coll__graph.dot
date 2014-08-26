@@ -1,0 +1,15 @@
+digraph "broad.core.motif.meme.MemeMotif"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.motif.meme.Meme\lMotif",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pwm" ,fontname="Helvetica"];
+  Node2 [label="broad.core.motif.Position\lWeightMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_position_weight_matrix.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="java::util::ArrayList\l\< PositionWeightColumn \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="org::apache::commons\l::math3::stat::clustering\l::Clusterable\< PositionWeightMatrix \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" matches" ,fontname="Helvetica"];
+  Node5 [label="List\< MatchedSequence \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

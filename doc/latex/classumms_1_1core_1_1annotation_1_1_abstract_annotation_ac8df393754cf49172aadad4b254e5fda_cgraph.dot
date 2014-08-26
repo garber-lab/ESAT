@@ -1,0 +1,17 @@
+digraph "umms.core.annotation.AbstractAnnotation.getDistanceTo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Abstract\lAnnotation.getDistanceTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Annotation.get\lReferenceName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a2dd53f6e6ab4a573c0e93ef42e223b93"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Abstract\lAnnotation.equals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_abstract_annotation.html#a75b34b801266035d089bbeb096e38fd1"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.annotation.Abstract\lAnnotation.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_abstract_annotation.html#aad9f64a8f961a115d390670502a692de"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.annotation.Annotation.get\lStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a4fc0345d5a95dfb0bfd018cc0d9d400f"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.annotation.Annotation.getEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a51310d48912558d549d21cbf92ab946a"];
+}

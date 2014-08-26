@@ -1,0 +1,13 @@
+digraph "broad.pda.seq.graph.ChromosomeWithBubblesJGraphT.getPaths"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.getPaths",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.getGenePaths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#a9d2556505217ab0b453f84da0153fca4"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.getAllPaths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#a3cc78f0b8d52ca70104190effddf8ba1"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.seq.graph.Chromosome\lWithBubblesJGraphT.getPaths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1graph_1_1_chromosome_with_bubbles_j_graph_t.html#ab63a00a2c99d961006c1aa684c9ff508"];
+}

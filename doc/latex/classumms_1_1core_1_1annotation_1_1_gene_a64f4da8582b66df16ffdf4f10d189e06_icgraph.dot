@@ -1,0 +1,17 @@
+digraph "umms.core.annotation.Gene.isNegativeStrand"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Gene.is\lNegativeStrand",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Gene.set\lSequenceFromChromosome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a40aea7af10672b2b9c85a29ecaca3dad"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Gene.transcript\lToGenomicPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ad12935fea9cdb57e8ef9ae283777f31f"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.annotation.Gene.get\lMidpointGenomicCoords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ac26fe7612bd2bafe2c58ffb088a3ddef"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.annotation.Gene.transcript\lToGenomicPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ab39e50ecf3b00dbf0a984b956d8a5d0d"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.annotation.Gene.genomic\lToGenomicPositionWithOffset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a24c4baf757d1fec374f8d7cfad9f1578"];
+}

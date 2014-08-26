@@ -1,0 +1,679 @@
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4}{\section{broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$ Class Reference}
+\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4}\index{broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$@{broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$}}
+}
+
+
+Collaboration diagram for broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_1_1_fwd_iterator}{Fwd\+Iterator}
+\item 
+class {\bfseries Node$<$ V1 $>$}
+\item 
+class \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_1_1_overlap_iterator}{Overlap\+Iterator}
+\item 
+class \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_1_1_rev_iterator}{Rev\+Iterator}
+\item 
+class {\bfseries Values\+Iterator$<$ V1 $>$}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a44cc85e85bbdb4f69970c9433039960c}{size} ()
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a8b579056a7540902bb270ecf9f8b47fa}{is\+Empty} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a372b459843c74a5c78e19f6625051ef2}{clear} ()
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ab4e3d991900d0af7e9184af6db46340c}{put} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval, V value)
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ab287d3a2ad3be3c340ea658e0d00802f}{put} (int start, int end, V value)
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a0a975b5d12ca43c424a1a768c1fb976b}{place\+In\+Tree} (int start, int end, V value)
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ae7de7baca6d327a044410ec6e5a13966}{remove} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ae00466c38ed06216ca5b913a1f57b5c6}{remove} (int start, int end)
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a0d6cb2b2fd4a3248d77dbdb0569709ea}{remove} (int start, int end, V value)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a62fd139e37c45f014646e5f83f558b74}{find} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_acb4706953b943da415d82debbd79c755}{find} (int start, int end)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afdd8be86b5697cd31f52f361e198966c}{find\+By\+Index} (int idx)
+\item 
+int \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a87fa030b462c169a7cb7ec515d652170}{get\+Index} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+int \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a34aa2e3925eb94ef7f5003a67c99738f}{get\+Index} (int start, int end)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a2bc0b97c96c61daeb3c731e6a9864d42}{min} ()
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ade7a80aa74915e1b4f8a5b8dcb394432}{min} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afb256be8bad31ae13609e8ee6fc02c64}{min} (int start, int end)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a8327871565ee42bd38cfda44240591c5}{min\+Overlapper} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a7793c8a726674cf9cde66f3f8284380a}{min\+Overlapper} (int start, int end)
+\item 
+Collection$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_acc986eeafe49f241ec91e282428d2552}{to\+Collection} ()
+\item 
+List$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a09d6ecabba84eec53d01512887fdb06b}{to\+List} ()
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a166ddc864c75c2ce9bd5459400db5a71}{max} ()
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a9531b81beb8655f40e89f47ad20ee730}{max} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+Node$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a5e7608a6cbeed9b3f91b83f4cb9ee429}{max} (int start, int end)
+\item 
+Iterator$<$ Node$<$ V $>$ $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a73216589487fa7fc30889620f6baaabe}{iterator} ()
+\item 
+Iterator$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a27c5ec641b17a30c712164f96cb8a0b6}{value\+Iterator} ()
+\item 
+Iterator$<$ Node$<$ V $>$ $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a9727995889413a674272f79899f4a932}{iterator} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+Iterator$<$ Node$<$ V $>$ $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a959b745dcdf8f56ac335bcb7acff2abf}{iterator} (int start, int end)
+\item 
+Iterator$<$ Node$<$ V $>$ $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a825bb5dfdba1b55ae38acee386ef9f4f}{overlappers} (int start, int end)
+\item 
+Iterator$<$ V $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_abb326cb9a9275b3d0276bf9f2cfa6bd3}{overlapping\+Value\+Iterator} (int start, int end)
+\item 
+int \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ac6d0c8a9c71d29dcd7cfc67006c7e6c9}{num\+Overlappers} (int start, int end)
+\item 
+Iterator$<$ Node$<$ V $>$ $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a19ffe47e0ae286afffa71ed50812d34f}{reverse\+Iterator} ()
+\item 
+Iterator$<$ Node$<$ V $>$ $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a696aaef2df281d57bc671519cb4663b0}{reverse\+Iterator} (\hyperlink{interfacebroad_1_1core_1_1datastructures_1_1_interval}{Interval} interval)
+\item 
+Iterator$<$ Node$<$ V $>$ $>$ \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a38cc736f2fcbb6425dc56299784770b4}{reverse\+Iterator} (int start, int end)
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a3542cde71dcd6d21b8b693ebacd38172}{get\+Sentinel} ()
+\item 
+V \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a698672fc6e999de06d624f40ef26d0f4}{set\+Sentinel} (V sentinel)
+\item 
+void \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a85c8bee3ccb47c4f9805f3d80629911d}{write} (String file\+Name)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ad969831085254021fb11bf3e9db2acc4}{write} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afd101fc656923420578d290819551325}{does\+Overlap} (int start, int end)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Red-\/\+Black tree with intervals for keys. Not thread-\/safe, and cannot be made so.
+
+\begin{DoxyAuthor}{Author}
+tsharpe 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+\begin{DoxyParagraph}{Revision}
+51146 
+\end{DoxyParagraph}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a372b459843c74a5c78e19f6625051ef2}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!clear@{clear}}
+\index{clear@{clear}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a372b459843c74a5c78e19f6625051ef2}
+Remove all entries. \hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afd101fc656923420578d290819551325}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!does\+Overlap@{does\+Overlap}}
+\index{does\+Overlap@{does\+Overlap}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{does\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.does\+Overlap (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afd101fc656923420578d290819551325}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a62fd139e37c45f014646e5f83f558b74}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!find@{find}}
+\index{find@{find}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.find (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a62fd139e37c45f014646e5f83f558b74}
+Find an interval. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval sought. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Node that represents that interval, or null. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_acb4706953b943da415d82debbd79c755}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!find@{find}}
+\index{find@{find}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.find (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_acb4706953b943da415d82debbd79c755}
+Find an interval. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Node that represents that interval, or null. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afdd8be86b5697cd31f52f361e198966c}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!find\+By\+Index@{find\+By\+Index}}
+\index{find\+By\+Index@{find\+By\+Index}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{find\+By\+Index}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.find\+By\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afdd8be86b5697cd31f52f361e198966c}
+Find the nth interval in the tree. 
+\begin{DoxyParams}{Parameters}
+{\em idx} & The rank of the interval sought (from 0 to \hyperlink{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a44cc85e85bbdb4f69970c9433039960c}{size()}-\/1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Node that represents the nth interval. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a87fa030b462c169a7cb7ec515d652170}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!get\+Index@{get\+Index}}
+\index{get\+Index@{get\+Index}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{get\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.get\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a87fa030b462c169a7cb7ec515d652170}
+Find the rank of the specified interval. If the specified interval is not in the tree, then -\/1 is returned. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval for which the index is sought. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rank of that interval, or -\/1. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a34aa2e3925eb94ef7f5003a67c99738f}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!get\+Index@{get\+Index}}
+\index{get\+Index@{get\+Index}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{get\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.get\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a34aa2e3925eb94ef7f5003a67c99738f}
+Find the rank of the specified interval. If the specified interval is not in the tree, then -\/1 is returned. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rank of that interval, or -\/1. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a3542cde71dcd6d21b8b693ebacd38172}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!get\+Sentinel@{get\+Sentinel}}
+\index{get\+Sentinel@{get\+Sentinel}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{get\+Sentinel}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.get\+Sentinel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a3542cde71dcd6d21b8b693ebacd38172}
+Get the special sentinel value that will be used to signal novelty when putting a new interval into the tree, or to signal \char`\"{}not found\char`\"{} when removing an interval. This is null by default. \begin{DoxyReturn}{Returns}
+The sentinel value. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a8b579056a7540902bb270ecf9f8b47fa}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a8b579056a7540902bb270ecf9f8b47fa}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a73216589487fa7fc30889620f6baaabe}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$Node$<$V$>$ $>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a73216589487fa7fc30889620f6baaabe}
+Return an iterator over the entire tree. \begin{DoxyReturn}{Returns}
+An iterator. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a9727995889413a674272f79899f4a932}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$Node$<$V$>$ $>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a9727995889413a674272f79899f4a932}
+Return an iterator over all intervals greater than or equal to the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The minimum interval. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a959b745dcdf8f56ac335bcb7acff2abf}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$Node$<$V$>$ $>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a959b745dcdf8f56ac335bcb7acff2abf}
+Return an iterator over all intervals greater than or equal to the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a166ddc864c75c2ce9bd5459400db5a71}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!max@{max}}
+\index{max@{max}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a166ddc864c75c2ce9bd5459400db5a71}
+Find the greatest interval in the tree. \begin{DoxyReturn}{Returns}
+The latest interval, or null if the tree is empty. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a9531b81beb8655f40e89f47ad20ee730}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!max@{max}}
+\index{max@{max}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.max (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a9531b81beb8655f40e89f47ad20ee730}
+Find the latest interval in the tree less than or equal to the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval sought. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The latest $<$= interval, or null if there is none. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a5e7608a6cbeed9b3f91b83f4cb9ee429}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!max@{max}}
+\index{max@{max}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.max (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a5e7608a6cbeed9b3f91b83f4cb9ee429}
+Find the latest interval in the tree less than or equal to the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The latest $>$= interval, or null if there is none. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a2bc0b97c96c61daeb3c731e6a9864d42}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!min@{min}}
+\index{min@{min}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.min (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a2bc0b97c96c61daeb3c731e6a9864d42}
+Find the least interval in the tree. \begin{DoxyReturn}{Returns}
+The earliest interval, or null if the tree is empty. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ade7a80aa74915e1b4f8a5b8dcb394432}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!min@{min}}
+\index{min@{min}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.min (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ade7a80aa74915e1b4f8a5b8dcb394432}
+Find the earliest interval in the tree greater than or equal to the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval sought. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The earliest $>$= interval, or null if there is none. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afb256be8bad31ae13609e8ee6fc02c64}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!min@{min}}
+\index{min@{min}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.min (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_afb256be8bad31ae13609e8ee6fc02c64}
+Find the earliest interval in the tree greater than or equal to the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The earliest $>$= interval, or null if there is none. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a8327871565ee42bd38cfda44240591c5}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!min\+Overlapper@{min\+Overlapper}}
+\index{min\+Overlapper@{min\+Overlapper}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{min\+Overlapper}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.min\+Overlapper (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a8327871565ee42bd38cfda44240591c5}
+Find the earliest interval in the tree that overlaps the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval sought. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The earliest overlapping interval, or null if there is none. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a7793c8a726674cf9cde66f3f8284380a}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!min\+Overlapper@{min\+Overlapper}}
+\index{min\+Overlapper@{min\+Overlapper}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{min\+Overlapper}]{\setlength{\rightskip}{0pt plus 5cm}Node$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.min\+Overlapper (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a7793c8a726674cf9cde66f3f8284380a}
+Find the earliest interval in the tree that overlaps the specified interval. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The earliest overlapping interval, or null if there is none. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ac6d0c8a9c71d29dcd7cfc67006c7e6c9}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!num\+Overlappers@{num\+Overlappers}}
+\index{num\+Overlappers@{num\+Overlappers}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{num\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.num\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ac6d0c8a9c71d29dcd7cfc67006c7e6c9}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a825bb5dfdba1b55ae38acee386ef9f4f}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!overlappers@{overlappers}}
+\index{overlappers@{overlappers}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{overlappers}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$Node$<$V$>$ $>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.overlappers (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a825bb5dfdba1b55ae38acee386ef9f4f}
+Return an iterator over all intervals overlapping the specified range. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The range start. \\
+\hline
+{\em end} & The range end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_abb326cb9a9275b3d0276bf9f2cfa6bd3}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!overlapping\+Value\+Iterator@{overlapping\+Value\+Iterator}}
+\index{overlapping\+Value\+Iterator@{overlapping\+Value\+Iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{overlapping\+Value\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.overlapping\+Value\+Iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_abb326cb9a9275b3d0276bf9f2cfa6bd3}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a0a975b5d12ca43c424a1a768c1fb976b}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!place\+In\+Tree@{place\+In\+Tree}}
+\index{place\+In\+Tree@{place\+In\+Tree}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{place\+In\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.place\+In\+Tree (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{V}]{value}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a0a975b5d12ca43c424a1a768c1fb976b}
+Put a new interval into the tree (or update the value associated with an existing interval). If the interval is novel, the special sentinel value is returned. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+{\em value} & The associated value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The old value associated with that interval, or the sentinel. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ab4e3d991900d0af7e9184af6db46340c}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!put@{put}}
+\index{put@{put}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{put}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.put (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{V}]{value}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ab4e3d991900d0af7e9184af6db46340c}
+Put a new interval into the tree (or update the value associated with an existing interval). If the interval is novel, the special sentinel value is returned. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval. \\
+\hline
+{\em value} & The associated value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The old value associated with that interval, or the sentinel. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ab287d3a2ad3be3c340ea658e0d00802f}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!put@{put}}
+\index{put@{put}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{put}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.put (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{V}]{value}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ab287d3a2ad3be3c340ea658e0d00802f}
+Rewrote put to check that there is an already existing node \hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ae7de7baca6d327a044410ec6e5a13966}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!remove@{remove}}
+\index{remove@{remove}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ae7de7baca6d327a044410ec6e5a13966}
+Remove an interval from the tree. If the interval does not exist in the tree the special sentinel value is returned. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with that interval, or the sentinel. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ae00466c38ed06216ca5b913a1f57b5c6}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!remove@{remove}}
+\index{remove@{remove}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.remove (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ae00466c38ed06216ca5b913a1f57b5c6}
+Remove an interval from the tree. If the interval does not exist in the tree the special sentinel value is returned. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with that interval, or the sentinel. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a0d6cb2b2fd4a3248d77dbdb0569709ea}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!remove@{remove}}
+\index{remove@{remove}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.remove (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{V}]{value}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a0d6cb2b2fd4a3248d77dbdb0569709ea}
+Remove a specific value from this position 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a19ffe47e0ae286afffa71ed50812d34f}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!reverse\+Iterator@{reverse\+Iterator}}
+\index{reverse\+Iterator@{reverse\+Iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{reverse\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$Node$<$V$>$ $>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.reverse\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a19ffe47e0ae286afffa71ed50812d34f}
+Return an iterator over the entire tree that returns intervals in reverse order. \begin{DoxyReturn}{Returns}
+An iterator. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a696aaef2df281d57bc671519cb4663b0}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!reverse\+Iterator@{reverse\+Iterator}}
+\index{reverse\+Iterator@{reverse\+Iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{reverse\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$Node$<$V$>$ $>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.reverse\+Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a696aaef2df281d57bc671519cb4663b0}
+Return an iterator over all intervals less than or equal to the specified interval, in reverse order. 
+\begin{DoxyParams}{Parameters}
+{\em interval} & The maximum interval. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a38cc736f2fcbb6425dc56299784770b4}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!reverse\+Iterator@{reverse\+Iterator}}
+\index{reverse\+Iterator@{reverse\+Iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{reverse\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$Node$<$V$>$ $>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.reverse\+Iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a38cc736f2fcbb6425dc56299784770b4}
+Return an iterator over all intervals less than or equal to the specified interval, in reverse order. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The interval's start. \\
+\hline
+{\em end} & The interval's end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a698672fc6e999de06d624f40ef26d0f4}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!set\+Sentinel@{set\+Sentinel}}
+\index{set\+Sentinel@{set\+Sentinel}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{set\+Sentinel}]{\setlength{\rightskip}{0pt plus 5cm}V broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.set\+Sentinel (
+\begin{DoxyParamCaption}
+\item[{V}]{sentinel}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a698672fc6e999de06d624f40ef26d0f4}
+Set the special sentinel value that will be used to signal novelty when putting a new interval into the tree, or to signal \char`\"{}not found\char`\"{} when removing an interval. 
+\begin{DoxyParams}{Parameters}
+{\em sentinel} & The new sentinel value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The old sentinel value. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a44cc85e85bbdb4f69970c9433039960c}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!size@{size}}
+\index{size@{size}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a44cc85e85bbdb4f69970c9433039960c}
+Return the number of intervals in the tree. \begin{DoxyReturn}{Returns}
+The number of intervals. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_acc986eeafe49f241ec91e282428d2552}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!to\+Collection@{to\+Collection}}
+\index{to\+Collection@{to\+Collection}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{to\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.to\+Collection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_acc986eeafe49f241ec91e282428d2552}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a09d6ecabba84eec53d01512887fdb06b}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!to\+List@{to\+List}}
+\index{to\+List@{to\+List}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{to\+List}]{\setlength{\rightskip}{0pt plus 5cm}List$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.to\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a09d6ecabba84eec53d01512887fdb06b}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a27c5ec641b17a30c712164f96cb8a0b6}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!value\+Iterator@{value\+Iterator}}
+\index{value\+Iterator@{value\+Iterator}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{value\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$V$>$ broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.value\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a27c5ec641b17a30c712164f96cb8a0b6}
+Return an iterator over the entire tree values \begin{DoxyReturn}{Returns}
+An iterator 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a85c8bee3ccb47c4f9805f3d80629911d}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!write@{write}}
+\index{write@{write}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.write (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_a85c8bee3ccb47c4f9805f3d80629911d}
+\hypertarget{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ad969831085254021fb11bf3e9db2acc4}{\index{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}!write@{write}}
+\index{write@{write}!broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$@{broad\+::core\+::datastructures\+::\+Interval\+Tree$<$ V $>$}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+datastructures.\+Interval\+Tree$<$ V $>$.write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4_ad969831085254021fb11bf3e9db2acc4}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/datastructures/\hyperlink{_interval_tree_8java}{Interval\+Tree.\+java}\end{DoxyCompactItemize}

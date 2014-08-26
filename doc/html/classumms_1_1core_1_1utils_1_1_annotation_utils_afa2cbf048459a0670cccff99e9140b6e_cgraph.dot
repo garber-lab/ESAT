@@ -1,0 +1,13 @@
+digraph "umms.core.utils.AnnotationUtils.mergeOverlappingBlocks"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.utils.Annotation\lUtils.mergeOverlappingBlocks",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.utils.Annotation\lUtils.mergeOverlappingBlocksSingle\lOrientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1utils_1_1_annotation_utils.html#a73c090856164c0c8917b1dad326e515f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.annotation.Annotation.get\lOrientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#ad5125f9609856d2a1b8e788664551558"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.annotation.Annotation.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#ab0f817e7652b89e2775b988d73106f5c"];
+}

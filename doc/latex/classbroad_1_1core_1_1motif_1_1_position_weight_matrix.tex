@@ -1,0 +1,550 @@
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{\section{broad.\+core.\+motif.\+Position\+Weight\+Matrix Class Reference}
+\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}\index{broad.\+core.\+motif.\+Position\+Weight\+Matrix@{broad.\+core.\+motif.\+Position\+Weight\+Matrix}}
+}
+
+
+Inheritance diagram for broad.\+core.\+motif.\+Position\+Weight\+Matrix\+:
+
+
+Collaboration diagram for broad.\+core.\+motif.\+Position\+Weight\+Matrix\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a93721c18375954e6ca86dc9e819c70c3}{Position\+Weight\+Matrix} (String name)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a987b71b7f2d6cb595bee270cdf8e682a}{set\+Matrix\+From\+Raw\+Data} (List$<$ String\mbox{[}$\,$\mbox{]}$>$ unparsed\+Rows)  throws Parse\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a430da298fb10b0fbb57e4e34f49668b8}{set\+Matrix} (List$<$ double\mbox{[}$\,$\mbox{]}$>$ sites)  throws Parse\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a983173efce4331498fa601048882f849}{add\+Column} (double\mbox{[}$\,$\mbox{]} site)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_adad83edc20996566232161bb9d5f253f}{set\+Unparsed\+Row} (int col\+Num, String\mbox{[}$\,$\mbox{]} unparsed\+Row)  throws Parse\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a01be23a72b73f927358f5ceb6dcb028f}{write} (Buffered\+Writer bw, Number\+Format formatter)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_accb2106d462932acb04df43c74781752}{write\+U\+N\+I\+P\+R\+O\+B\+E} (Buffered\+Writer bw, Number\+Format formatter)  throws I\+O\+Exception 
+\item 
+String \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a9c4f72f0173e0b84b3e3a732d9de22fc}{get\+Name} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a52521dce3a38dcc4eb1734e886b5d870}{set\+Name} (String name)
+\item 
+int \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a2fe7ed8e3b005e43dbe66784519cd37d}{get\+Left\+High\+Info\+Start} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a7f0911cdd2e978b07ab07c680415dfda}{get\+Right\+High\+Info\+Start} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a8817e48c123afc0c6c15a30686777a5e}{set\+Align\+Pos} (int min\+Align\+Num)
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_aea292a2e74d006a0002b626ebc6c8732}{trim\+By\+Information\+Content} (double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a19c2e267b3adebb5a9e1a0c29c8c2be4}{ic})
+\item 
+List$<$ Double $>$ \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a8dbc8707e7fd3c12d2264d80ecf20d36}{compute\+Score\+Distribution} (float background\+A, float background\+C, float background\+G, float background\+T, int sample\+Size)
+\item 
+String \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a75b281ac9f09c01684acecce3e27fad5}{print\+Kmer} (int\mbox{[}$\,$\mbox{]} kmer)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a0fab2425599830972c542de9832541c2}{get\+Log\+Likelihood} (char\mbox{[}$\,$\mbox{]} s)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_aad374707533f2e09d28adb7b311d7800}{get\+Log\+Likelihood} (int\mbox{[}$\,$\mbox{]} s)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a58cb3086adb212ddd79e3b3b4b595271}{get\+Log\+Likelihood} (short\mbox{[}$\,$\mbox{]} encoded\+Sequence, int i)
+\item 
+int \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a589b2f00b2f8f91f83aeb5852d941db3}{get\+Num\+Col} ()
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a4088289b8a3cd37348a5bfadb1f73677}{is\+Empty} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a519dd909700982492e6996c840263157}{permute\+Columns} (boolean preserve\+G\+C\+Dinucleotides)
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a1793deced98122752214cacdfef0a1d4}{copy} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a19c2e267b3adebb5a9e1a0c29c8c2be4}{ic} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a094eef930d034e04706e1a9326355d5a}{reverse\+Complement} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_afd512d123d1e3ac15a2a6294f160024a}{get\+Num\+End\+Pos\+To\+Erase} (double info\+Threshold)
+\item 
+int \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a493b3736cd07a224265e66cd1609624c}{get\+Num\+Start\+Pos\+To\+Erase} (double info\+Threshold)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a05b298bc6d5b5424e961f8da9742d02f}{print\+Refined\+Weight\+Matrix} (double info\+Threshold)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a96513be0b770e7216971489d55a5ed11}{flat\+Weight\+Matrix} (double info\+Th)
+\item 
+String \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a13a21c2d909695d4bab505ca1743fb4e}{get\+Consensus} ()
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_ad0d1df880623b3436db55e212fe61486}{get\+Align\+Dir} ()
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d}{B\+E\+D} $>$ \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a3b83d9fb74cd24fa5256f0e66af3d353}{match} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} region, double\mbox{[}$\,$\mbox{]} background, float min\+Score)
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a566b285edf5ae045f8af3ed12a0eb549}{create\+Iso\+P\+W\+M} (double\mbox{[}$\,$\mbox{]} column, String name)
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a5ccc8f8ea80fd1b0d6527af85b8da13c}{add\+Pseudo\+Counts} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_affcf048fc62fc2a720bc87b63b4028ee}{centroid\+Of} (Collection$<$ \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} $>$ pwm\+Set)  throws Illegal\+Argument\+Exception
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a42ff0497e33c079daf6a5181855a5859}{distance\+From} (\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} other)
+\item 
+double \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_ac5ec4f45ec2cbcc6a70671b6d97f304a}{kullback\+Leiber} (\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} other)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a2e65801b95229c2fb5977890aeb26d58}{get\+Next\+Kmer} (int\mbox{[}$\,$\mbox{]} kmer)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a01919ac1ab68a5420cedf747da0a56ff}{add\+To\+Centroid} (\hyperlink{class_jama_1_1_matrix}{Matrix} m, \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} pwm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a93721c18375954e6ca86dc9e819c70c3}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!Position\+Weight\+Matrix@{Position\+Weight\+Matrix}}
+\index{Position\+Weight\+Matrix@{Position\+Weight\+Matrix}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{Position\+Weight\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+Position\+Weight\+Matrix (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a93721c18375954e6ca86dc9e819c70c3}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a983173efce4331498fa601048882f849}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!add\+Column@{add\+Column}}
+\index{add\+Column@{add\+Column}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{add\+Column}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+add\+Column (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{site}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a983173efce4331498fa601048882f849}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a5ccc8f8ea80fd1b0d6527af85b8da13c}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!add\+Pseudo\+Counts@{add\+Pseudo\+Counts}}
+\index{add\+Pseudo\+Counts@{add\+Pseudo\+Counts}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{add\+Pseudo\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+add\+Pseudo\+Counts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a5ccc8f8ea80fd1b0d6527af85b8da13c}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a01919ac1ab68a5420cedf747da0a56ff}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!add\+To\+Centroid@{add\+To\+Centroid}}
+\index{add\+To\+Centroid@{add\+To\+Centroid}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{add\+To\+Centroid}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+add\+To\+Centroid (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{m, }
+\item[{{\bf Position\+Weight\+Matrix}}]{pwm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a01919ac1ab68a5420cedf747da0a56ff}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_affcf048fc62fc2a720bc87b63b4028ee}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!centroid\+Of@{centroid\+Of}}
+\index{centroid\+Of@{centroid\+Of}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{centroid\+Of}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Weight\+Matrix} broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+centroid\+Of (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Position\+Weight\+Matrix} $>$}]{pwm\+Set}
+\end{DoxyParamCaption}
+) throws Illegal\+Argument\+Exception}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_affcf048fc62fc2a720bc87b63b4028ee}
+Computes the euclidean centroid, it may not be the formal centroid for different metrics but intuitively the average counts should provide a good cluster representative which is what this method intends to return 
+\begin{DoxyParams}{Parameters}
+{\em pwm\+Set} & -\/ Collection of pwms from which to compute the centroid0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The euclidean centroid 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & -\/ When not all P\+W\+Ms have the same dimension. \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a8dbc8707e7fd3c12d2264d80ecf20d36}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!compute\+Score\+Distribution@{compute\+Score\+Distribution}}
+\index{compute\+Score\+Distribution@{compute\+Score\+Distribution}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{compute\+Score\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Double$>$ broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+compute\+Score\+Distribution (
+\begin{DoxyParamCaption}
+\item[{float}]{background\+A, }
+\item[{float}]{background\+C, }
+\item[{float}]{background\+G, }
+\item[{float}]{background\+T, }
+\item[{int}]{sample\+Size}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a8dbc8707e7fd3c12d2264d80ecf20d36}
+Compute Distribution of scores for motif.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+{\em is\+Num\+Seq} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a1793deced98122752214cacdfef0a1d4}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!copy@{copy}}
+\index{copy@{copy}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Weight\+Matrix} broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a1793deced98122752214cacdfef0a1d4}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a566b285edf5ae045f8af3ed12a0eb549}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!create\+Iso\+P\+W\+M@{create\+Iso\+P\+W\+M}}
+\index{create\+Iso\+P\+W\+M@{create\+Iso\+P\+W\+M}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{create\+Iso\+P\+W\+M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Weight\+Matrix} broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+create\+Iso\+P\+W\+M (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{column, }
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a566b285edf5ae045f8af3ed12a0eb549}
+Creates a P\+W\+M of similar dimension to this P\+W\+M but with all columns set to the given vector, usually a neutral mutation vector. 
+\begin{DoxyParams}{Parameters}
+{\em column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a42ff0497e33c079daf6a5181855a5859}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!distance\+From@{distance\+From}}
+\index{distance\+From@{distance\+From}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{distance\+From}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+distance\+From (
+\begin{DoxyParamCaption}
+\item[{{\bf Position\+Weight\+Matrix}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a42ff0497e33c079daf6a5181855a5859}
+Distance between two P\+W\+Ms, uses the K\+L similarity 
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a96513be0b770e7216971489d55a5ed11}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!flat\+Weight\+Matrix@{flat\+Weight\+Matrix}}
+\index{flat\+Weight\+Matrix@{flat\+Weight\+Matrix}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{flat\+Weight\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+flat\+Weight\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{info\+Th}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a96513be0b770e7216971489d55a5ed11}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_ad0d1df880623b3436db55e212fe61486}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Align\+Dir@{get\+Align\+Dir}}
+\index{get\+Align\+Dir@{get\+Align\+Dir}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Align\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Align\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_ad0d1df880623b3436db55e212fe61486}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a13a21c2d909695d4bab505ca1743fb4e}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Consensus@{get\+Consensus}}
+\index{get\+Consensus@{get\+Consensus}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Consensus}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Consensus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a13a21c2d909695d4bab505ca1743fb4e}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a2fe7ed8e3b005e43dbe66784519cd37d}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Left\+High\+Info\+Start@{get\+Left\+High\+Info\+Start}}
+\index{get\+Left\+High\+Info\+Start@{get\+Left\+High\+Info\+Start}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Left\+High\+Info\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Left\+High\+Info\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a2fe7ed8e3b005e43dbe66784519cd37d}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a0fab2425599830972c542de9832541c2}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Log\+Likelihood@{get\+Log\+Likelihood}}
+\index{get\+Log\+Likelihood@{get\+Log\+Likelihood}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Log\+Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Log\+Likelihood (
+\begin{DoxyParamCaption}
+\item[{char\mbox{[}$\,$\mbox{]}}]{s}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a0fab2425599830972c542de9832541c2}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_aad374707533f2e09d28adb7b311d7800}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Log\+Likelihood@{get\+Log\+Likelihood}}
+\index{get\+Log\+Likelihood@{get\+Log\+Likelihood}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Log\+Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Log\+Likelihood (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{s}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_aad374707533f2e09d28adb7b311d7800}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a58cb3086adb212ddd79e3b3b4b595271}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Log\+Likelihood@{get\+Log\+Likelihood}}
+\index{get\+Log\+Likelihood@{get\+Log\+Likelihood}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Log\+Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Log\+Likelihood (
+\begin{DoxyParamCaption}
+\item[{short\mbox{[}$\,$\mbox{]}}]{encoded\+Sequence, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a58cb3086adb212ddd79e3b3b4b595271}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a9c4f72f0173e0b84b3e3a732d9de22fc}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a9c4f72f0173e0b84b3e3a732d9de22fc}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a2e65801b95229c2fb5977890aeb26d58}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Next\+Kmer@{get\+Next\+Kmer}}
+\index{get\+Next\+Kmer@{get\+Next\+Kmer}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Next\+Kmer}]{\setlength{\rightskip}{0pt plus 5cm}static int \mbox{[}$\,$\mbox{]} broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Next\+Kmer (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{kmer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a2e65801b95229c2fb5977890aeb26d58}
+Gets the next logical kmer. If k = 4 the first 5 4mers would be\+: (0,0,0,0), (0,0,0,1), (0,0,0,2), (0,0,0,3), (0,0,1,0). 
+\begin{DoxyParams}{Parameters}
+{\em kmer} & -\/ any valid kmer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Next logical kmer. 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a589b2f00b2f8f91f83aeb5852d941db3}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Num\+Col@{get\+Num\+Col}}
+\index{get\+Num\+Col@{get\+Num\+Col}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Num\+Col}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Num\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a589b2f00b2f8f91f83aeb5852d941db3}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_afd512d123d1e3ac15a2a6294f160024a}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Num\+End\+Pos\+To\+Erase@{get\+Num\+End\+Pos\+To\+Erase}}
+\index{get\+Num\+End\+Pos\+To\+Erase@{get\+Num\+End\+Pos\+To\+Erase}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Num\+End\+Pos\+To\+Erase}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Num\+End\+Pos\+To\+Erase (
+\begin{DoxyParamCaption}
+\item[{double}]{info\+Threshold}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_afd512d123d1e3ac15a2a6294f160024a}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a493b3736cd07a224265e66cd1609624c}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Num\+Start\+Pos\+To\+Erase@{get\+Num\+Start\+Pos\+To\+Erase}}
+\index{get\+Num\+Start\+Pos\+To\+Erase@{get\+Num\+Start\+Pos\+To\+Erase}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Num\+Start\+Pos\+To\+Erase}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Num\+Start\+Pos\+To\+Erase (
+\begin{DoxyParamCaption}
+\item[{double}]{info\+Threshold}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a493b3736cd07a224265e66cd1609624c}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a7f0911cdd2e978b07ab07c680415dfda}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!get\+Right\+High\+Info\+Start@{get\+Right\+High\+Info\+Start}}
+\index{get\+Right\+High\+Info\+Start@{get\+Right\+High\+Info\+Start}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{get\+Right\+High\+Info\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+get\+Right\+High\+Info\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a7f0911cdd2e978b07ab07c680415dfda}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a19c2e267b3adebb5a9e1a0c29c8c2be4}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!ic@{ic}}
+\index{ic@{ic}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{ic}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+ic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a19c2e267b3adebb5a9e1a0c29c8c2be4}
+Computes the information content of this position weith matris \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a4088289b8a3cd37348a5bfadb1f73677}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a4088289b8a3cd37348a5bfadb1f73677}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_ac5ec4f45ec2cbcc6a70671b6d97f304a}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!kullback\+Leiber@{kullback\+Leiber}}
+\index{kullback\+Leiber@{kullback\+Leiber}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{kullback\+Leiber}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+kullback\+Leiber (
+\begin{DoxyParamCaption}
+\item[{{\bf Position\+Weight\+Matrix}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_ac5ec4f45ec2cbcc6a70671b6d97f304a}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a3b83d9fb74cd24fa5256f0e66af3d353}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!match@{match}}
+\index{match@{match}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{match}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf B\+E\+D}$>$ broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+match (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\+Region}}]{region, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{background, }
+\item[{float}]{min\+Score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a3b83d9fb74cd24fa5256f0e66af3d353}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a519dd909700982492e6996c840263157}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!permute\+Columns@{permute\+Columns}}
+\index{permute\+Columns@{permute\+Columns}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{permute\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Weight\+Matrix} broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+permute\+Columns (
+\begin{DoxyParamCaption}
+\item[{boolean}]{preserve\+G\+C\+Dinucleotides}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a519dd909700982492e6996c840263157}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a75b281ac9f09c01684acecce3e27fad5}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!print\+Kmer@{print\+Kmer}}
+\index{print\+Kmer@{print\+Kmer}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{print\+Kmer}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+print\+Kmer (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{kmer}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a75b281ac9f09c01684acecce3e27fad5}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a05b298bc6d5b5424e961f8da9742d02f}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!print\+Refined\+Weight\+Matrix@{print\+Refined\+Weight\+Matrix}}
+\index{print\+Refined\+Weight\+Matrix@{print\+Refined\+Weight\+Matrix}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{print\+Refined\+Weight\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+print\+Refined\+Weight\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{info\+Threshold}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a05b298bc6d5b5424e961f8da9742d02f}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a094eef930d034e04706e1a9326355d5a}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!reverse\+Complement@{reverse\+Complement}}
+\index{reverse\+Complement@{reverse\+Complement}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{reverse\+Complement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Weight\+Matrix} broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+reverse\+Complement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a094eef930d034e04706e1a9326355d5a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a8817e48c123afc0c6c15a30686777a5e}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!set\+Align\+Pos@{set\+Align\+Pos}}
+\index{set\+Align\+Pos@{set\+Align\+Pos}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{set\+Align\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+set\+Align\+Pos (
+\begin{DoxyParamCaption}
+\item[{int}]{min\+Align\+Num}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a8817e48c123afc0c6c15a30686777a5e}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a430da298fb10b0fbb57e4e34f49668b8}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{set\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{List$<$ double\mbox{[}$\,$\mbox{]}$>$}]{sites}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a430da298fb10b0fbb57e4e34f49668b8}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a987b71b7f2d6cb595bee270cdf8e682a}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!set\+Matrix\+From\+Raw\+Data@{set\+Matrix\+From\+Raw\+Data}}
+\index{set\+Matrix\+From\+Raw\+Data@{set\+Matrix\+From\+Raw\+Data}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{set\+Matrix\+From\+Raw\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+set\+Matrix\+From\+Raw\+Data (
+\begin{DoxyParamCaption}
+\item[{List$<$ String\mbox{[}$\,$\mbox{]}$>$}]{unparsed\+Rows}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a987b71b7f2d6cb595bee270cdf8e682a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a52521dce3a38dcc4eb1734e886b5d870}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+set\+Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a52521dce3a38dcc4eb1734e886b5d870}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_adad83edc20996566232161bb9d5f253f}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!set\+Unparsed\+Row@{set\+Unparsed\+Row}}
+\index{set\+Unparsed\+Row@{set\+Unparsed\+Row}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{set\+Unparsed\+Row}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+set\+Unparsed\+Row (
+\begin{DoxyParamCaption}
+\item[{int}]{col\+Num, }
+\item[{String\mbox{[}$\,$\mbox{]}}]{unparsed\+Row}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_adad83edc20996566232161bb9d5f253f}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_aea292a2e74d006a0002b626ebc6c8732}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!trim\+By\+Information\+Content@{trim\+By\+Information\+Content}}
+\index{trim\+By\+Information\+Content@{trim\+By\+Information\+Content}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{trim\+By\+Information\+Content}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Weight\+Matrix} broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+trim\+By\+Information\+Content (
+\begin{DoxyParamCaption}
+\item[{double}]{ic}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_aea292a2e74d006a0002b626ebc6c8732}
+Trims this P\+W\+M by removing start end ending columns with information content lesser than given. 
+\begin{DoxyParams}{Parameters}
+{\em ic} & -\/ Columns below this ic at P\+W\+M edges will be trimmed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resulting P\+W\+M. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a01be23a72b73f927358f5ceb6dcb028f}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!write@{write}}
+\index{write@{write}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{Number\+Format}]{formatter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_a01be23a72b73f927358f5ceb6dcb028f}
+\hypertarget{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_accb2106d462932acb04df43c74781752}{\index{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}!write\+U\+N\+I\+P\+R\+O\+B\+E@{write\+U\+N\+I\+P\+R\+O\+B\+E}}
+\index{write\+U\+N\+I\+P\+R\+O\+B\+E@{write\+U\+N\+I\+P\+R\+O\+B\+E}!broad\+::core\+::motif\+::\+Position\+Weight\+Matrix@{broad\+::core\+::motif\+::\+Position\+Weight\+Matrix}}
+\subsubsection[{write\+U\+N\+I\+P\+R\+O\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+motif.\+Position\+Weight\+Matrix.\+write\+U\+N\+I\+P\+R\+O\+B\+E (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{Number\+Format}]{formatter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1motif_1_1_position_weight_matrix_accb2106d462932acb04df43c74781752}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/motif/\hyperlink{_position_weight_matrix_8java}{Position\+Weight\+Matrix.\+java}\end{DoxyCompactItemize}

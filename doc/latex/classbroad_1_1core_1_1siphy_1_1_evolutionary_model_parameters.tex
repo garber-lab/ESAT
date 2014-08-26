@@ -1,0 +1,176 @@
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters}{\section{broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters Class Reference}
+\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters}\index{broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters@{broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_ae7f0f1f0521a0bee0f33fe83f76bf7ea}{Evolutionary\+Model\+Parameters} (Phylogeny tree, double kappa, double mu, \hyperlink{class_jama_1_1_matrix}{Matrix} Q, \hyperlink{class_jama_1_1_matrix}{Matrix} pi)
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aafa5457188028b439cacd7ffb1cc6eb5}{Evolutionary\+Model\+Parameters} (File source\+File)  throws I\+O\+Exception, Parse\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters}{Evolutionary\+Model\+Parameters} \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a0734fcf5d3102b10ade0f7faf0f12177}{copy} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a58e922b9ac8c02c22373333ceffb5c39}{Evolutionary\+Model\+Parameters} (double kappa, double\mbox{[}$\,$\mbox{]} bg, double mu)
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aeb7a76e925192294fa01f8f5d1801743}{generate\+H\+K\+Y\+Q\+Matrix} (double kappa, double scaling\+Factor)
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a0ca5de9a56d88d2d911db3acd8d625ae}{write} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+String \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_abe0fc4e71fe369969dffc54e5423a05b}{to\+String} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a94dcc6d7e8cf0e6c79b209d881d2f07a}{get\+Background\+Nucleotide\+Freqs} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a92475abf78a66378148441778bb8a4df}{get\+Rate\+Matrix} ()
+\item 
+Phylogeny \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_ae59fa06d452658b1914c03f7b5f4c6d7}{get\+Tree} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a879f10543f5dc13ebad2d3aff1408433}{set\+Tree} (Phylogeny tree)
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a6a774077bdc8eb73e69479ff35044ae6}{set\+Rate\+Matrix} (\hyperlink{class_jama_1_1_matrix}{Matrix} Q)
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aa189c422aece425c64314dd859a8d606}{set\+Background\+Nucleotide\+Freqs} (\hyperlink{class_jama_1_1_matrix}{Matrix} dist)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_ae7f0f1f0521a0bee0f33fe83f76bf7ea}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!Evolutionary\+Model\+Parameters@{Evolutionary\+Model\+Parameters}}
+\index{Evolutionary\+Model\+Parameters@{Evolutionary\+Model\+Parameters}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{Evolutionary\+Model\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+Evolutionary\+Model\+Parameters (
+\begin{DoxyParamCaption}
+\item[{Phylogeny}]{tree, }
+\item[{double}]{kappa, }
+\item[{double}]{mu, }
+\item[{{\bf Matrix}}]{Q, }
+\item[{{\bf Matrix}}]{pi}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_ae7f0f1f0521a0bee0f33fe83f76bf7ea}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aafa5457188028b439cacd7ffb1cc6eb5}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!Evolutionary\+Model\+Parameters@{Evolutionary\+Model\+Parameters}}
+\index{Evolutionary\+Model\+Parameters@{Evolutionary\+Model\+Parameters}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{Evolutionary\+Model\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+Evolutionary\+Model\+Parameters (
+\begin{DoxyParamCaption}
+\item[{File}]{source\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aafa5457188028b439cacd7ffb1cc6eb5}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a58e922b9ac8c02c22373333ceffb5c39}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!Evolutionary\+Model\+Parameters@{Evolutionary\+Model\+Parameters}}
+\index{Evolutionary\+Model\+Parameters@{Evolutionary\+Model\+Parameters}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{Evolutionary\+Model\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+Evolutionary\+Model\+Parameters (
+\begin{DoxyParamCaption}
+\item[{double}]{kappa, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{bg, }
+\item[{double}]{mu}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a58e922b9ac8c02c22373333ceffb5c39}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a0734fcf5d3102b10ade0f7faf0f12177}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!copy@{copy}}
+\index{copy@{copy}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Evolutionary\+Model\+Parameters} broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a0734fcf5d3102b10ade0f7faf0f12177}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aeb7a76e925192294fa01f8f5d1801743}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!generate\+H\+K\+Y\+Q\+Matrix@{generate\+H\+K\+Y\+Q\+Matrix}}
+\index{generate\+H\+K\+Y\+Q\+Matrix@{generate\+H\+K\+Y\+Q\+Matrix}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{generate\+H\+K\+Y\+Q\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+generate\+H\+K\+Y\+Q\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{kappa, }
+\item[{double}]{scaling\+Factor}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aeb7a76e925192294fa01f8f5d1801743}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a94dcc6d7e8cf0e6c79b209d881d2f07a}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!get\+Background\+Nucleotide\+Freqs@{get\+Background\+Nucleotide\+Freqs}}
+\index{get\+Background\+Nucleotide\+Freqs@{get\+Background\+Nucleotide\+Freqs}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{get\+Background\+Nucleotide\+Freqs}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+get\+Background\+Nucleotide\+Freqs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a94dcc6d7e8cf0e6c79b209d881d2f07a}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a92475abf78a66378148441778bb8a4df}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!get\+Rate\+Matrix@{get\+Rate\+Matrix}}
+\index{get\+Rate\+Matrix@{get\+Rate\+Matrix}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{get\+Rate\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+get\+Rate\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a92475abf78a66378148441778bb8a4df}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_ae59fa06d452658b1914c03f7b5f4c6d7}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!get\+Tree@{get\+Tree}}
+\index{get\+Tree@{get\+Tree}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{get\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}Phylogeny broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+get\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_ae59fa06d452658b1914c03f7b5f4c6d7}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aa189c422aece425c64314dd859a8d606}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!set\+Background\+Nucleotide\+Freqs@{set\+Background\+Nucleotide\+Freqs}}
+\index{set\+Background\+Nucleotide\+Freqs@{set\+Background\+Nucleotide\+Freqs}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{set\+Background\+Nucleotide\+Freqs}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+set\+Background\+Nucleotide\+Freqs (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{dist}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_aa189c422aece425c64314dd859a8d606}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a6a774077bdc8eb73e69479ff35044ae6}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!set\+Rate\+Matrix@{set\+Rate\+Matrix}}
+\index{set\+Rate\+Matrix@{set\+Rate\+Matrix}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{set\+Rate\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+set\+Rate\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{Q}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a6a774077bdc8eb73e69479ff35044ae6}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a879f10543f5dc13ebad2d3aff1408433}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!set\+Tree@{set\+Tree}}
+\index{set\+Tree@{set\+Tree}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{set\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+set\+Tree (
+\begin{DoxyParamCaption}
+\item[{Phylogeny}]{tree}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a879f10543f5dc13ebad2d3aff1408433}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_abe0fc4e71fe369969dffc54e5423a05b}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_abe0fc4e71fe369969dffc54e5423a05b}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a0ca5de9a56d88d2d911db3acd8d625ae}{\index{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}!write@{write}}
+\index{write@{write}!broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters@{broad\+::core\+::siphy\+::\+Evolutionary\+Model\+Parameters}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Evolutionary\+Model\+Parameters.\+write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters_a0ca5de9a56d88d2d911db3acd8d625ae}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/siphy/\hyperlink{_evolutionary_model_parameters_8java}{Evolutionary\+Model\+Parameters.\+java}\end{DoxyCompactItemize}

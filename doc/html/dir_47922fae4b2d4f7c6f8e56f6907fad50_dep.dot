@@ -1,0 +1,24 @@
+digraph "java/umms/core" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_458b2861df51ce30708af314ce5674b1 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="umms" fontname="Helvetica", fontsize="10", URL="dir_458b2861df51ce30708af314ce5674b1.html"]
+  subgraph clusterdir_47922fae4b2d4f7c6f8e56f6907fad50 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_47922fae4b2d4f7c6f8e56f6907fad50.html"];
+    dir_47922fae4b2d4f7c6f8e56f6907fad50 [shape=plaintext label="core"];
+    dir_c952b701e6f18144bb2af1dac558cf7e [shape=box label="alignment" color="black" fillcolor="white" style="filled" URL="dir_c952b701e6f18144bb2af1dac558cf7e.html"];
+    dir_7f9c8a639ce9225e124ad15182dc5540 [shape=box label="annotation" color="red" fillcolor="white" style="filled" URL="dir_7f9c8a639ce9225e124ad15182dc5540.html"];
+    dir_2afe073035852ec518ba4fe2069665a5 [shape=box label="coordinatesystem" color="black" fillcolor="white" style="filled" URL="dir_2afe073035852ec518ba4fe2069665a5.html"];
+    dir_7a2655308722e0e2b710ccb1d3d1b47c [shape=box label="exception" color="black" fillcolor="white" style="filled" URL="dir_7a2655308722e0e2b710ccb1d3d1b47c.html"];
+    dir_e7530ac6d2025a63b2942f613eaf06fc [shape=box label="feature" color="black" fillcolor="white" style="filled" URL="dir_e7530ac6d2025a63b2942f613eaf06fc.html"];
+    dir_85aef23c9c24de023b2b5425dad6783c [shape=box label="general" color="black" fillcolor="white" style="filled" URL="dir_85aef23c9c24de023b2b5425dad6783c.html"];
+    dir_bb3c74126029dfe253b1c0f94d31f1c5 [shape=box label="model" color="red" fillcolor="white" style="filled" URL="dir_bb3c74126029dfe253b1c0f94d31f1c5.html"];
+    dir_053018677e1c8a8cea71f4c68a6b5e96 [shape=box label="readers" color="black" fillcolor="white" style="filled" URL="dir_053018677e1c8a8cea71f4c68a6b5e96.html"];
+    dir_09100bb816af3eb37515b8b47b5704fb [shape=box label="readFilters" color="black" fillcolor="white" style="filled" URL="dir_09100bb816af3eb37515b8b47b5704fb.html"];
+    dir_bdd34608548e77f0f3e28890698989e8 [shape=box label="scripture" color="red" fillcolor="white" style="filled" URL="dir_bdd34608548e77f0f3e28890698989e8.html"];
+    dir_c09fb6d44a07f86ecfec72293b13a5de [shape=box label="utils" color="black" fillcolor="white" style="filled" URL="dir_c09fb6d44a07f86ecfec72293b13a5de.html"];
+    dir_18af83a64b45f93e526a99decc1d2f92 [shape=box label="writers" color="black" fillcolor="white" style="filled" URL="dir_18af83a64b45f93e526a99decc1d2f92.html"];
+  }
+  }
+}

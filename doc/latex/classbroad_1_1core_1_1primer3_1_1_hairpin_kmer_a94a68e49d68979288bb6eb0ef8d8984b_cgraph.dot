@@ -1,0 +1,17 @@
+digraph "broad.core.primer3.HairpinKmer.compareTo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.primer3.Hairpin\lKmer.compareTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.primer3.Hairpin\lKmer.getPercentVariantsCovered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1primer3_1_1_hairpin_kmer.html#a2c34bc14ef01361fe29d89f287ba937e"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.primer3.Hairpin\lKmer.getRS8Score",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1primer3_1_1_hairpin_kmer.html#a41cdc00d4ed4473e37c7ee28020e6680"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.primer3.Hairpin\lKmer.getKmerStartPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1primer3_1_1_hairpin_kmer.html#addcf0acb79aed88e1534f13b138856f4"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.primer3.Hairpin\lKmer.getKmerEndPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1primer3_1_1_hairpin_kmer.html#a698c1efd7c65b2a97fb22ee4ce3e8ba3"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.primer3.Hairpin\lKmer.getKmerSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1primer3_1_1_hairpin_kmer.html#a95de1ea0f84761e1ddd1550815d5d026"];
+}

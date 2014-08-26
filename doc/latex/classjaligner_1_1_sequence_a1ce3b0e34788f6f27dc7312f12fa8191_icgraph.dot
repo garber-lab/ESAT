@@ -1,0 +1,13 @@
+digraph "jaligner.Sequence.getId"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jaligner.Sequence.getId",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="jaligner.formats.FASTA.format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1formats_1_1_f_a_s_t_a.html#a8f6730421aac56a0abd5d7c6a69c65da"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="jaligner.formats.FASTA.format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1formats_1_1_f_a_s_t_a.html#aead1ee5a5c7ed0807c2bd1a175cd56a8"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="jaligner.NeedlemanWunsch.align",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_needleman_wunsch.html#abd2b978d11744fa06d215cb57c6b4bbd"];
+}

@@ -1,0 +1,9 @@
+digraph "java/broad/pda/geneexpression/agilent/analysis" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f41cef3a2a07b14045e1ab3c3c685b01 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="agilent" fontname="Helvetica", fontsize="10", URL="dir_f41cef3a2a07b14045e1ab3c3c685b01.html"]
+  dir_9e996551fbad42ff6f198d07c19d1138 [shape=box, label="analysis", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9e996551fbad42ff6f198d07c19d1138.html"];
+  }
+}

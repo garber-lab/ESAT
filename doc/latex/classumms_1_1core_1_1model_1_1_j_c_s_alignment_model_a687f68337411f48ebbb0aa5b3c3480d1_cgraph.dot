@@ -1,0 +1,17 @@
+digraph "umms.core.model.JCSAlignmentModel.getMedianReadSize"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.JCSAlignment\lModel.getMedianReadSize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.JCSAlignment\lModel.getReadSizeDistribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#ac801ebc73dd4e2fc536214d62cfef81c"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.JCSAlignment\lModel.getReadIterator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#a0d7ac4c1ecb691d9e0207d40fca590f0"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.datastructures.\lJCSCache.getReads",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_j_c_s_cache.html#a6f13ea81079bb23079fb1a5072298618"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.math.Empirical\lDistribution.getAllDataValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_empirical_distribution.html#a87b93a0a097bfd7fa7b330b77075108e"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.annotation.Annotation.getName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#adf055d923b7239351f4dd5908a1eebeb"];
+}

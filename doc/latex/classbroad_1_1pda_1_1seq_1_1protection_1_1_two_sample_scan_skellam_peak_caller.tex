@@ -1,0 +1,235 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller}{\section{broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller}\index{broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Collection$<$ Annotation $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a91b82529c1440816b8ac2894162f2066}{filter\+Windows} (Collection$<$ Annotation $>$ windows)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ab416e62ed4dba266ac883e8d93726462}{write\+Results} (Collection$<$ Annotation $>$ windows, String out)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ac55e396e1b3dee42bc3babb6b06845ea}{write\+Result} (Collection$<$ Annotation $>$ windows, File\+Writer writer)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a1fd8a00c157f21f8fde2572a7b70887d}{get\+Poisson\+Lambda} (int region\+Length, double d, int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a31e1735c164e6abc0e4514648588fb06}{window\+Size})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a80993f62a710f524ecd2d07addd746e6}{E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+P\+V\+A\+L\+U\+E\+\_\+\+C\+U\+T\+O\+F\+F} = 0.\+01
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Annotation \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a621b926377563490f9b0136021ec0dc1}{trim\+Peak} (Gene window)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_afcdd15bdc7980bb781b093eae3951104}{get\+Skellam\+Pvalue} (double background\+Lambda, double signal\+Lambda, int background\+Count, int signal\+Count)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Map$<$ String, Map$<$ Gene, Double $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a7cbbb67ec1f14cb07882c912a4d93bc9}{background\+Scan\+Pvalues}
+\item 
+Scan\+Statistic\+Data\+Alignment\+Model \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a79e347f2a757fac64417c6ab5ef20fc8}{background\+Data}
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a1962b88663013c70dc8e16b06acca0fa}{background\+Name}
+\item 
+Transcriptome\+Space\+Alignment\+Model \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a0e010f18c5cc10693cb6efd34385fb41}{signal\+Data}
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad9eccd44514f233b9dbaa542e8cdc59d}{signal\+Name}
+\item 
+Map$<$ String, Collection$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a04a2a9a97512a37b8b24c458e11c6fe3}{genes}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a31e1735c164e6abc0e4514648588fb06}{window\+Size}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad9f06a4eaef0c155a2b6a908bed38223}{step\+Size}
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad1d91387c971684dd380551417f389d2}{p\+Value\+Cutoff\+Skellam}
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a9ca79f771b6e9a3e152f4bbea7dd9fac}{p\+Value\+Cutoff\+Scan}
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a9fc55834e17b7bb0b96ff309c4f2a161}{trim\+Peak\+By\+Quantile}
+\item 
+Transcriptome\+Space \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ab8b7bde00305f7d255fb889abd517750}{transcriptome\+Space}
+\item 
+Window\+Processor$<$ Count\+Score $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a2eb12fd217a0a6f6a7a733d9c525ccdb}{background\+Processor}
+\item 
+Window\+Processor\\*
+$<$ Scan\+Statistic\+Score $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a262dec7274dd2c19ec9854f60f873213}{signal\+Processor}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a83a05a92a106903b617200e58bc11e15}{M\+I\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+U\+N\+T} = 10
+\item 
+static Logger \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a89b166a4a5fecf9109737415c3e88bbc}{logger} = Logger.\+get\+Logger(Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+class.\+get\+Name())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a91b82529c1440816b8ac2894162f2066}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!filter\+Windows@{filter\+Windows}}
+\index{filter\+Windows@{filter\+Windows}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{filter\+Windows}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Annotation$>$ broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+filter\+Windows (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Annotation $>$}]{windows}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a91b82529c1440816b8ac2894162f2066}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a1fd8a00c157f21f8fde2572a7b70887d}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!get\+Poisson\+Lambda@{get\+Poisson\+Lambda}}
+\index{get\+Poisson\+Lambda@{get\+Poisson\+Lambda}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{get\+Poisson\+Lambda}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+get\+Poisson\+Lambda (
+\begin{DoxyParamCaption}
+\item[{int}]{region\+Length, }
+\item[{double}]{d, }
+\item[{int}]{window\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a1fd8a00c157f21f8fde2572a7b70887d}
+Given a total number of reads, a region length, and a window size, get the parameter of the Poisson distribution modeling the number of reads in a window of this size 
+\begin{DoxyParams}{Parameters}
+{\em region\+Length} & The total region length \\
+\hline
+{\em d} & The number of reads \\
+\hline
+{\em window\+Size} & The window size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lambda, the expected number of reads in the window under the null Poisson model 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_afcdd15bdc7980bb781b093eae3951104}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!get\+Skellam\+Pvalue@{get\+Skellam\+Pvalue}}
+\index{get\+Skellam\+Pvalue@{get\+Skellam\+Pvalue}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{get\+Skellam\+Pvalue}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+get\+Skellam\+Pvalue (
+\begin{DoxyParamCaption}
+\item[{double}]{background\+Lambda, }
+\item[{double}]{signal\+Lambda, }
+\item[{int}]{background\+Count, }
+\item[{int}]{signal\+Count}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_afcdd15bdc7980bb781b093eae3951104}
+Compute Skellam P-\/value of read counts in a region given the two parameters 
+\begin{DoxyParams}{Parameters}
+{\em background\+Lambda} & Poisson lambda for background sample \\
+\hline
+{\em signal\+Lambda} & Poisson lambda for signal sample \\
+\hline
+{\em background\+Count} & The count for background sample \\
+\hline
+{\em signal\+Count} & The count for signal sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The probability under the null hypothesis of observing a greater difference 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a621b926377563490f9b0136021ec0dc1}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!trim\+Peak@{trim\+Peak}}
+\index{trim\+Peak@{trim\+Peak}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{trim\+Peak}]{\setlength{\rightskip}{0pt plus 5cm}Annotation broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+trim\+Peak (
+\begin{DoxyParamCaption}
+\item[{Gene}]{window}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a621b926377563490f9b0136021ec0dc1}
+Trim the peak to max contiguous subsequence of counts above a certain quantile 
+\begin{DoxyParams}{Parameters}
+{\em window} & The peak region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trimmed peak 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ac55e396e1b3dee42bc3babb6b06845ea}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!write\+Result@{write\+Result}}
+\index{write\+Result@{write\+Result}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{write\+Result}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+write\+Result (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Annotation $>$}]{windows, }
+\item[{File\+Writer}]{writer}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ac55e396e1b3dee42bc3babb6b06845ea}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ab416e62ed4dba266ac883e8d93726462}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!write\+Results@{write\+Results}}
+\index{write\+Results@{write\+Results}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{write\+Results}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+write\+Results (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Annotation $>$}]{windows, }
+\item[{String}]{out}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ab416e62ed4dba266ac883e8d93726462}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a79e347f2a757fac64417c6ab5ef20fc8}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!background\+Data@{background\+Data}}
+\index{background\+Data@{background\+Data}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{background\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Scan\+Statistic\+Data\+Alignment\+Model broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+background\+Data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a79e347f2a757fac64417c6ab5ef20fc8}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a1962b88663013c70dc8e16b06acca0fa}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!background\+Name@{background\+Name}}
+\index{background\+Name@{background\+Name}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{background\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+background\+Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a1962b88663013c70dc8e16b06acca0fa}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a2eb12fd217a0a6f6a7a733d9c525ccdb}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!background\+Processor@{background\+Processor}}
+\index{background\+Processor@{background\+Processor}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{background\+Processor}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Processor$<$Count\+Score$>$ broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+background\+Processor\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a2eb12fd217a0a6f6a7a733d9c525ccdb}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a7cbbb67ec1f14cb07882c912a4d93bc9}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!background\+Scan\+Pvalues@{background\+Scan\+Pvalues}}
+\index{background\+Scan\+Pvalues@{background\+Scan\+Pvalues}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{background\+Scan\+Pvalues}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Map$<$Gene, Double$>$ $>$ broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+background\+Scan\+Pvalues\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a7cbbb67ec1f14cb07882c912a4d93bc9}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a80993f62a710f524ecd2d07addd746e6}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+P\+V\+A\+L\+U\+E\+\_\+\+C\+U\+T\+O\+F\+F@{E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+P\+V\+A\+L\+U\+E\+\_\+\+C\+U\+T\+O\+F\+F}}
+\index{E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+P\+V\+A\+L\+U\+E\+\_\+\+C\+U\+T\+O\+F\+F@{E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+P\+V\+A\+L\+U\+E\+\_\+\+C\+U\+T\+O\+F\+F}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+P\+V\+A\+L\+U\+E\+\_\+\+C\+U\+T\+O\+F\+F}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+P\+V\+A\+L\+U\+E\+\_\+\+C\+U\+T\+O\+F\+F = 0.\+01\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a80993f62a710f524ecd2d07addd746e6}
+Transcriptome wide scan P value cutoff for expression of gene \hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a04a2a9a97512a37b8b24c458e11c6fe3}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!genes@{genes}}
+\index{genes@{genes}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{genes}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<$Gene$>$ $>$ broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+genes\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a04a2a9a97512a37b8b24c458e11c6fe3}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a89b166a4a5fecf9109737415c3e88bbc}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!logger@{logger}}
+\index{logger@{logger}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+logger = Logger.\+get\+Logger(Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+class.\+get\+Name())\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a89b166a4a5fecf9109737415c3e88bbc}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a83a05a92a106903b617200e58bc11e15}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!M\+I\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+U\+N\+T@{M\+I\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+U\+N\+T}}
+\index{M\+I\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+U\+N\+T@{M\+I\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+U\+N\+T}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{M\+I\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+U\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+M\+I\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+U\+N\+T = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a83a05a92a106903b617200e58bc11e15}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a9ca79f771b6e9a3e152f4bbea7dd9fac}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!p\+Value\+Cutoff\+Scan@{p\+Value\+Cutoff\+Scan}}
+\index{p\+Value\+Cutoff\+Scan@{p\+Value\+Cutoff\+Scan}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{p\+Value\+Cutoff\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+p\+Value\+Cutoff\+Scan\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a9ca79f771b6e9a3e152f4bbea7dd9fac}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad1d91387c971684dd380551417f389d2}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!p\+Value\+Cutoff\+Skellam@{p\+Value\+Cutoff\+Skellam}}
+\index{p\+Value\+Cutoff\+Skellam@{p\+Value\+Cutoff\+Skellam}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{p\+Value\+Cutoff\+Skellam}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+p\+Value\+Cutoff\+Skellam\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad1d91387c971684dd380551417f389d2}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a0e010f18c5cc10693cb6efd34385fb41}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!signal\+Data@{signal\+Data}}
+\index{signal\+Data@{signal\+Data}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{signal\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Transcriptome\+Space\+Alignment\+Model broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+signal\+Data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a0e010f18c5cc10693cb6efd34385fb41}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad9eccd44514f233b9dbaa542e8cdc59d}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!signal\+Name@{signal\+Name}}
+\index{signal\+Name@{signal\+Name}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{signal\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+signal\+Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad9eccd44514f233b9dbaa542e8cdc59d}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a262dec7274dd2c19ec9854f60f873213}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!signal\+Processor@{signal\+Processor}}
+\index{signal\+Processor@{signal\+Processor}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{signal\+Processor}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Processor$<$Scan\+Statistic\+Score$>$ broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+signal\+Processor\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a262dec7274dd2c19ec9854f60f873213}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad9f06a4eaef0c155a2b6a908bed38223}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!step\+Size@{step\+Size}}
+\index{step\+Size@{step\+Size}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{step\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+step\+Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ad9f06a4eaef0c155a2b6a908bed38223}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ab8b7bde00305f7d255fb889abd517750}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!transcriptome\+Space@{transcriptome\+Space}}
+\index{transcriptome\+Space@{transcriptome\+Space}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{transcriptome\+Space}]{\setlength{\rightskip}{0pt plus 5cm}Transcriptome\+Space broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+transcriptome\+Space\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_ab8b7bde00305f7d255fb889abd517750}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a9fc55834e17b7bb0b96ff309c4f2a161}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!trim\+Peak\+By\+Quantile@{trim\+Peak\+By\+Quantile}}
+\index{trim\+Peak\+By\+Quantile@{trim\+Peak\+By\+Quantile}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{trim\+Peak\+By\+Quantile}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+trim\+Peak\+By\+Quantile\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a9fc55834e17b7bb0b96ff309c4f2a161}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a31e1735c164e6abc0e4514648588fb06}{\index{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}!window\+Size@{window\+Size}}
+\index{window\+Size@{window\+Size}!broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller}}
+\subsubsection[{window\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+window\+Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_two_sample_scan_skellam_peak_caller_a31e1735c164e6abc0e4514648588fb06}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/protection/\hyperlink{_two_sample_scan_skellam_peak_caller_8java}{Two\+Sample\+Scan\+Skellam\+Peak\+Caller.\+java}\end{DoxyCompactItemize}

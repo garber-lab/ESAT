@@ -1,0 +1,9 @@
+digraph "java/broad/pda/seq/rap/rna" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f319a9351526bf9df2b388f7d2ede6fa {
+    graph [ bgcolor="#ddddee", pencolor="black", label="rap" fontname="Helvetica", fontsize="10", URL="dir_f319a9351526bf9df2b388f7d2ede6fa.html"]
+  dir_b915d7c00085c615cb7139bc07ba0e29 [shape=box, label="rna", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b915d7c00085c615cb7139bc07ba0e29.html"];
+  }
+}

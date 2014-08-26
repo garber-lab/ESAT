@@ -1,0 +1,13 @@
+digraph "umms.core.writers.PairedEndWriter.convertInputToPairedEnd"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.writers.Paired\lEndWriter.convertInputToPairedEnd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.writers.Paired\lEndWriter.addRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1writers_1_1_paired_end_writer.html#a55e98abca6fad4207f826be2a82d8319"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.alignment.Alignment\lPair.hasEntries",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_alignment_pair.html#a2aa94dac5797f73522d15b24febbe137"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.writers.Paired\lEndWriter.close",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1writers_1_1_paired_end_writer.html#a5d5be508ea6ea765331fd61ec7ddcbdc"];
+}

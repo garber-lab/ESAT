@@ -1,0 +1,13 @@
+digraph "java/umms/core/scripture" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_47922fae4b2d4f7c6f8e56f6907fad50 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_47922fae4b2d4f7c6f8e56f6907fad50.html"]
+  subgraph clusterdir_bdd34608548e77f0f3e28890698989e8 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_bdd34608548e77f0f3e28890698989e8.html"];
+    dir_bdd34608548e77f0f3e28890698989e8 [shape=plaintext label="scripture"];
+    dir_a61ec76fc0923a6a03e6f1df2a0db00b [shape=box label="statistics" color="black" fillcolor="white" style="filled" URL="dir_a61ec76fc0923a6a03e6f1df2a0db00b.html"];
+  }
+  }
+}

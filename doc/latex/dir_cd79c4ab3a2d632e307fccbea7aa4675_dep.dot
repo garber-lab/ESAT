@@ -1,0 +1,9 @@
+digraph "java/broad/pda/seq/clip" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_40e28ab81d2798526c2fdce0497e5b74 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="seq" fontname="Helvetica", fontsize="10", URL="dir_40e28ab81d2798526c2fdce0497e5b74.html"]
+  dir_cd79c4ab3a2d632e307fccbea7aa4675 [shape=box, label="clip", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_cd79c4ab3a2d632e307fccbea7aa4675.html"];
+  }
+}

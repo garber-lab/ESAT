@@ -1,0 +1,23 @@
+digraph "umms.core.model.JCSAlignmentModel.FilteredIterator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.JCSAlignment\lModel.FilteredIterator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="net::sf::samtools::\lutil::CloseableIterator\l\< AlignmentCount \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node3 [label="umms.core.model.JCSAlignment\lModel.AlignmentCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_alignment_count.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" containedReads" ,fontname="Helvetica"];
+  Node4 [label="Collection\< umms.core.alignment.\lAlignment \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" read" ,fontname="Helvetica"];
+  Node5 [label="umms.core.alignment.Alignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1alignment_1_1_alignment.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="umms.core.annotation.Annotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Comparable\< Annotation \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" regionCS" ,fontname="Helvetica"];
+  Node8 [label="Collection\<?extends\l umms.core.feature.Window \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iter" ,fontname="Helvetica"];
+  Node9 [label="CloseableIterator\<\l umms.core.model.JCSAlignment\lModel.AlignmentCount \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

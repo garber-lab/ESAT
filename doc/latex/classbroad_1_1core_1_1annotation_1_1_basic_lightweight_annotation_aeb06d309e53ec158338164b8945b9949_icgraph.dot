@@ -1,0 +1,17 @@
+digraph "broad.core.annotation.BasicLightweightAnnotation.setScore"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.Basic\lLightweightAnnotation.setScore",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.annotation.Basic\lGenomicAnnotation.BasicGenomicAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#aa1bb7dc02c29f06ed7ab80738d7f643e"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.BED.BED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d.html#a48c9b666d9b1d2bab7b4f1a20c49d795"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.annotation.BEDGraph.\lBEDGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d_graph.html#ab0a6299a368206fb375aff65b32b9369"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.annotation.GFF.GFF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#af6eec864fda16bb18f36c6fde1c067e2"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.annotation.Repeat\lMaskerAnnotation.RepeatMaskerAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation.html#aacaf139257b4dd1b4485e76141027df5"];
+}

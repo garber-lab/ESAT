@@ -1,0 +1,1403 @@
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation}{\section{umms.\+core.\+annotation.\+Annotation Interface Reference}
+\label{interfaceumms_1_1core_1_1annotation_1_1_annotation}\index{umms.\+core.\+annotation.\+Annotation@{umms.\+core.\+annotation.\+Annotation}}
+}
+
+
+Inheritance diagram for umms.\+core.\+annotation.\+Annotation\+:
+
+
+Collaboration diagram for umms.\+core.\+annotation.\+Annotation\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{enumumms_1_1core_1_1annotation_1_1_annotation_1_1_strand}{Strand}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a4fc0345d5a95dfb0bfd018cc0d9d400f}{get\+Start} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a26f021a7fa89d0cfd22f2ff2b7801388}{get\+S\+A\+M\+Start} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a51310d48912558d549d21cbf92ab946a}{get\+End} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad3de070378091d8ae6cad2d496abba22}{get\+S\+A\+M\+End} ()
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2dd53f6e6ab4a573c0e93ef42e223b93}{get\+Reference\+Name} ()
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab07edf07fd2182cd16bceb91ee6de35a}{get\+Chr} ()
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_adf055d923b7239351f4dd5908a1eebeb}{get\+Name} ()
+\item 
+\hyperlink{enumumms_1_1core_1_1annotation_1_1_annotation_1_1_strand}{Strand} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad5125f9609856d2a1b8e788664551558}{get\+Orientation} ()
+\item 
+\hyperlink{enumumms_1_1core_1_1annotation_1_1_annotation_1_1_strand}{Strand} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae43b57d64e5ca6c58123c695fa31bf34}{get\+Strand} ()
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa8997ebac18d2e6317446d322024023a}{has\+Orientation} ()
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa72d3cd6ea67627915291f116b777be3}{is\+Negative\+Strand} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2b259de4e354584df8ecd4c1b3db0c66}{num\+Blocks} ()
+\item 
+List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a1fc089c9a77adad8c174d36bf2452489}{get\+Blocks} ()
+\item 
+List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae9c7679b26d2925a739b72f16bc0a422}{get\+Blocks} (boolean oriented)
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5431a247302386cf5f607121fe256eb6}{length} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a19aad320398985fa78572524f5dc4f88}{get\+Size} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab59b20bf3914e24babf0df6907bfb557}{size} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a082064fbc61b16ca20c298473ed1b3cc}{get\+Length\+On\+Reference} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad11e657218df42bd003f432797e92f34}{get\+Oriented\+Start} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6c505cf912abeadd9d3647d0ee719ed2}{get\+Oriented\+End} ()
+\item 
+double \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a117f218fd9f4b0bbe5e183647c9d4826}{get\+Score} ()
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a796b34bf340d8ebe30937eb5b0b5d8d2}{is\+Unoriented} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a71683725c96fca10f0134a088643ec36}{get\+Reference\+Coordinate\+At\+Position} (int position\+In\+Annotation)
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad9091621cfc9cbcbdd479bb110977fde}{get\+Position\+At\+Reference\+Coordinate} (int reference\+Coordinate)
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6be0c715300cbcb96f2e85d7b6e1680d}{get\+Reference\+Coordinate\+At\+Position} (int position\+In\+Annotation, boolean ignore\+Orientation)
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a68215c51102c8d67dcbd2152d7ea84ac}{get\+Position\+At\+Reference\+Coordinate} (int reference\+Coordinate, boolean ignore\+Orientation)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae077ebc7788964176739ff85bf29b560}{set\+Start} (int start)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a149e821da8f19e0fad6c3a52edf61728}{set\+End} (int end)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad919607886c5447f5af908b286fba3ad}{set\+Orientation} (char orientation)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a23c9bf453b4bbc76f6b50e78cd73aa75}{set\+Orientation} (\hyperlink{enumumms_1_1core_1_1annotation_1_1_annotation_1_1_strand}{Strand} orientation)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6529e3f5bc1531639fe663f8ee5c0be2}{set\+Oriented\+Start} (int oriented\+Start)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a609c582828b96300a6ae44332c17a8e8}{set\+Oriented\+End} (int oriented\+End)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa6ddff9a7f3bcff152914299092545ff}{set\+Reference\+Name} (String ref\+Name)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a91fac76eec98277eca2e0a12d4b4fe77}{set\+Name} (String name)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa46bc7126d4e5f9df374c6525cfcee14}{set\+Score} (double score)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0515e1f20b4e9e913b4f7f329a6c11ad}{equals} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a66539fdbe07eb71d3a16d707250f5b60}{expand} (int delta\+Start, int delta\+End)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5542af76653dcba00bf9484a08039a3c}{trim} (int delta\+Start, int delta\+End)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3014cb6c724297b8bbccabaffff4bb3a}{shift} (int delta)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_aac56df2b60a55cc3d7615ec372584462}{move\+To\+Coordinate} (int coordinate\+In\+Reference)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a88efc6a83878d7af34c4a20786df29eb}{copy} ()
+\item 
+List$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2d8472bb1b89213dd4c77b2206287638}{disect} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} a)
+\item 
+List$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a294f182c91c0050e0564de42133317c1}{disect} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ disectors)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a29b9933703e5f5cd6c57b28499a20c87}{minus} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3b98ec0dfc3dc2c0a78c9a7296e8a733}{minus} (Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ others)
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a24f9c0d8338789f72d5a8be63affd084}{get\+Distance\+To} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6be4427ca02f0d1f6cfeb9481ba09e0f}{to\+U\+C\+S\+C} ()
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a9ba56d942136f2409cae3984782a62e5}{to\+B\+E\+D} ()
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a4024797788b289bd246d4a4caa743690}{to\+B\+E\+D} (int r, int g, int b)
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3f725a916b8a5b1b90f060eaead8e12a}{to\+Short\+B\+E\+D} ()
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2e4110ffa3f2cda020be360f08c79f4b}{to\+B\+E\+D\+Graph} ()
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab8039241bfdb54655ba3eebf3a50f14b}{get\+Full\+Info\+String} ()
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab0f817e7652b89e2775b988d73106f5c}{overlaps} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other, int buffer)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a53e69da353751c7ca0d920cc1ac9c3c1}{overlaps} (Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ others, int buffer)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ac97c3bcbabc8c80e7dae08bb4b071fa7}{overlaps} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2b6b7ada4065359221f0d0065d8dcd70}{overlaps} (Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ others)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ac45bd8fdeff51b608e53b5f83ec73278}{overlaps} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other, int buffer, boolean consider\+Orientation)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a397323ee5459241af0a5c11224e9623b}{overlaps} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other, boolean consider\+Orientation)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3d07efae311d47e7e74b61cbad4526db}{overlaps\+Stranded} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_af3b8df9d79d125c32fb4e9500662e819}{get\+Overlap} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_adfc487b0ab197c742bbbe39767272b79}{contains} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_acce146fb7b3d2613874d376b4b087505}{union} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3c009278c52746db8adece1e2f7f5d49}{intersect} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other)
+\item 
+List$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0734440cf08dab0a83fd2fac5a1f920c}{intersect} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ annotations)
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad31140b58428e5ceb60d15118d1a1a28}{compare\+To\+Annotation} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} b)
+\item 
+void \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae3d90b1fa243bbd4a39e95c9ada67f65}{stitch\+To} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} next)
+\item 
+String \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a23c41e6ebdec522b123bdb4ee2ea7b04}{to\+Cigar} ()
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a8a750c3d4650b0c450622bbb04b203d2}{fully\+Contains} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} annotation)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0c9c81ea4fbb301fc88aea73a98e5d53}{complement} ()
+\item 
+boolean \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_acbab7da90fcaf63d8fc5ae7fdf16124a}{equals} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} other, boolean use\+Orientation)
+\item 
+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a87f320553683b507e84278eb03ccacdb}{get\+Splice\+Connections} ()
+\item 
+int \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_afae7bf9cbe54b2703f8f633d1fc1936c}{get\+Midpoint} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad31140b58428e5ceb60d15118d1a1a28}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!compare\+To\+Annotation@{compare\+To\+Annotation}}
+\index{compare\+To\+Annotation@{compare\+To\+Annotation}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{compare\+To\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+compare\+To\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{b}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad31140b58428e5ceb60d15118d1a1a28}
+Should behave like compare\+To for a basic annotation 
+\begin{DoxyParams}{Parameters}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a6526db819c6e715c4b0dfe50a2750b11}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0c9c81ea4fbb301fc88aea73a98e5d53}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!complement@{complement}}
+\index{complement@{complement}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{complement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Annotation.\+complement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0c9c81ea4fbb301fc88aea73a98e5d53}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classumms_1_1core_1_1annotation_1_1_compound_interval}{Compound\+Interval} containing the gaps between the blocks in this annotation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a4e365680579c67297f191e9fcd804b02}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_adfc487b0ab197c742bbbe39767272b79}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!contains@{contains}}
+\index{contains@{contains}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_adfc487b0ab197c742bbbe39767272b79}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the blocks of other are fully contained within the blocks of this object 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a25d8463822c9b3236fce57bef3e3cf2a}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a88efc6a83878d7af34c4a20786df29eb}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!copy@{copy}}
+\index{copy@{copy}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Annotation.\+copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a88efc6a83878d7af34c4a20786df29eb}
+\begin{DoxyReturn}{Returns}
+A deep clone of this \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} object 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_gene_a682fa39fb20128063873191be423331d}{umms.\+core.\+annotation.\+Gene}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_aafaa36eb94c730a1325e356a519e8e09}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2d8472bb1b89213dd4c77b2206287638}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!disect@{disect}}
+\index{disect@{disect}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{disect}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Annotation}$>$ umms.\+core.\+annotation.\+Annotation.\+disect (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2d8472bb1b89213dd4c77b2206287638}
+Fragments the current annotation if it overlaps the provided one. it returns an empty list if this annotation does not overlap the one passed in.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}} & annotation to disect the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List$<$\+Annotation$>$ of the disected annotations, an empty list is returned if the annotations do not overlap. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a4768d36c78bd82536d6ae685850426c0}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_a500d51a415b92e638ab83723af56dff0}{broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a294f182c91c0050e0564de42133317c1}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!disect@{disect}}
+\index{disect@{disect}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{disect}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Annotation}$>$ umms.\+core.\+annotation.\+Annotation.\+disect (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{disectors}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a294f182c91c0050e0564de42133317c1}
+Fragments the current annotation if it overlaps the provided ones. It returns a list with one component (this annotation) if no annotation in the provided list overlaps the discted annotaion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em List$<$\+Genomic\+Annotation$>$} & {\bfseries sorted} annotations with which to disect the current one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List$<$\+Genomic\+Annotation$>$ of the disected annotations, a list just this annotation is returned if the annotations do not overlap. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a08d97bbef24404d5d61ab735a717e0fd}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_a84d5b1f3fb2649e5ea53442edebd65b3}{broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0515e1f20b4e9e913b4f7f329a6c11ad}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!equals@{equals}}
+\index{equals@{equals}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0515e1f20b4e9e913b4f7f329a6c11ad}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1alignment_1_1_single_end_alignment_a9c8b841588c9e0b666bcc31c113971b2}{umms.\+core.\+alignment.\+Single\+End\+Alignment}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a75b34b801266035d089bbeb096e38fd1}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_acbab7da90fcaf63d8fc5ae7fdf16124a}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!equals@{equals}}
+\index{equals@{equals}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other, }
+\item[{boolean}]{use\+Orientation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_acbab7da90fcaf63d8fc5ae7fdf16124a}
+Test whether two annotations are equal regardless of whether the orientation are the same 
+\begin{DoxyParams}{Parameters}
+{\em other} & The annotation to test equality to \\
+\hline
+{\em use\+Orientation} & true=ensure strands match false=O\+K if strands dont match \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a3f56f9b35bdf057ce00672619e1d5b3a}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a66539fdbe07eb71d3a16d707250f5b60}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!expand@{expand}}
+\index{expand@{expand}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{expand}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+expand (
+\begin{DoxyParamCaption}
+\item[{int}]{delta\+Start, }
+\item[{int}]{delta\+End}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a66539fdbe07eb71d3a16d707250f5b60}
+Expand annotation by a set number of bases, taking into account blocks 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Start} & positive extends the gene. \\
+\hline
+{\em delta\+End} & positive extends the gene. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_acd6bf20781f96c5739491d77f4d3bb97}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a8a750c3d4650b0c450622bbb04b203d2}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!fully\+Contains@{fully\+Contains}}
+\index{fully\+Contains@{fully\+Contains}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{fully\+Contains}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+fully\+Contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a8a750c3d4650b0c450622bbb04b203d2}
+Test whether the annotation is fully contained in this 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_ab50e2e0eed534b4f5687c7f14ea4a53b}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a1fc089c9a77adad8c174d36bf2452489}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Blocks@{get\+Blocks}}
+\index{get\+Blocks@{get\+Blocks}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}List$<$? extends {\bf Annotation}$>$ umms.\+core.\+annotation.\+Annotation.\+get\+Blocks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a1fc089c9a77adad8c174d36bf2452489}
+\begin{DoxyReturn}{Returns}
+list of blocks in coordinate order 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a59ef0358ee04952f6ddd2c2bd4e448f7}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d_a695ef7ec4841b35e0b5decd4c3fa1e79}{broad.\+core.\+annotation.\+B\+E\+D}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation_a6ffd3db0115b9db800bafe115aba87ea}{broad.\+core.\+annotation.\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae9c7679b26d2925a739b72f16bc0a422}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Blocks@{get\+Blocks}}
+\index{get\+Blocks@{get\+Blocks}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}List$<$? extends {\bf Annotation}$>$ umms.\+core.\+annotation.\+Annotation.\+get\+Blocks (
+\begin{DoxyParamCaption}
+\item[{boolean}]{oriented}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae9c7679b26d2925a739b72f16bc0a422}
+
+\begin{DoxyParams}{Parameters}
+{\em oriented} & set to true if the list should be ordered according to the annotation orientation and by position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_ab25d0e3c56d554e3426bf2d3ecf9d7c8}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab07edf07fd2182cd16bceb91ee6de35a}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Chr@{get\+Chr}}
+\index{get\+Chr@{get\+Chr}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+get\+Chr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab07edf07fd2182cd16bceb91ee6de35a}
+\begin{DoxyReturn}{Returns}
+name of the reference sequence 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a389ee80e6e6d04b7cbd55b1c533378e4}{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}, \hyperlink{classumms_1_1core_1_1alignment_1_1_single_end_alignment_a52638f714aa84c73b0ef79e02bd9390b}{umms.\+core.\+alignment.\+Single\+End\+Alignment}, \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a156e2c6d3a8d3d7d9b8f50af90d0a0c2}{umms.\+core.\+alignment.\+Alignment}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_abe1735bf83ddb3aae45c734149c50eb1}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a24f9c0d8338789f72d5a8be63affd084}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Distance\+To@{get\+Distance\+To}}
+\index{get\+Distance\+To@{get\+Distance\+To}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Distance\+To}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Distance\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a24f9c0d8338789f72d5a8be63affd084}
+Calculates the distance to the another genomic annotation. \begin{DoxyReturn}{Returns}
+0 if the annotations overlap or the minimum between the edges otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_ac8df393754cf49172aadad4b254e5fda}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a51310d48912558d549d21cbf92ab946a}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+End@{get\+End}}
+\index{get\+End@{get\+End}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+End}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a51310d48912558d549d21cbf92ab946a}
+\begin{DoxyReturn}{Returns}
+end of the annotation (exclusive) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a843812c2305e69d131f2892b4b30b68e}{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}, \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a3fe8028115f96664761b63a9d16926cf}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_afac2284106875d0f138898ad59e399fb}{umms.\+core.\+alignment.\+Alignment}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a68b4fd4cda3321ffd91dd427df9b24a7}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab8039241bfdb54655ba3eebf3a50f14b}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Full\+Info\+String@{get\+Full\+Info\+String}}
+\index{get\+Full\+Info\+String@{get\+Full\+Info\+String}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Full\+Info\+String}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+get\+Full\+Info\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab8039241bfdb54655ba3eebf3a50f14b}
+\begin{DoxyReturn}{Returns}
+A string with no whitespace that includes all information about the annotation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a745f96c6e9f859a8f9be365f5916c11d}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a082064fbc61b16ca20c298473ed1b3cc}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Length\+On\+Reference@{get\+Length\+On\+Reference}}
+\index{get\+Length\+On\+Reference@{get\+Length\+On\+Reference}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Length\+On\+Reference}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Length\+On\+Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a082064fbc61b16ca20c298473ed1b3cc}
+\begin{DoxyReturn}{Returns}
+The distance between the start of the first block and end of the last on the reference sequence (including spaces between blocks) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_ae96fae62fc5573abad1e33cbcad29003}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_afae7bf9cbe54b2703f8f633d1fc1936c}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Midpoint@{get\+Midpoint}}
+\index{get\+Midpoint@{get\+Midpoint}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Midpoint}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Midpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_afae7bf9cbe54b2703f8f633d1fc1936c}
+This will return the position in the center of this annotation taking into account the blocked structure \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_acf96ec93c503abe161f40e346992fe68}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a52c42de2db42cf6b85583c4d83db8b0e}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_adf055d923b7239351f4dd5908a1eebeb}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_adf055d923b7239351f4dd5908a1eebeb}
+\begin{DoxyReturn}{Returns}
+the name of the annotation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a75317ca06eb03c9e96cf18862e652c35}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_af3d71fb0469ff283d3a4c4b539f58406}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad5125f9609856d2a1b8e788664551558}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Strand} umms.\+core.\+annotation.\+Annotation.\+get\+Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad5125f9609856d2a1b8e788664551558}
+\begin{DoxyReturn}{Returns}
+orientation or strand 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6c978b97041609bfee866d81de3db450}{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}, \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_aa5ccd2fae3fd4bd937ba202512db8030}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1179b529806740f0a0302f8cd1c44b2d}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation_a36373aa2575e846905204c09bf74f041}{broad.\+core.\+annotation.\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6c505cf912abeadd9d3647d0ee719ed2}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Oriented\+End@{get\+Oriented\+End}}
+\index{get\+Oriented\+End@{get\+Oriented\+End}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Oriented\+End}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Oriented\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6c505cf912abeadd9d3647d0ee719ed2}
+\begin{DoxyReturn}{Returns}
+the 3-\/prime end of the annotation, considering its orientation or strand 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_a7928fb714b0f90833b6d5852ac6ff207}{broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation}, \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a46f8f6a0ce8eae87fddbd2fa344ea050}{umms.\+core.\+annotation.\+Abstract\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation_aa4e0c451e63fc794926460facfe7732d}{broad.\+core.\+annotation.\+Genomic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad11e657218df42bd003f432797e92f34}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Oriented\+Start@{get\+Oriented\+Start}}
+\index{get\+Oriented\+Start@{get\+Oriented\+Start}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Oriented\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Oriented\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad11e657218df42bd003f432797e92f34}
+\begin{DoxyReturn}{Returns}
+the 5-\/prime end of the annotation, considering its orientation or strand 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_a54aa0c6d854d7f5935dbc70e9de0e2c9}{broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation}, \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a5c5ecd3b98fa57d233844b24ed04637d}{umms.\+core.\+annotation.\+Abstract\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation_ac6b1fdda54ca70227d23b707813a247c}{broad.\+core.\+annotation.\+Genomic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_af3b8df9d79d125c32fb4e9500662e819}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Overlap@{get\+Overlap}}
+\index{get\+Overlap@{get\+Overlap}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Overlap (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_af3b8df9d79d125c32fb4e9500662e819}
+Returns the number of bases that overlap between the two annotations. 
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a23906f94da29ba7bd51a057b822fe916}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad9091621cfc9cbcbdd479bb110977fde}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Position\+At\+Reference\+Coordinate@{get\+Position\+At\+Reference\+Coordinate}}
+\index{get\+Position\+At\+Reference\+Coordinate@{get\+Position\+At\+Reference\+Coordinate}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Position\+At\+Reference\+Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Position\+At\+Reference\+Coordinate (
+\begin{DoxyParamCaption}
+\item[{int}]{reference\+Coordinate}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad9091621cfc9cbcbdd479bb110977fde}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+Coordinate} & 0-\/based reference coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/based position in the \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, considering orientation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a68f1acbc77b4fcf0eb0220a5ccd79281}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a68215c51102c8d67dcbd2152d7ea84ac}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Position\+At\+Reference\+Coordinate@{get\+Position\+At\+Reference\+Coordinate}}
+\index{get\+Position\+At\+Reference\+Coordinate@{get\+Position\+At\+Reference\+Coordinate}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Position\+At\+Reference\+Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Position\+At\+Reference\+Coordinate (
+\begin{DoxyParamCaption}
+\item[{int}]{reference\+Coordinate, }
+\item[{boolean}]{ignore\+Orientation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a68215c51102c8d67dcbd2152d7ea84ac}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_ae69c53e957652448229c91fc0e56fa73}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a71683725c96fca10f0134a088643ec36}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Reference\+Coordinate\+At\+Position@{get\+Reference\+Coordinate\+At\+Position}}
+\index{get\+Reference\+Coordinate\+At\+Position@{get\+Reference\+Coordinate\+At\+Position}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Reference\+Coordinate\+At\+Position}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Reference\+Coordinate\+At\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{position\+In\+Annotation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a71683725c96fca10f0134a088643ec36}
+
+\begin{DoxyParams}{Parameters}
+{\em position\+In\+Annotation} & 0-\/based position in the \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/based reference coordinate at the specified position, considering orientation. N\+O\+T\+E\+: position\+In\+Annotation=0 for a negative-\/strand annotation will match \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a51310d48912558d549d21cbf92ab946a}{get\+End()} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_afe9d6ee4987afb23a573988a3bb922fd}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6be0c715300cbcb96f2e85d7b6e1680d}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Reference\+Coordinate\+At\+Position@{get\+Reference\+Coordinate\+At\+Position}}
+\index{get\+Reference\+Coordinate\+At\+Position@{get\+Reference\+Coordinate\+At\+Position}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Reference\+Coordinate\+At\+Position}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Reference\+Coordinate\+At\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{position\+In\+Annotation, }
+\item[{boolean}]{ignore\+Orientation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6be0c715300cbcb96f2e85d7b6e1680d}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a97c73f4d65360b36306293e770c16f2a}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2dd53f6e6ab4a573c0e93ef42e223b93}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Reference\+Name@{get\+Reference\+Name}}
+\index{get\+Reference\+Name@{get\+Reference\+Name}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Reference\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+get\+Reference\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2dd53f6e6ab4a573c0e93ef42e223b93}
+\begin{DoxyReturn}{Returns}
+name of the reference sequence 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_aabdddcc39fc1c200ede2a7b72987127a}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad3de070378091d8ae6cad2d496abba22}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+S\+A\+M\+End@{get\+S\+A\+M\+End}}
+\index{get\+S\+A\+M\+End@{get\+S\+A\+M\+End}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+S\+A\+M\+End}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+S\+A\+M\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad3de070378091d8ae6cad2d496abba22}
+Returns the start position of this window into S\+A\+M coordinate space S\+A\+M coordinates are 1-\/based and inclusive whereas all of our objects are 0-\/based exclusive \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_abf8179bf648101ed67eca28075e73a9e}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a26f021a7fa89d0cfd22f2ff2b7801388}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+S\+A\+M\+Start@{get\+S\+A\+M\+Start}}
+\index{get\+S\+A\+M\+Start@{get\+S\+A\+M\+Start}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+S\+A\+M\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+S\+A\+M\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a26f021a7fa89d0cfd22f2ff2b7801388}
+Returns the start position of this annotation into S\+A\+M coordinate space S\+A\+M coordinates are 1-\/based and inclusive whereas all of our objects are 0-\/based exclusive \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a282494d138b1c62cc03b6202d1ddddef}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a117f218fd9f4b0bbe5e183647c9d4826}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+annotation.\+Annotation.\+get\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a117f218fd9f4b0bbe5e183647c9d4826}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a9701cbbb370ff99a7436068616bf7f27}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a09f0b0f3e4eab4d2ed93ffeb7419646d}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_ad035b618294c2b18a553049446b814f5}{broad.\+pda.\+datastructures.\+Alignments}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a1331acfee9aa44b1987937f227be0885}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a19aad320398985fa78572524f5dc4f88}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a19aad320398985fa78572524f5dc4f88}
+\begin{DoxyReturn}{Returns}
+same as \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab59b20bf3914e24babf0df6907bfb557}{size()}; 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_gene_a9e791756126fb65d791fe6c3620535b8}{umms.\+core.\+annotation.\+Gene}, \hyperlink{classumms_1_1core_1_1feature_1_1_gene_window_a62c44cfc68a5776841b9c1405720051b}{umms.\+core.\+feature.\+Gene\+Window}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a502d642ef35b9ef95d88156fe0c0114d}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a87f320553683b507e84278eb03ccacdb}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Splice\+Connections@{get\+Splice\+Connections}}
+\index{get\+Splice\+Connections@{get\+Splice\+Connections}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Splice\+Connections}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Annotation}$>$ umms.\+core.\+annotation.\+Annotation.\+get\+Splice\+Connections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a87f320553683b507e84278eb03ccacdb}
+This will return a collection of splice junctions This is not the same as all gaps, it will only return splice junctions \begin{DoxyReturn}{Returns}
+A collection of splice junctions 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a8de58e046b212813b450d383e0f6c8e2}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{classumms_1_1core_1_1alignment_1_1_single_end_alignment_af9a4e3fc1eceb88258782e785dcc3d92}{umms.\+core.\+alignment.\+Single\+End\+Alignment}, and \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a559c79b4aa45eeec28c95d5336dc096e}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a4fc0345d5a95dfb0bfd018cc0d9d400f}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Start@{get\+Start}}
+\index{get\+Start@{get\+Start}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+get\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a4fc0345d5a95dfb0bfd018cc0d9d400f}
+\begin{DoxyReturn}{Returns}
+start of the annotation (inclusive) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a99f17f8d510ad2798e2c0b5b886df2bc}{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}, \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a2f52387ec04cec413c4fea644ad6dd9f}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a62c8d52837fefe4dec37dc0a550751b9}{umms.\+core.\+alignment.\+Alignment}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa09c2220d181284077c5c020f2721b63}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae43b57d64e5ca6c58123c695fa31bf34}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!get\+Strand@{get\+Strand}}
+\index{get\+Strand@{get\+Strand}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{get\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Strand} umms.\+core.\+annotation.\+Annotation.\+get\+Strand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae43b57d64e5ca6c58123c695fa31bf34}
+\begin{DoxyReturn}{Returns}
+orientation or strand 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_g_f_f_a55a7daa043957ff87c4fd2d93c5b7447}{broad.\+core.\+annotation.\+G\+F\+F}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a3a129fd352007aff4aa44b2a785f6477}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa8997ebac18d2e6317446d322024023a}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!has\+Orientation@{has\+Orientation}}
+\index{has\+Orientation@{has\+Orientation}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{has\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+has\+Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa8997ebac18d2e6317446d322024023a}
+\begin{DoxyReturn}{Returns}
+true if strand is known 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_ac7896752c32f77675d20df424576105b}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3c009278c52746db8adece1e2f7f5d49}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!intersect@{intersect}}
+\index{intersect@{intersect}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Annotation.\+intersect (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3c009278c52746db8adece1e2f7f5d49}
+Returns the result of intersecting this instance with another 
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns null if there is no intersection 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a9dc464c6ce3b4805fde6ddcb5fc9745c}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0734440cf08dab0a83fd2fac5a1f920c}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!intersect@{intersect}}
+\index{intersect@{intersect}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Annotation}$>$ umms.\+core.\+annotation.\+Annotation.\+intersect (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a0734440cf08dab0a83fd2fac5a1f920c}
+Returns the result of intersecting this instance with a list of annotations, with one (possibly blocked) intersection \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} for each provided annotation 
+\begin{DoxyParams}{Parameters}
+{\em other} & annotations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of intersections or empty list if none 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_afa78e8b538cea72c9b378e60662efac5}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa72d3cd6ea67627915291f116b777be3}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!is\+Negative\+Strand@{is\+Negative\+Strand}}
+\index{is\+Negative\+Strand@{is\+Negative\+Strand}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{is\+Negative\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+is\+Negative\+Strand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa72d3cd6ea67627915291f116b777be3}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_gene_a64f4da8582b66df16ffdf4f10d189e06}{umms.\+core.\+annotation.\+Gene}, \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af37e974bc3b52387663422c762994f94}{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}, \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_ac6754f0229f8ed7e7b44d584a07f6dae}{umms.\+core.\+alignment.\+Alignment}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a4e1da04a01deed1a4b6036a36e24b86e}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a796b34bf340d8ebe30937eb5b0b5d8d2}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!is\+Unoriented@{is\+Unoriented}}
+\index{is\+Unoriented@{is\+Unoriented}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{is\+Unoriented}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+is\+Unoriented (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a796b34bf340d8ebe30937eb5b0b5d8d2}
+\begin{DoxyReturn}{Returns}
+false if the annotation is not in either negative or positive orientation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a60bb0d08360fd4bce2974c8aeae80cab}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5431a247302386cf5f607121fe256eb6}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!length@{length}}
+\index{length@{length}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5431a247302386cf5f607121fe256eb6}
+\begin{DoxyReturn}{Returns}
+length of the \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}; if it has blocks, the gaps between blocks are not included 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a7cdf318c0a172123e809e40248b03af4}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a3a88df9b3819805512b53a4c054785c9}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_a1e008aad6fcf252184b0b623ac992ac3}{broad.\+pda.\+datastructures.\+Alignments}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a25da9936b0e579e27596aa88f25d78cc}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a29b9933703e5f5cd6c57b28499a20c87}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!minus@{minus}}
+\index{minus@{minus}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{minus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Annotation.\+minus (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a29b9933703e5f5cd6c57b28499a20c87}
+Returns the difference (all regions in this genomic annotation not in the given other annotation) between this genomic annotation and the one
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & -\/ the annotations to take the difference against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A blocked annotation of the resulting difference. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a065db388244cee9269d0ee03a7c76f42}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3b98ec0dfc3dc2c0a78c9a7296e8a733}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!minus@{minus}}
+\index{minus@{minus}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{minus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Annotation.\+minus (
+\begin{DoxyParamCaption}
+\item[{Collection$<$?extends {\bf Annotation} $>$}]{others}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3b98ec0dfc3dc2c0a78c9a7296e8a733}
+Returns the difference (all regions in this genomic annotation not in the given list) between this genomic annotation and the given list
+
+
+\begin{DoxyParams}{Parameters}
+{\em others} & -\/ the annotations to take the difference against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A blocked annotation of the resulting difference. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a73b11db561f2ff7d438967242678c8c9}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_aac56df2b60a55cc3d7615ec372584462}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!move\+To\+Coordinate@{move\+To\+Coordinate}}
+\index{move\+To\+Coordinate@{move\+To\+Coordinate}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{move\+To\+Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+move\+To\+Coordinate (
+\begin{DoxyParamCaption}
+\item[{int}]{coordinate\+In\+Reference}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_aac56df2b60a55cc3d7615ec372584462}
+Move an annotation, preserving the relationships between its blocks, to a new coordinate. 
+\begin{DoxyParams}{Parameters}
+{\em coordinate\+In\+Reference} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a2e654b6c118a9b3cf6b728737f9a1b47}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af4cbbce6715e864c1155fd105d1d853d}{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2b259de4e354584df8ecd4c1b3db0c66}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!num\+Blocks@{num\+Blocks}}
+\index{num\+Blocks@{num\+Blocks}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{num\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+num\+Blocks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2b259de4e354584df8ecd4c1b3db0c66}
+\begin{DoxyReturn}{Returns}
+number of blocks in the \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a369462b8ed7a0913747b21ca43e25366}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab0f817e7652b89e2775b988d73106f5c}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{overlaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+overlaps (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other, }
+\item[{int}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab0f817e7652b89e2775b988d73106f5c}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & -\/ other genomic annotation \\
+\hline
+{\em buffer} & if the overlap is within buffer they will be considered overlapping even if they do not overlap within their original boundaries. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if they overlap in this extended definition, not considering orientation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a3717e1eafa22cc503d7b2314687c1858}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a53e69da353751c7ca0d920cc1ac9c3c1}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{overlaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+overlaps (
+\begin{DoxyParamCaption}
+\item[{Collection$<$?extends {\bf Annotation} $>$}]{others, }
+\item[{int}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a53e69da353751c7ca0d920cc1ac9c3c1}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & -\/ other genomic annotation \\
+\hline
+{\em buffer} & if the overlap is within buffer they will be considered overlapping even if they do not overlap within their original boundaries. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if they overlap in this extended definition, not considering orientation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_aaa261feb92b909750aa4c6b1484682ce}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a83a10370900d5466d41781ef72a453a0}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ac97c3bcbabc8c80e7dae08bb4b071fa7}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{overlaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+overlaps (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ac97c3bcbabc8c80e7dae08bb4b071fa7}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Genomic\+Annotation to check of overlap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the current instance overlaps with the other one, not considering orientation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_aad9f64a8f961a115d390670502a692de}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2b6b7ada4065359221f0d0065d8dcd70}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{overlaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+overlaps (
+\begin{DoxyParamCaption}
+\item[{Collection$<$?extends {\bf Annotation} $>$}]{others}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2b6b7ada4065359221f0d0065d8dcd70}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Genomic\+Annotations to check of overlap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the current instance overlaps with the other one, not considering orientation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a8bcdc6badce8dafaee2e128b4cbc2266}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a8b134adaed0310b81d3c4c14b97e53f3}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ac45bd8fdeff51b608e53b5f83ec73278}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{overlaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+overlaps (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other, }
+\item[{int}]{buffer, }
+\item[{boolean}]{consider\+Orientation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ac45bd8fdeff51b608e53b5f83ec73278}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a91e6cee09bf0c878c84b018cf4e91576}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a397323ee5459241af0a5c11224e9623b}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{overlaps}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+overlaps (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other, }
+\item[{boolean}]{consider\+Orientation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a397323ee5459241af0a5c11224e9623b}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a76613aa9a763fce8a264a6fec08b995c}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3d07efae311d47e7e74b61cbad4526db}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!overlaps\+Stranded@{overlaps\+Stranded}}
+\index{overlaps\+Stranded@{overlaps\+Stranded}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{overlaps\+Stranded}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+annotation.\+Annotation.\+overlaps\+Stranded (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3d07efae311d47e7e74b61cbad4526db}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a6079d65ee2beb510f73bbae6c9ffd8d9}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a149e821da8f19e0fad6c3a52edf61728}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+End@{set\+End}}
+\index{set\+End@{set\+End}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+End}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+End (
+\begin{DoxyParamCaption}
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a149e821da8f19e0fad6c3a52edf61728}
+Sets a new end position. Will delete and/or truncate blocks if the new end position is less than the old one. Will extend the last block if the new end position is greater than old one. 
+\begin{DoxyParams}{Parameters}
+{\em new} & end position (ignoring orientation) of the annotation \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a8abb166f1057b8e7cd4230b4d6b91235}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_afa510429319c0efc147c5da446cab166}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a91fac76eec98277eca2e0a12d4b4fe77}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a91fac76eec98277eca2e0a12d4b4fe77}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the annotation \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a9cde990314fec1ff189b59542cc11809}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a28cc1992e605bbd4b743e8cf6562fe01}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad919607886c5447f5af908b286fba3ad}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Orientation@{set\+Orientation}}
+\index{set\+Orientation@{set\+Orientation}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Orientation (
+\begin{DoxyParamCaption}
+\item[{char}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad919607886c5447f5af908b286fba3ad}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a2d6aae9b87d1544ef70124ab587d436d}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a23c9bf453b4bbc76f6b50e78cd73aa75}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Orientation@{set\+Orientation}}
+\index{set\+Orientation@{set\+Orientation}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Orientation (
+\begin{DoxyParamCaption}
+\item[{{\bf Strand}}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a23c9bf453b4bbc76f6b50e78cd73aa75}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a2956f388c13ae52dda924547002a5393}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a609c582828b96300a6ae44332c17a8e8}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Oriented\+End@{set\+Oriented\+End}}
+\index{set\+Oriented\+End@{set\+Oriented\+End}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Oriented\+End}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Oriented\+End (
+\begin{DoxyParamCaption}
+\item[{int}]{oriented\+End}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a609c582828b96300a6ae44332c17a8e8}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a350aa437c56b6e7cc3230df3be7097b4}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6529e3f5bc1531639fe663f8ee5c0be2}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Oriented\+Start@{set\+Oriented\+Start}}
+\index{set\+Oriented\+Start@{set\+Oriented\+Start}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Oriented\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Oriented\+Start (
+\begin{DoxyParamCaption}
+\item[{int}]{oriented\+Start}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6529e3f5bc1531639fe663f8ee5c0be2}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_adb91d1844a2a1543aa854d9c43e5b937}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa6ddff9a7f3bcff152914299092545ff}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Reference\+Name@{set\+Reference\+Name}}
+\index{set\+Reference\+Name@{set\+Reference\+Name}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Reference\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Reference\+Name (
+\begin{DoxyParamCaption}
+\item[{String}]{ref\+Name}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa6ddff9a7f3bcff152914299092545ff}
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+Name} & name of the reference sequence / chromosome \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_aa116c039168d25b2c9c2f767f2bc44e4}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa46bc7126d4e5f9df374c6525cfcee14}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Score@{set\+Score}}
+\index{set\+Score@{set\+Score}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{score}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_aa46bc7126d4e5f9df374c6525cfcee14}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_ad04c091013feb60b8df504c4feef4cc4}{umms.\+core.\+annotation.\+Basic\+Annotation}, \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_aeb06d309e53ec158338164b8945b9949}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aff1d4a7789e8fee0258a91aaad66111d}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae077ebc7788964176739ff85bf29b560}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!set\+Start@{set\+Start}}
+\index{set\+Start@{set\+Start}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{set\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+set\+Start (
+\begin{DoxyParamCaption}
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae077ebc7788964176739ff85bf29b560}
+Sets a new start position. Will delete and/or truncate blocks if the new start position is greater than the old one. Will extend the first block if the new start position is less than old one. 
+\begin{DoxyParams}{Parameters}
+{\em new} & start position (ignoring orientation) of the annotation \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a3c5672991e6679950db460e22d727740}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_aa9663ad49b8a37f51e23928b94702d94}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3014cb6c724297b8bbccabaffff4bb3a}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!shift@{shift}}
+\index{shift@{shift}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{shift}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+shift (
+\begin{DoxyParamCaption}
+\item[{int}]{delta}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3014cb6c724297b8bbccabaffff4bb3a}
+Shift the positioning of the annotation by a given number of base pairs. 
+\begin{DoxyParams}{Parameters}
+{\em delta} & Positive or negative shift to apply to all blocks in the annotation.
+\begin{DoxyCode}
+delta=0 
+\end{DoxyCode}
+ leaves the annotation unchanged. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_abca261c2fa9c7851c23c2af956b77264}{umms.\+core.\+annotation.\+Basic\+Annotation}, and \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a49adbe8aa021ef96ac89ede1f05694df}{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab59b20bf3914e24babf0df6907bfb557}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!size@{size}}
+\index{size@{size}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Annotation.\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ab59b20bf3914e24babf0df6907bfb557}
+\begin{DoxyReturn}{Returns}
+same as \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5431a247302386cf5f607121fe256eb6}{length()} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_acfe7f4b4188dabba73d9d53de81f240f}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae3d90b1fa243bbd4a39e95c9ada67f65}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!stitch\+To@{stitch\+To}}
+\index{stitch\+To@{stitch\+To}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{stitch\+To}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+annotation.\+Annotation.\+stitch\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{next}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_ae3d90b1fa243bbd4a39e95c9ada67f65}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_a049964537bfd15dcb46d488f2f14b2f1}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a9ba56d942136f2409cae3984782a62e5}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!to\+B\+E\+D@{to\+B\+E\+D}}
+\index{to\+B\+E\+D@{to\+B\+E\+D}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{to\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+to\+B\+E\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a9ba56d942136f2409cae3984782a62e5}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_gene_a762b9e9936f467e0875ad79d9c98123c}{umms.\+core.\+annotation.\+Gene}, \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d_acfdb096276e1fcbc72d283817abeb012}{broad.\+core.\+annotation.\+B\+E\+D}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a279166461bf64f88b25d6b4b4b9da597}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a4024797788b289bd246d4a4caa743690}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!to\+B\+E\+D@{to\+B\+E\+D}}
+\index{to\+B\+E\+D@{to\+B\+E\+D}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{to\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+to\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a4024797788b289bd246d4a4caa743690}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_gene_a57ff1f0bf1cc10af85cb9c1b677d688d}{umms.\+core.\+annotation.\+Gene}, \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d_acf8673ace0b95319a72e7bf115d80f5b}{broad.\+core.\+annotation.\+B\+E\+D}, and \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_ae8bbe0c165fcc987b3abbc5e6f15e5db}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2e4110ffa3f2cda020be360f08c79f4b}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!to\+B\+E\+D\+Graph@{to\+B\+E\+D\+Graph}}
+\index{to\+B\+E\+D\+Graph@{to\+B\+E\+D\+Graph}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{to\+B\+E\+D\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+to\+B\+E\+D\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a2e4110ffa3f2cda020be360f08c79f4b}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_aab5866622a3c12689f20483337fdd750}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a23c41e6ebdec522b123bdb4ee2ea7b04}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!to\+Cigar@{to\+Cigar}}
+\index{to\+Cigar@{to\+Cigar}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{to\+Cigar}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+to\+Cigar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a23c41e6ebdec522b123bdb4ee2ea7b04}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a090108988c21b7cc0be0664d2bd2e32a}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3f725a916b8a5b1b90f060eaead8e12a}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!to\+Short\+B\+E\+D@{to\+Short\+B\+E\+D}}
+\index{to\+Short\+B\+E\+D@{to\+Short\+B\+E\+D}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{to\+Short\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+to\+Short\+B\+E\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3f725a916b8a5b1b90f060eaead8e12a}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_abe5604fd0661f81a1c5c5cc047092ff1}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6be4427ca02f0d1f6cfeb9481ba09e0f}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!to\+U\+C\+S\+C@{to\+U\+C\+S\+C}}
+\index{to\+U\+C\+S\+C@{to\+U\+C\+S\+C}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{to\+U\+C\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+annotation.\+Annotation.\+to\+U\+C\+S\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a6be4427ca02f0d1f6cfeb9481ba09e0f}
+\begin{DoxyReturn}{Returns}
+chr\+X\+:start-\/end 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_gene_ae7bf8a1fbe47d8ef9aaaf03640f49021}{umms.\+core.\+annotation.\+Gene}, \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation_a82903ca4b9f07f9b7bcafe7ef43afd82}{broad.\+core.\+annotation.\+Basic\+Lightweight\+Annotation}, \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a67579d07278b8bbffb10f66622fb3557}{umms.\+core.\+annotation.\+Abstract\+Annotation}, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments_afc4c11e6eb0231559d46afc7a61fa6da}{broad.\+pda.\+datastructures.\+Alignments}, and \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation_a3dd25602f0a402d70a9082bb43e479b8}{broad.\+core.\+annotation.\+Lightweight\+Genomic\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5542af76653dcba00bf9484a08039a3c}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!trim@{trim}}
+\index{trim@{trim}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{trim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Annotation.\+trim (
+\begin{DoxyParamCaption}
+\item[{int}]{delta\+Start, }
+\item[{int}]{delta\+End}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_a5542af76653dcba00bf9484a08039a3c}
+Trim annotation by a set number of bases, taking into account blocks. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Start} & (Positive) The number of bases to remove from the beginning of gene. e.\+g. delta\+Start=1 removes one base from the front \\
+\hline
+{\em delta\+End} & (Positive) The number of bases to remove from the end of gene. e.\+g. delta\+Start=1 removes one base fromt he end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_a7101ed1a3444755c06346f6bdb4bdbd0}{umms.\+core.\+annotation.\+Abstract\+Annotation}.
+
+\hypertarget{interfaceumms_1_1core_1_1annotation_1_1_annotation_acce146fb7b3d2613874d376b4b087505}{\index{umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}!union@{union}}
+\index{union@{union}!umms\+::core\+::annotation\+::\+Annotation@{umms\+::core\+::annotation\+::\+Annotation}}
+\subsubsection[{union}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Annotation.\+union (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{other}
+\end{DoxyParamCaption}
+)}}\label{interfaceumms_1_1core_1_1annotation_1_1_annotation_acce146fb7b3d2613874d376b4b087505}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+union of current instance and other object. If strands agree, then strand is set to that. If the strands conflict, strand is set to U\+N\+K\+N\+O\+W\+N 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation_ad7b14a1ab9f3f42d19ee495ed8e46985}{umms.\+core.\+annotation.\+Basic\+Annotation}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/annotation/\hyperlink{_annotation_8java}{Annotation.\+java}\end{DoxyCompactItemize}

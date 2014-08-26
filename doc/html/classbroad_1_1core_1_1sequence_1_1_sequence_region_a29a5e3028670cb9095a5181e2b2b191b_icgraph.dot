@@ -1,0 +1,13 @@
+digraph "broad.core.sequence.SequenceRegion.length"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.sequence.Sequence\lRegion.length",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.sequence.Sequence\lRegion.getLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a73892ab0e9b260c5f518481a47fdba82"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.pda.feature.genome.\lChromosome.insert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_chromosome.html#ab295584fcacd051aaf615cffc19376ea"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.sequence.Sequence\lRegion.getMidpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence_region.html#a2349bf9ffd84ef978ecc06e0db1804d4"];
+}

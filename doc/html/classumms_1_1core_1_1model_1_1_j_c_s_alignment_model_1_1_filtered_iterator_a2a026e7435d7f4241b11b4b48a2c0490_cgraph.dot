@@ -1,0 +1,12 @@
+digraph "umms.core.model.JCSAlignmentModel.FilteredIterator.FilteredIterator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.JCSAlignment\lModel.FilteredIterator.Filtered\lIterator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.model.JCSAlignment\lModel.FilteredIterator.hasNext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator.html#ac7b5d4d17b77a32c444767fd37397388"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.model.JCSAlignment\lModel.FilteredIterator.next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model_1_1_filtered_iterator.html#a2b0774eae119ff618bb8fc5b576fdf1e"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,19 @@
+digraph "broad.core.math.Statistics.variance"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.math.Statistics.variance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.math.Statistics.variance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_statistics.html#abf26a1820e793c65aff0a00dd6ad798d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.math.Statistics.z\lScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_statistics.html#a7727015f44a0d0af58641b6cf0f135bd"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.math.Statistics.z\lScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_statistics.html#adad3f85f957a335f895bff200b2ba4d2"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.math.Statistics.compute\lPermutedZScores",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_statistics.html#a1b6c59d31a5f6102d779c99d737a0d81"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.math.Statistics.compute\lPermutedZScores",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_statistics.html#ac3e60046522ef28fae9711b568fa474e"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.math.Statistics.z\lScore2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_statistics.html#ab0107da12d9333bdfe6d2b5db504d534"];
+}

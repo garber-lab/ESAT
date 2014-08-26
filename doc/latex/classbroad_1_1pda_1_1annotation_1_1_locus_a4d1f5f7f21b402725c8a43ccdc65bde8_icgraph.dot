@@ -1,0 +1,13 @@
+digraph "broad.pda.annotation.Locus.getAllIsoforms"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.annotation.Locus.get\lAllIsoforms",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.annotation.Locus.get\lIsComaptibleBetweenSubsets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_locus.html#aca7ea4321216f5ca4124c8e5a879cb2d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.annotation.Locus.get\lIsComaptibleBetweenAny2Sets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_locus.html#a75dbd05a84b105dc531219db343f260d"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.annotation.Locus.select\lRandIsoSubset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_locus.html#a5b93959c80e50de0f2dd758c382a74d2"];
+}

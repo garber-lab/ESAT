@@ -1,0 +1,142 @@
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner}{\section{broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner Class Reference}
+\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner}\index{broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner@{broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner}}
+}
+
+
+Collaboration diagram for broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ae1f31084ecb4680cd3edf903ecd9b376}{Conserved\+P\+W\+M\+Scanner} (String pwm\+File)  throws I\+O\+Exception, Parse\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a0701148d8534b8806f9f49e27a15433f}{Conserved\+P\+W\+M\+Scanner} (List$<$ \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} $>$ matrices)
+\item 
+Iterator$<$ \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_aa7018f23306757554a82bec2d677b763}{get\+P\+W\+Miterator} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a465fbb69d4ab9d5422016b52abea75cb}{set\+Background\+Model} (Annotation\+Reader$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ reader, Map$<$ String, \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ org)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a089244695d241f1f6d0342f1598e995c}{set\+Model} (\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} model)
+\item 
+int \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a8cd3bf3df6a1524920dd4da4a16fa5d7}{get\+Alignment\+Chunk\+Size} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a3f966e649abcf8c8215cd049493576e1}{set\+Alignment\+Chunk\+Size} (int alignment\+Chunk\+Size)
+\item 
+Map$<$ \hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix}, \\*
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a7d0bda7cc27e224befcf4d4f7653ba35}{scan} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o}{M\+A\+F\+I\+O} chr\+Maf\+I\+O, List$<$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d}{B\+E\+D} $>$ annotations, int shuffles, float seed\+Min\+Score)  throws I\+O\+Exception, Parse\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ad8b0d58225f5f42cb4c806dc0490a775}{set\+Ignore\+List} (List$<$ String $>$ ignore\+List)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d}{B\+E\+D} $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ae52325a0d90721ed2ae2afe3d244f578}{slide\+P\+W\+M} (\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} pwm, double min\+Seed\+Score, short\mbox{[}$\,$\mbox{]} encoded\+Ref, List$<$ int\mbox{[}$\,$\mbox{]}$>$ ungapped\+Chunks, int num\+Permutations)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ae1f31084ecb4680cd3edf903ecd9b376}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!Conserved\+P\+W\+M\+Scanner@{Conserved\+P\+W\+M\+Scanner}}
+\index{Conserved\+P\+W\+M\+Scanner@{Conserved\+P\+W\+M\+Scanner}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{Conserved\+P\+W\+M\+Scanner}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+Conserved\+P\+W\+M\+Scanner (
+\begin{DoxyParamCaption}
+\item[{String}]{pwm\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ae1f31084ecb4680cd3edf903ecd9b376}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a0701148d8534b8806f9f49e27a15433f}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!Conserved\+P\+W\+M\+Scanner@{Conserved\+P\+W\+M\+Scanner}}
+\index{Conserved\+P\+W\+M\+Scanner@{Conserved\+P\+W\+M\+Scanner}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{Conserved\+P\+W\+M\+Scanner}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+Conserved\+P\+W\+M\+Scanner (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Position\+Weight\+Matrix} $>$}]{matrices}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a0701148d8534b8806f9f49e27a15433f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a8cd3bf3df6a1524920dd4da4a16fa5d7}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!get\+Alignment\+Chunk\+Size@{get\+Alignment\+Chunk\+Size}}
+\index{get\+Alignment\+Chunk\+Size@{get\+Alignment\+Chunk\+Size}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{get\+Alignment\+Chunk\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+get\+Alignment\+Chunk\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a8cd3bf3df6a1524920dd4da4a16fa5d7}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_aa7018f23306757554a82bec2d677b763}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!get\+P\+W\+Miterator@{get\+P\+W\+Miterator}}
+\index{get\+P\+W\+Miterator@{get\+P\+W\+Miterator}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{get\+P\+W\+Miterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<${\bf Position\+Weight\+Matrix}$>$ broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+get\+P\+W\+Miterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_aa7018f23306757554a82bec2d677b763}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a7d0bda7cc27e224befcf4d4f7653ba35}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!scan@{scan}}
+\index{scan@{scan}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{scan}]{\setlength{\rightskip}{0pt plus 5cm}Map$<${\bf Position\+Weight\+Matrix}, {\bf Genomic\+Annotation}$>$ broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+scan (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+A\+F\+I\+O}}]{chr\+Maf\+I\+O, }
+\item[{List$<$ {\bf B\+E\+D} $>$}]{annotations, }
+\item[{int}]{shuffles, }
+\item[{float}]{seed\+Min\+Score}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a7d0bda7cc27e224befcf4d4f7653ba35}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a3f966e649abcf8c8215cd049493576e1}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!set\+Alignment\+Chunk\+Size@{set\+Alignment\+Chunk\+Size}}
+\index{set\+Alignment\+Chunk\+Size@{set\+Alignment\+Chunk\+Size}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{set\+Alignment\+Chunk\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+set\+Alignment\+Chunk\+Size (
+\begin{DoxyParamCaption}
+\item[{int}]{alignment\+Chunk\+Size}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a3f966e649abcf8c8215cd049493576e1}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a465fbb69d4ab9d5422016b52abea75cb}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!set\+Background\+Model@{set\+Background\+Model}}
+\index{set\+Background\+Model@{set\+Background\+Model}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{set\+Background\+Model}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+set\+Background\+Model (
+\begin{DoxyParamCaption}
+\item[{Annotation\+Reader$<$?extends {\bf Genomic\+Annotation} $>$}]{reader, }
+\item[{Map$<$ String, {\bf Sequence} $>$}]{org}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a465fbb69d4ab9d5422016b52abea75cb}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ad8b0d58225f5f42cb4c806dc0490a775}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!set\+Ignore\+List@{set\+Ignore\+List}}
+\index{set\+Ignore\+List@{set\+Ignore\+List}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{set\+Ignore\+List}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+set\+Ignore\+List (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{ignore\+List}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ad8b0d58225f5f42cb4c806dc0490a775}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a089244695d241f1f6d0342f1598e995c}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!set\+Model@{set\+Model}}
+\index{set\+Model@{set\+Model}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{set\+Model}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+set\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Evolutionary\+Model}}]{model}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_a089244695d241f1f6d0342f1598e995c}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ae52325a0d90721ed2ae2afe3d244f578}{\index{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}!slide\+P\+W\+M@{slide\+P\+W\+M}}
+\index{slide\+P\+W\+M@{slide\+P\+W\+M}!broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner@{broad\+::core\+::siphy\+::\+Conserved\+P\+W\+M\+Scanner}}
+\subsubsection[{slide\+P\+W\+M}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf B\+E\+D}$>$ broad.\+core.\+siphy.\+Conserved\+P\+W\+M\+Scanner.\+slide\+P\+W\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Position\+Weight\+Matrix}}]{pwm, }
+\item[{double}]{min\+Seed\+Score, }
+\item[{short\mbox{[}$\,$\mbox{]}}]{encoded\+Ref, }
+\item[{List$<$ int\mbox{[}$\,$\mbox{]}$>$}]{ungapped\+Chunks, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1siphy_1_1_conserved_p_w_m_scanner_ae52325a0d90721ed2ae2afe3d244f578}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/siphy/\hyperlink{_conserved_p_w_m_scanner_8java}{Conserved\+P\+W\+M\+Scanner.\+java}\end{DoxyCompactItemize}

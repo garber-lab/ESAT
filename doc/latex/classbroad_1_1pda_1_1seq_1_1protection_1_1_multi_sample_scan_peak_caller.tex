@@ -1,0 +1,627 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller}{\section{broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller}\index{broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller@{broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller\+:
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6d6c011e7c546d363f85ac20f4ce00f7}{Multi\+Sample\+Scan\+Peak\+Caller} (String sample\+List\+File, String bed\+File, String chr\+Size\+File, int window, int step)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a74e4548bd7887800f29fc5d487ccd37d}{set\+Filter\+By\+Strand} (boolean use\+Strand\+Filter)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6af45a42068025dc80837e1df7dbcd49}{set\+Extra\+Fields} (boolean use\+Extra\+Fields)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a34f6efc6e8cf3e5eca8c2e42ba418f83}{set\+Binomial\+Score} (boolean binomial\+Score)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae0a18e8cadb800e2f88cb720e0cbaae2}{set\+Peak\+Cutoff\+Most\+Common\+Replicate} (double max\+Pct)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aab4e703b4069c5eb67829cebe4b4535a}{set\+Peak\+Trim\+Quantile} (double trim\+Peak\+Quantile)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_acb73fe5a22023758262f721784493c36}{set\+Peak\+Window\+Count\+Cutoff} (double peak\+Count\+Cutoff)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae6331bb975e2d00437692308e01e868d}{set\+Peak\+Window\+Scan\+Pval\+Cutoff} (double peak\+Scan\+Pval\+Cutoff)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ada766545a50e40b013e0c61d72993b84}{set\+First\+Read\+Transcription\+Strand} (boolean first\+Read\+Is\+Transcription\+Strand)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a1801b112973b23055ad140ba906ab57a}{set\+Expression\+Scan\+Pvalue\+Cutoff} (double expression\+Scan\+Pval\+Cutoff)
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a94915d6cb05815f02a46cc66f86f4eee}{Multi\+Sample\+Scan\+Peak\+Caller} (String expression\+Bam\+File, String signal\+Bam\+File, String bed\+File, String chr\+Size\+File)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a476f82e5d174420ee13161ca508421d9}{Multi\+Sample\+Scan\+Peak\+Caller} (String expression\+Bam\+File, String signal\+Bam\+File, String bed\+File, String chr\+Size\+File, int window, int step)  throws I\+O\+Exception 
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a363342cd71f370bcb563741291a2d436}{is\+Expressed\+In\+All\+Control\+Samples} (Gene gene)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a0b1b91b4c484ea9357695e7f570ccc31}{is\+Expressed} (Gene gene)
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a5f3dacfe2ed0ece8473039132fc28c64}{get\+Single\+Sample\+Scan\+Peaks} (\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} sample, Gene gene)  throws I\+O\+Exception 
+\item 
+Collection$<$ Annotation $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aba7af446c1a79202b035afa54bbcc5f5}{merge\+Peaks} (Collection$<$ Annotation $>$ peaks)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a2978ef854eebbaadd1de11c2e9f06404}{set\+Coordinate\+Space} (Coordinate\+Space space)
+\item 
+Coordinate\+Space \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a69120a86f6a3c8d0607b663301c438b2}{get\+Coordinate\+Space} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_addead88839c9c7cbc25017192076424e}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception, Interrupted\+Exception, Drmaa\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae5fa8ea3c831bfc783a5b19f60fb8346}{Multi\+Sample\+Scan\+Peak\+Caller} (\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller}{Multi\+Sample\+Scan\+Peak\+Caller} other)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4ea2fd7e43d91432d95e19b23f31a502}{initialize\+Filter\+Reject\+Writers} (String common\+Suffix, String out\+Dir)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a85f7d561f66a351adc6a02682ba18685}{close\+Filter\+Reject\+Writers} ()  throws I\+O\+Exception 
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_afea3110e51be144225c55f1138761a50}{get\+Peak\+Bed\+File\+Name} (\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} sample, String out\+Dir, String chr\+Name)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae47edcf07d5ed1e49541e32cafcddf01}{write\+Single\+Sample\+Scan\+Peaks} (\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} sample, String out\+File, String chr\+Name)  throws I\+O\+Exception 
+\item 
+Sample\+Permutation \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a513b0bf190da04d2d446f9d76e2f0da6}{get\+One\+Random\+Sample\+Permutation} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_afca8b084de2774d691172ca3a734e775}{set\+Logger\+Level} (Level level)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller}{Multi\+Sample\+Scan\+Peak\+Caller} \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ade2431eade4f45e77e73e36236cdc81e}{create\+From\+Command\+Args} (String\mbox{[}$\,$\mbox{]} command\+Args)  throws I\+O\+Exception 
+\item 
+static boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a81cf63b0b2d082a3ee577570365edb68}{command\+Line\+Has\+Debug\+Flag} (String\mbox{[}$\,$\mbox{]} command\+Args)
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ad720ec027b5514deff88752afab91036}{command\+Line\+Out\+Dir} (String\mbox{[}$\,$\mbox{]} command\+Args)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Map$<$ String, Collection$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a3ec4b745c679b9c175b6b1fb43100f09}{genes}
+\item 
+Map$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data}, Map$<$ Gene, \\*
+Map$<$ Annotation, \\*
+Binomial\+Enrichment\+Score $>$ $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a287d7b53202216bf59085f239aca6f72}{binomial\+Window\+Scores}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_genome_space_sample_data}{Genome\+Space\+Sample\+Data} \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4656b0f04b612595ef9717a3edf4f4c0}{expression\+Data}
+\item 
+Array\+List$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aa8b0b700ab5285893b7c7d7bc0710941}{control\+Samples}
+\item 
+Array\+List$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ade4081e64c55bb4a96905b3a5d0926f2}{signal\+Samples}
+\item 
+Array\+List$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_sample_data}{Sample\+Data} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aa49da0aefa4bfde3134955e4b542dc3f}{all\+Samples}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a0c59f72373adab957b0055903341dd61}{window\+Size}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a7f46117f3c95d5ed4ae816db5807547d}{step\+Size}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a10171a68b040dff9fdb9292d739d6c76}{num\+Controls}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a961365a8d7b21a6a2b58cf98fb8435c7}{num\+Signals}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4f49d8b3b569639a020ed033cee3ece1}{num\+Samples}
+\item 
+Random \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6e05b47e67a8aa7ae22eff3527b02245}{random}
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a83f7fca4b0f3dbcf664e8a65d484c6e1}{size\+File}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Logger \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a259772e14ac39b3fc10dbfa2c8f94dd2}{logger} = Logger.\+get\+Logger(Multi\+Sample\+Scan\+Peak\+Caller.\+class.\+get\+Name())
+\item 
+static String \hyperlink{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ad231c26f257829c5e658073173aae32f}{F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+J\+E\+C\+T\+\_\+\+D\+I\+R} = \char`\"{}filter\+\_\+rejects\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae5fa8ea3c831bfc783a5b19f60fb8346}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}}
+\index{Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{Multi\+Sample\+Scan\+Peak\+Caller}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+Multi\+Sample\+Scan\+Peak\+Caller (
+\begin{DoxyParamCaption}
+\item[{{\bf Multi\+Sample\+Scan\+Peak\+Caller}}]{other}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae5fa8ea3c831bfc783a5b19f60fb8346}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6d6c011e7c546d363f85ac20f4ce00f7}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}}
+\index{Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{Multi\+Sample\+Scan\+Peak\+Caller}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+Multi\+Sample\+Scan\+Peak\+Caller (
+\begin{DoxyParamCaption}
+\item[{String}]{sample\+List\+File, }
+\item[{String}]{bed\+File, }
+\item[{String}]{chr\+Size\+File, }
+\item[{int}]{window, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6d6c011e7c546d363f85ac20f4ce00f7}
+Instantiate using file of sample information 
+\begin{DoxyParams}{Parameters}
+{\em sample\+List\+File} & File containing sample list \\
+\hline
+{\em bed\+File} & Bed gene annotation \\
+\hline
+{\em chr\+Size\+File} & Chromosome size file \\
+\hline
+{\em window} & Window size \\
+\hline
+{\em step} & Step size \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a94915d6cb05815f02a46cc66f86f4eee}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}}
+\index{Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{Multi\+Sample\+Scan\+Peak\+Caller}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+Multi\+Sample\+Scan\+Peak\+Caller (
+\begin{DoxyParamCaption}
+\item[{String}]{expression\+Bam\+File, }
+\item[{String}]{signal\+Bam\+File, }
+\item[{String}]{bed\+File, }
+\item[{String}]{chr\+Size\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a94915d6cb05815f02a46cc66f86f4eee}
+Instantiate with a single sample and an expression sample and default paramters 
+\begin{DoxyParams}{Parameters}
+{\em expression\+Bam\+File} & Bam file for expression sample \\
+\hline
+{\em signal\+Bam\+File} & Bam file for signal sample \\
+\hline
+{\em bed\+File} & Bed gene annotation \\
+\hline
+{\em chr\+Size\+File} & Chromosome size file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a476f82e5d174420ee13161ca508421d9}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}}
+\index{Multi\+Sample\+Scan\+Peak\+Caller@{Multi\+Sample\+Scan\+Peak\+Caller}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{Multi\+Sample\+Scan\+Peak\+Caller}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+Multi\+Sample\+Scan\+Peak\+Caller (
+\begin{DoxyParamCaption}
+\item[{String}]{expression\+Bam\+File, }
+\item[{String}]{signal\+Bam\+File, }
+\item[{String}]{bed\+File, }
+\item[{String}]{chr\+Size\+File, }
+\item[{int}]{window, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a476f82e5d174420ee13161ca508421d9}
+Instantiate with a single signal sample and an expression sample 
+\begin{DoxyParams}{Parameters}
+{\em expression\+Bam\+File} & Bam file for expression sample \\
+\hline
+{\em signal\+Bam\+File} & Bam file for signal sample \\
+\hline
+{\em bed\+File} & Bed gene annotation \\
+\hline
+{\em chr\+Size\+File} & Chromosome size file \\
+\hline
+{\em window} & Window size \\
+\hline
+{\em step} & Step size \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a85f7d561f66a351adc6a02682ba18685}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!close\+Filter\+Reject\+Writers@{close\+Filter\+Reject\+Writers}}
+\index{close\+Filter\+Reject\+Writers@{close\+Filter\+Reject\+Writers}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{close\+Filter\+Reject\+Writers}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+close\+Filter\+Reject\+Writers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a85f7d561f66a351adc6a02682ba18685}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a81cf63b0b2d082a3ee577570365edb68}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!command\+Line\+Has\+Debug\+Flag@{command\+Line\+Has\+Debug\+Flag}}
+\index{command\+Line\+Has\+Debug\+Flag@{command\+Line\+Has\+Debug\+Flag}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{command\+Line\+Has\+Debug\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}static boolean broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+command\+Line\+Has\+Debug\+Flag (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{command\+Args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a81cf63b0b2d082a3ee577570365edb68}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ad720ec027b5514deff88752afab91036}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!command\+Line\+Out\+Dir@{command\+Line\+Out\+Dir}}
+\index{command\+Line\+Out\+Dir@{command\+Line\+Out\+Dir}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{command\+Line\+Out\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+command\+Line\+Out\+Dir (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{command\+Args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ad720ec027b5514deff88752afab91036}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ade2431eade4f45e77e73e36236cdc81e}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!create\+From\+Command\+Args@{create\+From\+Command\+Args}}
+\index{create\+From\+Command\+Args@{create\+From\+Command\+Args}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{create\+From\+Command\+Args}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Multi\+Sample\+Scan\+Peak\+Caller} broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+create\+From\+Command\+Args (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{command\+Args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ade2431eade4f45e77e73e36236cdc81e}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a69120a86f6a3c8d0607b663301c438b2}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!get\+Coordinate\+Space@{get\+Coordinate\+Space}}
+\index{get\+Coordinate\+Space@{get\+Coordinate\+Space}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{get\+Coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}Coordinate\+Space broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+get\+Coordinate\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a69120a86f6a3c8d0607b663301c438b2}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a513b0bf190da04d2d446f9d76e2f0da6}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!get\+One\+Random\+Sample\+Permutation@{get\+One\+Random\+Sample\+Permutation}}
+\index{get\+One\+Random\+Sample\+Permutation@{get\+One\+Random\+Sample\+Permutation}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{get\+One\+Random\+Sample\+Permutation}]{\setlength{\rightskip}{0pt plus 5cm}Sample\+Permutation broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+get\+One\+Random\+Sample\+Permutation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a513b0bf190da04d2d446f9d76e2f0da6}
+Get a random permutation of control and signal identities \begin{DoxyReturn}{Returns}
+The random permutation 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_afea3110e51be144225c55f1138761a50}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!get\+Peak\+Bed\+File\+Name@{get\+Peak\+Bed\+File\+Name}}
+\index{get\+Peak\+Bed\+File\+Name@{get\+Peak\+Bed\+File\+Name}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{get\+Peak\+Bed\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+get\+Peak\+Bed\+File\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Sample\+Data}}]{sample, }
+\item[{String}]{out\+Dir, }
+\item[{String}]{chr\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_afea3110e51be144225c55f1138761a50}
+Get name of bed file to write for peaks 
+\begin{DoxyParams}{Parameters}
+{\em sample} & Sample \\
+\hline
+{\em out\+Dir} & Output directory name or null if current directory \\
+\hline
+{\em chr\+Name} & Chromosome name or null if all chromosomes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File name 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a5f3dacfe2ed0ece8473039132fc28c64}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!get\+Single\+Sample\+Scan\+Peaks@{get\+Single\+Sample\+Scan\+Peaks}}
+\index{get\+Single\+Sample\+Scan\+Peaks@{get\+Single\+Sample\+Scan\+Peaks}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{get\+Single\+Sample\+Scan\+Peaks}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+get\+Single\+Sample\+Scan\+Peaks (
+\begin{DoxyParamCaption}
+\item[{{\bf Sample\+Data}}]{sample, }
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a5f3dacfe2ed0ece8473039132fc28c64}
+Get scan peaks for the sample and the gene 
+\begin{DoxyParams}{Parameters}
+{\em sample} & The sample \\
+\hline
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Significant scan peaks 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4ea2fd7e43d91432d95e19b23f31a502}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!initialize\+Filter\+Reject\+Writers@{initialize\+Filter\+Reject\+Writers}}
+\index{initialize\+Filter\+Reject\+Writers@{initialize\+Filter\+Reject\+Writers}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{initialize\+Filter\+Reject\+Writers}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+initialize\+Filter\+Reject\+Writers (
+\begin{DoxyParamCaption}
+\item[{String}]{common\+Suffix, }
+\item[{String}]{out\+Dir}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4ea2fd7e43d91432d95e19b23f31a502}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a0b1b91b4c484ea9357695e7f570ccc31}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!is\+Expressed@{is\+Expressed}}
+\index{is\+Expressed@{is\+Expressed}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{is\+Expressed}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+is\+Expressed (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a0b1b91b4c484ea9357695e7f570ccc31}
+Whether the gene is significantly expressed in the special expression sample 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True iff the gene is expressed in the expression sample 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a363342cd71f370bcb563741291a2d436}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!is\+Expressed\+In\+All\+Control\+Samples@{is\+Expressed\+In\+All\+Control\+Samples}}
+\index{is\+Expressed\+In\+All\+Control\+Samples@{is\+Expressed\+In\+All\+Control\+Samples}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{is\+Expressed\+In\+All\+Control\+Samples}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+is\+Expressed\+In\+All\+Control\+Samples (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a363342cd71f370bcb563741291a2d436}
+Whether the gene is expressed in all control samples at the given significance level 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the gene is expressed by these criteria 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_addead88839c9c7cbc25017192076424e}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!main@{main}}
+\index{main@{main}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, Interrupted\+Exception, Drmaa\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_addead88839c9c7cbc25017192076424e}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+{\em Interrupted\+Exception} & \\
+\hline
+{\em Drmaa\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aba7af446c1a79202b035afa54bbcc5f5}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!merge\+Peaks@{merge\+Peaks}}
+\index{merge\+Peaks@{merge\+Peaks}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{merge\+Peaks}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Annotation$>$ broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+merge\+Peaks (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Annotation $>$}]{peaks}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aba7af446c1a79202b035afa54bbcc5f5}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a34f6efc6e8cf3e5eca8c2e42ba418f83}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Binomial\+Score@{set\+Binomial\+Score}}
+\index{set\+Binomial\+Score@{set\+Binomial\+Score}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Binomial\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Binomial\+Score (
+\begin{DoxyParamCaption}
+\item[{boolean}]{binomial\+Score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a34f6efc6e8cf3e5eca8c2e42ba418f83}
+Set whether to print extra fields 
+\begin{DoxyParams}{Parameters}
+{\em use\+Extra\+Fields} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a2978ef854eebbaadd1de11c2e9f06404}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Coordinate\+Space@{set\+Coordinate\+Space}}
+\index{set\+Coordinate\+Space@{set\+Coordinate\+Space}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Coordinate\+Space (
+\begin{DoxyParamCaption}
+\item[{Coordinate\+Space}]{space}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a2978ef854eebbaadd1de11c2e9f06404}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a1801b112973b23055ad140ba906ab57a}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Expression\+Scan\+Pvalue\+Cutoff@{set\+Expression\+Scan\+Pvalue\+Cutoff}}
+\index{set\+Expression\+Scan\+Pvalue\+Cutoff@{set\+Expression\+Scan\+Pvalue\+Cutoff}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Expression\+Scan\+Pvalue\+Cutoff}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Expression\+Scan\+Pvalue\+Cutoff (
+\begin{DoxyParamCaption}
+\item[{double}]{expression\+Scan\+Pval\+Cutoff}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a1801b112973b23055ad140ba906ab57a}
+Set genome wide scan P value cutoff for expression of transcript 
+\begin{DoxyParams}{Parameters}
+{\em expression\+Scan\+Pval\+Cutoff} & P value cutoff for transcript expression against genomic background \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6af45a42068025dc80837e1df7dbcd49}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Extra\+Fields@{set\+Extra\+Fields}}
+\index{set\+Extra\+Fields@{set\+Extra\+Fields}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Extra\+Fields}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Extra\+Fields (
+\begin{DoxyParamCaption}
+\item[{boolean}]{use\+Extra\+Fields}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6af45a42068025dc80837e1df7dbcd49}
+Set whether to print extra fields 
+\begin{DoxyParams}{Parameters}
+{\em use\+Extra\+Fields} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a74e4548bd7887800f29fc5d487ccd37d}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Filter\+By\+Strand@{set\+Filter\+By\+Strand}}
+\index{set\+Filter\+By\+Strand@{set\+Filter\+By\+Strand}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Filter\+By\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Filter\+By\+Strand (
+\begin{DoxyParamCaption}
+\item[{boolean}]{use\+Strand\+Filter}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a74e4548bd7887800f29fc5d487ccd37d}
+Set whether to use strand information in reads to filter peaks 
+\begin{DoxyParams}{Parameters}
+{\em use\+Strand\+Filter} & Whether to apply strand filter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ada766545a50e40b013e0c61d72993b84}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+First\+Read\+Transcription\+Strand@{set\+First\+Read\+Transcription\+Strand}}
+\index{set\+First\+Read\+Transcription\+Strand@{set\+First\+Read\+Transcription\+Strand}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+First\+Read\+Transcription\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+First\+Read\+Transcription\+Strand (
+\begin{DoxyParamCaption}
+\item[{boolean}]{first\+Read\+Is\+Transcription\+Strand}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ada766545a50e40b013e0c61d72993b84}
+Set whether read 1 is transcription strand 
+\begin{DoxyParams}{Parameters}
+{\em first\+Read\+Is\+Transcription\+Strand} & True if read 1 is transcription strand \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_afca8b084de2774d691172ca3a734e775}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Logger\+Level@{set\+Logger\+Level}}
+\index{set\+Logger\+Level@{set\+Logger\+Level}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Logger\+Level}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Logger\+Level (
+\begin{DoxyParamCaption}
+\item[{Level}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_afca8b084de2774d691172ca3a734e775}
+Set logger levels for all samples 
+\begin{DoxyParams}{Parameters}
+{\em level} & Level \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae0a18e8cadb800e2f88cb720e0cbaae2}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Peak\+Cutoff\+Most\+Common\+Replicate@{set\+Peak\+Cutoff\+Most\+Common\+Replicate}}
+\index{set\+Peak\+Cutoff\+Most\+Common\+Replicate@{set\+Peak\+Cutoff\+Most\+Common\+Replicate}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Peak\+Cutoff\+Most\+Common\+Replicate}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Peak\+Cutoff\+Most\+Common\+Replicate (
+\begin{DoxyParamCaption}
+\item[{double}]{max\+Pct}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae0a18e8cadb800e2f88cb720e0cbaae2}
+Set cutoff for the percentage of fragments overlapping a peak that come from the most common replicate fragment 
+\begin{DoxyParams}{Parameters}
+{\em max\+Pct} & The max percentage \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aab4e703b4069c5eb67829cebe4b4535a}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Peak\+Trim\+Quantile@{set\+Peak\+Trim\+Quantile}}
+\index{set\+Peak\+Trim\+Quantile@{set\+Peak\+Trim\+Quantile}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Peak\+Trim\+Quantile}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Peak\+Trim\+Quantile (
+\begin{DoxyParamCaption}
+\item[{double}]{trim\+Peak\+Quantile}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aab4e703b4069c5eb67829cebe4b4535a}
+Set quantile for trim max contiguous algorithm for peak calling 
+\begin{DoxyParams}{Parameters}
+{\em trim\+Peak\+Quantile} & The quantile of data values \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_acb73fe5a22023758262f721784493c36}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Peak\+Window\+Count\+Cutoff@{set\+Peak\+Window\+Count\+Cutoff}}
+\index{set\+Peak\+Window\+Count\+Cutoff@{set\+Peak\+Window\+Count\+Cutoff}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Peak\+Window\+Count\+Cutoff}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Peak\+Window\+Count\+Cutoff (
+\begin{DoxyParamCaption}
+\item[{double}]{peak\+Count\+Cutoff}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_acb73fe5a22023758262f721784493c36}
+Set minimum number of fragments overlapping a window to be considered for possible peak 
+\begin{DoxyParams}{Parameters}
+{\em peak\+Count\+Cutoff} & Minimum fragment count for each window \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae6331bb975e2d00437692308e01e868d}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!set\+Peak\+Window\+Scan\+Pval\+Cutoff@{set\+Peak\+Window\+Scan\+Pval\+Cutoff}}
+\index{set\+Peak\+Window\+Scan\+Pval\+Cutoff@{set\+Peak\+Window\+Scan\+Pval\+Cutoff}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{set\+Peak\+Window\+Scan\+Pval\+Cutoff}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+set\+Peak\+Window\+Scan\+Pval\+Cutoff (
+\begin{DoxyParamCaption}
+\item[{double}]{peak\+Scan\+Pval\+Cutoff}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae6331bb975e2d00437692308e01e868d}
+Set scan P value cutoff for window within transcript to be considered for possible peak 
+\begin{DoxyParams}{Parameters}
+{\em peak\+Scan\+Pval\+Cutoff} & Max scan P value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae47edcf07d5ed1e49541e32cafcddf01}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!write\+Single\+Sample\+Scan\+Peaks@{write\+Single\+Sample\+Scan\+Peaks}}
+\index{write\+Single\+Sample\+Scan\+Peaks@{write\+Single\+Sample\+Scan\+Peaks}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{write\+Single\+Sample\+Scan\+Peaks}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+write\+Single\+Sample\+Scan\+Peaks (
+\begin{DoxyParamCaption}
+\item[{{\bf Sample\+Data}}]{sample, }
+\item[{String}]{out\+File, }
+\item[{String}]{chr\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ae47edcf07d5ed1e49541e32cafcddf01}
+Write all single sample scan peaks for the sample and chromosome to file 
+\begin{DoxyParams}{Parameters}
+{\em sample} & The sample \\
+\hline
+{\em out\+File} & Output bed file \\
+\hline
+{\em r} & Red value for bed file color \\
+\hline
+{\em g} & Green value for bed file color \\
+\hline
+{\em b} & Blue value for bed file color \\
+\hline
+{\em chr\+Name} & Only write peaks for this chromosome \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aa49da0aefa4bfde3134955e4b542dc3f}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!all\+Samples@{all\+Samples}}
+\index{all\+Samples@{all\+Samples}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{all\+Samples}]{\setlength{\rightskip}{0pt plus 5cm}Array\+List$<${\bf Sample\+Data}$>$ broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+all\+Samples\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aa49da0aefa4bfde3134955e4b542dc3f}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a287d7b53202216bf59085f239aca6f72}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!binomial\+Window\+Scores@{binomial\+Window\+Scores}}
+\index{binomial\+Window\+Scores@{binomial\+Window\+Scores}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{binomial\+Window\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}Map$<${\bf Sample\+Data}, Map$<$Gene, Map$<$Annotation, Binomial\+Enrichment\+Score$>$ $>$ $>$ broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+binomial\+Window\+Scores\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a287d7b53202216bf59085f239aca6f72}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aa8b0b700ab5285893b7c7d7bc0710941}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!control\+Samples@{control\+Samples}}
+\index{control\+Samples@{control\+Samples}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{control\+Samples}]{\setlength{\rightskip}{0pt plus 5cm}Array\+List$<${\bf Sample\+Data}$>$ broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+control\+Samples\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_aa8b0b700ab5285893b7c7d7bc0710941}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4656b0f04b612595ef9717a3edf4f4c0}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!expression\+Data@{expression\+Data}}
+\index{expression\+Data@{expression\+Data}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{expression\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Genome\+Space\+Sample\+Data} broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+expression\+Data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4656b0f04b612595ef9717a3edf4f4c0}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ad231c26f257829c5e658073173aae32f}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+J\+E\+C\+T\+\_\+\+D\+I\+R@{F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+J\+E\+C\+T\+\_\+\+D\+I\+R}}
+\index{F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+J\+E\+C\+T\+\_\+\+D\+I\+R@{F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+J\+E\+C\+T\+\_\+\+D\+I\+R}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+J\+E\+C\+T\+\_\+\+D\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+J\+E\+C\+T\+\_\+\+D\+I\+R = \char`\"{}filter\+\_\+rejects\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ad231c26f257829c5e658073173aae32f}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a3ec4b745c679b9c175b6b1fb43100f09}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!genes@{genes}}
+\index{genes@{genes}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{genes}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<$Gene$>$ $>$ broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+genes\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a3ec4b745c679b9c175b6b1fb43100f09}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a259772e14ac39b3fc10dbfa2c8f94dd2}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!logger@{logger}}
+\index{logger@{logger}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+logger = Logger.\+get\+Logger(Multi\+Sample\+Scan\+Peak\+Caller.\+class.\+get\+Name())\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a259772e14ac39b3fc10dbfa2c8f94dd2}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a10171a68b040dff9fdb9292d739d6c76}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!num\+Controls@{num\+Controls}}
+\index{num\+Controls@{num\+Controls}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{num\+Controls}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+num\+Controls\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a10171a68b040dff9fdb9292d739d6c76}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4f49d8b3b569639a020ed033cee3ece1}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!num\+Samples@{num\+Samples}}
+\index{num\+Samples@{num\+Samples}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{num\+Samples}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+num\+Samples\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a4f49d8b3b569639a020ed033cee3ece1}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a961365a8d7b21a6a2b58cf98fb8435c7}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!num\+Signals@{num\+Signals}}
+\index{num\+Signals@{num\+Signals}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{num\+Signals}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+num\+Signals\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a961365a8d7b21a6a2b58cf98fb8435c7}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6e05b47e67a8aa7ae22eff3527b02245}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!random@{random}}
+\index{random@{random}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}Random broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+random\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a6e05b47e67a8aa7ae22eff3527b02245}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ade4081e64c55bb4a96905b3a5d0926f2}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!signal\+Samples@{signal\+Samples}}
+\index{signal\+Samples@{signal\+Samples}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{signal\+Samples}]{\setlength{\rightskip}{0pt plus 5cm}Array\+List$<${\bf Sample\+Data}$>$ broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+signal\+Samples\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_ade4081e64c55bb4a96905b3a5d0926f2}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a83f7fca4b0f3dbcf664e8a65d484c6e1}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!size\+File@{size\+File}}
+\index{size\+File@{size\+File}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{size\+File}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+size\+File\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a83f7fca4b0f3dbcf664e8a65d484c6e1}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a7f46117f3c95d5ed4ae816db5807547d}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!step\+Size@{step\+Size}}
+\index{step\+Size@{step\+Size}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{step\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+step\+Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a7f46117f3c95d5ed4ae816db5807547d}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a0c59f72373adab957b0055903341dd61}{\index{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}!window\+Size@{window\+Size}}
+\index{window\+Size@{window\+Size}!broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller@{broad\+::pda\+::seq\+::protection\+::\+Multi\+Sample\+Scan\+Peak\+Caller}}
+\subsubsection[{window\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+protection.\+Multi\+Sample\+Scan\+Peak\+Caller.\+window\+Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller_a0c59f72373adab957b0055903341dd61}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/protection/\hyperlink{_multi_sample_scan_peak_caller_8java}{Multi\+Sample\+Scan\+Peak\+Caller.\+java}\end{DoxyCompactItemize}

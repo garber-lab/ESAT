@@ -1,0 +1,11 @@
+digraph "broad.core.math.EmpiricalDistribution.getDistributionOfHistogramValues"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.math.Empirical\lDistribution.getDistributionOf\lHistogramValues",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.math.Empirical\lDistribution.getHistogram",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_empirical_distribution.html#a5b21df6b2ce3df19d871ae0ebd1b9cec"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.math.Empirical\lDistribution.EmpiricalDistribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_empirical_distribution.html#a25dac12f5d3f044aae983f166ab92abd"];
+}

@@ -1,0 +1,15 @@
+digraph "broad.core.siphy.TreeScaler.TreeScaler"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.siphy.TreeScaler.\lTreeScaler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.siphy.TreeScaler.set\lNeutralModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_tree_scaler.html#aac84894bf323063b0e023ae5aa23d0e8"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.siphy.TreeScaler.get\lModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_tree_scaler.html#a4f07812132f23c410d73c521776113df"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.siphy.TreeScaler.set\lAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_tree_scaler.html#a957d50f0314cbdbea117d7bdb6595b01"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.siphy.TreeScaler.encode\lAsMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_tree_scaler.html#a7b8630a9b05c5efc4e00276fa0a95831"];
+}

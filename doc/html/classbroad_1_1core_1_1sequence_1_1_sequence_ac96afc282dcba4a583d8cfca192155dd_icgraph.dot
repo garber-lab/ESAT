@@ -1,0 +1,11 @@
+digraph "broad.core.sequence.Sequence.encodeSequenceIgnoreCase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.sequence.Sequence.encode\lSequenceIgnoreCase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.sequence.Sequence.encode\lSequenceIgnoreCase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#a2dde760c8a5bf338456dbfbadac40f8b"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.sequence.Sequence.reverse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#ae7dfa608c5c59b4b99721841e1715b84"];
+}

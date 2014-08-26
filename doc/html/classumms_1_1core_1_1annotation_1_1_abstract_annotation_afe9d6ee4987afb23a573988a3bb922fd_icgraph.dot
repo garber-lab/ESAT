@@ -1,0 +1,17 @@
+digraph "umms.core.annotation.AbstractAnnotation.getReferenceCoordinateAtPosition"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Abstract\lAnnotation.getReferenceCoordinate\lAtPosition",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.annotation.Abstract\lAnnotation.trim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_abstract_annotation.html#a7101ed1a3444755c06346f6bdb4bdbd0"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.esat.ESAT.getSubAnnotation\lFromEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t.html#aeb4346e593752ad30a10e4c59026e85d"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.esat.ESAT.getSubAnnotation\lFromStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t.html#a46150c22de56265a4175d196b4f50ae2"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.esat.ESATDistanceCalculator.get\lSubAnnotationFromEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t_distance_calculator.html#a8991dbfa8390362b7401aa10aa78a753"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="umms.esat.ESATDistanceCalculator.get\lSubAnnotationFromStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1esat_1_1_e_s_a_t_distance_calculator.html#aa651a5a0773a942db8851c56201b1316"];
+}

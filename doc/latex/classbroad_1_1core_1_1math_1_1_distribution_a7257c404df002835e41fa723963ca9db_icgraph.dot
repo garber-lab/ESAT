@@ -1,0 +1,9 @@
+digraph "broad.core.math.Distribution.skellamRightTail"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.math.Distribution.skellam\lRightTail",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.math.Distribution.skellam\lPvalue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_distribution.html#ac6aac09e8f8d9e5ba35e5f660f151170"];
+}

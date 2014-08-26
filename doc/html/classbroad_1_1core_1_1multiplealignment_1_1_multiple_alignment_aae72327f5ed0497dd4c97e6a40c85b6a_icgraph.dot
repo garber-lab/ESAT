@@ -1,0 +1,47 @@
+digraph "broad.core.multiplealignment.MultipleAlignment.getReferenceId"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lMultipleAlignment.getReferenceId",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.multiplealignment.\lMAFAlignment.write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#ad5288744d1f6d210feccf4a0cbee7237"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.multiplealignment.\lMAFAlignment.getSubAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a4bec03246b949c3d8a49cedfa062eaf0"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.multiplealignment.\lMAFAlignment.getAlignedSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a6cbc6fde4d47f8b1a74569021d844f29"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.core.multiplealignment.\lMAFAlignment.getAlignedSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#acb42e3a732f8d5389ab457c133c35051"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="broad.core.multiplealignment.\lMAFAlignment.getAlignedSequences",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a435da7e3532bbc433ec02f970ecf3707"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="broad.core.multiplealignment.\lMAFAlignment.toMultipleAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a67a951c301889a39ee03968ed0d75494"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="broad.core.multiplealignment.\lMAFAlignment.sampleColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a53c281eb887b5cb250224b1bb1ff25b5"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="broad.core.multiplealignment.\lMAFAlignment.load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_alignment.html#a5c27232aa71cd8c0db9c1647b1c3e4c2"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="broad.core.multiplealignment.\lMAFIO.load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o.html#af0c0333663f7cb835d7e35a1a9094398"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="broad.core.multiplealignment.\lMultipleAlignment.getColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#ac6a2d951ce87a39003ad2190b35620d3"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="broad.core.multiplealignment.\lMultipleAlignment.getColumnsAsVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a4fc36e3151292c38c16f65e792725894"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="broad.core.multiplealignment.\lMultipleAlignment.getAsMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a2d26c015e85b447b9f1aa004e42fe191"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="broad.core.multiplealignment.\lMultipleAlignment.addShortEncoded\lColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a534c74163e911bfbbcaded5a99b9f9e1"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="broad.core.multiplealignment.\lMultipleAlignment.addShortEncoded\lColumnMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#ad8fe854ec8525256c7b848d48c832f64"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="broad.core.multiplealignment.\lMultipleAlignment.addShortEncoded\lRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a034bfc282f2aaff7aa3133867dcc2963"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="broad.core.multiplealignment.\lMultipleAlignment.sampleColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a8b7d8e493f5c3ea5409d7c12f41c9237"];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="broad.core.multiplealignment.\lMultipleAlignment.remove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a8d1dfe05e52b47fec9892dd887394008"];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="broad.core.multiplealignment.\lMultipleAlignment.getSubAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#ac7d87da19e19722ff18a17a47a42504a"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="broad.core.multiplealignment.\lMultipleAlignment.getConcatenated\lSubAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#aca6da10d461c82b32cf2fcc585e17a37"];
+  Node1 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="broad.core.multiplealignment.\lMultipleAlignment.introduceGaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a4ee614853a44ff109c0981a1513ebf46"];
+}

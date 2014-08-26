@@ -1,0 +1,15 @@
+digraph "jaligner.formats.CLUSTAL.format"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jaligner.formats.CLUSTAL.format",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="jaligner.Alignment.getSequence1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#a846af4ea8699097936db4fc7282ea727"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="jaligner.Alignment.getSequence2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#af4b53d82f275712ec1b8e090f04a27f2"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="jaligner.Alignment.getName2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#ad656149e70e23a2f007bb543d0d393d8"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="jaligner.formats.CLUSTAL.format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1formats_1_1_c_l_u_s_t_a_l.html#acb00e8b3f46f288d24e3cb0e4434a154"];
+}

@@ -1,0 +1,113 @@
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o}{\section{broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O Interface Reference}
+\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o}\index{broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O@{broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O}}
+}
+
+
+Inheritance diagram for broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_aa1f16d1580d451f8702f430094c979aa}{load} (String file\+Name)  throws I\+O\+Exception, Parse\+Exception
+\item 
+\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a75876191a308ebeda8a55f468d8d715e}{load} (Input\+Stream in)  throws I\+O\+Exception, Parse\+Exception
+\item 
+\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_add05c676a62b3db6dbf1463ab94547ce}{load} (String file\+Name, List$<$ String $>$ sequences\+To\+Load)  throws I\+O\+Exception, Parse\+Exception
+\item 
+\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a8f1ccd3a7e72ba1fdbc6156afd167289}{load} (Input\+Stream in, List$<$ String $>$ sequences\+To\+Load)  throws I\+O\+Exception, Parse\+Exception
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_af1613ef893b3cb457a4e96bc24f01584}{write} (Buffered\+Writer bw, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} ma)  throws I\+O\+Exception
+\item 
+void \hyperlink{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_ae9f18851300fa99805c3f867b12727c7}{write} (Buffered\+Writer bw, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} ma, List$<$ String $>$ order\+Of\+Sequences)  throws I\+O\+Exception 
+\item 
+String \hyperlink{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a188e4b85766ab0438ccb1f22a0eaa23a}{get\+Preferred\+File\+Extension} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a188e4b85766ab0438ccb1f22a0eaa23a}{\index{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}!get\+Preferred\+File\+Extension@{get\+Preferred\+File\+Extension}}
+\index{get\+Preferred\+File\+Extension@{get\+Preferred\+File\+Extension}!broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}}
+\subsubsection[{get\+Preferred\+File\+Extension}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O.\+get\+Preferred\+File\+Extension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a188e4b85766ab0438ccb1f22a0eaa23a}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_interleaved_multiple_alignment_i_o_a5f071bdcdad8ea9a4dcafbbd8ebc9b2a}{broad.\+core.\+multiplealignment.\+Phylip\+Interleaved\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_fasta_multiple_alignment_i_o_a7c484cb6c86e23c98dff7add42684dfc}{broad.\+core.\+multiplealignment.\+Fasta\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_sequencial_multiple_alignment_i_o_a2fa2d40e02fb7a1485a39bf5049507aa}{broad.\+core.\+multiplealignment.\+Phylip\+Sequencial\+Multiple\+Alignment\+I\+O}, and \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o_ae65f18d5f17bfc130ce07c8bc4f001d0}{broad.\+core.\+multiplealignment.\+M\+A\+F\+I\+O}.
+
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_aa1f16d1580d451f8702f430094c979aa}{\index{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}!load@{load}}
+\index{load@{load}!broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Multiple\+Alignment} broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O.\+load (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_aa1f16d1580d451f8702f430094c979aa}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o_a10f2572ad2a0facfa998c9d0107c106b}{broad.\+core.\+multiplealignment.\+M\+A\+F\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_interleaved_multiple_alignment_i_o_a6c8e7f0c1cba4b0e65a579bc0c22d5c6}{broad.\+core.\+multiplealignment.\+Phylip\+Interleaved\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_fasta_multiple_alignment_i_o_a09fc82c9274e7449149f77b74e01508e}{broad.\+core.\+multiplealignment.\+Fasta\+Multiple\+Alignment\+I\+O}, and \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_sequencial_multiple_alignment_i_o_a9ec03c7c1b50256551a71bdbf6e1493d}{broad.\+core.\+multiplealignment.\+Phylip\+Sequencial\+Multiple\+Alignment\+I\+O}.
+
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a75876191a308ebeda8a55f468d8d715e}{\index{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}!load@{load}}
+\index{load@{load}!broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Multiple\+Alignment} broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O.\+load (
+\begin{DoxyParamCaption}
+\item[{Input\+Stream}]{in}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a75876191a308ebeda8a55f468d8d715e}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o_ad44015f88e196cbebeb646ee11d8000c}{broad.\+core.\+multiplealignment.\+M\+A\+F\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_fasta_multiple_alignment_i_o_a8bd83d6a6cf05fb06ae522a221dc5613}{broad.\+core.\+multiplealignment.\+Fasta\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_interleaved_multiple_alignment_i_o_a1bb836d63a97f0d4533f6e4de26406e1}{broad.\+core.\+multiplealignment.\+Phylip\+Interleaved\+Multiple\+Alignment\+I\+O}, and \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_sequencial_multiple_alignment_i_o_ac4a8e59da3495a432111ff6a7624a271}{broad.\+core.\+multiplealignment.\+Phylip\+Sequencial\+Multiple\+Alignment\+I\+O}.
+
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_add05c676a62b3db6dbf1463ab94547ce}{\index{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}!load@{load}}
+\index{load@{load}!broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Multiple\+Alignment} broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O.\+load (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name, }
+\item[{List$<$ String $>$}]{sequences\+To\+Load}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_add05c676a62b3db6dbf1463ab94547ce}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o_af337e802f2c75b9cfc95643b148c2e1e}{broad.\+core.\+multiplealignment.\+M\+A\+F\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_interleaved_multiple_alignment_i_o_a918d6c6541540a5b8bf64f8a237b900b}{broad.\+core.\+multiplealignment.\+Phylip\+Interleaved\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_fasta_multiple_alignment_i_o_a85484122565c839ce063a9232ad15b73}{broad.\+core.\+multiplealignment.\+Fasta\+Multiple\+Alignment\+I\+O}, and \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_sequencial_multiple_alignment_i_o_aa23fc2587b84c86f52e6c4445d34dbbb}{broad.\+core.\+multiplealignment.\+Phylip\+Sequencial\+Multiple\+Alignment\+I\+O}.
+
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a8f1ccd3a7e72ba1fdbc6156afd167289}{\index{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}!load@{load}}
+\index{load@{load}!broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Multiple\+Alignment} broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O.\+load (
+\begin{DoxyParamCaption}
+\item[{Input\+Stream}]{in, }
+\item[{List$<$ String $>$}]{sequences\+To\+Load}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_a8f1ccd3a7e72ba1fdbc6156afd167289}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o_af0c0333663f7cb835d7e35a1a9094398}{broad.\+core.\+multiplealignment.\+M\+A\+F\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_fasta_multiple_alignment_i_o_a5624c6d19afcd2bc27b60e7dde43ed9e}{broad.\+core.\+multiplealignment.\+Fasta\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_interleaved_multiple_alignment_i_o_ab5f8017a0ead2700a3d7a287b18babdd}{broad.\+core.\+multiplealignment.\+Phylip\+Interleaved\+Multiple\+Alignment\+I\+O}, and \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_sequencial_multiple_alignment_i_o_ac46d41280c47168e02eb4ecaec40a83d}{broad.\+core.\+multiplealignment.\+Phylip\+Sequencial\+Multiple\+Alignment\+I\+O}.
+
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_af1613ef893b3cb457a4e96bc24f01584}{\index{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{{\bf Multiple\+Alignment}}]{ma}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_af1613ef893b3cb457a4e96bc24f01584}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o_a192d244d199bdb5d29b873fbb40292e9}{broad.\+core.\+multiplealignment.\+M\+A\+F\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_interleaved_multiple_alignment_i_o_a7a755364aa39d937f9fbaceec6d2fd15}{broad.\+core.\+multiplealignment.\+Phylip\+Interleaved\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_fasta_multiple_alignment_i_o_ac21b9204f76aab283bb22a6d1be46c9a}{broad.\+core.\+multiplealignment.\+Fasta\+Multiple\+Alignment\+I\+O}, and \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_sequencial_multiple_alignment_i_o_a49710b5d0f53a6e6798eb753d9e04c94}{broad.\+core.\+multiplealignment.\+Phylip\+Sequencial\+Multiple\+Alignment\+I\+O}.
+
+\hypertarget{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_ae9f18851300fa99805c3f867b12727c7}{\index{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}!write@{write}}
+\index{write@{write}!broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O@{broad\+::core\+::multiplealignment\+::\+Multiple\+Alignment\+I\+O}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+multiplealignment.\+Multiple\+Alignment\+I\+O.\+write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{{\bf Multiple\+Alignment}}]{ma, }
+\item[{List$<$ String $>$}]{order\+Of\+Sequences}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{interfacebroad_1_1core_1_1multiplealignment_1_1_multiple_alignment_i_o_ae9f18851300fa99805c3f867b12727c7}
+
+
+Implemented in \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o_a1bc116e33c6993907b712e8dced22201}{broad.\+core.\+multiplealignment.\+M\+A\+F\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_interleaved_multiple_alignment_i_o_a3cef7c3cf8c814816a0d4c0855323f36}{broad.\+core.\+multiplealignment.\+Phylip\+Interleaved\+Multiple\+Alignment\+I\+O}, \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_phylip_sequencial_multiple_alignment_i_o_a482b0028805d6dcefc1198971896d82f}{broad.\+core.\+multiplealignment.\+Phylip\+Sequencial\+Multiple\+Alignment\+I\+O}, and \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_fasta_multiple_alignment_i_o_ab9c7bc63f40a089c0461ae5bb1536719}{broad.\+core.\+multiplealignment.\+Fasta\+Multiple\+Alignment\+I\+O}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/multiplealignment/\hyperlink{_multiple_alignment_i_o_8java}{Multiple\+Alignment\+I\+O.\+java}\end{DoxyCompactItemize}

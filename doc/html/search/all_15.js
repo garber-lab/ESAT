@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['validate',['validate',['../classbroad_1_1pda_1_1geneexpression_1_1agilent_1_1_q_c_agilent_results.html#ac6e05cc8be9d2794d88d91252246874c',1,'broad::pda::geneexpression::agilent::QCAgilentResults']]],
+  ['valueiterator',['valueIterator',['../classbroad_1_1core_1_1datastructures_1_1_interval_tree_3_01_v_01_4.html#a27c5ec641b17a30c712164f96cb8a0b6',1,'broad::core::datastructures::IntervalTree&lt; V &gt;']]],
+  ['valuesareempty',['valuesAreEmpty',['../classumms_1_1core_1_1alignment_1_1_alignment_pair.html#ae3e2b4922d5a6fd89fd115261cc4f821',1,'umms::core::alignment::AlignmentPair']]],
+  ['variance',['variance',['../classbroad_1_1core_1_1math_1_1_statistics.html#a99743455771861e891a42d5e82eca0ff',1,'broad.core.math.Statistics.variance(double[] values)'],['../classbroad_1_1core_1_1math_1_1_statistics.html#a364dc3f74491cfd8a4c4c8597e8c76af',1,'broad.core.math.Statistics.variance(double[] values, double mean)'],['../classbroad_1_1core_1_1math_1_1_statistics.html#abf26a1820e793c65aff0a00dd6ad798d',1,'broad.core.math.Statistics.variance(List&lt;?extends Number &gt; values)'],['../classbroad_1_1core_1_1math_1_1_statistics.html#a99a714feafae1762cd5383fa661b02f5',1,'broad.core.math.Statistics.variance(List&lt;?extends Number &gt; values, double mean)']]],
+  ['vertical_5fspacing',['VERTICAL_SPACING',['../classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader.html#a24b39789f7632a795032438895c93973',1,'broad::core::annotation::BasicGenomicAnnotationReader']]],
+  ['viterbimostlikelyestimation',['viterbiMostLikelyEstimation',['../classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4.html#a7ef96f6f074232f1c412330f5e314dfc',1,'broad.core.hmm.MarkovModel&lt; T &gt;.viterbiMostLikelyEstimation()'],['../classbroad_1_1core_1_1siphy_1_1_pi_h_m_m.html#a4333f5888bfa8018a9f129ef1cb6a4ae',1,'broad.core.siphy.PiHMM.viterbiMostLikelyEstimation()']]]
+];

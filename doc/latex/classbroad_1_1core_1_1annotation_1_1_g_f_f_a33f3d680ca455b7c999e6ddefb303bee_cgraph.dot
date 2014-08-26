@@ -1,0 +1,15 @@
+digraph "broad.core.annotation.GFF.GFF"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.GFF.GFF",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.annotation.GFF.set\lSource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#add3d2dedb1d2dd60bc151c7a8ae3dd99"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.GFF.get\lSource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#aa65cbde0f9e887df1a5e19199693c531"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.annotation.GFF.set\lFeature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#af47cdf69076679c5c3ef472a2f233f7f"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.annotation.GFF.get\lFeature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#a32286be94741ff45ae9d4ec4caa7f742"];
+}

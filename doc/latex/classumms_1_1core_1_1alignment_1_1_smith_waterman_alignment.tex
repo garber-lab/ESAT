@@ -1,0 +1,316 @@
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment}{\section{umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment Class Reference}
+\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment}\index{umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment@{umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a362dd8843ac06c7a385d31c7a0f8f34b}{Smith\+Waterman\+Alignment} (String seq)
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a457dc662dd7571f3d9e70f3f7f30b679}{Smith\+Waterman\+Alignment} (String seq, float match\+Score, float mismatch\+Score, float gap\+Open\+Penalty, float gap\+Extend\+Penalty)
+\item 
+\hyperlink{classjaligner_1_1_alignment}{jaligner.\+Alignment} \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a706f0da6b2375a6f6ae17316d79e4f47}{align} (String seq)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classjaligner_1_1_alignment}{jaligner.\+Alignment} \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a7bc9206be3a25d600e0221b004c156ba}{align} (String seq1, String seq2, float match\+Score, float mismatch\+Score, float gap\+Open\+Penalty, float gap\+Extend\+Penalty)
+\item 
+static String \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac0693d7813e33cc22a40fdeb4295a081}{get\+Full\+Printable\+Alignment} (\hyperlink{classjaligner_1_1_alignment}{jaligner.\+Alignment} alignment)
+\item 
+static int \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_acd040e57ba29f4ef0abc1ac103845c3d}{ungapped\+Match\+Start\+On\+First\+Sequence} (String seq1, String seq2, float match\+Score, float mismatch\+Score, float min\+Pct\+Identity)
+\item 
+static int \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_aefe75b54dc89476479283e1f8060062f}{match\+Start\+On\+First\+Sequence} (String seq1, String seq2, float match\+Score, float mismatch\+Score, float gap\+Open\+Penalty, float gap\+Extend\+Penalty, float min\+Pct\+Identity)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a0a0fb30db091b27fd560c0e04b0f7d67}{contains\+Full\+Length\+Ungapped\+Match} (String seq1, String seq2, int seq1start, int max\+Mismatches)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a276f466de9bd14543c155c41a5ee8f6e}{contains\+Full\+Length\+Ungapped\+Match} (String seq1, String seq2, int seq1start, float match\+Score, float mismatch\+Score, int max\+Mismatches)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a5aa830d0dfe5ae34c96f6f4559ac4d83}{contains\+Full\+Length\+Ungapped\+Match} (String seq1, String seq2, int max\+Mismatches)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a32ced5efd4ee94d9b076d217153e43c2}{contains\+Full\+Length\+Ungapped\+Match} (String seq1, String seq2, float match\+Score, float mismatch\+Score, int max\+Mismatches)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a2f0dc35209fbabecd921df3ad9d83650}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E} = 5
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_aa04f65708e3485da9e6723b6d9233a68}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E} = -\/4
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac3694eda6bf14934e74d2ca2b38ad4b5}{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y} = 8
+\item 
+static float \hyperlink{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac92437bcbb7a7f20d1722aa001687586}{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a362dd8843ac06c7a385d31c7a0f8f34b}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!Smith\+Waterman\+Alignment@{Smith\+Waterman\+Alignment}}
+\index{Smith\+Waterman\+Alignment@{Smith\+Waterman\+Alignment}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{Smith\+Waterman\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+Smith\+Waterman\+Alignment (
+\begin{DoxyParamCaption}
+\item[{String}]{seq}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a362dd8843ac06c7a385d31c7a0f8f34b}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a457dc662dd7571f3d9e70f3f7f30b679}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!Smith\+Waterman\+Alignment@{Smith\+Waterman\+Alignment}}
+\index{Smith\+Waterman\+Alignment@{Smith\+Waterman\+Alignment}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{Smith\+Waterman\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+Smith\+Waterman\+Alignment (
+\begin{DoxyParamCaption}
+\item[{String}]{seq, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{float}]{gap\+Open\+Penalty, }
+\item[{float}]{gap\+Extend\+Penalty}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a457dc662dd7571f3d9e70f3f7f30b679}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a706f0da6b2375a6f6ae17316d79e4f47}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!align@{align}}
+\index{align@{align}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jaligner.\+Alignment} umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+align (
+\begin{DoxyParamCaption}
+\item[{String}]{seq}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a706f0da6b2375a6f6ae17316d79e4f47}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a7bc9206be3a25d600e0221b004c156ba}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!align@{align}}
+\index{align@{align}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf jaligner.\+Alignment} umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+align (
+\begin{DoxyParamCaption}
+\item[{String}]{seq1, }
+\item[{String}]{seq2, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{float}]{gap\+Open\+Penalty, }
+\item[{float}]{gap\+Extend\+Penalty}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a7bc9206be3a25d600e0221b004c156ba}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a0a0fb30db091b27fd560c0e04b0f7d67}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}}
+\index{contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{contains\+Full\+Length\+Ungapped\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+contains\+Full\+Length\+Ungapped\+Match (
+\begin{DoxyParamCaption}
+\item[{String}]{seq1, }
+\item[{String}]{seq2, }
+\item[{int}]{seq1start, }
+\item[{int}]{max\+Mismatches}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a0a0fb30db091b27fd560c0e04b0f7d67}
+Whether there is a full length ungapped match of sequence 2 to sequence 1, starting at specified position of sequence 1, allowing mismatches Uses default match and mismatch scores 
+\begin{DoxyParams}{Parameters}
+{\em seq1} & Sequence 1 \\
+\hline
+{\em seq2} & Sequence 2 \\
+\hline
+{\em seq1start} & Required start position of match on sequence 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the best ungapped alignment is full length and has at most the max number of mismatches 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a276f466de9bd14543c155c41a5ee8f6e}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}}
+\index{contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{contains\+Full\+Length\+Ungapped\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+contains\+Full\+Length\+Ungapped\+Match (
+\begin{DoxyParamCaption}
+\item[{String}]{seq1, }
+\item[{String}]{seq2, }
+\item[{int}]{seq1start, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{int}]{max\+Mismatches}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a276f466de9bd14543c155c41a5ee8f6e}
+Whether there is a full length ungapped match of sequence 2 to sequence 1, starting at specified position of sequence 1, allowing mismatches 
+\begin{DoxyParams}{Parameters}
+{\em seq1} & Sequence 1 \\
+\hline
+{\em seq2} & Sequence 2 \\
+\hline
+{\em seq1start} & Required start position of match on sequence 1 \\
+\hline
+{\em match\+Score} & Match score \\
+\hline
+{\em mismatch\+Score} & Mismatch score \\
+\hline
+{\em max\+Mismatches} & Max allowable number of mismatches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the best ungapped alignment is full length and has at most the max number of mismatches 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a5aa830d0dfe5ae34c96f6f4559ac4d83}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}}
+\index{contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{contains\+Full\+Length\+Ungapped\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+contains\+Full\+Length\+Ungapped\+Match (
+\begin{DoxyParamCaption}
+\item[{String}]{seq1, }
+\item[{String}]{seq2, }
+\item[{int}]{max\+Mismatches}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a5aa830d0dfe5ae34c96f6f4559ac4d83}
+Whether there is a full length ungapped match of the shorter sequence to the longer sequence, allowing mismatches Uses default match and mismatch scores 
+\begin{DoxyParams}{Parameters}
+{\em seq1} & Sequence 1 \\
+\hline
+{\em seq2} & Sequence 2 \\
+\hline
+{\em max\+Mismatches} & Max allowable number of mismatches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the best ungapped alignment is full length and has at most the max number of mismatches 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a32ced5efd4ee94d9b076d217153e43c2}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}}
+\index{contains\+Full\+Length\+Ungapped\+Match@{contains\+Full\+Length\+Ungapped\+Match}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{contains\+Full\+Length\+Ungapped\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+contains\+Full\+Length\+Ungapped\+Match (
+\begin{DoxyParamCaption}
+\item[{String}]{seq1, }
+\item[{String}]{seq2, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{int}]{max\+Mismatches}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a32ced5efd4ee94d9b076d217153e43c2}
+Whether there is a full length ungapped match of the shorter sequence to the longer sequence, allowing mismatches 
+\begin{DoxyParams}{Parameters}
+{\em seq1} & Sequence 1 \\
+\hline
+{\em seq2} & Sequence 2 \\
+\hline
+{\em match\+Score} & Match score \\
+\hline
+{\em mismatch\+Score} & Mismatch score \\
+\hline
+{\em max\+Mismatches} & Max allowable number of mismatches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the best ungapped alignment is full length and has at most the max number of mismatches 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac0693d7813e33cc22a40fdeb4295a081}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!get\+Full\+Printable\+Alignment@{get\+Full\+Printable\+Alignment}}
+\index{get\+Full\+Printable\+Alignment@{get\+Full\+Printable\+Alignment}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{get\+Full\+Printable\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}static String umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+get\+Full\+Printable\+Alignment (
+\begin{DoxyParamCaption}
+\item[{{\bf jaligner.\+Alignment}}]{alignment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac0693d7813e33cc22a40fdeb4295a081}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_aefe75b54dc89476479283e1f8060062f}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!match\+Start\+On\+First\+Sequence@{match\+Start\+On\+First\+Sequence}}
+\index{match\+Start\+On\+First\+Sequence@{match\+Start\+On\+First\+Sequence}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{match\+Start\+On\+First\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static int umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+match\+Start\+On\+First\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{seq1, }
+\item[{String}]{seq2, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{float}]{gap\+Open\+Penalty, }
+\item[{float}]{gap\+Extend\+Penalty, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_aefe75b54dc89476479283e1f8060062f}
+Get start position on first sequence of the Smith-\/\+Waterman alignment 
+\begin{DoxyParams}{Parameters}
+{\em seq1} & First sequence \\
+\hline
+{\em seq2} & Second sequence \\
+\hline
+{\em match\+Score} & Match score \\
+\hline
+{\em mismatch\+Score} & Mismatch score \\
+\hline
+{\em gap\+Open\+Penalty} & Gap open penalty \\
+\hline
+{\em gap\+Extend\+Penalty} & Gap extend penalty \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity for alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Start position of alignment on first sequence, or -\/1 if no suitable alignment exists 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_acd040e57ba29f4ef0abc1ac103845c3d}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!ungapped\+Match\+Start\+On\+First\+Sequence@{ungapped\+Match\+Start\+On\+First\+Sequence}}
+\index{ungapped\+Match\+Start\+On\+First\+Sequence@{ungapped\+Match\+Start\+On\+First\+Sequence}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{ungapped\+Match\+Start\+On\+First\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static int umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+ungapped\+Match\+Start\+On\+First\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{seq1, }
+\item[{String}]{seq2, }
+\item[{float}]{match\+Score, }
+\item[{float}]{mismatch\+Score, }
+\item[{float}]{min\+Pct\+Identity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_acd040e57ba29f4ef0abc1ac103845c3d}
+Get start position on first sequence of an ungapped Smith-\/\+Waterman alignment First sequence must be at least as long as second sequence 
+\begin{DoxyParams}{Parameters}
+{\em seq1} & Longer sequence \\
+\hline
+{\em seq2} & Shorter sequence \\
+\hline
+{\em match\+Score} & Match score \\
+\hline
+{\em mismatch\+Score} & Mismatch score \\
+\hline
+{\em gap\+Open\+Penalty} & Gap open penalty \\
+\hline
+{\em gap\+Extend\+Penalty} & Gap extend penalty \\
+\hline
+{\em min\+Pct\+Identity} & Min percent identity for alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Start position of alignment on first sequence, or -\/1 if no suitable alignment exists 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac92437bcbb7a7f20d1722aa001687586}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+P\+E\+N\+A\+L\+T\+Y = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac92437bcbb7a7f20d1722aa001687586}
+Default gap extend penalty for Smith Waterman \hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac3694eda6bf14934e74d2ca2b38ad4b5}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+A\+P\+\_\+\+O\+P\+E\+N\+\_\+\+P\+E\+N\+A\+L\+T\+Y = 8\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_ac3694eda6bf14934e74d2ca2b38ad4b5}
+Default gap open penalty for Smith Waterman \hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a2f0dc35209fbabecd921df3ad9d83650}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_a2f0dc35209fbabecd921df3ad9d83650}
+Default match score for Smith Waterman \hypertarget{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_aa04f65708e3485da9e6723b6d9233a68}{\index{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}!umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment@{umms\+::core\+::alignment\+::\+Smith\+Waterman\+Alignment}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}float umms.\+core.\+alignment.\+Smith\+Waterman\+Alignment.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+S\+M\+A\+T\+C\+H\+\_\+\+S\+C\+O\+R\+E = -\/4\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smith_waterman_alignment_aa04f65708e3485da9e6723b6d9233a68}
+Default mismatch score for Smith Waterman 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/alignment/\hyperlink{_smith_waterman_alignment_8java}{Smith\+Waterman\+Alignment.\+java}\end{DoxyCompactItemize}

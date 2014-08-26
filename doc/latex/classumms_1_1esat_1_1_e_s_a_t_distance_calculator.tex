@@ -1,0 +1,255 @@
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator}{\section{umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator Class Reference}
+\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator}\index{umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator@{umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator}}
+}
+
+
+Collaboration diagram for umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a37e6c5de3998706091a6aef23e96144e}{E\+S\+A\+T\+Distance\+Calculator} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception, Parse\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_ac118a1c8cb83450751f162aa01933165}{write\+Normalized\+Matrix} (String file\+Name, \hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} result\+Matrix)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Double $>$ \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a82606cd46ae4f4570afac64befafb941}{calculate\+Normalization\+Factors} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} mat)
+\item 
+static List$<$ Double $>$ \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_ae04e6c798467dc11a0da7a31deed54ed}{array2\+List} (double\mbox{[}$\,$\mbox{]} array)
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a8991dbfa8390362b7401aa10aa78a753}{get\+Sub\+Annotation\+From\+End} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} annotation, int length, int distance\+From\+Transcript\+End)
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_aa651a5a0773a942db8851c56201b1316}{get\+Sub\+Annotation\+From\+Start} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} annotation, int length, int distance\+From\+Transcript\+Start)
+\item 
+static \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a5354877ab9ed2ccf0ef30006b066b01f}{reconstruct\+Gene\+Ends} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} complete\+Reconstruction, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} annotations, String annotation\+File)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a0ce2ea3dc1e213a0f7fbd3c6dc558e21}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Parse\+Exception, I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a7b19a77271ed47cdd4b4723d58be55b8}{whitespace\+Delimiter} = \char`\"{}\textbackslash{}\textbackslash{}s++\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+skadri 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a37e6c5de3998706091a6aef23e96144e}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!E\+S\+A\+T\+Distance\+Calculator@{E\+S\+A\+T\+Distance\+Calculator}}
+\index{E\+S\+A\+T\+Distance\+Calculator@{E\+S\+A\+T\+Distance\+Calculator}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{E\+S\+A\+T\+Distance\+Calculator}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+E\+S\+A\+T\+Distance\+Calculator (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a37e6c5de3998706091a6aef23e96144e}
+If user wants to reconstruct gene ends.
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_ae04e6c798467dc11a0da7a31deed54ed}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!array2\+List@{array2\+List}}
+\index{array2\+List@{array2\+List}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{array2\+List}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$Double$>$ umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+array2\+List (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_ae04e6c798467dc11a0da7a31deed54ed}
+This function converts an array of double to List of type Double 
+\begin{DoxyParams}{Parameters}
+{\em double\mbox{[}$\,$\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a82606cd46ae4f4570afac64befafb941}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!calculate\+Normalization\+Factors@{calculate\+Normalization\+Factors}}
+\index{calculate\+Normalization\+Factors@{calculate\+Normalization\+Factors}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{calculate\+Normalization\+Factors}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String,Double$>$ umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+calculate\+Normalization\+Factors (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a82606cd46ae4f4570afac64befafb941}
+Calculates the scaling factor for each column of the specified matrix, using the normalization method used by D\+E\+Seq. 
+\begin{DoxyParams}{Parameters}
+{\em mat} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a8991dbfa8390362b7401aa10aa78a753}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!get\+Sub\+Annotation\+From\+End@{get\+Sub\+Annotation\+From\+End}}
+\index{get\+Sub\+Annotation\+From\+End@{get\+Sub\+Annotation\+From\+End}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{get\+Sub\+Annotation\+From\+End}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene} umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+get\+Sub\+Annotation\+From\+End (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{annotation, }
+\item[{int}]{length, }
+\item[{int}]{distance\+From\+Transcript\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a8991dbfa8390362b7401aa10aa78a753}
+Returns the subannotation of length \char`\"{}length\char`\"{} at a distance \char`\"{}distance\+From\+Transcript\+End\char`\"{} from the 3' end of the gene 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+{\em length} & \\
+\hline
+{\em distance\+From\+Transcript\+End} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_aa651a5a0773a942db8851c56201b1316}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!get\+Sub\+Annotation\+From\+Start@{get\+Sub\+Annotation\+From\+Start}}
+\index{get\+Sub\+Annotation\+From\+Start@{get\+Sub\+Annotation\+From\+Start}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{get\+Sub\+Annotation\+From\+Start}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene} umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+get\+Sub\+Annotation\+From\+Start (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{annotation, }
+\item[{int}]{length, }
+\item[{int}]{distance\+From\+Transcript\+Start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_aa651a5a0773a942db8851c56201b1316}
+Returns the subannotation of length \char`\"{}length\char`\"{} at a distance \char`\"{}distance\+From\+Transcript\+Start\char`\"{} from the 5' end of the gene 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+{\em length} & \\
+\hline
+{\em distance\+From\+Transcript\+End} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a0ce2ea3dc1e213a0f7fbd3c6dc558e21}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!main@{main}}
+\index{main@{main}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a0ce2ea3dc1e213a0f7fbd3c6dc558e21}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+{\em Parse\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a5354877ab9ed2ccf0ef30006b066b01f}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!reconstruct\+Gene\+Ends@{reconstruct\+Gene\+Ends}}
+\index{reconstruct\+Gene\+Ends@{reconstruct\+Gene\+Ends}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{reconstruct\+Gene\+Ends}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf B\+E\+D\+File\+Parser} umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+reconstruct\+Gene\+Ends (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{complete\+Reconstruction, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{annotations, }
+\item[{String}]{annotation\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a5354877ab9ed2ccf0ef30006b066b01f}
+Returns the reconstructed annotation set based on the reconstruction provided 
+\begin{DoxyParams}{Parameters}
+{\em complete\+Reconstruction} & \\
+\hline
+{\em annotations} & \\
+\hline
+{\em annotation\+File} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_ac118a1c8cb83450751f162aa01933165}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!write\+Normalized\+Matrix@{write\+Normalized\+Matrix}}
+\index{write\+Normalized\+Matrix@{write\+Normalized\+Matrix}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{write\+Normalized\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+write\+Normalized\+Matrix (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name, }
+\item[{{\bf Matrix\+With\+Headers}}]{result\+Matrix}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_ac118a1c8cb83450751f162aa01933165}
+This function takes an input count matrix and returns a normalized matrix, where a scaling factor is calculated for each sample, and all genes for that sample are scaled by this factor. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \\
+\hline
+{\em result\+Matrix} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a7b19a77271ed47cdd4b4723d58be55b8}{\index{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}!whitespace\+Delimiter@{whitespace\+Delimiter}}
+\index{whitespace\+Delimiter@{whitespace\+Delimiter}!umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator@{umms\+::esat\+::\+E\+S\+A\+T\+Distance\+Calculator}}
+\subsubsection[{whitespace\+Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+esat.\+E\+S\+A\+T\+Distance\+Calculator.\+whitespace\+Delimiter = \char`\"{}\textbackslash{}\textbackslash{}s++\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1esat_1_1_e_s_a_t_distance_calculator_a7b19a77271ed47cdd4b4723d58be55b8}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/esat/\hyperlink{_e_s_a_t_distance_calculator_8java}{E\+S\+A\+T\+Distance\+Calculator.\+java}\end{DoxyCompactItemize}

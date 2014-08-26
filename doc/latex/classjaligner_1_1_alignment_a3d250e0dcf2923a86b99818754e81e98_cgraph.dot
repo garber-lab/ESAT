@@ -1,0 +1,19 @@
+digraph "jaligner.Alignment.getSummary"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jaligner.Alignment.getSummary",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="jaligner.Alignment.getSequence1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#a846af4ea8699097936db4fc7282ea727"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="jaligner.Alignment.getName1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#adc95ebcd08efadf95a1c215d90100578"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="jaligner.Alignment.getName2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#ad656149e70e23a2f007bb543d0d393d8"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="jaligner.Alignment.getOriginal\lSequence1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#a0c12e63557ffe3811418054b100744bf"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="jaligner.Alignment.getOriginal\lSequence2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#acfe767713eefb64f61d62632347ca04a"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="jaligner.matrix.Matrix.getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1matrix_1_1_matrix.html#ab59872fac3104e3061d65e8cd0e3a1fb"];
+}

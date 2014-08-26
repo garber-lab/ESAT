@@ -1,0 +1,95 @@
+\hypertarget{class_jama_1_1_eigenvalue_decomposition}{\section{Jama.\+Eigenvalue\+Decomposition Class Reference}
+\label{class_jama_1_1_eigenvalue_decomposition}\index{Jama.\+Eigenvalue\+Decomposition@{Jama.\+Eigenvalue\+Decomposition}}
+}
+
+
+Inheritance diagram for Jama.\+Eigenvalue\+Decomposition\+:
+
+
+Collaboration diagram for Jama.\+Eigenvalue\+Decomposition\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jama_1_1_eigenvalue_decomposition_a48d5e35fca42407513644a0abb1c6df2}{Eigenvalue\+Decomposition} (\hyperlink{class_jama_1_1_matrix}{Matrix} Arg)
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_eigenvalue_decomposition_a16cfd86fa74288c8d27536460d70df7b}{get\+V} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_eigenvalue_decomposition_a90b0d4e795512f334c5294e15b31ea93}{get\+Real\+Eigenvalues} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_jama_1_1_eigenvalue_decomposition_adc0af6cb4a4a6c6f01903d979820d585}{get\+Imag\+Eigenvalues} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_eigenvalue_decomposition_a3120d34f74224c1093cc9bc03f245ee1}{get\+D} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Eigenvalues and eigenvectors of a real matrix. 
+
+If A is symmetric, then A = V$\ast$\+D$\ast$\+V' where the eigenvalue matrix D is diagonal and the eigenvector matrix V is orthogonal. I.\+e. A = V.\+times(D.\+times(V.\+transpose())) and V.\+times(V.\+transpose()) equals the identity matrix. 
+
+If A is not symmetric, then the eigenvalue matrix D is block diagonal with the real eigenvalues in 1-\/by-\/1 blocks and any complex eigenvalues, lambda + i$\ast$mu, in 2-\/by-\/2 blocks, \mbox{[}lambda, mu; -\/mu, lambda\mbox{]}. The columns of V represent the eigenvectors in the sense that A$\ast$\+V = V$\ast$\+D, i.\+e. A.\+times(\+V) equals V.\+times(\+D). The matrix V may be badly conditioned, or even singular, so the validity of the equation A = V$\ast$\+D$\ast$inverse(V) depends upon V.\+cond(). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_jama_1_1_eigenvalue_decomposition_a48d5e35fca42407513644a0abb1c6df2}{\index{Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}!Eigenvalue\+Decomposition@{Eigenvalue\+Decomposition}}
+\index{Eigenvalue\+Decomposition@{Eigenvalue\+Decomposition}!Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}}
+\subsubsection[{Eigenvalue\+Decomposition}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Eigenvalue\+Decomposition.\+Eigenvalue\+Decomposition (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{Arg}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_eigenvalue_decomposition_a48d5e35fca42407513644a0abb1c6df2}
+Check for symmetry, then construct the eigenvalue decomposition 
+\begin{DoxyParams}{Parameters}
+{\em A} & Square matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Structure to access D and V. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_jama_1_1_eigenvalue_decomposition_a3120d34f74224c1093cc9bc03f245ee1}{\index{Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}!get\+D@{get\+D}}
+\index{get\+D@{get\+D}!Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}}
+\subsubsection[{get\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Eigenvalue\+Decomposition.\+get\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_eigenvalue_decomposition_a3120d34f74224c1093cc9bc03f245ee1}
+Return the block diagonal eigenvalue matrix \begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_eigenvalue_decomposition_adc0af6cb4a4a6c6f01903d979820d585}{\index{Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}!get\+Imag\+Eigenvalues@{get\+Imag\+Eigenvalues}}
+\index{get\+Imag\+Eigenvalues@{get\+Imag\+Eigenvalues}!Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}}
+\subsubsection[{get\+Imag\+Eigenvalues}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+Eigenvalue\+Decomposition.\+get\+Imag\+Eigenvalues (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_eigenvalue_decomposition_adc0af6cb4a4a6c6f01903d979820d585}
+Return the imaginary parts of the eigenvalues \begin{DoxyReturn}{Returns}
+imag(diag(\+D)) 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_eigenvalue_decomposition_a90b0d4e795512f334c5294e15b31ea93}{\index{Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}!get\+Real\+Eigenvalues@{get\+Real\+Eigenvalues}}
+\index{get\+Real\+Eigenvalues@{get\+Real\+Eigenvalues}!Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}}
+\subsubsection[{get\+Real\+Eigenvalues}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Jama.\+Eigenvalue\+Decomposition.\+get\+Real\+Eigenvalues (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_eigenvalue_decomposition_a90b0d4e795512f334c5294e15b31ea93}
+Return the real parts of the eigenvalues \begin{DoxyReturn}{Returns}
+real(diag(\+D)) 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_eigenvalue_decomposition_a16cfd86fa74288c8d27536460d70df7b}{\index{Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}!get\+V@{get\+V}}
+\index{get\+V@{get\+V}!Jama\+::\+Eigenvalue\+Decomposition@{Jama\+::\+Eigenvalue\+Decomposition}}
+\subsubsection[{get\+V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Eigenvalue\+Decomposition.\+get\+V (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_eigenvalue_decomposition_a16cfd86fa74288c8d27536460d70df7b}
+Return the eigenvector matrix \begin{DoxyReturn}{Returns}
+V 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/\+Jama/\hyperlink{_eigenvalue_decomposition_8java}{Eigenvalue\+Decomposition.\+java}\end{DoxyCompactItemize}

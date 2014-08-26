@@ -1,0 +1,11 @@
+digraph "broad.core.annotation.BasicLightweightAnnotation.toUCSC"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.Basic\lLightweightAnnotation.toUCSC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.annotation.Basic\lLightweightAnnotation.toString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#a1c548c67447aa8ad08f8312d3f30c3d9"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.annotation.BED.toBED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d.html#acf8673ace0b95319a72e7bf115d80f5b"];
+}

@@ -1,0 +1,349 @@
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space}{\section{umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space Class Reference}
+\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space}\index{umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space@{umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space}}
+}
+
+
+Collaboration diagram for umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_ad26f342f5ff559673f1737a16e41f4f1}{Build\+Scripture\+Coordinate\+Space} (File bam\+File, String genome\+Dir)
+\item 
+\hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a80afa5bcdef6a657c5ef6a1470f97b42}{Build\+Scripture\+Coordinate\+Space} (File bam\+File, String genome\+Dir, String output\+Name, boolean force\+Strandedness, Transcription\+Read st, Argument\+Map arg\+Map)
+\item 
+\hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a4379468193a0042db7131f0dec21a81d}{Build\+Scripture\+Coordinate\+Space} (File bam\+File, String genome\+Dir, String output\+Name, boolean force\+Strandedness, Transcription\+Read strand, String chr, Argument\+Map arg\+Map)
+\item 
+Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a21a8a4ecd7583dba621994b16570f72a}{get\+Paths} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a424374a748085c5c60a2a8c8145e7852}{write} (String save, Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$$>$ rtrn)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a132faf541275464d9bb333b6b7b6ad8b}{memory\+Stats} ()
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_acf4c8c23eafcf330eff979c95da4aa10}{compatible} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} assembly, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} read)
+\item 
+static double\mbox{[}$\,$\mbox{]} \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a9eff08ae0cb49e5e80751701fb85b09d}{l2a} (List$<$ Double $>$ list)
+\item 
+static Map$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene}, Set$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a7ba371be0c1c6194e87333cdeb125467}{get\+Isoform\+Map} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_affbce5fbd3aaa984b84581aeb4890039}{isoform\+Map\+Contains} (Map$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene}, Set$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$$>$ isoform\+Map, \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene)
+\item 
+static Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_ad01703d5c482fa9d72c9be36be080627}{get\+Overlapping\+Genes} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ all\+Genes, double min\+Pct\+Overlap)
+\item 
+static Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a85654ee9f1c00f4795a6836802fe1aa6}{get\+Overlapping\+Genes} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene, Interval\+Tree$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ all\+Genes\+Tree, double min\+Pct\+Overlap)
+\item 
+static boolean \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a992fe659dd5a36c748a67d680f56762a}{has\+An\+Overlapping\+Gene} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene, Interval\+Tree$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ all\+Genes\+Tree, double min\+Pct\+Overlap)
+\item 
+static void \hyperlink{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a12f315d4724bfd045035db00ab450200}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_ad26f342f5ff559673f1737a16e41f4f1}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!Build\+Scripture\+Coordinate\+Space@{Build\+Scripture\+Coordinate\+Space}}
+\index{Build\+Scripture\+Coordinate\+Space@{Build\+Scripture\+Coordinate\+Space}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{Build\+Scripture\+Coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+Build\+Scripture\+Coordinate\+Space (
+\begin{DoxyParamCaption}
+\item[{File}]{bam\+File, }
+\item[{String}]{genome\+Dir}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_ad26f342f5ff559673f1737a16e41f4f1}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a80afa5bcdef6a657c5ef6a1470f97b42}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!Build\+Scripture\+Coordinate\+Space@{Build\+Scripture\+Coordinate\+Space}}
+\index{Build\+Scripture\+Coordinate\+Space@{Build\+Scripture\+Coordinate\+Space}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{Build\+Scripture\+Coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+Build\+Scripture\+Coordinate\+Space (
+\begin{DoxyParamCaption}
+\item[{File}]{bam\+File, }
+\item[{String}]{genome\+Dir, }
+\item[{String}]{output\+Name, }
+\item[{boolean}]{force\+Strandedness, }
+\item[{Transcription\+Read}]{st, }
+\item[{Argument\+Map}]{arg\+Map}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a80afa5bcdef6a657c5ef6a1470f97b42}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & \\
+\hline
+{\em threshold} & \\
+\hline
+{\em genome\+Dir} & \\
+\hline
+{\em output\+Name} & \\
+\hline
+{\em force\+Strandedness} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a4379468193a0042db7131f0dec21a81d}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!Build\+Scripture\+Coordinate\+Space@{Build\+Scripture\+Coordinate\+Space}}
+\index{Build\+Scripture\+Coordinate\+Space@{Build\+Scripture\+Coordinate\+Space}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{Build\+Scripture\+Coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+Build\+Scripture\+Coordinate\+Space (
+\begin{DoxyParamCaption}
+\item[{File}]{bam\+File, }
+\item[{String}]{genome\+Dir, }
+\item[{String}]{output\+Name, }
+\item[{boolean}]{force\+Strandedness, }
+\item[{Transcription\+Read}]{strand, }
+\item[{String}]{chr, }
+\item[{Argument\+Map}]{arg\+Map}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a4379468193a0042db7131f0dec21a81d}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & \\
+\hline
+{\em threshold} & \\
+\hline
+{\em genome\+Dir} & \\
+\hline
+{\em output\+Name} & \\
+\hline
+{\em force\+Strandedness} & \\
+\hline
+{\em chr} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_acf4c8c23eafcf330eff979c95da4aa10}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!compatible@{compatible}}
+\index{compatible@{compatible}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{compatible}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+compatible (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{assembly, }
+\item[{{\bf Annotation}}]{read}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_acf4c8c23eafcf330eff979c95da4aa10}
+
+\begin{DoxyParams}{Parameters}
+{\em iter} & \\
+\hline
+{\em working\+Assemblies} & \\
+\hline
+{\em strand} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em iter} & \\
+\hline
+{\em working\+Assemblies} & \\
+\hline
+{\em strand} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true is the exon is a subset of the assembly A\+N\+D the exon does not match an exon of the assembly 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em assembly} & \\
+\hline
+{\em exon} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a7ba371be0c1c6194e87333cdeb125467}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!get\+Isoform\+Map@{get\+Isoform\+Map}}
+\index{get\+Isoform\+Map@{get\+Isoform\+Map}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{get\+Isoform\+Map}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<${\bf Gene},Set$<${\bf Gene}$>$ $>$ umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+get\+Isoform\+Map (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a7ba371be0c1c6194e87333cdeb125467}
+
+\begin{DoxyParams}{Parameters}
+{\em genes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_ad01703d5c482fa9d72c9be36be080627}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!get\+Overlapping\+Genes@{get\+Overlapping\+Genes}}
+\index{get\+Overlapping\+Genes@{get\+Overlapping\+Genes}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{get\+Overlapping\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<${\bf Gene}$>$ umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+get\+Overlapping\+Genes (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene, }
+\item[{Collection$<$ {\bf Gene} $>$}]{all\+Genes, }
+\item[{double}]{min\+Pct\+Overlap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_ad01703d5c482fa9d72c9be36be080627}
+
+\begin{DoxyParams}{Parameters}
+{\em gene} & \\
+\hline
+{\em all\+Genes} & \\
+\hline
+{\em min\+Pct\+Overlap} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+O\+D\+O\+: optimize using interval tree 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a85654ee9f1c00f4795a6836802fe1aa6}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!get\+Overlapping\+Genes@{get\+Overlapping\+Genes}}
+\index{get\+Overlapping\+Genes@{get\+Overlapping\+Genes}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{get\+Overlapping\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<${\bf Gene}$>$ umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+get\+Overlapping\+Genes (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene, }
+\item[{Interval\+Tree$<$ {\bf Gene} $>$}]{all\+Genes\+Tree, }
+\item[{double}]{min\+Pct\+Overlap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a85654ee9f1c00f4795a6836802fe1aa6}
+returns a collection of genes in the interval tree that overlap this gene with atleast min\+Pct\+Overlap and in the same orientation 
+\begin{DoxyParams}{Parameters}
+{\em gene} & \\
+\hline
+{\em all\+Genes\+Tree} & \\
+\hline
+{\em min\+Pct\+Overlap} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a21a8a4ecd7583dba621994b16570f72a}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{get\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<${\bf Gene}$>$ $>$ umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+get\+Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a21a8a4ecd7583dba621994b16570f72a}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a992fe659dd5a36c748a67d680f56762a}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!has\+An\+Overlapping\+Gene@{has\+An\+Overlapping\+Gene}}
+\index{has\+An\+Overlapping\+Gene@{has\+An\+Overlapping\+Gene}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{has\+An\+Overlapping\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+has\+An\+Overlapping\+Gene (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene, }
+\item[{Interval\+Tree$<$ {\bf Gene} $>$}]{all\+Genes\+Tree, }
+\item[{double}]{min\+Pct\+Overlap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a992fe659dd5a36c748a67d680f56762a}
+Returns true if has an overlapping gene with atleast min\+Pct\+Overlap and in the same orientationin the interval tree 
+\begin{DoxyParams}{Parameters}
+{\em gene} & \\
+\hline
+{\em all\+Genes\+Tree} & \\
+\hline
+{\em min\+Pct\+Overlap} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_affbce5fbd3aaa984b84581aeb4890039}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!isoform\+Map\+Contains@{isoform\+Map\+Contains}}
+\index{isoform\+Map\+Contains@{isoform\+Map\+Contains}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{isoform\+Map\+Contains}]{\setlength{\rightskip}{0pt plus 5cm}static boolean umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+isoform\+Map\+Contains (
+\begin{DoxyParamCaption}
+\item[{Map$<$ {\bf Gene}, Set$<$ {\bf Gene} $>$$>$}]{isoform\+Map, }
+\item[{{\bf Gene}}]{gene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_affbce5fbd3aaa984b84581aeb4890039}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a9eff08ae0cb49e5e80751701fb85b09d}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!l2a@{l2a}}
+\index{l2a@{l2a}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{l2a}]{\setlength{\rightskip}{0pt plus 5cm}static double \mbox{[}$\,$\mbox{]} umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+l2a (
+\begin{DoxyParamCaption}
+\item[{List$<$ Double $>$}]{list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a9eff08ae0cb49e5e80751701fb85b09d}
+Converts a list to an array 
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a12f315d4724bfd045035db00ab450200}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!main@{main}}
+\index{main@{main}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a12f315d4724bfd045035db00ab450200}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a132faf541275464d9bb333b6b7b6ad8b}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!memory\+Stats@{memory\+Stats}}
+\index{memory\+Stats@{memory\+Stats}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{memory\+Stats}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+memory\+Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a132faf541275464d9bb333b6b7b6ad8b}
+\hypertarget{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a424374a748085c5c60a2a8c8145e7852}{\index{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}!write@{write}}
+\index{write@{write}!umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space@{umms\+::core\+::scripture\+::\+Build\+Scripture\+Coordinate\+Space}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+core.\+scripture.\+Build\+Scripture\+Coordinate\+Space.\+write (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ String, Collection$<$ {\bf Gene} $>$$>$}]{rtrn}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space_a424374a748085c5c60a2a8c8145e7852}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/scripture/\hyperlink{_build_scripture_coordinate_space_8java}{Build\+Scripture\+Coordinate\+Space.\+java}\end{DoxyCompactItemize}

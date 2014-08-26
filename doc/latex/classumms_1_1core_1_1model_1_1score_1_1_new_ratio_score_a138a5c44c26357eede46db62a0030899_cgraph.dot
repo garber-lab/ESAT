@@ -1,0 +1,28 @@
+digraph "umms.core.model.score.NewRatioScore.getLog2Ratio"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.New\lRatioScore.getLog2Ratio",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.score.New\lRatioScore.getRatio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#a241f72296f12599ebbc03f6b6babc9b6"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.score.New\lRatioScore.getNumeratorRPKM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#a5895395a7e81a482257c8f28175ba67a"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.model.score.New\lRatioScore.getNumeratorCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#a30acd35178f2104d19e57812869c583c"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.model.score.Count\lScore.getCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a906acf2141cba6fab150c85de37ca2b5"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.model.score.New\lRatioScore.getNumeratorTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#a450ef192f2f085afc2a59d0687772b35"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.model.score.Count\lScore.getTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_count_score.html#a4668d5a19912f7f9bf52c6c3b8fe2b2c"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="umms.core.model.score.Window\lScore.AbstractWindowScore.getAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_window_score_1_1_abstract_window_score.html#a1005010d00c6d09f70b39da815c3ee38"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="umms.core.model.score.New\lRatioScore.getDenominatorRPKM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#af6a7ce43a225b3ae9b37cdd7080ade0b"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="umms.core.model.score.New\lRatioScore.getDenominatorCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#a93b23e58ece71cc054f535d97722c709"];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="umms.core.model.score.New\lRatioScore.getDenominatorTotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_new_ratio_score.html#af100d5f2aa2c974efdbe258ab25df026"];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+}

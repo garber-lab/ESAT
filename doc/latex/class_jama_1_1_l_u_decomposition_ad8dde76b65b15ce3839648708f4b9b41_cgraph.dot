@@ -1,0 +1,11 @@
+digraph "Jama.LUDecomposition.solve"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Jama.LUDecomposition.solve",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Jama.Matrix.getRowDimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_jama_1_1_matrix.html#a1696a4fbbbc49c0e4ac665d104b3af1d"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Jama.LUDecomposition.isNonsingular",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_jama_1_1_l_u_decomposition.html#aa5a58918751ee6b2abc858542fb5ae47"];
+}

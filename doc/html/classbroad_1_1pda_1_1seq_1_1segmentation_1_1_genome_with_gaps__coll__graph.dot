@@ -1,0 +1,12 @@
+digraph "broad.pda.seq.segmentation.GenomeWithGaps"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="broad.pda.seq.segmentation.\lGenomeWithGaps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currentInterval\nnextInterval" ,fontname="Helvetica"];
+  Node2 [label="Gene",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gaps" ,fontname="Helvetica"];
+  Node3 [label="Collection\< Annotation \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gapSpace\ncDNASpace" ,fontname="Helvetica"];
+  Node4 [label="IntervalTree\< Annotation \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

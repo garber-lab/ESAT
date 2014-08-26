@@ -1,0 +1,15 @@
+digraph "umms.core.annotation.CompoundInterval.overlaps"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Compound\lInterval.overlaps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Compound\lInterval.getBlocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#a78e9d5bb2219d80cfc01c9f483458dda"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Compound\lInterval.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#a791c0da68d3127731c9b922f38e3751c"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.annotation.Compound\lInterval.getStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#a01a3c5e0cfce5f5a283c9ff4a7225490"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.annotation.Compound\lInterval.getEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_compound_interval.html#acf6878737d4032c688557394d11c33ac"];
+}

@@ -1,0 +1,9 @@
+digraph "java/umms/core/annotation/filter" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7f9c8a639ce9225e124ad15182dc5540 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="annotation" fontname="Helvetica", fontsize="10", URL="dir_7f9c8a639ce9225e124ad15182dc5540.html"]
+  dir_4c0f6d6449b1983a62220550dc69b82c [shape=box, label="filter", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4c0f6d6449b1983a62220550dc69b82c.html"];
+  }
+}

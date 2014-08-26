@@ -1,0 +1,16 @@
+digraph "umms.core.model.score.BasicScanStatisticScore.getScanPvalue"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.score.Basic\lScanStatisticScore.getScanPvalue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.score.Basic\lScanStatisticScore.BasicScanStatisticScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#a0f23700e5bf6d7b275ee75acef2f64b3"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.score.Basic\lScanStatisticScore.equals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#a66e44b834b2bcb802761d4d34ae5f25c"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.model.score.Basic\lScanStatisticScore.getScores",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#a7a19d5c09d09314d3f947991c1e8d086"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.model.score.Basic\lScanStatisticScore.toString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_basic_scan_statistic_score.html#a194c4f41475e7094bc2cdded1ae26433"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

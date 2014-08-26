@@ -1,0 +1,107 @@
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates}{\section{umms.\+core.\+general.\+Predicates Class Reference}
+\label{classumms_1_1core_1_1general_1_1_predicates}\index{umms.\+core.\+general.\+Predicates@{umms.\+core.\+general.\+Predicates}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static$<$ T $>$ Predicate$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_predicates_a091ca0c838768ce940f853b02c21caa6}{always\+True} ()
+\item 
+static$<$ T $>$ Predicate$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_predicates_ae5394589a9dfe455ee5b00597a0cc97b}{always\+False} ()
+\item 
+static$<$ T $>$ Predicate$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_predicates_a17c99470d5b64228a434369ae35bbc2a}{and} (Iterable$<$?extends Predicate$<$?super T $>$$>$ components)
+\item 
+static$<$ T $>$ Predicate$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_predicates_acc149cc283d7e594245c25a1bb70540e}{and} (Predicate$<$?super T $>$...components)
+\item 
+static$<$ T $>$ Predicate$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_predicates_aecc8e245a29d3b5475321d130ad5dbe1}{not} (Predicate$<$ T $>$ predicate)
+\item 
+static$<$ T $>$ Predicate$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_predicates_a9ac8906f39cbf25605bbc31aef6f89db}{or} (Iterable$<$?extends Predicate$<$?super T $>$$>$ components)
+\item 
+static$<$ T $>$ Predicate$<$ T $>$ \hyperlink{classumms_1_1core_1_1general_1_1_predicates_a478f15f195730aa80764f1064450b4f3}{or} (Predicate$<$?super T $>$...components)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz Inspired by Google Guava \hyperlink{classumms_1_1core_1_1general_1_1_predicates}{Predicates} class 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates_ae5394589a9dfe455ee5b00597a0cc97b}{\index{umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}!always\+False@{always\+False}}
+\index{always\+False@{always\+False}!umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}}
+\subsubsection[{always\+False}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Predicate$<$T$>$ umms.\+core.\+general.\+Predicates.\+always\+False (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_predicates_ae5394589a9dfe455ee5b00597a0cc97b}
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates_a091ca0c838768ce940f853b02c21caa6}{\index{umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}!always\+True@{always\+True}}
+\index{always\+True@{always\+True}!umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}}
+\subsubsection[{always\+True}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Predicate$<$T$>$ umms.\+core.\+general.\+Predicates.\+always\+True (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_predicates_a091ca0c838768ce940f853b02c21caa6}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates_a17c99470d5b64228a434369ae35bbc2a}{\index{umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}!and@{and}}
+\index{and@{and}!umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}}
+\subsubsection[{and}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Predicate$<$T$>$ umms.\+core.\+general.\+Predicates.\+and (
+\begin{DoxyParamCaption}
+\item[{Iterable$<$?extends Predicate$<$?super T $>$$>$}]{components}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_predicates_a17c99470d5b64228a434369ae35bbc2a}
+Returns a predicate that evaluates to
+\begin{DoxyCode}
+\textcolor{keyword}{true} 
+\end{DoxyCode}
+ if the object being tested passes all component predicates. If \{\} is empty, the predicate will always return true. It defensively copies the iterable passed in, so future changes to the iterable will not alter the behavior of this predicate. 
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & \\
+\hline
+{\em components} & Collection of predicates to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates_acc149cc283d7e594245c25a1bb70540e}{\index{umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}!and@{and}}
+\index{and@{and}!umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}}
+\subsubsection[{and}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Predicate$<$T$>$ umms.\+core.\+general.\+Predicates.\+and (
+\begin{DoxyParamCaption}
+\item[{Predicate$<$?super T $>$...}]{components}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_predicates_acc149cc283d7e594245c25a1bb70540e}
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates_aecc8e245a29d3b5475321d130ad5dbe1}{\index{umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}!not@{not}}
+\index{not@{not}!umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}}
+\subsubsection[{not}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Predicate$<$T$>$ umms.\+core.\+general.\+Predicates.\+not (
+\begin{DoxyParamCaption}
+\item[{Predicate$<$ T $>$}]{predicate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_predicates_aecc8e245a29d3b5475321d130ad5dbe1}
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates_a9ac8906f39cbf25605bbc31aef6f89db}{\index{umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}!or@{or}}
+\index{or@{or}!umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}}
+\subsubsection[{or}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Predicate$<$T$>$ umms.\+core.\+general.\+Predicates.\+or (
+\begin{DoxyParamCaption}
+\item[{Iterable$<$?extends Predicate$<$?super T $>$$>$}]{components}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_predicates_a9ac8906f39cbf25605bbc31aef6f89db}
+\hypertarget{classumms_1_1core_1_1general_1_1_predicates_a478f15f195730aa80764f1064450b4f3}{\index{umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}!or@{or}}
+\index{or@{or}!umms\+::core\+::general\+::\+Predicates@{umms\+::core\+::general\+::\+Predicates}}
+\subsubsection[{or}]{\setlength{\rightskip}{0pt plus 5cm}static $<$T$>$ Predicate$<$T$>$ umms.\+core.\+general.\+Predicates.\+or (
+\begin{DoxyParamCaption}
+\item[{Predicate$<$?super T $>$...}]{components}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1general_1_1_predicates_a478f15f195730aa80764f1064450b4f3}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/general/\hyperlink{_predicates_8java}{Predicates.\+java}\end{DoxyCompactItemize}

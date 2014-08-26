@@ -1,0 +1,23 @@
+digraph "broad.core.datastructures.MatrixWithHeaders.getColumn"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.datastructures.\lMatrixWithHeaders.getColumn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.datastructures.\lMatrixWithHeaders.zColumnNormalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a9618c4ef4959d61e32d30272ee352e21"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.datastructures.\lMatrixWithHeaders.normalizeColumns\lByMean",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a7639e611d3f8af5d3049dac34083b0b2"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.datastructures.\lMatrixWithHeaders.normalizeColumns\lByMedian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a2a230a306e6b58b0bbb84aefac1e10b4"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByColumnNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a4c1f213a9770630270705826680797ca"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.datastructures.\lMatrixWithHeaders.submatrixByColumnNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a51039cb4346193fba13dd235b10f03bf"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.datastructures.\lMatrixWithHeaders.rank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a3b9c2c75801146d39097c198c3ae4934"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.core.datastructures.\lMatrixWithHeaders.sortList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#afdb4fa388dc0081fdf34784428ec248f"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.core.datastructures.\lMatrixWithHeaders.writeGMT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#aa6de980454e52f057e9436547b976acf"];
+}

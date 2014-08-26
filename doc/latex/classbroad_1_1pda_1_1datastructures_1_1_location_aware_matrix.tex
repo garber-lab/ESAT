@@ -1,0 +1,410 @@
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix}{\section{broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix Class Reference}
+\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix}\index{broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix@{broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix\+:
+
+
+Collaboration diagram for broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a3e8e0629a1ff4a820ec70d785151d65b}{Location\+Aware\+Matrix} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae157adefc31b8bc3ac12fea92636208d}{Location\+Aware\+Matrix} (List$<$ String $>$ rows, List$<$ String $>$ columns, Map$<$ String, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ row\+Locations)
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a8da59b87a189a698bdef33471b85d358}{Location\+Aware\+Matrix} (Buffered\+Reader br, String chr)  throws I\+O\+Exception, 			\+Parse\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a0b4e64d0423afbabaf12ee4f81b3b9cc}{Location\+Aware\+Matrix} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ probe\+Data, List$<$ String $>$ samples)
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a3917bb578d512f2e05b1c57cab4a2ab6}{Location\+Aware\+Matrix} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} mwh)
+\item 
+Set$<$ String $>$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a2e1340ec85a65aa076a4f1deacd9c049}{get\+Chromosomes} ()
+\item 
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_affcb1adcdf0e72debfeb7ac5c3da1290}{get\+Row\+Position} (String row)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae1ebf162e0ebbc8e9e3aae5b44db7596}{set\+Columns} (List$<$ String $>$ columns)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ad67e04f012ae218f9b8841144dd6a186}{set\+Data\+Dimensions} (int row\+Dim, int column\+Dim)
+\item 
+Collection\\*
+$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a67a96cdf0a6b10a54641fd63d1974f96}{get\+Row\+Annotations} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a4a2728e07b64a966059ee4f0d5d9fc63}{write} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ab12829b4bec6392f73ef867a924dd00b}{annotation} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} annotation)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ad5813dfaedf6c8b06b481a5af85ff940}{eof} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_aa823b3fd04acecf9315f1764f4cd52e7}{begin} ()
+\item 
+Interval\+Tree$<$ String $>$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a74078bbee72db894231be70f8a2fd8b2}{get\+Row\+Tree} (String chromosome)
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix}{Location\+Aware\+Matrix} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae64885db621cdb9db40bc334cc3de48e}{submatrix\+By\+Columns} (Collection$<$ String $>$ column\+Names)
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix}{Location\+Aware\+Matrix} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a7f4a047ce0579d3ed840c0395cb54baf}{submatrix\+By\+Columns} (String\mbox{[}$\,$\mbox{]} column\+Names)
+\item 
+List\\*
+$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a1a3c6c34c6d39eb5b262362d46a3521d}{get\+Overlappers} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ab12829b4bec6392f73ef867a924dd00b}{annotation})
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a54407bb5f647d3ded8be0a4909e42687}{browser\+Line} (String line)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae6e639204be24573bd8b5bb2c98f4eea}{track} (String line)
+\item 
+\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix}{Location\+Aware\+Matrix} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a343230e0d3a3e96ae96865bd43ebc9f3}{remove\+Overlapping\+Rows} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix}{Location\+Aware\+Matrix} other)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_acf69c339f06767a98198b6fa18150b5b}{append\+Rows} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix}{Location\+Aware\+Matrix} other)
+\item 
+Map$<$ String, \\*
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a58c5ec3cf67ef67dcb837812f48b47f0}{get\+Row\+Location\+Map} ()
+\item 
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a568bcf953a7d2ae720f51a9b196106c2}{get\+Closest} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ab12829b4bec6392f73ef867a924dd00b}{annotation})
+\item 
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a96adb475ad10bd7346702f01bf66b379}{get\+Prior\+Closest} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ab12829b4bec6392f73ef867a924dd00b}{annotation})
+\item 
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ac52ce4740d48e3ae918578ec24732327}{get\+Next\+Closest} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ab12829b4bec6392f73ef867a924dd00b}{annotation})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a2c1183b9307cbe047d621bb9c1000977}{init\+From\+I\+G\+V\+Matrix} (Buffered\+Reader br, String header, String chromosome\+To\+Load)  throws I\+O\+Exception, Parse\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a3e8e0629a1ff4a820ec70d785151d65b}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!Location\+Aware\+Matrix@{Location\+Aware\+Matrix}}
+\index{Location\+Aware\+Matrix@{Location\+Aware\+Matrix}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{Location\+Aware\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+Location\+Aware\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a3e8e0629a1ff4a820ec70d785151d65b}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae157adefc31b8bc3ac12fea92636208d}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!Location\+Aware\+Matrix@{Location\+Aware\+Matrix}}
+\index{Location\+Aware\+Matrix@{Location\+Aware\+Matrix}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{Location\+Aware\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+Location\+Aware\+Matrix (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{rows, }
+\item[{List$<$ String $>$}]{columns, }
+\item[{Map$<$ String, {\bf Lightweight\+Genomic\+Annotation} $>$}]{row\+Locations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae157adefc31b8bc3ac12fea92636208d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a8da59b87a189a698bdef33471b85d358}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!Location\+Aware\+Matrix@{Location\+Aware\+Matrix}}
+\index{Location\+Aware\+Matrix@{Location\+Aware\+Matrix}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{Location\+Aware\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+Location\+Aware\+Matrix (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, 			{\bf Parse\+Exception}}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a8da59b87a189a698bdef33471b85d358}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a0b4e64d0423afbabaf12ee4f81b3b9cc}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!Location\+Aware\+Matrix@{Location\+Aware\+Matrix}}
+\index{Location\+Aware\+Matrix@{Location\+Aware\+Matrix}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{Location\+Aware\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+Location\+Aware\+Matrix (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Lightweight\+Genomic\+Annotation} $>$}]{probe\+Data, }
+\item[{List$<$ String $>$}]{samples}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a0b4e64d0423afbabaf12ee4f81b3b9cc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a3917bb578d512f2e05b1c57cab4a2ab6}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!Location\+Aware\+Matrix@{Location\+Aware\+Matrix}}
+\index{Location\+Aware\+Matrix@{Location\+Aware\+Matrix}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{Location\+Aware\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+Location\+Aware\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{mwh}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a3917bb578d512f2e05b1c57cab4a2ab6}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ab12829b4bec6392f73ef867a924dd00b}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!annotation@{annotation}}
+\index{annotation@{annotation}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{annotation}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ab12829b4bec6392f73ef867a924dd00b}
+
+
+Implements \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler_a294f9789d22a4bb5125a4375c13be874}{broad.\+core.\+annotation.\+Annotation\+Handler}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_acf69c339f06767a98198b6fa18150b5b}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!append\+Rows@{append\+Rows}}
+\index{append\+Rows@{append\+Rows}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{append\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+append\+Rows (
+\begin{DoxyParamCaption}
+\item[{{\bf Location\+Aware\+Matrix}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_acf69c339f06767a98198b6fa18150b5b}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_aa823b3fd04acecf9315f1764f4cd52e7}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!begin@{begin}}
+\index{begin@{begin}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_aa823b3fd04acecf9315f1764f4cd52e7}
+
+
+Implements \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler_af4a0e34a3707368d3f881d536a68787e}{broad.\+core.\+annotation.\+Annotation\+Handler}.
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a54407bb5f647d3ded8be0a4909e42687}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!browser\+Line@{browser\+Line}}
+\index{browser\+Line@{browser\+Line}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{browser\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+browser\+Line (
+\begin{DoxyParamCaption}
+\item[{String}]{line}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a54407bb5f647d3ded8be0a4909e42687}
+
+
+Implements \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler_a1cbb17bb1f65cc3cd9949e25460014e0}{broad.\+core.\+annotation.\+Annotation\+Handler}.
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ad5813dfaedf6c8b06b481a5af85ff940}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!eof@{eof}}
+\index{eof@{eof}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{eof}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+eof (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ad5813dfaedf6c8b06b481a5af85ff940}
+
+
+Implements \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler_a61a948da9336e515d4811fa4b23e86aa}{broad.\+core.\+annotation.\+Annotation\+Handler}.
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a2e1340ec85a65aa076a4f1deacd9c049}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Chromosomes@{get\+Chromosomes}}
+\index{get\+Chromosomes@{get\+Chromosomes}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$String$>$ broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Chromosomes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a2e1340ec85a65aa076a4f1deacd9c049}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a568bcf953a7d2ae720f51a9b196106c2}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Closest@{get\+Closest}}
+\index{get\+Closest@{get\+Closest}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Closest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lightweight\+Genomic\+Annotation} broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Closest (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a568bcf953a7d2ae720f51a9b196106c2}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ac52ce4740d48e3ae918578ec24732327}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Next\+Closest@{get\+Next\+Closest}}
+\index{get\+Next\+Closest@{get\+Next\+Closest}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Next\+Closest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lightweight\+Genomic\+Annotation} broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Next\+Closest (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ac52ce4740d48e3ae918578ec24732327}
+Return 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the annotation corresponding to the row that is after the given annotation in chromosome order 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a1a3c6c34c6d39eb5b262362d46a3521d}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Lightweight\+Genomic\+Annotation}$>$ broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a1a3c6c34c6d39eb5b262362d46a3521d}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a96adb475ad10bd7346702f01bf66b379}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Prior\+Closest@{get\+Prior\+Closest}}
+\index{get\+Prior\+Closest@{get\+Prior\+Closest}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Prior\+Closest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lightweight\+Genomic\+Annotation} broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Prior\+Closest (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a96adb475ad10bd7346702f01bf66b379}
+
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the annotation corresponding to the row that is before in chromosome order 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a67a96cdf0a6b10a54641fd63d1974f96}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Row\+Annotations@{get\+Row\+Annotations}}
+\index{get\+Row\+Annotations@{get\+Row\+Annotations}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Row\+Annotations}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Lightweight\+Genomic\+Annotation}$>$ broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Row\+Annotations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a67a96cdf0a6b10a54641fd63d1974f96}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a58c5ec3cf67ef67dcb837812f48b47f0}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Row\+Location\+Map@{get\+Row\+Location\+Map}}
+\index{get\+Row\+Location\+Map@{get\+Row\+Location\+Map}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Row\+Location\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, {\bf Lightweight\+Genomic\+Annotation}$>$ broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Row\+Location\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a58c5ec3cf67ef67dcb837812f48b47f0}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_affcb1adcdf0e72debfeb7ac5c3da1290}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Row\+Position@{get\+Row\+Position}}
+\index{get\+Row\+Position@{get\+Row\+Position}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Row\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lightweight\+Genomic\+Annotation} broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Row\+Position (
+\begin{DoxyParamCaption}
+\item[{String}]{row}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_affcb1adcdf0e72debfeb7ac5c3da1290}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a74078bbee72db894231be70f8a2fd8b2}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!get\+Row\+Tree@{get\+Row\+Tree}}
+\index{get\+Row\+Tree@{get\+Row\+Tree}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{get\+Row\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+Tree$<$String$>$ broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+get\+Row\+Tree (
+\begin{DoxyParamCaption}
+\item[{String}]{chromosome}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a74078bbee72db894231be70f8a2fd8b2}
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a2c1183b9307cbe047d621bb9c1000977}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!init\+From\+I\+G\+V\+Matrix@{init\+From\+I\+G\+V\+Matrix}}
+\index{init\+From\+I\+G\+V\+Matrix@{init\+From\+I\+G\+V\+Matrix}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{init\+From\+I\+G\+V\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+init\+From\+I\+G\+V\+Matrix (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{String}]{header, }
+\item[{String}]{chromosome\+To\+Load}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a2c1183b9307cbe047d621bb9c1000977}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a343230e0d3a3e96ae96865bd43ebc9f3}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!remove\+Overlapping\+Rows@{remove\+Overlapping\+Rows}}
+\index{remove\+Overlapping\+Rows@{remove\+Overlapping\+Rows}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{remove\+Overlapping\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Location\+Aware\+Matrix} broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+remove\+Overlapping\+Rows (
+\begin{DoxyParamCaption}
+\item[{{\bf Location\+Aware\+Matrix}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a343230e0d3a3e96ae96865bd43ebc9f3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae1ebf162e0ebbc8e9e3aae5b44db7596}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!set\+Columns@{set\+Columns}}
+\index{set\+Columns@{set\+Columns}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{set\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+set\+Columns (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{columns}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae1ebf162e0ebbc8e9e3aae5b44db7596}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ad67e04f012ae218f9b8841144dd6a186}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!set\+Data\+Dimensions@{set\+Data\+Dimensions}}
+\index{set\+Data\+Dimensions@{set\+Data\+Dimensions}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{set\+Data\+Dimensions}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+set\+Data\+Dimensions (
+\begin{DoxyParamCaption}
+\item[{int}]{row\+Dim, }
+\item[{int}]{column\+Dim}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ad67e04f012ae218f9b8841144dd6a186}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae64885db621cdb9db40bc334cc3de48e}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!submatrix\+By\+Columns@{submatrix\+By\+Columns}}
+\index{submatrix\+By\+Columns@{submatrix\+By\+Columns}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{submatrix\+By\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Location\+Aware\+Matrix} broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+submatrix\+By\+Columns (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ String $>$}]{column\+Names}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae64885db621cdb9db40bc334cc3de48e}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a7f4a047ce0579d3ed840c0395cb54baf}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!submatrix\+By\+Columns@{submatrix\+By\+Columns}}
+\index{submatrix\+By\+Columns@{submatrix\+By\+Columns}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{submatrix\+By\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Location\+Aware\+Matrix} broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+submatrix\+By\+Columns (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{column\+Names}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a7f4a047ce0579d3ed840c0395cb54baf}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae6e639204be24573bd8b5bb2c98f4eea}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!track@{track}}
+\index{track@{track}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{track}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+track (
+\begin{DoxyParamCaption}
+\item[{String}]{line}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_ae6e639204be24573bd8b5bb2c98f4eea}
+
+
+Implements \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler_a5c9a04d7c0918ec3bf2a8e9b4f8b4ee0}{broad.\+core.\+annotation.\+Annotation\+Handler}.
+
+\hypertarget{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a4a2728e07b64a966059ee4f0d5d9fc63}{\index{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}!write@{write}}
+\index{write@{write}!broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix@{broad\+::pda\+::datastructures\+::\+Location\+Aware\+Matrix}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+datastructures.\+Location\+Aware\+Matrix.\+write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1datastructures_1_1_location_aware_matrix_a4a2728e07b64a966059ee4f0d5d9fc63}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/datastructures/\hyperlink{_location_aware_matrix_8java}{Location\+Aware\+Matrix.\+java}\end{DoxyCompactItemize}

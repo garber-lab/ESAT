@@ -1,0 +1,8 @@
+digraph "broad.pda.geneexpression.PaGEJava"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="broad.pda.geneexpression.\lPaGEJava",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" folds\nFDRs\nexpression" ,fontname="Helvetica"];
+  Node2 [label="broad.core.datastructures.\lMatrixWithHeaders",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html"];
+}

@@ -1,0 +1,97 @@
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_utils}{\section{broad.\+core.\+annotation.\+Annotation\+Utils Class Reference}
+\label{classbroad_1_1core_1_1annotation_1_1_annotation_utils}\index{broad.\+core.\+annotation.\+Annotation\+Utils@{broad.\+core.\+annotation.\+Annotation\+Utils}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_utils_ad54a460b148c5517dd615c7d1547538e}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception, Parse\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_utils_a16dc3e22e45005f5af0a680d703caf95}{U\+S\+A\+G\+E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_utils_ad54a460b148c5517dd615c7d1547538e}{\index{broad\+::core\+::annotation\+::\+Annotation\+Utils@{broad\+::core\+::annotation\+::\+Annotation\+Utils}!main@{main}}
+\index{main@{main}!broad\+::core\+::annotation\+::\+Annotation\+Utils@{broad\+::core\+::annotation\+::\+Annotation\+Utils}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+annotation.\+Annotation\+Utils.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_utils_ad54a460b148c5517dd615c7d1547538e}
+Jesse June 19, 2012
+
+Jesse June 24, 2012
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_utils_a16dc3e22e45005f5af0a680d703caf95}{\index{broad\+::core\+::annotation\+::\+Annotation\+Utils@{broad\+::core\+::annotation\+::\+Annotation\+Utils}!U\+S\+A\+G\+E@{U\+S\+A\+G\+E}}
+\index{U\+S\+A\+G\+E@{U\+S\+A\+G\+E}!broad\+::core\+::annotation\+::\+Annotation\+Utils@{broad\+::core\+::annotation\+::\+Annotation\+Utils}}
+\subsubsection[{U\+S\+A\+G\+E}]{\setlength{\rightskip}{0pt plus 5cm}final String broad.\+core.\+annotation.\+Annotation\+Utils.\+U\+S\+A\+G\+E\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_utils_a16dc3e22e45005f5af0a680d703caf95}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"Usage: AnnotationUtils TASK=<task\_num> <task\_args>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)tTasks:\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t1. Take the intersection two annotation sets: -set1 <File containing first set>  -set2 <File
+       containing second set> -minScore <to filter by minimum annotation score>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t\(\backslash\)t [-set1format <[BED], GFF or generic> -set2format <[BED], GFF or generic> -outformat <desired
+       output format BED, GFF or generic, default is se1format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t2. Take the difference of two annotation sets (all annotations in set1 that do not overlap set2):
+       -set1 <File containing first set>  -set2 <File containing second set>  -minScore <to filter by minimum
+       annotation score>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t [-set1format <[BED], GFF or generic> -set2format <[BED], GFF or generic> -outformat <desired
+       output format BED, GFF or generic, default is se1format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t3. Print out all elements in one set (set1) that overlap another (set2): -set1 <File containing
+       first set>  -set2 <File containing second set> "} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t [-set1format <[BED], GFF or generic> -set2format <[BED], GFF or generic> -outformat <desired
+       output format BED, GFF or generic, default is se1format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t4. Merge annotation file -in <annotation file (dowa not support standard input input at this
+       point)> -out <output file name or standard output by default> [-format <[BED], GFF or generic>]"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t5. Reformat annotation file  -in <annotation file (dowa not support standard input input at this
+       point)> -out <output file name or standard output by default> [-informat <[BED], GFF or generic> -outformat
+       <BED,[GFF],generic]"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t6. Shuffle scores -in <Annotation file> -out <output file name or standard output by default>
+       [-informat <[BED], GFF or generic>]"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t7. Get overlap statistics of two sets (how much each of the elements in set1 is covered by set2). 
+      "} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t [-set1format <[BED], GFF or generic> -set2format <[BED], GFF or generic> -outformat <desired
+       output format BED, GFF or generic, default is se1format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t8. Take the complement of the the first annotation set in the second set (similar to 2 but
+       elements incompletely overlapping will be broken into the regions that don't overlap): -set1 <File containing first
+       set>  -set2 <File containing second set> "} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t9. Filter any delimited file by extracting all records that overlap a given annotation file -in
+       <Delimted file> -chrColumn <Column containing chrmosome information (first column is 0)> [-chr <Alternative if
+       there is no chromosome information in the file, it is assumed that all positions are in a given
+       chromosome>] -positionColumn <Column containing position information  (first column is 0)> -annotations <Annotation
+       file> -annotationFormat <[BED], GFF, Generic> [-sepeartor <Character separting columns, tab is assumed by
+       default>]"}+
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t10. Print out all elements in one set (set1) that overlap another (set2) and are in the same
+       orientation as the overlapping gene: -set1 <File containing first set>  -set2 <File containing second set> "} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t [-set1format <[BED], GFF or generic> -set2format <[BED], GFF or generic> -outformat <desired
+       output format BED, GFF or generic, default is se1format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t11. Compute the probability that an interval of given size overlaps a given annotation set by
+       chance: -set <File containing first set>  -sizeFile <Size file with chromosome sizes> "} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t12. Print distance metrics: for each element in first set, print the distance to the closest
+       element in the second set."} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t [-nonOverlapping <find the closest non-overlapping element> -set1format <[BED], GFF or generic>
+       -set2format <[BED], GFF or generic> -chr <limit analysis to chr>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tSlideAndCount\(\backslash\)tSlide a window over the annotation map and count elements that overlap each window"}
+       +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -window <windowSize> -overlap <overlapSize> -chr <chr> -start <start> -end <end>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tOverlapSignifiance. Calculate the significance of the overlap between two sets of annotations by
+       permuting across the same chromosome."} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -set1 <set1> -set2 <set2> -nperm <number of permutations> -sizeFile <file of chromosome sizes>"}
+       +
+    \textcolor{stringliteral}{"\(\backslash\)n"}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/annotation/\hyperlink{broad_2core_2annotation_2_annotation_utils_8java}{Annotation\+Utils.\+java}\end{DoxyCompactItemize}

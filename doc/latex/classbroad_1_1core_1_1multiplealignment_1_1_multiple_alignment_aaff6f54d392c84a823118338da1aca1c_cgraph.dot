@@ -1,0 +1,11 @@
+digraph "broad.core.multiplealignment.MultipleAlignment.getReferenceStart"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lMultipleAlignment.getReferenceStart",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.multiplealignment.\lMultipleAlignment.getReference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a56143bbb7c10c52fe379caf646baf3ec"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.multiplealignment.\lMultipleAlignment.getAlignedSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a26518e06adc60b6632eda3cf6d5626be"];
+}

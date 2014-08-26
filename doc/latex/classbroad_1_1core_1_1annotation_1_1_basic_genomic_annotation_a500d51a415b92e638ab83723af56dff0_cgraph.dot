@@ -1,0 +1,13 @@
+digraph "broad.core.annotation.BasicGenomicAnnotation.disect"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.Basic\lGenomicAnnotation.disect",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.annotation.Basic\lLightweightAnnotation.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#aaa261feb92b909750aa4c6b1484682ce"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Annotation.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a88efc6a83878d7af34c4a20786df29eb"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.annotation.Basic\lGenomicAnnotation.BasicGenomicAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#a882be76550b1c3bad5b6b89585b4d3a4"];
+}

@@ -1,0 +1,125 @@
+\hypertarget{classbroad_1_1core_1_1math_1_1_scan_statistics}{\section{broad.\+core.\+math.\+Scan\+Statistics Class Reference}
+\label{classbroad_1_1core_1_1math_1_1_scan_statistics}\index{broad.\+core.\+math.\+Scan\+Statistics@{broad.\+core.\+math.\+Scan\+Statistics}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classbroad_1_1core_1_1math_1_1_scan_statistics_adfa56e760fadf1adcdf23c62062ff0e3}{calculate\+P\+Val} (int k, double lambda, double w, double T)
+\item 
+static double \hyperlink{classbroad_1_1core_1_1math_1_1_scan_statistics_a0bcb18905e2ec14223a7038d0293aae0}{calculate\+Approximate\+P\+Val} (int k, double lambda, double w, double T, double alpha)
+\item 
+static double \hyperlink{classbroad_1_1core_1_1math_1_1_scan_statistics_a77b4b69863064f3823d91097593d683f}{poisson} (int k, double lambda)
+\item 
+static double \hyperlink{classbroad_1_1core_1_1math_1_1_scan_statistics_ae58b04b50ab813db6f4d8adccf89fa07}{Fp} (int k, double lambda\+W)
+\item 
+static double \hyperlink{classbroad_1_1core_1_1math_1_1_scan_statistics_a012ae6be1e0a82d5f77c58970b288b6c}{Fp\+With\+Breaking} (int k, double lambda\+W, double a, double stop\+Point)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1math_1_1_scan_statistics_a0bcb18905e2ec14223a7038d0293aae0}{\index{broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}!calculate\+Approximate\+P\+Val@{calculate\+Approximate\+P\+Val}}
+\index{calculate\+Approximate\+P\+Val@{calculate\+Approximate\+P\+Val}!broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}}
+\subsubsection[{calculate\+Approximate\+P\+Val}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+core.\+math.\+Scan\+Statistics.\+calculate\+Approximate\+P\+Val (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{double}]{lambda, }
+\item[{double}]{w, }
+\item[{double}]{T, }
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1math_1_1_scan_statistics_a0bcb18905e2ec14223a7038d0293aae0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_scan_statistics_adfa56e760fadf1adcdf23c62062ff0e3}{\index{broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}!calculate\+P\+Val@{calculate\+P\+Val}}
+\index{calculate\+P\+Val@{calculate\+P\+Val}!broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}}
+\subsubsection[{calculate\+P\+Val}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+core.\+math.\+Scan\+Statistics.\+calculate\+P\+Val (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{double}]{lambda, }
+\item[{double}]{w, }
+\item[{double}]{T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1math_1_1_scan_statistics_adfa56e760fadf1adcdf23c62062ff0e3}
+Params written by Jesse Aug 20, 2012 ... are these definitions correct? 
+\begin{DoxyParams}{Parameters}
+{\em k} & Observed count \\
+\hline
+{\em lambda} & \# reads on chromosome / \# non-\/masked bases on chromosome \\
+\hline
+{\em w} & window size \\
+\hline
+{\em T} & \# non-\/masked bases on chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_scan_statistics_ae58b04b50ab813db6f4d8adccf89fa07}{\index{broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}!Fp@{Fp}}
+\index{Fp@{Fp}!broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}}
+\subsubsection[{Fp}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+core.\+math.\+Scan\+Statistics.\+Fp (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{double}]{lambda\+W}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1math_1_1_scan_statistics_ae58b04b50ab813db6f4d8adccf89fa07}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_scan_statistics_a012ae6be1e0a82d5f77c58970b288b6c}{\index{broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}!Fp\+With\+Breaking@{Fp\+With\+Breaking}}
+\index{Fp\+With\+Breaking@{Fp\+With\+Breaking}!broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}}
+\subsubsection[{Fp\+With\+Breaking}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+core.\+math.\+Scan\+Statistics.\+Fp\+With\+Breaking (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{double}]{lambda\+W, }
+\item[{double}]{a, }
+\item[{double}]{stop\+Point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1math_1_1_scan_statistics_a012ae6be1e0a82d5f77c58970b288b6c}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1math_1_1_scan_statistics_a77b4b69863064f3823d91097593d683f}{\index{broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}!poisson@{poisson}}
+\index{poisson@{poisson}!broad\+::core\+::math\+::\+Scan\+Statistics@{broad\+::core\+::math\+::\+Scan\+Statistics}}
+\subsubsection[{poisson}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+core.\+math.\+Scan\+Statistics.\+poisson (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{double}]{lambda}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1math_1_1_scan_statistics_a77b4b69863064f3823d91097593d683f}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/math/\hyperlink{_scan_statistics_8java}{Scan\+Statistics.\+java}\end{DoxyCompactItemize}

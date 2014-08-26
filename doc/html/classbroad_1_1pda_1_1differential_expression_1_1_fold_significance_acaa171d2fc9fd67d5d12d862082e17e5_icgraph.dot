@@ -1,0 +1,9 @@
+digraph "broad.pda.differentialExpression.FoldSignificance.FoldSignificance"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.differentialExpression.\lFoldSignificance.FoldSignificance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.differentialExpression.\lFoldSignificance.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1differential_expression_1_1_fold_significance.html#ab0fcd2638e917d36fd6284cb61af2075"];
+}

@@ -1,0 +1,594 @@
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score}{\section{umms.\+core.\+model.\+score.\+Ratio\+Score Class Reference}
+\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score}\index{umms.\+core.\+model.\+score.\+Ratio\+Score@{umms.\+core.\+model.\+score.\+Ratio\+Score}}
+}
+
+
+Inheritance diagram for umms.\+core.\+model.\+score.\+Ratio\+Score\+:
+
+
+Collaboration diagram for umms.\+core.\+model.\+score.\+Ratio\+Score\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Processor}
+\item 
+class {\bfseries Ratio\+Score\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a2839dea34e76266ff4ee89afc84b0067}{Ratio\+Score} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} a)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a56109fa5a5eb99b2c8cf6fab114f52e0}{Ratio\+Score} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} numerator, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} denominator, double n\+Total, double d\+Total)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ab2413dcbf5507765c7f4000d7588552f}{Ratio\+Score} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} numerator, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} denominator, double n\+Total, double d\+Total, double n\+Region\+Total, double d\+Region\+Total)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a794a2229725bbdac247985808547e0f3}{Ratio\+Score} (\hyperlink{classumms_1_1core_1_1model_1_1score_1_1_count_score}{Count\+Score} numerator, \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_count_score}{Count\+Score} denominator)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_af1d338039c3759e76a56e44dde7b47d1}{Ratio\+Score} (Annotation\+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ numerator, Annotation\+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ denominator, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_window_score_1_1_abstract_window_score_a455fb02f18f492e611113b9da0a24888}{annotation})
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ae84977919a326b1005fb6e1652601c0e}{Ratio\+Score} (Annotation\+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ numerator, Annotation\+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ denominator, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_window_score_1_1_abstract_window_score_a455fb02f18f492e611113b9da0a24888}{annotation}, double numerator\+Region\+Total, double denominator\+Region\+Total)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_acf30a764e757d4b4f615fd1bf5badffd}{set\+Numerator\+Count} (double d)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a26d2ff4e83dc5437ee4e1ea9514cb26b}{set\+Denominator\+Count} (double d)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_afb05332cdd6719b45337c0badfe84f7f}{set\+Numerator\+Total} (double d)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a020ab1ef12903c21438c2a2fd676b495}{set\+Denominator\+Total} (double d)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a36ba05b15a6e54eaf8fbe20d835b1875}{set\+Numerator\+Region\+Total} (double d)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a84b557325165848135276d69c99d246e}{set\+Denominator\+Region\+Total} (double d)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_af7b4d14fef9b8f950b5b6d42d74db4bb}{get\+Numerator\+Count} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a016968c6cc0959776ace843c2c784616}{get\+Denominator\+Count} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_acb1ab9baaeec7bc88420b065a09a4060}{get\+Numerator\+Total} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a97082aeb1ae49329276a789ba12124cb}{get\+Denominator\+Total} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a2dedcf22da864a46a6e805a398c79a63}{get\+Numerator\+Region\+Total} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ae3a38c4eee8dfbfad80c674ee621d549}{get\+Denominator\+Region\+Total} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_afe24f7cc069f72f5f01dd4dabe558bda}{get\+Numerator\+R\+P\+K\+M} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a3dcbd0b94b85adddb54348d075650260}{get\+Denominator\+R\+P\+K\+M} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a68c52e528d1195138124c85d638eba7c}{get\+Ratio} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a65ac8a6fe0603eb99cd0ba1de0302097}{get\+Score} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a359817dbe99da022226d340298d05dba}{get\+Enrichment\+Binomial\+Score} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a33c05dfce5f5378a5abf2b8611b7efcd}{get\+Enrichment\+Binomial\+P\+Value} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a3d251d4c7a5c760668e457c6a94f03f0}{get\+Depletion\+Binomial\+Score} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a493eb53da0b3502bea226ca41d6f69b7}{get\+Depletion\+Binomial\+P\+Value} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a8dc892f53be6a5499835d5e61ac919a7}{get\+Log2\+Ratio} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ac9e25c283add9bccf9953ed67f6ad6de}{get\+Region\+Ratio} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a5c2c20f663cc34c2b54aa7358e8adf05}{get\+Log2\+Region\+Ratio} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a1cd82d1ae365cb76b06c021a571e65cf}{get\+Region\+Numerator\+R\+P\+K\+M} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ad98b3c84e8de43604cf72faad4218649}{get\+Region\+Denominator\+R\+P\+K\+M} ()
+\item 
+String \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a9edd203098275f6033a924790560832d}{to\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a03728176e61842d5a08f7aad5d594f28}{R\+P\+K\+M\+\_\+\+O\+F\+F\+S\+E\+T} = 0.\+001
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a2839dea34e76266ff4ee89afc84b0067}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!Ratio\+Score@{Ratio\+Score}}
+\index{Ratio\+Score@{Ratio\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{Ratio\+Score}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+score.\+Ratio\+Score.\+Ratio\+Score (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a2839dea34e76266ff4ee89afc84b0067}
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a56109fa5a5eb99b2c8cf6fab114f52e0}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!Ratio\+Score@{Ratio\+Score}}
+\index{Ratio\+Score@{Ratio\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{Ratio\+Score}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+score.\+Ratio\+Score.\+Ratio\+Score (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{numerator, }
+\item[{{\bf Annotation}}]{denominator, }
+\item[{double}]{n\+Total, }
+\item[{double}]{d\+Total}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a56109fa5a5eb99b2c8cf6fab114f52e0}
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ab2413dcbf5507765c7f4000d7588552f}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!Ratio\+Score@{Ratio\+Score}}
+\index{Ratio\+Score@{Ratio\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{Ratio\+Score}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+score.\+Ratio\+Score.\+Ratio\+Score (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{numerator, }
+\item[{{\bf Annotation}}]{denominator, }
+\item[{double}]{n\+Total, }
+\item[{double}]{d\+Total, }
+\item[{double}]{n\+Region\+Total, }
+\item[{double}]{d\+Region\+Total}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ab2413dcbf5507765c7f4000d7588552f}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a794a2229725bbdac247985808547e0f3}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!Ratio\+Score@{Ratio\+Score}}
+\index{Ratio\+Score@{Ratio\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{Ratio\+Score}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+score.\+Ratio\+Score.\+Ratio\+Score (
+\begin{DoxyParamCaption}
+\item[{{\bf Count\+Score}}]{numerator, }
+\item[{{\bf Count\+Score}}]{denominator}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a794a2229725bbdac247985808547e0f3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_af1d338039c3759e76a56e44dde7b47d1}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!Ratio\+Score@{Ratio\+Score}}
+\index{Ratio\+Score@{Ratio\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{Ratio\+Score}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+score.\+Ratio\+Score.\+Ratio\+Score (
+\begin{DoxyParamCaption}
+\item[{Annotation\+Collection$<$?extends {\bf Annotation} $>$}]{numerator, }
+\item[{Annotation\+Collection$<$?extends {\bf Annotation} $>$}]{denominator, }
+\item[{{\bf Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_af1d338039c3759e76a56e44dde7b47d1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ae84977919a326b1005fb6e1652601c0e}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!Ratio\+Score@{Ratio\+Score}}
+\index{Ratio\+Score@{Ratio\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{Ratio\+Score}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+score.\+Ratio\+Score.\+Ratio\+Score (
+\begin{DoxyParamCaption}
+\item[{Annotation\+Collection$<$?extends {\bf Annotation} $>$}]{numerator, }
+\item[{Annotation\+Collection$<$?extends {\bf Annotation} $>$}]{denominator, }
+\item[{{\bf Annotation}}]{annotation, }
+\item[{double}]{numerator\+Region\+Total, }
+\item[{double}]{denominator\+Region\+Total}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ae84977919a326b1005fb6e1652601c0e}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a016968c6cc0959776ace843c2c784616}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Denominator\+Count@{get\+Denominator\+Count}}
+\index{get\+Denominator\+Count@{get\+Denominator\+Count}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Denominator\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Denominator\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a016968c6cc0959776ace843c2c784616}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ae3a38c4eee8dfbfad80c674ee621d549}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Denominator\+Region\+Total@{get\+Denominator\+Region\+Total}}
+\index{get\+Denominator\+Region\+Total@{get\+Denominator\+Region\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Denominator\+Region\+Total}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Denominator\+Region\+Total (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ae3a38c4eee8dfbfad80c674ee621d549}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a3dcbd0b94b85adddb54348d075650260}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Denominator\+R\+P\+K\+M@{get\+Denominator\+R\+P\+K\+M}}
+\index{get\+Denominator\+R\+P\+K\+M@{get\+Denominator\+R\+P\+K\+M}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Denominator\+R\+P\+K\+M}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Denominator\+R\+P\+K\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a3dcbd0b94b85adddb54348d075650260}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a97082aeb1ae49329276a789ba12124cb}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Denominator\+Total@{get\+Denominator\+Total}}
+\index{get\+Denominator\+Total@{get\+Denominator\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Denominator\+Total}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Denominator\+Total (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a97082aeb1ae49329276a789ba12124cb}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a493eb53da0b3502bea226ca41d6f69b7}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Depletion\+Binomial\+P\+Value@{get\+Depletion\+Binomial\+P\+Value}}
+\index{get\+Depletion\+Binomial\+P\+Value@{get\+Depletion\+Binomial\+P\+Value}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Depletion\+Binomial\+P\+Value}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Depletion\+Binomial\+P\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a493eb53da0b3502bea226ca41d6f69b7}
+Binomial test\+: combine numerator and denominator counts, then calculate cumulative probability of seeing less than this proportion \begin{DoxyReturn}{Returns}
+p-\/value for the numerator having less reads than expected. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a3d251d4c7a5c760668e457c6a94f03f0}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Depletion\+Binomial\+Score@{get\+Depletion\+Binomial\+Score}}
+\index{get\+Depletion\+Binomial\+Score@{get\+Depletion\+Binomial\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Depletion\+Binomial\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Depletion\+Binomial\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a3d251d4c7a5c760668e457c6a94f03f0}
+Binomial test\+: combine numerator and denominator counts, then calculate cumulative probability of seeing less than this proportion \begin{DoxyReturn}{Returns}
+-\/log10 p-\/value for the numerator having less reads than expected. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a33c05dfce5f5378a5abf2b8611b7efcd}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Enrichment\+Binomial\+P\+Value@{get\+Enrichment\+Binomial\+P\+Value}}
+\index{get\+Enrichment\+Binomial\+P\+Value@{get\+Enrichment\+Binomial\+P\+Value}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Enrichment\+Binomial\+P\+Value}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Enrichment\+Binomial\+P\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a33c05dfce5f5378a5abf2b8611b7efcd}
+Binomial test\+: combine numerator and denominator counts, then calculate cumulative probability of seeing $>$= this proportion \begin{DoxyReturn}{Returns}
+p-\/value for the numerator having more reads than expected 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a359817dbe99da022226d340298d05dba}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Enrichment\+Binomial\+Score@{get\+Enrichment\+Binomial\+Score}}
+\index{get\+Enrichment\+Binomial\+Score@{get\+Enrichment\+Binomial\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Enrichment\+Binomial\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Enrichment\+Binomial\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a359817dbe99da022226d340298d05dba}
+Binomial test\+: combine numerator and denominator counts, then calculate cumulative probability of seeing $>$= this proportion \begin{DoxyReturn}{Returns}
+-\/log10 p-\/value for the numerator having more reads than expected. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a8dc892f53be6a5499835d5e61ac919a7}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Log2\+Ratio@{get\+Log2\+Ratio}}
+\index{get\+Log2\+Ratio@{get\+Log2\+Ratio}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Log2\+Ratio}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Log2\+Ratio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a8dc892f53be6a5499835d5e61ac919a7}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a5c2c20f663cc34c2b54aa7358e8adf05}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Log2\+Region\+Ratio@{get\+Log2\+Region\+Ratio}}
+\index{get\+Log2\+Region\+Ratio@{get\+Log2\+Region\+Ratio}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Log2\+Region\+Ratio}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Log2\+Region\+Ratio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a5c2c20f663cc34c2b54aa7358e8adf05}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_af7b4d14fef9b8f950b5b6d42d74db4bb}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Numerator\+Count@{get\+Numerator\+Count}}
+\index{get\+Numerator\+Count@{get\+Numerator\+Count}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Numerator\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Numerator\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_af7b4d14fef9b8f950b5b6d42d74db4bb}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a2dedcf22da864a46a6e805a398c79a63}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Numerator\+Region\+Total@{get\+Numerator\+Region\+Total}}
+\index{get\+Numerator\+Region\+Total@{get\+Numerator\+Region\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Numerator\+Region\+Total}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Numerator\+Region\+Total (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a2dedcf22da864a46a6e805a398c79a63}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_afe24f7cc069f72f5f01dd4dabe558bda}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Numerator\+R\+P\+K\+M@{get\+Numerator\+R\+P\+K\+M}}
+\index{get\+Numerator\+R\+P\+K\+M@{get\+Numerator\+R\+P\+K\+M}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Numerator\+R\+P\+K\+M}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Numerator\+R\+P\+K\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_afe24f7cc069f72f5f01dd4dabe558bda}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_acb1ab9baaeec7bc88420b065a09a4060}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Numerator\+Total@{get\+Numerator\+Total}}
+\index{get\+Numerator\+Total@{get\+Numerator\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Numerator\+Total}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Numerator\+Total (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_acb1ab9baaeec7bc88420b065a09a4060}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a68c52e528d1195138124c85d638eba7c}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Ratio@{get\+Ratio}}
+\index{get\+Ratio@{get\+Ratio}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Ratio}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Ratio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a68c52e528d1195138124c85d638eba7c}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ad98b3c84e8de43604cf72faad4218649}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Region\+Denominator\+R\+P\+K\+M@{get\+Region\+Denominator\+R\+P\+K\+M}}
+\index{get\+Region\+Denominator\+R\+P\+K\+M@{get\+Region\+Denominator\+R\+P\+K\+M}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Region\+Denominator\+R\+P\+K\+M}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Region\+Denominator\+R\+P\+K\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ad98b3c84e8de43604cf72faad4218649}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a1cd82d1ae365cb76b06c021a571e65cf}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Region\+Numerator\+R\+P\+K\+M@{get\+Region\+Numerator\+R\+P\+K\+M}}
+\index{get\+Region\+Numerator\+R\+P\+K\+M@{get\+Region\+Numerator\+R\+P\+K\+M}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Region\+Numerator\+R\+P\+K\+M}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Region\+Numerator\+R\+P\+K\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a1cd82d1ae365cb76b06c021a571e65cf}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ac9e25c283add9bccf9953ed67f6ad6de}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Region\+Ratio@{get\+Region\+Ratio}}
+\index{get\+Region\+Ratio@{get\+Region\+Ratio}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Region\+Ratio}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Region\+Ratio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_ac9e25c283add9bccf9953ed67f6ad6de}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a65ac8a6fe0603eb99cd0ba1de0302097}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{get\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+get\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a65ac8a6fe0603eb99cd0ba1de0302097}
+Returns the number of reads overlapping this region \begin{DoxyReturn}{Returns}
+number of reds overlapping this window Returns the \char`\"{}score\char`\"{} as defined by each subclass (e.\+g. count, ratio, sum of annotation scores, etc.) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1model_1_1score_1_1_window_score_a5232038f3397874511f1e8d83df72e97}{umms.\+core.\+model.\+score.\+Window\+Score}.
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a26d2ff4e83dc5437ee4e1ea9514cb26b}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!set\+Denominator\+Count@{set\+Denominator\+Count}}
+\index{set\+Denominator\+Count@{set\+Denominator\+Count}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{set\+Denominator\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+score.\+Ratio\+Score.\+set\+Denominator\+Count (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a26d2ff4e83dc5437ee4e1ea9514cb26b}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a84b557325165848135276d69c99d246e}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!set\+Denominator\+Region\+Total@{set\+Denominator\+Region\+Total}}
+\index{set\+Denominator\+Region\+Total@{set\+Denominator\+Region\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{set\+Denominator\+Region\+Total}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+score.\+Ratio\+Score.\+set\+Denominator\+Region\+Total (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a84b557325165848135276d69c99d246e}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a020ab1ef12903c21438c2a2fd676b495}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!set\+Denominator\+Total@{set\+Denominator\+Total}}
+\index{set\+Denominator\+Total@{set\+Denominator\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{set\+Denominator\+Total}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+score.\+Ratio\+Score.\+set\+Denominator\+Total (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a020ab1ef12903c21438c2a2fd676b495}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_acf30a764e757d4b4f615fd1bf5badffd}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!set\+Numerator\+Count@{set\+Numerator\+Count}}
+\index{set\+Numerator\+Count@{set\+Numerator\+Count}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{set\+Numerator\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+score.\+Ratio\+Score.\+set\+Numerator\+Count (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_acf30a764e757d4b4f615fd1bf5badffd}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a36ba05b15a6e54eaf8fbe20d835b1875}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!set\+Numerator\+Region\+Total@{set\+Numerator\+Region\+Total}}
+\index{set\+Numerator\+Region\+Total@{set\+Numerator\+Region\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{set\+Numerator\+Region\+Total}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+score.\+Ratio\+Score.\+set\+Numerator\+Region\+Total (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a36ba05b15a6e54eaf8fbe20d835b1875}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_afb05332cdd6719b45337c0badfe84f7f}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!set\+Numerator\+Total@{set\+Numerator\+Total}}
+\index{set\+Numerator\+Total@{set\+Numerator\+Total}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{set\+Numerator\+Total}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+score.\+Ratio\+Score.\+set\+Numerator\+Total (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_afb05332cdd6719b45337c0badfe84f7f}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a9edd203098275f6033a924790560832d}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+model.\+score.\+Ratio\+Score.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a9edd203098275f6033a924790560832d}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a03728176e61842d5a08f7aad5d594f28}{\index{umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}!R\+P\+K\+M\+\_\+\+O\+F\+F\+S\+E\+T@{R\+P\+K\+M\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{R\+P\+K\+M\+\_\+\+O\+F\+F\+S\+E\+T@{R\+P\+K\+M\+\_\+\+O\+F\+F\+S\+E\+T}!umms\+::core\+::model\+::score\+::\+Ratio\+Score@{umms\+::core\+::model\+::score\+::\+Ratio\+Score}}
+\subsubsection[{R\+P\+K\+M\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+score.\+Ratio\+Score.\+R\+P\+K\+M\+\_\+\+O\+F\+F\+S\+E\+T = 0.\+001\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1model_1_1score_1_1_ratio_score_a03728176e61842d5a08f7aad5d594f28}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/model/score/\hyperlink{_ratio_score_8java}{Ratio\+Score.\+java}\end{DoxyCompactItemize}

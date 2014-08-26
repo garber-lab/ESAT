@@ -1,0 +1,129 @@
+\hypertarget{class_jama_1_1_q_r_decomposition}{\section{Jama.\+Q\+R\+Decomposition Class Reference}
+\label{class_jama_1_1_q_r_decomposition}\index{Jama.\+Q\+R\+Decomposition@{Jama.\+Q\+R\+Decomposition}}
+}
+
+
+Inheritance diagram for Jama.\+Q\+R\+Decomposition\+:
+
+
+Collaboration diagram for Jama.\+Q\+R\+Decomposition\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jama_1_1_q_r_decomposition_a7c423029f5324b7c2b3ce3e9f2274512}{Q\+R\+Decomposition} (\hyperlink{class_jama_1_1_matrix}{Matrix} A)
+\item 
+boolean \hyperlink{class_jama_1_1_q_r_decomposition_ab7a81bd679ece0dd255aa3a786e2efed}{is\+Full\+Rank} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_q_r_decomposition_a700a752da9386dc6db76dcd03d93f756}{get\+H} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_q_r_decomposition_a918a7ff1594770cd4ee02e67241ef768}{get\+R} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_q_r_decomposition_ae2f72dd0466a1500e0c01efbb5c8bfa7}{get\+Q} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_q_r_decomposition_ae6434a5c9faebf49cc163ef7c3ba9048}{solve} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Q\+R Decomposition. 
+
+For an m-\/by-\/n matrix A with m $>$= n, the Q\+R decomposition is an m-\/by-\/n orthogonal matrix Q and an n-\/by-\/n upper triangular matrix R so that A = Q$\ast$\+R. 
+
+The Q\+R decompostion always exists, even if the matrix does not have full rank, so the constructor will never fail. The primary use of the Q\+R decomposition is in the least squares solution of nonsquare systems of simultaneous linear equations. This will fail if \hyperlink{class_jama_1_1_q_r_decomposition_ab7a81bd679ece0dd255aa3a786e2efed}{is\+Full\+Rank()} returns false. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_jama_1_1_q_r_decomposition_a7c423029f5324b7c2b3ce3e9f2274512}{\index{Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}!Q\+R\+Decomposition@{Q\+R\+Decomposition}}
+\index{Q\+R\+Decomposition@{Q\+R\+Decomposition}!Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}}
+\subsubsection[{Q\+R\+Decomposition}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Q\+R\+Decomposition.\+Q\+R\+Decomposition (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{A}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_q_r_decomposition_a7c423029f5324b7c2b3ce3e9f2274512}
+Q\+R Decomposition, computed by Householder reflections. 
+\begin{DoxyParams}{Parameters}
+{\em A} & Rectangular matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Structure to access R and the Householder vectors and compute Q. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_jama_1_1_q_r_decomposition_a700a752da9386dc6db76dcd03d93f756}{\index{Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}!get\+H@{get\+H}}
+\index{get\+H@{get\+H}!Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}}
+\subsubsection[{get\+H}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Q\+R\+Decomposition.\+get\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_q_r_decomposition_a700a752da9386dc6db76dcd03d93f756}
+Return the Householder vectors \begin{DoxyReturn}{Returns}
+Lower trapezoidal matrix whose columns define the reflections 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_q_r_decomposition_ae2f72dd0466a1500e0c01efbb5c8bfa7}{\index{Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}!get\+Q@{get\+Q}}
+\index{get\+Q@{get\+Q}!Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}}
+\subsubsection[{get\+Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Q\+R\+Decomposition.\+get\+Q (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_q_r_decomposition_ae2f72dd0466a1500e0c01efbb5c8bfa7}
+Generate and return the (economy-\/sized) orthogonal factor \begin{DoxyReturn}{Returns}
+Q 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_q_r_decomposition_a918a7ff1594770cd4ee02e67241ef768}{\index{Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}!get\+R@{get\+R}}
+\index{get\+R@{get\+R}!Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}}
+\subsubsection[{get\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Q\+R\+Decomposition.\+get\+R (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_q_r_decomposition_a918a7ff1594770cd4ee02e67241ef768}
+Return the upper triangular factor \begin{DoxyReturn}{Returns}
+R 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_q_r_decomposition_ab7a81bd679ece0dd255aa3a786e2efed}{\index{Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}!is\+Full\+Rank@{is\+Full\+Rank}}
+\index{is\+Full\+Rank@{is\+Full\+Rank}!Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}}
+\subsubsection[{is\+Full\+Rank}]{\setlength{\rightskip}{0pt plus 5cm}boolean Jama.\+Q\+R\+Decomposition.\+is\+Full\+Rank (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_q_r_decomposition_ab7a81bd679ece0dd255aa3a786e2efed}
+Is the matrix full rank? \begin{DoxyReturn}{Returns}
+true if R, and hence A, has full rank. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{class_jama_1_1_q_r_decomposition_ae6434a5c9faebf49cc163ef7c3ba9048}{\index{Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}!solve@{solve}}
+\index{solve@{solve}!Jama\+::\+Q\+R\+Decomposition@{Jama\+::\+Q\+R\+Decomposition}}
+\subsubsection[{solve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Q\+R\+Decomposition.\+solve (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_q_r_decomposition_ae6434a5c9faebf49cc163ef7c3ba9048}
+Least squares solution of A$\ast$\+X = B 
+\begin{DoxyParams}{Parameters}
+{\em B} & A \hyperlink{class_jama_1_1_matrix}{Matrix} with as many rows as A and any number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X that minimizes the two norm of Q$\ast$\+R$\ast$\+X-\/\+B. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} row dimensions must agree. \\
+\hline
+{\em Runtime\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} is rank deficient. \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/\+Jama/\hyperlink{_q_r_decomposition_8java}{Q\+R\+Decomposition.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,19 @@
+digraph "broad.core.siphy.EvolutionaryModel.copy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.siphy.Evolutionary\lModel.copy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.siphy.Evolutionary\lModel.EvolutionaryModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#a996bd2f5c0af597d4aaddc6f3a3dfcbc"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.siphy.Evolutionary\lModel.setModelParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#ad33990a2042c4e252c1df0957a4d8692"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.siphy.Evolutionary\lModel.resetPI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#ac800e78776fd5e44c7f1ee0904358385"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.siphy.Evolutionary\lModelParameters.getBackgroundNucleotideFreqs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters.html#a94dcc6d7e8cf0e6c79b209d881d2f07a"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.siphy.Evolutionary\lModelParameters.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters.html#a0734fcf5d3102b10ade0f7faf0f12177"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.siphy.Evolutionary\lModelParameters.EvolutionaryModel\lParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model_parameters.html#ae7f0f1f0521a0bee0f33fe83f76bf7ea"];
+}

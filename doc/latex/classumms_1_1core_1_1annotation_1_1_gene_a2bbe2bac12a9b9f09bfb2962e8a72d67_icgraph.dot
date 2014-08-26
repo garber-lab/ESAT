@@ -1,0 +1,41 @@
+digraph "umms.core.annotation.Gene.getCDSRegion"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Gene.get\lCDSRegion",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Gene.get5UTR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#af8460b1e69cc22e216a0c59da1e9dc88"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Gene.get5\lUTRGene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ab02249dcebe27ea4d2dc72a8632e27ce"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.annotation.Gene.get3UTR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a5da62e5fc6fc17a00f28b91a2d692c3e"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.annotation.Gene.get3\lUTRGene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#afb42d4f238f4c58d94b75b74472083df"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.annotation.Gene.get\lPercent3UTR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#aadc804eb8e2ac39c271509a51b1091ef"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.annotation.Gene.get5\lUtrIncludingIntrons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#aeacc46ef311ac493dc1c5f1d82190a8e"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="umms.core.annotation.Gene.get5Utr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a207204cc1cf3f4e8b1db5ceba1d00d89"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="umms.core.annotation.Gene.get3\lUtrIncludingIntrons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#aae0325e4bc1a847f48930fe1c62952bd"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="umms.core.annotation.Gene.get3Utr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ac0999b66a6a587bcf737ed8101f2d371"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="umms.core.annotation.Gene.getCDS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ae414757cb1720273e4f4a3188978eb49"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="umms.core.annotation.Gene.get\lStartCodon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a66af3f09f9f1adfc842397613d1e5ff7"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="umms.core.annotation.Gene.is\lCodingGene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ad2a651cd125ea1ebea3f496cb62853e3"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="umms.core.annotation.Gene.compareTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a3cd085a5501a376bdd6f929a7d1271b3"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="umms.core.alignment.Feature\lSequenceAlignment.UnorderedGene\lPair.UnorderedGenePair",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_1_1_unordered_gene_pair.html#a0b2afb36630c6ab7e4357fd451970ece"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="umms.core.alignment.Feature\lSequenceAlignment.UnorderedGene\lPair.equals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_1_1_unordered_gene_pair.html#ae6caf83e8cefa8e19d65606baf5c41b1"];
+  Node14 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="umms.core.alignment.Feature\lSequenceAlignment.UnorderedGene\lPair.compareTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_feature_sequence_alignment_1_1_unordered_gene_pair.html#a2bf54d6e4db59e3149e03893df7d2644"];
+  Node14 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="umms.core.scripture.statistics.\lConnectDisconnectedTranscripts.get\lOrderedAssembly",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1statistics_1_1_connect_disconnected_transcripts.html#ad55264ba1c376afdc3c838f8cf4905d1"];
+}

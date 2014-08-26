@@ -1,0 +1,14 @@
+digraph "broad.pda.feature.genome.Chromosome.gaps"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.feature.genome.\lChromosome.gaps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.feature.genome.\lChromosome.Chromosome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_chromosome.html#ac74a37214e3862e5328bad5936f7fa96"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.feature.genome.\lChromosome.compareNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_chromosome.html#ab5ed3e1b37710b6028bae9804c6ad67f"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.feature.genome.\lChromosome.compareTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1feature_1_1genome_1_1_chromosome.html#af500375109a20373d852e86fd8c5ed75"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,0 +1,223 @@
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader}{\section{broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader Class Reference}
+\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader}\index{broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader@{broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader}}
+}
+
+
+Inheritance diagram for broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader\+:
+
+
+Collaboration diagram for broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ac585c25b84a23eb80327480d48f63dae}{Basic\+Genomic\+Annotation\+Reader} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2b981fb1ebbd1367037db76636747f15}{Basic\+Genomic\+Annotation\+Reader} (String annotation\+File)  throws File\+Not\+Found\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a32290d7f7cec4e53b87de92baeaea80b}{Basic\+Genomic\+Annotation\+Reader} (String annotation\+File, String annotation\+Type)  throws File\+Not\+Found\+Exception
+\item 
+List$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ab9dfb0f9f5faecc81d703550f7c1afed}{get\+Annotation\+List} ()
+\item 
+List$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a3ec199e617e72b8737dd62b488cd2ecd}{find} (final String chr, final int start\+Pos, final int end\+Pos)  throws I\+O\+Exception, Parse\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a4243e5e53cf2ca334e5f5b7589227694}{load} ()  throws I\+O\+Exception, Parse\+Exception  
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a3fd19c0d4a053fb55444012952267dc0}{plot} (Graphics2\+D g2d, int start, int end, List$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annots)
+\item 
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a987b7996be954efb377c5911a66d9e28}{create\+Annotation} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} a)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a82ed1b8eec7d6136f102af46c550283f}{parse} (String file, Genomic\+Annotation\+Filter$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_acf0c6dd924a5ca86fab0571132d8cd07}{parse} (Buffered\+Reader br, Genomic\+Annotation\+Filter$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception, I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a4b090a21f71de7a1f6a550e5a047a9dc}{parse\+Raw\+Regions} (String\mbox{[}$\,$\mbox{]} raw\+Regions)
+\item 
+static List$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_afedbf99d5bfed54c75e5c875a3e75aa3}{parse\+Raw\+Point\+Regions} (String\mbox{[}$\,$\mbox{]} raw\+Regions)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_abf139641b2a2a4c69c5659a18ae8cf86}{R\+I\+G\+H\+T\+\_\+\+M\+A\+R\+G\+I\+N} = 50
+\item 
+static int \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a24b39789f7632a795032438895c93973}{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G} = 100
+\item 
+static int \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a7150fc4987cb783f7c26a60312b6cc37}{I\+N\+T\+E\+R\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G} = 40
+\item 
+static final Pattern \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2a409acebe2e7fc9e51c4c901cdad6b6}{R\+E\+G\+\_\+\+P\+A\+T\+T\+E\+R\+N} = Pattern.\+compile(\char`\"{}(chr)(\textbackslash{}\textbackslash{}w\{1,2\})(\+:)(\mbox{[}0-\/9\mbox{]}+)(-\/)(\mbox{[}0-\/9\mbox{]}+)\char`\"{})
+\item 
+static final Pattern \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_aa04f665d433b3fffeb6fead8409a84ba}{P\+O\+I\+N\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N} = Pattern.\+compile(\char`\"{}(chr)(\textbackslash{}\textbackslash{}w\{1,2\})(\+:)(\mbox{[}0-\/9\mbox{]}+)\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2878e5be828b109b925585ef2a23ee0e}{set\+Annotation\+List} (List$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ list)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+File \hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ab49a4ff8378bbaad2d520ac95b73601d}{source}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ac585c25b84a23eb80327480d48f63dae}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!Basic\+Genomic\+Annotation\+Reader@{Basic\+Genomic\+Annotation\+Reader}}
+\index{Basic\+Genomic\+Annotation\+Reader@{Basic\+Genomic\+Annotation\+Reader}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{Basic\+Genomic\+Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+Basic\+Genomic\+Annotation\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ac585c25b84a23eb80327480d48f63dae}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2b981fb1ebbd1367037db76636747f15}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!Basic\+Genomic\+Annotation\+Reader@{Basic\+Genomic\+Annotation\+Reader}}
+\index{Basic\+Genomic\+Annotation\+Reader@{Basic\+Genomic\+Annotation\+Reader}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{Basic\+Genomic\+Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+Basic\+Genomic\+Annotation\+Reader (
+\begin{DoxyParamCaption}
+\item[{String}]{annotation\+File}
+\end{DoxyParamCaption}
+) throws File\+Not\+Found\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2b981fb1ebbd1367037db76636747f15}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a32290d7f7cec4e53b87de92baeaea80b}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!Basic\+Genomic\+Annotation\+Reader@{Basic\+Genomic\+Annotation\+Reader}}
+\index{Basic\+Genomic\+Annotation\+Reader@{Basic\+Genomic\+Annotation\+Reader}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{Basic\+Genomic\+Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+Basic\+Genomic\+Annotation\+Reader (
+\begin{DoxyParamCaption}
+\item[{String}]{annotation\+File, }
+\item[{String}]{annotation\+Type}
+\end{DoxyParamCaption}
+) throws File\+Not\+Found\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a32290d7f7cec4e53b87de92baeaea80b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a987b7996be954efb377c5911a66d9e28}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!create\+Annotation@{create\+Annotation}}
+\index{create\+Annotation@{create\+Annotation}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{create\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Genomic\+Annotation} broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+create\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Genomic\+Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a987b7996be954efb377c5911a66d9e28}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a3ec199e617e72b8737dd62b488cd2ecd}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!find@{find}}
+\index{find@{find}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Genomic\+Annotation}$>$ broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+find (
+\begin{DoxyParamCaption}
+\item[{final String}]{chr, }
+\item[{final int}]{start\+Pos, }
+\item[{final int}]{end\+Pos}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a3ec199e617e72b8737dd62b488cd2ecd}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ab9dfb0f9f5faecc81d703550f7c1afed}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!get\+Annotation\+List@{get\+Annotation\+List}}
+\index{get\+Annotation\+List@{get\+Annotation\+List}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{get\+Annotation\+List}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Genomic\+Annotation}$>$ broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+get\+Annotation\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ab9dfb0f9f5faecc81d703550f7c1afed}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a4243e5e53cf2ca334e5f5b7589227694}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!load@{load}}
+\index{load@{load}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a4243e5e53cf2ca334e5f5b7589227694}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a82ed1b8eec7d6136f102af46c550283f}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+parse (
+\begin{DoxyParamCaption}
+\item[{String}]{file, }
+\item[{Genomic\+Annotation\+Filter$<$ {\bf Genomic\+Annotation} $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a82ed1b8eec7d6136f102af46c550283f}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_acf0c6dd924a5ca86fab0571132d8cd07}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+parse (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{Genomic\+Annotation\+Filter$<$ {\bf Genomic\+Annotation} $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_acf0c6dd924a5ca86fab0571132d8cd07}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_afedbf99d5bfed54c75e5c875a3e75aa3}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!parse\+Raw\+Point\+Regions@{parse\+Raw\+Point\+Regions}}
+\index{parse\+Raw\+Point\+Regions@{parse\+Raw\+Point\+Regions}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{parse\+Raw\+Point\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Genomic\+Annotation}$>$ broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+parse\+Raw\+Point\+Regions (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{raw\+Regions}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_afedbf99d5bfed54c75e5c875a3e75aa3}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a4b090a21f71de7a1f6a550e5a047a9dc}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!parse\+Raw\+Regions@{parse\+Raw\+Regions}}
+\index{parse\+Raw\+Regions@{parse\+Raw\+Regions}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{parse\+Raw\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Genomic\+Annotation}$>$ broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+parse\+Raw\+Regions (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{raw\+Regions}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a4b090a21f71de7a1f6a550e5a047a9dc}
+Parses an array of cannonical region descriptors of the form chr\+N\+:start-\/end 
+\begin{DoxyParams}{Parameters}
+{\em raw\+Regions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a3fd19c0d4a053fb55444012952267dc0}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!plot@{plot}}
+\index{plot@{plot}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+plot (
+\begin{DoxyParamCaption}
+\item[{Graphics2\+D}]{g2d, }
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{List$<$ {\bf Genomic\+Annotation} $>$}]{annots}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a3fd19c0d4a053fb55444012952267dc0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2878e5be828b109b925585ef2a23ee0e}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!set\+Annotation\+List@{set\+Annotation\+List}}
+\index{set\+Annotation\+List@{set\+Annotation\+List}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{set\+Annotation\+List}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+set\+Annotation\+List (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Genomic\+Annotation} $>$}]{list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2878e5be828b109b925585ef2a23ee0e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a7150fc4987cb783f7c26a60312b6cc37}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!I\+N\+T\+E\+R\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G@{I\+N\+T\+E\+R\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G}}
+\index{I\+N\+T\+E\+R\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G@{I\+N\+T\+E\+R\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{I\+N\+T\+E\+R\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+I\+N\+T\+E\+R\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G = 40\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a7150fc4987cb783f7c26a60312b6cc37}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_aa04f665d433b3fffeb6fead8409a84ba}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!P\+O\+I\+N\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N@{P\+O\+I\+N\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N}}
+\index{P\+O\+I\+N\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N@{P\+O\+I\+N\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{P\+O\+I\+N\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}final Pattern broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+P\+O\+I\+N\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N = Pattern.\+compile(\char`\"{}(chr)(\textbackslash{}\textbackslash{}w\{1,2\})(\+:)(\mbox{[}0-\/9\mbox{]}+)\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_aa04f665d433b3fffeb6fead8409a84ba}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2a409acebe2e7fc9e51c4c901cdad6b6}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!R\+E\+G\+\_\+\+P\+A\+T\+T\+E\+R\+N@{R\+E\+G\+\_\+\+P\+A\+T\+T\+E\+R\+N}}
+\index{R\+E\+G\+\_\+\+P\+A\+T\+T\+E\+R\+N@{R\+E\+G\+\_\+\+P\+A\+T\+T\+E\+R\+N}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{R\+E\+G\+\_\+\+P\+A\+T\+T\+E\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}final Pattern broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+R\+E\+G\+\_\+\+P\+A\+T\+T\+E\+R\+N = Pattern.\+compile(\char`\"{}(chr)(\textbackslash{}\textbackslash{}w\{1,2\})(\+:)(\mbox{[}0-\/9\mbox{]}+)(-\/)(\mbox{[}0-\/9\mbox{]}+)\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a2a409acebe2e7fc9e51c4c901cdad6b6}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_abf139641b2a2a4c69c5659a18ae8cf86}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!R\+I\+G\+H\+T\+\_\+\+M\+A\+R\+G\+I\+N@{R\+I\+G\+H\+T\+\_\+\+M\+A\+R\+G\+I\+N}}
+\index{R\+I\+G\+H\+T\+\_\+\+M\+A\+R\+G\+I\+N@{R\+I\+G\+H\+T\+\_\+\+M\+A\+R\+G\+I\+N}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{R\+I\+G\+H\+T\+\_\+\+M\+A\+R\+G\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+R\+I\+G\+H\+T\+\_\+\+M\+A\+R\+G\+I\+N = 50\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_abf139641b2a2a4c69c5659a18ae8cf86}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ab49a4ff8378bbaad2d520ac95b73601d}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!source@{source}}
+\index{source@{source}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{source}]{\setlength{\rightskip}{0pt plus 5cm}File broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+source\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_ab49a4ff8378bbaad2d520ac95b73601d}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a24b39789f7632a795032438895c93973}{\index{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}!V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G@{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G}}
+\index{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G@{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G}!broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Basic\+Genomic\+Annotation\+Reader}}
+\subsubsection[{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Basic\+Genomic\+Annotation\+Reader.\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+S\+P\+A\+C\+I\+N\+G = 100\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation_reader_a24b39789f7632a795032438895c93973}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/annotation/\hyperlink{_basic_genomic_annotation_reader_8java}{Basic\+Genomic\+Annotation\+Reader.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+digraph "broad.core.siphy.EvolutionaryModel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.siphy.Evolutionary\lModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nodeFittingParamMap" ];
+  Node2 [label="Map\< Integer, NodeLikelihood\lParameters \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" D\nV\npi\nQ\nR\niV" ];
+  Node3 [label="Jama.Matrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_jama_1_1_matrix.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Cloneable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Serializable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" binStatistics" ];
+  Node6 [label="LinkedHashMap\< Double,\l Frequency \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

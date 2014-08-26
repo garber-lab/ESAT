@@ -1,0 +1,9 @@
+digraph "broad.pda.differentialExpression.GSAProjection.GSAProjection"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.differentialExpression.\lGSAProjection.GSAProjection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.differentialExpression.\lGSAProjection.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1differential_expression_1_1_g_s_a_projection.html#a153db78475d8411a07b9ad6fa70459f1"];
+}

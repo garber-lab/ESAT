@@ -1,0 +1,162 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser}{\section{broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser}\index{broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser@{broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser\+:
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a77a045bf908924dbb09af31bf3873493}{Fastq\+Parser} (File fastq\+File)  throws I\+O\+Exception
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ab28b29c6d7217c8e9b35be1fabbe24d2}{Fastq\+Parser} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ad6fee49ea1cb22e8ab2c9a5bfc5cbe7a}{start} (File fastq\+Parser)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a61e15412ca2ceb8d91767e7a1ed0de94}{start} (Buffered\+Reader br)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a954f65e71af98855f3477d5b17320f18}{convert\+To\+Fasta} (String save)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a2bbe196edee4649d6a62c569426cad04}{convert\+To\+Numbered\+Fasta} (String save)  throws I\+O\+Exception
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence}{Fastq\+Sequence} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a292ca969701ba6a5ac79927f0c6bc33f}{parse} (File file)  throws I\+O\+Exception
+\item 
+Collection$<$ \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence}{Fastq\+Sequence} $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ab6f48cad18b6a00b8be620714d07968b}{get\+Sequences} ()  throws I\+O\+Exception
+\item 
+File\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_acffff1957b1c7233f497abbb3e1fd965}{write\+Chunks} (String save, int chunk\+Size)  throws I\+O\+Exception 
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a18db9a7a9677bdaa101504eb9654adc2}{get\+Number\+Of\+Sequences} ()
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a12a6925ce5f04e38305857c63e820968}{has\+Next} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence}{Fastq\+Sequence} \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a90f65eeb25ce8009d7386ab410c1e95a}{next} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a4dc28f7d389ce614c2f3bdcd2762f6b7}{close} ()  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a2a5b4f723340453275e7f6136ca2d0b4}{remove} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a77a045bf908924dbb09af31bf3873493}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!Fastq\+Parser@{Fastq\+Parser}}
+\index{Fastq\+Parser@{Fastq\+Parser}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{Fastq\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+Fastq\+Parser (
+\begin{DoxyParamCaption}
+\item[{File}]{fastq\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a77a045bf908924dbb09af31bf3873493}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{Deprecated}]This constructure is highly discouraged as it opens a reader. Use the empty constructor instead and set the file to read, then call start. 
+\begin{DoxyParams}{Parameters}
+{\em fastq\+File} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\end{DoxyRefDesc}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ab28b29c6d7217c8e9b35be1fabbe24d2}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!Fastq\+Parser@{Fastq\+Parser}}
+\index{Fastq\+Parser@{Fastq\+Parser}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{Fastq\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+Fastq\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ab28b29c6d7217c8e9b35be1fabbe24d2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a4dc28f7d389ce614c2f3bdcd2762f6b7}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!close@{close}}
+\index{close@{close}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a4dc28f7d389ce614c2f3bdcd2762f6b7}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a954f65e71af98855f3477d5b17320f18}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!convert\+To\+Fasta@{convert\+To\+Fasta}}
+\index{convert\+To\+Fasta@{convert\+To\+Fasta}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{convert\+To\+Fasta}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+convert\+To\+Fasta (
+\begin{DoxyParamCaption}
+\item[{String}]{save}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a954f65e71af98855f3477d5b17320f18}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a2bbe196edee4649d6a62c569426cad04}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!convert\+To\+Numbered\+Fasta@{convert\+To\+Numbered\+Fasta}}
+\index{convert\+To\+Numbered\+Fasta@{convert\+To\+Numbered\+Fasta}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{convert\+To\+Numbered\+Fasta}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+convert\+To\+Numbered\+Fasta (
+\begin{DoxyParamCaption}
+\item[{String}]{save}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a2bbe196edee4649d6a62c569426cad04}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a18db9a7a9677bdaa101504eb9654adc2}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!get\+Number\+Of\+Sequences@{get\+Number\+Of\+Sequences}}
+\index{get\+Number\+Of\+Sequences@{get\+Number\+Of\+Sequences}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{get\+Number\+Of\+Sequences}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+get\+Number\+Of\+Sequences (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a18db9a7a9677bdaa101504eb9654adc2}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ab6f48cad18b6a00b8be620714d07968b}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!get\+Sequences@{get\+Sequences}}
+\index{get\+Sequences@{get\+Sequences}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{get\+Sequences}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Fastq\+Sequence}$>$ broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+get\+Sequences (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ab6f48cad18b6a00b8be620714d07968b}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a12a6925ce5f04e38305857c63e820968}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!has\+Next@{has\+Next}}
+\index{has\+Next@{has\+Next}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{has\+Next}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+has\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a12a6925ce5f04e38305857c63e820968}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a90f65eeb25ce8009d7386ab410c1e95a}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!next@{next}}
+\index{next@{next}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fastq\+Sequence} broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a90f65eeb25ce8009d7386ab410c1e95a}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a292ca969701ba6a5ac79927f0c6bc33f}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!parse@{parse}}
+\index{parse@{parse}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Fastq\+Sequence}$>$ broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+parse (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a292ca969701ba6a5ac79927f0c6bc33f}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a2a5b4f723340453275e7f6136ca2d0b4}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!remove@{remove}}
+\index{remove@{remove}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a2a5b4f723340453275e7f6136ca2d0b4}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ad6fee49ea1cb22e8ab2c9a5bfc5cbe7a}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!start@{start}}
+\index{start@{start}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+start (
+\begin{DoxyParamCaption}
+\item[{File}]{fastq\+Parser}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_ad6fee49ea1cb22e8ab2c9a5bfc5cbe7a}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a61e15412ca2ceb8d91767e7a1ed0de94}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!start@{start}}
+\index{start@{start}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+start (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_a61e15412ca2ceb8d91767e7a1ed0de94}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_acffff1957b1c7233f497abbb3e1fd965}{\index{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}!write\+Chunks@{write\+Chunks}}
+\index{write\+Chunks@{write\+Chunks}!broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser@{broad\+::pda\+::seq\+::fastq\+::\+Fastq\+Parser}}
+\subsubsection[{write\+Chunks}]{\setlength{\rightskip}{0pt plus 5cm}File \mbox{[}$\,$\mbox{]} broad.\+pda.\+seq.\+fastq.\+Fastq\+Parser.\+write\+Chunks (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{int}]{chunk\+Size}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_parser_acffff1957b1c7233f497abbb3e1fd965}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/fastq/\hyperlink{_fastq_parser_8java}{Fastq\+Parser.\+java}\end{DoxyCompactItemize}

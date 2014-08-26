@@ -1,0 +1,15 @@
+digraph "umms.core.model.JCSAlignmentModel.getOverlappingReads"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.JCSAlignment\lModel.getOverlappingReads",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.JCSAlignment\lModel.getReadSizeDistribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#aa21dba22294a46e58e642e2383e66417"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.JCSAlignment\lModel.getOverlappingSplicedReads",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#af55ede2f0c4eff1338d4dec36ecbbc47"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.model.JCSAlignment\lModel.getPermutedAnnotations",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#a62dbb73b72268c223a90963ff37cc0ad"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.model.JCSAlignment\lModel.getPeak",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_j_c_s_alignment_model.html#ace2f29aff75114c5a3cb64c867781006"];
+}

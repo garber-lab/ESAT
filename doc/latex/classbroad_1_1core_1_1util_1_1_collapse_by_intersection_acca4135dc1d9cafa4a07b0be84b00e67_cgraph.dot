@@ -1,0 +1,9 @@
+digraph "broad.core.util.CollapseByIntersection.collapseByIntersection"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.util.Collapse\lByIntersection.collapseByIntersection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.util.Collapse\lByIntersection.makeIntervalTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1util_1_1_collapse_by_intersection.html#aaa8e7c2f4714c9ce25ac41c142b7668b"];
+}

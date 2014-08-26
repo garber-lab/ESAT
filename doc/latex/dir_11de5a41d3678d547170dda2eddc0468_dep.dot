@@ -1,0 +1,9 @@
+digraph "java/broad/core/sequence" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d797da7c46939e8249507ee9301f1543 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_d797da7c46939e8249507ee9301f1543.html"]
+  dir_11de5a41d3678d547170dda2eddc0468 [shape=box, label="sequence", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_11de5a41d3678d547170dda2eddc0468.html"];
+  }
+}

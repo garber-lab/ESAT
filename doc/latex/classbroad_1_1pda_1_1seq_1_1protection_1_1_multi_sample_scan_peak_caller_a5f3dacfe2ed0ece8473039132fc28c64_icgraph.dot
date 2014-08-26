@@ -1,0 +1,9 @@
+digraph "broad.pda.seq.protection.MultiSampleScanPeakCaller.getSingleSampleScanPeaks"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.protection.\lMultiSampleScanPeakCaller.getSingle\lSampleScanPeaks",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.seq.protection.\lMultiSampleScanPeakCaller.write\lSingleSampleScanPeaks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1protection_1_1_multi_sample_scan_peak_caller.html#ae47edcf07d5ed1e49541e32cafcddf01"];
+}

@@ -1,0 +1,455 @@
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus}{\section{broad.\+pda.\+annotation.\+Locus Class Reference}
+\label{classbroad_1_1pda_1_1annotation_1_1_locus}\index{broad.\+pda.\+annotation.\+Locus@{broad.\+pda.\+annotation.\+Locus}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_aa08c1c0494f7dfae5a28a9fa5f9d8bfb}{Locus} (\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} g)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_aabadd54c82a3349ef4e9bc7c8040265e}{add\+Isoform} (\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} iso, String set)
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ab0a21b52c4209efeb94b69cd092ab55f}{get\+Reference\+Transcript} ()
+\item 
+Hash\+Map$<$ String, Integer $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a7a094d4a22f912ce3659c27f063e573c}{get\+Num\+Isoforms\+Per\+Set} ()
+\item 
+Hash\+Map$<$ String, Double $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a8aa215097798926bce3723075eb05056}{get\+Max\+Score\+Per\+Set} ()
+\item 
+Hash\+Map$<$ String, Integer $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a51ec31985ddc969f74872a2eae4fbe80}{get\+Is\+Comaptible\+With\+Ref\+Per\+Set} ()
+\item 
+Hash\+Map$<$ String, Integer $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_adf5e06cedc03a242dc6916dccd077071}{get\+Is\+Partially\+Comaptible\+With\+Ref\+Per\+Set} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ae84317b60ac2dd9b071db1c9a1301a2c}{get\+Is\+Comaptible\+Between\+Subsets} (Array\+List$<$ String $>$ set1\+Lst, Array\+List$<$ String $>$ set2\+Lst, boolean is\+Fully)
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a9ba15abbca6aba31e688c956dc321b3c}{get\+Is\+Comaptible\+Between\+Any2\+Sets} (Array\+List$<$ String $>$ set\+Lst, boolean is\+Fully)
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_aca7ea4321216f5ca4124c8e5a879cb2d}{get\+Is\+Comaptible\+Between\+Subsets} (Array\+List$<$ String $>$ set1\+Lst, Array\+List$<$ String $>$ set2\+Lst, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} uniq\+Iso\+Bed)
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a75dbd05a84b105dc531219db343f260d}{get\+Is\+Comaptible\+Between\+Any2\+Sets} (Array\+List$<$ String $>$ set3\+Lst, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} uniq\+Iso\+Bed)
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a0cfa9aabc38cfea8f8f657cc656bba87}{get\+Exon\+Union} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ac1ada0b4c99e92fd6acad2f68b9e4f2d}{get\+Distance\+To3prime\+Neighbor} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} gene\+Set)  throws I\+O\+Exception
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_aebe1e52c92b834e03198cd903f164244}{get\+Distance\+To5prime\+Neighbor} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} gene\+Set)  throws I\+O\+Exception
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a4d28eb0727bd949d765d4bf79dbc265e}{distance\+To\+Opposite\+Strand5prime\+Neighbor} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} gene\+Set)  throws I\+O\+Exception
+\item 
+double \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ab5b65d99190dfd997054dd358c800c5b}{get\+Max\+Score\+Across\+All\+Iso} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a2408fa698802fecf31b20dbe53a23596}{update\+Isoforms\+Name\+With\+Locus\+Name} ()
+\item 
+Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a93df766c9727f3ed89e79c321cef078a}{get\+Set\+Isoforms} (String set\+Name)
+\item 
+Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a19c4c5f51f36903524cc17e2a0f88158}{get\+All\+Isoforms} (String exclude\+Set)
+\item 
+Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a605c39f1d3fdd54f354087b8b49fbbfb}{get\+Comaptible\+Between\+Any2\+Sets} (Array\+List$<$ String $>$ set\+Lst, boolean is\+Fully)
+\item 
+Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a9505fde35b8cb334a7103cf2611ef899}{get\+Unq\+Comaptible\+Between\+Any2\+Sets} (Array\+List$<$ String $>$ set\+Lst, Collection$<$?extends \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ unq\+Iso\+Set, boolean is\+Fully)
+\item 
+Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a333584ce51e5c6f1a2f00c2ad0586fea}{get\+Unq\+Comaptible\+Between\+Subsets} (Array\+List$<$ String $>$ set1\+Lst, Array\+List$<$ String $>$ set2\+Lst, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ unq\+Iso\+Set, boolean is\+Fully)
+\item 
+Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a5efc45d71e297a4996655b451accd1a3}{get\+Comaptible\+Isoforms} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} g, boolean is\+Fully)
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_aac5b8bb5955d907402dba1f158c9d266}{get\+Longest\+Intorn\+Chain\+Iso} (String ref\+Set)
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ab86206c127ee93f5aa36fdec5c7a7f30}{get\+Merged} ()
+\item 
+List$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a20a429f963554d39be7c3a02a410b534}{get\+All\+Merged} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a2ad7d79e3ee59415520e9f3c688725cc}{num\+Of\+Overlap\+Sets} (Array\+List$<$ String $>$ set\+Lst)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ac7a725bf08ba1f907352e743037e453b}{get\+Max\+Pct\+Covered} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ab6466dfa65c9a7701bd066379301a01a}{get\+Max\+Exons\+Covered} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_aa43b3954b74d63bec8ac72a52e55b89c}{get\+Max\+Pct\+Genome\+Covered} ()
+\item 
+Hash\+Map$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene}, Array\+List\\*
+$<$ Double $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ac67747dc4498eabfcc52df6e083aee0b}{pct\+Overlap\+With\+Ref} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a647a1e88afae9412ccedfc6284f1d979}{is\+Termini\+Coverage\+Bias} ()
+\item 
+Collection$<$?extends \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a4d1f5f7f21b402725c8a43ccdc65bde8}{get\+All\+Isoforms} ()
+\item 
+Integer \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_ae17acc06fa08a70dba97d64b165b7260}{get\+Number\+Of\+Isoforms} ()
+\item 
+Collection$<$?extends \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a5b93959c80e50de0f2dd758c382a74d2}{select\+Rand\+Iso\+Subset} (Integer max\+Iso\+Per\+Loci)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_a11d537e3a80eacc32bb221711bc03dfc}{Select\+Longest\+Intron\+Chain\+Candidate} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ between\+Subsets\+Iso\+Set)
+\item 
+static boolean \hyperlink{classbroad_1_1pda_1_1annotation_1_1_locus_aa1a696f876a12b75cfab2f26340e6c1f}{is\+Fully\+Comaptible} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} iso1, \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} iso2, boolean stringent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_aa08c1c0494f7dfae5a28a9fa5f9d8bfb}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!Locus@{Locus}}
+\index{Locus@{Locus}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{Locus}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+annotation.\+Locus.\+Locus (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene\+With\+Isoforms}}]{g}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_aa08c1c0494f7dfae5a28a9fa5f9d8bfb}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_aabadd54c82a3349ef4e9bc7c8040265e}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!add\+Isoform@{add\+Isoform}}
+\index{add\+Isoform@{add\+Isoform}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{add\+Isoform}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+Locus.\+add\+Isoform (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene\+With\+Isoforms}}]{iso, }
+\item[{String}]{set}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_aabadd54c82a3349ef4e9bc7c8040265e}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a4d28eb0727bd949d765d4bf79dbc265e}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!distance\+To\+Opposite\+Strand5prime\+Neighbor@{distance\+To\+Opposite\+Strand5prime\+Neighbor}}
+\index{distance\+To\+Opposite\+Strand5prime\+Neighbor@{distance\+To\+Opposite\+Strand5prime\+Neighbor}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{distance\+To\+Opposite\+Strand5prime\+Neighbor}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} broad.\+pda.\+annotation.\+Locus.\+distance\+To\+Opposite\+Strand5prime\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{gene\+Set}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a4d28eb0727bd949d765d4bf79dbc265e}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a19c4c5f51f36903524cc17e2a0f88158}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+All\+Isoforms@{get\+All\+Isoforms}}
+\index{get\+All\+Isoforms@{get\+All\+Isoforms}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+All\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+All\+Isoforms (
+\begin{DoxyParamCaption}
+\item[{String}]{exclude\+Set}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a19c4c5f51f36903524cc17e2a0f88158}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a4d1f5f7f21b402725c8a43ccdc65bde8}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+All\+Isoforms@{get\+All\+Isoforms}}
+\index{get\+All\+Isoforms@{get\+All\+Isoforms}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+All\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+All\+Isoforms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a4d1f5f7f21b402725c8a43ccdc65bde8}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a20a429f963554d39be7c3a02a410b534}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+All\+Merged@{get\+All\+Merged}}
+\index{get\+All\+Merged@{get\+All\+Merged}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+All\+Merged}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+All\+Merged (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a20a429f963554d39be7c3a02a410b534}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a605c39f1d3fdd54f354087b8b49fbbfb}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Comaptible\+Between\+Any2\+Sets@{get\+Comaptible\+Between\+Any2\+Sets}}
+\index{get\+Comaptible\+Between\+Any2\+Sets@{get\+Comaptible\+Between\+Any2\+Sets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Comaptible\+Between\+Any2\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Comaptible\+Between\+Any2\+Sets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set\+Lst, }
+\item[{boolean}]{is\+Fully}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a605c39f1d3fdd54f354087b8b49fbbfb}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a5efc45d71e297a4996655b451accd1a3}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Comaptible\+Isoforms@{get\+Comaptible\+Isoforms}}
+\index{get\+Comaptible\+Isoforms@{get\+Comaptible\+Isoforms}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Comaptible\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Comaptible\+Isoforms (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{g, }
+\item[{boolean}]{is\+Fully}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a5efc45d71e297a4996655b451accd1a3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ac1ada0b4c99e92fd6acad2f68b9e4f2d}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Distance\+To3prime\+Neighbor@{get\+Distance\+To3prime\+Neighbor}}
+\index{get\+Distance\+To3prime\+Neighbor@{get\+Distance\+To3prime\+Neighbor}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Distance\+To3prime\+Neighbor}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} broad.\+pda.\+annotation.\+Locus.\+get\+Distance\+To3prime\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{gene\+Set}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ac1ada0b4c99e92fd6acad2f68b9e4f2d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_aebe1e52c92b834e03198cd903f164244}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Distance\+To5prime\+Neighbor@{get\+Distance\+To5prime\+Neighbor}}
+\index{get\+Distance\+To5prime\+Neighbor@{get\+Distance\+To5prime\+Neighbor}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Distance\+To5prime\+Neighbor}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} broad.\+pda.\+annotation.\+Locus.\+get\+Distance\+To5prime\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{gene\+Set}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_aebe1e52c92b834e03198cd903f164244}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a0cfa9aabc38cfea8f8f657cc656bba87}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Exon\+Union@{get\+Exon\+Union}}
+\index{get\+Exon\+Union@{get\+Exon\+Union}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Exon\+Union}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} broad.\+pda.\+annotation.\+Locus.\+get\+Exon\+Union (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a0cfa9aabc38cfea8f8f657cc656bba87}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a9ba15abbca6aba31e688c956dc321b3c}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Is\+Comaptible\+Between\+Any2\+Sets@{get\+Is\+Comaptible\+Between\+Any2\+Sets}}
+\index{get\+Is\+Comaptible\+Between\+Any2\+Sets@{get\+Is\+Comaptible\+Between\+Any2\+Sets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Is\+Comaptible\+Between\+Any2\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+Locus.\+get\+Is\+Comaptible\+Between\+Any2\+Sets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set\+Lst, }
+\item[{boolean}]{is\+Fully}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a9ba15abbca6aba31e688c956dc321b3c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a75dbd05a84b105dc531219db343f260d}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Is\+Comaptible\+Between\+Any2\+Sets@{get\+Is\+Comaptible\+Between\+Any2\+Sets}}
+\index{get\+Is\+Comaptible\+Between\+Any2\+Sets@{get\+Is\+Comaptible\+Between\+Any2\+Sets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Is\+Comaptible\+Between\+Any2\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+Locus.\+get\+Is\+Comaptible\+Between\+Any2\+Sets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set3\+Lst, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{uniq\+Iso\+Bed}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a75dbd05a84b105dc531219db343f260d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ae84317b60ac2dd9b071db1c9a1301a2c}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Is\+Comaptible\+Between\+Subsets@{get\+Is\+Comaptible\+Between\+Subsets}}
+\index{get\+Is\+Comaptible\+Between\+Subsets@{get\+Is\+Comaptible\+Between\+Subsets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Is\+Comaptible\+Between\+Subsets}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+Locus.\+get\+Is\+Comaptible\+Between\+Subsets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set1\+Lst, }
+\item[{Array\+List$<$ String $>$}]{set2\+Lst, }
+\item[{boolean}]{is\+Fully}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ae84317b60ac2dd9b071db1c9a1301a2c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_aca7ea4321216f5ca4124c8e5a879cb2d}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Is\+Comaptible\+Between\+Subsets@{get\+Is\+Comaptible\+Between\+Subsets}}
+\index{get\+Is\+Comaptible\+Between\+Subsets@{get\+Is\+Comaptible\+Between\+Subsets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Is\+Comaptible\+Between\+Subsets}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+Locus.\+get\+Is\+Comaptible\+Between\+Subsets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set1\+Lst, }
+\item[{Array\+List$<$ String $>$}]{set2\+Lst, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{uniq\+Iso\+Bed}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_aca7ea4321216f5ca4124c8e5a879cb2d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a51ec31985ddc969f74872a2eae4fbe80}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Is\+Comaptible\+With\+Ref\+Per\+Set@{get\+Is\+Comaptible\+With\+Ref\+Per\+Set}}
+\index{get\+Is\+Comaptible\+With\+Ref\+Per\+Set@{get\+Is\+Comaptible\+With\+Ref\+Per\+Set}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Is\+Comaptible\+With\+Ref\+Per\+Set}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$String,Integer$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Is\+Comaptible\+With\+Ref\+Per\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a51ec31985ddc969f74872a2eae4fbe80}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_adf5e06cedc03a242dc6916dccd077071}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Is\+Partially\+Comaptible\+With\+Ref\+Per\+Set@{get\+Is\+Partially\+Comaptible\+With\+Ref\+Per\+Set}}
+\index{get\+Is\+Partially\+Comaptible\+With\+Ref\+Per\+Set@{get\+Is\+Partially\+Comaptible\+With\+Ref\+Per\+Set}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Is\+Partially\+Comaptible\+With\+Ref\+Per\+Set}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$String,Integer$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Is\+Partially\+Comaptible\+With\+Ref\+Per\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_adf5e06cedc03a242dc6916dccd077071}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_aac5b8bb5955d907402dba1f158c9d266}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Longest\+Intorn\+Chain\+Iso@{get\+Longest\+Intorn\+Chain\+Iso}}
+\index{get\+Longest\+Intorn\+Chain\+Iso@{get\+Longest\+Intorn\+Chain\+Iso}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Longest\+Intorn\+Chain\+Iso}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} broad.\+pda.\+annotation.\+Locus.\+get\+Longest\+Intorn\+Chain\+Iso (
+\begin{DoxyParamCaption}
+\item[{String}]{ref\+Set}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_aac5b8bb5955d907402dba1f158c9d266}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ab6466dfa65c9a7701bd066379301a01a}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Max\+Exons\+Covered@{get\+Max\+Exons\+Covered}}
+\index{get\+Max\+Exons\+Covered@{get\+Max\+Exons\+Covered}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Max\+Exons\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+annotation.\+Locus.\+get\+Max\+Exons\+Covered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ab6466dfa65c9a7701bd066379301a01a}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ac7a725bf08ba1f907352e743037e453b}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Max\+Pct\+Covered@{get\+Max\+Pct\+Covered}}
+\index{get\+Max\+Pct\+Covered@{get\+Max\+Pct\+Covered}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Max\+Pct\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+annotation.\+Locus.\+get\+Max\+Pct\+Covered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ac7a725bf08ba1f907352e743037e453b}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_aa43b3954b74d63bec8ac72a52e55b89c}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Max\+Pct\+Genome\+Covered@{get\+Max\+Pct\+Genome\+Covered}}
+\index{get\+Max\+Pct\+Genome\+Covered@{get\+Max\+Pct\+Genome\+Covered}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Max\+Pct\+Genome\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+annotation.\+Locus.\+get\+Max\+Pct\+Genome\+Covered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_aa43b3954b74d63bec8ac72a52e55b89c}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ab5b65d99190dfd997054dd358c800c5b}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Max\+Score\+Across\+All\+Iso@{get\+Max\+Score\+Across\+All\+Iso}}
+\index{get\+Max\+Score\+Across\+All\+Iso@{get\+Max\+Score\+Across\+All\+Iso}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Max\+Score\+Across\+All\+Iso}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+annotation.\+Locus.\+get\+Max\+Score\+Across\+All\+Iso (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ab5b65d99190dfd997054dd358c800c5b}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a8aa215097798926bce3723075eb05056}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Max\+Score\+Per\+Set@{get\+Max\+Score\+Per\+Set}}
+\index{get\+Max\+Score\+Per\+Set@{get\+Max\+Score\+Per\+Set}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Max\+Score\+Per\+Set}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$String,Double$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Max\+Score\+Per\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a8aa215097798926bce3723075eb05056}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ab86206c127ee93f5aa36fdec5c7a7f30}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Merged@{get\+Merged}}
+\index{get\+Merged@{get\+Merged}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Merged}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} broad.\+pda.\+annotation.\+Locus.\+get\+Merged (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ab86206c127ee93f5aa36fdec5c7a7f30}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ae17acc06fa08a70dba97d64b165b7260}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}}
+\index{get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Number\+Of\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}Integer broad.\+pda.\+annotation.\+Locus.\+get\+Number\+Of\+Isoforms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ae17acc06fa08a70dba97d64b165b7260}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a7a094d4a22f912ce3659c27f063e573c}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Num\+Isoforms\+Per\+Set@{get\+Num\+Isoforms\+Per\+Set}}
+\index{get\+Num\+Isoforms\+Per\+Set@{get\+Num\+Isoforms\+Per\+Set}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Num\+Isoforms\+Per\+Set}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$String,Integer$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Num\+Isoforms\+Per\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a7a094d4a22f912ce3659c27f063e573c}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ab0a21b52c4209efeb94b69cd092ab55f}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Reference\+Transcript@{get\+Reference\+Transcript}}
+\index{get\+Reference\+Transcript@{get\+Reference\+Transcript}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Reference\+Transcript}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} broad.\+pda.\+annotation.\+Locus.\+get\+Reference\+Transcript (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ab0a21b52c4209efeb94b69cd092ab55f}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a93df766c9727f3ed89e79c321cef078a}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Set\+Isoforms@{get\+Set\+Isoforms}}
+\index{get\+Set\+Isoforms@{get\+Set\+Isoforms}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Set\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Set\+Isoforms (
+\begin{DoxyParamCaption}
+\item[{String}]{set\+Name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a93df766c9727f3ed89e79c321cef078a}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a9505fde35b8cb334a7103cf2611ef899}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Unq\+Comaptible\+Between\+Any2\+Sets@{get\+Unq\+Comaptible\+Between\+Any2\+Sets}}
+\index{get\+Unq\+Comaptible\+Between\+Any2\+Sets@{get\+Unq\+Comaptible\+Between\+Any2\+Sets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Unq\+Comaptible\+Between\+Any2\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Unq\+Comaptible\+Between\+Any2\+Sets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set\+Lst, }
+\item[{Collection$<$?extends {\bf Gene} $>$}]{unq\+Iso\+Set, }
+\item[{boolean}]{is\+Fully}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a9505fde35b8cb334a7103cf2611ef899}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a333584ce51e5c6f1a2f00c2ad0586fea}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!get\+Unq\+Comaptible\+Between\+Subsets@{get\+Unq\+Comaptible\+Between\+Subsets}}
+\index{get\+Unq\+Comaptible\+Between\+Subsets@{get\+Unq\+Comaptible\+Between\+Subsets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{get\+Unq\+Comaptible\+Between\+Subsets}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+get\+Unq\+Comaptible\+Between\+Subsets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set1\+Lst, }
+\item[{Array\+List$<$ String $>$}]{set2\+Lst, }
+\item[{Collection$<$ {\bf Gene} $>$}]{unq\+Iso\+Set, }
+\item[{boolean}]{is\+Fully}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a333584ce51e5c6f1a2f00c2ad0586fea}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_aa1a696f876a12b75cfab2f26340e6c1f}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!is\+Fully\+Comaptible@{is\+Fully\+Comaptible}}
+\index{is\+Fully\+Comaptible@{is\+Fully\+Comaptible}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{is\+Fully\+Comaptible}]{\setlength{\rightskip}{0pt plus 5cm}static boolean broad.\+pda.\+annotation.\+Locus.\+is\+Fully\+Comaptible (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{iso1, }
+\item[{{\bf Gene}}]{iso2, }
+\item[{boolean}]{stringent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_aa1a696f876a12b75cfab2f26340e6c1f}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a647a1e88afae9412ccedfc6284f1d979}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!is\+Termini\+Coverage\+Bias@{is\+Termini\+Coverage\+Bias}}
+\index{is\+Termini\+Coverage\+Bias@{is\+Termini\+Coverage\+Bias}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{is\+Termini\+Coverage\+Bias}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+Locus.\+is\+Termini\+Coverage\+Bias (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a647a1e88afae9412ccedfc6284f1d979}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a2ad7d79e3ee59415520e9f3c688725cc}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!num\+Of\+Overlap\+Sets@{num\+Of\+Overlap\+Sets}}
+\index{num\+Of\+Overlap\+Sets@{num\+Of\+Overlap\+Sets}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{num\+Of\+Overlap\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+Locus.\+num\+Of\+Overlap\+Sets (
+\begin{DoxyParamCaption}
+\item[{Array\+List$<$ String $>$}]{set\+Lst}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a2ad7d79e3ee59415520e9f3c688725cc}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_ac67747dc4498eabfcc52df6e083aee0b}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!pct\+Overlap\+With\+Ref@{pct\+Overlap\+With\+Ref}}
+\index{pct\+Overlap\+With\+Ref@{pct\+Overlap\+With\+Ref}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{pct\+Overlap\+With\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<${\bf Gene}, Array\+List$<$Double$>$ $>$ broad.\+pda.\+annotation.\+Locus.\+pct\+Overlap\+With\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_ac67747dc4498eabfcc52df6e083aee0b}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a11d537e3a80eacc32bb221711bc03dfc}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!Select\+Longest\+Intron\+Chain\+Candidate@{Select\+Longest\+Intron\+Chain\+Candidate}}
+\index{Select\+Longest\+Intron\+Chain\+Candidate@{Select\+Longest\+Intron\+Chain\+Candidate}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{Select\+Longest\+Intron\+Chain\+Candidate}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+Select\+Longest\+Intron\+Chain\+Candidate (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{between\+Subsets\+Iso\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a11d537e3a80eacc32bb221711bc03dfc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a5b93959c80e50de0f2dd758c382a74d2}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!select\+Rand\+Iso\+Subset@{select\+Rand\+Iso\+Subset}}
+\index{select\+Rand\+Iso\+Subset@{select\+Rand\+Iso\+Subset}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{select\+Rand\+Iso\+Subset}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Gene}$>$ broad.\+pda.\+annotation.\+Locus.\+select\+Rand\+Iso\+Subset (
+\begin{DoxyParamCaption}
+\item[{Integer}]{max\+Iso\+Per\+Loci}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a5b93959c80e50de0f2dd758c382a74d2}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_locus_a2408fa698802fecf31b20dbe53a23596}{\index{broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}!update\+Isoforms\+Name\+With\+Locus\+Name@{update\+Isoforms\+Name\+With\+Locus\+Name}}
+\index{update\+Isoforms\+Name\+With\+Locus\+Name@{update\+Isoforms\+Name\+With\+Locus\+Name}!broad\+::pda\+::annotation\+::\+Locus@{broad\+::pda\+::annotation\+::\+Locus}}
+\subsubsection[{update\+Isoforms\+Name\+With\+Locus\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+Locus.\+update\+Isoforms\+Name\+With\+Locus\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_locus_a2408fa698802fecf31b20dbe53a23596}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/annotation/\hyperlink{_locus_8java}{Locus.\+java}\end{DoxyCompactItemize}

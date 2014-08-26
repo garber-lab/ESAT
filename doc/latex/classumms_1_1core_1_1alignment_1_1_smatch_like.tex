@@ -1,0 +1,131 @@
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like}{\section{umms.\+core.\+alignment.\+Smatch\+Like Class Reference}
+\label{classumms_1_1core_1_1alignment_1_1_smatch_like}\index{umms.\+core.\+alignment.\+Smatch\+Like@{umms.\+core.\+alignment.\+Smatch\+Like}}
+}
+
+
+Collaboration diagram for umms.\+core.\+alignment.\+Smatch\+Like\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_ae70e0db3185d199299525bf6a1593135}{Smatch\+Like} (String kmer, List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} $>$ gene\+Sequences, int seed\+Num)
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_a9d7334ec3da8075166fb17ae52ff854e}{Smatch\+Like} (String kmer, String primer, int seed\+Num)
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_aedf471862114aefaaa236bda01eaaa6a}{Smatch\+Like} (String kmer2, Collection$<$ Pair$<$ String $>$$>$ tail\+Primers, Pair$<$ String $>$ subprimer1)
+\item 
+Collection$<$ String $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_a637526895697dd36d8bd7acc33be1b05}{get\+Forward\+Targets} (int num\+Mismatches)  throws Search\+Exception
+\item 
+Map$<$ String, List\\*
+$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} $>$ $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_afd7abcc767e14a7bef6d6a7bfe26002f}{get\+Forward\+Target\+Regions} (int num\+Mismatches)  throws Search\+Exception
+\item 
+Collection$<$ String $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_ae07909228a8cc278e182d7f148d269c1}{get\+Reverse\+Targets} (int num\+Mismatches)  throws Search\+Exception
+\item 
+Collection$<$ String $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_aa1900953c5ea1d5ab406fa083557e752}{get\+All\+Possible\+Targets} (int num\+Mismatches)  throws Search\+Exception
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_a415dcff2420c6e12a94af642d6d1d376}{num\+Possible\+Targets} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classumms_1_1core_1_1alignment_1_1_smatch_like_a1cf7c64bce53f135ba5900376e5780af}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception, Search\+Exception
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_ae70e0db3185d199299525bf6a1593135}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!Smatch\+Like@{Smatch\+Like}}
+\index{Smatch\+Like@{Smatch\+Like}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{Smatch\+Like}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Smatch\+Like.\+Smatch\+Like (
+\begin{DoxyParamCaption}
+\item[{String}]{kmer, }
+\item[{List$<$ {\bf Sequence} $>$}]{gene\+Sequences, }
+\item[{int}]{seed\+Num}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_ae70e0db3185d199299525bf6a1593135}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_a9d7334ec3da8075166fb17ae52ff854e}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!Smatch\+Like@{Smatch\+Like}}
+\index{Smatch\+Like@{Smatch\+Like}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{Smatch\+Like}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Smatch\+Like.\+Smatch\+Like (
+\begin{DoxyParamCaption}
+\item[{String}]{kmer, }
+\item[{String}]{primer, }
+\item[{int}]{seed\+Num}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_a9d7334ec3da8075166fb17ae52ff854e}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_aedf471862114aefaaa236bda01eaaa6a}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!Smatch\+Like@{Smatch\+Like}}
+\index{Smatch\+Like@{Smatch\+Like}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{Smatch\+Like}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Smatch\+Like.\+Smatch\+Like (
+\begin{DoxyParamCaption}
+\item[{String}]{kmer2, }
+\item[{Collection$<$ Pair$<$ String $>$$>$}]{tail\+Primers, }
+\item[{Pair$<$ String $>$}]{subprimer1}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_aedf471862114aefaaa236bda01eaaa6a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_aa1900953c5ea1d5ab406fa083557e752}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!get\+All\+Possible\+Targets@{get\+All\+Possible\+Targets}}
+\index{get\+All\+Possible\+Targets@{get\+All\+Possible\+Targets}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{get\+All\+Possible\+Targets}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$String$>$ umms.\+core.\+alignment.\+Smatch\+Like.\+get\+All\+Possible\+Targets (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Mismatches}
+\end{DoxyParamCaption}
+) throws {\bf Search\+Exception}}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_aa1900953c5ea1d5ab406fa083557e752}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_afd7abcc767e14a7bef6d6a7bfe26002f}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!get\+Forward\+Target\+Regions@{get\+Forward\+Target\+Regions}}
+\index{get\+Forward\+Target\+Regions@{get\+Forward\+Target\+Regions}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{get\+Forward\+Target\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, List$<${\bf Sequence\+Region}$>$ $>$ umms.\+core.\+alignment.\+Smatch\+Like.\+get\+Forward\+Target\+Regions (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Mismatches}
+\end{DoxyParamCaption}
+) throws {\bf Search\+Exception}}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_afd7abcc767e14a7bef6d6a7bfe26002f}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_a637526895697dd36d8bd7acc33be1b05}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!get\+Forward\+Targets@{get\+Forward\+Targets}}
+\index{get\+Forward\+Targets@{get\+Forward\+Targets}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{get\+Forward\+Targets}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$String$>$ umms.\+core.\+alignment.\+Smatch\+Like.\+get\+Forward\+Targets (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Mismatches}
+\end{DoxyParamCaption}
+) throws {\bf Search\+Exception}}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_a637526895697dd36d8bd7acc33be1b05}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_ae07909228a8cc278e182d7f148d269c1}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!get\+Reverse\+Targets@{get\+Reverse\+Targets}}
+\index{get\+Reverse\+Targets@{get\+Reverse\+Targets}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{get\+Reverse\+Targets}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$String$>$ umms.\+core.\+alignment.\+Smatch\+Like.\+get\+Reverse\+Targets (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Mismatches}
+\end{DoxyParamCaption}
+) throws {\bf Search\+Exception}}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_ae07909228a8cc278e182d7f148d269c1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_a1cf7c64bce53f135ba5900376e5780af}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!main@{main}}
+\index{main@{main}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void umms.\+core.\+alignment.\+Smatch\+Like.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Search\+Exception}\hspace{0.3cm}{\ttfamily [static]}}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_a1cf7c64bce53f135ba5900376e5780af}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_smatch_like_a415dcff2420c6e12a94af642d6d1d376}{\index{umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}!num\+Possible\+Targets@{num\+Possible\+Targets}}
+\index{num\+Possible\+Targets@{num\+Possible\+Targets}!umms\+::core\+::alignment\+::\+Smatch\+Like@{umms\+::core\+::alignment\+::\+Smatch\+Like}}
+\subsubsection[{num\+Possible\+Targets}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Smatch\+Like.\+num\+Possible\+Targets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_smatch_like_a415dcff2420c6e12a94af642d6d1d376}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/alignment/\hyperlink{_smatch_like_8java}{Smatch\+Like.\+java}\end{DoxyCompactItemize}

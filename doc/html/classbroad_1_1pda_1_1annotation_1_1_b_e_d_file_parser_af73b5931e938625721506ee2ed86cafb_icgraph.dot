@@ -1,0 +1,19 @@
+digraph "broad.pda.annotation.BEDFileParser.addRefSeq"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.annotation.BEDFile\lParser.addRefSeq",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.annotation.BEDFile\lParser.BEDFileParser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#af3885ec96293e139d045bc700fd60139"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.pda.annotation.BEDFile\lParser.collapseSingleExonTranscripts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a45ec37aa431467c0b765680ef53aefcc"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.pda.annotation.BEDFile\lParser.removeSingeleExon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser.html#a75f7e2603b219a99a583421044f9d7f5"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.pda.annotation.GTFFile\lParser.loadIsoformDataByChrToTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_g_t_f_file_parser.html#a10927e19b744f87a9201b880c5174e51"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="broad.pda.annotation.GTFFile\lParser.GTFFileParser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_g_t_f_file_parser.html#a142be3e45d0e66cde78cf4f5f2dd0f62"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="broad.pda.annotation.GTFFile\lParser.loadIsoformDataByChrToTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_g_t_f_file_parser.html#acf80f9ad2f0a3b549cd4dffbc7363e4d"];
+}

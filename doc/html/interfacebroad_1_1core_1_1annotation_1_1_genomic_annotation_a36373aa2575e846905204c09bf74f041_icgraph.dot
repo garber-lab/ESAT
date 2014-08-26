@@ -1,0 +1,29 @@
+digraph "broad.core.annotation.GenomicAnnotation.getOrientation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.Genomic\lAnnotation.getOrientation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.annotation.Annotation\lReader\< T extends GenomicAnnotation\l \>.filterByOverlapOfLastExonOrAfterLastExon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4.html#a42737999d939d66d1f0087e493eeee94"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.annotation.BED.to\lString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d.html#a07603f8f6e0de6f886243be3dc82aef7"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.annotation.BED.to\lShortString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d.html#a0cbdd3d7ac3b0b72c8afa0a2a15cf301"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.core.annotation.BED.add\lBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d.html#a93232cebb0a54bf0ad8c43dc8b6e8e95"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="broad.core.annotation.BED.toBED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_b_e_d.html#acf8673ace0b95319a72e7bf115d80f5b"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="broad.core.annotation.Short\lBED.toString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_short_b_e_d.html#a5694f543837cd15e5c47802a8e6ab6f6"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="broad.core.annotation.Short\lBED.toShortString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_short_b_e_d.html#ae9fa60346143f1cd0134c75799a667cf"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="broad.pda.datastructures.\lAlignments.toString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1datastructures_1_1_alignments.html#a9e4d11765db80c31771e4dc66cbe358d"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="broad.pda.datastructures.\lAlignments.toStringWithScores",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1datastructures_1_1_alignments.html#af91bd395ae26f2f26e6921188e606581"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="broad.pda.rnai.ExtractSequence.get\lSequenceUnoriented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1rnai_1_1_extract_sequence.html#a28a4bd210bd1c447a44144c25ad2700a"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="broad.pda.rnai.ExtractSequence.get\lSequenceForGene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1rnai_1_1_extract_sequence.html#a1c601f128f80203b1f18d782e08c5fd9"];
+}

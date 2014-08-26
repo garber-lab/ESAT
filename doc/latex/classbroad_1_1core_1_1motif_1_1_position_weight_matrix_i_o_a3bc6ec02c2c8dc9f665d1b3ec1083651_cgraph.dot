@@ -1,0 +1,11 @@
+digraph "broad.core.motif.PositionWeightMatrixIO.main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.motif.Position\lWeightMatrixIO.main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.sequence.Sequence.getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#a5da71f38ac38e891746b5f747fe67213"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.motif.Position\lWeightMatrixIO.PositionWeightMatrixIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_position_weight_matrix_i_o.html#ae8e7a7d951e833b389cc6f26f942881e"];
+}

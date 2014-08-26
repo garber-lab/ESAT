@@ -1,0 +1,1089 @@
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4}{\section{broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$ Class Reference}
+\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4}\index{broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Annotation\+Set$<$ T extends Lightweight\+Genomic\+Annotation $>$}
+\item 
+class {\bfseries trivial\+Filter}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a427f36c6a67ff8ce3dbd1072478faaeb}{init} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2550e162745ea91301b3c2a62603ba31}{Annotation\+Reader} (Collection$<$ T $>$ annotations)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab5bc07ea8ca501a2279d52841e8c8d64}{clear} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa50ace24af6a3ccf8cc7ff486e1adaf9}{load} (File source, Annotation\+Factory$<$?extends T $>$ factory)  throws I\+O\+Exception, Parse\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7f6f003687f218c6e64ed8199688b598}{load} (Buffered\+Reader br, Annotation\+Factory$<$?extends T $>$ factory)  throws I\+O\+Exception, Parse\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a82d494fcfdaa6231ef2deb07c0481873}{load} (File source, Annotation\+Factory$<$?extends T $>$ factory, Genomic\+Annotation\+Filter$<$ T $>$ filter)  throws I\+O\+Exception, Parse\+Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a3ea177347b113f59c343d4c91ea35fd7}{load} (Buffered\+Reader br, Annotation\+Factory$<$?extends T $>$ factory, Genomic\+Annotation\+Filter$<$ T $>$ filter)  throws I\+O\+Exception, Parse\+Exception
+\item 
+abstract int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a521994585ff85b17fa34c68495a8e902}{parse} (String file, Genomic\+Annotation\+Filter$<$ T $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception, I\+O\+Exception
+\item 
+abstract int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a50981d0875a2b950aa529e789635ea59}{parse} (Buffered\+Reader br, Genomic\+Annotation\+Filter$<$ T $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception, I\+O\+Exception
+\item 
+Map$<$ String, List$<$ T $>$ $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a643eb0fb496db61f15a334d67e3f8bc8}{get\+Chromosome\+Annotation\+Map} ()
+\item 
+Iterator$<$ String $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a939e2df3892ffc1a1a2c0684e3a21875}{get\+Chromosome\+Iterator} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_short_b_e_d_reader}{Short\+B\+E\+D\+Reader} \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aafba9e3874d96126b9001f8ff9d815a2}{clone\+Regions} ()
+\item 
+Map$<$ String, List$<$ T $>$ $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7e144ef5d1e8ab9f2940cda45f5d3a09}{get\+Chromosome\+Annotation\+Map} (int i)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a3f3fec809e8eaacb1a90cc0895197ee4}{get\+Base\+Coverage} (List$<$ T $>$ annotations)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a740b107b5b81c15a5f86eada1fb2ba4a}{number\+Covered} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annotations)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad348dc8271285cf288c0ea538199c423}{intersect} (\hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader}$<$ T $>$ other)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab76576c64303826be4887cc1c34e4252}{intersect} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annotations)
+\item 
+Collection$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afdfc5f90b52549854e415baa7633d6f5}{take\+Intersection} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annotations)
+\item 
+T \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa286fc7d76fbc1e343ba918e3c41a3a6}{find\+Closest} (final \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annotation)
+\item 
+T \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad3d7b5c1ad25dcb44a1112a9c09e897a}{find\+Closest\+Non\+Overlapping} (final \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annotation)
+\item 
+T \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_acacd79e1b962e50cff83d99201ded731}{find\+Closest} (final \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annotation, boolean non\+Overlapping)
+\item 
+Map$<$ T, \\*
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ae7832c0a60f97575145b396dce267ec8}{find\+Closest\+For\+All} (final \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader}$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ other\+Reader, boolean non\+Overlapping)
+\item 
+Map$<$ T, \\*
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6eddd5a71c31c57621f3d0bb483035d9}{find\+Closest\+For\+All} (final \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader}$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ other\+Reader)
+\item 
+Map$<$ T, \\*
+\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a006879bffd7a49fb217cf1800a71ee5d}{find\+Closest\+Nonoverlapping\+For\+All} (final \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader}$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ other\+Reader)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa3a5e5fc97cb560c6a4ff633f204147c}{get\+Distance\+To\+Closest} (final \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annotation)
+\item 
+Map$<$ T, Integer $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0c53608fb99256004374dd6b0bdd3185}{get\+Distances\+To\+Closest} (final \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader}$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ other\+Reader)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aae79cc395d5eb19c82602737af680260}{permute\+Annotations\+On\+Chromosome} (final Map$<$ String, Integer $>$ sizes)
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_basic_annotation_reader}{Basic\+Annotation\+Reader} \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6806c878b0c400f5139bc7d18bdffd4b}{take\+Complement} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ annotations)
+\item 
+List$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9105fc31a2ce3c17aae9804da9254702}{get\+Overlappers} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} a)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2b33aa194c4242e1434063c7e5168236}{minus} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annotations)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a18d1a6a3a4f71fc0b6a199a27d4e0719}{filter\+By\+Overlap} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ annotations)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a76a7dda18840146b8295077897fc7eb7}{filter\+By\+Overlap} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ annotations, int extension\+Factor)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a42737999d939d66d1f0087e493eeee94}{filter\+By\+Overlap\+Of\+Last\+Exon\+Or\+After\+Last\+Exon} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annotations, int extension\+Factor)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a14a0871b93a66e22843af25ef49662d5}{filter\+By\+Overlap\+Of\+Last\+Exon} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annotations, int extension\+Factor)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afb53a50da4cd365f50d609d82a6ee2e1}{filter\+By\+Overlap\+And\+Orientation} (List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annotations)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aae2b5bec9ccbb0c1dca631c44fc03d7a}{Increment\+Score\+If\+Overlap} (\hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader}$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ annot\+Reader, int set\+Number, Boolean set\+To\+Zero)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa231c504abef8d129d8c1066daaa8124}{get\+Base\+Coverage} ()
+\item 
+abstract T \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_af52bebd3414e0f94c87ebd3c8d6fa158}{create\+Annotation} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} a)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a905175697ebd6e928f52403bf4a88832}{shift} (int amount\+To\+Shift)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a166f1db833577d0454a67ece8db9916e}{merge} ()
+\item 
+List$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a364394692cd3cce7eb4bc247685b9572}{get\+Overlappers} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ annotation\+List)
+\item 
+List$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9b33a9974717b7dee7687e26279412f8}{get\+Overlappers} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ annotation\+List, boolean fully\+Contained)
+\item 
+List$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a4a693b8faabb2c957bff9c139c604d93}{get\+Overlappers} (\hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{Annotation\+Reader}$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ other)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a66f9bfe25e08fc0309ac119b99c6464d}{get\+Bases\+Covered} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab566f68d145ef8a6abf885fecd89bb2f}{get\+Bases\+Covered} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6233292730ab40e9961587b9041e6ab6}{get\+Bases\+Covered} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, int fudge\+Factor)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_af30b2f11ec171223b8c63df0d18ff4ed}{get\+Bases\+Covered} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, int fudge\+Factor, boolean fully\+Contained)
+\item 
+List$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc2c7a42f53ce03a910cbe0366a7233e}{get\+Overlappers} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annotation)
+\item 
+double \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a268ade3e42daed82b3f2db46ee3fd896}{get\+Score\+Sum} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} region)
+\item 
+double \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab47a5d591255960b69742d1ea010a04d}{get\+Average\+Score} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} region)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9d5b0a33ce9becb24ca2e384753b5769}{merge} (int set\+Number)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adbf3eb7df259742adac2209dfd5699a1}{concat\+Annotation\+Set} (int set\+Number, List$<$?extends \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ list)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2e58068f93f16900ce7b38feb840dcd8}{add\+Annotation} (T annotation, int track)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0262e1929a493adf30b78b7db8f61035}{add\+Annotation} (T annotation)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a4ce9be2e3fd0505b9276c96f18505638}{add\+Annotation\+To\+Last\+Track} (T annotation)
+\item 
+List$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad15cb7da92cfed836d3e012b5301efb7}{get\+Annotations\+For\+Sequence} (String sequence\+Name)
+\item 
+List$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6f34387deb274c9ba2a02f825bf58c0d}{get\+Annotations\+For\+Sequence} (String sequence\+Name, int set\+Number)
+\item 
+Map$<$ String, List$<$ T $>$ $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a97f1a2884828d396023843755147022f}{get\+Sequence\+Annotation\+Map} ()
+\item 
+Map$<$ String, List$<$ T $>$ $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ae106c83d07b6598b7dd359fcc026e8fd}{get\+Sequence\+Annotation\+Map} (int set\+Number)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_abe2f553364ca9fb66ab5f8b71c027c6c}{add\+Browser\+Line} (String line)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa00450ca475b57a755c24fcb06d7c7cf}{start\+Track} (String line)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7e5e29800f6c76b42b51b626d4e919fe}{start\+Track} (String line, int track\+Num)
+\item 
+Interval\+Tree$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afee522dcd0f10dd65290b9dea988ecca}{get\+Chromosome\+Tree} (String chr, int i)
+\item 
+Interval\+Tree$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad23e0f8f065f211adc7fd67201b2a853}{get\+Chromosome\+Tree} (String chr)
+\item 
+Map$<$ String, Interval\+Tree$<$ T $>$ $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6af994265d45e558896a30af64bf37f3}{get\+Chromosome\+Tree\+Map} (int i)
+\item 
+Map$<$ String, Interval\+Tree$<$ T $>$ $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a37e29b1dc4659b1e1aac4493effcd5be}{get\+Chromosome\+Tree\+Map} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad3fef635ef16bb2001844d16ae4155f8}{get\+Track\+Info} (int i)
+\item 
+List$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0c4976c92588ad35e262e90ebca4382f}{get\+Chromosome\+B\+E\+Ds} (String chr)
+\item 
+List$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a51088ddeb9131738bac7da8968ffbfab}{get\+Chromosome\+B\+E\+Ds} (String chr, int i)
+\item 
+List$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ade7e4808675687f787ac8af08c2adb53}{get\+Annotation\+List} (int set\+Number)
+\item 
+T \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a68641405ddb243b4315928dd9defc511}{get\+Annotation} (int set\+Number, String name)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afc5bc223c3e7bac8c5d2e8267f8c4725}{contains\+Annotation} (int set\+Number, String name)
+\item 
+T \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa3f385bf901303a94b1b51e6debad1eb}{get\+Annotation} (String name)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a53db7b580a4783e5d6b3302ac59e7fb1}{contains\+Annotation} (String name)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad5eff9559e77539463640515315cd0d0}{shuffle\+Scores} (String chr, int set\+Num)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac3f633f85ce2f7edb7df80409f985ff5}{shuffle\+Scores} (String chr)
+\item 
+List$<$ T $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0da097cf3604e5b7fee57c820fd91b72}{get\+Annotation\+List} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac2fcf2953f940bdd0e25b69917571607}{num\+Of\+Annotation} (int set\+Num)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_addf403e222089681708bbb882411e8ce}{size} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_abf700452cc2b2b8438d9bcfab675f577}{to\+String\+For\+Writing} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a006d582337e486d4902130b105dfb383}{write} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aeebcaadb72c9549547a1ea9647737655}{write} (String output\+File)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9a81d4b8282f93061474ddb77331f866}{filter\+By\+Score} (double set1\+Filter\+Score)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a97e6416b0c2076ee68447ea25f9515b2}{add\+Filter} (Predicate$<$ T $>$ filter)
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a495849fd664a76949b664470482b6ba3}{add\+Filters} (Collection$<$ Predicate$<$ T $>$$>$ filters)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Map$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, Integer $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a8a0b54365f9d635929ad29cc80f42cdf}{get\+Last\+Exons} (List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ annotations)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac9109f4ca8125b8cbc526429897b8394}{parse} (String file, Annotation\+Factory$<$?extends T $>$ factory, Genomic\+Annotation\+Filter$<$ T $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aca4e6cac48ba92a379000a7c7a086ee3}{parse} (Buffered\+Reader br, Annotation\+Factory$<$?extends T $>$ factory, Genomic\+Annotation\+Filter$<$ T $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a89882e4ac854e619ff96b7af55eef8f3}{add\+Annotation\+Set} (Annotation\+Set$<$ T $>$ track)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!Annotation\+Reader@{Annotation\+Reader}}
+\index{Annotation\+Reader@{Annotation\+Reader}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.Annotation\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc7b77cf9681958941014c7b460dbb9f}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2550e162745ea91301b3c2a62603ba31}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!Annotation\+Reader@{Annotation\+Reader}}
+\index{Annotation\+Reader@{Annotation\+Reader}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.Annotation\+Reader (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ T $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2550e162745ea91301b3c2a62603ba31}
+Jesse Engreitz September 26, 2012 Allow for creating a reader from a collection of annotations 
+\begin{DoxyParams}{Parameters}
+{\em annotations} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2e58068f93f16900ce7b38feb840dcd8}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!add\+Annotation@{add\+Annotation}}
+\index{add\+Annotation@{add\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{add\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.add\+Annotation (
+\begin{DoxyParamCaption}
+\item[{T}]{annotation, }
+\item[{int}]{track}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2e58068f93f16900ce7b38feb840dcd8}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0262e1929a493adf30b78b7db8f61035}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!add\+Annotation@{add\+Annotation}}
+\index{add\+Annotation@{add\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{add\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.add\+Annotation (
+\begin{DoxyParamCaption}
+\item[{T}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0262e1929a493adf30b78b7db8f61035}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a89882e4ac854e619ff96b7af55eef8f3}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!add\+Annotation\+Set@{add\+Annotation\+Set}}
+\index{add\+Annotation\+Set@{add\+Annotation\+Set}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{add\+Annotation\+Set}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.add\+Annotation\+Set (
+\begin{DoxyParamCaption}
+\item[{Annotation\+Set$<$ T $>$}]{track}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a89882e4ac854e619ff96b7af55eef8f3}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a4ce9be2e3fd0505b9276c96f18505638}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!add\+Annotation\+To\+Last\+Track@{add\+Annotation\+To\+Last\+Track}}
+\index{add\+Annotation\+To\+Last\+Track@{add\+Annotation\+To\+Last\+Track}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{add\+Annotation\+To\+Last\+Track}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.add\+Annotation\+To\+Last\+Track (
+\begin{DoxyParamCaption}
+\item[{T}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a4ce9be2e3fd0505b9276c96f18505638}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_abe2f553364ca9fb66ab5f8b71c027c6c}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!add\+Browser\+Line@{add\+Browser\+Line}}
+\index{add\+Browser\+Line@{add\+Browser\+Line}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{add\+Browser\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.add\+Browser\+Line (
+\begin{DoxyParamCaption}
+\item[{String}]{line}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_abe2f553364ca9fb66ab5f8b71c027c6c}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a97e6416b0c2076ee68447ea25f9515b2}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!add\+Filter@{add\+Filter}}
+\index{add\+Filter@{add\+Filter}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{add\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.add\+Filter (
+\begin{DoxyParamCaption}
+\item[{Predicate$<$ T $>$}]{filter}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a97e6416b0c2076ee68447ea25f9515b2}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a495849fd664a76949b664470482b6ba3}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!add\+Filters@{add\+Filters}}
+\index{add\+Filters@{add\+Filters}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{add\+Filters}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.add\+Filters (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Predicate$<$ T $>$$>$}]{filters}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a495849fd664a76949b664470482b6ba3}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab5bc07ea8ca501a2279d52841e8c8d64}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!clear@{clear}}
+\index{clear@{clear}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab5bc07ea8ca501a2279d52841e8c8d64}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aafba9e3874d96126b9001f8ff9d815a2}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!clone\+Regions@{clone\+Regions}}
+\index{clone\+Regions@{clone\+Regions}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{clone\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Short\+B\+E\+D\+Reader} broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.clone\+Regions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aafba9e3874d96126b9001f8ff9d815a2}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adbf3eb7df259742adac2209dfd5699a1}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!concat\+Annotation\+Set@{concat\+Annotation\+Set}}
+\index{concat\+Annotation\+Set@{concat\+Annotation\+Set}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{concat\+Annotation\+Set}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.concat\+Annotation\+Set (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+Number, }
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{list}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adbf3eb7df259742adac2209dfd5699a1}
+Moran, Feb22 2010 concat an annotation set to an exciting one (without merging) W\+A\+R\+N\+I\+N\+G\+: assumes that same types are concatenated-\/ uses casting to current objets annotation type \hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afc5bc223c3e7bac8c5d2e8267f8c4725}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!contains\+Annotation@{contains\+Annotation}}
+\index{contains\+Annotation@{contains\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{contains\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.contains\+Annotation (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+Number, }
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afc5bc223c3e7bac8c5d2e8267f8c4725}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a53db7b580a4783e5d6b3302ac59e7fb1}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!contains\+Annotation@{contains\+Annotation}}
+\index{contains\+Annotation@{contains\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{contains\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.contains\+Annotation (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a53db7b580a4783e5d6b3302ac59e7fb1}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_af52bebd3414e0f94c87ebd3c8d6fa158}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!create\+Annotation@{create\+Annotation}}
+\index{create\+Annotation@{create\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{create\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}abstract T broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.create\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Genomic\+Annotation}}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [abstract]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_af52bebd3414e0f94c87ebd3c8d6fa158}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a18d1a6a3a4f71fc0b6a199a27d4e0719}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!filter\+By\+Overlap@{filter\+By\+Overlap}}
+\index{filter\+By\+Overlap@{filter\+By\+Overlap}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{filter\+By\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.filter\+By\+Overlap (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a18d1a6a3a4f71fc0b6a199a27d4e0719}
+Filters this reader by removing all elements that do not overlap the given list of annotations 
+\begin{DoxyParams}{Parameters}
+{\em annotations} & a list of Annotations to filter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a76a7dda18840146b8295077897fc7eb7}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!filter\+By\+Overlap@{filter\+By\+Overlap}}
+\index{filter\+By\+Overlap@{filter\+By\+Overlap}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{filter\+By\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.filter\+By\+Overlap (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{annotations, }
+\item[{int}]{extension\+Factor}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a76a7dda18840146b8295077897fc7eb7}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afb53a50da4cd365f50d609d82a6ee2e1}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!filter\+By\+Overlap\+And\+Orientation@{filter\+By\+Overlap\+And\+Orientation}}
+\index{filter\+By\+Overlap\+And\+Orientation@{filter\+By\+Overlap\+And\+Orientation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{filter\+By\+Overlap\+And\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.filter\+By\+Overlap\+And\+Orientation (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afb53a50da4cd365f50d609d82a6ee2e1}
+A\+D\+D\+E\+D B\+Y M\+O\+R\+A\+N Feb 8th 2010 Filters this reader by removing all elements that do not overlap A\+N\+D H\+A\+V\+E T\+H\+E S\+A\+M\+E O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N as the given list of annotations 
+\begin{DoxyParams}{Parameters}
+{\em annotations} & a list of Annotations to filter \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a14a0871b93a66e22843af25ef49662d5}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!filter\+By\+Overlap\+Of\+Last\+Exon@{filter\+By\+Overlap\+Of\+Last\+Exon}}
+\index{filter\+By\+Overlap\+Of\+Last\+Exon@{filter\+By\+Overlap\+Of\+Last\+Exon}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{filter\+By\+Overlap\+Of\+Last\+Exon}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.filter\+By\+Overlap\+Of\+Last\+Exon (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{annotations, }
+\item[{int}]{extension\+Factor}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a14a0871b93a66e22843af25ef49662d5}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a42737999d939d66d1f0087e493eeee94}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!filter\+By\+Overlap\+Of\+Last\+Exon\+Or\+After\+Last\+Exon@{filter\+By\+Overlap\+Of\+Last\+Exon\+Or\+After\+Last\+Exon}}
+\index{filter\+By\+Overlap\+Of\+Last\+Exon\+Or\+After\+Last\+Exon@{filter\+By\+Overlap\+Of\+Last\+Exon\+Or\+After\+Last\+Exon}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{filter\+By\+Overlap\+Of\+Last\+Exon\+Or\+After\+Last\+Exon}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.filter\+By\+Overlap\+Of\+Last\+Exon\+Or\+After\+Last\+Exon (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{annotations, }
+\item[{int}]{extension\+Factor}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a42737999d939d66d1f0087e493eeee94}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9a81d4b8282f93061474ddb77331f866}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!filter\+By\+Score@{filter\+By\+Score}}
+\index{filter\+By\+Score@{filter\+By\+Score}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{filter\+By\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.filter\+By\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{set1\+Filter\+Score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9a81d4b8282f93061474ddb77331f866}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa286fc7d76fbc1e343ba918e3c41a3a6}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!find\+Closest@{find\+Closest}}
+\index{find\+Closest@{find\+Closest}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{find\+Closest}]{\setlength{\rightskip}{0pt plus 5cm}T broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.find\+Closest (
+\begin{DoxyParamCaption}
+\item[{final {\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa286fc7d76fbc1e343ba918e3c41a3a6}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_acacd79e1b962e50cff83d99201ded731}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!find\+Closest@{find\+Closest}}
+\index{find\+Closest@{find\+Closest}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{find\+Closest}]{\setlength{\rightskip}{0pt plus 5cm}T broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.find\+Closest (
+\begin{DoxyParamCaption}
+\item[{final {\bf Lightweight\+Genomic\+Annotation}}]{annotation, }
+\item[{boolean}]{non\+Overlapping}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_acacd79e1b962e50cff83d99201ded731}
+Added \char`\"{}non\+Overlapping\char`\"{} option June 13, 2012 
+\begin{DoxyParams}{Parameters}
+{\em non\+Overlapping} & Set to true to get the closest non-\/overlapping annotation \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ae7832c0a60f97575145b396dce267ec8}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!find\+Closest\+For\+All@{find\+Closest\+For\+All}}
+\index{find\+Closest\+For\+All@{find\+Closest\+For\+All}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{find\+Closest\+For\+All}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$T,{\bf Lightweight\+Genomic\+Annotation}$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.find\+Closest\+For\+All (
+\begin{DoxyParamCaption}
+\item[{final {\bf Annotation\+Reader}$<$?extends {\bf Genomic\+Annotation} $>$}]{other\+Reader, }
+\item[{boolean}]{non\+Overlapping}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ae7832c0a60f97575145b396dce267ec8}
+Jesse Engreitz June 24, 2012 Return a map of elements in this reader to the closest elements in another reader 
+\begin{DoxyParams}{Parameters}
+{\em other\+Reader} & second set of annotations \\
+\hline
+{\em non\+Overlapping} & set to true to get the closest non-\/overlapping elements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6eddd5a71c31c57621f3d0bb483035d9}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!find\+Closest\+For\+All@{find\+Closest\+For\+All}}
+\index{find\+Closest\+For\+All@{find\+Closest\+For\+All}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{find\+Closest\+For\+All}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$T,{\bf Lightweight\+Genomic\+Annotation}$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.find\+Closest\+For\+All (
+\begin{DoxyParamCaption}
+\item[{final {\bf Annotation\+Reader}$<$?extends {\bf Genomic\+Annotation} $>$}]{other\+Reader}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6eddd5a71c31c57621f3d0bb483035d9}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad3d7b5c1ad25dcb44a1112a9c09e897a}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!find\+Closest\+Non\+Overlapping@{find\+Closest\+Non\+Overlapping}}
+\index{find\+Closest\+Non\+Overlapping@{find\+Closest\+Non\+Overlapping}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{find\+Closest\+Non\+Overlapping}]{\setlength{\rightskip}{0pt plus 5cm}T broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.find\+Closest\+Non\+Overlapping (
+\begin{DoxyParamCaption}
+\item[{final {\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad3d7b5c1ad25dcb44a1112a9c09e897a}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a006879bffd7a49fb217cf1800a71ee5d}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!find\+Closest\+Nonoverlapping\+For\+All@{find\+Closest\+Nonoverlapping\+For\+All}}
+\index{find\+Closest\+Nonoverlapping\+For\+All@{find\+Closest\+Nonoverlapping\+For\+All}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{find\+Closest\+Nonoverlapping\+For\+All}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$T,{\bf Lightweight\+Genomic\+Annotation}$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.find\+Closest\+Nonoverlapping\+For\+All (
+\begin{DoxyParamCaption}
+\item[{final {\bf Annotation\+Reader}$<$?extends {\bf Genomic\+Annotation} $>$}]{other\+Reader}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a006879bffd7a49fb217cf1800a71ee5d}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a68641405ddb243b4315928dd9defc511}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Annotation@{get\+Annotation}}
+\index{get\+Annotation@{get\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}T broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Annotation (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+Number, }
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a68641405ddb243b4315928dd9defc511}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa3f385bf901303a94b1b51e6debad1eb}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Annotation@{get\+Annotation}}
+\index{get\+Annotation@{get\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}T broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Annotation (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa3f385bf901303a94b1b51e6debad1eb}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ade7e4808675687f787ac8af08c2adb53}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Annotation\+List@{get\+Annotation\+List}}
+\index{get\+Annotation\+List@{get\+Annotation\+List}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Annotation\+List}]{\setlength{\rightskip}{0pt plus 5cm}List$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Annotation\+List (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+Number}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ade7e4808675687f787ac8af08c2adb53}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0da097cf3604e5b7fee57c820fd91b72}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Annotation\+List@{get\+Annotation\+List}}
+\index{get\+Annotation\+List@{get\+Annotation\+List}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Annotation\+List}]{\setlength{\rightskip}{0pt plus 5cm}List$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Annotation\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0da097cf3604e5b7fee57c820fd91b72}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad15cb7da92cfed836d3e012b5301efb7}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Annotations\+For\+Sequence@{get\+Annotations\+For\+Sequence}}
+\index{get\+Annotations\+For\+Sequence@{get\+Annotations\+For\+Sequence}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Annotations\+For\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}List$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Annotations\+For\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{sequence\+Name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad15cb7da92cfed836d3e012b5301efb7}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6f34387deb274c9ba2a02f825bf58c0d}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Annotations\+For\+Sequence@{get\+Annotations\+For\+Sequence}}
+\index{get\+Annotations\+For\+Sequence@{get\+Annotations\+For\+Sequence}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Annotations\+For\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}List$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Annotations\+For\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{sequence\+Name, }
+\item[{int}]{set\+Number}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6f34387deb274c9ba2a02f825bf58c0d}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab47a5d591255960b69742d1ea010a04d}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Average\+Score@{get\+Average\+Score}}
+\index{get\+Average\+Score@{get\+Average\+Score}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Average\+Score}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Average\+Score (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab47a5d591255960b69742d1ea010a04d}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a3f3fec809e8eaacb1a90cc0895197ee4}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Base\+Coverage@{get\+Base\+Coverage}}
+\index{get\+Base\+Coverage@{get\+Base\+Coverage}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Base\+Coverage}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Base\+Coverage (
+\begin{DoxyParamCaption}
+\item[{List$<$ T $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a3f3fec809e8eaacb1a90cc0895197ee4}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa231c504abef8d129d8c1066daaa8124}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Base\+Coverage@{get\+Base\+Coverage}}
+\index{get\+Base\+Coverage@{get\+Base\+Coverage}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Base\+Coverage}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Base\+Coverage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa231c504abef8d129d8c1066daaa8124}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a66f9bfe25e08fc0309ac119b99c6464d}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Bases\+Covered@{get\+Bases\+Covered}}
+\index{get\+Bases\+Covered@{get\+Bases\+Covered}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Bases\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Bases\+Covered (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a66f9bfe25e08fc0309ac119b99c6464d}
+Adds a 0 fudge fact 
+\begin{DoxyParams}{Parameters}
+{\em region} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab566f68d145ef8a6abf885fecd89bb2f}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Bases\+Covered@{get\+Bases\+Covered}}
+\index{get\+Bases\+Covered@{get\+Bases\+Covered}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Bases\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Bases\+Covered (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab566f68d145ef8a6abf885fecd89bb2f}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6233292730ab40e9961587b9041e6ab6}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Bases\+Covered@{get\+Bases\+Covered}}
+\index{get\+Bases\+Covered@{get\+Bases\+Covered}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Bases\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Bases\+Covered (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{int}]{fudge\+Factor}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6233292730ab40e9961587b9041e6ab6}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_af30b2f11ec171223b8c63df0d18ff4ed}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Bases\+Covered@{get\+Bases\+Covered}}
+\index{get\+Bases\+Covered@{get\+Bases\+Covered}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Bases\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Bases\+Covered (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{int}]{fudge\+Factor, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_af30b2f11ec171223b8c63df0d18ff4ed}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a643eb0fb496db61f15a334d67e3f8bc8}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+Annotation\+Map@{get\+Chromosome\+Annotation\+Map}}
+\index{get\+Chromosome\+Annotation\+Map@{get\+Chromosome\+Annotation\+Map}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+Annotation\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, List$<$T$>$ $>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+Annotation\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a643eb0fb496db61f15a334d67e3f8bc8}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7e144ef5d1e8ab9f2940cda45f5d3a09}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+Annotation\+Map@{get\+Chromosome\+Annotation\+Map}}
+\index{get\+Chromosome\+Annotation\+Map@{get\+Chromosome\+Annotation\+Map}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+Annotation\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, List$<$T$>$ $>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+Annotation\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7e144ef5d1e8ab9f2940cda45f5d3a09}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0c4976c92588ad35e262e90ebca4382f}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+B\+E\+Ds@{get\+Chromosome\+B\+E\+Ds}}
+\index{get\+Chromosome\+B\+E\+Ds@{get\+Chromosome\+B\+E\+Ds}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+B\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}List$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+B\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0c4976c92588ad35e262e90ebca4382f}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a51088ddeb9131738bac7da8968ffbfab}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+B\+E\+Ds@{get\+Chromosome\+B\+E\+Ds}}
+\index{get\+Chromosome\+B\+E\+Ds@{get\+Chromosome\+B\+E\+Ds}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+B\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}List$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+B\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a51088ddeb9131738bac7da8968ffbfab}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a939e2df3892ffc1a1a2c0684e3a21875}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+Iterator@{get\+Chromosome\+Iterator}}
+\index{get\+Chromosome\+Iterator@{get\+Chromosome\+Iterator}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$String$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a939e2df3892ffc1a1a2c0684e3a21875}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afee522dcd0f10dd65290b9dea988ecca}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+Tree@{get\+Chromosome\+Tree}}
+\index{get\+Chromosome\+Tree@{get\+Chromosome\+Tree}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+Tree$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+Tree (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afee522dcd0f10dd65290b9dea988ecca}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad23e0f8f065f211adc7fd67201b2a853}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+Tree@{get\+Chromosome\+Tree}}
+\index{get\+Chromosome\+Tree@{get\+Chromosome\+Tree}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+Tree$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+Tree (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad23e0f8f065f211adc7fd67201b2a853}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6af994265d45e558896a30af64bf37f3}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+Tree\+Map@{get\+Chromosome\+Tree\+Map}}
+\index{get\+Chromosome\+Tree\+Map@{get\+Chromosome\+Tree\+Map}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+Tree\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String,Interval\+Tree$<$T$>$ $>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+Tree\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6af994265d45e558896a30af64bf37f3}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a37e29b1dc4659b1e1aac4493effcd5be}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Chromosome\+Tree\+Map@{get\+Chromosome\+Tree\+Map}}
+\index{get\+Chromosome\+Tree\+Map@{get\+Chromosome\+Tree\+Map}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Chromosome\+Tree\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String,Interval\+Tree$<$T$>$ $>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Chromosome\+Tree\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a37e29b1dc4659b1e1aac4493effcd5be}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0c53608fb99256004374dd6b0bdd3185}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Distances\+To\+Closest@{get\+Distances\+To\+Closest}}
+\index{get\+Distances\+To\+Closest@{get\+Distances\+To\+Closest}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Distances\+To\+Closest}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$T, Integer$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Distances\+To\+Closest (
+\begin{DoxyParamCaption}
+\item[{final {\bf Annotation\+Reader}$<$?extends {\bf Genomic\+Annotation} $>$}]{other\+Reader}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a0c53608fb99256004374dd6b0bdd3185}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa3a5e5fc97cb560c6a4ff633f204147c}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Distance\+To\+Closest@{get\+Distance\+To\+Closest}}
+\index{get\+Distance\+To\+Closest@{get\+Distance\+To\+Closest}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Distance\+To\+Closest}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Distance\+To\+Closest (
+\begin{DoxyParamCaption}
+\item[{final {\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa3a5e5fc97cb560c6a4ff633f204147c}
+Jesse -\/ June 13, 2012 
+\begin{DoxyParams}{Parameters}
+{\em annotation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a8a0b54365f9d635929ad29cc80f42cdf}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Last\+Exons@{get\+Last\+Exons}}
+\index{get\+Last\+Exons@{get\+Last\+Exons}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Last\+Exons}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<${\bf Annotation}, Integer$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Last\+Exons (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a8a0b54365f9d635929ad29cc80f42cdf}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9105fc31a2ce3c17aae9804da9254702}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Annotation}$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9105fc31a2ce3c17aae9804da9254702}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a364394692cd3cce7eb4bc247685b9572}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Annotation}$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{annotation\+List}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a364394692cd3cce7eb4bc247685b9572}
+Gets a list of overlapping annotations \hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9b33a9974717b7dee7687e26279412f8}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Annotation}$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{annotation\+List, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9b33a9974717b7dee7687e26279412f8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a4a693b8faabb2c957bff9c139c604d93}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Annotation}$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation\+Reader}$<$?extends {\bf Genomic\+Annotation} $>$}]{other}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a4a693b8faabb2c957bff9c139c604d93}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc2c7a42f53ce03a910cbe0366a7233e}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}List$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{annotation}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_adc2c7a42f53ce03a910cbe0366a7233e}
+Gets a list of overlapping annotations
+
+public Collection$<$\+T$>$ get\+Overlappers(\+Annotation\+Reader$<$\+T$>$ other) \{ Set$<$\+T$>$ overlappers = new Tree\+Set$<$\+T$>$(); Iterator$<$\+String$>$ chr\+It = other.\+get\+Chromosome\+Iterator(); while(chr\+It.\+has\+Next()) \{ String chr = chr\+It.\+next(); Iterator$<$\+T$>$ annotation\+It = other.\+get\+Chromosome\+Tree(chr).value\+Iterator(); Interval\+Tree$<$\+T$>$ tree = get\+Chromosome\+Tree(chr); if(tree == null) \{ continue; \} while(annotation\+It.\+has\+Next()) \{ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annot = annotation\+It.\+next(); Iterator$<$\+T$>$ overlapper\+It = new Interval\+Tree.\+Values\+Iterator$<$\+T$>$(tree.\+overlappers(annot.\+get\+Start(), annot.\+get\+End())); while(overlapper\+It.\+has\+Next()) \{ T overlapper = overlapper\+It.\+next(); overlappers.\+add(overlapper); \} \} \} return overlappers; \} 
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a268ade3e42daed82b3f2db46ee3fd896}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Score\+Sum@{get\+Score\+Sum}}
+\index{get\+Score\+Sum@{get\+Score\+Sum}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Score\+Sum}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Score\+Sum (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a268ade3e42daed82b3f2db46ee3fd896}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a97f1a2884828d396023843755147022f}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Sequence\+Annotation\+Map@{get\+Sequence\+Annotation\+Map}}
+\index{get\+Sequence\+Annotation\+Map@{get\+Sequence\+Annotation\+Map}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Sequence\+Annotation\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, List$<$T$>$ $>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Sequence\+Annotation\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a97f1a2884828d396023843755147022f}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ae106c83d07b6598b7dd359fcc026e8fd}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Sequence\+Annotation\+Map@{get\+Sequence\+Annotation\+Map}}
+\index{get\+Sequence\+Annotation\+Map@{get\+Sequence\+Annotation\+Map}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Sequence\+Annotation\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, List$<$T$>$ $>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Sequence\+Annotation\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+Number}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ae106c83d07b6598b7dd359fcc026e8fd}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad3fef635ef16bb2001844d16ae4155f8}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!get\+Track\+Info@{get\+Track\+Info}}
+\index{get\+Track\+Info@{get\+Track\+Info}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{get\+Track\+Info}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.get\+Track\+Info (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad3fef635ef16bb2001844d16ae4155f8}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aae2b5bec9ccbb0c1dca631c44fc03d7a}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!Increment\+Score\+If\+Overlap@{Increment\+Score\+If\+Overlap}}
+\index{Increment\+Score\+If\+Overlap@{Increment\+Score\+If\+Overlap}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{Increment\+Score\+If\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.Increment\+Score\+If\+Overlap (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation\+Reader}$<$?extends {\bf Genomic\+Annotation} $>$}]{annot\+Reader, }
+\item[{int}]{set\+Number, }
+\item[{Boolean}]{set\+To\+Zero}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aae2b5bec9ccbb0c1dca631c44fc03d7a}
+Moran F\+E\+B23 2010 Increments by one the score of the annotations in the current object if they overlap the input set. Set to zero flag will first initialize all scores to zero \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a427f36c6a67ff8ce3dbd1072478faaeb}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!init@{init}}
+\index{init@{init}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a427f36c6a67ff8ce3dbd1072478faaeb}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad348dc8271285cf288c0ea538199c423}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!intersect@{intersect}}
+\index{intersect@{intersect}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.intersect (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation\+Reader}$<$ T $>$}]{other}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad348dc8271285cf288c0ea538199c423}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab76576c64303826be4887cc1c34e4252}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!intersect@{intersect}}
+\index{intersect@{intersect}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.intersect (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ab76576c64303826be4887cc1c34e4252}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa50ace24af6a3ccf8cc7ff486e1adaf9}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!load@{load}}
+\index{load@{load}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.load (
+\begin{DoxyParamCaption}
+\item[{File}]{source, }
+\item[{Annotation\+Factory$<$?extends T $>$}]{factory}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa50ace24af6a3ccf8cc7ff486e1adaf9}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7f6f003687f218c6e64ed8199688b598}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!load@{load}}
+\index{load@{load}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.load (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{Annotation\+Factory$<$?extends T $>$}]{factory}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7f6f003687f218c6e64ed8199688b598}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a82d494fcfdaa6231ef2deb07c0481873}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!load@{load}}
+\index{load@{load}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.load (
+\begin{DoxyParamCaption}
+\item[{File}]{source, }
+\item[{Annotation\+Factory$<$?extends T $>$}]{factory, }
+\item[{Genomic\+Annotation\+Filter$<$ T $>$}]{filter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a82d494fcfdaa6231ef2deb07c0481873}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a3ea177347b113f59c343d4c91ea35fd7}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!load@{load}}
+\index{load@{load}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.load (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{Annotation\+Factory$<$?extends T $>$}]{factory, }
+\item[{Genomic\+Annotation\+Filter$<$ T $>$}]{filter}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a3ea177347b113f59c343d4c91ea35fd7}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a166f1db833577d0454a67ece8db9916e}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!merge@{merge}}
+\index{merge@{merge}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{merge}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.merge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a166f1db833577d0454a67ece8db9916e}
+Merge list of annotations by combining overlapping annotations into one. 
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9d5b0a33ce9becb24ca2e384753b5769}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!merge@{merge}}
+\index{merge@{merge}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{merge}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.merge (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+Number}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a9d5b0a33ce9becb24ca2e384753b5769}
+Merge list of annotations by combining overlapping annotations into one. \hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2b33aa194c4242e1434063c7e5168236}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!minus@{minus}}
+\index{minus@{minus}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{minus}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.minus (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a2b33aa194c4242e1434063c7e5168236}
+Removes from this reader all elements that overlap the given list. 
+\begin{DoxyParams}{Parameters}
+{\em annotations} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a740b107b5b81c15a5f86eada1fb2ba4a}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!number\+Covered@{number\+Covered}}
+\index{number\+Covered@{number\+Covered}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{number\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.number\+Covered (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a740b107b5b81c15a5f86eada1fb2ba4a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac2fcf2953f940bdd0e25b69917571607}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!num\+Of\+Annotation@{num\+Of\+Annotation}}
+\index{num\+Of\+Annotation@{num\+Of\+Annotation}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{num\+Of\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.num\+Of\+Annotation (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+Num}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac2fcf2953f940bdd0e25b69917571607}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a521994585ff85b17fa34c68495a8e902}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}abstract int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.parse (
+\begin{DoxyParamCaption}
+\item[{String}]{file, }
+\item[{Genomic\+Annotation\+Filter$<$ T $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception\hspace{0.3cm}{\ttfamily [abstract]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a521994585ff85b17fa34c68495a8e902}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac9109f4ca8125b8cbc526429897b8394}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.parse (
+\begin{DoxyParamCaption}
+\item[{String}]{file, }
+\item[{Annotation\+Factory$<$?extends T $>$}]{factory, }
+\item[{Genomic\+Annotation\+Filter$<$ T $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac9109f4ca8125b8cbc526429897b8394}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a50981d0875a2b950aa529e789635ea59}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}abstract int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.parse (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{Genomic\+Annotation\+Filter$<$ T $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception\hspace{0.3cm}{\ttfamily [abstract]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a50981d0875a2b950aa529e789635ea59}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aca4e6cac48ba92a379000a7c7a086ee3}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.parse (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{Annotation\+Factory$<$?extends T $>$}]{factory, }
+\item[{Genomic\+Annotation\+Filter$<$ T $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aca4e6cac48ba92a379000a7c7a086ee3}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aae79cc395d5eb19c82602737af680260}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!permute\+Annotations\+On\+Chromosome@{permute\+Annotations\+On\+Chromosome}}
+\index{permute\+Annotations\+On\+Chromosome@{permute\+Annotations\+On\+Chromosome}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{permute\+Annotations\+On\+Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.permute\+Annotations\+On\+Chromosome (
+\begin{DoxyParamCaption}
+\item[{final Map$<$ String, Integer $>$}]{sizes}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aae79cc395d5eb19c82602737af680260}
+Jesse Engreitz June 24, 2012 Takes the annotations in the reader and permutes them on their respective chromosomes. Note that this alters the positions of annotations in the reader, although not their sizes; 
+\begin{DoxyParams}{Parameters}
+{\em sizes} & map of chromosome sizes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a905175697ebd6e928f52403bf4a88832}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!shift@{shift}}
+\index{shift@{shift}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{shift}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.shift (
+\begin{DoxyParamCaption}
+\item[{int}]{amount\+To\+Shift}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a905175697ebd6e928f52403bf4a88832}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad5eff9559e77539463640515315cd0d0}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!shuffle\+Scores@{shuffle\+Scores}}
+\index{shuffle\+Scores@{shuffle\+Scores}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{shuffle\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.shuffle\+Scores (
+\begin{DoxyParamCaption}
+\item[{String}]{chr, }
+\item[{int}]{set\+Num}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ad5eff9559e77539463640515315cd0d0}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac3f633f85ce2f7edb7df80409f985ff5}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!shuffle\+Scores@{shuffle\+Scores}}
+\index{shuffle\+Scores@{shuffle\+Scores}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{shuffle\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.shuffle\+Scores (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_ac3f633f85ce2f7edb7df80409f985ff5}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_addf403e222089681708bbb882411e8ce}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!size@{size}}
+\index{size@{size}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_addf403e222089681708bbb882411e8ce}
+Jesse June 23, 2012 \begin{DoxyReturn}{Returns}
+total number of annotations 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa00450ca475b57a755c24fcb06d7c7cf}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!start\+Track@{start\+Track}}
+\index{start\+Track@{start\+Track}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{start\+Track}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.start\+Track (
+\begin{DoxyParamCaption}
+\item[{String}]{line}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aa00450ca475b57a755c24fcb06d7c7cf}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7e5e29800f6c76b42b51b626d4e919fe}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!start\+Track@{start\+Track}}
+\index{start\+Track@{start\+Track}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{start\+Track}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.start\+Track (
+\begin{DoxyParamCaption}
+\item[{String}]{line, }
+\item[{int}]{track\+Num}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a7e5e29800f6c76b42b51b626d4e919fe}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6806c878b0c400f5139bc7d18bdffd4b}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!take\+Complement@{take\+Complement}}
+\index{take\+Complement@{take\+Complement}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{take\+Complement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Basic\+Annotation\+Reader} broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.take\+Complement (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a6806c878b0c400f5139bc7d18bdffd4b}
+Takes the complement in the given list in this Reader. That is, if an annotation in the list reader does not overlap any in the this reader, the annotation is kept intact. If it is contained in any annotation in the reader then it is removed. If it incompletely overlapped, then the annotation resulting from taking out overlapping regions replaces the overlapped one. \hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afdfc5f90b52549854e415baa7633d6f5}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!take\+Intersection@{take\+Intersection}}
+\index{take\+Intersection@{take\+Intersection}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{take\+Intersection}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$T$>$ broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.take\+Intersection (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Genomic\+Annotation} $>$}]{annotations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_afdfc5f90b52549854e415baa7633d6f5}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_abf700452cc2b2b8438d9bcfab675f577}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!to\+String\+For\+Writing@{to\+String\+For\+Writing}}
+\index{to\+String\+For\+Writing@{to\+String\+For\+Writing}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{to\+String\+For\+Writing}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.to\+String\+For\+Writing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_abf700452cc2b2b8438d9bcfab675f577}
+Jesse June 23, 2012 \begin{DoxyReturn}{Returns}
+string representation of all annotations, one per line 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a006d582337e486d4902130b105dfb383}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!write@{write}}
+\index{write@{write}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.write (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_a006d582337e486d4902130b105dfb383}
+\begin{DoxyAuthor}{Author}
+mgarber 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Buffered\+Writer} & -\/ buffer to write annotations to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+writes all annotations to the provided Buffered\+Writer 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aeebcaadb72c9549547a1ea9647737655}{\index{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}!write@{write}}
+\index{write@{write}!broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$@{broad\+::core\+::annotation\+::\+Annotation\+Reader$<$ T extends Genomic\+Annotation $>$}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Annotation\+Reader$<$ T extends {\bf Genomic\+Annotation} $>$.write (
+\begin{DoxyParamCaption}
+\item[{String}]{output\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_annotation_reader_3_01_t_01extends_01_genomic_annotation_01_4_aeebcaadb72c9549547a1ea9647737655}
+\begin{DoxyAuthor}{Author}
+mgarber 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Buffered\+Writer} & -\/ buffer to write annotations to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+writes all annotations to the provided Buffered\+Writer 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/annotation/\hyperlink{_annotation_reader_8java}{Annotation\+Reader.\+java}\end{DoxyCompactItemize}

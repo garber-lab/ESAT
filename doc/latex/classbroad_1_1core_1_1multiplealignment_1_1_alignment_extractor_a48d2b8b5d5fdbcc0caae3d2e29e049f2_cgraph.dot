@@ -1,0 +1,19 @@
+digraph "broad.core.multiplealignment.AlignmentExtractor.main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lAlignmentExtractor.main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.multiplealignment.\lAlignmentExtractor.extractGFFRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_alignment_extractor.html#a953ec88a63df9ac98e99814792206a06"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.Lightweight\lGenomicAnnotation.getEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation.html#a68b4fd4cda3321ffd91dd427df9b24a7"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.annotation.GFF.get\lFirstValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_g_f_f.html#a4bbeab1dc47ec4c302cfc3aca1fe9c53"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.annotation.Annotation.size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#ab59b20bf3914e24babf0df6907bfb557"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.multiplealignment.\lMultipleAlignment.isEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a4c4058ed47c1cf0ccf504de279f16f41"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.multiplealignment.\lMultipleAlignment.length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment.html#a513a01a3a33806fa00494ce890cacf61"];
+}

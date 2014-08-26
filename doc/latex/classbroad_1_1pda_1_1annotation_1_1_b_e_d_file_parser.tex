@@ -1,0 +1,1464 @@
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{\section{broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser Class Reference}
+\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}\index{broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser@{broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser\+:
+
+
+Collaboration diagram for broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acd6fe6d8855d55b314b356117b555033}{B\+E\+D\+File\+Parser} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1a45563ea8b65e419a2bf9fec8f64c1}{B\+E\+D\+File\+Parser} (String file\+Name)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e8cb4ede00f6bea87a551157bba0755}{B\+E\+D\+File\+Parser} (String file\+Name, int Three\+Prime\+Trim\+Size)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0ecdc6712b66d143c7537b8aa332d33a}{B\+E\+D\+File\+Parser} (String file\+Name, String chr)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af3885ec96293e139d045bc700fd60139}{B\+E\+D\+File\+Parser} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes)
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a90ca4e6244f5b866ba49e671d78eeafd}{B\+E\+D\+File\+Parser} (Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$$>$ transcripts)
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a36e88558b56d49a7742ff7bcc8841485}{get} (String gene\+Name)
+\item 
+List$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a80cb8b476bfeebcffc34c37bdd809d1b}{Get\+Genes} ()
+\item 
+List$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a92159642dd29f98fafb73d8a023d7a48}{Get\+Genes\+With\+Isoforms} ()
+\item 
+Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad9062000e1e13b19313a3959db8605bb}{get\+Chr\+Tree} (String chr)
+\item 
+Map$<$ String, Interval\+Tree\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a685ac4182dd2f2730f904b74fbb24cd9}{get\+Interval\+Tree\+With\+Isoforoms} ()
+\item 
+Iterator$<$ String $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d664c67f8afe6a6dafc6ddeca84c7f9}{get\+Chromosome\+Iterator} ()
+\item 
+Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5ee44c0a7cd95e4d0c36e58f82efb8d2}{get\+Overlappers} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene)
+\item 
+Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a35e8567ada47804129a2a32b113821d0}{get\+Overlappers} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} region)
+\item 
+Iterator$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a353c3e74a98e5161351e8d08b1abd553}{get\+Genomic\+Region\+Overlappers} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} region)
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1e1428140172568cf8a2b3fcafd7a5f}{get\+Merged\+Copy} ()
+\item 
+Map$<$ String, Interval\+Tree\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ab4cead55423bc92714e6761c144bc2a8}{get\+Merged\+Annotation\+Map} (double min\+Pct\+Overlap\+To\+Merge)
+\item 
+Map$<$ String, Interval\+Tree\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acee04f1f087d3e473c830d92b5e23fd0}{get\+Merged\+Annotation\+Map} (boolean mergall)
+\item 
+Map$<$ String, Interval\+Tree\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a1fa902beff864404c2aa999389078f1c}{get\+Annotation\+Set\+Map} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a016957d14960c3e93a84c669c9096276}{get\+Number\+Of\+Isoforms} (String chr)
+\item 
+int \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9e46c58133e627fe0f9d731b4fc84778}{get\+Number\+Of\+Isoforms} ()
+\item 
+\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4e515ca60fbce30a804ec9d1212e33da}{get\+Exact\+Isoform} (\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} loci)
+\item 
+Hash\+Map$<$ String, \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a728380042bb55b55bb02108870d15fa7}{get\+Name\+Gene\+Map} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d_reader}{B\+E\+D\+Reader} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a592f7b9ad8d50ffd4487ecc496469bb4}{get3\+P\+Region} (int to\+In, int to\+Out)
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d_reader}{B\+E\+D\+Reader} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2f72490110162bff435fc33c1d011b9d}{get\+Promoters} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d_reader}{B\+E\+D\+Reader} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae7ce27123546bfe5c63beeea33443ff3}{get\+Promoters} (int to\+In, int to\+Out)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a03373b1b05575c9cf165f33ae4376e6c}{load\+G\+T\+F} (File file, String chr)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af73b5931e938625721506ee2ed86cafb}{add\+Ref\+Seq} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a16d8eaa25b93849c1c53b6c665f5437d}{add\+Ref\+Seq} (\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} gene)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5ec77234ba579c7974dcf39938afb2f4}{add\+Ref\+Seq\+Set} (Collection$<$?extends \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ collection)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad01db32aa1df03d82f3f348a3c0f4793}{write\+Full\+Bed} (String save)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a606a493c3f78bac7f295955e509822b3}{write\+Full\+Bed} (String save, boolean use\+Extra\+Fields)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5312667bf6ceb3c21ac7c38b34eb834d}{write\+Full\+Bed} (Buffered\+Writer bw)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aef3f450e2db898bb6efc32c951f0c6dc}{write\+Full\+Bed} (Buffered\+Writer bw, boolean use\+Extra\+Fields)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a520840342a23a85f92254df35ddd545c}{make\+Genes} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0d1ef53e95c6fc5fd889fdd566d307e8}{make\+Genes} (double min\+Pct\+Overlap\+To\+Merge)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae81836c47db766ac166e4c6a7b4054f9}{is\+Empty} ()
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a7396c229435f01089a3c4280e93beb36}{contains} (String gene\+Name)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a821b1303f6cbbc2ecb4f127728c5babe}{contain\+Chr} (String chr)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a771489368c29e46deb27d897cc86e89c}{clear} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75d88890a89e815e0dd41134c8eb29e1}{merge} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a45ec37aa431467c0b765680ef53aefcc}{collapse\+Single\+Exon\+Transcripts} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae177571878924990e5bdc5cf5726ef92}{Increment\+Score\+If\+Overlap} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} bed, int set\+Number, Boolean set\+To\+Zero)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae695a45485015cf5a144fe2dd8a31e69}{update\+Scr\+To\+Bed\+Score} (double score)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aeb596503ad79c8a519140ee8daef7fe6}{filter\+By\+Overlap} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a158b393d669768a427bff7460583d555}{intersect} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} bed)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0c81e32ae66d387a07f04cdcc75c7203}{bed2gtf} (Buffered\+Writer bw, String src)  throws Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a60c536352a2a1c83f3b9e30451e44819}{bed2\+Cuff\+Gtf} (Buffered\+Writer bw, String src, boolean use\+Extra\+Fileds)  throws Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d95e3b17c8e81cb4cd791f9835b53b0}{bed2gtf\+\_\+bundle\+Overlappers} (Buffered\+Writer bw, String src, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} merged\+Data)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a19759a3cb750f9f42560655a4de4f2b2}{dedup} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a3c26637d96247aa07ca8fcf6bade2636}{minus} (Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes, boolean recursive)
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a56e9eebf08809a7ff512853b513956d2}{remove} (\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} record)
+\item 
+Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a208cfdf8d0bddce280ad7e83115358fb}{to\+Map} ()
+\item 
+Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a559780e568c2243b64a9a4adcb70e239}{to\+Constituent\+Isoform\+Map} ()
+\item 
+Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a20569a7b9e346048fde744edbb9817b7}{to\+Constituent\+Isoform\+Map} (boolean remove\+Genes\+Without\+Constituent\+Isoforms)
+\item 
+Map$<$ String, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4ba9a8a140720d66d223819ef8a11f6e}{to\+Constituent\+Introform\+Map} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0449ae4d64ca760468587a0a03144864}{copy} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad26670b10bbe5428e4b6bf362a4f59e8}{overlap\+\_\+\+Genomic\+Level} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} other, String task, String consider\+Orientaion)
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ac018a721573120e81318a9507c624ede}{overlap\+By\+Genomic\+Region} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} other, String consider\+Orientaion)
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af406253e663a33e6635ef5056d91221e}{merge\+By\+Gtf\+Gene\+Id} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5cb29006290bf5378adc2762fbf8b3c3}{equalize\+Transcript\+Ends} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} other)
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abbb99614e434ca01ec8d4cec6e6d09f8}{difference\+By\+Genomic\+Region} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} other, String consider\+Orientaion)
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a509eea26bf47a59f6d0b34dbe6232f3b}{remove\+Small\+Transcripts} (int min\+Exn\+Num, int min\+Transcript\+Length)
+\item 
+\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75f7e2603b219a99a583421044f9d7f5}{remove\+Singele\+Exon} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a01bdda303f0aa5c707342733e3bb09c2}{get\+Closest\+Upstream} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} annot)
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a17134d7932aab01f1cb7783f60bbded9}{get\+Closest\+Downstream} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} annot)
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aba76d598eb442f6fca3fe1f37dc9b6d0}{get\+Closest\+Upstream} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annot)
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a84ceb76583ae1aed2022368c2fb07f14}{get\+Closest\+Downstream} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation}{Lightweight\+Genomic\+Annotation} annot)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abd060b4376a538313b22991bf1eab8a9}{get\+Gene\+By\+Name} (String gene\+Name, String bed\+File)  throws I\+O\+Exception 
+\item 
+static double \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af57bdc6d25ab75ea4f495972b2915717}{get\+Number\+Of\+Isoforms} (Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms} $>$ overlap\+Tree)
+\item 
+static Set$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad16b2d4ee806d6fd8741f45436a1676c}{load\+Data} (File file)  throws I\+O\+Exception
+\item 
+static Set$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9d2b6bab86001412f965b5cc93be29b2}{load\+Data} (File file, \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} region)  throws I\+O\+Exception
+\item 
+static Map$<$ String, \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a68ef8597a3f2809c759d3b9065b9896c}{load\+Data\+By\+Name} (File file)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Collection\\*
+$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4b0a06217b7b942ca4432dec71d47e7a}{load\+Data\+By\+Chr} (String file)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Collection\\*
+$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a33bb3fba62fc200b7200b8510b2eb5c1}{load\+Data\+By\+Chr} (File file)  throws I\+O\+Exception
+\item 
+static Map$<$ String, \\*
+Interval\+Tree$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae27912e09eef7a2d3988438d9e7075ae}{load\+Data\+By\+Chr\+To\+Tree} (File file)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Integer $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af10836c823e704c497928ab17a821cd7}{load\+Chr\+Sizes} (String file)
+\item 
+static List$<$ String $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d2c217089e510f4ef1e1e6c7e62cffd}{load\+List} (String file)  throws I\+O\+Exception 
+\item 
+static List$<$ String $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acb554507b03d62c0ff496c8c7c70f5da}{load\+List} (String file, boolean skip\+First\+Line)  throws I\+O\+Exception 
+\item 
+static Map$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments}, String $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e3c32b1c47fd04e187ea6404b3da572}{load\+Data\+Line} (File file)  throws I\+O\+Exception
+\item 
+static Set$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a193f67998c823b9ff7349f770a1d3039}{load\+Alignment\+Data} (File file)  throws I\+O\+Exception
+\item 
+static Set$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ab74c197238ed0593faa218f4b8e2f232}{load\+Alignment\+Data} (Buffered\+Reader reader)  throws I\+O\+Exception
+\item 
+static Set$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a11d0ce525a888526bb52dc0e2a62417d}{load\+Alignment\+Data} (File file, boolean ucsc\+Download)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Collection\\*
+$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9ddcdf075a82ab131dd332a0888b9057}{load\+Alignment\+Data\+By\+Chr} (File file)  throws I\+O\+Exception
+\item 
+static Map$<$ String, \\*
+Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75330bb06c49493e924ee6881b613973}{load\+Alignment\+Data\+To\+Tree} (File file)  throws I\+O\+Exception
+\item 
+static Map$<$ String, List\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_add1539c7331ebe6288a0ac5fd6898574}{load\+Alignment\+Data\+By\+Chr\+Array\+List} (File file)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Set\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a24526cfded9ae62cb64f1b40562a360a}{load\+Alignment\+Data\+By\+Chr3\+Prime} (File file, int extension\+Factor)  throws I\+O\+Exception
+\item 
+static Map$<$ String, Set\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a18e2a417e5e04c4cabee937707742f8d}{load\+Alignment\+Data\+By\+Chr5\+Prime} (File file, int extension\+Factor)  throws I\+O\+Exception
+\item 
+static Map$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments}, String $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e477b1c570aa6cafcde69f782cd46f5}{load\+Data\+Line} (Buffered\+Reader reader)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a82d1c3ff1719b420ae996047497598d2}{write\+B\+E\+D} (String save, Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ regions)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a7cc9d1aa1b6645caf677afafc09928bc}{write\+B\+E\+D} (String save, Map$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, double\mbox{[}$\,$\mbox{]}$>$ scores)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aa1ff9b420a931689c4663567baaee8ab}{write\+Sorted\+B\+E\+D} (String save, Map$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, double\mbox{[}$\,$\mbox{]}$>$ scores)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1b3b11069e1114a7bbe7e4224baa843}{write\+Sorted\+B\+E\+D} (String save, Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ alignments)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abeff457ac282ba0590f5620ad1792cbf}{write\+Sorted\+B\+E\+D\+With\+Scores} (String save, Map$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, double\mbox{[}$\,$\mbox{]}$>$ scores)  throws I\+O\+Exception 
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aa66d2512340022f9ab988b36dfe25623}{write\+B\+E\+D\+With\+Scores} (String save, Map$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, double\mbox{[}$\,$\mbox{]}$>$ scores)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_afeb570e01ae5a2989e187e66fc56f324}{write\+B\+E\+D} (String save, Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ alignments, boolean sort)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a3df685adf26688b983a2838c3614b800}{write\+B\+E\+D} (String save, Map$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation}, double\mbox{[}$\,$\mbox{]}$>$ scores, boolean with\+Scores, boolean sort)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a97dc56bf7a65a961736353f4c7d74d9f}{write\+Full\+B\+E\+D} (String save, Collection$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ genes)  throws I\+O\+Exception
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a89d336bdc725ce61fa7d57546b337f52}{write\+Full\+B\+E\+D} (String save, Map$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene},?extends Object $>$ genes)  throws I\+O\+Exception
+\item 
+static Map$<$ String, \\*
+Interval\+Tree$<$ \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} $>$ $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ac9a4b9c9231f57edaad2c6dc33107d0d}{make\+Interval\+Tree\+For3\+Prime} (File gene\+File, int size)  throws I\+O\+Exception 
+\item 
+static boolean \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a80bdec41f0a829196cee03fc498b6eb3}{is\+Overlap\+Compatible} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} first, \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} second, double min\+Pct\+Overlap)
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a378ef26bd5ca3d6e143774ca50a9df9a}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception
+\item 
+static Map$<$ String, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} $>$ \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a67089f9c331c88c265b2497e00570838}{upload\+Set\+Of\+Files} (String bed\+Lst)  throws I\+O\+Exception 
+\item 
+static \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aeb7ff6d87763c08b8fd2ea26ccdec9b4}{expaned\+Utrs} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} bed, Integer utr1, Integer utr2)
+\item 
+static \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abd360124c8927f470f35d09beed22cbe}{read\+Siphy\+Out\+To\+Bed} (String siphy\+File)  throws Number\+Format\+Exception, I\+O\+Exception 
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a37e961395720da4c91b43ae3d09fc467}{get\+Gene} (String gene\+File, String gene\+Name)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2fef87f60d9c9b5744c720de07b548db}{load\+Isoform\+Data\+By\+Chr\+To\+Tree} (File file)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a1d3697e1837ea59dcf9e90e1fbfac887}{load\+Isoform\+Data\+By\+Chr\+To\+Tree} (File file, String chr)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acd6fe6d8855d55b314b356117b555033}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}}
+\index{B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{B\+E\+D\+File\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+B\+E\+D\+File\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acd6fe6d8855d55b314b356117b555033}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1a45563ea8b65e419a2bf9fec8f64c1}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}}
+\index{B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{B\+E\+D\+File\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+B\+E\+D\+File\+Parser (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1a45563ea8b65e419a2bf9fec8f64c1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e8cb4ede00f6bea87a551157bba0755}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}}
+\index{B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{B\+E\+D\+File\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+B\+E\+D\+File\+Parser (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name, }
+\item[{int}]{Three\+Prime\+Trim\+Size}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e8cb4ede00f6bea87a551157bba0755}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0ecdc6712b66d143c7537b8aa332d33a}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}}
+\index{B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{B\+E\+D\+File\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+B\+E\+D\+File\+Parser (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name, }
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0ecdc6712b66d143c7537b8aa332d33a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af3885ec96293e139d045bc700fd60139}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}}
+\index{B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{B\+E\+D\+File\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+B\+E\+D\+File\+Parser (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{genes}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af3885ec96293e139d045bc700fd60139}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a90ca4e6244f5b866ba49e671d78eeafd}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}}
+\index{B\+E\+D\+File\+Parser@{B\+E\+D\+File\+Parser}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{B\+E\+D\+File\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+B\+E\+D\+File\+Parser (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, Collection$<$ {\bf Gene} $>$$>$}]{transcripts}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a90ca4e6244f5b866ba49e671d78eeafd}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af73b5931e938625721506ee2ed86cafb}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!add\+Ref\+Seq@{add\+Ref\+Seq}}
+\index{add\+Ref\+Seq@{add\+Ref\+Seq}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{add\+Ref\+Seq}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+add\+Ref\+Seq (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af73b5931e938625721506ee2ed86cafb}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a16d8eaa25b93849c1c53b6c665f5437d}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!add\+Ref\+Seq@{add\+Ref\+Seq}}
+\index{add\+Ref\+Seq@{add\+Ref\+Seq}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{add\+Ref\+Seq}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+add\+Ref\+Seq (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene\+With\+Isoforms}}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a16d8eaa25b93849c1c53b6c665f5437d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5ec77234ba579c7974dcf39938afb2f4}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!add\+Ref\+Seq\+Set@{add\+Ref\+Seq\+Set}}
+\index{add\+Ref\+Seq\+Set@{add\+Ref\+Seq\+Set}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{add\+Ref\+Seq\+Set}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+add\+Ref\+Seq\+Set (
+\begin{DoxyParamCaption}
+\item[{Collection$<$?extends {\bf Gene} $>$}]{collection}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5ec77234ba579c7974dcf39938afb2f4}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a60c536352a2a1c83f3b9e30451e44819}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!bed2\+Cuff\+Gtf@{bed2\+Cuff\+Gtf}}
+\index{bed2\+Cuff\+Gtf@{bed2\+Cuff\+Gtf}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{bed2\+Cuff\+Gtf}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+bed2\+Cuff\+Gtf (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{String}]{src, }
+\item[{boolean}]{use\+Extra\+Fileds}
+\end{DoxyParamCaption}
+) throws Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a60c536352a2a1c83f3b9e30451e44819}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0c81e32ae66d387a07f04cdcc75c7203}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!bed2gtf@{bed2gtf}}
+\index{bed2gtf@{bed2gtf}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{bed2gtf}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+bed2gtf (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{String}]{src}
+\end{DoxyParamCaption}
+) throws Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0c81e32ae66d387a07f04cdcc75c7203}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d95e3b17c8e81cb4cd791f9835b53b0}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!bed2gtf\+\_\+bundle\+Overlappers@{bed2gtf\+\_\+bundle\+Overlappers}}
+\index{bed2gtf\+\_\+bundle\+Overlappers@{bed2gtf\+\_\+bundle\+Overlappers}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{bed2gtf\+\_\+bundle\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+bed2gtf\+\_\+bundle\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{String}]{src, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{merged\+Data}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d95e3b17c8e81cb4cd791f9835b53b0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a771489368c29e46deb27d897cc86e89c}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!clear@{clear}}
+\index{clear@{clear}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a771489368c29e46deb27d897cc86e89c}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a45ec37aa431467c0b765680ef53aefcc}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!collapse\+Single\+Exon\+Transcripts@{collapse\+Single\+Exon\+Transcripts}}
+\index{collapse\+Single\+Exon\+Transcripts@{collapse\+Single\+Exon\+Transcripts}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{collapse\+Single\+Exon\+Transcripts}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+collapse\+Single\+Exon\+Transcripts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a45ec37aa431467c0b765680ef53aefcc}
+Merges all single exon transcripts 
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a821b1303f6cbbc2ecb4f127728c5babe}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!contain\+Chr@{contain\+Chr}}
+\index{contain\+Chr@{contain\+Chr}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{contain\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+contain\+Chr (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a821b1303f6cbbc2ecb4f127728c5babe}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a7396c229435f01089a3c4280e93beb36}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!contains@{contains}}
+\index{contains@{contains}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+contains (
+\begin{DoxyParamCaption}
+\item[{String}]{gene\+Name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a7396c229435f01089a3c4280e93beb36}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0449ae4d64ca760468587a0a03144864}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!copy@{copy}}
+\index{copy@{copy}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0449ae4d64ca760468587a0a03144864}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a19759a3cb750f9f42560655a4de4f2b2}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!dedup@{dedup}}
+\index{dedup@{dedup}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{dedup}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+dedup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a19759a3cb750f9f42560655a4de4f2b2}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abbb99614e434ca01ec8d4cec6e6d09f8}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!difference\+By\+Genomic\+Region@{difference\+By\+Genomic\+Region}}
+\index{difference\+By\+Genomic\+Region@{difference\+By\+Genomic\+Region}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{difference\+By\+Genomic\+Region}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+difference\+By\+Genomic\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{other, }
+\item[{String}]{consider\+Orientaion}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abbb99614e434ca01ec8d4cec6e6d09f8}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5cb29006290bf5378adc2762fbf8b3c3}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!equalize\+Transcript\+Ends@{equalize\+Transcript\+Ends}}
+\index{equalize\+Transcript\+Ends@{equalize\+Transcript\+Ends}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{equalize\+Transcript\+Ends}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+equalize\+Transcript\+Ends (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5cb29006290bf5378adc2762fbf8b3c3}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aeb7ff6d87763c08b8fd2ea26ccdec9b4}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!expaned\+Utrs@{expaned\+Utrs}}
+\index{expaned\+Utrs@{expaned\+Utrs}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{expaned\+Utrs}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+expaned\+Utrs (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{bed, }
+\item[{Integer}]{utr1, }
+\item[{Integer}]{utr2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aeb7ff6d87763c08b8fd2ea26ccdec9b4}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aeb596503ad79c8a519140ee8daef7fe6}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!filter\+By\+Overlap@{filter\+By\+Overlap}}
+\index{filter\+By\+Overlap@{filter\+By\+Overlap}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{filter\+By\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+filter\+By\+Overlap (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{genes}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aeb596503ad79c8a519140ee8daef7fe6}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a36e88558b56d49a7742ff7bcc8841485}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get@{get}}
+\index{get@{get}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get (
+\begin{DoxyParamCaption}
+\item[{String}]{gene\+Name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a36e88558b56d49a7742ff7bcc8841485}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a592f7b9ad8d50ffd4487ecc496469bb4}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get3\+P\+Region@{get3\+P\+Region}}
+\index{get3\+P\+Region@{get3\+P\+Region}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get3\+P\+Region}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+Reader} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get3\+P\+Region (
+\begin{DoxyParamCaption}
+\item[{int}]{to\+In, }
+\item[{int}]{to\+Out}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a592f7b9ad8d50ffd4487ecc496469bb4}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a1fa902beff864404c2aa999389078f1c}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Annotation\+Set\+Map@{get\+Annotation\+Set\+Map}}
+\index{get\+Annotation\+Set\+Map@{get\+Annotation\+Set\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Annotation\+Set\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Interval\+Tree$<${\bf Gene\+With\+Isoforms}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Annotation\+Set\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a1fa902beff864404c2aa999389078f1c}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d664c67f8afe6a6dafc6ddeca84c7f9}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Chromosome\+Iterator@{get\+Chromosome\+Iterator}}
+\index{get\+Chromosome\+Iterator@{get\+Chromosome\+Iterator}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Chromosome\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$String$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Chromosome\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d664c67f8afe6a6dafc6ddeca84c7f9}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad9062000e1e13b19313a3959db8605bb}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Chr\+Tree@{get\+Chr\+Tree}}
+\index{get\+Chr\+Tree@{get\+Chr\+Tree}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Chr\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+Tree$<${\bf Gene\+With\+Isoforms}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Chr\+Tree (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad9062000e1e13b19313a3959db8605bb}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a17134d7932aab01f1cb7783f60bbded9}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Closest\+Downstream@{get\+Closest\+Downstream}}
+\index{get\+Closest\+Downstream@{get\+Closest\+Downstream}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Closest\+Downstream}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Closest\+Downstream (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a17134d7932aab01f1cb7783f60bbded9}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a84ceb76583ae1aed2022368c2fb07f14}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Closest\+Downstream@{get\+Closest\+Downstream}}
+\index{get\+Closest\+Downstream@{get\+Closest\+Downstream}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Closest\+Downstream}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Closest\+Downstream (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a84ceb76583ae1aed2022368c2fb07f14}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a01bdda303f0aa5c707342733e3bb09c2}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Closest\+Upstream@{get\+Closest\+Upstream}}
+\index{get\+Closest\+Upstream@{get\+Closest\+Upstream}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Closest\+Upstream}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Closest\+Upstream (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a01bdda303f0aa5c707342733e3bb09c2}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aba76d598eb442f6fca3fe1f37dc9b6d0}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Closest\+Upstream@{get\+Closest\+Upstream}}
+\index{get\+Closest\+Upstream@{get\+Closest\+Upstream}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Closest\+Upstream}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Closest\+Upstream (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aba76d598eb442f6fca3fe1f37dc9b6d0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4e515ca60fbce30a804ec9d1212e33da}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Exact\+Isoform@{get\+Exact\+Isoform}}
+\index{get\+Exact\+Isoform@{get\+Exact\+Isoform}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Exact\+Isoform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Exact\+Isoform (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene\+With\+Isoforms}}]{loci}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4e515ca60fbce30a804ec9d1212e33da}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a37e961395720da4c91b43ae3d09fc467}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Gene@{get\+Gene}}
+\index{get\+Gene@{get\+Gene}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Gene (
+\begin{DoxyParamCaption}
+\item[{String}]{gene\+File, }
+\item[{String}]{gene\+Name}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a37e961395720da4c91b43ae3d09fc467}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abd060b4376a538313b22991bf1eab8a9}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Gene\+By\+Name@{get\+Gene\+By\+Name}}
+\index{get\+Gene\+By\+Name@{get\+Gene\+By\+Name}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Gene\+By\+Name}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gene} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Gene\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{String}]{gene\+Name, }
+\item[{String}]{bed\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abd060b4376a538313b22991bf1eab8a9}
+Get gene from bed file by gene name 
+\begin{DoxyParams}{Parameters}
+{\em gene\+Name} & Gene name \\
+\hline
+{\em bed\+File} & Bed file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gene model described by the first line in the bed file with name field equal to gene name 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a80cb8b476bfeebcffc34c37bdd809d1b}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!Get\+Genes@{Get\+Genes}}
+\index{Get\+Genes@{Get\+Genes}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{Get\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+Get\+Genes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a80cb8b476bfeebcffc34c37bdd809d1b}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a92159642dd29f98fafb73d8a023d7a48}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!Get\+Genes\+With\+Isoforms@{Get\+Genes\+With\+Isoforms}}
+\index{Get\+Genes\+With\+Isoforms@{Get\+Genes\+With\+Isoforms}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{Get\+Genes\+With\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gene\+With\+Isoforms}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+Get\+Genes\+With\+Isoforms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a92159642dd29f98fafb73d8a023d7a48}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a353c3e74a98e5161351e8d08b1abd553}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Genomic\+Region\+Overlappers@{get\+Genomic\+Region\+Overlappers}}
+\index{get\+Genomic\+Region\+Overlappers@{get\+Genomic\+Region\+Overlappers}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Genomic\+Region\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<${\bf Gene\+With\+Isoforms}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Genomic\+Region\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a353c3e74a98e5161351e8d08b1abd553}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a685ac4182dd2f2730f904b74fbb24cd9}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Interval\+Tree\+With\+Isoforoms@{get\+Interval\+Tree\+With\+Isoforoms}}
+\index{get\+Interval\+Tree\+With\+Isoforoms@{get\+Interval\+Tree\+With\+Isoforoms}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Interval\+Tree\+With\+Isoforoms}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Interval\+Tree$<${\bf Gene\+With\+Isoforms}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Interval\+Tree\+With\+Isoforoms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a685ac4182dd2f2730f904b74fbb24cd9}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ab4cead55423bc92714e6761c144bc2a8}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Merged\+Annotation\+Map@{get\+Merged\+Annotation\+Map}}
+\index{get\+Merged\+Annotation\+Map@{get\+Merged\+Annotation\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Merged\+Annotation\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Interval\+Tree$<${\bf Gene\+With\+Isoforms}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Merged\+Annotation\+Map (
+\begin{DoxyParamCaption}
+\item[{double}]{min\+Pct\+Overlap\+To\+Merge}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ab4cead55423bc92714e6761c144bc2a8}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acee04f1f087d3e473c830d92b5e23fd0}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Merged\+Annotation\+Map@{get\+Merged\+Annotation\+Map}}
+\index{get\+Merged\+Annotation\+Map@{get\+Merged\+Annotation\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Merged\+Annotation\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Interval\+Tree$<${\bf Gene\+With\+Isoforms}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Merged\+Annotation\+Map (
+\begin{DoxyParamCaption}
+\item[{boolean}]{mergall}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acee04f1f087d3e473c830d92b5e23fd0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1e1428140172568cf8a2b3fcafd7a5f}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Merged\+Copy@{get\+Merged\+Copy}}
+\index{get\+Merged\+Copy@{get\+Merged\+Copy}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Merged\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Merged\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1e1428140172568cf8a2b3fcafd7a5f}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a728380042bb55b55bb02108870d15fa7}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Name\+Gene\+Map@{get\+Name\+Gene\+Map}}
+\index{get\+Name\+Gene\+Map@{get\+Name\+Gene\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Name\+Gene\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$String, {\bf Gene}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Name\+Gene\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a728380042bb55b55bb02108870d15fa7}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a016957d14960c3e93a84c669c9096276}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}}
+\index{get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Number\+Of\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Number\+Of\+Isoforms (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a016957d14960c3e93a84c669c9096276}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9e46c58133e627fe0f9d731b4fc84778}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}}
+\index{get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Number\+Of\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Number\+Of\+Isoforms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9e46c58133e627fe0f9d731b4fc84778}
+\begin{DoxyReturn}{Returns}
+Number of transcripts in the reader 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af57bdc6d25ab75ea4f495972b2915717}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}}
+\index{get\+Number\+Of\+Isoforms@{get\+Number\+Of\+Isoforms}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Number\+Of\+Isoforms}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Number\+Of\+Isoforms (
+\begin{DoxyParamCaption}
+\item[{Interval\+Tree$<$ {\bf Gene\+With\+Isoforms} $>$}]{overlap\+Tree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af57bdc6d25ab75ea4f495972b2915717}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5ee44c0a7cd95e4d0c36e58f82efb8d2}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+Tree$<${\bf Gene\+With\+Isoforms}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5ee44c0a7cd95e4d0c36e58f82efb8d2}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a35e8567ada47804129a2a32b113821d0}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Overlappers@{get\+Overlappers}}
+\index{get\+Overlappers@{get\+Overlappers}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Overlappers}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+Tree$<${\bf Gene\+With\+Isoforms}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Overlappers (
+\begin{DoxyParamCaption}
+\item[{{\bf Lightweight\+Genomic\+Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a35e8567ada47804129a2a32b113821d0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2f72490110162bff435fc33c1d011b9d}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Promoters@{get\+Promoters}}
+\index{get\+Promoters@{get\+Promoters}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Promoters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+Reader} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Promoters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2f72490110162bff435fc33c1d011b9d}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae7ce27123546bfe5c63beeea33443ff3}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!get\+Promoters@{get\+Promoters}}
+\index{get\+Promoters@{get\+Promoters}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{get\+Promoters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+Reader} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+get\+Promoters (
+\begin{DoxyParamCaption}
+\item[{int}]{to\+In, }
+\item[{int}]{to\+Out}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae7ce27123546bfe5c63beeea33443ff3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae177571878924990e5bdc5cf5726ef92}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!Increment\+Score\+If\+Overlap@{Increment\+Score\+If\+Overlap}}
+\index{Increment\+Score\+If\+Overlap@{Increment\+Score\+If\+Overlap}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{Increment\+Score\+If\+Overlap}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+Increment\+Score\+If\+Overlap (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{bed, }
+\item[{int}]{set\+Number, }
+\item[{Boolean}]{set\+To\+Zero}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae177571878924990e5bdc5cf5726ef92}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a158b393d669768a427bff7460583d555}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!intersect@{intersect}}
+\index{intersect@{intersect}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+intersect (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{bed}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a158b393d669768a427bff7460583d555}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae81836c47db766ac166e4c6a7b4054f9}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae81836c47db766ac166e4c6a7b4054f9}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a80bdec41f0a829196cee03fc498b6eb3}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!is\+Overlap\+Compatible@{is\+Overlap\+Compatible}}
+\index{is\+Overlap\+Compatible@{is\+Overlap\+Compatible}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{is\+Overlap\+Compatible}]{\setlength{\rightskip}{0pt plus 5cm}static boolean broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+is\+Overlap\+Compatible (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{first, }
+\item[{{\bf Gene}}]{second, }
+\item[{double}]{min\+Pct\+Overlap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a80bdec41f0a829196cee03fc498b6eb3}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a193f67998c823b9ff7349f770a1d3039}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data@{load\+Alignment\+Data}}
+\index{load\+Alignment\+Data@{load\+Alignment\+Data}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data}]{\setlength{\rightskip}{0pt plus 5cm}static Set$<${\bf Annotation}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a193f67998c823b9ff7349f770a1d3039}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ab74c197238ed0593faa218f4b8e2f232}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data@{load\+Alignment\+Data}}
+\index{load\+Alignment\+Data@{load\+Alignment\+Data}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data}]{\setlength{\rightskip}{0pt plus 5cm}static Set$<${\bf Annotation}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{reader}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ab74c197238ed0593faa218f4b8e2f232}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a11d0ce525a888526bb52dc0e2a62417d}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data@{load\+Alignment\+Data}}
+\index{load\+Alignment\+Data@{load\+Alignment\+Data}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data}]{\setlength{\rightskip}{0pt plus 5cm}static Set$<${\bf Annotation}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{boolean}]{ucsc\+Download}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a11d0ce525a888526bb52dc0e2a62417d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9ddcdf075a82ab131dd332a0888b9057}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data\+By\+Chr@{load\+Alignment\+Data\+By\+Chr}}
+\index{load\+Alignment\+Data\+By\+Chr@{load\+Alignment\+Data\+By\+Chr}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data\+By\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<${\bf Annotation}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data\+By\+Chr (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9ddcdf075a82ab131dd332a0888b9057}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a24526cfded9ae62cb64f1b40562a360a}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data\+By\+Chr3\+Prime@{load\+Alignment\+Data\+By\+Chr3\+Prime}}
+\index{load\+Alignment\+Data\+By\+Chr3\+Prime@{load\+Alignment\+Data\+By\+Chr3\+Prime}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data\+By\+Chr3\+Prime}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Set$<${\bf Alignments}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data\+By\+Chr3\+Prime (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{int}]{extension\+Factor}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a24526cfded9ae62cb64f1b40562a360a}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a18e2a417e5e04c4cabee937707742f8d}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data\+By\+Chr5\+Prime@{load\+Alignment\+Data\+By\+Chr5\+Prime}}
+\index{load\+Alignment\+Data\+By\+Chr5\+Prime@{load\+Alignment\+Data\+By\+Chr5\+Prime}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data\+By\+Chr5\+Prime}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Set$<${\bf Alignments}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data\+By\+Chr5\+Prime (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{int}]{extension\+Factor}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a18e2a417e5e04c4cabee937707742f8d}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_add1539c7331ebe6288a0ac5fd6898574}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data\+By\+Chr\+Array\+List@{load\+Alignment\+Data\+By\+Chr\+Array\+List}}
+\index{load\+Alignment\+Data\+By\+Chr\+Array\+List@{load\+Alignment\+Data\+By\+Chr\+Array\+List}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data\+By\+Chr\+Array\+List}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, List$<${\bf Alignments}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data\+By\+Chr\+Array\+List (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_add1539c7331ebe6288a0ac5fd6898574}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75330bb06c49493e924ee6881b613973}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Alignment\+Data\+To\+Tree@{load\+Alignment\+Data\+To\+Tree}}
+\index{load\+Alignment\+Data\+To\+Tree@{load\+Alignment\+Data\+To\+Tree}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Alignment\+Data\+To\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Interval\+Tree$<${\bf Alignments}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Alignment\+Data\+To\+Tree (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75330bb06c49493e924ee6881b613973}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af10836c823e704c497928ab17a821cd7}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Chr\+Sizes@{load\+Chr\+Sizes}}
+\index{load\+Chr\+Sizes@{load\+Chr\+Sizes}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Chr\+Sizes}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Integer$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Chr\+Sizes (
+\begin{DoxyParamCaption}
+\item[{String}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af10836c823e704c497928ab17a821cd7}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad16b2d4ee806d6fd8741f45436a1676c}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data}]{\setlength{\rightskip}{0pt plus 5cm}static Set$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad16b2d4ee806d6fd8741f45436a1676c}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9d2b6bab86001412f965b5cc93be29b2}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data}]{\setlength{\rightskip}{0pt plus 5cm}static Set$<${\bf Gene}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{{\bf Alignments}}]{region}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a9d2b6bab86001412f965b5cc93be29b2}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4b0a06217b7b942ca4432dec71d47e7a}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data\+By\+Chr@{load\+Data\+By\+Chr}}
+\index{load\+Data\+By\+Chr@{load\+Data\+By\+Chr}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data\+By\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data\+By\+Chr (
+\begin{DoxyParamCaption}
+\item[{String}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4b0a06217b7b942ca4432dec71d47e7a}
+Read genes from the bed file and get genes by chromosome 
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of bed file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of chromosome name to set of genes on chromosome 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a33bb3fba62fc200b7200b8510b2eb5c1}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data\+By\+Chr@{load\+Data\+By\+Chr}}
+\index{load\+Data\+By\+Chr@{load\+Data\+By\+Chr}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data\+By\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Collection$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data\+By\+Chr (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a33bb3fba62fc200b7200b8510b2eb5c1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae27912e09eef7a2d3988438d9e7075ae}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data\+By\+Chr\+To\+Tree@{load\+Data\+By\+Chr\+To\+Tree}}
+\index{load\+Data\+By\+Chr\+To\+Tree@{load\+Data\+By\+Chr\+To\+Tree}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data\+By\+Chr\+To\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Interval\+Tree$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data\+By\+Chr\+To\+Tree (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae27912e09eef7a2d3988438d9e7075ae}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a68ef8597a3f2809c759d3b9065b9896c}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data\+By\+Name@{load\+Data\+By\+Name}}
+\index{load\+Data\+By\+Name@{load\+Data\+By\+Name}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data\+By\+Name}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, {\bf Gene}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a68ef8597a3f2809c759d3b9065b9896c}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e3c32b1c47fd04e187ea6404b3da572}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data\+Line@{load\+Data\+Line}}
+\index{load\+Data\+Line@{load\+Data\+Line}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data\+Line}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<${\bf Alignments}, String$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data\+Line (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e3c32b1c47fd04e187ea6404b3da572}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e477b1c570aa6cafcde69f782cd46f5}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Data\+Line@{load\+Data\+Line}}
+\index{load\+Data\+Line@{load\+Data\+Line}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Data\+Line}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<${\bf Alignments}, String$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Data\+Line (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{reader}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2e477b1c570aa6cafcde69f782cd46f5}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a03373b1b05575c9cf165f33ae4376e6c}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+G\+T\+F@{load\+G\+T\+F}}
+\index{load\+G\+T\+F@{load\+G\+T\+F}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+G\+T\+F}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+G\+T\+F (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a03373b1b05575c9cf165f33ae4376e6c}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2fef87f60d9c9b5744c720de07b548db}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Isoform\+Data\+By\+Chr\+To\+Tree@{load\+Isoform\+Data\+By\+Chr\+To\+Tree}}
+\index{load\+Isoform\+Data\+By\+Chr\+To\+Tree@{load\+Isoform\+Data\+By\+Chr\+To\+Tree}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Isoform\+Data\+By\+Chr\+To\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Isoform\+Data\+By\+Chr\+To\+Tree (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a2fef87f60d9c9b5744c720de07b548db}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a1d3697e1837ea59dcf9e90e1fbfac887}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+Isoform\+Data\+By\+Chr\+To\+Tree@{load\+Isoform\+Data\+By\+Chr\+To\+Tree}}
+\index{load\+Isoform\+Data\+By\+Chr\+To\+Tree@{load\+Isoform\+Data\+By\+Chr\+To\+Tree}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+Isoform\+Data\+By\+Chr\+To\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+Isoform\+Data\+By\+Chr\+To\+Tree (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a1d3697e1837ea59dcf9e90e1fbfac887}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d2c217089e510f4ef1e1e6c7e62cffd}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+List@{load\+List}}
+\index{load\+List@{load\+List}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+List}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$String$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+List (
+\begin{DoxyParamCaption}
+\item[{String}]{file}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4d2c217089e510f4ef1e1e6c7e62cffd}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acb554507b03d62c0ff496c8c7c70f5da}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!load\+List@{load\+List}}
+\index{load\+List@{load\+List}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{load\+List}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$String$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+load\+List (
+\begin{DoxyParamCaption}
+\item[{String}]{file, }
+\item[{boolean}]{skip\+First\+Line}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_acb554507b03d62c0ff496c8c7c70f5da}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a378ef26bd5ca3d6e143774ca50a9df9a}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!main@{main}}
+\index{main@{main}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a378ef26bd5ca3d6e143774ca50a9df9a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a520840342a23a85f92254df35ddd545c}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!make\+Genes@{make\+Genes}}
+\index{make\+Genes@{make\+Genes}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{make\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+make\+Genes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a520840342a23a85f92254df35ddd545c}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0d1ef53e95c6fc5fd889fdd566d307e8}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!make\+Genes@{make\+Genes}}
+\index{make\+Genes@{make\+Genes}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{make\+Genes}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+make\+Genes (
+\begin{DoxyParamCaption}
+\item[{double}]{min\+Pct\+Overlap\+To\+Merge}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a0d1ef53e95c6fc5fd889fdd566d307e8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ac9a4b9c9231f57edaad2c6dc33107d0d}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!make\+Interval\+Tree\+For3\+Prime@{make\+Interval\+Tree\+For3\+Prime}}
+\index{make\+Interval\+Tree\+For3\+Prime@{make\+Interval\+Tree\+For3\+Prime}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{make\+Interval\+Tree\+For3\+Prime}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, Interval\+Tree$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+make\+Interval\+Tree\+For3\+Prime (
+\begin{DoxyParamCaption}
+\item[{File}]{gene\+File, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ac9a4b9c9231f57edaad2c6dc33107d0d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75d88890a89e815e0dd41134c8eb29e1}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!merge@{merge}}
+\index{merge@{merge}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{merge}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+merge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75d88890a89e815e0dd41134c8eb29e1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af406253e663a33e6635ef5056d91221e}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!merge\+By\+Gtf\+Gene\+Id@{merge\+By\+Gtf\+Gene\+Id}}
+\index{merge\+By\+Gtf\+Gene\+Id@{merge\+By\+Gtf\+Gene\+Id}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{merge\+By\+Gtf\+Gene\+Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+merge\+By\+Gtf\+Gene\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_af406253e663a33e6635ef5056d91221e}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a3c26637d96247aa07ca8fcf6bade2636}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!minus@{minus}}
+\index{minus@{minus}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{minus}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+minus (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ {\bf Gene} $>$}]{genes, }
+\item[{boolean}]{recursive}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a3c26637d96247aa07ca8fcf6bade2636}
+Removes from this reader all elements that overlap the given list. 
+\begin{DoxyParams}{Parameters}
+{\em recursive} & -\/ if true not only transcripts overlapping the given set but also transcripts that overlap the overlappers will be removed \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad26670b10bbe5428e4b6bf362a4f59e8}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!overlap\+\_\+\+Genomic\+Level@{overlap\+\_\+\+Genomic\+Level}}
+\index{overlap\+\_\+\+Genomic\+Level@{overlap\+\_\+\+Genomic\+Level}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{overlap\+\_\+\+Genomic\+Level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+overlap\+\_\+\+Genomic\+Level (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{other, }
+\item[{String}]{task, }
+\item[{String}]{consider\+Orientaion}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad26670b10bbe5428e4b6bf362a4f59e8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ac018a721573120e81318a9507c624ede}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!overlap\+By\+Genomic\+Region@{overlap\+By\+Genomic\+Region}}
+\index{overlap\+By\+Genomic\+Region@{overlap\+By\+Genomic\+Region}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{overlap\+By\+Genomic\+Region}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+overlap\+By\+Genomic\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{other, }
+\item[{String}]{consider\+Orientaion}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ac018a721573120e81318a9507c624ede}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abd360124c8927f470f35d09beed22cbe}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!read\+Siphy\+Out\+To\+Bed@{read\+Siphy\+Out\+To\+Bed}}
+\index{read\+Siphy\+Out\+To\+Bed@{read\+Siphy\+Out\+To\+Bed}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{read\+Siphy\+Out\+To\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+read\+Siphy\+Out\+To\+Bed (
+\begin{DoxyParamCaption}
+\item[{String}]{siphy\+File}
+\end{DoxyParamCaption}
+) throws Number\+Format\+Exception, I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abd360124c8927f470f35d09beed22cbe}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a56e9eebf08809a7ff512853b513956d2}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!remove@{remove}}
+\index{remove@{remove}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene\+With\+Isoforms} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene\+With\+Isoforms}}]{record}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a56e9eebf08809a7ff512853b513956d2}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75f7e2603b219a99a583421044f9d7f5}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!remove\+Singele\+Exon@{remove\+Singele\+Exon}}
+\index{remove\+Singele\+Exon@{remove\+Singele\+Exon}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{remove\+Singele\+Exon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+remove\+Singele\+Exon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a75f7e2603b219a99a583421044f9d7f5}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a509eea26bf47a59f6d0b34dbe6232f3b}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!remove\+Small\+Transcripts@{remove\+Small\+Transcripts}}
+\index{remove\+Small\+Transcripts@{remove\+Small\+Transcripts}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{remove\+Small\+Transcripts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+E\+D\+File\+Parser} broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+remove\+Small\+Transcripts (
+\begin{DoxyParamCaption}
+\item[{int}]{min\+Exn\+Num, }
+\item[{int}]{min\+Transcript\+Length}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a509eea26bf47a59f6d0b34dbe6232f3b}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4ba9a8a140720d66d223819ef8a11f6e}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!to\+Constituent\+Introform\+Map@{to\+Constituent\+Introform\+Map}}
+\index{to\+Constituent\+Introform\+Map@{to\+Constituent\+Introform\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{to\+Constituent\+Introform\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+to\+Constituent\+Introform\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a4ba9a8a140720d66d223819ef8a11f6e}
+Builds an artificial map of isoforms where \char`\"{}constituent\char`\"{} introns are the exons. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a559780e568c2243b64a9a4adcb70e239}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!to\+Constituent\+Isoform\+Map@{to\+Constituent\+Isoform\+Map}}
+\index{to\+Constituent\+Isoform\+Map@{to\+Constituent\+Isoform\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{to\+Constituent\+Isoform\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+to\+Constituent\+Isoform\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a559780e568c2243b64a9a4adcb70e239}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a20569a7b9e346048fde744edbb9817b7}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!to\+Constituent\+Isoform\+Map@{to\+Constituent\+Isoform\+Map}}
+\index{to\+Constituent\+Isoform\+Map@{to\+Constituent\+Isoform\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{to\+Constituent\+Isoform\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+to\+Constituent\+Isoform\+Map (
+\begin{DoxyParamCaption}
+\item[{boolean}]{remove\+Genes\+Without\+Constituent\+Isoforms}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a20569a7b9e346048fde744edbb9817b7}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a208cfdf8d0bddce280ad7e83115358fb}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!to\+Map@{to\+Map}}
+\index{to\+Map@{to\+Map}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{to\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<${\bf Gene}$>$ $>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+to\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a208cfdf8d0bddce280ad7e83115358fb}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae695a45485015cf5a144fe2dd8a31e69}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!update\+Scr\+To\+Bed\+Score@{update\+Scr\+To\+Bed\+Score}}
+\index{update\+Scr\+To\+Bed\+Score@{update\+Scr\+To\+Bed\+Score}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{update\+Scr\+To\+Bed\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+update\+Scr\+To\+Bed\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{score}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae695a45485015cf5a144fe2dd8a31e69}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a67089f9c331c88c265b2497e00570838}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!upload\+Set\+Of\+Files@{upload\+Set\+Of\+Files}}
+\index{upload\+Set\+Of\+Files@{upload\+Set\+Of\+Files}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{upload\+Set\+Of\+Files}]{\setlength{\rightskip}{0pt plus 5cm}static Map$<$String, {\bf B\+E\+D\+File\+Parser}$>$ broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+upload\+Set\+Of\+Files (
+\begin{DoxyParamCaption}
+\item[{String}]{bed\+Lst}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a67089f9c331c88c265b2497e00570838}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a82d1c3ff1719b420ae996047497598d2}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+B\+E\+D@{write\+B\+E\+D}}
+\index{write\+B\+E\+D@{write\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Collection$<$ {\bf Annotation} $>$}]{regions}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a82d1c3ff1719b420ae996047497598d2}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a7cc9d1aa1b6645caf677afafc09928bc}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+B\+E\+D@{write\+B\+E\+D}}
+\index{write\+B\+E\+D@{write\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ {\bf Annotation}, double\mbox{[}$\,$\mbox{]}$>$}]{scores}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a7cc9d1aa1b6645caf677afafc09928bc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_afeb570e01ae5a2989e187e66fc56f324}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+B\+E\+D@{write\+B\+E\+D}}
+\index{write\+B\+E\+D@{write\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Collection$<$ {\bf Annotation} $>$}]{alignments, }
+\item[{boolean}]{sort}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_afeb570e01ae5a2989e187e66fc56f324}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a3df685adf26688b983a2838c3614b800}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+B\+E\+D@{write\+B\+E\+D}}
+\index{write\+B\+E\+D@{write\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ {\bf Annotation}, double\mbox{[}$\,$\mbox{]}$>$}]{scores, }
+\item[{boolean}]{with\+Scores, }
+\item[{boolean}]{sort}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a3df685adf26688b983a2838c3614b800}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aa66d2512340022f9ab988b36dfe25623}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+B\+E\+D\+With\+Scores@{write\+B\+E\+D\+With\+Scores}}
+\index{write\+B\+E\+D\+With\+Scores@{write\+B\+E\+D\+With\+Scores}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+B\+E\+D\+With\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+B\+E\+D\+With\+Scores (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ {\bf Annotation}, double\mbox{[}$\,$\mbox{]}$>$}]{scores}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aa66d2512340022f9ab988b36dfe25623}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad01db32aa1df03d82f3f348a3c0f4793}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Full\+Bed@{write\+Full\+Bed}}
+\index{write\+Full\+Bed@{write\+Full\+Bed}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Full\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Full\+Bed (
+\begin{DoxyParamCaption}
+\item[{String}]{save}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ad01db32aa1df03d82f3f348a3c0f4793}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a606a493c3f78bac7f295955e509822b3}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Full\+Bed@{write\+Full\+Bed}}
+\index{write\+Full\+Bed@{write\+Full\+Bed}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Full\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Full\+Bed (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{boolean}]{use\+Extra\+Fields}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a606a493c3f78bac7f295955e509822b3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5312667bf6ceb3c21ac7c38b34eb834d}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Full\+Bed@{write\+Full\+Bed}}
+\index{write\+Full\+Bed@{write\+Full\+Bed}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Full\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Full\+Bed (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a5312667bf6ceb3c21ac7c38b34eb834d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aef3f450e2db898bb6efc32c951f0c6dc}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Full\+Bed@{write\+Full\+Bed}}
+\index{write\+Full\+Bed@{write\+Full\+Bed}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Full\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Full\+Bed (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw, }
+\item[{boolean}]{use\+Extra\+Fields}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aef3f450e2db898bb6efc32c951f0c6dc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a97dc56bf7a65a961736353f4c7d74d9f}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Full\+B\+E\+D@{write\+Full\+B\+E\+D}}
+\index{write\+Full\+B\+E\+D@{write\+Full\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Full\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Full\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Collection$<$ {\bf Gene} $>$}]{genes}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a97dc56bf7a65a961736353f4c7d74d9f}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a89d336bdc725ce61fa7d57546b337f52}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Full\+B\+E\+D@{write\+Full\+B\+E\+D}}
+\index{write\+Full\+B\+E\+D@{write\+Full\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Full\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Full\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ {\bf Gene},?extends Object $>$}]{genes}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_a89d336bdc725ce61fa7d57546b337f52}
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aa1ff9b420a931689c4663567baaee8ab}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Sorted\+B\+E\+D@{write\+Sorted\+B\+E\+D}}
+\index{write\+Sorted\+B\+E\+D@{write\+Sorted\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Sorted\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Sorted\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ {\bf Annotation}, double\mbox{[}$\,$\mbox{]}$>$}]{scores}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_aa1ff9b420a931689c4663567baaee8ab}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1b3b11069e1114a7bbe7e4224baa843}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Sorted\+B\+E\+D@{write\+Sorted\+B\+E\+D}}
+\index{write\+Sorted\+B\+E\+D@{write\+Sorted\+B\+E\+D}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Sorted\+B\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Sorted\+B\+E\+D (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Collection$<$ {\bf Annotation} $>$}]{alignments}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_ae1b3b11069e1114a7bbe7e4224baa843}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abeff457ac282ba0590f5620ad1792cbf}{\index{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}!write\+Sorted\+B\+E\+D\+With\+Scores@{write\+Sorted\+B\+E\+D\+With\+Scores}}
+\index{write\+Sorted\+B\+E\+D\+With\+Scores@{write\+Sorted\+B\+E\+D\+With\+Scores}!broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser@{broad\+::pda\+::annotation\+::\+B\+E\+D\+File\+Parser}}
+\subsubsection[{write\+Sorted\+B\+E\+D\+With\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+annotation.\+B\+E\+D\+File\+Parser.\+write\+Sorted\+B\+E\+D\+With\+Scores (
+\begin{DoxyParamCaption}
+\item[{String}]{save, }
+\item[{Map$<$ {\bf Annotation}, double\mbox{[}$\,$\mbox{]}$>$}]{scores}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser_abeff457ac282ba0590f5620ad1792cbf}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/annotation/\hyperlink{_b_e_d_file_parser_8java}{B\+E\+D\+File\+Parser.\+java}\end{DoxyCompactItemize}

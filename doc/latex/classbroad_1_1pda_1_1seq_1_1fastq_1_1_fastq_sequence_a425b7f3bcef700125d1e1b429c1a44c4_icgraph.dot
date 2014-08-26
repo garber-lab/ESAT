@@ -1,0 +1,19 @@
+digraph "broad.pda.seq.fastq.FastqSequence.FastqSequence"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.fastq.Fastq\lSequence.FastqSequence",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.seq.fastq.Fastq\lSequence.trimEnds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence.html#a0fd87834d4aa61b88e092f018ae0f7f4"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.seq.fastq.Fastq\lSequence.trimEndBases",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence.html#ace80714d5df0dcf2ae24abdde90b3baa"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.seq.fastq.Fastq\lSequence.trimStartBases",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence.html#a9eca00d202f96c264893e7ac26cca58a"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.pda.seq.fastq.Fastq\lSequence.trimBeginning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence.html#a23828799871d655ea393485e61c0703d"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.pda.seq.fastq.Fastq\lSequence.trimFirstNBPs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence.html#aa6d0e245f31727b72796442117dd59bc"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.pda.seq.fastq.Fastq\lSequence.trimLinker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1fastq_1_1_fastq_sequence.html#a64623b219d38679aa95cd6d2a673cc84"];
+}

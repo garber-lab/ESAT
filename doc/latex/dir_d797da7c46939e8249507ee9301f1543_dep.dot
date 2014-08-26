@@ -1,0 +1,25 @@
+digraph "java/broad/core" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3eb2b208b3dbfc04b68be4ee9df17ec9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="broad" fontname="Helvetica", fontsize="10", URL="dir_3eb2b208b3dbfc04b68be4ee9df17ec9.html"]
+  subgraph clusterdir_d797da7c46939e8249507ee9301f1543 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d797da7c46939e8249507ee9301f1543.html"];
+    dir_d797da7c46939e8249507ee9301f1543 [shape=plaintext label="core"];
+    dir_092d1a752246cbf24923d93621ec8dce [shape=box label="annotation" color="black" fillcolor="white" style="filled" URL="dir_092d1a752246cbf24923d93621ec8dce.html"];
+    dir_ea176ae3d21722656809fb5449a24403 [shape=box label="datastructures" color="black" fillcolor="white" style="filled" URL="dir_ea176ae3d21722656809fb5449a24403.html"];
+    dir_3dd4e9b62a3152117e62bd5fc1fae774 [shape=box label="error" color="black" fillcolor="white" style="filled" URL="dir_3dd4e9b62a3152117e62bd5fc1fae774.html"];
+    dir_cc8b356de703ac02f62639a9ecc046f5 [shape=box label="hmm" color="black" fillcolor="white" style="filled" URL="dir_cc8b356de703ac02f62639a9ecc046f5.html"];
+    dir_7e6fcd4ad5f319a381b9e40bdf47c42a [shape=box label="math" color="black" fillcolor="white" style="filled" URL="dir_7e6fcd4ad5f319a381b9e40bdf47c42a.html"];
+    dir_8d567d12c26a77b5ab4a1b62934a44ea [shape=box label="motif" color="red" fillcolor="white" style="filled" URL="dir_8d567d12c26a77b5ab4a1b62934a44ea.html"];
+    dir_1b8d1b59d2a0fc9acbb18f98ff572025 [shape=box label="multiplealignment" color="black" fillcolor="white" style="filled" URL="dir_1b8d1b59d2a0fc9acbb18f98ff572025.html"];
+    dir_9b6213f5bf418cff39a777d4d0cb6b47 [shape=box label="overlaputils" color="black" fillcolor="white" style="filled" URL="dir_9b6213f5bf418cff39a777d4d0cb6b47.html"];
+    dir_6dc20658a018aadd50b3214eb2bec3cc [shape=box label="parser" color="black" fillcolor="white" style="filled" URL="dir_6dc20658a018aadd50b3214eb2bec3cc.html"];
+    dir_68d60567cac71328f5aa7e380d16cb43 [shape=box label="primer3" color="black" fillcolor="white" style="filled" URL="dir_68d60567cac71328f5aa7e380d16cb43.html"];
+    dir_11de5a41d3678d547170dda2eddc0468 [shape=box label="sequence" color="black" fillcolor="white" style="filled" URL="dir_11de5a41d3678d547170dda2eddc0468.html"];
+    dir_e2964a2d1e4eec4529e25374aaf11fed [shape=box label="siphy" color="red" fillcolor="white" style="filled" URL="dir_e2964a2d1e4eec4529e25374aaf11fed.html"];
+    dir_fffd6c75032af08653295b9f32806ae0 [shape=box label="util" color="black" fillcolor="white" style="filled" URL="dir_fffd6c75032af08653295b9f32806ae0.html"];
+  }
+  }
+}

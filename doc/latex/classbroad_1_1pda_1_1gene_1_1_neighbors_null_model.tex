@@ -1,0 +1,140 @@
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model}{\section{broad.\+pda.\+gene.\+Neighbors\+Null\+Model Class Reference}
+\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model}\index{broad.\+pda.\+gene.\+Neighbors\+Null\+Model@{broad.\+pda.\+gene.\+Neighbors\+Null\+Model}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries chr\+Size\+Node}
+\item 
+class {\bfseries Neighbors\+Bin}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a3a6dfc5bf8e80a0b41a8790d90b3b44b}{Neighbors\+Null\+Model} ()
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_adb32ea3dab561da752840b5fdb8fdbe3}{Neighbors\+Null\+Model} (String setname, String refname, int binsize, int permnum)  throws I\+O\+Exception
+\item 
+\hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_afa875f093ec7ab4473b118886d88a231}{Neighbors\+Null\+Model} (\hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} setname, \hyperlink{classbroad_1_1pda_1_1annotation_1_1_b_e_d_file_parser}{B\+E\+D\+File\+Parser} refname, int binsize, int permnum)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a6597b985b4c7a6fe5be986f1d395fbf1}{make\+Binned\+Interval\+Model} (boolean Use\+Custom\+Bins)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a133ed88074e18109890f5b91d37ffaf9}{make\+Naive\+Rand\+Model} (String chr\+Size\+F)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a2134fae81a300acd93438baa11809dbe}{make\+Dart\+Throwing\+Model} ()
+\item 
+Array\+List$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms}\mbox{[}$\,$\mbox{]}$>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_ac1a835df4c21a06eaeeb92709f4d0c59}{get\+Gene\+Rand\+Neighbors} (Gene gene)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_aab78061a983a5d98d7b07104cf2a1e40}{print\+Rand\+Neighbors\+Info} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_afe164ab163e240d3c81cb05928de934a}{get\+Perm\+Num} ()
+\item 
+Hash\+Map$<$ Gene, Array\+List\\*
+$<$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_gene_with_isoforms}{Gene\+With\+Isoforms}\mbox{[}$\,$\mbox{]}$>$ $>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a51958d6e9c555183797899409b5ca00a}{get\+Gene\+Rand\+Neighbors} ()
+\item 
+Collection$<$ Gene $>$ \hyperlink{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_af5ac20d724aa6a95a38c47ffd71de94c}{get\+Unique\+Neighbors} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a3a6dfc5bf8e80a0b41a8790d90b3b44b}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!Neighbors\+Null\+Model@{Neighbors\+Null\+Model}}
+\index{Neighbors\+Null\+Model@{Neighbors\+Null\+Model}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{Neighbors\+Null\+Model}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+Neighbors\+Null\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a3a6dfc5bf8e80a0b41a8790d90b3b44b}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_adb32ea3dab561da752840b5fdb8fdbe3}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!Neighbors\+Null\+Model@{Neighbors\+Null\+Model}}
+\index{Neighbors\+Null\+Model@{Neighbors\+Null\+Model}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{Neighbors\+Null\+Model}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+Neighbors\+Null\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{setname, }
+\item[{String}]{refname, }
+\item[{int}]{binsize, }
+\item[{int}]{permnum}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_adb32ea3dab561da752840b5fdb8fdbe3}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_afa875f093ec7ab4473b118886d88a231}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!Neighbors\+Null\+Model@{Neighbors\+Null\+Model}}
+\index{Neighbors\+Null\+Model@{Neighbors\+Null\+Model}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{Neighbors\+Null\+Model}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+Neighbors\+Null\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+E\+D\+File\+Parser}}]{setname, }
+\item[{{\bf B\+E\+D\+File\+Parser}}]{refname, }
+\item[{int}]{binsize, }
+\item[{int}]{permnum}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_afa875f093ec7ab4473b118886d88a231}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_ac1a835df4c21a06eaeeb92709f4d0c59}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!get\+Gene\+Rand\+Neighbors@{get\+Gene\+Rand\+Neighbors}}
+\index{get\+Gene\+Rand\+Neighbors@{get\+Gene\+Rand\+Neighbors}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{get\+Gene\+Rand\+Neighbors}]{\setlength{\rightskip}{0pt plus 5cm}Array\+List$<${\bf Gene\+With\+Isoforms}\mbox{[}$\,$\mbox{]}$>$ broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+get\+Gene\+Rand\+Neighbors (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_ac1a835df4c21a06eaeeb92709f4d0c59}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a51958d6e9c555183797899409b5ca00a}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!get\+Gene\+Rand\+Neighbors@{get\+Gene\+Rand\+Neighbors}}
+\index{get\+Gene\+Rand\+Neighbors@{get\+Gene\+Rand\+Neighbors}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{get\+Gene\+Rand\+Neighbors}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$Gene, Array\+List$<${\bf Gene\+With\+Isoforms}\mbox{[}$\,$\mbox{]}$>$ $>$ broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+get\+Gene\+Rand\+Neighbors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a51958d6e9c555183797899409b5ca00a}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_afe164ab163e240d3c81cb05928de934a}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!get\+Perm\+Num@{get\+Perm\+Num}}
+\index{get\+Perm\+Num@{get\+Perm\+Num}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{get\+Perm\+Num}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+get\+Perm\+Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_afe164ab163e240d3c81cb05928de934a}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_af5ac20d724aa6a95a38c47ffd71de94c}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!get\+Unique\+Neighbors@{get\+Unique\+Neighbors}}
+\index{get\+Unique\+Neighbors@{get\+Unique\+Neighbors}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{get\+Unique\+Neighbors}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Gene$>$ broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+get\+Unique\+Neighbors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_af5ac20d724aa6a95a38c47ffd71de94c}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a6597b985b4c7a6fe5be986f1d395fbf1}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!make\+Binned\+Interval\+Model@{make\+Binned\+Interval\+Model}}
+\index{make\+Binned\+Interval\+Model@{make\+Binned\+Interval\+Model}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{make\+Binned\+Interval\+Model}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+make\+Binned\+Interval\+Model (
+\begin{DoxyParamCaption}
+\item[{boolean}]{Use\+Custom\+Bins}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a6597b985b4c7a6fe5be986f1d395fbf1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a2134fae81a300acd93438baa11809dbe}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!make\+Dart\+Throwing\+Model@{make\+Dart\+Throwing\+Model}}
+\index{make\+Dart\+Throwing\+Model@{make\+Dart\+Throwing\+Model}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{make\+Dart\+Throwing\+Model}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+make\+Dart\+Throwing\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a2134fae81a300acd93438baa11809dbe}
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a133ed88074e18109890f5b91d37ffaf9}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!make\+Naive\+Rand\+Model@{make\+Naive\+Rand\+Model}}
+\index{make\+Naive\+Rand\+Model@{make\+Naive\+Rand\+Model}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{make\+Naive\+Rand\+Model}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+make\+Naive\+Rand\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{chr\+Size\+F}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_a133ed88074e18109890f5b91d37ffaf9}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_aab78061a983a5d98d7b07104cf2a1e40}{\index{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}!print\+Rand\+Neighbors\+Info@{print\+Rand\+Neighbors\+Info}}
+\index{print\+Rand\+Neighbors\+Info@{print\+Rand\+Neighbors\+Info}!broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model@{broad\+::pda\+::gene\+::\+Neighbors\+Null\+Model}}
+\subsubsection[{print\+Rand\+Neighbors\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+gene.\+Neighbors\+Null\+Model.\+print\+Rand\+Neighbors\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1gene_1_1_neighbors_null_model_aab78061a983a5d98d7b07104cf2a1e40}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/gene/\hyperlink{_neighbors_null_model_8java}{Neighbors\+Null\+Model.\+java}\end{DoxyCompactItemize}

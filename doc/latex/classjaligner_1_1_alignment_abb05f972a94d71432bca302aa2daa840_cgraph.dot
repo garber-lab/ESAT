@@ -1,0 +1,16 @@
+digraph "jaligner.Alignment.add"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jaligner.Alignment.add",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="jaligner.Alignment.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#a8ec62ac2e46293fd8ecee14659e9a65e"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="jaligner.Alignment.Alignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#aeca673375e71e520b1e25eb9c05e0fb8"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="jaligner.Alignment.getScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#a81ee36cb77de6f426175da2a60791d8a"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="jaligner.Alignment.getGaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#af51939568ee574d67afd7f6e7b6efe96"];
+}

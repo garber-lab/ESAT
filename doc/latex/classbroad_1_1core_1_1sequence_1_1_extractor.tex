@@ -1,0 +1,85 @@
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_extractor}{\section{broad.\+core.\+sequence.\+Extractor Class Reference}
+\label{classbroad_1_1core_1_1sequence_1_1_extractor}\index{broad.\+core.\+sequence.\+Extractor@{broad.\+core.\+sequence.\+Extractor}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_extractor_a93c5f2dba8d4d1cd8c49e017cd05cac2}{Extractor} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1sequence_1_1_extractor_ad428faf3d9d13189401ea5ec82d2b2fd}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{classbroad_1_1core_1_1sequence_1_1_extractor_a03bf9a27c15f1d3eb2dff12d4847be02}{U\+S\+A\+G\+E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_extractor_a93c5f2dba8d4d1cd8c49e017cd05cac2}{\index{broad\+::core\+::sequence\+::\+Extractor@{broad\+::core\+::sequence\+::\+Extractor}!Extractor@{Extractor}}
+\index{Extractor@{Extractor}!broad\+::core\+::sequence\+::\+Extractor@{broad\+::core\+::sequence\+::\+Extractor}}
+\subsubsection[{Extractor}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Extractor.\+Extractor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_extractor_a93c5f2dba8d4d1cd8c49e017cd05cac2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_extractor_ad428faf3d9d13189401ea5ec82d2b2fd}{\index{broad\+::core\+::sequence\+::\+Extractor@{broad\+::core\+::sequence\+::\+Extractor}!main@{main}}
+\index{main@{main}!broad\+::core\+::sequence\+::\+Extractor@{broad\+::core\+::sequence\+::\+Extractor}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+sequence.\+Extractor.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_extractor_ad428faf3d9d13189401ea5ec82d2b2fd}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_extractor_a03bf9a27c15f1d3eb2dff12d4847be02}{\index{broad\+::core\+::sequence\+::\+Extractor@{broad\+::core\+::sequence\+::\+Extractor}!U\+S\+A\+G\+E@{U\+S\+A\+G\+E}}
+\index{U\+S\+A\+G\+E@{U\+S\+A\+G\+E}!broad\+::core\+::sequence\+::\+Extractor@{broad\+::core\+::sequence\+::\+Extractor}}
+\subsubsection[{U\+S\+A\+G\+E}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+sequence.\+Extractor.\+U\+S\+A\+G\+E\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_extractor_a03bf9a27c15f1d3eb2dff12d4847be02}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"Usage: Extractor TASK=<task\_num> <task\_args>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)tTasks:\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t1. Batch Extract: IN=sequence id list file SEQ=sequence file OUT=output file\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t2. Extract Regions: IN=sequence file OUT=output file REGIONS=start1..end1,start2..end2....
+       SEQID=sequence id if multifasta(use -eq- for = and -s- for spaces REVERSE=Y/N\(\backslash\)n UPPERCASE=<Y to uppercase all
+       letters>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t3. Extract records: -in <sequence file> -out <outout file> -seqids <seqId1,seqId2,seqId3,...>
+       -reverse\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t4. Extract and Chunk: IN=<sequence file> PREFIX=<output file prefix> CHUNKSIZE=<chunk size>
+       OVERLAP=<chunk overlap> REGION=start1..end1 SEQID=sequence id if multifasta(use -eq- for = and -s- for spaces and
+       -lp- parenthesis and -rp- for right parenthesis> REVERSE=<Y/N> UPPERCASE=<Y to uppercase all letters>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t5. Extract GC percent of all sequences in a multifasta file: IN=<sequence file>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t6. Unchunk Fasta chunks: INDIR=<Directory with sequence chunks it assumes chunks files are named
+       seqname\_chunkStart\_chunkEnd.extension (specify file extension with the EXT parameter) > \(\backslash\)n"}+
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t EXT=<chunk file extension> CHUNKSIZE=<chunk size> OVERLAP=<chunk overlap NOT HANDLING THIS YET>\(\backslash\)n
+      "} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t7. Extract records matching motif in reverse or direct strand -in <multifasta file> -motif
+       <sequence motif> -out <output file name>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t8. Extract records with vClip preset parameters -in <multifasta>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t9. Extract GC percent for the specified window size: -in <sequence file> -out <GC percent outout
+       file> -windowSize <window size>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t10. Reverse complement sequences in file: -in <sequence file or standard input> -out <file to
+       output reverse-complemented sequences>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t11. Extract sequences that are of at least the given length: -in <sequence file or standard
+       input> -out <file to output or standard out> + -minLength <Minumum length of sequences to return>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)\(\backslash\)t\(\backslash\)t12. Extract sequences with names matching regular expression -in <sequence file or standard
+       input> -out <file to output or standard out> -pattern <regex patterh>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n"}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/sequence/\hyperlink{_extractor_8java}{Extractor.\+java}\end{DoxyCompactItemize}

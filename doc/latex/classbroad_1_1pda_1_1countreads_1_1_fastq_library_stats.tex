@@ -1,0 +1,169 @@
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats}{\section{broad.\+pda.\+countreads.\+Fastq\+Library\+Stats Class Reference}
+\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats}\index{broad.\+pda.\+countreads.\+Fastq\+Library\+Stats@{broad.\+pda.\+countreads.\+Fastq\+Library\+Stats}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_ab038e21f9033309ec215c7c7f5a03ae1}{Fastq\+Library\+Stats} (String single\+Read\+Fastq)  throws I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_ad29ca0b6d3839c197fcea4555621fda4}{Fastq\+Library\+Stats} (String read1fastq, String read2fastq)  throws I\+O\+Exception 
+\item 
+int \hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a3d80a8886d5085a020400bbb2401acfd}{get\+Num\+Unique\+Reads} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a6d681ea21ea795c5c29e87eaa1a3152a}{get\+Percent\+Duplicated} ()
+\item 
+int \hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a927c0809077c9d8be5623e836a9f0179}{get\+Total\+Reads} ()
+\item 
+long \hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_af0d4416c9e3a72bfc2ab99d44b2b0ab9}{get\+Estimated\+Library\+Size} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a58c27aacaf77599b4b0c413f32dd61d5}{write\+Separate\+Files} (String out\+Unique\+Prefix, String out\+Dup\+Prefix, boolean paired\+Reads)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_aeb8b21c540228a98bd7a41bba2a8ec99}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_ab038e21f9033309ec215c7c7f5a03ae1}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!Fastq\+Library\+Stats@{Fastq\+Library\+Stats}}
+\index{Fastq\+Library\+Stats@{Fastq\+Library\+Stats}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{Fastq\+Library\+Stats}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+Fastq\+Library\+Stats (
+\begin{DoxyParamCaption}
+\item[{String}]{single\+Read\+Fastq}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_ab038e21f9033309ec215c7c7f5a03ae1}
+Constructor for single end reads 
+\begin{DoxyParams}{Parameters}
+{\em single\+Read\+Fastq} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_ad29ca0b6d3839c197fcea4555621fda4}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!Fastq\+Library\+Stats@{Fastq\+Library\+Stats}}
+\index{Fastq\+Library\+Stats@{Fastq\+Library\+Stats}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{Fastq\+Library\+Stats}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+Fastq\+Library\+Stats (
+\begin{DoxyParamCaption}
+\item[{String}]{read1fastq, }
+\item[{String}]{read2fastq}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_ad29ca0b6d3839c197fcea4555621fda4}
+Constructor for paired end reads 
+\begin{DoxyParams}{Parameters}
+{\em read1fastq} & \\
+\hline
+{\em read2fastq} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_af0d4416c9e3a72bfc2ab99d44b2b0ab9}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!get\+Estimated\+Library\+Size@{get\+Estimated\+Library\+Size}}
+\index{get\+Estimated\+Library\+Size@{get\+Estimated\+Library\+Size}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{get\+Estimated\+Library\+Size}]{\setlength{\rightskip}{0pt plus 5cm}long broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+get\+Estimated\+Library\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_af0d4416c9e3a72bfc2ab99d44b2b0ab9}
+Get the estimated library size based on number of reads and percent duplicates \begin{DoxyReturn}{Returns}
+The estimated library size 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a3d80a8886d5085a020400bbb2401acfd}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!get\+Num\+Unique\+Reads@{get\+Num\+Unique\+Reads}}
+\index{get\+Num\+Unique\+Reads@{get\+Num\+Unique\+Reads}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{get\+Num\+Unique\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+get\+Num\+Unique\+Reads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a3d80a8886d5085a020400bbb2401acfd}
+Get the number of unique reads \begin{DoxyReturn}{Returns}
+The number of unique reads 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a6d681ea21ea795c5c29e87eaa1a3152a}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!get\+Percent\+Duplicated@{get\+Percent\+Duplicated}}
+\index{get\+Percent\+Duplicated@{get\+Percent\+Duplicated}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{get\+Percent\+Duplicated}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+get\+Percent\+Duplicated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a6d681ea21ea795c5c29e87eaa1a3152a}
+Get the proportion of reads that are duplicates \begin{DoxyReturn}{Returns}
+The proportion of reads that are duplicated 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a927c0809077c9d8be5623e836a9f0179}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!get\+Total\+Reads@{get\+Total\+Reads}}
+\index{get\+Total\+Reads@{get\+Total\+Reads}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{get\+Total\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+get\+Total\+Reads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a927c0809077c9d8be5623e836a9f0179}
+Get the total number of reads \begin{DoxyReturn}{Returns}
+The total number of reads 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_aeb8b21c540228a98bd7a41bba2a8ec99}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!main@{main}}
+\index{main@{main}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_aeb8b21c540228a98bd7a41bba2a8ec99}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a58c27aacaf77599b4b0c413f32dd61d5}{\index{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}!write\+Separate\+Files@{write\+Separate\+Files}}
+\index{write\+Separate\+Files@{write\+Separate\+Files}!broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats@{broad\+::pda\+::countreads\+::\+Fastq\+Library\+Stats}}
+\subsubsection[{write\+Separate\+Files}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+countreads.\+Fastq\+Library\+Stats.\+write\+Separate\+Files (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+Unique\+Prefix, }
+\item[{String}]{out\+Dup\+Prefix, }
+\item[{boolean}]{paired\+Reads}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1countreads_1_1_fastq_library_stats_a58c27aacaf77599b4b0c413f32dd61d5}
+Write fastq files of unique reads and duplicated reads 
+\begin{DoxyParams}{Parameters}
+{\em out\+Unique\+Prefix} & Output fastq file of unique reads \\
+\hline
+{\em out\+Dup\+Prefix} & Output fastq file of duplicated reads \\
+\hline
+{\em paired\+Reads} & Whether the reads are paired \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/countreads/\hyperlink{_fastq_library_stats_8java}{Fastq\+Library\+Stats.\+java}\end{DoxyCompactItemize}

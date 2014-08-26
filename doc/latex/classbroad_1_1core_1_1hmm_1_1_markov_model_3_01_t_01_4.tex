@@ -1,0 +1,222 @@
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4}{\section{broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$ Class Reference}
+\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4}\index{broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$@{broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Backward\+Result$<$ T $>$}
+\item 
+class {\bfseries Forward\+Result$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a079c48f25bf7da1f0aaf770c33c8165f}{Markov\+Model} (int number\+Of\+States)
+\item 
+void \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a47f46d3ae21c57f50a89306d17bd7aae}{add\+State} (Markov\+State$<$ T $>$ state)
+\item 
+void \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a0fe7960bc081b993ecef81cc7cfd14fc}{add\+State} (Markov\+State$<$ T $>$ state, int state\+Idx)
+\item 
+void \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_aba503eb5544b223a0d59735dce22d352}{set\+Initial\+State\+Transition\+Probability} (int state\+Idx, double probability)
+\item 
+void \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ae791de048edf2805a41b0ecbefcad618}{set\+End\+State\+Transition\+Probability} (int state\+Idx, double probability)
+\item 
+Markov\+State$<$ T $>$ \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a3965e6fcde1614cb752ea55f1ed345b1}{get\+State} (String state\+Name)
+\item 
+List$<$ Integer $>$ \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ac49b035ccf3ecfd2b02a87f27e251180}{emit\+Path} (int num\+Of\+Steps)
+\item 
+void \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_aa8ed4512f906c463dfaf7278cb55a847}{set\+State\+Transition\+Probability} (int state\+Idx1, int state\+Idx2, double probability)
+\item 
+double \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab9e4009415f48fb35892f39e73544237}{compute\+Path\+Log\+Likelihood} (List$<$ T $>$ observation\+Sequence, short\mbox{[}$\,$\mbox{]} path, int initial\+State\+Idx, int end\+State\+Idx)
+\item 
+short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a7ef96f6f074232f1c412330f5e314dfc}{viterbi\+Most\+Likely\+Estimation} (List$<$ T $>$ observation\+Sequence)  throws Bad\+Model\+Exception 
+\item 
+Forward\+Result$<$ T $>$ \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab174b2df4c4b877bc4f4ec512db2d785}{run\+Forward\+Algorithm} (List$<$ T $>$ observation\+Sequence)  throws Bad\+Model\+Exception 
+\item 
+Backward\+Result$<$ T $>$ \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a247765235a346e44aefaa487200a257d}{run\+Backward\+Algorithm} (List$<$ T $>$ observation\+Sequence, Forward\+Result$<$ T $>$ forward\+Data)  throws Bad\+Model\+Exception 
+\item 
+Forward\+Result$<$ T $>$ \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a3645430154354933772229a18a32a042}{run\+Forward\+Algorithm\+No\+Rescaling} (List$<$ T $>$ observation\+Sequence)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a955cdf8737110eaf811de2a511bc4f30}{get\+State\+Transition\+Matrix} ()
+\item 
+List$<$ Markov\+State$<$ T $>$ $>$ \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a8308c5b89e679a387d92b5343a13af95}{get\+States} ()
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_abc493a6b5d103b9cf94675560e02328c}{get\+Initial\+State\+Transition\+Probabilities} ()
+\item 
+List$<$ String $>$ \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a0f483ef7027735422579aa60a3f6c9d6}{get\+Consistency\+Problems} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab7e6ca7e9c392983039f74f2e99c62d7}{draw\+Initial\+State} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a4bf5ca33f4132fcf67b0016c4a13c35d}{draw\+Next\+State} (int prior)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a079c48f25bf7da1f0aaf770c33c8165f}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!Markov\+Model@{Markov\+Model}}
+\index{Markov\+Model@{Markov\+Model}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{Markov\+Model}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.Markov\+Model (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+States}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a079c48f25bf7da1f0aaf770c33c8165f}
+Initialize the Model by specifying the number of states. The probabilities of starting with a given state will be initialized as uniform\+: All states are equally likely at start 
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+States} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a47f46d3ae21c57f50a89306d17bd7aae}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!add\+State@{add\+State}}
+\index{add\+State@{add\+State}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{add\+State}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.add\+State (
+\begin{DoxyParamCaption}
+\item[{Markov\+State$<$ T $>$}]{state}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a47f46d3ae21c57f50a89306d17bd7aae}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a0fe7960bc081b993ecef81cc7cfd14fc}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!add\+State@{add\+State}}
+\index{add\+State@{add\+State}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{add\+State}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.add\+State (
+\begin{DoxyParamCaption}
+\item[{Markov\+State$<$ T $>$}]{state, }
+\item[{int}]{state\+Idx}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a0fe7960bc081b993ecef81cc7cfd14fc}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab9e4009415f48fb35892f39e73544237}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!compute\+Path\+Log\+Likelihood@{compute\+Path\+Log\+Likelihood}}
+\index{compute\+Path\+Log\+Likelihood@{compute\+Path\+Log\+Likelihood}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{compute\+Path\+Log\+Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.compute\+Path\+Log\+Likelihood (
+\begin{DoxyParamCaption}
+\item[{List$<$ T $>$}]{observation\+Sequence, }
+\item[{short\mbox{[}$\,$\mbox{]}}]{path, }
+\item[{int}]{initial\+State\+Idx, }
+\item[{int}]{end\+State\+Idx}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab9e4009415f48fb35892f39e73544237}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab7e6ca7e9c392983039f74f2e99c62d7}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!draw\+Initial\+State@{draw\+Initial\+State}}
+\index{draw\+Initial\+State@{draw\+Initial\+State}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{draw\+Initial\+State}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.draw\+Initial\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab7e6ca7e9c392983039f74f2e99c62d7}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a4bf5ca33f4132fcf67b0016c4a13c35d}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!draw\+Next\+State@{draw\+Next\+State}}
+\index{draw\+Next\+State@{draw\+Next\+State}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{draw\+Next\+State}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.draw\+Next\+State (
+\begin{DoxyParamCaption}
+\item[{int}]{prior}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a4bf5ca33f4132fcf67b0016c4a13c35d}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ac49b035ccf3ecfd2b02a87f27e251180}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!emit\+Path@{emit\+Path}}
+\index{emit\+Path@{emit\+Path}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{emit\+Path}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Integer$>$ broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.emit\+Path (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Of\+Steps}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ac49b035ccf3ecfd2b02a87f27e251180}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a0f483ef7027735422579aa60a3f6c9d6}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!get\+Consistency\+Problems@{get\+Consistency\+Problems}}
+\index{get\+Consistency\+Problems@{get\+Consistency\+Problems}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{get\+Consistency\+Problems}]{\setlength{\rightskip}{0pt plus 5cm}List$<$String$>$ broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.get\+Consistency\+Problems (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a0f483ef7027735422579aa60a3f6c9d6}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_abc493a6b5d103b9cf94675560e02328c}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!get\+Initial\+State\+Transition\+Probabilities@{get\+Initial\+State\+Transition\+Probabilities}}
+\index{get\+Initial\+State\+Transition\+Probabilities@{get\+Initial\+State\+Transition\+Probabilities}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{get\+Initial\+State\+Transition\+Probabilities}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.get\+Initial\+State\+Transition\+Probabilities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_abc493a6b5d103b9cf94675560e02328c}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a3965e6fcde1614cb752ea55f1ed345b1}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{get\+State}]{\setlength{\rightskip}{0pt plus 5cm}Markov\+State$<$T$>$ broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.get\+State (
+\begin{DoxyParamCaption}
+\item[{String}]{state\+Name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a3965e6fcde1614cb752ea55f1ed345b1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a8308c5b89e679a387d92b5343a13af95}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!get\+States@{get\+States}}
+\index{get\+States@{get\+States}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{get\+States}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Markov\+State$<$T$>$ $>$ broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.get\+States (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a8308c5b89e679a387d92b5343a13af95}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a955cdf8737110eaf811de2a511bc4f30}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!get\+State\+Transition\+Matrix@{get\+State\+Transition\+Matrix}}
+\index{get\+State\+Transition\+Matrix@{get\+State\+Transition\+Matrix}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{get\+State\+Transition\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.get\+State\+Transition\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a955cdf8737110eaf811de2a511bc4f30}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a247765235a346e44aefaa487200a257d}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!run\+Backward\+Algorithm@{run\+Backward\+Algorithm}}
+\index{run\+Backward\+Algorithm@{run\+Backward\+Algorithm}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{run\+Backward\+Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}Backward\+Result$<$T$>$ broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.run\+Backward\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{List$<$ T $>$}]{observation\+Sequence, }
+\item[{Forward\+Result$<$ T $>$}]{forward\+Data}
+\end{DoxyParamCaption}
+) throws {\bf Bad\+Model\+Exception}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a247765235a346e44aefaa487200a257d}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab174b2df4c4b877bc4f4ec512db2d785}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!run\+Forward\+Algorithm@{run\+Forward\+Algorithm}}
+\index{run\+Forward\+Algorithm@{run\+Forward\+Algorithm}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{run\+Forward\+Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}Forward\+Result$<$T$>$ broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.run\+Forward\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{List$<$ T $>$}]{observation\+Sequence}
+\end{DoxyParamCaption}
+) throws {\bf Bad\+Model\+Exception}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ab174b2df4c4b877bc4f4ec512db2d785}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a3645430154354933772229a18a32a042}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!run\+Forward\+Algorithm\+No\+Rescaling@{run\+Forward\+Algorithm\+No\+Rescaling}}
+\index{run\+Forward\+Algorithm\+No\+Rescaling@{run\+Forward\+Algorithm\+No\+Rescaling}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{run\+Forward\+Algorithm\+No\+Rescaling}]{\setlength{\rightskip}{0pt plus 5cm}Forward\+Result$<$T$>$ broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.run\+Forward\+Algorithm\+No\+Rescaling (
+\begin{DoxyParamCaption}
+\item[{List$<$ T $>$}]{observation\+Sequence}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a3645430154354933772229a18a32a042}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ae791de048edf2805a41b0ecbefcad618}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!set\+End\+State\+Transition\+Probability@{set\+End\+State\+Transition\+Probability}}
+\index{set\+End\+State\+Transition\+Probability@{set\+End\+State\+Transition\+Probability}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{set\+End\+State\+Transition\+Probability}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.set\+End\+State\+Transition\+Probability (
+\begin{DoxyParamCaption}
+\item[{int}]{state\+Idx, }
+\item[{double}]{probability}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_ae791de048edf2805a41b0ecbefcad618}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_aba503eb5544b223a0d59735dce22d352}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!set\+Initial\+State\+Transition\+Probability@{set\+Initial\+State\+Transition\+Probability}}
+\index{set\+Initial\+State\+Transition\+Probability@{set\+Initial\+State\+Transition\+Probability}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{set\+Initial\+State\+Transition\+Probability}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.set\+Initial\+State\+Transition\+Probability (
+\begin{DoxyParamCaption}
+\item[{int}]{state\+Idx, }
+\item[{double}]{probability}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_aba503eb5544b223a0d59735dce22d352}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_aa8ed4512f906c463dfaf7278cb55a847}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!set\+State\+Transition\+Probability@{set\+State\+Transition\+Probability}}
+\index{set\+State\+Transition\+Probability@{set\+State\+Transition\+Probability}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{set\+State\+Transition\+Probability}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.set\+State\+Transition\+Probability (
+\begin{DoxyParamCaption}
+\item[{int}]{state\+Idx1, }
+\item[{int}]{state\+Idx2, }
+\item[{double}]{probability}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_aa8ed4512f906c463dfaf7278cb55a847}
+\hypertarget{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a7ef96f6f074232f1c412330f5e314dfc}{\index{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}!viterbi\+Most\+Likely\+Estimation@{viterbi\+Most\+Likely\+Estimation}}
+\index{viterbi\+Most\+Likely\+Estimation@{viterbi\+Most\+Likely\+Estimation}!broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$@{broad\+::core\+::hmm\+::\+Markov\+Model$<$ T $>$}}
+\subsubsection[{viterbi\+Most\+Likely\+Estimation}]{\setlength{\rightskip}{0pt plus 5cm}short \mbox{[}$\,$\mbox{]} broad.\+core.\+hmm.\+Markov\+Model$<$ T $>$.viterbi\+Most\+Likely\+Estimation (
+\begin{DoxyParamCaption}
+\item[{List$<$ T $>$}]{observation\+Sequence}
+\end{DoxyParamCaption}
+) throws {\bf Bad\+Model\+Exception}}}\label{classbroad_1_1core_1_1hmm_1_1_markov_model_3_01_t_01_4_a7ef96f6f074232f1c412330f5e314dfc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/hmm/\hyperlink{_markov_model_8java}{Markov\+Model.\+java}\end{DoxyCompactItemize}

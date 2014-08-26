@@ -1,0 +1,13 @@
+digraph "broad.core.multiplealignment.MAFAlignment.isEmpty"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.multiplealignment.\lMAFAlignment.isEmpty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.siphy.Conservation\lUtils.setUpMAF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_conservation_utils.html#ae322901c948bd97e564e120f7f98046c"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.siphy.Conservation\lUtils.setUpAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_conservation_utils.html#ab3eecb49e17d4de98098b5b85d53dcf4"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.siphy.Conservation\lUtils.setUpMAF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_conservation_utils.html#a2e8a2956dfe5e74d9cf4fbf09bb29fed"];
+}

@@ -1,0 +1,13 @@
+digraph "broad.core.math.EmpiricalDistribution.EmpiricalDistribution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.math.Empirical\lDistribution.EmpiricalDistribution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.math.Empirical\lDistribution.getDistributionOf\lHistogramValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_empirical_distribution.html#aab00bd3b82aa7048a17a57fc2f05191b"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.math.Empirical\lDistribution.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_empirical_distribution.html#ad8df7d1fa6fabdedac5fd2ce3a2b9bd8"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.math.Empirical\lDistribution.getEmpiricalMaxStatistic\lDistribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_empirical_distribution.html#ac2b22a7d56c4a3859521123ae662e1c0"];
+}

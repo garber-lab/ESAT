@@ -1,0 +1,28 @@
+digraph "broad.core.annotation.BEDGraph"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.BEDGraph",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.annotation.ShortBED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_short_b_e_d.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.Basic\lGenomicAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.annotation.Basic\lLightweightAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="BasicAnnotation",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.annotation.Lightweight\lGenomicAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.annotation.Annotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Comparable\< Annotation \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.core.annotation.Genomic\lAnnotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation.html"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Cloneable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="broad.core.annotation.Feature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_feature.html"];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

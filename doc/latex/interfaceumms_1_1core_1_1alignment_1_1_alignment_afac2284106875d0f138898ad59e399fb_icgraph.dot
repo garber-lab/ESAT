@@ -1,0 +1,29 @@
+digraph "umms.core.alignment.Alignment.getEnd"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.alignment.Alignment.getEnd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.alignment.Single\lEndAlignment.SingleEndAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_single_end_alignment.html#af6832ccae2d80001aea1e9fab6d071f1"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.alignment.Single\lEndAlignment.getFragmentEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_single_end_alignment.html#a38409b7b5071dbc0c884b6b5412ed1e0"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getFragmentEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#af16e4a059527adbdf5ac66350cab42c5"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getFragment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#a210850190a8e4e98c2ce56c842f0b80e"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getFirstFragment\lPositionStranded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#a6a0100ecd7ccbbfa99b2fdbce249264b"];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getLastFragment\lPositionStranded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#a74011edfb3ccb6915bea34da9d73e3c7"];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="umms.core.alignment.Single\lEndAlignment.getLastFragmentPosition\lStranded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_single_end_alignment.html#a7ab034b249df1e27ea154af3993e55e7"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="umms.core.alignment.Single\lEndAlignment.getFirstFragmentPosition\lStranded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_single_end_alignment.html#ac9e20c5185b1732fc1fbcd66c670cff0"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="umms.core.alignment.Single\lEndAlignment.getFragment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_single_end_alignment.html#a4bfe393bea33fbdd9f36beb72d226afc"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="umms.core.alignment.Single\lEndAlignment.getAlignmentEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_single_end_alignment.html#a1128bfdff4a5057310ea9470da3b7b56"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getAlignmentEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#af6f367d03b371f8c11272b50edeb2166"];
+}

@@ -1,0 +1,13 @@
+digraph "broad.pda.rnai.ExtractSequence.getSequenceUnoriented"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.rnai.ExtractSequence.get\lSequenceUnoriented",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.sequence.Sequence.getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#a5da71f38ac38e891746b5f747fe67213"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.Genomic\lAnnotation.getOrientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation.html#a36373aa2575e846905204c09bf74f041"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.pda.rnai.ExtractSequence.reverse\lComplement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1rnai_1_1_extract_sequence.html#a64d8ff8c0584903be975e781630b8736"];
+}

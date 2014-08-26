@@ -1,0 +1,11 @@
+digraph "broad.pda.seq.segmentation.GenericAlignmentDataModel.GenericAlignmentDataModel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.segmentation.\lGenericAlignmentDataModel.Generic\lAlignmentDataModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.seq.segmentation.\lGenericAlignmentDataModel.setRemove\lDuplicatesFlag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_generic_alignment_data_model.html#a5ea0c67a41a6d61ae674784525937fd7"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.pda.seq.segmentation.\lGenericAlignmentDataModel.setWeigh\lReadCountsFlag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_generic_alignment_data_model.html#a789507649e0152371c17a07d4027ad0b"];
+}

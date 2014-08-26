@@ -1,0 +1,1245 @@
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model}{\section{umms.\+core.\+model.\+Alignment\+Model Class Reference}
+\label{classumms_1_1core_1_1model_1_1_alignment_model}\index{umms.\+core.\+model.\+Alignment\+Model@{umms.\+core.\+model.\+Alignment\+Model}}
+}
+
+
+Inheritance diagram for umms.\+core.\+model.\+Alignment\+Model\+:
+
+
+Collaboration diagram for umms.\+core.\+model.\+Alignment\+Model\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_1_1_alignment_count}{Alignment\+Count}
+\item 
+class \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_1_1_filtered_iterator}{Filtered\+Iterator}
+\item 
+class \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_1_1_node_iterator}{Node\+Iterator}
+\item 
+class \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_1_1_wrap_alignment_count_iterator}{Wrap\+Alignment\+Count\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a006824ec871887681edaffb89fa87162}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ read\+Filters, boolean read\+Or\+Create\+Paired\+End\+Bam)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a70581a60f336324d804867ffb73c7673}{Alignment\+Model} ()
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a3b8a700cc6b47bc3139d3bf2798c0bce}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ read\+Filters, boolean read\+Or\+Create\+Paired\+End\+Bam, Transcription\+Read transcription\+Read)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a542d2f0890ebfb72e65738c8d842a238}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ read\+Filters, boolean read\+Or\+Create\+Paired\+End\+Bam, Transcription\+Read transcription\+Read, boolean fragment)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a4fdc9fd5a446d0d1d005832175487121}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ read\+Filters, boolean read\+Or\+Create\+Paired\+End\+Bam, Transcription\+Read transcription\+Read, String masked\+Region\+File)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a34760796b462ef196afd99507742b655}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ read\+Filters, boolean read\+Or\+Create\+Paired\+End\+Bam, Transcription\+Read transcription\+Read, boolean fragment, String masked\+Region\+File)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a47d629ed96cf0a40fca90705bdfb7bcc}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ read\+Filters)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a6644d4e1ac91a5a6d3c018761cf13530}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ read\+Filters, Transcription\+Read transcription\+Read)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aeb41305d4dd61618151384ec47123f0a}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, boolean read\+Or\+Create\+Paired\+End\+Bam)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ac571c4bd3818f884a7880f19271e0c95}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, boolean read\+Or\+Create\+Paired\+End\+Bam, Transcription\+Read transcription\+Read)
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_acbf991ede0c8e11a78a03849f35cbfac}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space})
+\item 
+\hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a7ba2b3f70ca8ddf24bca3295fdb82e9a}{Alignment\+Model} (String bam\+File, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}, Transcription\+Read transcription\+Read)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ae1bdf3b93c959ea459a07c8b781913c9}{compute\+Global\+Stats} ()
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aedc2745bb8e85e862a91de0cb2e94546}{get\+Read\+Iterator} ()
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ac1001577f4c2e5be527f1d9c4321d1a5}{get\+Read\+Iterator} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+List$<$ Double $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ae5b5c83c1ef855c59c804217e6522c95}{get\+Position\+Count\+List} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene)  throws I\+O\+Exception 
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a11f67951abb4648fe109809c361856d2}{get\+Ref\+Sequence\+Counts} (String ref\+Name)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a928a086e1ce54468cf0fd582e32f404d}{get\+Count} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} window, boolean fully\+Contained)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aee0c8cba4987e611a68418854a3c903a}{get\+Count} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_af4dd94403dce832ba68ba6ea4a998dcb}{get\+Count} (Closeable\+Iterator$<$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_1_1_alignment_count}{Alignment\+Count} $>$ iter)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a0b3aca4d1a840f1519b7bf9798b95039}{get\+Global\+Lambda} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a2d0ca3da4ecfd1c131cd501cd83534bf}{get\+Global\+Length} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aae475cceb8f8c8c85f7902f0a3e75e43}{get\+Global\+Paired\+Fragments} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_empirical_distribution}{Empirical\+Distribution} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ac8a2dfade7662d69c9abae1712c52d2f}{get\+Read\+Size\+Distribution} (\hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} coord, int max\+Size, int num\+Bins)
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_empirical_distribution}{Empirical\+Distribution} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a34775ceefaa53bc37208bba747debe4b}{get\+Read\+Size\+Distribution} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} coord, int max\+Size, int num\+Bins)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ac8db2149ef23944b52d4fc6080b5fc48}{get\+Median\+Read\+Size} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} coord, int max\+Size, int num\+Bins, boolean fully\+Contained)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a61c791656166ff7098f2ec8bf12b212b}{get\+Median\+Read\+Size} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} coord, int max\+Size, int num\+Bins)
+\item 
+\hyperlink{classbroad_1_1core_1_1math_1_1_empirical_distribution}{Empirical\+Distribution} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ab634dd7e626def19bea7ecf401ca04a5}{get\+Read\+Size\+Distribution} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, \hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} coord, int max\+Size, int num\+Bins, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_1_1_alignment_count}{Alignment\+Count} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a499fbcef653f843914b3c053fd5d2aa5}{get\+Overlapping\+Read\+Counts} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a6ab24fe8d449fe58682f3d4ce3470c27}{get\+Overlapping\+Spliced\+Reads} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a48c883c699922b971eaaafa7785b3eae}{get\+Overlapping\+Spliced\+Reads} (String chr)
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_af05b3d980c6e5c0bc831d5c4872748f8}{get\+Overlapping\+Reads} (String chr)
+\item 
+int \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a8b901c92b5e45e9c69796e0691700128}{get\+Bases\+Covered} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a50d046e38dea99f843039193c615cea8}{get\+Permuted\+Annotations} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a6efebb99d6bf0d6eeca5059f81384fcf}{get\+Global\+Num\+Reads} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a100151cc831e5ac822dd97c04f5e7773}{get\+Global\+Num\+Reads\+Reference\+Seqs} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aff0080eefe7199b9db895a2b9ef628b0}{is\+Valid} (\hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} read)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_adfe2fed4cb3a35e2ad7050cdfb0dd053}{get\+Count} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} window)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a13cae6f7cc2b1c6830fa8adb2d410ee4}{contains\+Reference} (String ref\+Name)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a1f2e9cd52c3f45ee20663e44bbe0fb37}{get\+Global\+Count} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a8371e9ed5766760c3f78ba545b006f57}{get\+Global\+Count\+Reference\+Seqs} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aaf519a6b3dfe9f486e96704d21b07e91}{size} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a4beb5b4c801f226d65498df3a95137a1}{add\+Filter} (Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ filter)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aa06a4c4873c10a9715f6c569d013f71d}{add\+Filters} (Collection$<$ Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$$>$ filters)
+\item 
+Window\+Score\+Iterator$<$ \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_count_score}{Count\+Score} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a3665a9f334771056e2661622fd756c68}{scan} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, int window\+Size, int overlap)
+\item 
+long \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a3b33fe828a04581c1106d7179a1182a6}{get\+Ref\+Sequence\+Length} (String ref\+Name)
+\item 
+Iterator$<$?extends \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ae3e6d318c25206e3512f4a78fb7b4904}{window\+Iterator} (int window\+Size, int overlap)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ad2ca51fe2918d5a556aaa72fd0372e72}{get\+Ref\+Sequence\+Lambda} (String ref\+Name)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a411c3f236c894f9df07ad4001f315d5f}{get\+Coordinate\+Space} ()
+\item 
+String \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aa7aa575e64161143170f8840d920e438}{get\+Bam\+File} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_abd322ee7a99c0ae2439baa28eeca23bc}{get\+Bases\+Covered} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+void \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ab6b527bd29c0191df67def7958e2188a}{remove\+Filter} (Predicate$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ read\+Filter)
+\item 
+int \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a623a25e976697a1773196a2cf5f4d349}{get\+Intron\+Counts} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} intron)
+\item 
+Map$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment}, Integer $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a8db29afa1455774d98060c04f76b6c1c}{get\+Overlapping\+Read\+Replicate\+Counts} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a70e18c970397ccd3b200529e5b9a6c15}{get\+Overlapping\+Reads} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a1f85a13c310238f87b145bcc8bfe20b2}{get\+Peak} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} parent, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_af3b5cd3178779e5b2022e1739af7ef85}{get\+Overlapping\+Annotations} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a605283647c0e4797f19a57b20fb870bc}{iterator} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a6fc7f8dfbc07c036d0701237b917ec80}{get\+Count\+Excluding\+Region} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} excluded)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a45b55e717dcb570d8a3853360c92f272}{get\+Spliced\+Count} (\hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} alignments, boolean fully\+Contained)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_afdbc71f66c4a8e02cf59c6525c668ad0}{get\+Average\+Count\+Per\+Position\+With\+Threshold} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene, int min\+Count)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a1eedf20d46a117cc86b53632a8cff0cb}{get\+Average\+Count\+Per\+Position} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene)
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a2ad06cbab73fda69b7f399d1980adde7}{get\+Counts\+Per\+Position} (\hyperlink{classumms_1_1core_1_1annotation_1_1_gene}{Gene} gene)
+\item 
+List$<$ Double $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a02809d43b5a67c1a9c8942b7d399c1a2}{get\+Counts\+Stranded\+Per\+Position} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} gene)
+\item 
+double \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a4314840666a311fe81b2f0f0340d0f7b}{get\+Count\+Stranded\+Excluding\+Region} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} excluded)
+\item 
+Map$<$ String, Integer $>$ \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_aa8168915afb028e9db4ecaf28338a6e5}{get\+Ref\+Sequence\+Lengths} ()
+\item 
+Transcription\+Read \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_ac53691d7b9efa13bc4ea3350d0ee83d3}{get\+Strand} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} \hyperlink{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{coordinate\+Space}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Serves the purpose of the Generic Data\+Alignment model and the Continuous\+Data\+Alignment\+Model Will populate alignments If a paired end file has unmapped mates, it will be represented by a single end read If both mates are mapped it will be represented as paired end reads Therefore a single model might have both, use flag X to exclude or include only one type This will be a bridge to the analysis modules \begin{DoxyAuthor}{Author}
+skadri 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a006824ec871887681edaffb89fa87162}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{read\+Filters, }
+\item[{boolean}]{read\+Or\+Create\+Paired\+End\+Bam}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a006824ec871887681edaffb89fa87162}
+Build with a B\+A\+M file Populate the alignment collection 
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & \\
+\hline
+{\em coordinate\+Space} & \\
+\hline
+{\em \hyperlink{namespaceumms_1_1core_1_1read_filters}{read\+Filters}} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a70581a60f336324d804867ffb73c7673}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a70581a60f336324d804867ffb73c7673}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a3b8a700cc6b47bc3139d3bf2798c0bce}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{read\+Filters, }
+\item[{boolean}]{read\+Or\+Create\+Paired\+End\+Bam, }
+\item[{Transcription\+Read}]{transcription\+Read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a3b8a700cc6b47bc3139d3bf2798c0bce}
+Populate the alignment collection 
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & \\
+\hline
+{\em coordinate\+Space} & \\
+\hline
+{\em \hyperlink{namespaceumms_1_1core_1_1read_filters}{read\+Filters}} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a542d2f0890ebfb72e65738c8d842a238}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{read\+Filters, }
+\item[{boolean}]{read\+Or\+Create\+Paired\+End\+Bam, }
+\item[{Transcription\+Read}]{transcription\+Read, }
+\item[{boolean}]{fragment}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a542d2f0890ebfb72e65738c8d842a238}
+Populate the alignment collection 
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & \\
+\hline
+{\em coordinate\+Space} & \\
+\hline
+{\em \hyperlink{namespaceumms_1_1core_1_1read_filters}{read\+Filters}} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a4fdc9fd5a446d0d1d005832175487121}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{read\+Filters, }
+\item[{boolean}]{read\+Or\+Create\+Paired\+End\+Bam, }
+\item[{Transcription\+Read}]{transcription\+Read, }
+\item[{String}]{masked\+Region\+File}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a4fdc9fd5a446d0d1d005832175487121}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a34760796b462ef196afd99507742b655}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{read\+Filters, }
+\item[{boolean}]{read\+Or\+Create\+Paired\+End\+Bam, }
+\item[{Transcription\+Read}]{transcription\+Read, }
+\item[{boolean}]{fragment, }
+\item[{String}]{masked\+Region\+File}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a34760796b462ef196afd99507742b655}
+Populate the alignment collection 
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & \\
+\hline
+{\em coordinate\+Space} & \\
+\hline
+{\em \hyperlink{namespaceumms_1_1core_1_1read_filters}{read\+Filters}} & \\
+\hline
+{\em tmp\+Dir} & Temp directory for sorting \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+reader cache -\/ A\+D 
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a47d629ed96cf0a40fca90705bdfb7bcc}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{read\+Filters}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a47d629ed96cf0a40fca90705bdfb7bcc}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a6644d4e1ac91a5a6d3c018761cf13530}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{read\+Filters, }
+\item[{Transcription\+Read}]{transcription\+Read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a6644d4e1ac91a5a6d3c018761cf13530}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aeb41305d4dd61618151384ec47123f0a}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{boolean}]{read\+Or\+Create\+Paired\+End\+Bam}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aeb41305d4dd61618151384ec47123f0a}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ac571c4bd3818f884a7880f19271e0c95}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{boolean}]{read\+Or\+Create\+Paired\+End\+Bam, }
+\item[{Transcription\+Read}]{transcription\+Read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ac571c4bd3818f884a7880f19271e0c95}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_acbf991ede0c8e11a78a03849f35cbfac}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_acbf991ede0c8e11a78a03849f35cbfac}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a7ba2b3f70ca8ddf24bca3295fdb82e9a}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!Alignment\+Model@{Alignment\+Model}}
+\index{Alignment\+Model@{Alignment\+Model}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{Alignment\+Model}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+model.\+Alignment\+Model.\+Alignment\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{{\bf Coordinate\+Space}}]{coordinate\+Space, }
+\item[{Transcription\+Read}]{transcription\+Read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a7ba2b3f70ca8ddf24bca3295fdb82e9a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a4beb5b4c801f226d65498df3a95137a1}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!add\+Filter@{add\+Filter}}
+\index{add\+Filter@{add\+Filter}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{add\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+Alignment\+Model.\+add\+Filter (
+\begin{DoxyParamCaption}
+\item[{Predicate$<$ {\bf Alignment} $>$}]{filter}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a4beb5b4c801f226d65498df3a95137a1}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aa06a4c4873c10a9715f6c569d013f71d}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!add\+Filters@{add\+Filters}}
+\index{add\+Filters@{add\+Filters}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{add\+Filters}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+Alignment\+Model.\+add\+Filters (
+\begin{DoxyParamCaption}
+\item[{Collection$<$ Predicate$<$ {\bf Alignment} $>$$>$}]{filters}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aa06a4c4873c10a9715f6c569d013f71d}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ae1bdf3b93c959ea459a07c8b781913c9}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!compute\+Global\+Stats@{compute\+Global\+Stats}}
+\index{compute\+Global\+Stats@{compute\+Global\+Stats}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{compute\+Global\+Stats}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+Alignment\+Model.\+compute\+Global\+Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ae1bdf3b93c959ea459a07c8b781913c9}
+Compute global stats and cache to a file for future use, or read from file if already cached 
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a13cae6f7cc2b1c6830fa8adb2d410ee4}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!contains\+Reference@{contains\+Reference}}
+\index{contains\+Reference@{contains\+Reference}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{contains\+Reference}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+model.\+Alignment\+Model.\+contains\+Reference (
+\begin{DoxyParamCaption}
+\item[{String}]{ref\+Name}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a13cae6f7cc2b1c6830fa8adb2d410ee4}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a1eedf20d46a117cc86b53632a8cff0cb}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Average\+Count\+Per\+Position@{get\+Average\+Count\+Per\+Position}}
+\index{get\+Average\+Count\+Per\+Position@{get\+Average\+Count\+Per\+Position}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Average\+Count\+Per\+Position}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Average\+Count\+Per\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a1eedf20d46a117cc86b53632a8cff0cb}
+Get the average position level coverage 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The average of all position counts in the gene 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_afdbc71f66c4a8e02cf59c6525c668ad0}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Average\+Count\+Per\+Position\+With\+Threshold@{get\+Average\+Count\+Per\+Position\+With\+Threshold}}
+\index{get\+Average\+Count\+Per\+Position\+With\+Threshold@{get\+Average\+Count\+Per\+Position\+With\+Threshold}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Average\+Count\+Per\+Position\+With\+Threshold}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Average\+Count\+Per\+Position\+With\+Threshold (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene, }
+\item[{int}]{min\+Count}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_afdbc71f66c4a8e02cf59c6525c668ad0}
+Get average position level coverage of only positions with count above a threshold (denominator excludes positions not passing threshold) 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+{\em min\+Count} & Min coverage to include a position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The average of all position counts over threshold in the gene 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aa7aa575e64161143170f8840d920e438}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Bam\+File@{get\+Bam\+File}}
+\index{get\+Bam\+File@{get\+Bam\+File}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Bam\+File}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+model.\+Alignment\+Model.\+get\+Bam\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aa7aa575e64161143170f8840d920e438}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a8b901c92b5e45e9c69796e0691700128}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Bases\+Covered@{get\+Bases\+Covered}}
+\index{get\+Bases\+Covered@{get\+Bases\+Covered}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Bases\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+model.\+Alignment\+Model.\+get\+Bases\+Covered (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a8b901c92b5e45e9c69796e0691700128}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_abd322ee7a99c0ae2439baa28eeca23bc}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Bases\+Covered@{get\+Bases\+Covered}}
+\index{get\+Bases\+Covered@{get\+Bases\+Covered}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Bases\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+model.\+Alignment\+Model.\+get\+Bases\+Covered (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_abd322ee7a99c0ae2439baa28eeca23bc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a411c3f236c894f9df07ad4001f315d5f}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Coordinate\+Space@{get\+Coordinate\+Space}}
+\index{get\+Coordinate\+Space@{get\+Coordinate\+Space}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordinate\+Space} umms.\+core.\+model.\+Alignment\+Model.\+get\+Coordinate\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a411c3f236c894f9df07ad4001f315d5f}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a928a086e1ce54468cf0fd582e32f404d}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{window, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a928a086e1ce54468cf0fd582e32f404d}
+Use the coordinate space to decide what is an overlapping read 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+{\em fully\+Contained} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aee0c8cba4987e611a68418854a3c903a}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aee0c8cba4987e611a68418854a3c903a}
+Use the coordinate space to decide what is an overlapping read Gets the count over the entire genome \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_af4dd94403dce832ba68ba6ea4a998dcb}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Count (
+\begin{DoxyParamCaption}
+\item[{Closeable\+Iterator$<$ {\bf Alignment\+Count} $>$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_af4dd94403dce832ba68ba6ea4a998dcb}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_adfe2fed4cb3a35e2ad7050cdfb0dd053}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{window}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_adfe2fed4cb3a35e2ad7050cdfb0dd053}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a6fc7f8dfbc07c036d0701237b917ec80}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Count\+Excluding\+Region@{get\+Count\+Excluding\+Region}}
+\index{get\+Count\+Excluding\+Region@{get\+Count\+Excluding\+Region}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Count\+Excluding\+Region}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Count\+Excluding\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{{\bf Annotation}}]{excluded}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a6fc7f8dfbc07c036d0701237b917ec80}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a2ad06cbab73fda69b7f399d1980adde7}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Counts\+Per\+Position@{get\+Counts\+Per\+Position}}
+\index{get\+Counts\+Per\+Position@{get\+Counts\+Per\+Position}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Counts\+Per\+Position}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} umms.\+core.\+model.\+Alignment\+Model.\+get\+Counts\+Per\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a2ad06cbab73fda69b7f399d1980adde7}
+This function returns an array list of counts for each position along the specified gene 
+\begin{DoxyParams}{Parameters}
+{\em gene} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a02809d43b5a67c1a9c8942b7d399c1a2}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Counts\+Stranded\+Per\+Position@{get\+Counts\+Stranded\+Per\+Position}}
+\index{get\+Counts\+Stranded\+Per\+Position@{get\+Counts\+Stranded\+Per\+Position}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Counts\+Stranded\+Per\+Position}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Double$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Counts\+Stranded\+Per\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a02809d43b5a67c1a9c8942b7d399c1a2}
+This function returns an array list of counts for each position along the specified gene 
+\begin{DoxyParams}{Parameters}
+{\em gene} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a4314840666a311fe81b2f0f0340d0f7b}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Count\+Stranded\+Excluding\+Region@{get\+Count\+Stranded\+Excluding\+Region}}
+\index{get\+Count\+Stranded\+Excluding\+Region@{get\+Count\+Stranded\+Excluding\+Region}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Count\+Stranded\+Excluding\+Region}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Count\+Stranded\+Excluding\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{{\bf Annotation}}]{excluded}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a4314840666a311fe81b2f0f0340d0f7b}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a1f2e9cd52c3f45ee20663e44bbe0fb37}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Global\+Count@{get\+Global\+Count}}
+\index{get\+Global\+Count@{get\+Global\+Count}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Global\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Global\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a1f2e9cd52c3f45ee20663e44bbe0fb37}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a8371e9ed5766760c3f78ba545b006f57}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Global\+Count\+Reference\+Seqs@{get\+Global\+Count\+Reference\+Seqs}}
+\index{get\+Global\+Count\+Reference\+Seqs@{get\+Global\+Count\+Reference\+Seqs}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Global\+Count\+Reference\+Seqs}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Global\+Count\+Reference\+Seqs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a8371e9ed5766760c3f78ba545b006f57}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a0b3aca4d1a840f1519b7bf9798b95039}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Global\+Lambda@{get\+Global\+Lambda}}
+\index{get\+Global\+Lambda@{get\+Global\+Lambda}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Global\+Lambda}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Global\+Lambda (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a0b3aca4d1a840f1519b7bf9798b95039}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a2d0ca3da4ecfd1c131cd501cd83534bf}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Global\+Length@{get\+Global\+Length}}
+\index{get\+Global\+Length@{get\+Global\+Length}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Global\+Length}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Global\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a2d0ca3da4ecfd1c131cd501cd83534bf}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a6efebb99d6bf0d6eeca5059f81384fcf}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Global\+Num\+Reads@{get\+Global\+Num\+Reads}}
+\index{get\+Global\+Num\+Reads@{get\+Global\+Num\+Reads}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Global\+Num\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Global\+Num\+Reads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a6efebb99d6bf0d6eeca5059f81384fcf}
+Get total number of reads \begin{DoxyReturn}{Returns}
+Total read count 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a100151cc831e5ac822dd97c04f5e7773}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Global\+Num\+Reads\+Reference\+Seqs@{get\+Global\+Num\+Reads\+Reference\+Seqs}}
+\index{get\+Global\+Num\+Reads\+Reference\+Seqs@{get\+Global\+Num\+Reads\+Reference\+Seqs}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Global\+Num\+Reads\+Reference\+Seqs}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Global\+Num\+Reads\+Reference\+Seqs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a100151cc831e5ac822dd97c04f5e7773}
+Get total number of reads mapping to the coordinate space \begin{DoxyReturn}{Returns}
+Total read count on coordinate space 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aae475cceb8f8c8c85f7902f0a3e75e43}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Global\+Paired\+Fragments@{get\+Global\+Paired\+Fragments}}
+\index{get\+Global\+Paired\+Fragments@{get\+Global\+Paired\+Fragments}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Global\+Paired\+Fragments}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Global\+Paired\+Fragments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aae475cceb8f8c8c85f7902f0a3e75e43}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a623a25e976697a1773196a2cf5f4d349}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Intron\+Counts@{get\+Intron\+Counts}}
+\index{get\+Intron\+Counts@{get\+Intron\+Counts}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Intron\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+model.\+Alignment\+Model.\+get\+Intron\+Counts (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{intron}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a623a25e976697a1773196a2cf5f4d349}
+This will count the number of spliced reads with exactly this intron 
+\begin{DoxyParams}{Parameters}
+{\em intron} & the intron to count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ac8db2149ef23944b52d4fc6080b5fc48}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Median\+Read\+Size@{get\+Median\+Read\+Size}}
+\index{get\+Median\+Read\+Size@{get\+Median\+Read\+Size}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Median\+Read\+Size}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Median\+Read\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{{\bf Coordinate\+Space}}]{coord, }
+\item[{int}]{max\+Size, }
+\item[{int}]{num\+Bins, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ac8db2149ef23944b52d4fc6080b5fc48}
+Get the median of all read (or fragment) sizes in an annotation 
+\begin{DoxyParams}{Parameters}
+{\em region} & The annotation in which to count read sizes \\
+\hline
+{\em coord} & Coordinate space in which to compute read sizes \\
+\hline
+{\em max\+Size} & The maximum read size to check for \\
+\hline
+{\em num\+Bins} & The number of bins for histogram \\
+\hline
+{\em fully\+Contained} & Count fully contained reads/fragments only \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distribution of read sizes with respect to coordinate space 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a61c791656166ff7098f2ec8bf12b212b}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Median\+Read\+Size@{get\+Median\+Read\+Size}}
+\index{get\+Median\+Read\+Size@{get\+Median\+Read\+Size}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Median\+Read\+Size}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Median\+Read\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{{\bf Coordinate\+Space}}]{coord, }
+\item[{int}]{max\+Size, }
+\item[{int}]{num\+Bins}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a61c791656166ff7098f2ec8bf12b212b}
+Get the median of all read (or fragment) sizes in an annotation 
+\begin{DoxyParams}{Parameters}
+{\em region} & The annotation in which to count read sizes \\
+\hline
+{\em coord} & Coordinate space in which to compute read sizes \\
+\hline
+{\em max\+Size} & The maximum read size to check for \\
+\hline
+{\em num\+Bins} & The number of bins for histogram \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distribution of read sizes with respect to coordinate space 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_af3b5cd3178779e5b2022e1739af7ef85}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Overlapping\+Annotations@{get\+Overlapping\+Annotations}}
+\index{get\+Overlapping\+Annotations@{get\+Overlapping\+Annotations}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Overlapping\+Annotations}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Overlapping\+Annotations (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_af3b5cd3178779e5b2022e1739af7ef85}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a499fbcef653f843914b3c053fd5d2aa5}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Overlapping\+Read\+Counts@{get\+Overlapping\+Read\+Counts}}
+\index{get\+Overlapping\+Read\+Counts@{get\+Overlapping\+Read\+Counts}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Overlapping\+Read\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment\+Count}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Overlapping\+Read\+Counts (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a499fbcef653f843914b3c053fd5d2aa5}
+Return the reads that overlap with this region in coordinate space If the Alignment model has a strand which is N\+O\+T unstranded, then returns stranded counts 
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a8db29afa1455774d98060c04f76b6c1c}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Overlapping\+Read\+Replicate\+Counts@{get\+Overlapping\+Read\+Replicate\+Counts}}
+\index{get\+Overlapping\+Read\+Replicate\+Counts@{get\+Overlapping\+Read\+Replicate\+Counts}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Overlapping\+Read\+Replicate\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}Map$<${\bf Alignment}, Integer$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Overlapping\+Read\+Replicate\+Counts (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a8db29afa1455774d98060c04f76b6c1c}
+Get number of replicates of each read overlapping the region 
+\begin{DoxyParams}{Parameters}
+{\em region} & The region \\
+\hline
+{\em fully\+Contained} & Count fully contained reads only \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+For each unique read position, the number of replicates 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_af05b3d980c6e5c0bc831d5c4872748f8}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Overlapping\+Reads@{get\+Overlapping\+Reads}}
+\index{get\+Overlapping\+Reads@{get\+Overlapping\+Reads}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Overlapping\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Overlapping\+Reads (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_af05b3d980c6e5c0bc831d5c4872748f8}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a70e18c970397ccd3b200529e5b9a6c15}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Overlapping\+Reads@{get\+Overlapping\+Reads}}
+\index{get\+Overlapping\+Reads@{get\+Overlapping\+Reads}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Overlapping\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Overlapping\+Reads (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a70e18c970397ccd3b200529e5b9a6c15}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a6ab24fe8d449fe58682f3d4ce3470c27}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Overlapping\+Spliced\+Reads@{get\+Overlapping\+Spliced\+Reads}}
+\index{get\+Overlapping\+Spliced\+Reads@{get\+Overlapping\+Spliced\+Reads}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Overlapping\+Spliced\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Overlapping\+Spliced\+Reads (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a6ab24fe8d449fe58682f3d4ce3470c27}
+Return the reads that overlap with this region in coordinate space 
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a48c883c699922b971eaaafa7785b3eae}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Overlapping\+Spliced\+Reads@{get\+Overlapping\+Spliced\+Reads}}
+\index{get\+Overlapping\+Spliced\+Reads@{get\+Overlapping\+Spliced\+Reads}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Overlapping\+Spliced\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Overlapping\+Spliced\+Reads (
+\begin{DoxyParamCaption}
+\item[{String}]{chr}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a48c883c699922b971eaaafa7785b3eae}
+Return the reads that overlap with this region in coordinate space 
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a1f85a13c310238f87b145bcc8bfe20b2}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Peak@{get\+Peak}}
+\index{get\+Peak@{get\+Peak}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Peak}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+model.\+Alignment\+Model.\+get\+Peak (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{parent, }
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a1f85a13c310238f87b145bcc8bfe20b2}
+Get the span covered by all reads overlapping a region 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent annotation of the region of interest \\
+\hline
+{\em region} & The region of interest \\
+\hline
+{\em fully\+Contained} & Fully contained reads only \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subregion of the parent gene enclosing all reads overlapping the region or null if no overlappers 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a50d046e38dea99f843039193c615cea8}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Permuted\+Annotations@{get\+Permuted\+Annotations}}
+\index{get\+Permuted\+Annotations@{get\+Permuted\+Annotations}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Permuted\+Annotations}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Permuted\+Annotations (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a50d046e38dea99f843039193c615cea8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ae5b5c83c1ef855c59c804217e6522c95}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Position\+Count\+List@{get\+Position\+Count\+List}}
+\index{get\+Position\+Count\+List@{get\+Position\+Count\+List}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Position\+Count\+List}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Double$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Position\+Count\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{gene}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ae5b5c83c1ef855c59c804217e6522c95}
+Get list of position level counts in mature transcript 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of position counts 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aedc2745bb8e85e862a91de0cb2e94546}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Read\+Iterator@{get\+Read\+Iterator}}
+\index{get\+Read\+Iterator@{get\+Read\+Iterator}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Read\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Read\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aedc2745bb8e85e862a91de0cb2e94546}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ac1001577f4c2e5be527f1d9c4321d1a5}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Read\+Iterator@{get\+Read\+Iterator}}
+\index{get\+Read\+Iterator@{get\+Read\+Iterator}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Read\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Read\+Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ac1001577f4c2e5be527f1d9c4321d1a5}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ac8a2dfade7662d69c9abae1712c52d2f}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Read\+Size\+Distribution@{get\+Read\+Size\+Distribution}}
+\index{get\+Read\+Size\+Distribution@{get\+Read\+Size\+Distribution}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Read\+Size\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Empirical\+Distribution} umms.\+core.\+model.\+Alignment\+Model.\+get\+Read\+Size\+Distribution (
+\begin{DoxyParamCaption}
+\item[{{\bf Coordinate\+Space}}]{coord, }
+\item[{int}]{max\+Size, }
+\item[{int}]{num\+Bins}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ac8a2dfade7662d69c9abae1712c52d2f}
+Get the distribution of all read (or fragment) sizes with respect to a coordinate space 
+\begin{DoxyParams}{Parameters}
+{\em coord} & The coordinate space \\
+\hline
+{\em max\+Size} & The maximum read size to consider \\
+\hline
+{\em num\+Bins} & The number of bins for histogram \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distribution of read sizes with respect to coordinate space 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a34775ceefaa53bc37208bba747debe4b}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Read\+Size\+Distribution@{get\+Read\+Size\+Distribution}}
+\index{get\+Read\+Size\+Distribution@{get\+Read\+Size\+Distribution}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Read\+Size\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Empirical\+Distribution} umms.\+core.\+model.\+Alignment\+Model.\+get\+Read\+Size\+Distribution (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{{\bf Coordinate\+Space}}]{coord, }
+\item[{int}]{max\+Size, }
+\item[{int}]{num\+Bins}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a34775ceefaa53bc37208bba747debe4b}
+Get the distribution of read (or fragment) sizes in an annotation 
+\begin{DoxyParams}{Parameters}
+{\em region} & The annotation in which to count read sizes \\
+\hline
+{\em coord} & Coordinate space in which to compute read sizes \\
+\hline
+{\em max\+Size} & The maximum read size to check for \\
+\hline
+{\em num\+Bins} & The number of bins for histogram \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distribution of read sizes with respect to coordinate space 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ab634dd7e626def19bea7ecf401ca04a5}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Read\+Size\+Distribution@{get\+Read\+Size\+Distribution}}
+\index{get\+Read\+Size\+Distribution@{get\+Read\+Size\+Distribution}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Read\+Size\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Empirical\+Distribution} umms.\+core.\+model.\+Alignment\+Model.\+get\+Read\+Size\+Distribution (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{{\bf Coordinate\+Space}}]{coord, }
+\item[{int}]{max\+Size, }
+\item[{int}]{num\+Bins, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ab634dd7e626def19bea7ecf401ca04a5}
+Get the distribution of read (or fragment) sizes in an annotation 
+\begin{DoxyParams}{Parameters}
+{\em region} & The annotation in which to count read sizes \\
+\hline
+{\em coord} & Coordinate space in which to compute read sizes \\
+\hline
+{\em max\+Size} & The maximum read size to check for \\
+\hline
+{\em num\+Bins} & The number of bins for histogram \\
+\hline
+{\em fully\+Contained} & Count fully contained reads/fragments only \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distribution of read sizes with respect to coordinate space 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a11f67951abb4648fe109809c361856d2}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Ref\+Sequence\+Counts@{get\+Ref\+Sequence\+Counts}}
+\index{get\+Ref\+Sequence\+Counts@{get\+Ref\+Sequence\+Counts}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Ref\+Sequence\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Ref\+Sequence\+Counts (
+\begin{DoxyParamCaption}
+\item[{String}]{ref\+Name}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a11f67951abb4648fe109809c361856d2}
+This function calculates the number of proper paired end reads over the entire coordinate space \begin{DoxyAuthor}{Author}
+skadri 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+Returns the counts for the specified reference sequence 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ad2ca51fe2918d5a556aaa72fd0372e72}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Ref\+Sequence\+Lambda@{get\+Ref\+Sequence\+Lambda}}
+\index{get\+Ref\+Sequence\+Lambda@{get\+Ref\+Sequence\+Lambda}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Ref\+Sequence\+Lambda}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Ref\+Sequence\+Lambda (
+\begin{DoxyParamCaption}
+\item[{String}]{ref\+Name}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ad2ca51fe2918d5a556aaa72fd0372e72}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a3b33fe828a04581c1106d7179a1182a6}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Ref\+Sequence\+Length@{get\+Ref\+Sequence\+Length}}
+\index{get\+Ref\+Sequence\+Length@{get\+Ref\+Sequence\+Length}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Ref\+Sequence\+Length}]{\setlength{\rightskip}{0pt plus 5cm}long umms.\+core.\+model.\+Alignment\+Model.\+get\+Ref\+Sequence\+Length (
+\begin{DoxyParamCaption}
+\item[{String}]{ref\+Name}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a3b33fe828a04581c1106d7179a1182a6}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aa8168915afb028e9db4ecaf28338a6e5}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Ref\+Sequence\+Lengths@{get\+Ref\+Sequence\+Lengths}}
+\index{get\+Ref\+Sequence\+Lengths@{get\+Ref\+Sequence\+Lengths}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Ref\+Sequence\+Lengths}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Integer$>$ umms.\+core.\+model.\+Alignment\+Model.\+get\+Ref\+Sequence\+Lengths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aa8168915afb028e9db4ecaf28338a6e5}
+Get the lengths of the reference sequences \begin{DoxyReturn}{Returns}
+Map associating each reference name with sequence length 
+\end{DoxyReturn}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a45b55e717dcb570d8a3853360c92f272}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Spliced\+Count@{get\+Spliced\+Count}}
+\index{get\+Spliced\+Count@{get\+Spliced\+Count}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Spliced\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+model.\+Alignment\+Model.\+get\+Spliced\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf Alignments}}]{alignments, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a45b55e717dcb570d8a3853360c92f272}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ac53691d7b9efa13bc4ea3350d0ee83d3}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!get\+Strand@{get\+Strand}}
+\index{get\+Strand@{get\+Strand}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{get\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}Transcription\+Read umms.\+core.\+model.\+Alignment\+Model.\+get\+Strand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ac53691d7b9efa13bc4ea3350d0ee83d3}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aff0080eefe7199b9db895a2b9ef628b0}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+model.\+Alignment\+Model.\+is\+Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf Alignment}}]{read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aff0080eefe7199b9db895a2b9ef628b0}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a605283647c0e4797f19a57b20fb870bc}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!iterator@{iterator}}
+\index{iterator@{iterator}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<${\bf Alignment}$>$ umms.\+core.\+model.\+Alignment\+Model.\+iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a605283647c0e4797f19a57b20fb870bc}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ab6b527bd29c0191df67def7958e2188a}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!remove\+Filter@{remove\+Filter}}
+\index{remove\+Filter@{remove\+Filter}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{remove\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+model.\+Alignment\+Model.\+remove\+Filter (
+\begin{DoxyParamCaption}
+\item[{Predicate$<$ {\bf Alignment} $>$}]{read\+Filter}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ab6b527bd29c0191df67def7958e2188a}
+Removes a read filter from the set 
+\begin{DoxyParams}{Parameters}
+{\em read\+Filter} & to remove \\
+\hline
+\end{DoxyParams}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a3665a9f334771056e2661622fd756c68}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!scan@{scan}}
+\index{scan@{scan}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{scan}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Score\+Iterator$<${\bf Count\+Score}$>$ umms.\+core.\+model.\+Alignment\+Model.\+scan (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a3665a9f334771056e2661622fd756c68}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_aaf519a6b3dfe9f486e96704d21b07e91}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!size@{size}}
+\index{size@{size}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+model.\+Alignment\+Model.\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_aaf519a6b3dfe9f486e96704d21b07e91}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_ae3e6d318c25206e3512f4a78fb7b4904}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!window\+Iterator@{window\+Iterator}}
+\index{window\+Iterator@{window\+Iterator}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{window\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$<$? extends {\bf Window}$>$ umms.\+core.\+model.\+Alignment\+Model.\+window\+Iterator (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1model_1_1_alignment_model_ae3e6d318c25206e3512f4a78fb7b4904}
+Iterate through the whole coordinate space in windows and score them using the provided window processor 
+\begin{DoxyParams}{Parameters}
+{\em window\+Size} & size of the windows to score \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}{\index{umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}!coordinate\+Space@{coordinate\+Space}}
+\index{coordinate\+Space@{coordinate\+Space}!umms\+::core\+::model\+::\+Alignment\+Model@{umms\+::core\+::model\+::\+Alignment\+Model}}
+\subsubsection[{coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordinate\+Space} umms.\+core.\+model.\+Alignment\+Model.\+coordinate\+Space\hspace{0.3cm}{\ttfamily [protected]}}}\label{classumms_1_1core_1_1model_1_1_alignment_model_a39ef275175b500df6548f8ec18949dfe}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/model/\hyperlink{_alignment_model_8java}{Alignment\+Model.\+java}\end{DoxyCompactItemize}

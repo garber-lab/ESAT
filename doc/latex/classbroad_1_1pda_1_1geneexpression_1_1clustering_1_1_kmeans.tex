@@ -1,0 +1,181 @@
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans}{\section{broad.\+pda.\+geneexpression.\+clustering.\+Kmeans Class Reference}
+\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans}\index{broad.\+pda.\+geneexpression.\+clustering.\+Kmeans@{broad.\+pda.\+geneexpression.\+clustering.\+Kmeans}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+geneexpression.\+clustering.\+Kmeans\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Kmeans\+Info}
+\item 
+class {\bfseries Silhouette\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a8f59bfa27715e0e3d7c16203b931077f}{Kmeans} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} mat, \hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} init\+Centroids, int num\+Of\+Clusters, String distance\+Metric)
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a7b0b071d034a9aa7b818030254e0dc24}{run\+Kmeans} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a8e87cbb019573c9672027b8eb220e7c4}{calc\+Silhouette} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_acd4f82d43bf7e3096bbf31c13ffdc2ec}{calc\+Light\+Silhouette} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ad1f0deb93ba760134439cc50caadee96}{get\+Silhouette} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a1befc9e064497a642ced1fcc2710d94c}{write\+Clusters} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a659cc69cf0d6ad36a7ad12d3652f0dee}{write\+Clusters\+Centroids} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ab5f7940a6f9823b9100fd22d86d95dc9}{write\+Distance\+From\+Centroids} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_aba97bbed4d48ba0bd322716552b7fe7b}{write\+Distance\+From\+Input\+Centroids} (Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+Kmeans\+Info \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a5cc4e3945675d6a8cd1686737a4d916a}{get\+Cluster\+Info} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_aa47a2f34a55edc36741cec7757dd0674}{write\+Distance\+From\+Input\+Centroids} (\hyperlink{classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers}{Matrix\+With\+Headers} centroids, Buffered\+Writer bw)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a4e6ab714c6c3e99e8a44d85a5a28ac61}{write\+Silhouette\+Res} (int curr\+K, Buffered\+Writer bw\+Gene\+S, Buffered\+Writer bw\+All\+S, Buffered\+Writer bw\+Cluster\+S)  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ae9983a663c08864b4d4bb9e8dc7d4c1c}{distance} (double\mbox{[}$\,$\mbox{]} a, double\mbox{[}$\,$\mbox{]} b, String metric)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a8f59bfa27715e0e3d7c16203b931077f}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!Kmeans@{Kmeans}}
+\index{Kmeans@{Kmeans}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{Kmeans}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+Kmeans (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{mat, }
+\item[{{\bf Matrix\+With\+Headers}}]{init\+Centroids, }
+\item[{int}]{num\+Of\+Clusters, }
+\item[{String}]{distance\+Metric}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a8f59bfa27715e0e3d7c16203b931077f}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_acd4f82d43bf7e3096bbf31c13ffdc2ec}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!calc\+Light\+Silhouette@{calc\+Light\+Silhouette}}
+\index{calc\+Light\+Silhouette@{calc\+Light\+Silhouette}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{calc\+Light\+Silhouette}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+calc\+Light\+Silhouette (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_acd4f82d43bf7e3096bbf31c13ffdc2ec}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a8e87cbb019573c9672027b8eb220e7c4}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!calc\+Silhouette@{calc\+Silhouette}}
+\index{calc\+Silhouette@{calc\+Silhouette}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{calc\+Silhouette}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+calc\+Silhouette (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a8e87cbb019573c9672027b8eb220e7c4}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ae9983a663c08864b4d4bb9e8dc7d4c1c}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!distance@{distance}}
+\index{distance@{distance}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}static double broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+distance (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{a, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{b, }
+\item[{String}]{metric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ae9983a663c08864b4d4bb9e8dc7d4c1c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a5cc4e3945675d6a8cd1686737a4d916a}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!get\+Cluster\+Info@{get\+Cluster\+Info}}
+\index{get\+Cluster\+Info@{get\+Cluster\+Info}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{get\+Cluster\+Info}]{\setlength{\rightskip}{0pt plus 5cm}Kmeans\+Info broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+get\+Cluster\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a5cc4e3945675d6a8cd1686737a4d916a}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ad1f0deb93ba760134439cc50caadee96}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!get\+Silhouette@{get\+Silhouette}}
+\index{get\+Silhouette@{get\+Silhouette}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{get\+Silhouette}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+get\+Silhouette (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ad1f0deb93ba760134439cc50caadee96}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a7b0b071d034a9aa7b818030254e0dc24}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!run\+Kmeans@{run\+Kmeans}}
+\index{run\+Kmeans@{run\+Kmeans}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{run\+Kmeans}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+run\+Kmeans (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a7b0b071d034a9aa7b818030254e0dc24}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a1befc9e064497a642ced1fcc2710d94c}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!write\+Clusters@{write\+Clusters}}
+\index{write\+Clusters@{write\+Clusters}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{write\+Clusters}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+write\+Clusters (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a1befc9e064497a642ced1fcc2710d94c}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a659cc69cf0d6ad36a7ad12d3652f0dee}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!write\+Clusters\+Centroids@{write\+Clusters\+Centroids}}
+\index{write\+Clusters\+Centroids@{write\+Clusters\+Centroids}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{write\+Clusters\+Centroids}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+write\+Clusters\+Centroids (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a659cc69cf0d6ad36a7ad12d3652f0dee}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ab5f7940a6f9823b9100fd22d86d95dc9}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!write\+Distance\+From\+Centroids@{write\+Distance\+From\+Centroids}}
+\index{write\+Distance\+From\+Centroids@{write\+Distance\+From\+Centroids}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{write\+Distance\+From\+Centroids}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+write\+Distance\+From\+Centroids (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_ab5f7940a6f9823b9100fd22d86d95dc9}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_aba97bbed4d48ba0bd322716552b7fe7b}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!write\+Distance\+From\+Input\+Centroids@{write\+Distance\+From\+Input\+Centroids}}
+\index{write\+Distance\+From\+Input\+Centroids@{write\+Distance\+From\+Input\+Centroids}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{write\+Distance\+From\+Input\+Centroids}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+write\+Distance\+From\+Input\+Centroids (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_aba97bbed4d48ba0bd322716552b7fe7b}
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_aa47a2f34a55edc36741cec7757dd0674}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!write\+Distance\+From\+Input\+Centroids@{write\+Distance\+From\+Input\+Centroids}}
+\index{write\+Distance\+From\+Input\+Centroids@{write\+Distance\+From\+Input\+Centroids}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{write\+Distance\+From\+Input\+Centroids}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+write\+Distance\+From\+Input\+Centroids (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+With\+Headers}}]{centroids, }
+\item[{Buffered\+Writer}]{bw}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_aa47a2f34a55edc36741cec7757dd0674}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a4e6ab714c6c3e99e8a44d85a5a28ac61}{\index{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}!write\+Silhouette\+Res@{write\+Silhouette\+Res}}
+\index{write\+Silhouette\+Res@{write\+Silhouette\+Res}!broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans@{broad\+::pda\+::geneexpression\+::clustering\+::\+Kmeans}}
+\subsubsection[{write\+Silhouette\+Res}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+geneexpression.\+clustering.\+Kmeans.\+write\+Silhouette\+Res (
+\begin{DoxyParamCaption}
+\item[{int}]{curr\+K, }
+\item[{Buffered\+Writer}]{bw\+Gene\+S, }
+\item[{Buffered\+Writer}]{bw\+All\+S, }
+\item[{Buffered\+Writer}]{bw\+Cluster\+S}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1geneexpression_1_1clustering_1_1_kmeans_a4e6ab714c6c3e99e8a44d85a5a28ac61}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/geneexpression/clustering/\hyperlink{_kmeans_8java}{Kmeans.\+java}\end{DoxyCompactItemize}

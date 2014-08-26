@@ -1,0 +1,162 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller}{\section{broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller}\index{broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller@{broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller}}
+}
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a2d98e6e4646da4ae9ad14f6fa1284654}{R\+A\+P\+Peak\+Caller} (String background\+File, String rap\+File, String sizes, String maskedregions, int window\+Size, int step)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_ad88d001df75ac488d424b594cb168c7c}{call\+Skellam\+Peaks} (String out\+File, double max\+Skellam, double max\+Scan\+Pvalue)  throws I\+O\+Exception
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a4241a787df082c17f3e7a48545c83be9}{call\+K\+L\+Peaks} (String out\+File, double kl\+Cut\+Off)  throws I\+O\+Exception
+\item 
+Coordinate\+Space \hyperlink{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_af18e84651f7d4671be2c7e01ebaadd60}{get\+Coordinate\+Space} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_ab15edd4dac77fd24e3c0124ee1cd4806}{main} (String\mbox{[}$\,$\mbox{]} args)  throws I\+O\+Exception
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Logger \hyperlink{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a5da587cd17e74c8508f897795a604316}{logger} = Logger.\+get\+Logger(R\+A\+P\+Peak\+Caller.\+class.\+get\+Name())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+skadri 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a2d98e6e4646da4ae9ad14f6fa1284654}{\index{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}!R\+A\+P\+Peak\+Caller@{R\+A\+P\+Peak\+Caller}}
+\index{R\+A\+P\+Peak\+Caller@{R\+A\+P\+Peak\+Caller}!broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}}
+\subsubsection[{R\+A\+P\+Peak\+Caller}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller.\+R\+A\+P\+Peak\+Caller (
+\begin{DoxyParamCaption}
+\item[{String}]{background\+File, }
+\item[{String}]{rap\+File, }
+\item[{String}]{sizes, }
+\item[{String}]{maskedregions, }
+\item[{int}]{window\+Size, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a2d98e6e4646da4ae9ad14f6fa1284654}
+
+\begin{DoxyParams}{Parameters}
+{\em background\+File} & Alignment file for the input sample \\
+\hline
+{\em rap\+File} & Alignment file for the rap file \\
+\hline
+{\em sizes} & Chromosome sizes \\
+\hline
+{\em window\+Size} & Window Size \\
+\hline
+{\em step} & Step Size / Overlap between consecutive windows \\
+\hline
+{\em max\+Skellam} & \\
+\hline
+{\em max\+Scan\+Pvalue} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a4241a787df082c17f3e7a48545c83be9}{\index{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}!call\+K\+L\+Peaks@{call\+K\+L\+Peaks}}
+\index{call\+K\+L\+Peaks@{call\+K\+L\+Peaks}!broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}}
+\subsubsection[{call\+K\+L\+Peaks}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller.\+call\+K\+L\+Peaks (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+File, }
+\item[{double}]{kl\+Cut\+Off}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a4241a787df082c17f3e7a48545c83be9}
+For each window, calculate the poisson lambda for the given window over the entire chromosome 
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em window} & \\
+\hline
+{\em window\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_ad88d001df75ac488d424b594cb168c7c}{\index{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}!call\+Skellam\+Peaks@{call\+Skellam\+Peaks}}
+\index{call\+Skellam\+Peaks@{call\+Skellam\+Peaks}!broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}}
+\subsubsection[{call\+Skellam\+Peaks}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller.\+call\+Skellam\+Peaks (
+\begin{DoxyParamCaption}
+\item[{String}]{out\+File, }
+\item[{double}]{max\+Skellam, }
+\item[{double}]{max\+Scan\+Pvalue}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_ad88d001df75ac488d424b594cb168c7c}
+Call peaks using skellam 
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_af18e84651f7d4671be2c7e01ebaadd60}{\index{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}!get\+Coordinate\+Space@{get\+Coordinate\+Space}}
+\index{get\+Coordinate\+Space@{get\+Coordinate\+Space}!broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}}
+\subsubsection[{get\+Coordinate\+Space}]{\setlength{\rightskip}{0pt plus 5cm}Coordinate\+Space broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller.\+get\+Coordinate\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_af18e84651f7d4671be2c7e01ebaadd60}
+Returns the coordinate space for this peak caller \hypertarget{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_ab15edd4dac77fd24e3c0124ee1cd4806}{\index{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}!main@{main}}
+\index{main@{main}!broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_ab15edd4dac77fd24e3c0124ee1cd4806}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a5da587cd17e74c8508f897795a604316}{\index{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}!logger@{logger}}
+\index{logger@{logger}!broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller@{broad\+::pda\+::seq\+::rap\+::\+R\+A\+P\+Peak\+Caller}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger broad.\+pda.\+seq.\+rap.\+R\+A\+P\+Peak\+Caller.\+logger = Logger.\+get\+Logger(R\+A\+P\+Peak\+Caller.\+class.\+get\+Name())\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1rap_1_1_r_a_p_peak_caller_a5da587cd17e74c8508f897795a604316}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/rap/\hyperlink{_r_a_p_peak_caller_8java}{R\+A\+P\+Peak\+Caller.\+java}\end{DoxyCompactItemize}

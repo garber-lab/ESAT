@@ -1,0 +1,9 @@
+digraph "jaligner.Alignment.calculateScore"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jaligner.Alignment.calculate\lScore",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="jaligner.Alignment.check\lScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaligner_1_1_alignment.html#ab9ec4af0857b026b6a61ef95c5d62aad"];
+}

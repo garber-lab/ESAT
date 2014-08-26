@@ -1,0 +1,13 @@
+digraph "broad.core.siphy.EvolutionaryModel.setModelParameters"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.siphy.Evolutionary\lModel.setModelParameters",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.siphy.Evolutionary\lModel.EvolutionaryModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#a996bd2f5c0af597d4aaddc6f3a3dfcbc"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.siphy.Evolutionary\lModel.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#aa418445762f1cbcb395dac8c0effbad6"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.siphy.Evolutionary\lModel.evolve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#a1a52ec3724e75cd7ae1df2d0971d5bc1"];
+}

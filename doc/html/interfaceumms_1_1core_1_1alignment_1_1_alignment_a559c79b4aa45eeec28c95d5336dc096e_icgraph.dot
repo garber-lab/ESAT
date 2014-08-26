@@ -1,0 +1,9 @@
+digraph "umms.core.alignment.Alignment.getSpliceConnections"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.alignment.Alignment.get\lSpliceConnections",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.readFilters.Spliced\lReadFilter.evaluate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1read_filters_1_1_spliced_read_filter.html#abb702029fcc23b0408e1b022bc0b01d1"];
+}

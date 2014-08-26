@@ -1,0 +1,15 @@
+digraph "broad.pda.seq.segmentation.AlignmentDataModelStats.count"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.seq.segmentation.\lAlignmentDataModelStats.count",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.pda.seq.segmentation.\lAlignmentDataModelStats.getNumber\lOfReadsByChr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_alignment_data_model_stats.html#a1492aaf55e384cd251aac1339f1a1e08"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.pda.seq.segmentation.\lAlignmentDataModelStats.scanPRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_alignment_data_model_stats.html#accc819fd09f1e1c607e3b66aab3ae2e0"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.pda.seq.segmentation.\lAlignmentDataModelStats.getGene\lExpression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_alignment_data_model_stats.html#a5379bafb9acafd7fbb7f7d59ef8c9308"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.pda.seq.segmentation.\lAlignmentDataModelStats.scanPRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1seq_1_1segmentation_1_1_alignment_data_model_stats.html#a3a6b4166fdef87dfcc75965ca3afa36a"];
+}

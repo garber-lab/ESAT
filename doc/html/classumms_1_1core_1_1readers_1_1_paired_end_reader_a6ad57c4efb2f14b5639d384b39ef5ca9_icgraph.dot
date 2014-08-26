@@ -1,0 +1,15 @@
+digraph "umms.core.readers.PairedEndReader.getAlignmentType"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.readers.Paired\lEndReader.getAlignmentType",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.readers.Paired\lEndReader.PairedEndReader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1readers_1_1_paired_end_reader.html#a3697137ca20657cdb8e4e550e6eb334a"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.readers.Paired\lEndReader.getPairedEndFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1readers_1_1_paired_end_reader.html#afaaf969aed6aaa75928ba7e6e17586e7"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.readers.Paired\lEndReader.isPairedEndFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1readers_1_1_paired_end_reader.html#a90d2c33b061d7e411d931933247ab9c3"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="umms.core.readers.Paired\lEndReader.getAlignmentType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1readers_1_1_paired_end_reader.html#acf45dbe8546d2d0b09d778ded28e3ae6"];
+}

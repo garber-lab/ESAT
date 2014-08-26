@@ -1,0 +1,1125 @@
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence}{\section{broad.\+core.\+sequence.\+Sequence Class Reference}
+\label{classbroad_1_1core_1_1sequence_1_1_sequence}\index{broad.\+core.\+sequence.\+Sequence@{broad.\+core.\+sequence.\+Sequence}}
+}
+
+
+Inheritance diagram for broad.\+core.\+sequence.\+Sequence\+:
+
+
+Collaboration diagram for broad.\+core.\+sequence.\+Sequence\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Kmer\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a3f5ed7a6ae3513ae7eb2bae8789a6f10}{Sequence} (String id)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a033dc095af9d8335f3818b72e65e3ecc}{Sequence} (String id, boolean is\+Large)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a0f8c3850c9c8fe80c2b9220ba7618ebe}{Sequence} (String id, int expected\+Size)
+\item 
+String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a5da71f38ac38e891746b5f747fe67213}{get\+Id} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a1126c1510a531a59949482357696d37b}{set\+Forward\+Strand} (boolean \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ad3843c99ca1bdd29ff3a8d054c2714fc}{is\+Forward\+Strand})
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a22ed5d4080bf7946a0d0a782f792e945}{set\+Id} (String id)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ac9da439ccb0a9eb4e8d2d514551c92fd}{unload\+Sequence} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_accc6ee68ddb6acad2a0f5443c47d3b2d}{unload\+Encoded\+Sequence} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_afb2eb45f529388053380969eda3f7993}{unload\+All\+Sequences} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ae1f565eae2b5a441424f232711a1da9b}{get\+Length} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a9d8bf6ecc44a74ff02c8811f29f670ec}{set\+Char\+At} (int position, char new\+Character)  throws Illegal\+Access\+Exception 
+\item 
+String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a416d299b6cd3017e291847079c55380f}{get\+Sequence\+Bases} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a8195f46d431993392dbb892bb85beca1}{set\+Sequence\+Bases} (String sequence)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a379924f23d5ae365ec12c894e36b588f}{append} (String partial\+Sequence)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a8434722abf884dd505dab97058388e9f}{shuffle} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a62d13ed978223eb3941863c0c3d862bf}{append} (char c)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a0311924cfc4add3eee42b023f71b42c8}{is\+Gap} (int position)
+\item 
+List$<$ \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a61503379b2f74c904e0a6d26f8829086}{get\+Softmasked\+Regions} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a7832688b204b920fb48642f144c95606}{count\+Soft\+Masked\+Bases} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a2cbe31f56aa039cf1721466398346e1c}{mask\+Softmasked\+Regions} ()
+\item 
+short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a67016a0976b792c79d5362da0dd58b11}{get\+Encoded\+Sequence} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a5127ade0f481eedbb87cdd6fde86f293}{get\+Vector\+Encoded\+Sequence} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a6cb973918c764e58bd548edf6bbbae37}{encode\+Sequence\+As\+Vector} ()
+\item 
+short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a22f71841d3eeb8f7cbb2f2bc79deb87c}{encode\+Sequence} ()
+\item 
+short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ac96afc282dcba4a583d8cfca192155dd}{encode\+Sequence\+Ignore\+Case} ()
+\item 
+short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a2dde760c8a5bf338456dbfbadac40f8b}{encode\+Sequence\+Ignore\+Case} (boolean distinguish\+Missing\+Sequence)
+\item 
+List$<$ Short $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aa07f336c9e608874def5dfb43f089258}{compute454\+Flow} (char\mbox{[}$\,$\mbox{]} flow\+Order)
+\item 
+List$<$ Short $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aa57def9ee75307cc2edbf973491b864f}{compute454\+Flow} (char\mbox{[}$\,$\mbox{]} flow\+Order, int start, int end)
+\item 
+float \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a38dde2f2faa86fc1e71dd44878e8b078}{gc\+Content} ()
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a175ad53de415a37d032a20ca3d5370ab}{contains} (String motif)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ae7dfa608c5c59b4b99721841e1715b84}{reverse} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a50efd0ef4a7b4d79ba3006a180ac9a02}{uppercase} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ab2de5da03cf12144aa625a7bdafdb8fb}{mask} (Annotation region, boolean softmask)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_adbb50ac29ca32a2b07e56bd995089ecd}{get\+Region} (int start, int end)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_af47fd709eae2167bb6190ded932fdc06}{get\+Region} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} region)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a0b1f162c2ca4fafb7ff10dbb09f7a5f2}{get\+Region} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} region, boolean softmask)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aedcfb7c619bf8d261062e3005f1b23f8}{get\+Region} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} region, boolean softmask, Map$<$ String, Interval\+Tree$<$ \hyperlink{classbroad_1_1pda_1_1datastructures_1_1_alignments}{Alignments} $>$$>$ ok\+Repeats)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a183530d8cd29a589efc7a195e5b6c176}{get\+Regions} (List$<$?extends \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} $>$ regions)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a01a399f517f0d395a6712cca2af9d3ed}{extract\+Region\+Based\+On\+G\+C} (float target\+G\+C, int size, int buffer)
+\item 
+boolean \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ad3843c99ca1bdd29ff3a8d054c2714fc}{is\+Forward\+Strand} ()
+\item 
+String\+Builder \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a7a3e2c4c228ea4ad140b89c9ac6baca3}{get\+Sequence\+Builder} ()
+\item 
+int \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ac902afc1bae6378611e184e43562aaf6}{get\+Gaps\+Size} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_window_slider}{Window\+Slider} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aed240f0dc08cc05ee521e34b48f04063}{get\+Slider} (int window\+Size, int overlap)
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ae15813e860a2d317425e2520831aeb5a}{chunk} (int chunk\+Size, int chunk\+Overlap)
+\item 
+int \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a59b9f3e750cccc29016b2e5bc4372976}{get\+End} ()
+\item 
+List$<$ int\mbox{[}$\,$\mbox{]}$>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a9d6bbc833e2fafa7f0dcf8b2a7132b04}{find\+Ungapped\+Sequence\+Chunks} ()
+\item 
+Collection$<$ Annotation $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a69dcd323117fd945585a71236ffef9e9}{get\+Matches} (String s, int window\+Start, int window\+End, boolean include\+R\+C)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ab03732869550e07296a989208b50c100}{get\+Sub\+Sequence} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_region}{Sequence\+Region} region, int extension)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a1917327054e5ef6c6d5d3ef15c203f03}{get\+Sub\+Sequence} (String name, int start, int end, int extension)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a5af216e57b3a21de28ff79b81a51af25}{get\+Sub\+Sequence} (String name, int start, int end)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aea523aacfd70e1301e61ce005db9fd68}{get\+Subsequence} (Gene annot)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ac6dee6a60810f7af86ac448ac18b721b}{get\+Subsequence} (Annotation annot)
+\item 
+void \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a723236046f4794809e92aef25ca79b89}{set\+Capacity} (int size)
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a0820a809e5bd46b6224a31d6dcff27b0}{scramble} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a2b294328ff90285bc6e1efce02b0217f}{get\+Antisense} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a3e3efc2ec470bfbe104afe5759187351}{get\+Refseq\+Gene\+Name} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a3da56d57c8b71c784b28caad5b810856}{get\+Refseq\+Species\+Name} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a4946d4cdaad7a472b878a0fac3bdaf85}{get\+Refseq\+Rna\+Class\+Name} ()
+\item 
+Map$<$ String, Kmer\+Info $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a5b67f754a5bb1125e8dfcfcad31ee6a8}{build\+Kmer\+Map} (int kmer)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a49b4a4a6f4ee1f9db9e36b5316c0b9d0}{encode\+Sequence} (String\+Builder bases)
+\item 
+static short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a19cbe0adc947a67be346481dcc04beb3}{encode\+Sequence\+Ignore\+Case} (String\+Builder sequence)
+\item 
+static short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a89e6d3a6a5de35ac099b3144eb8edcea}{encode\+Sequence\+Ignore\+Case} (String\+Builder sequence, boolean distinguish\+Missing\+Sequence)
+\item 
+static float \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a6eb5265c9cdcde2244f7c5aac6497093}{compute\+G\+C\+Content} (String dna\+String)
+\item 
+static float\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ae40c1d7033b0e09af85bcda1379f59c8}{compute\+Sequence\+Composition} (String dna\+String)
+\item 
+static \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_afc286e0183b8c3dc59903224862f5ae5}{reverse\+Sequence} (\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} seq)
+\item 
+static String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a0a46eed86466309a01fef420100845e1}{reverse\+Sequence} (String seq)
+\item 
+static String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a48b186435b91157fad3922a8e4a01d81}{decode} (short\mbox{[}$\,$\mbox{]} short\+Encoded\+Sequence)
+\item 
+static String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a63de9839d1efc73e189632b5ede83778}{generate\+Random\+Sequence} (int oligo\+Size)
+\item 
+static String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a961f5187cacc679ceba5a4f68d8a5e37}{get3\+Prime} (String seq, int num\+Bases)
+\item 
+static Collection$<$ String $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a36a9672e2487d0c7a9166eb8870ec650}{generate\+All5\+Mers} ()
+\item 
+static Collection$<$ String $>$ \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aef0026e345f4683e26c1cb306adb6388}{generate\+All\+Kmers} (int k)
+\item 
+static String \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ab208ef33c2a874e665a270a30a9a66b4}{complement} (String seq)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final char\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a753cb91384665e3a3440ce2f1844fa4a}{S\+H\+O\+R\+T\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W} = \{'T','A','C','G'\}
+\item 
+static final char\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a22c8e2cb48a3bac92822a2ab77e006da}{L\+O\+N\+G\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W} = \{'G','A','T','C'\}
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a5e9588156dd0a4c914cf8ea5e46dc288}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+A} = 0
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a7eaf6345f01e26bfcf1925adb7b63b6a}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+C} = 1
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a1035184882e0829351d913c8212b8e99}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G} = 2
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aa8830afd48b5456f422e0d4ac282c3e4}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+T} = 3
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_af6b23c272152e3450a5ed58c95b31fdb}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G\+A\+P} = 4
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_aa8b9e6eb9635659fb61f46a91a2c1831}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+a} = 5
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_ade4cf8fa3c5604985c82057049949f18}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+c} = 6
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a317b007c9ec5f87d5e4bae72adb17717}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+g} = 7
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a1b69cede3c60348e6b8f9ab1aec01912}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+t} = 8
+\item 
+static final short \hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence_a421b5eb48f2848619737a1a706ff2c55}{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+N} = 9
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a3f5ed7a6ae3513ae7eb2bae8789a6f10}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{Sequence}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Sequence.\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{id}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a3f5ed7a6ae3513ae7eb2bae8789a6f10}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a033dc095af9d8335f3818b72e65e3ecc}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{Sequence}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Sequence.\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{id, }
+\item[{boolean}]{is\+Large}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a033dc095af9d8335f3818b72e65e3ecc}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a0f8c3850c9c8fe80c2b9220ba7618ebe}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{Sequence}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+sequence.\+Sequence.\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{id, }
+\item[{int}]{expected\+Size}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a0f8c3850c9c8fe80c2b9220ba7618ebe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a379924f23d5ae365ec12c894e36b588f}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!append@{append}}
+\index{append@{append}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+append (
+\begin{DoxyParamCaption}
+\item[{String}]{partial\+Sequence}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a379924f23d5ae365ec12c894e36b588f}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a62d13ed978223eb3941863c0c3d862bf}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!append@{append}}
+\index{append@{append}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+append (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a62d13ed978223eb3941863c0c3d862bf}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a5b67f754a5bb1125e8dfcfcad31ee6a8}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!build\+Kmer\+Map@{build\+Kmer\+Map}}
+\index{build\+Kmer\+Map@{build\+Kmer\+Map}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{build\+Kmer\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Kmer\+Info$>$ broad.\+core.\+sequence.\+Sequence.\+build\+Kmer\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{kmer}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a5b67f754a5bb1125e8dfcfcad31ee6a8}
+Gvien a kmer size, it builds a map of all kmers found 
+\begin{DoxyParams}{Parameters}
+{\em kmer} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ae15813e860a2d317425e2520831aeb5a}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!chunk@{chunk}}
+\index{chunk@{chunk}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{chunk}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Sequence\+Region}$>$ broad.\+core.\+sequence.\+Sequence.\+chunk (
+\begin{DoxyParamCaption}
+\item[{int}]{chunk\+Size, }
+\item[{int}]{chunk\+Overlap}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ae15813e860a2d317425e2520831aeb5a}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ab208ef33c2a874e665a270a30a9a66b4}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!complement@{complement}}
+\index{complement@{complement}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{complement}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+core.\+sequence.\+Sequence.\+complement (
+\begin{DoxyParamCaption}
+\item[{String}]{seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ab208ef33c2a874e665a270a30a9a66b4}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aa07f336c9e608874def5dfb43f089258}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!compute454\+Flow@{compute454\+Flow}}
+\index{compute454\+Flow@{compute454\+Flow}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{compute454\+Flow}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Short$>$ broad.\+core.\+sequence.\+Sequence.\+compute454\+Flow (
+\begin{DoxyParamCaption}
+\item[{char\mbox{[}$\,$\mbox{]}}]{flow\+Order}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aa07f336c9e608874def5dfb43f089258}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aa57def9ee75307cc2edbf973491b864f}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!compute454\+Flow@{compute454\+Flow}}
+\index{compute454\+Flow@{compute454\+Flow}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{compute454\+Flow}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Short$>$ broad.\+core.\+sequence.\+Sequence.\+compute454\+Flow (
+\begin{DoxyParamCaption}
+\item[{char\mbox{[}$\,$\mbox{]}}]{flow\+Order, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aa57def9ee75307cc2edbf973491b864f}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a6eb5265c9cdcde2244f7c5aac6497093}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!compute\+G\+C\+Content@{compute\+G\+C\+Content}}
+\index{compute\+G\+C\+Content@{compute\+G\+C\+Content}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{compute\+G\+C\+Content}]{\setlength{\rightskip}{0pt plus 5cm}static float broad.\+core.\+sequence.\+Sequence.\+compute\+G\+C\+Content (
+\begin{DoxyParamCaption}
+\item[{String}]{dna\+String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a6eb5265c9cdcde2244f7c5aac6497093}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ae40c1d7033b0e09af85bcda1379f59c8}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!compute\+Sequence\+Composition@{compute\+Sequence\+Composition}}
+\index{compute\+Sequence\+Composition@{compute\+Sequence\+Composition}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{compute\+Sequence\+Composition}]{\setlength{\rightskip}{0pt plus 5cm}static float \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+compute\+Sequence\+Composition (
+\begin{DoxyParamCaption}
+\item[{String}]{dna\+String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ae40c1d7033b0e09af85bcda1379f59c8}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a175ad53de415a37d032a20ca3d5370ab}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!contains@{contains}}
+\index{contains@{contains}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+sequence.\+Sequence.\+contains (
+\begin{DoxyParamCaption}
+\item[{String}]{motif}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a175ad53de415a37d032a20ca3d5370ab}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a7832688b204b920fb48642f144c95606}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!count\+Soft\+Masked\+Bases@{count\+Soft\+Masked\+Bases}}
+\index{count\+Soft\+Masked\+Bases@{count\+Soft\+Masked\+Bases}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{count\+Soft\+Masked\+Bases}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+sequence.\+Sequence.\+count\+Soft\+Masked\+Bases (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a7832688b204b920fb48642f144c95606}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a48b186435b91157fad3922a8e4a01d81}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!decode@{decode}}
+\index{decode@{decode}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{decode}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+core.\+sequence.\+Sequence.\+decode (
+\begin{DoxyParamCaption}
+\item[{short\mbox{[}$\,$\mbox{]}}]{short\+Encoded\+Sequence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a48b186435b91157fad3922a8e4a01d81}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a22f71841d3eeb8f7cbb2f2bc79deb87c}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!encode\+Sequence@{encode\+Sequence}}
+\index{encode\+Sequence@{encode\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{encode\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}short \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+encode\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a22f71841d3eeb8f7cbb2f2bc79deb87c}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a49b4a4a6f4ee1f9db9e36b5316c0b9d0}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!encode\+Sequence@{encode\+Sequence}}
+\index{encode\+Sequence@{encode\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{encode\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static short \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+encode\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String\+Builder}]{bases}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a49b4a4a6f4ee1f9db9e36b5316c0b9d0}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a6cb973918c764e58bd548edf6bbbae37}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!encode\+Sequence\+As\+Vector@{encode\+Sequence\+As\+Vector}}
+\index{encode\+Sequence\+As\+Vector@{encode\+Sequence\+As\+Vector}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{encode\+Sequence\+As\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} broad.\+core.\+sequence.\+Sequence.\+encode\+Sequence\+As\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a6cb973918c764e58bd548edf6bbbae37}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ac96afc282dcba4a583d8cfca192155dd}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}}
+\index{encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{encode\+Sequence\+Ignore\+Case}]{\setlength{\rightskip}{0pt plus 5cm}short \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+encode\+Sequence\+Ignore\+Case (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ac96afc282dcba4a583d8cfca192155dd}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a2dde760c8a5bf338456dbfbadac40f8b}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}}
+\index{encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{encode\+Sequence\+Ignore\+Case}]{\setlength{\rightskip}{0pt plus 5cm}short \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+encode\+Sequence\+Ignore\+Case (
+\begin{DoxyParamCaption}
+\item[{boolean}]{distinguish\+Missing\+Sequence}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a2dde760c8a5bf338456dbfbadac40f8b}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a19cbe0adc947a67be346481dcc04beb3}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}}
+\index{encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{encode\+Sequence\+Ignore\+Case}]{\setlength{\rightskip}{0pt plus 5cm}static short \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+encode\+Sequence\+Ignore\+Case (
+\begin{DoxyParamCaption}
+\item[{String\+Builder}]{sequence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a19cbe0adc947a67be346481dcc04beb3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a89e6d3a6a5de35ac099b3144eb8edcea}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}}
+\index{encode\+Sequence\+Ignore\+Case@{encode\+Sequence\+Ignore\+Case}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{encode\+Sequence\+Ignore\+Case}]{\setlength{\rightskip}{0pt plus 5cm}static short \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+encode\+Sequence\+Ignore\+Case (
+\begin{DoxyParamCaption}
+\item[{String\+Builder}]{sequence, }
+\item[{boolean}]{distinguish\+Missing\+Sequence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a89e6d3a6a5de35ac099b3144eb8edcea}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a01a399f517f0d395a6712cca2af9d3ed}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!extract\+Region\+Based\+On\+G\+C@{extract\+Region\+Based\+On\+G\+C}}
+\index{extract\+Region\+Based\+On\+G\+C@{extract\+Region\+Based\+On\+G\+C}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{extract\+Region\+Based\+On\+G\+C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence\+Region} broad.\+core.\+sequence.\+Sequence.\+extract\+Region\+Based\+On\+G\+C (
+\begin{DoxyParamCaption}
+\item[{float}]{target\+G\+C, }
+\item[{int}]{size, }
+\item[{int}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a01a399f517f0d395a6712cca2af9d3ed}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a9d6bbc833e2fafa7f0dcf8b2a7132b04}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!find\+Ungapped\+Sequence\+Chunks@{find\+Ungapped\+Sequence\+Chunks}}
+\index{find\+Ungapped\+Sequence\+Chunks@{find\+Ungapped\+Sequence\+Chunks}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{find\+Ungapped\+Sequence\+Chunks}]{\setlength{\rightskip}{0pt plus 5cm}List$<$int \mbox{[}$\,$\mbox{]}$>$ broad.\+core.\+sequence.\+Sequence.\+find\+Ungapped\+Sequence\+Chunks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a9d6bbc833e2fafa7f0dcf8b2a7132b04}
+Finds the list of ungapped regions in the sequence. \begin{DoxyReturn}{Returns}
+A list of two sized integer arrays with the start and end of the ungapped regions. The convention here is semi closed intervals, each list items is of the form \mbox{[}start, end). 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a38dde2f2faa86fc1e71dd44878e8b078}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!gc\+Content@{gc\+Content}}
+\index{gc\+Content@{gc\+Content}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{gc\+Content}]{\setlength{\rightskip}{0pt plus 5cm}float broad.\+core.\+sequence.\+Sequence.\+gc\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a38dde2f2faa86fc1e71dd44878e8b078}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a36a9672e2487d0c7a9166eb8870ec650}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!generate\+All5\+Mers@{generate\+All5\+Mers}}
+\index{generate\+All5\+Mers@{generate\+All5\+Mers}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{generate\+All5\+Mers}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<$String$>$ broad.\+core.\+sequence.\+Sequence.\+generate\+All5\+Mers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a36a9672e2487d0c7a9166eb8870ec650}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aef0026e345f4683e26c1cb306adb6388}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!generate\+All\+Kmers@{generate\+All\+Kmers}}
+\index{generate\+All\+Kmers@{generate\+All\+Kmers}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{generate\+All\+Kmers}]{\setlength{\rightskip}{0pt plus 5cm}static Collection$<$String$>$ broad.\+core.\+sequence.\+Sequence.\+generate\+All\+Kmers (
+\begin{DoxyParamCaption}
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aef0026e345f4683e26c1cb306adb6388}
+Get all kmers composed of the bases A, C, G, T 
+\begin{DoxyParams}{Parameters}
+{\em k} & K \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+All 4$^\wedge$k kmers 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a63de9839d1efc73e189632b5ede83778}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!generate\+Random\+Sequence@{generate\+Random\+Sequence}}
+\index{generate\+Random\+Sequence@{generate\+Random\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{generate\+Random\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+core.\+sequence.\+Sequence.\+generate\+Random\+Sequence (
+\begin{DoxyParamCaption}
+\item[{int}]{oligo\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a63de9839d1efc73e189632b5ede83778}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a961f5187cacc679ceba5a4f68d8a5e37}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get3\+Prime@{get3\+Prime}}
+\index{get3\+Prime@{get3\+Prime}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get3\+Prime}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+core.\+sequence.\+Sequence.\+get3\+Prime (
+\begin{DoxyParamCaption}
+\item[{String}]{seq, }
+\item[{int}]{num\+Bases}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a961f5187cacc679ceba5a4f68d8a5e37}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a2b294328ff90285bc6e1efce02b0217f}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Antisense@{get\+Antisense}}
+\index{get\+Antisense@{get\+Antisense}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Antisense}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+get\+Antisense (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a2b294328ff90285bc6e1efce02b0217f}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a67016a0976b792c79d5362da0dd58b11}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Encoded\+Sequence@{get\+Encoded\+Sequence}}
+\index{get\+Encoded\+Sequence@{get\+Encoded\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Encoded\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}short \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+get\+Encoded\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a67016a0976b792c79d5362da0dd58b11}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a59b9f3e750cccc29016b2e5bc4372976}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+End@{get\+End}}
+\index{get\+End@{get\+End}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+End}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+sequence.\+Sequence.\+get\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a59b9f3e750cccc29016b2e5bc4372976}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ac902afc1bae6378611e184e43562aaf6}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Gaps\+Size@{get\+Gaps\+Size}}
+\index{get\+Gaps\+Size@{get\+Gaps\+Size}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Gaps\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+sequence.\+Sequence.\+get\+Gaps\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ac902afc1bae6378611e184e43562aaf6}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a5da71f38ac38e891746b5f747fe67213}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Id}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+sequence.\+Sequence.\+get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a5da71f38ac38e891746b5f747fe67213}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ae1f565eae2b5a441424f232711a1da9b}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Length}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+sequence.\+Sequence.\+get\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ae1f565eae2b5a441424f232711a1da9b}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a69dcd323117fd945585a71236ffef9e9}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Matches@{get\+Matches}}
+\index{get\+Matches@{get\+Matches}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Matches}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Annotation$>$ broad.\+core.\+sequence.\+Sequence.\+get\+Matches (
+\begin{DoxyParamCaption}
+\item[{String}]{s, }
+\item[{int}]{window\+Start, }
+\item[{int}]{window\+End, }
+\item[{boolean}]{include\+R\+C}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a69dcd323117fd945585a71236ffef9e9}
+Get all matches for a string as annotations with respect to this sequence Search a window Case is ignored 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string \\
+\hline
+{\em window\+Start} & Start position of window to search \\
+\hline
+{\em window\+End} & End of window to search \\
+\hline
+{\em include\+R\+C} & Also search for reverse complement of string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Collection of annotations representing string matches 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a3e3efc2ec470bfbe104afe5759187351}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Refseq\+Gene\+Name@{get\+Refseq\+Gene\+Name}}
+\index{get\+Refseq\+Gene\+Name@{get\+Refseq\+Gene\+Name}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Refseq\+Gene\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+sequence.\+Sequence.\+get\+Refseq\+Gene\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a3e3efc2ec470bfbe104afe5759187351}
+Get the Refseq gene name which appears between the last pair of parentheses in fasta header \begin{DoxyReturn}{Returns}
+gene name 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a4946d4cdaad7a472b878a0fac3bdaf85}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Refseq\+Rna\+Class\+Name@{get\+Refseq\+Rna\+Class\+Name}}
+\index{get\+Refseq\+Rna\+Class\+Name@{get\+Refseq\+Rna\+Class\+Name}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Refseq\+Rna\+Class\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+sequence.\+Sequence.\+get\+Refseq\+Rna\+Class\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a4946d4cdaad7a472b878a0fac3bdaf85}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a3da56d57c8b71c784b28caad5b810856}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Refseq\+Species\+Name@{get\+Refseq\+Species\+Name}}
+\index{get\+Refseq\+Species\+Name@{get\+Refseq\+Species\+Name}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Refseq\+Species\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+sequence.\+Sequence.\+get\+Refseq\+Species\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a3da56d57c8b71c784b28caad5b810856}
+Get the species name that appears right after the transcript I\+D or the P\+R\+E\+D\+I\+C\+T\+E\+D tag \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_adbb50ac29ca32a2b07e56bd995089ecd}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Region@{get\+Region}}
+\index{get\+Region@{get\+Region}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Region}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence\+Region} broad.\+core.\+sequence.\+Sequence.\+get\+Region (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_adbb50ac29ca32a2b07e56bd995089ecd}
+
+\begin{DoxyParams}{Parameters}
+{\em start} & -\/ start of the region to extract the starting base will be included starting at 0 \\
+\hline
+{\em end} & -\/ the end of the region to extract, the base at position end will not be included. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_af47fd709eae2167bb6190ded932fdc06}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Region@{get\+Region}}
+\index{get\+Region@{get\+Region}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Region}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+get\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\+Region}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_af47fd709eae2167bb6190ded932fdc06}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a0b1f162c2ca4fafb7ff10dbb09f7a5f2}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Region@{get\+Region}}
+\index{get\+Region@{get\+Region}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Region}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+get\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\+Region}}]{region, }
+\item[{boolean}]{softmask}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a0b1f162c2ca4fafb7ff10dbb09f7a5f2}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aedcfb7c619bf8d261062e3005f1b23f8}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Region@{get\+Region}}
+\index{get\+Region@{get\+Region}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Region}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+get\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\+Region}}]{region, }
+\item[{boolean}]{softmask, }
+\item[{Map$<$ String, Interval\+Tree$<$ {\bf Alignments} $>$$>$}]{ok\+Repeats}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aedcfb7c619bf8d261062e3005f1b23f8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a183530d8cd29a589efc7a195e5b6c176}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Regions@{get\+Regions}}
+\index{get\+Regions@{get\+Regions}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+get\+Regions (
+\begin{DoxyParamCaption}
+\item[{List$<$?extends {\bf Sequence\+Region} $>$}]{regions}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a183530d8cd29a589efc7a195e5b6c176}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a416d299b6cd3017e291847079c55380f}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Sequence\+Bases@{get\+Sequence\+Bases}}
+\index{get\+Sequence\+Bases@{get\+Sequence\+Bases}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Sequence\+Bases}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+sequence.\+Sequence.\+get\+Sequence\+Bases (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a416d299b6cd3017e291847079c55380f}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a7a3e2c4c228ea4ad140b89c9ac6baca3}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Sequence\+Builder@{get\+Sequence\+Builder}}
+\index{get\+Sequence\+Builder@{get\+Sequence\+Builder}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Sequence\+Builder}]{\setlength{\rightskip}{0pt plus 5cm}String\+Builder broad.\+core.\+sequence.\+Sequence.\+get\+Sequence\+Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a7a3e2c4c228ea4ad140b89c9ac6baca3}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aed240f0dc08cc05ee521e34b48f04063}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Slider@{get\+Slider}}
+\index{get\+Slider@{get\+Slider}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Slider}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\+Slider} broad.\+core.\+sequence.\+Sequence.\+get\+Slider (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aed240f0dc08cc05ee521e34b48f04063}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a61503379b2f74c904e0a6d26f8829086}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Softmasked\+Regions@{get\+Softmasked\+Regions}}
+\index{get\+Softmasked\+Regions@{get\+Softmasked\+Regions}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Softmasked\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Genomic\+Annotation}$>$ broad.\+core.\+sequence.\+Sequence.\+get\+Softmasked\+Regions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a61503379b2f74c904e0a6d26f8829086}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ab03732869550e07296a989208b50c100}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Sub\+Sequence@{get\+Sub\+Sequence}}
+\index{get\+Sub\+Sequence@{get\+Sub\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Sub\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+get\+Sub\+Sequence (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\+Region}}]{region, }
+\item[{int}]{extension}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ab03732869550e07296a989208b50c100}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a1917327054e5ef6c6d5d3ef15c203f03}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Sub\+Sequence@{get\+Sub\+Sequence}}
+\index{get\+Sub\+Sequence@{get\+Sub\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Sub\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+get\+Sub\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{int}]{extension}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a1917327054e5ef6c6d5d3ef15c203f03}
+Get subsequence with extension 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of new sequence to return \\
+\hline
+{\em start} & Start position of subsequence \\
+\hline
+{\em end} & Position after last position to include \\
+\hline
+{\em extension} & Extension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subsequence 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a5af216e57b3a21de28ff79b81a51af25}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Sub\+Sequence@{get\+Sub\+Sequence}}
+\index{get\+Sub\+Sequence@{get\+Sub\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Sub\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+get\+Sub\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a5af216e57b3a21de28ff79b81a51af25}
+Get subsequence 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of new sequence to return \\
+\hline
+{\em start} & Start position of subsequence \\
+\hline
+{\em end} & Position after last position to include \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subsequence 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aea523aacfd70e1301e61ce005db9fd68}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Subsequence@{get\+Subsequence}}
+\index{get\+Subsequence@{get\+Subsequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Subsequence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+get\+Subsequence (
+\begin{DoxyParamCaption}
+\item[{Gene}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aea523aacfd70e1301e61ce005db9fd68}
+Get the spliced transcribed sequence of an annotation Bases are reported in 5' to 3' direction 
+\begin{DoxyParams}{Parameters}
+{\em annot} & The annotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} with same name as annotation containing the transcribed sequence 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ac6dee6a60810f7af86ac448ac18b721b}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Subsequence@{get\+Subsequence}}
+\index{get\+Subsequence@{get\+Subsequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Subsequence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+get\+Subsequence (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ac6dee6a60810f7af86ac448ac18b721b}
+Get the spliced transcribed sequence of an annotation Bases are reported in 5' to 3' direction 
+\begin{DoxyParams}{Parameters}
+{\em annot} & The annotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classbroad_1_1core_1_1sequence_1_1_sequence}{Sequence} with same name as annotation containing the transcribed sequence 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a5127ade0f481eedbb87cdd6fde86f293}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!get\+Vector\+Encoded\+Sequence@{get\+Vector\+Encoded\+Sequence}}
+\index{get\+Vector\+Encoded\+Sequence@{get\+Vector\+Encoded\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{get\+Vector\+Encoded\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} broad.\+core.\+sequence.\+Sequence.\+get\+Vector\+Encoded\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a5127ade0f481eedbb87cdd6fde86f293}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ad3843c99ca1bdd29ff3a8d054c2714fc}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!is\+Forward\+Strand@{is\+Forward\+Strand}}
+\index{is\+Forward\+Strand@{is\+Forward\+Strand}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{is\+Forward\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+sequence.\+Sequence.\+is\+Forward\+Strand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ad3843c99ca1bdd29ff3a8d054c2714fc}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a0311924cfc4add3eee42b023f71b42c8}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!is\+Gap@{is\+Gap}}
+\index{is\+Gap@{is\+Gap}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{is\+Gap}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+core.\+sequence.\+Sequence.\+is\+Gap (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a0311924cfc4add3eee42b023f71b42c8}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ab2de5da03cf12144aa625a7bdafdb8fb}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!mask@{mask}}
+\index{mask@{mask}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{mask}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+mask (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{region, }
+\item[{boolean}]{softmask}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ab2de5da03cf12144aa625a7bdafdb8fb}
+Mask part of sequence 
+\begin{DoxyParams}{Parameters}
+{\em region} & Region to mask. Masks blocks only. \\
+\hline
+{\em softmask} & If true, mask to lower case. If false, mask to Ns. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a2cbe31f56aa039cf1721466398346e1c}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!mask\+Softmasked\+Regions@{mask\+Softmasked\+Regions}}
+\index{mask\+Softmasked\+Regions@{mask\+Softmasked\+Regions}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{mask\+Softmasked\+Regions}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+mask\+Softmasked\+Regions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a2cbe31f56aa039cf1721466398346e1c}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ae7dfa608c5c59b4b99721841e1715b84}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!reverse@{reverse}}
+\index{reverse@{reverse}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{reverse}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+reverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ae7dfa608c5c59b4b99721841e1715b84}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_afc286e0183b8c3dc59903224862f5ae5}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!reverse\+Sequence@{reverse\+Sequence}}
+\index{reverse\+Sequence@{reverse\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{reverse\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+reverse\+Sequence (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}}]{seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_afc286e0183b8c3dc59903224862f5ae5}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a0a46eed86466309a01fef420100845e1}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!reverse\+Sequence@{reverse\+Sequence}}
+\index{reverse\+Sequence@{reverse\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{reverse\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+core.\+sequence.\+Sequence.\+reverse\+Sequence (
+\begin{DoxyParamCaption}
+\item[{String}]{seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a0a46eed86466309a01fef420100845e1}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a0820a809e5bd46b6224a31d6dcff27b0}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!scramble@{scramble}}
+\index{scramble@{scramble}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{scramble}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+scramble (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a0820a809e5bd46b6224a31d6dcff27b0}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a723236046f4794809e92aef25ca79b89}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!set\+Capacity@{set\+Capacity}}
+\index{set\+Capacity@{set\+Capacity}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{set\+Capacity}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+set\+Capacity (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a723236046f4794809e92aef25ca79b89}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a9d8bf6ecc44a74ff02c8811f29f670ec}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!set\+Char\+At@{set\+Char\+At}}
+\index{set\+Char\+At@{set\+Char\+At}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{set\+Char\+At}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+set\+Char\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{position, }
+\item[{char}]{new\+Character}
+\end{DoxyParamCaption}
+) throws Illegal\+Access\+Exception}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a9d8bf6ecc44a74ff02c8811f29f670ec}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a1126c1510a531a59949482357696d37b}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!set\+Forward\+Strand@{set\+Forward\+Strand}}
+\index{set\+Forward\+Strand@{set\+Forward\+Strand}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{set\+Forward\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+set\+Forward\+Strand (
+\begin{DoxyParamCaption}
+\item[{boolean}]{is\+Forward\+Strand}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a1126c1510a531a59949482357696d37b}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a22ed5d4080bf7946a0d0a782f792e945}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{set\+Id}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+set\+Id (
+\begin{DoxyParamCaption}
+\item[{String}]{id}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a22ed5d4080bf7946a0d0a782f792e945}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a8195f46d431993392dbb892bb85beca1}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!set\+Sequence\+Bases@{set\+Sequence\+Bases}}
+\index{set\+Sequence\+Bases@{set\+Sequence\+Bases}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{set\+Sequence\+Bases}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+set\+Sequence\+Bases (
+\begin{DoxyParamCaption}
+\item[{String}]{sequence}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a8195f46d431993392dbb892bb85beca1}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a8434722abf884dd505dab97058388e9f}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence} broad.\+core.\+sequence.\+Sequence.\+shuffle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a8434722abf884dd505dab97058388e9f}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_afb2eb45f529388053380969eda3f7993}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!unload\+All\+Sequences@{unload\+All\+Sequences}}
+\index{unload\+All\+Sequences@{unload\+All\+Sequences}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{unload\+All\+Sequences}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+unload\+All\+Sequences (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_afb2eb45f529388053380969eda3f7993}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_accc6ee68ddb6acad2a0f5443c47d3b2d}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!unload\+Encoded\+Sequence@{unload\+Encoded\+Sequence}}
+\index{unload\+Encoded\+Sequence@{unload\+Encoded\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{unload\+Encoded\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+unload\+Encoded\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_accc6ee68ddb6acad2a0f5443c47d3b2d}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ac9da439ccb0a9eb4e8d2d514551c92fd}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!unload\+Sequence@{unload\+Sequence}}
+\index{unload\+Sequence@{unload\+Sequence}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{unload\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+unload\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ac9da439ccb0a9eb4e8d2d514551c92fd}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a50efd0ef4a7b4d79ba3006a180ac9a02}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!uppercase@{uppercase}}
+\index{uppercase@{uppercase}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{uppercase}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+sequence.\+Sequence.\+uppercase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a50efd0ef4a7b4d79ba3006a180ac9a02}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a22c8e2cb48a3bac92822a2ab77e006da}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!L\+O\+N\+G\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W@{L\+O\+N\+G\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W}}
+\index{L\+O\+N\+G\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W@{L\+O\+N\+G\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{L\+O\+N\+G\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}final char \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+L\+O\+N\+G\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W = \{'G','A','T','C'\}\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a22c8e2cb48a3bac92822a2ab77e006da}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a5e9588156dd0a4c914cf8ea5e46dc288}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+A@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+A}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+A@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+A}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+A}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+A = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a5e9588156dd0a4c914cf8ea5e46dc288}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aa8b9e6eb9635659fb61f46a91a2c1831}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+a@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+a}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+a@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+a}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+a}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+a = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aa8b9e6eb9635659fb61f46a91a2c1831}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a7eaf6345f01e26bfcf1925adb7b63b6a}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+C@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+C}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+C@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+C}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+C}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+C = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a7eaf6345f01e26bfcf1925adb7b63b6a}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_ade4cf8fa3c5604985c82057049949f18}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+c@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+c}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+c@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+c}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+c}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+c = 6\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_ade4cf8fa3c5604985c82057049949f18}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a1035184882e0829351d913c8212b8e99}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a1035184882e0829351d913c8212b8e99}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a317b007c9ec5f87d5e4bae72adb17717}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+g@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+g}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+g@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+g}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+g}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+g = 7\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a317b007c9ec5f87d5e4bae72adb17717}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_af6b23c272152e3450a5ed58c95b31fdb}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G\+A\+P@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G\+A\+P}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G\+A\+P@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G\+A\+P}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+G\+A\+P = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_af6b23c272152e3450a5ed58c95b31fdb}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a421b5eb48f2848619737a1a706ff2c55}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+N@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+N}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+N@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+N}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+N}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+N = 9\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a421b5eb48f2848619737a1a706ff2c55}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_aa8830afd48b5456f422e0d4ac282c3e4}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+T@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+T}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+T@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+T}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+T}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+\+T = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_aa8830afd48b5456f422e0d4ac282c3e4}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a1b69cede3c60348e6b8f9ab1aec01912}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+t@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+t}}
+\index{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+t@{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+t}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}final short broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+E\+N\+C\+O\+D\+E\+D\+\_\+t = 8\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a1b69cede3c60348e6b8f9ab1aec01912}
+\hypertarget{classbroad_1_1core_1_1sequence_1_1_sequence_a753cb91384665e3a3440ce2f1844fa4a}{\index{broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}!S\+H\+O\+R\+T\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W@{S\+H\+O\+R\+T\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W}}
+\index{S\+H\+O\+R\+T\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W@{S\+H\+O\+R\+T\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W}!broad\+::core\+::sequence\+::\+Sequence@{broad\+::core\+::sequence\+::\+Sequence}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}final char \mbox{[}$\,$\mbox{]} broad.\+core.\+sequence.\+Sequence.\+S\+H\+O\+R\+T\+\_\+\+R\+E\+A\+D\+\_\+\+F\+L\+O\+W = \{'T','A','C','G'\}\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1sequence_1_1_sequence_a753cb91384665e3a3440ce2f1844fa4a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/sequence/\hyperlink{broad_2core_2sequence_2_sequence_8java}{Sequence.\+java}\end{DoxyCompactItemize}

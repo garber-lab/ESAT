@@ -1,0 +1,341 @@
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler}{\section{broad.\+core.\+siphy.\+Tree\+Scaler Class Reference}
+\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler}\index{broad.\+core.\+siphy.\+Tree\+Scaler@{broad.\+core.\+siphy.\+Tree\+Scaler}}
+}
+
+
+Collaboration diagram for broad.\+core.\+siphy.\+Tree\+Scaler\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a1dc6146834dbaaa5fe6e296a3dce26fa}{Tree\+Scaler} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a39b4829a2c7f0c89acadac2393049725}{Tree\+Scaler} (Annotation region, File model\+File, String aln\+File, String aln\+File\+Format)  throws Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a957d50f0314cbdbea117d7bdb6595b01}{set\+Alignment} (String aln\+File, String aln\+File\+Format)  throws Exception
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a7b8630a9b05c5efc4e00276fa0a95831}{encode\+As\+Matrix} ()
+\item 
+double \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aa28eca418572c1475df5d267edaa9487}{get\+Log\+Likelihood} (double omega, Phylogeny aln\+Tree, int start\+Position, int window)
+\item 
+Pi\+Fit \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a37ff6aa0bde1d0506362c6b515cc312c}{fit\+P\+I} (Phylogeny aln\+Tree, int i)
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d}{B\+E\+D} $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_ab203584b3ace8a8a7c80781f94dde180}{slide\+P\+W\+M} (\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} pwm, double min\+Seed\+Score, short\mbox{[}$\,$\mbox{]} encoded\+Ref, List$<$ int\mbox{[}$\,$\mbox{]}$>$ ungapped\+Chunks, int num\+Permutations)
+\item 
+List$<$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_b_e_d}{B\+E\+D} $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a45de3c44b31473586a9783d20de81554}{slide\+P\+W\+M} (\hyperlink{classbroad_1_1core_1_1motif_1_1_position_weight_matrix}{Position\+Weight\+Matrix} pwm, double min\+Seed\+Score, int num\+Permutations)
+\item 
+Omega\+Fit \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a690046ea37206c916a3f3834fda6f203}{scale\+Region} (List$<$ String $>$ ignore\+List, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} region)
+\item 
+Omega\+Fit \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a4d39bd46f404c08bb844ae42fa6e8cdc}{scale\+Region} (Annotation region)
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a6f7ecab5c4a2cddb25a3540d72ba5d27}{scale\+Tree} (int window, Buffered\+Writer bw, List$<$ String $>$ ignore\+List, int overlap)  throws I\+O\+Exception 
+\item 
+Array\+List$<$ Omega\+Fit $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_acf79dc568a6167e997a78d37ad3cc031}{scale\+Tree} (int window, List$<$ String $>$ ignore\+List, int overlap)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a385c075371190ba318182301e4b907fb}{scale\+Tree\+With\+Sampling} (int window, Buffered\+Writer bw, List$<$ String $>$ ignore\+List, int number\+To\+Average)  throws I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a7e93e3f043e6f1de3c113fc7910e10bb}{set\+Alignment} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} alignment)
+\item 
+double \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_add956377753d6a650493d0fae59994b0}{get\+Total\+Distance\+From\+Node} (Phylogeny\+Node n)
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aac84894bf323063b0e023ae5aa23d0e8}{set\+Neutral\+Model} (File model\+File)  throws I\+O\+Exception, Parse\+Exception 
+\item 
+double \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a95e23fcd6918e57aa1de02c5a821721c}{get\+Minimum\+Tree\+Length} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a39748e22702a23a62e6806516d4b9c4d}{set\+Minimum\+Tree\+Length} (double minimum\+Tree\+Length)
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a4f07812132f23c410d73c521776113df}{get\+Model} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a6874a8f4e920f45d2abe3461842138d9}{set\+Model} (\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} model)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a036762852612940632c8cbaa824157be}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aa07d316202e0e8a7632470927278db48}{U\+S\+A\+G\+E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a1dc6146834dbaaa5fe6e296a3dce26fa}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!Tree\+Scaler@{Tree\+Scaler}}
+\index{Tree\+Scaler@{Tree\+Scaler}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{Tree\+Scaler}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Tree\+Scaler.\+Tree\+Scaler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a1dc6146834dbaaa5fe6e296a3dce26fa}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a39b4829a2c7f0c89acadac2393049725}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!Tree\+Scaler@{Tree\+Scaler}}
+\index{Tree\+Scaler@{Tree\+Scaler}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{Tree\+Scaler}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Tree\+Scaler.\+Tree\+Scaler (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{region, }
+\item[{File}]{model\+File, }
+\item[{String}]{aln\+File, }
+\item[{String}]{aln\+File\+Format}
+\end{DoxyParamCaption}
+) throws Exception}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a39b4829a2c7f0c89acadac2393049725}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a7b8630a9b05c5efc4e00276fa0a95831}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!encode\+As\+Matrix@{encode\+As\+Matrix}}
+\index{encode\+As\+Matrix@{encode\+As\+Matrix}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{encode\+As\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+encode\+As\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a7b8630a9b05c5efc4e00276fa0a95831}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a37ff6aa0bde1d0506362c6b515cc312c}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!fit\+P\+I@{fit\+P\+I}}
+\index{fit\+P\+I@{fit\+P\+I}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{fit\+P\+I}]{\setlength{\rightskip}{0pt plus 5cm}Pi\+Fit broad.\+core.\+siphy.\+Tree\+Scaler.\+fit\+P\+I (
+\begin{DoxyParamCaption}
+\item[{Phylogeny}]{aln\+Tree, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a37ff6aa0bde1d0506362c6b515cc312c}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aa28eca418572c1475df5d267edaa9487}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!get\+Log\+Likelihood@{get\+Log\+Likelihood}}
+\index{get\+Log\+Likelihood@{get\+Log\+Likelihood}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{get\+Log\+Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+siphy.\+Tree\+Scaler.\+get\+Log\+Likelihood (
+\begin{DoxyParamCaption}
+\item[{double}]{omega, }
+\item[{Phylogeny}]{aln\+Tree, }
+\item[{int}]{start\+Position, }
+\item[{int}]{window}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aa28eca418572c1475df5d267edaa9487}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a95e23fcd6918e57aa1de02c5a821721c}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!get\+Minimum\+Tree\+Length@{get\+Minimum\+Tree\+Length}}
+\index{get\+Minimum\+Tree\+Length@{get\+Minimum\+Tree\+Length}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{get\+Minimum\+Tree\+Length}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+siphy.\+Tree\+Scaler.\+get\+Minimum\+Tree\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a95e23fcd6918e57aa1de02c5a821721c}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a4f07812132f23c410d73c521776113df}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{get\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Evolutionary\+Model} broad.\+core.\+siphy.\+Tree\+Scaler.\+get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a4f07812132f23c410d73c521776113df}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_add956377753d6a650493d0fae59994b0}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!get\+Total\+Distance\+From\+Node@{get\+Total\+Distance\+From\+Node}}
+\index{get\+Total\+Distance\+From\+Node@{get\+Total\+Distance\+From\+Node}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{get\+Total\+Distance\+From\+Node}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+siphy.\+Tree\+Scaler.\+get\+Total\+Distance\+From\+Node (
+\begin{DoxyParamCaption}
+\item[{Phylogeny\+Node}]{n}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_add956377753d6a650493d0fae59994b0}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a036762852612940632c8cbaa824157be}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!main@{main}}
+\index{main@{main}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+siphy.\+Tree\+Scaler.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a036762852612940632c8cbaa824157be}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a690046ea37206c916a3f3834fda6f203}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!scale\+Region@{scale\+Region}}
+\index{scale\+Region@{scale\+Region}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{scale\+Region}]{\setlength{\rightskip}{0pt plus 5cm}Omega\+Fit broad.\+core.\+siphy.\+Tree\+Scaler.\+scale\+Region (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{{\bf Genomic\+Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a690046ea37206c916a3f3834fda6f203}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a4d39bd46f404c08bb844ae42fa6e8cdc}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!scale\+Region@{scale\+Region}}
+\index{scale\+Region@{scale\+Region}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{scale\+Region}]{\setlength{\rightskip}{0pt plus 5cm}Omega\+Fit broad.\+core.\+siphy.\+Tree\+Scaler.\+scale\+Region (
+\begin{DoxyParamCaption}
+\item[{Annotation}]{region}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a4d39bd46f404c08bb844ae42fa6e8cdc}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a6f7ecab5c4a2cddb25a3540d72ba5d27}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!scale\+Tree@{scale\+Tree}}
+\index{scale\+Tree@{scale\+Tree}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{scale\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+scale\+Tree (
+\begin{DoxyParamCaption}
+\item[{int}]{window, }
+\item[{Buffered\+Writer}]{bw, }
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a6f7ecab5c4a2cddb25a3540d72ba5d27}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_acf79dc568a6167e997a78d37ad3cc031}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!scale\+Tree@{scale\+Tree}}
+\index{scale\+Tree@{scale\+Tree}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{scale\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}Array\+List$<$Omega\+Fit$>$ broad.\+core.\+siphy.\+Tree\+Scaler.\+scale\+Tree (
+\begin{DoxyParamCaption}
+\item[{int}]{window, }
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_acf79dc568a6167e997a78d37ad3cc031}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a385c075371190ba318182301e4b907fb}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!scale\+Tree\+With\+Sampling@{scale\+Tree\+With\+Sampling}}
+\index{scale\+Tree\+With\+Sampling@{scale\+Tree\+With\+Sampling}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{scale\+Tree\+With\+Sampling}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+scale\+Tree\+With\+Sampling (
+\begin{DoxyParamCaption}
+\item[{int}]{window, }
+\item[{Buffered\+Writer}]{bw, }
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{int}]{number\+To\+Average}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a385c075371190ba318182301e4b907fb}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a957d50f0314cbdbea117d7bdb6595b01}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!set\+Alignment@{set\+Alignment}}
+\index{set\+Alignment@{set\+Alignment}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{set\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+set\+Alignment (
+\begin{DoxyParamCaption}
+\item[{String}]{aln\+File, }
+\item[{String}]{aln\+File\+Format}
+\end{DoxyParamCaption}
+) throws Exception}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a957d50f0314cbdbea117d7bdb6595b01}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a7e93e3f043e6f1de3c113fc7910e10bb}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!set\+Alignment@{set\+Alignment}}
+\index{set\+Alignment@{set\+Alignment}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{set\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+set\+Alignment (
+\begin{DoxyParamCaption}
+\item[{{\bf Multiple\+Alignment}}]{alignment}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a7e93e3f043e6f1de3c113fc7910e10bb}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a39748e22702a23a62e6806516d4b9c4d}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!set\+Minimum\+Tree\+Length@{set\+Minimum\+Tree\+Length}}
+\index{set\+Minimum\+Tree\+Length@{set\+Minimum\+Tree\+Length}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{set\+Minimum\+Tree\+Length}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+set\+Minimum\+Tree\+Length (
+\begin{DoxyParamCaption}
+\item[{double}]{minimum\+Tree\+Length}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a39748e22702a23a62e6806516d4b9c4d}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a6874a8f4e920f45d2abe3461842138d9}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!set\+Model@{set\+Model}}
+\index{set\+Model@{set\+Model}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{set\+Model}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+set\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Evolutionary\+Model}}]{model}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a6874a8f4e920f45d2abe3461842138d9}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aac84894bf323063b0e023ae5aa23d0e8}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!set\+Neutral\+Model@{set\+Neutral\+Model}}
+\index{set\+Neutral\+Model@{set\+Neutral\+Model}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{set\+Neutral\+Model}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Tree\+Scaler.\+set\+Neutral\+Model (
+\begin{DoxyParamCaption}
+\item[{File}]{model\+File}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aac84894bf323063b0e023ae5aa23d0e8}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_ab203584b3ace8a8a7c80781f94dde180}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!slide\+P\+W\+M@{slide\+P\+W\+M}}
+\index{slide\+P\+W\+M@{slide\+P\+W\+M}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{slide\+P\+W\+M}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf B\+E\+D}$>$ broad.\+core.\+siphy.\+Tree\+Scaler.\+slide\+P\+W\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Position\+Weight\+Matrix}}]{pwm, }
+\item[{double}]{min\+Seed\+Score, }
+\item[{short\mbox{[}$\,$\mbox{]}}]{encoded\+Ref, }
+\item[{List$<$ int\mbox{[}$\,$\mbox{]}$>$}]{ungapped\+Chunks, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_ab203584b3ace8a8a7c80781f94dde180}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a45de3c44b31473586a9783d20de81554}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!slide\+P\+W\+M@{slide\+P\+W\+M}}
+\index{slide\+P\+W\+M@{slide\+P\+W\+M}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{slide\+P\+W\+M}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf B\+E\+D}$>$ broad.\+core.\+siphy.\+Tree\+Scaler.\+slide\+P\+W\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Position\+Weight\+Matrix}}]{pwm, }
+\item[{double}]{min\+Seed\+Score, }
+\item[{int}]{num\+Permutations}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_a45de3c44b31473586a9783d20de81554}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aa07d316202e0e8a7632470927278db48}{\index{broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}!U\+S\+A\+G\+E@{U\+S\+A\+G\+E}}
+\index{U\+S\+A\+G\+E@{U\+S\+A\+G\+E}!broad\+::core\+::siphy\+::\+Tree\+Scaler@{broad\+::core\+::siphy\+::\+Tree\+Scaler}}
+\subsubsection[{U\+S\+A\+G\+E}]{\setlength{\rightskip}{0pt plus 5cm}final String broad.\+core.\+siphy.\+Tree\+Scaler.\+U\+S\+A\+G\+E\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_tree_scaler_aa07d316202e0e8a7632470927278db48}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/siphy/\hyperlink{_tree_scaler_8java}{Tree\+Scaler.\+java}\end{DoxyCompactItemize}

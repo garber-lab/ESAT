@@ -1,0 +1,13 @@
+digraph "umms.core.alignment.AbstractPairedEndAlignment.getReadAlignmentBlocks"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getReadAlignment\lBlocks",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.alignment.Abstract\lPairedEndAlignment.toSAMRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#a07764ea4c818de84cac405e4d3d1ae73"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getFirstFragment\lPositionStranded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#a6a0100ecd7ccbbfa99b2fdbce249264b"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="umms.core.alignment.Abstract\lPairedEndAlignment.getLastFragment\lPositionStranded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment.html#a74011edfb3ccb6915bea34da9d73e3c7"];
+}

@@ -1,0 +1,13 @@
+digraph "java/broad/pda/geneexpression/agilent" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_27041ca1dfd1e0dcc00a80cd0109628e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="geneexpression" fontname="Helvetica", fontsize="10", URL="dir_27041ca1dfd1e0dcc00a80cd0109628e.html"]
+  subgraph clusterdir_f41cef3a2a07b14045e1ab3c3c685b01 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f41cef3a2a07b14045e1ab3c3c685b01.html"];
+    dir_f41cef3a2a07b14045e1ab3c3c685b01 [shape=plaintext label="agilent"];
+    dir_9e996551fbad42ff6f198d07c19d1138 [shape=box label="analysis" color="black" fillcolor="white" style="filled" URL="dir_9e996551fbad42ff6f198d07c19d1138.html"];
+  }
+  }
+}

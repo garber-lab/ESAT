@@ -1,0 +1,132 @@
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader}{\section{broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader Class Reference}
+\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader}\index{broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader@{broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader}}
+}
+
+
+Inheritance diagram for broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader\+:
+
+
+Collaboration diagram for broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_ae687d477301d3e3ba7991054f6e42eb1}{Repeat\+Masker\+Annotation\+Reader} ()
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a19d30691b8496873e654affd5096d91e}{Repeat\+Masker\+Annotation\+Reader} (Buffered\+Reader br)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a05cdd9872f59ae551d206f20f36fa83f}{Repeat\+Masker\+Annotation\+Reader} (String input)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+void \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a20c8fa15e7bdac2c602df8278b7a1fbf}{load} (Buffered\+Reader br)  throws I\+O\+Exception, Parse\+Exception 
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a0ad5bfb2adb4523e87bb5ff7e7e43680}{parse} (Buffered\+Reader br, Genomic\+Annotation\+Filter$<$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation}{Repeat\+Masker\+Annotation} $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception 
+\item 
+\hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation}{Repeat\+Masker\+Annotation} \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a28135a78c93863178ac6e4e06eb2e6fa}{create\+Annotation} (\hyperlink{interfacebroad_1_1core_1_1annotation_1_1_genomic_annotation}{Genomic\+Annotation} a)
+\item 
+int \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a2f421430a12c8efc3a89cd824ad60de0}{parse} (String file, Genomic\+Annotation\+Filter$<$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation}{Repeat\+Masker\+Annotation} $>$ filter, \hyperlink{interfacebroad_1_1core_1_1annotation_1_1_annotation_handler}{Annotation\+Handler} handler)  throws Parse\+Exception, I\+O\+Exception 
+\item 
+Set$<$ String $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a82a9c1f12e02483e928455d343134e1a}{get\+Unique\+Repeat\+Names} ()  throws I\+O\+Exception 
+\item 
+Set$<$ String $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_af6b0938d08085b5f8e915a8bab93f8e2}{get\+Unique\+Repeat\+Classes} ()  throws I\+O\+Exception 
+\item 
+Set$<$ String $>$ \hyperlink{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_aa575a5e82057feaaf50e66bf628028d8}{get\+Unique\+Repeat\+Families} ()  throws I\+O\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_ae687d477301d3e3ba7991054f6e42eb1}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!Repeat\+Masker\+Annotation\+Reader@{Repeat\+Masker\+Annotation\+Reader}}
+\index{Repeat\+Masker\+Annotation\+Reader@{Repeat\+Masker\+Annotation\+Reader}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{Repeat\+Masker\+Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+Repeat\+Masker\+Annotation\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_ae687d477301d3e3ba7991054f6e42eb1}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a19d30691b8496873e654affd5096d91e}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!Repeat\+Masker\+Annotation\+Reader@{Repeat\+Masker\+Annotation\+Reader}}
+\index{Repeat\+Masker\+Annotation\+Reader@{Repeat\+Masker\+Annotation\+Reader}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{Repeat\+Masker\+Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+Repeat\+Masker\+Annotation\+Reader (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a19d30691b8496873e654affd5096d91e}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a05cdd9872f59ae551d206f20f36fa83f}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!Repeat\+Masker\+Annotation\+Reader@{Repeat\+Masker\+Annotation\+Reader}}
+\index{Repeat\+Masker\+Annotation\+Reader@{Repeat\+Masker\+Annotation\+Reader}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{Repeat\+Masker\+Annotation\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+Repeat\+Masker\+Annotation\+Reader (
+\begin{DoxyParamCaption}
+\item[{String}]{input}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a05cdd9872f59ae551d206f20f36fa83f}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a28135a78c93863178ac6e4e06eb2e6fa}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!create\+Annotation@{create\+Annotation}}
+\index{create\+Annotation@{create\+Annotation}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{create\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Repeat\+Masker\+Annotation} broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+create\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Genomic\+Annotation}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a28135a78c93863178ac6e4e06eb2e6fa}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_af6b0938d08085b5f8e915a8bab93f8e2}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!get\+Unique\+Repeat\+Classes@{get\+Unique\+Repeat\+Classes}}
+\index{get\+Unique\+Repeat\+Classes@{get\+Unique\+Repeat\+Classes}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{get\+Unique\+Repeat\+Classes}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$String$>$ broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+get\+Unique\+Repeat\+Classes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_af6b0938d08085b5f8e915a8bab93f8e2}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_aa575a5e82057feaaf50e66bf628028d8}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!get\+Unique\+Repeat\+Families@{get\+Unique\+Repeat\+Families}}
+\index{get\+Unique\+Repeat\+Families@{get\+Unique\+Repeat\+Families}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{get\+Unique\+Repeat\+Families}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$String$>$ broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+get\+Unique\+Repeat\+Families (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_aa575a5e82057feaaf50e66bf628028d8}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a82a9c1f12e02483e928455d343134e1a}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!get\+Unique\+Repeat\+Names@{get\+Unique\+Repeat\+Names}}
+\index{get\+Unique\+Repeat\+Names@{get\+Unique\+Repeat\+Names}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{get\+Unique\+Repeat\+Names}]{\setlength{\rightskip}{0pt plus 5cm}Set$<$String$>$ broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+get\+Unique\+Repeat\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a82a9c1f12e02483e928455d343134e1a}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a20c8fa15e7bdac2c602df8278b7a1fbf}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!load@{load}}
+\index{load@{load}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+load (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a20c8fa15e7bdac2c602df8278b7a1fbf}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a0ad5bfb2adb4523e87bb5ff7e7e43680}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+parse (
+\begin{DoxyParamCaption}
+\item[{Buffered\+Reader}]{br, }
+\item[{Genomic\+Annotation\+Filter$<$ {\bf Repeat\+Masker\+Annotation} $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a0ad5bfb2adb4523e87bb5ff7e7e43680}
+\hypertarget{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a2f421430a12c8efc3a89cd824ad60de0}{\index{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader@{broad\+::core\+::annotation\+::\+Repeat\+Masker\+Annotation\+Reader}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+annotation.\+Repeat\+Masker\+Annotation\+Reader.\+parse (
+\begin{DoxyParamCaption}
+\item[{String}]{file, }
+\item[{Genomic\+Annotation\+Filter$<$ {\bf Repeat\+Masker\+Annotation} $>$}]{filter, }
+\item[{{\bf Annotation\+Handler}}]{handler}
+\end{DoxyParamCaption}
+) throws {\bf Parse\+Exception}, I\+O\+Exception}}\label{classbroad_1_1core_1_1annotation_1_1_repeat_masker_annotation_reader_a2f421430a12c8efc3a89cd824ad60de0}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/annotation/\hyperlink{_repeat_masker_annotation_reader_8java}{Repeat\+Masker\+Annotation\+Reader.\+java}\end{DoxyCompactItemize}

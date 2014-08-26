@@ -1,0 +1,397 @@
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data}{\section{broad.\+pda.\+seq.\+clip.\+Sample\+Data Class Reference}
+\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data}\index{broad.\+pda.\+seq.\+clip.\+Sample\+Data@{broad.\+pda.\+seq.\+clip.\+Sample\+Data}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+seq.\+clip.\+Sample\+Data\+:
+
+
+Collaboration diagram for broad.\+pda.\+seq.\+clip.\+Sample\+Data\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_adcfd7ff578f7f31b52d759171e966003}{Sample\+Data} (String bam\+File, boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a8bd77375c425d2175f5e63a85120b244}{first\+Read\+Transcription\+Strand}, Map$<$ String, Collection$<$ Gene $>$$>$ genes, double expression\+Cutoff, boolean exp\+By\+Scan\+Pval, boolean fully\+Contained)  throws I\+O\+Exception 
+\item 
+int \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_afec94a7510b50e455bc60c11c6ddc2ff}{hash\+Code} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a3f9e817ce92fd84f2b5756bdb5b97c36}{set\+Expression\+Scan\+Pvalue\+Cutoff} (double expression\+Scan\+Pval\+Cutoff)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab1d89f168632a45a362704dafdbdc13c}{get\+Expression\+Scan\+Pvalue\+Cutoff} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ad90b439a428d5cf25c496d69b49437a4}{get\+Gene\+Count} (Gene gene)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_acacdbc70e2771b904d9611b653f18c28}{get\+Fragment\+Length\+Gene\+Count} (Gene gene)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aed882cc54637ce63c7c00e014fcd40cd}{get\+Gene\+Scan\+Pval} (Gene gene)
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ae3f4ea198ba9415c26448706f02177bf}{get\+Gene\+Average\+Coverage} (Gene gene)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a20bd1f5c944414c4305844a15c35f8a1}{is\+Expressed} (Gene gene)
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a8bd77375c425d2175f5e63a85120b244}{first\+Read\+Transcription\+Strand} ()
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a83006fe4a56566ac14690adc205bf797}{get\+Enrichment\+Over\+Gene} (Gene gene, Annotation window)
+\item 
+Logger \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a2bfa33d3f02ba003618ad347cde46eda}{get\+Logger} ()
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a23c6423a51684f6f61cb445eec5d98d6}{get\+Sample\+Name} ()
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ac929b442873bd023a32feb28dac3dbe9}{get\+Original\+Bam\+File} ()
+\item 
+void \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a2e2bdce82785743a6814f003b3dc1df0}{set\+Sample\+Name} (String name)
+\item 
+Transcriptome\+Space\+Alignment\+Model \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aa5acde7843960f0190b3a1ff9ae4b708}{get\+Data} ()
+\item 
+Transcriptome\+Space\+Alignment\+Model \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a36db29585dcedfafcb7169a660bef489}{get\+Fragment\+Length\+Filter\+Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Logger \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_af64488a77382d0f1f7bde4c6909de2d5}{logger} = Logger.\+get\+Logger(Sample\+Data.\+class.\+get\+Name())
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a7c4644dba1de73c9baf1743c65628617}{sample\+Name}
+\item 
+Transcriptome\+Space\+Alignment\+Model \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aaa5b43deb7143f3c845893faab23e33e}{data}
+\item 
+Transcriptome\+Space\+Alignment\+Model \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ae74526f9f7081cb45a51ac714bdb788e}{max\+Fragment\+Length\+Data}
+\item 
+Map$<$ Gene, Scan\+Statistic\+Score $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab16a8cd9c6087c8086bdc63e4daae69d}{max\+Fragment\+Length\+Gene\+Scores}
+\item 
+Map$<$ Gene, Scan\+Statistic\+Score $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a38dff572a12928939c8cefc3ad77b624}{gene\+Scores}
+\item 
+Map$<$ Gene, Double $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_af41165298cda748416235bdaeef7ecf5}{gene\+Avg\+Coverage}
+\item 
+Map$<$ String, Collection$<$ Gene $>$ $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a8cd7634b21c85e6a4e79e65083932b28}{genes\+By\+Chr}
+\item 
+Map$<$ String, Gene $>$ \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab1ed0ab3b3ab3a672ba6fec27eb0905e}{genes\+By\+Name}
+\item 
+double \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ad60c5254db251c508821fe4d85563c6c}{expression\+Cutoff\+Value}
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a728846c6f5131cd3a7b4acdcb682c4fa}{expression\+By\+Scan\+Pval}
+\item 
+boolean \hyperlink{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a9688cfb05381c9fbf875f8b329c89f9a}{fully\+Contained\+Reads}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+shari 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_adcfd7ff578f7f31b52d759171e966003}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!Sample\+Data@{Sample\+Data}}
+\index{Sample\+Data@{Sample\+Data}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{Sample\+Data}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+Sample\+Data (
+\begin{DoxyParamCaption}
+\item[{String}]{bam\+File, }
+\item[{boolean}]{first\+Read\+Transcription\+Strand, }
+\item[{Map$<$ String, Collection$<$ Gene $>$$>$}]{genes, }
+\item[{double}]{expression\+Cutoff, }
+\item[{boolean}]{exp\+By\+Scan\+Pval, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_adcfd7ff578f7f31b52d759171e966003}
+
+\begin{DoxyParams}{Parameters}
+{\em bam\+File} & Bam file \\
+\hline
+{\em first\+Read\+Transcription\+Strand} & Whether read 1 is in direction of transcription \\
+\hline
+{\em genes} & Genes by chromosome \\
+\hline
+{\em window} & Window size \\
+\hline
+{\em step} & Step size \\
+\hline
+{\em expression\+Cutoff} & P value cutoff for scan test of gene expression \\
+\hline
+{\em exp\+By\+Scan\+Pval} & Expression is assessed by scan P value. If false, uses average read depth \\
+\hline
+{\em fully\+Contained} & Count fully contained reads only \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a8bd77375c425d2175f5e63a85120b244}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!first\+Read\+Transcription\+Strand@{first\+Read\+Transcription\+Strand}}
+\index{first\+Read\+Transcription\+Strand@{first\+Read\+Transcription\+Strand}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{first\+Read\+Transcription\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+first\+Read\+Transcription\+Strand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a8bd77375c425d2175f5e63a85120b244}
+Whether read 1 is in direction of transcription \begin{DoxyReturn}{Returns}
+True iff first read transcription strand is true 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aa5acde7843960f0190b3a1ff9ae4b708}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Transcriptome\+Space\+Alignment\+Model broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aa5acde7843960f0190b3a1ff9ae4b708}
+Write the window scores to a file for future use 
+\begin{DoxyParams}{Parameters}
+{\em m} & Multi sample binding site caller that this belongs to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & Get the alignment data \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Alignment model 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a83006fe4a56566ac14690adc205bf797}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Enrichment\+Over\+Gene@{get\+Enrichment\+Over\+Gene}}
+\index{get\+Enrichment\+Over\+Gene@{get\+Enrichment\+Over\+Gene}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Enrichment\+Over\+Gene}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Enrichment\+Over\+Gene (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene, }
+\item[{Annotation}]{window}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a83006fe4a56566ac14690adc205bf797}
+Get enrichment of a window over a gene 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+{\em window} & Window contained in the gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enrichment of window over gene background 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab1d89f168632a45a362704dafdbdc13c}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Expression\+Scan\+Pvalue\+Cutoff@{get\+Expression\+Scan\+Pvalue\+Cutoff}}
+\index{get\+Expression\+Scan\+Pvalue\+Cutoff@{get\+Expression\+Scan\+Pvalue\+Cutoff}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Expression\+Scan\+Pvalue\+Cutoff}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Expression\+Scan\+Pvalue\+Cutoff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab1d89f168632a45a362704dafdbdc13c}
+Get genome wide scan P value cutoff for expression of transcript \begin{DoxyReturn}{Returns}
+P value cutoff for transcript expression against genomic background 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a36db29585dcedfafcb7169a660bef489}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Fragment\+Length\+Filter\+Data@{get\+Fragment\+Length\+Filter\+Data}}
+\index{get\+Fragment\+Length\+Filter\+Data@{get\+Fragment\+Length\+Filter\+Data}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Fragment\+Length\+Filter\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Transcriptome\+Space\+Alignment\+Model broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Fragment\+Length\+Filter\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a36db29585dcedfafcb7169a660bef489}
+Get the alignment data filtered by max fragment length \begin{DoxyReturn}{Returns}
+Alignment model 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_acacdbc70e2771b904d9611b653f18c28}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Fragment\+Length\+Gene\+Count@{get\+Fragment\+Length\+Gene\+Count}}
+\index{get\+Fragment\+Length\+Gene\+Count@{get\+Fragment\+Length\+Gene\+Count}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Fragment\+Length\+Gene\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Fragment\+Length\+Gene\+Count (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_acacdbc70e2771b904d9611b653f18c28}
+Get number of fragments mapping to gene after fragment length filter Get score from cache or calculate and cache score 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of fragments mapping to the gene 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ae3f4ea198ba9415c26448706f02177bf}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Gene\+Average\+Coverage@{get\+Gene\+Average\+Coverage}}
+\index{get\+Gene\+Average\+Coverage@{get\+Gene\+Average\+Coverage}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Gene\+Average\+Coverage}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Gene\+Average\+Coverage (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ae3f4ea198ba9415c26448706f02177bf}
+Get average coverage of gene Get score from cache or calculate and cache score 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The average coverage of the gene 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ad90b439a428d5cf25c496d69b49437a4}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Gene\+Count@{get\+Gene\+Count}}
+\index{get\+Gene\+Count@{get\+Gene\+Count}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Gene\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Gene\+Count (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ad90b439a428d5cf25c496d69b49437a4}
+Get number of fragments mapping to gene Get score from cache or calculate and cache score 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of fragments mapping to the gene 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aed882cc54637ce63c7c00e014fcd40cd}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Gene\+Scan\+Pval@{get\+Gene\+Scan\+Pval}}
+\index{get\+Gene\+Scan\+Pval@{get\+Gene\+Scan\+Pval}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Gene\+Scan\+Pval}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Gene\+Scan\+Pval (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aed882cc54637ce63c7c00e014fcd40cd}
+Get coordinate space wide scan P value of number of fragments mapping to the gene Get score from cache or calculate and cache score 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scan P value of the number of fragments mapping to the gene with respect to teh coordinate space 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a2bfa33d3f02ba003618ad347cde46eda}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Logger@{get\+Logger}}
+\index{get\+Logger@{get\+Logger}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a2bfa33d3f02ba003618ad347cde46eda}
+Get the logger \begin{DoxyReturn}{Returns}
+The logger 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ac929b442873bd023a32feb28dac3dbe9}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Original\+Bam\+File@{get\+Original\+Bam\+File}}
+\index{get\+Original\+Bam\+File@{get\+Original\+Bam\+File}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Original\+Bam\+File}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Original\+Bam\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ac929b442873bd023a32feb28dac3dbe9}
+Get name of original bam file \begin{DoxyReturn}{Returns}
+Bam file name 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a23c6423a51684f6f61cb445eec5d98d6}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!get\+Sample\+Name@{get\+Sample\+Name}}
+\index{get\+Sample\+Name@{get\+Sample\+Name}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{get\+Sample\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+get\+Sample\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a23c6423a51684f6f61cb445eec5d98d6}
+Get the sample name \begin{DoxyReturn}{Returns}
+Sample name 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_afec94a7510b50e455bc60c11c6ddc2ff}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!hash\+Code@{hash\+Code}}
+\index{hash\+Code@{hash\+Code}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{hash\+Code}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+hash\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_afec94a7510b50e455bc60c11c6ddc2ff}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a20bd1f5c944414c4305844a15c35f8a1}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!is\+Expressed@{is\+Expressed}}
+\index{is\+Expressed@{is\+Expressed}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{is\+Expressed}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+is\+Expressed (
+\begin{DoxyParamCaption}
+\item[{Gene}]{gene}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a20bd1f5c944414c4305844a15c35f8a1}
+Whether the gene is significantly expressed in the sample 
+\begin{DoxyParams}{Parameters}
+{\em gene} & The gene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the gene is expressed at the given significance level 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a3f9e817ce92fd84f2b5756bdb5b97c36}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!set\+Expression\+Scan\+Pvalue\+Cutoff@{set\+Expression\+Scan\+Pvalue\+Cutoff}}
+\index{set\+Expression\+Scan\+Pvalue\+Cutoff@{set\+Expression\+Scan\+Pvalue\+Cutoff}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{set\+Expression\+Scan\+Pvalue\+Cutoff}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+set\+Expression\+Scan\+Pvalue\+Cutoff (
+\begin{DoxyParamCaption}
+\item[{double}]{expression\+Scan\+Pval\+Cutoff}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a3f9e817ce92fd84f2b5756bdb5b97c36}
+Set genome wide scan P value cutoff for expression of transcript 
+\begin{DoxyParams}{Parameters}
+{\em expression\+Scan\+Pval\+Cutoff} & P value cutoff for transcript expression against genomic background \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a2e2bdce82785743a6814f003b3dc1df0}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!set\+Sample\+Name@{set\+Sample\+Name}}
+\index{set\+Sample\+Name@{set\+Sample\+Name}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{set\+Sample\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+set\+Sample\+Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a2e2bdce82785743a6814f003b3dc1df0}
+Set the sample name 
+\begin{DoxyParams}{Parameters}
+{\em name} & Sample name \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aaa5b43deb7143f3c845893faab23e33e}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!data@{data}}
+\index{data@{data}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}Transcriptome\+Space\+Alignment\+Model broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_aaa5b43deb7143f3c845893faab23e33e}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a728846c6f5131cd3a7b4acdcb682c4fa}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!expression\+By\+Scan\+Pval@{expression\+By\+Scan\+Pval}}
+\index{expression\+By\+Scan\+Pval@{expression\+By\+Scan\+Pval}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{expression\+By\+Scan\+Pval}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+expression\+By\+Scan\+Pval\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a728846c6f5131cd3a7b4acdcb682c4fa}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ad60c5254db251c508821fe4d85563c6c}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!expression\+Cutoff\+Value@{expression\+Cutoff\+Value}}
+\index{expression\+Cutoff\+Value@{expression\+Cutoff\+Value}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{expression\+Cutoff\+Value}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+expression\+Cutoff\+Value\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ad60c5254db251c508821fe4d85563c6c}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a9688cfb05381c9fbf875f8b329c89f9a}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!fully\+Contained\+Reads@{fully\+Contained\+Reads}}
+\index{fully\+Contained\+Reads@{fully\+Contained\+Reads}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{fully\+Contained\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}boolean broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+fully\+Contained\+Reads\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a9688cfb05381c9fbf875f8b329c89f9a}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_af41165298cda748416235bdaeef7ecf5}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!gene\+Avg\+Coverage@{gene\+Avg\+Coverage}}
+\index{gene\+Avg\+Coverage@{gene\+Avg\+Coverage}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{gene\+Avg\+Coverage}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Gene, Double$>$ broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+gene\+Avg\+Coverage\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_af41165298cda748416235bdaeef7ecf5}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a8cd7634b21c85e6a4e79e65083932b28}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!genes\+By\+Chr@{genes\+By\+Chr}}
+\index{genes\+By\+Chr@{genes\+By\+Chr}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{genes\+By\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Collection$<$Gene$>$ $>$ broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+genes\+By\+Chr\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a8cd7634b21c85e6a4e79e65083932b28}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab1ed0ab3b3ab3a672ba6fec27eb0905e}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!genes\+By\+Name@{genes\+By\+Name}}
+\index{genes\+By\+Name@{genes\+By\+Name}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{genes\+By\+Name}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Gene$>$ broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+genes\+By\+Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab1ed0ab3b3ab3a672ba6fec27eb0905e}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a38dff572a12928939c8cefc3ad77b624}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!gene\+Scores@{gene\+Scores}}
+\index{gene\+Scores@{gene\+Scores}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{gene\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Gene, Scan\+Statistic\+Score$>$ broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+gene\+Scores\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a38dff572a12928939c8cefc3ad77b624}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_af64488a77382d0f1f7bde4c6909de2d5}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!logger@{logger}}
+\index{logger@{logger}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+logger = Logger.\+get\+Logger(Sample\+Data.\+class.\+get\+Name())\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_af64488a77382d0f1f7bde4c6909de2d5}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ae74526f9f7081cb45a51ac714bdb788e}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!max\+Fragment\+Length\+Data@{max\+Fragment\+Length\+Data}}
+\index{max\+Fragment\+Length\+Data@{max\+Fragment\+Length\+Data}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{max\+Fragment\+Length\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Transcriptome\+Space\+Alignment\+Model broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+max\+Fragment\+Length\+Data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ae74526f9f7081cb45a51ac714bdb788e}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab16a8cd9c6087c8086bdc63e4daae69d}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!max\+Fragment\+Length\+Gene\+Scores@{max\+Fragment\+Length\+Gene\+Scores}}
+\index{max\+Fragment\+Length\+Gene\+Scores@{max\+Fragment\+Length\+Gene\+Scores}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{max\+Fragment\+Length\+Gene\+Scores}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$Gene, Scan\+Statistic\+Score$>$ broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+max\+Fragment\+Length\+Gene\+Scores\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_ab16a8cd9c6087c8086bdc63e4daae69d}
+\hypertarget{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a7c4644dba1de73c9baf1743c65628617}{\index{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}!sample\+Name@{sample\+Name}}
+\index{sample\+Name@{sample\+Name}!broad\+::pda\+::seq\+::clip\+::\+Sample\+Data@{broad\+::pda\+::seq\+::clip\+::\+Sample\+Data}}
+\subsubsection[{sample\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+pda.\+seq.\+clip.\+Sample\+Data.\+sample\+Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1seq_1_1clip_1_1_sample_data_a7c4644dba1de73c9baf1743c65628617}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/seq/clip/\hyperlink{clip_2_sample_data_8java}{Sample\+Data.\+java}\end{DoxyCompactItemize}

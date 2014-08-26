@@ -1,0 +1,28 @@
+digraph "Jama.Matrix.getColumnDimension"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Jama.Matrix.getColumnDimension",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.datastructures.\lMatrixWithHeaders.writeGCT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a06e075f732e997e949921997379c31f8"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.datastructures.\lMatrixWithHeaders.writeGCT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#ab2da90de3c1b3c1e939ae6990d64cb5e"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="broad.core.datastructures.\lMatrixWithHeaders.times",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#a59a134b24bbbd08c932cfa2276d77757"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.datastructures.\lMatrixWithHeaders.minus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1datastructures_1_1_matrix_with_headers.html#aeffec2cccaeb4cf7b2989c123a756b5a"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="broad.core.math.Statistics.geometric\lMeanMAD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1math_1_1_statistics.html#a7efc9182cf4cdf0af3478207f65cb56b"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.sequence.Sequence.isGap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1sequence_1_1_sequence.html#a0311924cfc4add3eee42b023f71b42c8"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.core.siphy.Evolutionary\lModel.setPi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#a161641aefb263800c873b447e4d87d3a"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.core.siphy.Evolutionary\lModel.changeBackground",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_evolutionary_model.html#ac437b29e748a9874861b28b951ba691e"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Jama.Matrix.quantileNormalize\lColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_jama_1_1_matrix.html#a19550f24e4ea8ec323879e525d7f3f18"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Jama.Matrix.sortColumnsKeeping\lIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_jama_1_1_matrix.html#a9badd0bece3e57cab71286103370d79e"];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

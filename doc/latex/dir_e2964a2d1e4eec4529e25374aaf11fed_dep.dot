@@ -1,0 +1,13 @@
+digraph "java/broad/core/siphy" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d797da7c46939e8249507ee9301f1543 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_d797da7c46939e8249507ee9301f1543.html"]
+  subgraph clusterdir_e2964a2d1e4eec4529e25374aaf11fed {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e2964a2d1e4eec4529e25374aaf11fed.html"];
+    dir_e2964a2d1e4eec4529e25374aaf11fed [shape=plaintext label="siphy"];
+    dir_aed67012f011318bf83fa744649cc9f4 [shape=box label="tools" color="red" fillcolor="white" style="filled" URL="dir_aed67012f011318bf83fa744649cc9f4.html"];
+  }
+  }
+}

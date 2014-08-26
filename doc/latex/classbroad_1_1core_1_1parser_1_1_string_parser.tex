@@ -1,0 +1,255 @@
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser}{\section{broad.\+core.\+parser.\+String\+Parser Class Reference}
+\label{classbroad_1_1core_1_1parser_1_1_string_parser}\index{broad.\+core.\+parser.\+String\+Parser@{broad.\+core.\+parser.\+String\+Parser}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_aa02fda8dd78bf419b8db9e0a6e523978}{String\+Parser} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_a331a1ca7ab3fa94abc1c53402aac4b60}{parse} (String s)
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_aef4b94fbed7a71500a398fac0f7dd1de}{clear} ()
+\item 
+void \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_a674f915e6da8529d20ae9f35d48e6cd5}{parse} (String s, String regexp)
+\item 
+int \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_a41df20ecf6b5981300aad15764b572ea}{get\+Index\+For} (String string)
+\item 
+int \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_ad5b185a9ef1e230a65e14c45c59a185f}{get\+Field\+Count} ()
+\item 
+String \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_a9c3b693f78ab2220da12efa33cd3242c}{as\+String} (int index)
+\item 
+int \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_a51bed2bfab3e94beac7737a9d01858b5}{as\+Int} (int index)
+\item 
+long \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_af44432df97979d0534f3b4f43882a264}{as\+Long} (int index)
+\item 
+double \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_aed7c90ec64b63bbf2f84bed861095f13}{as\+Double} (int index)
+\item 
+float \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_ac1d2a44273b6dbf379eca05a187f3421}{as\+Float} (int index)
+\item 
+String\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_ac388a4e2475ca305f1cd9ca4600e4d50}{get\+String\+Array} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_a080b1b2ba9de0c2f2f6819852d30b221}{first\+Field} (String s)
+\item 
+static String\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1parser_1_1_string_parser_a3a99eaa42daf066177fc98c59b6200eb}{get\+Tokens} (String s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell Parse a string around whitespace or another specified delimiter Get full array of parsed strings or individual values by index, parsed to various types 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_aa02fda8dd78bf419b8db9e0a6e523978}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!String\+Parser@{String\+Parser}}
+\index{String\+Parser@{String\+Parser}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{String\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+parser.\+String\+Parser.\+String\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_aa02fda8dd78bf419b8db9e0a6e523978}
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_aed7c90ec64b63bbf2f84bed861095f13}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!as\+Double@{as\+Double}}
+\index{as\+Double@{as\+Double}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{as\+Double}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+parser.\+String\+Parser.\+as\+Double (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_aed7c90ec64b63bbf2f84bed861095f13}
+Gets the token at specified position and parses to a double 
+\begin{DoxyParams}{Parameters}
+{\em index} & The position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired token as a double 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_ac1d2a44273b6dbf379eca05a187f3421}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!as\+Float@{as\+Float}}
+\index{as\+Float@{as\+Float}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{as\+Float}]{\setlength{\rightskip}{0pt plus 5cm}float broad.\+core.\+parser.\+String\+Parser.\+as\+Float (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_ac1d2a44273b6dbf379eca05a187f3421}
+Gets the token at specified position and parses to a float 
+\begin{DoxyParams}{Parameters}
+{\em index} & The position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired token as a float 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_a51bed2bfab3e94beac7737a9d01858b5}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!as\+Int@{as\+Int}}
+\index{as\+Int@{as\+Int}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{as\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+parser.\+String\+Parser.\+as\+Int (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_a51bed2bfab3e94beac7737a9d01858b5}
+Gets the token at specified position and parses to an int 
+\begin{DoxyParams}{Parameters}
+{\em index} & The position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired token as an int 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_af44432df97979d0534f3b4f43882a264}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!as\+Long@{as\+Long}}
+\index{as\+Long@{as\+Long}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{as\+Long}]{\setlength{\rightskip}{0pt plus 5cm}long broad.\+core.\+parser.\+String\+Parser.\+as\+Long (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_af44432df97979d0534f3b4f43882a264}
+Gets the token at specified position and parses to a long 
+\begin{DoxyParams}{Parameters}
+{\em index} & The position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired token as an int 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_a9c3b693f78ab2220da12efa33cd3242c}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!as\+String@{as\+String}}
+\index{as\+String@{as\+String}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{as\+String}]{\setlength{\rightskip}{0pt plus 5cm}String broad.\+core.\+parser.\+String\+Parser.\+as\+String (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_a9c3b693f78ab2220da12efa33cd3242c}
+Gets the token at specified position 
+\begin{DoxyParams}{Parameters}
+{\em index} & The position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired token as a String 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_aef4b94fbed7a71500a398fac0f7dd1de}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!clear@{clear}}
+\index{clear@{clear}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+String\+Parser.\+clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_aef4b94fbed7a71500a398fac0f7dd1de}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_a080b1b2ba9de0c2f2f6819852d30b221}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!first\+Field@{first\+Field}}
+\index{first\+Field@{first\+Field}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{first\+Field}]{\setlength{\rightskip}{0pt plus 5cm}static String broad.\+core.\+parser.\+String\+Parser.\+first\+Field (
+\begin{DoxyParamCaption}
+\item[{String}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_a080b1b2ba9de0c2f2f6819852d30b221}
+Get the first field of a whitespace-\/delimited string 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first field 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_ad5b185a9ef1e230a65e14c45c59a185f}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!get\+Field\+Count@{get\+Field\+Count}}
+\index{get\+Field\+Count@{get\+Field\+Count}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{get\+Field\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+parser.\+String\+Parser.\+get\+Field\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_ad5b185a9ef1e230a65e14c45c59a185f}
+Get number of fields \begin{DoxyReturn}{Returns}
+number of fields 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_a41df20ecf6b5981300aad15764b572ea}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!get\+Index\+For@{get\+Index\+For}}
+\index{get\+Index\+For@{get\+Index\+For}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{get\+Index\+For}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+core.\+parser.\+String\+Parser.\+get\+Index\+For (
+\begin{DoxyParamCaption}
+\item[{String}]{string}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_a41df20ecf6b5981300aad15764b572ea}
+Get position of the string in array 
+\begin{DoxyParams}{Parameters}
+{\em string} & The string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first position equal to the string 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_ac388a4e2475ca305f1cd9ca4600e4d50}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!get\+String\+Array@{get\+String\+Array}}
+\index{get\+String\+Array@{get\+String\+Array}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{get\+String\+Array}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} broad.\+core.\+parser.\+String\+Parser.\+get\+String\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_ac388a4e2475ca305f1cd9ca4600e4d50}
+Gets the array of tokens \begin{DoxyReturn}{Returns}
+all the parsed tokens as a String\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_a3a99eaa42daf066177fc98c59b6200eb}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!get\+Tokens@{get\+Tokens}}
+\index{get\+Tokens@{get\+Tokens}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{get\+Tokens}]{\setlength{\rightskip}{0pt plus 5cm}static String \mbox{[}$\,$\mbox{]} broad.\+core.\+parser.\+String\+Parser.\+get\+Tokens (
+\begin{DoxyParamCaption}
+\item[{String}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_a3a99eaa42daf066177fc98c59b6200eb}
+Parses the string around whitespace and stores tokens 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tokens 
+\end{DoxyReturn}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_a331a1ca7ab3fa94abc1c53402aac4b60}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+String\+Parser.\+parse (
+\begin{DoxyParamCaption}
+\item[{String}]{s}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_a331a1ca7ab3fa94abc1c53402aac4b60}
+Parses the string around whitespace and stores tokens 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to parse \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbroad_1_1core_1_1parser_1_1_string_parser_a674f915e6da8529d20ae9f35d48e6cd5}{\index{broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}!parse@{parse}}
+\index{parse@{parse}!broad\+::core\+::parser\+::\+String\+Parser@{broad\+::core\+::parser\+::\+String\+Parser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+parser.\+String\+Parser.\+parse (
+\begin{DoxyParamCaption}
+\item[{String}]{s, }
+\item[{String}]{regexp}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1parser_1_1_string_parser_a674f915e6da8529d20ae9f35d48e6cd5}
+Parses the string around the specified delimiter and stores tokens 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to parse \\
+\hline
+{\em regexp} & Regular expression for delimiter (for period use \char`\"{}\textbackslash{}\textbackslash{}.\char`\"{}) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/parser/\hyperlink{_string_parser_8java}{String\+Parser.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+digraph "java/broad/pda/feature/genome" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_151083ec242d78a4fd487aca604255ae {
+    graph [ bgcolor="#ddddee", pencolor="black", label="feature" fontname="Helvetica", fontsize="10", URL="dir_151083ec242d78a4fd487aca604255ae.html"]
+  dir_6bf7f076b6122db3f1dac49147741b32 [shape=box, label="genome", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_6bf7f076b6122db3f1dac49147741b32.html"];
+  }
+}

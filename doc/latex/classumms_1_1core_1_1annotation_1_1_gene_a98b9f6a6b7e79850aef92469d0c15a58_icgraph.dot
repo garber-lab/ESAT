@@ -1,0 +1,23 @@
+digraph "umms.core.annotation.Gene.overlaps"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Gene.overlaps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Gene.distance\lToNearestNonOverlapper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#ae729cd55ef7399dd7e9bd3158d4ed60a"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Gene.overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#aebfd67dc85451aee747df4eaa21e5cf6"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.annotation.Gene.overlaps\lStranded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a54b34b8b06efc355b3a0c0d7a4291d46"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.annotation.Gene.overlapsGene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a717a99b3a0cd669e42b6228b7eb792d6"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.coordinatesystem.\lTranscriptomeSpace.GeneTree.get\lRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1coordinatesystem_1_1_transcriptome_space_1_1_gene_tree.html#a2812ecf6ec4ce7e66677e01961b3fb8a"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.scripture.Build\lScriptureCoordinateSpace.getOverlappingGenes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space.html#ad01703d5c482fa9d72c9be36be080627"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="umms.core.scripture.Build\lScriptureCoordinateSpace.getIsoformMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space.html#a7ba371be0c1c6194e87333cdeb125467"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="umms.core.scripture.Build\lScriptureCoordinateSpace.hasAn\lOverlappingGene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1_build_scripture_coordinate_space.html#a992fe659dd5a36c748a67d680f56762a"];
+}

@@ -1,0 +1,35 @@
+digraph "broad.core.annotation.BasicGenomicAnnotation.BasicGenomicAnnotation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.annotation.Basic\lGenomicAnnotation.BasicGenomicAnnotation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.core.annotation.Basic\lLightweightAnnotation.contains",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#a768dd90feef065f8b04a253c2d1c3e1e"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.core.annotation.Lightweight\lGenomicAnnotation.getChromosome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation.html#a11b7345e12c3842e8b12530dfdf0e40c"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.annotation.Annotation.equals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#a0515e1f20b4e9e913b4f7f329a6c11ad"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="broad.core.annotation.Basic\lLightweightAnnotation.getChromosome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#a3c3c393894b2c4d90334dda13a148eec"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.annotation.Annotation.getChr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#ab07edf07fd2182cd16bceb91ee6de35a"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="broad.core.annotation.Lightweight\lGenomicAnnotation.getStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation.html#aa09c2220d181284077c5c020f2721b63"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="broad.core.annotation.Lightweight\lGenomicAnnotation.getEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation.html#a68b4fd4cda3321ffd91dd427df9b24a7"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="broad.core.annotation.Basic\lLightweightAnnotation.setChromosome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#aeb96f44edbf4809956fe995a5cb3fc36"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="umms.core.annotation.Annotation.set\lReferenceName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1annotation_1_1_annotation.html#aa6ddff9a7f3bcff152914299092545ff"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="broad.core.annotation.Basic\lLightweightAnnotation.setStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#a3f55da6f6c2d257caac12fd7c8ca3770"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="broad.core.annotation.Lightweight\lGenomicAnnotation.setEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation.html#afa510429319c0efc147c5da446cab166"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="broad.core.annotation.Basic\lLightweightAnnotation.setScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_lightweight_annotation.html#aeb06d309e53ec158338164b8945b9949"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="broad.core.annotation.Basic\lGenomicAnnotation.setId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1annotation_1_1_basic_genomic_annotation.html#aab81f801d84164ee7db06ce74d45ea50"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="broad.core.annotation.Lightweight\lGenomicAnnotation.setName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacebroad_1_1core_1_1annotation_1_1_lightweight_genomic_annotation.html#a28cc1992e605bbd4b743e8cf6562fe01"];
+}

@@ -1,0 +1,90 @@
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q}{\section{broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q Class Reference}
+\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q}\index{broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+}
+
+
+Inheritance diagram for broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q\+:
+
+
+Collaboration diagram for broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q\+:
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_aece7432eeead701f3d75880e45aa7933}{main} (final String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+File \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a7c04255e908577a13183131023cb85f9}{I\+N\+P\+U\+T}
+\item 
+Integer \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a81bccf921d2530297b049b1543ea528c}{M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+A\+P\+P\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+T\+Y} = 30
+\item 
+File \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a375591d5d4b86341a090330125e56d8d}{O\+U\+T\+P\+U\+T}
+\item 
+Boolean \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a2dd4db8bc62e0667cdb2bf2018f34f22}{R\+E\+M\+O\+V\+E\+\_\+\+M\+A\+T\+E} = false
+\item 
+File \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a7c8613003cc32f9496209a8c5768c084}{M\+E\+T\+R\+I\+C\+S} =null
+\item 
+S\+A\+M\+File\+Header.\+Sort\+Order \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a9a1d0819235dc343e31ec22d14c3bbac}{S\+O\+R\+T\+\_\+\+O\+R\+D\+E\+R} = S\+A\+M\+File\+Header.\+Sort\+Order.\+coordinate
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a54e2b9af66397e0fb23a708a7b6c3281}{do\+Work} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz Remove reads that do not map uniquely to the genome. If a read's mate is removed this way, mark that read as unpaired. 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a54e2b9af66397e0fb23a708a7b6c3281}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!do\+Work@{do\+Work}}
+\index{do\+Work@{do\+Work}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{do\+Work}]{\setlength{\rightskip}{0pt plus 5cm}int broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+do\+Work (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a54e2b9af66397e0fb23a708a7b6c3281}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_aece7432eeead701f3d75880e45aa7933}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!main@{main}}
+\index{main@{main}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+main (
+\begin{DoxyParamCaption}
+\item[{final String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_aece7432eeead701f3d75880e45aa7933}
+Stock main method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & main arguments \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a7c04255e908577a13183131023cb85f9}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!I\+N\+P\+U\+T@{I\+N\+P\+U\+T}}
+\index{I\+N\+P\+U\+T@{I\+N\+P\+U\+T}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}File broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+I\+N\+P\+U\+T}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a7c04255e908577a13183131023cb85f9}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a7c8613003cc32f9496209a8c5768c084}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!M\+E\+T\+R\+I\+C\+S@{M\+E\+T\+R\+I\+C\+S}}
+\index{M\+E\+T\+R\+I\+C\+S@{M\+E\+T\+R\+I\+C\+S}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{M\+E\+T\+R\+I\+C\+S}]{\setlength{\rightskip}{0pt plus 5cm}File broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+M\+E\+T\+R\+I\+C\+S =null}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a7c8613003cc32f9496209a8c5768c084}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a81bccf921d2530297b049b1543ea528c}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+A\+P\+P\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+T\+Y@{M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+A\+P\+P\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+T\+Y}}
+\index{M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+A\+P\+P\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+T\+Y@{M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+A\+P\+P\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+T\+Y}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+A\+P\+P\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}Integer broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+A\+P\+P\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+T\+Y = 30}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a81bccf921d2530297b049b1543ea528c}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a375591d5d4b86341a090330125e56d8d}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!O\+U\+T\+P\+U\+T@{O\+U\+T\+P\+U\+T}}
+\index{O\+U\+T\+P\+U\+T@{O\+U\+T\+P\+U\+T}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{O\+U\+T\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}File broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+O\+U\+T\+P\+U\+T}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a375591d5d4b86341a090330125e56d8d}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a2dd4db8bc62e0667cdb2bf2018f34f22}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!R\+E\+M\+O\+V\+E\+\_\+\+M\+A\+T\+E@{R\+E\+M\+O\+V\+E\+\_\+\+M\+A\+T\+E}}
+\index{R\+E\+M\+O\+V\+E\+\_\+\+M\+A\+T\+E@{R\+E\+M\+O\+V\+E\+\_\+\+M\+A\+T\+E}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{R\+E\+M\+O\+V\+E\+\_\+\+M\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}Boolean broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+R\+E\+M\+O\+V\+E\+\_\+\+M\+A\+T\+E = false}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a2dd4db8bc62e0667cdb2bf2018f34f22}
+\hypertarget{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a9a1d0819235dc343e31ec22d14c3bbac}{\index{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}!S\+O\+R\+T\+\_\+\+O\+R\+D\+E\+R@{S\+O\+R\+T\+\_\+\+O\+R\+D\+E\+R}}
+\index{S\+O\+R\+T\+\_\+\+O\+R\+D\+E\+R@{S\+O\+R\+T\+\_\+\+O\+R\+D\+E\+R}!broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q@{broad\+::pda\+::samtools\+::\+Filter\+Paired\+Reads\+By\+M\+A\+Q}}
+\subsubsection[{S\+O\+R\+T\+\_\+\+O\+R\+D\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+M\+File\+Header.\+Sort\+Order broad.\+pda.\+samtools.\+Filter\+Paired\+Reads\+By\+M\+A\+Q.\+S\+O\+R\+T\+\_\+\+O\+R\+D\+E\+R = S\+A\+M\+File\+Header.\+Sort\+Order.\+coordinate}}\label{classbroad_1_1pda_1_1samtools_1_1_filter_paired_reads_by_m_a_q_a9a1d0819235dc343e31ec22d14c3bbac}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/pda/samtools/\hyperlink{_filter_paired_reads_by_m_a_q_8java}{Filter\+Paired\+Reads\+By\+M\+A\+Q.\+java}\end{DoxyCompactItemize}

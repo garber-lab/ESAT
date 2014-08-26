@@ -1,0 +1,17 @@
+digraph "umms.core.annotation.Gene.toUCSC"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.annotation.Gene.toUCSC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.annotation.Gene.to\lRefSeq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#a43a69fe8e87f04c87d7764646070d7aa"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.annotation.Gene.toBED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1annotation_1_1_gene.html#aaa4cbae09246c3aa1fe38b2493cffe1f"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.scripture.statistics.\lConnectDisconnectedTranscripts.doWork",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1statistics_1_1_connect_disconnected_transcripts.html#a7aca425db9ded34dc2a1010c07859849"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.scripture.statistics.\lConnectDisconnectedTranscripts.Connect\lDisconnectedTranscripts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1statistics_1_1_connect_disconnected_transcripts.html#a513b9e39e9fbcfc2db0ccd8135e5b02d"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.scripture.statistics.\lConnectDisconnectedTranscripts.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1scripture_1_1statistics_1_1_connect_disconnected_transcripts.html#af38763966e52886da840f9f3c625a82e"];
+}

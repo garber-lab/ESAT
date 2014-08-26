@@ -1,0 +1,9 @@
+digraph "java/broad/core/motif/meme" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8d567d12c26a77b5ab4a1b62934a44ea {
+    graph [ bgcolor="#ddddee", pencolor="black", label="motif" fontname="Helvetica", fontsize="10", URL="dir_8d567d12c26a77b5ab4a1b62934a44ea.html"]
+  dir_40260d6e86a101aa6cfa6512dd25894b [shape=box, label="meme", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_40260d6e86a101aa6cfa6512dd25894b.html"];
+  }
+}

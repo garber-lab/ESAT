@@ -1,0 +1,100 @@
+\hypertarget{class_jama_1_1_cholesky_decomposition}{\section{Jama.\+Cholesky\+Decomposition Class Reference}
+\label{class_jama_1_1_cholesky_decomposition}\index{Jama.\+Cholesky\+Decomposition@{Jama.\+Cholesky\+Decomposition}}
+}
+
+
+Inheritance diagram for Jama.\+Cholesky\+Decomposition\+:
+
+
+Collaboration diagram for Jama.\+Cholesky\+Decomposition\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jama_1_1_cholesky_decomposition_a315b88758566a9852579b5138b7386f2}{Cholesky\+Decomposition} (\hyperlink{class_jama_1_1_matrix}{Matrix} Arg)
+\item 
+boolean \hyperlink{class_jama_1_1_cholesky_decomposition_ad84aa22ce8f3e9646d7c5e932b6d28d8}{is\+S\+P\+D} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_cholesky_decomposition_adcf74030c9514f8f3037a2f373f8bf8d}{get\+L} ()
+\item 
+\hyperlink{class_jama_1_1_matrix}{Matrix} \hyperlink{class_jama_1_1_cholesky_decomposition_a03d6cb90abf3e377867e6d7758a00521}{solve} (\hyperlink{class_jama_1_1_matrix}{Matrix} B)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cholesky Decomposition. 
+
+For a symmetric, positive definite matrix A, the Cholesky decomposition is an lower triangular matrix L so that A = L$\ast$\+L'. 
+
+If the matrix is not symmetric or positive definite, the constructor returns a partial decomposition and sets an internal flag that may be queried by the \hyperlink{class_jama_1_1_cholesky_decomposition_ad84aa22ce8f3e9646d7c5e932b6d28d8}{is\+S\+P\+D()} method. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_jama_1_1_cholesky_decomposition_a315b88758566a9852579b5138b7386f2}{\index{Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}!Cholesky\+Decomposition@{Cholesky\+Decomposition}}
+\index{Cholesky\+Decomposition@{Cholesky\+Decomposition}!Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}}
+\subsubsection[{Cholesky\+Decomposition}]{\setlength{\rightskip}{0pt plus 5cm}Jama.\+Cholesky\+Decomposition.\+Cholesky\+Decomposition (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{Arg}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_cholesky_decomposition_a315b88758566a9852579b5138b7386f2}
+Cholesky algorithm for symmetric and positive definite matrix. 
+\begin{DoxyParams}{Parameters}
+{\em A} & Square, symmetric matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Structure to access L and isspd flag. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_jama_1_1_cholesky_decomposition_adcf74030c9514f8f3037a2f373f8bf8d}{\index{Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}!get\+L@{get\+L}}
+\index{get\+L@{get\+L}!Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}}
+\subsubsection[{get\+L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Cholesky\+Decomposition.\+get\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_cholesky_decomposition_adcf74030c9514f8f3037a2f373f8bf8d}
+Return triangular factor. \begin{DoxyReturn}{Returns}
+L 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_cholesky_decomposition_ad84aa22ce8f3e9646d7c5e932b6d28d8}{\index{Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}!is\+S\+P\+D@{is\+S\+P\+D}}
+\index{is\+S\+P\+D@{is\+S\+P\+D}!Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}}
+\subsubsection[{is\+S\+P\+D}]{\setlength{\rightskip}{0pt plus 5cm}boolean Jama.\+Cholesky\+Decomposition.\+is\+S\+P\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_cholesky_decomposition_ad84aa22ce8f3e9646d7c5e932b6d28d8}
+Is the matrix symmetric and positive definite? \begin{DoxyReturn}{Returns}
+true if A is symmetric and positive definite. 
+\end{DoxyReturn}
+\hypertarget{class_jama_1_1_cholesky_decomposition_a03d6cb90abf3e377867e6d7758a00521}{\index{Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}!solve@{solve}}
+\index{solve@{solve}!Jama\+::\+Cholesky\+Decomposition@{Jama\+::\+Cholesky\+Decomposition}}
+\subsubsection[{solve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Jama.\+Cholesky\+Decomposition.\+solve (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}}\label{class_jama_1_1_cholesky_decomposition_a03d6cb90abf3e377867e6d7758a00521}
+Solve A$\ast$\+X = B 
+\begin{DoxyParams}{Parameters}
+{\em B} & A \hyperlink{class_jama_1_1_matrix}{Matrix} with as many rows as A and any number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X so that L$\ast$\+L'$\ast$\+X = B 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} row dimensions must agree. \\
+\hline
+{\em Runtime\+Exception} & \hyperlink{class_jama_1_1_matrix}{Matrix} is not symmetric positive definite. \\
+\hline
+\end{DoxyExceptions}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/\+Jama/\hyperlink{_cholesky_decomposition_8java}{Cholesky\+Decomposition.\+java}\end{DoxyCompactItemize}

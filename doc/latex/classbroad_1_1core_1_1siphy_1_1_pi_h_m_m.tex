@@ -1,0 +1,228 @@
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m}{\section{broad.\+core.\+siphy.\+Pi\+H\+M\+M Class Reference}
+\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m}\index{broad.\+core.\+siphy.\+Pi\+H\+M\+M@{broad.\+core.\+siphy.\+Pi\+H\+M\+M}}
+}
+
+
+Inheritance diagram for broad.\+core.\+siphy.\+Pi\+H\+M\+M\+:
+
+
+Collaboration diagram for broad.\+core.\+siphy.\+Pi\+H\+M\+M\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Constrained\+Model}
+\item 
+class {\bfseries Pi\+State\+Model}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a0d7f4e030eff34eb444086d26d62271f}{Pi\+H\+M\+M} (\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} neutral, int state\+Number)
+\item 
+\hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5cb4c8cce6c765d82c22a66fc06ec5d3}{Pi\+H\+M\+M} (\hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} neutral, double min\+Expected\+Element\+Length, double expected\+Coverage)
+\item 
+void \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5b91c9ce7ac53702af1c7a5912481a6b}{add\+Conserved\+Pi} (\hyperlink{class_jama_1_1_matrix}{Matrix} pi, String name)
+\item 
+short\mbox{[}$\,$\mbox{]} \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a4333f5888bfa8018a9f129ef1cb6a4ae}{viterbi\+Most\+Likely\+Estimation} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} alignment)  throws Bad\+Model\+Exception 
+\item 
+double \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5ca38442b44e90860d8af48fc0aefe7f}{compute\+Path\+Log\+Likelihood} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} alignment, short\mbox{[}$\,$\mbox{]} path, int initial\+State\+Idx, int end\+State\+Idx)
+\item 
+Forward\+Result$<$ Map$<$ String, \\*
+\hyperlink{class_jama_1_1_matrix}{Matrix} $>$ $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a1c512f78e94940d91d8cf2356577742b}{run\+Forward\+Algorithm} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} alignment)  throws Bad\+Model\+Exception 
+\item 
+Backward\+Result$<$ Map$<$ String, \\*
+\hyperlink{class_jama_1_1_matrix}{Matrix} $>$ $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a6260c8c74ff9abfe162d5ba3b011b2c1}{run\+Backward\+Algorithm} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} alignment, Forward\+Result$<$ Map$<$ String, \hyperlink{class_jama_1_1_matrix}{Matrix} $>$$>$ forward\+Data)  throws Bad\+Model\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a95f6a006e38d7346c711d78afdec2c12}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\item 
+static \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m}{Pi\+H\+M\+M} \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_aa83a4e23ba05718dd683cbe7b230464c}{create\+Default\+Two\+State\+Chain} (double l, double gamma, \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} model)
+\item 
+static \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m}{Pi\+H\+M\+M} \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a509a9478700a4bb63d2912a29d0b9bb4}{create\+Two\+State\+Chain} (double l, double gamma, \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} model, \hyperlink{class_jama_1_1_matrix}{Matrix} other\+Pi)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_af8b0ce41f8c843fc6cb6afbe63643953}{U\+S\+A\+G\+E}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a6fecf2a6ea9381a221e9f59c1afb65e3}{generate\+Alignment} (List$<$ Integer $>$ emitted\+Path, String format)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a0d7f4e030eff34eb444086d26d62271f}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!Pi\+H\+M\+M@{Pi\+H\+M\+M}}
+\index{Pi\+H\+M\+M@{Pi\+H\+M\+M}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{Pi\+H\+M\+M}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+Pi\+H\+M\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Evolutionary\+Model}}]{neutral, }
+\item[{int}]{state\+Number}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a0d7f4e030eff34eb444086d26d62271f}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5cb4c8cce6c765d82c22a66fc06ec5d3}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!Pi\+H\+M\+M@{Pi\+H\+M\+M}}
+\index{Pi\+H\+M\+M@{Pi\+H\+M\+M}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{Pi\+H\+M\+M}]{\setlength{\rightskip}{0pt plus 5cm}broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+Pi\+H\+M\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Evolutionary\+Model}}]{neutral, }
+\item[{double}]{min\+Expected\+Element\+Length, }
+\item[{double}]{expected\+Coverage}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5cb4c8cce6c765d82c22a66fc06ec5d3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5b91c9ce7ac53702af1c7a5912481a6b}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!add\+Conserved\+Pi@{add\+Conserved\+Pi}}
+\index{add\+Conserved\+Pi@{add\+Conserved\+Pi}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{add\+Conserved\+Pi}]{\setlength{\rightskip}{0pt plus 5cm}void broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+add\+Conserved\+Pi (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{pi, }
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5b91c9ce7ac53702af1c7a5912481a6b}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5ca38442b44e90860d8af48fc0aefe7f}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!compute\+Path\+Log\+Likelihood@{compute\+Path\+Log\+Likelihood}}
+\index{compute\+Path\+Log\+Likelihood@{compute\+Path\+Log\+Likelihood}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{compute\+Path\+Log\+Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}double broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+compute\+Path\+Log\+Likelihood (
+\begin{DoxyParamCaption}
+\item[{{\bf Multiple\+Alignment}}]{alignment, }
+\item[{short\mbox{[}$\,$\mbox{]}}]{path, }
+\item[{int}]{initial\+State\+Idx, }
+\item[{int}]{end\+State\+Idx}
+\end{DoxyParamCaption}
+)}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a5ca38442b44e90860d8af48fc0aefe7f}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_aa83a4e23ba05718dd683cbe7b230464c}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!create\+Default\+Two\+State\+Chain@{create\+Default\+Two\+State\+Chain}}
+\index{create\+Default\+Two\+State\+Chain@{create\+Default\+Two\+State\+Chain}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{create\+Default\+Two\+State\+Chain}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Pi\+H\+M\+M} broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+create\+Default\+Two\+State\+Chain (
+\begin{DoxyParamCaption}
+\item[{double}]{l, }
+\item[{double}]{gamma, }
+\item[{{\bf Evolutionary\+Model}}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_aa83a4e23ba05718dd683cbe7b230464c}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a509a9478700a4bb63d2912a29d0b9bb4}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!create\+Two\+State\+Chain@{create\+Two\+State\+Chain}}
+\index{create\+Two\+State\+Chain@{create\+Two\+State\+Chain}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{create\+Two\+State\+Chain}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Pi\+H\+M\+M} broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+create\+Two\+State\+Chain (
+\begin{DoxyParamCaption}
+\item[{double}]{l, }
+\item[{double}]{gamma, }
+\item[{{\bf Evolutionary\+Model}}]{model, }
+\item[{{\bf Matrix}}]{other\+Pi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a509a9478700a4bb63d2912a29d0b9bb4}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a6fecf2a6ea9381a221e9f59c1afb65e3}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!generate\+Alignment@{generate\+Alignment}}
+\index{generate\+Alignment@{generate\+Alignment}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{generate\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Multiple\+Alignment} broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+generate\+Alignment (
+\begin{DoxyParamCaption}
+\item[{List$<$ Integer $>$}]{emitted\+Path, }
+\item[{String}]{format}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a6fecf2a6ea9381a221e9f59c1afb65e3}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a95f6a006e38d7346c711d78afdec2c12}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!main@{main}}
+\index{main@{main}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a95f6a006e38d7346c711d78afdec2c12}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a6260c8c74ff9abfe162d5ba3b011b2c1}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!run\+Backward\+Algorithm@{run\+Backward\+Algorithm}}
+\index{run\+Backward\+Algorithm@{run\+Backward\+Algorithm}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{run\+Backward\+Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}Backward\+Result$<$Map$<$String, {\bf Matrix}$>$ $>$ broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+run\+Backward\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{{\bf Multiple\+Alignment}}]{alignment, }
+\item[{Forward\+Result$<$ Map$<$ String, {\bf Matrix} $>$$>$}]{forward\+Data}
+\end{DoxyParamCaption}
+) throws {\bf Bad\+Model\+Exception}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a6260c8c74ff9abfe162d5ba3b011b2c1}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a1c512f78e94940d91d8cf2356577742b}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!run\+Forward\+Algorithm@{run\+Forward\+Algorithm}}
+\index{run\+Forward\+Algorithm@{run\+Forward\+Algorithm}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{run\+Forward\+Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}Forward\+Result$<$Map$<$String, {\bf Matrix}$>$ $>$ broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+run\+Forward\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{{\bf Multiple\+Alignment}}]{alignment}
+\end{DoxyParamCaption}
+) throws {\bf Bad\+Model\+Exception}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a1c512f78e94940d91d8cf2356577742b}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a4333f5888bfa8018a9f129ef1cb6a4ae}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!viterbi\+Most\+Likely\+Estimation@{viterbi\+Most\+Likely\+Estimation}}
+\index{viterbi\+Most\+Likely\+Estimation@{viterbi\+Most\+Likely\+Estimation}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{viterbi\+Most\+Likely\+Estimation}]{\setlength{\rightskip}{0pt plus 5cm}short \mbox{[}$\,$\mbox{]} broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+viterbi\+Most\+Likely\+Estimation (
+\begin{DoxyParamCaption}
+\item[{{\bf Multiple\+Alignment}}]{alignment}
+\end{DoxyParamCaption}
+) throws {\bf Bad\+Model\+Exception}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_a4333f5888bfa8018a9f129ef1cb6a4ae}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_af8b0ce41f8c843fc6cb6afbe63643953}{\index{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}!U\+S\+A\+G\+E@{U\+S\+A\+G\+E}}
+\index{U\+S\+A\+G\+E@{U\+S\+A\+G\+E}!broad\+::core\+::siphy\+::\+Pi\+H\+M\+M@{broad\+::core\+::siphy\+::\+Pi\+H\+M\+M}}
+\subsubsection[{U\+S\+A\+G\+E}]{\setlength{\rightskip}{0pt plus 5cm}final String broad.\+core.\+siphy.\+Pi\+H\+M\+M.\+U\+S\+A\+G\+E\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_pi_h_m_m_af8b0ce41f8c843fc6cb6afbe63643953}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"Usage: PiHMM TASK=<task\_num> <task\_args>\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)tTasks:\(\backslash\)n"} +
+    \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t1. Segment genome into pi-conserved and noncoserved.  -in <multiple alignment file>  -mod <Neutral
+       Evolutionary model consisting of aminoacid background distribution, mutation matrix and neutral
+       phylogenetic tree>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -l <The smoothness parameter, and should be the expected average conserved element length> and
+       -gamma <The expected coverage parameter, how much of the genome is expected to be conserved>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -format <Alignment format default is FASTA is default> -ignore <comma separated species to
+       ignore> -ref <reference sequence id, necessary if the alignment is not in MAF format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t  [-start <If MAF file, you may specify the reference start coordinate> -end <If MAF file, you
+       may specify the reference end coordinate>]"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t2. Compute posterior probabilities of each site of being pi-conserved.  -in <multiple alignment
+       file>  -mod <Neutral Evolutionary model consisting of aminoacid background distribution, mutation matrix and
+       neutral phylogenetic tree>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -l <The smoothness parameter, and should be the expected minimum conserved element length> and
+       -gamma <The expected coverage parameter, how much of the genome is expected to be conserved>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -format <Alignment format default is FASTA is default> -ignore <comma separated species to
+       ignore> -ref <reference sequence id, necessary if the alignment is not in MAF format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t  [-start <If MAF file, you may specify the reference start coordinate> -end <If MAF file, you
+       may specify the reference end coordinate>]"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t3. Compute log odds score for annotations in file. Scores reflect the log ratio of the
+       probability of the path through each element being fully conserved or non conserved.  -in <Annotation file default
+       format is assumed to be BED>  -mod <Neutral Evolutionary model consisting of aminoacid background
+       distribution, mutation matrix and neutral phylogenetic tree>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -l <The smoothness parameter, and should be the expected minimum conserved element length> and
+       -gamma <The expected coverage parameter, how much of the genome is expected to be conserved>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -format <Alignment format default is FASTA is default> -ignore <comma separated species to
+       ignore> -ref <reference sequence id, necessary if the alignment is not in MAF format>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t  [-start <If MAF file, you may specify the reference start coordinate> -end <If MAF file, you
+       may specify the reference end coordinate>]"} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t4. Simulate an alignment with for given HMM parameters. \(\backslash\)n\(\backslash\)t\(\backslash\)tParameters:\(\backslash\)n\(\backslash\)t\(\backslash\)t-mod <Base m,odel
+       to use> \(\backslash\)n\(\backslash\)t\(\backslash\)t-ignore <optional -- comma separated species to ignore in the given model tree> \(\backslash\)n\(\backslash\)t\(\backslash\)t-colNum
+       <Number of columns to sample> -\(\backslash\)n\(\backslash\)t\(\backslash\)t-otherPI <Conserved or alternative PI distribution, as a comma
+       separated list of the A,C,G,T frequencies, add as many -otherPI as different PI states are desired. > "} +
+    \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)t -l <The smoothness parameter, how long in average should be the stretches of the generated
+       alignment should be from the alternative PI model> and -gamma <The coverage parameter, how much of the sampled
+       alignmnet should be made of the alternative PI model> \(\backslash\)n\(\backslash\)t\(\backslash\)t-out <Generated alignment output file>"} +
+    \textcolor{stringliteral}{"\(\backslash\)n"}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/siphy/\hyperlink{_pi_h_m_m_8java}{Pi\+H\+M\+M.\+java}\end{DoxyCompactItemize}

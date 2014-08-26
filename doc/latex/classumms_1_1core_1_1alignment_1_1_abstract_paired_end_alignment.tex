@@ -1,0 +1,916 @@
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment}{\section{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment Class Reference}
+\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment}\index{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment@{umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment}}
+}
+
+
+Inheritance diagram for umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment\+:
+
+
+Collaboration diagram for umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Transcription\+Read}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9f5af881ce3ac34580b3acd221ef3811}{Abstract\+Paired\+End\+Alignment} (\hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation}{Basic\+Annotation} b)
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a2667daa31887746ce06f4799495b24fa}{refresh\+Attribute\+Map} ()
+\item 
+String \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a8c6173f422b8e037747b02f8d728efe4}{get\+Read\+Name} ()
+\item 
+String \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a4e81aeaa83886f64c780bbedbb88a839}{get\+Chromosome} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a0fa29adb0a3285800e542b174ef4084d}{get\+Mapping\+Quality} ()
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a37c576222ddbb88a5afca64ba6049996}{get\+Interval\+Between\+Reads} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a3c5cbd4ef536d5c63105eca0fde0d141}{is\+Paired} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af37e974bc3b52387663422c762994f94}{is\+Negative\+Strand} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aa13e1931258062454882ba057a6a2ea4}{is\+Duplicate} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9b214481a55d504376cf4389f5153102}{set\+Duplicate\+Flag} (boolean duplicate\+Flag)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a35a255d4328f1e1ad9c2374f5900ceab}{get\+First\+Mate} ()
+\item 
+\hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aeb289b5bce028d7819f8f893a44be774}{get\+Second\+Mate} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aa013b3820d63aa91253df3d83bc24881}{get\+Fragment\+Midpoint} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} annot)
+\item 
+Collection$<$?extends \hyperlink{interfaceumms_1_1core_1_1feature_1_1_window}{Window} $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a210850190a8e4e98c2ce56c842f0b80e}{get\+Fragment} (\hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} C)
+\item 
+Strand \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a7272dda055f8425c3f85302fd96cfa5b}{get\+Fragment\+Strand} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_adb6292c83fa8e285c0350584f196c5fe}{set\+Fragment\+Strand} (Transcription\+Read transcription\+Read)
+\item 
+Collection$<$ Integer $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_ab6d963d0dd6bd87e8c98fadf6e185f2e}{get\+Fragment\+Size} (\hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} C)
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a64eda682e150d7be478dadb30ec43c56}{get\+Fragment\+Start} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af16e4a059527adbdf5ac66350cab42c5}{get\+Fragment\+End} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a4ebdcbbfbfd734c2298f015e4d8cfefb}{set\+Attribute} (String attribute, String value)
+\item 
+String \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6ed9ab1244c6e54bc43ca6cb24f084af}{get\+Attribute} (String attribute)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a54e350bcbc168434f78ab6c2417c5eb4}{get\+Read\+Alignment\+Blocks} (\hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} C)
+\item 
+Collection$<$ \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment}{Alignment} $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_adeb9200fe5412ef288d4715b1622323c}{get\+Read\+Mates} ()
+\item 
+String \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_abf5f626d98261f0a917b2ca159fbda63}{to\+String} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a99f17f8d510ad2798e2c0b5b886df2bc}{get\+Start} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a843812c2305e69d131f2892b4b30b68e}{get\+End} ()
+\item 
+String \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a389ee80e6e6d04b7cbd55b1c533378e4}{get\+Chr} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a287e7b5c0d789621212961e9a2dac052}{get\+Alignment\+Start} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af6f367d03b371f8c11272b50edeb2166}{get\+Alignment\+End} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af47f73adc6769845e2bb1811dea02f8c}{is\+Mapped} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9e2928564d040785988bd1670a50fa62}{is\+Chimera} ()
+\item 
+String \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a5411152f2e68b099413caddc9dba148f}{get\+Read\+Sequence} ()
+\item 
+double \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aaf11809a0fd53aa8ad485d6ab993d7c0}{get\+Weight} ()
+\item 
+boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a3b74b26023376f9451c4243674bf33ce}{is\+Proper\+Pair} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a5bc12cc540194c01868fae4e7140eb44}{set\+Proper\+Pair\+Flag} (boolean proper\+Pair\+Flag)
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a49adbe8aa021ef96ac89ede1f05694df}{shift} (int delta)
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af4cbbce6715e864c1155fd105d1d853d}{move\+To\+Coordinate} (int coord)
+\item 
+final S\+A\+M\+Record \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a07764ea4c818de84cac405e4d3d1ae73}{to\+S\+A\+M\+Record} ()
+\item 
+Strand \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6c978b97041609bfee866d81de3db450}{get\+Orientation} ()
+\item 
+Collection$<$ \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a83479cb561a7d49efef887022b69c1c7}{get\+Read\+Alignments} (\hyperlink{interfaceumms_1_1core_1_1coordinatesystem_1_1_coordinate_space}{Coordinate\+Space} space)
+\item 
+boolean \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a8582465192325acb5ea647e5ad636a97}{has\+Indel} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6a0100ecd7ccbbfa99b2fdbce249264b}{get\+First\+Fragment\+Position\+Stranded} ()
+\item 
+int \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a74011edfb3ccb6915bea34da9d73e3c7}{get\+Last\+Fragment\+Position\+Stranded} ()
+\item 
+void \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aac3271f5fbb76f0150766972b37b3e91}{set\+Header} (S\+A\+M\+File\+Header header)
+\item 
+S\+A\+M\+File\+Header \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a7c244aba0fae3e4a4affd9a2d018c888}{get\+Header} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classumms_1_1core_1_1annotation_1_1_basic_annotation}{Basic\+Annotation} \hyperlink{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a27d82ac9daf62cf46f5385d770efc69c}{as\+Annotation} (\hyperlink{classumms_1_1core_1_1alignment_1_1_single_end_alignment}{Single\+End\+Alignment} first\+Mate, \hyperlink{classumms_1_1core_1_1alignment_1_1_single_end_alignment}{Single\+End\+Alignment} second\+Mate, boolean full\+Fragment)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+prussell 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9f5af881ce3ac34580b3acd221ef3811}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!Abstract\+Paired\+End\+Alignment@{Abstract\+Paired\+End\+Alignment}}
+\index{Abstract\+Paired\+End\+Alignment@{Abstract\+Paired\+End\+Alignment}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{Abstract\+Paired\+End\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+Abstract\+Paired\+End\+Alignment (
+\begin{DoxyParamCaption}
+\item[{{\bf Basic\+Annotation}}]{b}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9f5af881ce3ac34580b3acd221ef3811}
+
+\begin{DoxyParams}{Parameters}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a27d82ac9daf62cf46f5385d770efc69c}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!as\+Annotation@{as\+Annotation}}
+\index{as\+Annotation@{as\+Annotation}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{as\+Annotation}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Basic\+Annotation} umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+as\+Annotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Single\+End\+Alignment}}]{first\+Mate, }
+\item[{{\bf Single\+End\+Alignment}}]{second\+Mate, }
+\item[{boolean}]{full\+Fragment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a27d82ac9daf62cf46f5385d770efc69c}
+Get the alignment as an Annotation object 
+\begin{DoxyParams}{Parameters}
+{\em first\+Mate} & First mate \\
+\hline
+{\em second\+Mate} & Second mate \\
+\hline
+{\em full\+Fragment} & Whether to get full fragment as one block or separate reads as blocks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An annotation consisting of the aligned coordinates 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af6f367d03b371f8c11272b50edeb2166}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Alignment\+End@{get\+Alignment\+End}}
+\index{get\+Alignment\+End@{get\+Alignment\+End}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Alignment\+End}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Alignment\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af6f367d03b371f8c11272b50edeb2166}
+Returns the end position of the alignment \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a9b406dc941d7555254f9b6dcf2ae48da}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a287e7b5c0d789621212961e9a2dac052}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Alignment\+Start@{get\+Alignment\+Start}}
+\index{get\+Alignment\+Start@{get\+Alignment\+Start}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Alignment\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Alignment\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a287e7b5c0d789621212961e9a2dac052}
+Returns the start position of the alignment \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_ac6591781d5421244ad6518a4554f1760}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6ed9ab1244c6e54bc43ca6cb24f084af}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Attribute@{get\+Attribute}}
+\index{get\+Attribute@{get\+Attribute}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Attribute}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Attribute (
+\begin{DoxyParamCaption}
+\item[{String}]{attribute}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6ed9ab1244c6e54bc43ca6cb24f084af}
+Returns the value of the specified attribute 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_ae8f96c807f69c9e0d48077998f9f338f}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a389ee80e6e6d04b7cbd55b1c533378e4}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Chr@{get\+Chr}}
+\index{get\+Chr@{get\+Chr}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Chr}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Chr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a389ee80e6e6d04b7cbd55b1c533378e4}
+Get chromosome \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a156e2c6d3a8d3d7d9b8f50af90d0a0c2}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a4e81aeaa83886f64c780bbedbb88a839}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Chromosome@{get\+Chromosome}}
+\index{get\+Chromosome@{get\+Chromosome}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Chromosome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a4e81aeaa83886f64c780bbedbb88a839}
+Returns the chromosome for this alignment \begin{DoxyReturn}{Returns}
+Reference name 
+\end{DoxyReturn}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a843812c2305e69d131f2892b4b30b68e}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+End@{get\+End}}
+\index{get\+End@{get\+End}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+End}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a843812c2305e69d131f2892b4b30b68e}
+Get end of the fragment \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_afac2284106875d0f138898ad59e399fb}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6a0100ecd7ccbbfa99b2fdbce249264b}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+First\+Fragment\+Position\+Stranded@{get\+First\+Fragment\+Position\+Stranded}}
+\index{get\+First\+Fragment\+Position\+Stranded@{get\+First\+Fragment\+Position\+Stranded}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+First\+Fragment\+Position\+Stranded}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+First\+Fragment\+Position\+Stranded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6a0100ecd7ccbbfa99b2fdbce249264b}
+Get the beginning position of the fragment considering strand \begin{DoxyReturn}{Returns}
+Highest position if negative strand, lowest position otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_aac4a1a7ab425219a683a4a43a07ce9d8}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a35a255d4328f1e1ad9c2374f5900ceab}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+First\+Mate@{get\+First\+Mate}}
+\index{get\+First\+Mate@{get\+First\+Mate}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+First\+Mate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+First\+Mate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a35a255d4328f1e1ad9c2374f5900ceab}
+Get the first read \begin{DoxyReturn}{Returns}
+The first read in pair 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a210850190a8e4e98c2ce56c842f0b80e}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Fragment@{get\+Fragment}}
+\index{get\+Fragment@{get\+Fragment}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Fragment}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$? extends {\bf Window}$>$ umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Fragment (
+\begin{DoxyParamCaption}
+\item[{{\bf Coordinate\+Space}}]{C}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a210850190a8e4e98c2ce56c842f0b80e}
+Returns an object for the fragment between the read pair in the specified coordinate space 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_afdfc69376b512b44b069c0391c6e81bb}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af16e4a059527adbdf5ac66350cab42c5}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Fragment\+End@{get\+Fragment\+End}}
+\index{get\+Fragment\+End@{get\+Fragment\+End}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Fragment\+End}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Fragment\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af16e4a059527adbdf5ac66350cab42c5}
+Returns the end of the fragment 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a0853dfe9729b648e70ffa65be427c4ca}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aa013b3820d63aa91253df3d83bc24881}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Fragment\+Midpoint@{get\+Fragment\+Midpoint}}
+\index{get\+Fragment\+Midpoint@{get\+Fragment\+Midpoint}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Fragment\+Midpoint}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Fragment\+Midpoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{annot}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aa013b3820d63aa91253df3d83bc24881}
+Get midpoint of fragment with respect to coordinate space 
+\begin{DoxyParams}{Parameters}
+{\em annot} & Parent annotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Fragment midpoint in coordinate space 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a3c16abce949288dfde66f350c55e3866}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_ab6d963d0dd6bd87e8c98fadf6e185f2e}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Fragment\+Size@{get\+Fragment\+Size}}
+\index{get\+Fragment\+Size@{get\+Fragment\+Size}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Fragment\+Size}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<$Integer$>$ umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Fragment\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf Coordinate\+Space}}]{C}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_ab6d963d0dd6bd87e8c98fadf6e185f2e}
+Returns the size of the fragment 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a91730892dd6c46db8004b9a59f7c8734}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a64eda682e150d7be478dadb30ec43c56}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Fragment\+Start@{get\+Fragment\+Start}}
+\index{get\+Fragment\+Start@{get\+Fragment\+Start}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Fragment\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Fragment\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a64eda682e150d7be478dadb30ec43c56}
+Returns the start of the fragment 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a56d8823df478d6a953758d95a32f6844}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a7272dda055f8425c3f85302fd96cfa5b}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Fragment\+Strand@{get\+Fragment\+Strand}}
+\index{get\+Fragment\+Strand@{get\+Fragment\+Strand}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Fragment\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}Strand umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Fragment\+Strand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a7272dda055f8425c3f85302fd96cfa5b}
+Returns the strand for the fragment, depending on the transcription read 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a67d44004454daa9c4ad7fc4dc66c9929}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a7c244aba0fae3e4a4affd9a2d018c888}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Header}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+M\+File\+Header umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a7c244aba0fae3e4a4affd9a2d018c888}
+Returns the S\+A\+M file header for this alignment \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a1535cacbe7e0b688eecfce4ea9490c2c}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a37c576222ddbb88a5afca64ba6049996}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Interval\+Between\+Reads@{get\+Interval\+Between\+Reads}}
+\index{get\+Interval\+Between\+Reads@{get\+Interval\+Between\+Reads}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Interval\+Between\+Reads}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Interval\+Between\+Reads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a37c576222ddbb88a5afca64ba6049996}
+Get the coordinates of the first and last position of the interval between the reads \begin{DoxyReturn}{Returns}
+The coordinates of the space between the reads or null if single read or reads overlap 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a8cf9661b7c5fb24a23d5ec2edff6009f}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a74011edfb3ccb6915bea34da9d73e3c7}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Last\+Fragment\+Position\+Stranded@{get\+Last\+Fragment\+Position\+Stranded}}
+\index{get\+Last\+Fragment\+Position\+Stranded@{get\+Last\+Fragment\+Position\+Stranded}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Last\+Fragment\+Position\+Stranded}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Last\+Fragment\+Position\+Stranded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a74011edfb3ccb6915bea34da9d73e3c7}
+Get the ending position of the fragment considering strand \begin{DoxyReturn}{Returns}
+Lowest position if negative strand, highest position otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a174877831cbae9325d73c7d09906ae3d}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a0fa29adb0a3285800e542b174ef4084d}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Mapping\+Quality@{get\+Mapping\+Quality}}
+\index{get\+Mapping\+Quality@{get\+Mapping\+Quality}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Mapping\+Quality}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Mapping\+Quality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a0fa29adb0a3285800e542b174ef4084d}
+Returns the sum of the mapping qualities of both mates 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a3fd5709cfe830908e7e0660c91bd4daa}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6c978b97041609bfee866d81de3db450}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Orientation}]{\setlength{\rightskip}{0pt plus 5cm}Strand umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a6c978b97041609bfee866d81de3db450}
+\begin{DoxyReturn}{Returns}
+orientation or strand 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_ad5125f9609856d2a1b8e788664551558}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a54e350bcbc168434f78ab6c2417c5eb4}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Read\+Alignment\+Blocks@{get\+Read\+Alignment\+Blocks}}
+\index{get\+Read\+Alignment\+Blocks@{get\+Read\+Alignment\+Blocks}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Read\+Alignment\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Read\+Alignment\+Blocks (
+\begin{DoxyParamCaption}
+\item[{{\bf Coordinate\+Space}}]{C}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a54e350bcbc168434f78ab6c2417c5eb4}
+This method returns the alignment blocks that the read actually aligns to. 
+\begin{DoxyParams}{Parameters}
+{\em C} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_aa05560844de602aa9ad47c63c422d73d}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a83479cb561a7d49efef887022b69c1c7}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Read\+Alignments@{get\+Read\+Alignments}}
+\index{get\+Read\+Alignments@{get\+Read\+Alignments}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Read\+Alignments}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Annotation}$>$ umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Read\+Alignments (
+\begin{DoxyParamCaption}
+\item[{{\bf Coordinate\+Space}}]{space}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a83479cb561a7d49efef887022b69c1c7}
+This will return the actual read alignments 
+\begin{DoxyParams}{Parameters}
+{\em space} & Coordinate Space to return the blocks in \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a563a8db2ae65cace4f3192798de6b542}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_adeb9200fe5412ef288d4715b1622323c}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Read\+Mates@{get\+Read\+Mates}}
+\index{get\+Read\+Mates@{get\+Read\+Mates}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Read\+Mates}]{\setlength{\rightskip}{0pt plus 5cm}Collection$<${\bf Alignment}$>$ umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Read\+Mates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_adeb9200fe5412ef288d4715b1622323c}
+This will return the actual read alignment objects N\+O\+T B\+L\+O\+C\+K\+S 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a727bd0d8dbdf53adc79c290dcefb860c}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a8c6173f422b8e037747b02f8d728efe4}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Read\+Name@{get\+Read\+Name}}
+\index{get\+Read\+Name@{get\+Read\+Name}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Read\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Read\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a8c6173f422b8e037747b02f8d728efe4}
+Returns the name of this read pair. 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a3163e7ed8d2f62170825865c5f708b22}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a5411152f2e68b099413caddc9dba148f}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Read\+Sequence@{get\+Read\+Sequence}}
+\index{get\+Read\+Sequence@{get\+Read\+Sequence}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Read\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Read\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a5411152f2e68b099413caddc9dba148f}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a35e95edade9121503e38f1e5a82dbfd6}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aeb289b5bce028d7819f8f893a44be774}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Second\+Mate@{get\+Second\+Mate}}
+\index{get\+Second\+Mate@{get\+Second\+Mate}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Second\+Mate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Second\+Mate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aeb289b5bce028d7819f8f893a44be774}
+Get the second read \begin{DoxyReturn}{Returns}
+The second read in pair 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a99f17f8d510ad2798e2c0b5b886df2bc}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Start@{get\+Start}}
+\index{get\+Start@{get\+Start}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a99f17f8d510ad2798e2c0b5b886df2bc}
+Get start of the fragment \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a62c8d52837fefe4dec37dc0a550751b9}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aaf11809a0fd53aa8ad485d6ab993d7c0}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!get\+Weight@{get\+Weight}}
+\index{get\+Weight@{get\+Weight}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{get\+Weight}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+get\+Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aaf11809a0fd53aa8ad485d6ab993d7c0}
+The weight to give this alignment in the scoring. For example, if you want to scale by number of hits, the weight would be 1/\+N\+H \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_adc1158b384c343f66a3cccfee951b293}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a8582465192325acb5ea647e5ad636a97}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!has\+Indel@{has\+Indel}}
+\index{has\+Indel@{has\+Indel}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{has\+Indel}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+has\+Indel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a8582465192325acb5ea647e5ad636a97}
+Returns whether the read contains an insertion or deletion \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a25161c9ab59abb1f24ba996606ec4974}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9e2928564d040785988bd1670a50fa62}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!is\+Chimera@{is\+Chimera}}
+\index{is\+Chimera@{is\+Chimera}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{is\+Chimera}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+is\+Chimera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9e2928564d040785988bd1670a50fa62}
+For single end, returns false. For paired end, returns true if reads successfully map to different chromosomes. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a80e956645e4bc6903d66fe05ebc8f53a}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aa13e1931258062454882ba057a6a2ea4}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!is\+Duplicate@{is\+Duplicate}}
+\index{is\+Duplicate@{is\+Duplicate}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{is\+Duplicate}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+is\+Duplicate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aa13e1931258062454882ba057a6a2ea4}
+Returns true is the alignment pair is a duplicate 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a43825498ddbd33f21d6e2a2186a1e471}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af47f73adc6769845e2bb1811dea02f8c}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!is\+Mapped@{is\+Mapped}}
+\index{is\+Mapped@{is\+Mapped}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{is\+Mapped}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+is\+Mapped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af47f73adc6769845e2bb1811dea02f8c}
+Returns true if the alignment is mapped \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_aeb2dbb3707f8f1eb9de40688fdda0ed6}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af37e974bc3b52387663422c762994f94}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!is\+Negative\+Strand@{is\+Negative\+Strand}}
+\index{is\+Negative\+Strand@{is\+Negative\+Strand}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{is\+Negative\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+is\+Negative\+Strand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af37e974bc3b52387663422c762994f94}
+For paired end, returns true if the read in direction of transcription is negative stranded \begin{DoxyReturn}{Returns}
+true if the read in direction of transcription is negative stranded 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_ac6754f0229f8ed7e7b44d584a07f6dae}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a3c5cbd4ef536d5c63105eca0fde0d141}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!is\+Paired@{is\+Paired}}
+\index{is\+Paired@{is\+Paired}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{is\+Paired}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+is\+Paired (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a3c5cbd4ef536d5c63105eca0fde0d141}
+Always returns true for objects of this class. 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_aed4467c1090c04d0a76946b0b65a946d}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a3b74b26023376f9451c4243674bf33ce}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!is\+Proper\+Pair@{is\+Proper\+Pair}}
+\index{is\+Proper\+Pair@{is\+Proper\+Pair}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{is\+Proper\+Pair}]{\setlength{\rightskip}{0pt plus 5cm}boolean umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+is\+Proper\+Pair (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a3b74b26023376f9451c4243674bf33ce}
+Returns whether the alignment represented a proper pair defined by the aligner \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a0cfc2e0a3ee1e18b1a103d600e29bba0}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af4cbbce6715e864c1155fd105d1d853d}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!move\+To\+Coordinate@{move\+To\+Coordinate}}
+\index{move\+To\+Coordinate@{move\+To\+Coordinate}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{move\+To\+Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+move\+To\+Coordinate (
+\begin{DoxyParamCaption}
+\item[{int}]{coordinate\+In\+Reference}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_af4cbbce6715e864c1155fd105d1d853d}
+Move an annotation, preserving the relationships between its blocks, to a new coordinate. 
+\begin{DoxyParams}{Parameters}
+{\em coordinate\+In\+Reference} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_aac56df2b60a55cc3d7615ec372584462}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a2667daa31887746ce06f4799495b24fa}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!refresh\+Attribute\+Map@{refresh\+Attribute\+Map}}
+\index{refresh\+Attribute\+Map@{refresh\+Attribute\+Map}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{refresh\+Attribute\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+refresh\+Attribute\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a2667daa31887746ce06f4799495b24fa}
+Populate the attribute map with combined attribute values based on the two mates 
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a4ebdcbbfbfd734c2298f015e4d8cfefb}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!set\+Attribute@{set\+Attribute}}
+\index{set\+Attribute@{set\+Attribute}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{set\+Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{String}]{attribute, }
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a4ebdcbbfbfd734c2298f015e4d8cfefb}
+Sets the specified attribute value 
+\begin{DoxyParams}{Parameters}
+{\em attribute} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9b214481a55d504376cf4389f5153102}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!set\+Duplicate\+Flag@{set\+Duplicate\+Flag}}
+\index{set\+Duplicate\+Flag@{set\+Duplicate\+Flag}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{set\+Duplicate\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+set\+Duplicate\+Flag (
+\begin{DoxyParamCaption}
+\item[{boolean}]{duplicate\+Flag}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a9b214481a55d504376cf4389f5153102}
+Sets the duplicate flag 
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a331c3076e755132f182d225ba9a26f69}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_adb6292c83fa8e285c0350584f196c5fe}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!set\+Fragment\+Strand@{set\+Fragment\+Strand}}
+\index{set\+Fragment\+Strand@{set\+Fragment\+Strand}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{set\+Fragment\+Strand}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+set\+Fragment\+Strand (
+\begin{DoxyParamCaption}
+\item[{Transcription\+Read}]{transcription\+Read}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_adb6292c83fa8e285c0350584f196c5fe}
+Sets the strand for the fragment to the strand of the transcription read 
+\begin{DoxyParams}{Parameters}
+{\em transcription\+Read} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_afd4d444c8d0fffc880aff18481cd39ff}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aac3271f5fbb76f0150766972b37b3e91}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!set\+Header@{set\+Header}}
+\index{set\+Header@{set\+Header}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{set\+Header}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+set\+Header (
+\begin{DoxyParamCaption}
+\item[{S\+A\+M\+File\+Header}]{header}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_aac3271f5fbb76f0150766972b37b3e91}
+Sets the S\+A\+M File header for this alignment 
+\begin{DoxyParams}{Parameters}
+{\em header} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a4305d2988fba3c16803f3e999b58a200}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a5bc12cc540194c01868fae4e7140eb44}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!set\+Proper\+Pair\+Flag@{set\+Proper\+Pair\+Flag}}
+\index{set\+Proper\+Pair\+Flag@{set\+Proper\+Pair\+Flag}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{set\+Proper\+Pair\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+set\+Proper\+Pair\+Flag (
+\begin{DoxyParamCaption}
+\item[{boolean}]{proper\+Pair\+Flag}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a5bc12cc540194c01868fae4e7140eb44}
+Set whether the alignment represented a proper pair defined by the aligner \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_ac7f14cb2660aaabeac51f6b75f1ce164}{umms.\+core.\+alignment.\+Alignment}.
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a49adbe8aa021ef96ac89ede1f05694df}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!shift@{shift}}
+\index{shift@{shift}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{shift}]{\setlength{\rightskip}{0pt plus 5cm}void umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+shift (
+\begin{DoxyParamCaption}
+\item[{int}]{delta}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a49adbe8aa021ef96ac89ede1f05694df}
+Shift the positioning of the annotation by a given number of base pairs. 
+\begin{DoxyParams}{Parameters}
+{\em delta} & Positive or negative shift to apply to all blocks in the annotation.
+\begin{DoxyCode}
+delta=0 
+\end{DoxyCode}
+ leaves the annotation unchanged. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation_a3014cb6c724297b8bbccabaffff4bb3a}{umms.\+core.\+annotation.\+Annotation}.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a07764ea4c818de84cac405e4d3d1ae73}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!to\+S\+A\+M\+Record@{to\+S\+A\+M\+Record}}
+\index{to\+S\+A\+M\+Record@{to\+S\+A\+M\+Record}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{to\+S\+A\+M\+Record}]{\setlength{\rightskip}{0pt plus 5cm}final S\+A\+M\+Record umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+to\+S\+A\+M\+Record (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_a07764ea4c818de84cac405e4d3d1ae73}
+
+
+Implements \hyperlink{interfaceumms_1_1core_1_1alignment_1_1_alignment_a12fec354239ea85143cc500cefceaaf1}{umms.\+core.\+alignment.\+Alignment}.
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_abf5f626d98261f0a917b2ca159fbda63}{\index{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment@{umms\+::core\+::alignment\+::\+Abstract\+Paired\+End\+Alignment}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}String umms.\+core.\+alignment.\+Abstract\+Paired\+End\+Alignment.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1alignment_1_1_abstract_paired_end_alignment_abf5f626d98261f0a917b2ca159fbda63}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/alignment/\hyperlink{_abstract_paired_end_alignment_8java}{Abstract\+Paired\+End\+Alignment.\+java}\end{DoxyCompactItemize}

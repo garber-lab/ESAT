@@ -1,0 +1,138 @@
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4}{\section{umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$ Class Reference}
+\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4}\index{umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+}
+
+
+Inheritance diagram for umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$\+:
+
+
+Collaboration diagram for umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a752a3547528015029ac6526b47e455f1}{get\+Bases\+Covered} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+double \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a6e0d575c3f9629a083419111507dc33a}{get\+Total\+Coverage} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+double \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_af4195a976a2cfe99cf89cb79a3175b9d}{get\+Average\+Coverage} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+double \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a260b940b8bbebeb3e04bd0e75b003d17}{get\+Count} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+double \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a138d022524b7000f40e5c775b4a1bab0}{get\+Count} (Annotation\+List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ set)
+\item 
+double \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_acaf23203075e8178235da7742eee40c5}{get\+Count} (Annotation\+List$<$?extends \hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} $>$ set, boolean fully\+Contained)
+\item 
+Closeable\+Iterator$<$ T $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a7e46ae18a43e66b8da2b821853df3fd5}{get\+Overlapping\+Annotations} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region)
+\item 
+\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a3a84e443b2bd20e3ac8aa8c4e91eaad3}{collapse} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, boolean fully\+Contained)
+\item 
+Window\+Score\+Iterator$<$ \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_count_score}{Count\+Score} $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_ad5e4df7215f9fd180242b6d9b1b8a930}{scan} (int window\+Size, int overlap)
+\item 
+Window\+Score\+Iterator$<$ \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_count_score}{Count\+Score} $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a8c6c8a621a6e2ffca209230cbf844d98}{scan} (\hyperlink{interfaceumms_1_1core_1_1annotation_1_1_annotation}{Annotation} region, int window\+Size, int overlap)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Window\+Processor$<$ \hyperlink{classumms_1_1core_1_1model_1_1score_1_1_count_score}{Count\+Score} $>$ \hyperlink{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a7e1567b53456c524612b5046601b7d3a}{get\+Count\+Processor} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+engreitz Abstract class for functions common to both Alignment\+Model and Annotation\+Set. Mostly here for consistency in function between the two classes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a3a84e443b2bd20e3ac8aa8c4e91eaad3}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!collapse@{collapse}}
+\index{collapse@{collapse}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{collapse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Annotation} umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.collapse (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a3a84e443b2bd20e3ac8aa8c4e91eaad3}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_af4195a976a2cfe99cf89cb79a3175b9d}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Average\+Coverage@{get\+Average\+Coverage}}
+\index{get\+Average\+Coverage@{get\+Average\+Coverage}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Average\+Coverage}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Average\+Coverage (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_af4195a976a2cfe99cf89cb79a3175b9d}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a752a3547528015029ac6526b47e455f1}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Bases\+Covered@{get\+Bases\+Covered}}
+\index{get\+Bases\+Covered@{get\+Bases\+Covered}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Bases\+Covered}]{\setlength{\rightskip}{0pt plus 5cm}int umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Bases\+Covered (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a752a3547528015029ac6526b47e455f1}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a260b940b8bbebeb3e04bd0e75b003d17}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a260b940b8bbebeb3e04bd0e75b003d17}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a138d022524b7000f40e5c775b4a1bab0}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Count (
+\begin{DoxyParamCaption}
+\item[{Annotation\+List$<$?extends {\bf Annotation} $>$}]{set}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a138d022524b7000f40e5c775b4a1bab0}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_acaf23203075e8178235da7742eee40c5}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Count (
+\begin{DoxyParamCaption}
+\item[{Annotation\+List$<$?extends {\bf Annotation} $>$}]{set, }
+\item[{boolean}]{fully\+Contained}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_acaf23203075e8178235da7742eee40c5}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a7e1567b53456c524612b5046601b7d3a}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Count\+Processor@{get\+Count\+Processor}}
+\index{get\+Count\+Processor@{get\+Count\+Processor}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Count\+Processor}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Processor$<${\bf Count\+Score}$>$ umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Count\+Processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a7e1567b53456c524612b5046601b7d3a}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a7e46ae18a43e66b8da2b821853df3fd5}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Overlapping\+Annotations@{get\+Overlapping\+Annotations}}
+\index{get\+Overlapping\+Annotations@{get\+Overlapping\+Annotations}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Overlapping\+Annotations}]{\setlength{\rightskip}{0pt plus 5cm}Closeable\+Iterator$<$T$>$ umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Overlapping\+Annotations (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a7e46ae18a43e66b8da2b821853df3fd5}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a6e0d575c3f9629a083419111507dc33a}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!get\+Total\+Coverage@{get\+Total\+Coverage}}
+\index{get\+Total\+Coverage@{get\+Total\+Coverage}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{get\+Total\+Coverage}]{\setlength{\rightskip}{0pt plus 5cm}double umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.get\+Total\+Coverage (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a6e0d575c3f9629a083419111507dc33a}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_ad5e4df7215f9fd180242b6d9b1b8a930}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!scan@{scan}}
+\index{scan@{scan}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{scan}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Score\+Iterator$<${\bf Count\+Score}$>$ umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.scan (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_ad5e4df7215f9fd180242b6d9b1b8a930}
+\hypertarget{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a8c6c8a621a6e2ffca209230cbf844d98}{\index{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}!scan@{scan}}
+\index{scan@{scan}!umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$@{umms\+::core\+::annotation\+::\+Abstract\+Annotation\+Collection$<$ T extends Annotation $>$}}
+\subsubsection[{scan}]{\setlength{\rightskip}{0pt plus 5cm}Window\+Score\+Iterator$<${\bf Count\+Score}$>$ umms.\+core.\+annotation.\+Abstract\+Annotation\+Collection$<$ T extends {\bf Annotation} $>$.scan (
+\begin{DoxyParamCaption}
+\item[{{\bf Annotation}}]{region, }
+\item[{int}]{window\+Size, }
+\item[{int}]{overlap}
+\end{DoxyParamCaption}
+)}}\label{classumms_1_1core_1_1annotation_1_1_abstract_annotation_collection_3_01_t_01extends_01_annotation_01_4_a8c6c8a621a6e2ffca209230cbf844d98}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/umms/core/annotation/\hyperlink{_abstract_annotation_collection_8java}{Abstract\+Annotation\+Collection.\+java}\end{DoxyCompactItemize}

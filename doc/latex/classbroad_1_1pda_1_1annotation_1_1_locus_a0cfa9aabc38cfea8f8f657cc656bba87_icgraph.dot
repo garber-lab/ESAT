@@ -1,0 +1,11 @@
+digraph "broad.pda.annotation.Locus.getExonUnion"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.pda.annotation.Locus.get\lExonUnion",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="broad.pda.annotation.Locus.get\lDistanceTo3primeNeighbor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_locus.html#ac1ada0b4c99e92fd6acad2f68b9e4f2d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="broad.pda.annotation.Locus.get\lDistanceTo5primeNeighbor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1pda_1_1annotation_1_1_locus.html#aebe1e52c92b834e03198cd903f164244"];
+}

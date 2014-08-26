@@ -1,0 +1,22 @@
+digraph "broad.core.motif.PositionWeightMatrix.getName"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="broad.core.motif.Position\lWeightMatrix.getName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="broad.core.motif.Position\lWeightMatrix.trimByInformation\lContent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_position_weight_matrix.html#aea292a2e74d006a0002b626ebc6c8732"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="broad.core.motif.Position\lWeightMatrix.permuteColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_position_weight_matrix.html#a519dd909700982492e6996c840263157"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="broad.core.motif.Position\lWeightMatrix.copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_position_weight_matrix.html#a1793deced98122752214cacdfef0a1d4"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="broad.core.motif.Position\lWeightMatrix.reverseComplement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_position_weight_matrix.html#a094eef930d034e04706e1a9326355d5a"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="broad.core.motif.PWMUtils.scan\lRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_p_w_m_utils.html#a901bd6475f321d8416ddbf47d03d32b4"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="broad.core.motif.PWMUtils.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1motif_1_1_p_w_m_utils.html#a17646e545879c7d2061fbc4cad0bf834"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="broad.core.siphy.TreeScaler.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbroad_1_1core_1_1siphy_1_1_tree_scaler.html#a036762852612940632c8cbaa824157be"];
+}

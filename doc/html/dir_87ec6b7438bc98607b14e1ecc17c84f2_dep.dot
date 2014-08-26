@@ -1,0 +1,9 @@
+digraph "java/jaligner/matrix" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c17c136ee8cc04f76d688c588acae175 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="jaligner" fontname="Helvetica", fontsize="10", URL="dir_c17c136ee8cc04f76d688c588acae175.html"]
+  dir_87ec6b7438bc98607b14e1ecc17c84f2 [shape=box, label="matrix", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_87ec6b7438bc98607b14e1ecc17c84f2.html"];
+  }
+}

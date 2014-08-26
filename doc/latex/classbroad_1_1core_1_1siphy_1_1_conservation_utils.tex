@@ -1,0 +1,165 @@
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils}{\section{broad.\+core.\+siphy.\+Conservation\+Utils Class Reference}
+\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils}\index{broad.\+core.\+siphy.\+Conservation\+Utils@{broad.\+core.\+siphy.\+Conservation\+Utils}}
+}
+
+
+Collaboration diagram for broad.\+core.\+siphy.\+Conservation\+Utils\+:
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a2918cf4bdea98feed68a7dc80f58c43a}{set\+Uninformative\+Nodes} (Map$<$ String, \hyperlink{class_jama_1_1_matrix}{Matrix} $>$ column, List$<$ String $>$ sequences)
+\item 
+static void \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a3e67d62373ffaf349c1f2885dbb4a1ac}{set\+Uninformative\+Nodes} (Map$<$ String, \hyperlink{class_jama_1_1_matrix}{Matrix} $>$ column, List$<$ String $>$ sequences, int col\+Idx)
+\item 
+static Phylogeny \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a4e88229bea6626fc964ced0e88511004}{prune\+Tree} (List$<$ String $>$ to\+Prune, Phylogeny tree)
+\item 
+static Phylogeny \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a4d1f0a461a649310b8acc04856be0886}{prune\+Tree} (String to\+Prune, Phylogeny tree)
+\item 
+static List$<$ String $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a9f75501f2ed4d9bbc09461319aa1729c}{get\+Gapped\+Seqs\+In\+Window\+Matrix} (int window, Map$<$ String, \hyperlink{class_jama_1_1_matrix}{Matrix} $>$ alignment\+Matrix, int start)
+\item 
+static \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_ab3eecb49e17d4de98098b5b85d53dcf4}{set\+Up\+Alignment} (Argument\+Map arg\+Map, String aln\+File, String aln\+File\+Format, List$<$ String $>$ ignore\+List, \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} model)  throws I\+O\+Exception, Parse\+Exception,	\+File\+Not\+Found\+Exception 
+\item 
+static \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_ae322901c948bd97e564e120f7f98046c}{set\+Up\+M\+A\+F} (String aln\+File, List$<$ String $>$ ignore\+List, \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} model, int start, int end)  throws I\+O\+Exception, Parse\+Exception, 			\+File\+Not\+Found\+Exception 
+\item 
+static \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a2e8a2956dfe5e74d9cf4fbf09bb29fed}{set\+Up\+M\+A\+F} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o}{M\+A\+F\+I\+O} mafio, List$<$ String $>$ ignore\+List, \hyperlink{classbroad_1_1core_1_1siphy_1_1_evolutionary_model}{Evolutionary\+Model} model, int start, int end)  throws I\+O\+Exception, Parse\+Exception, 			\+File\+Not\+Found\+Exception 
+\item 
+static \hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_multiple_alignment}{Multiple\+Alignment} \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a76de2884d27bb9c00b5ddb2ab0fe8b70}{set\+Up\+M\+A\+F} (\hyperlink{classbroad_1_1core_1_1multiplealignment_1_1_m_a_f_i_o}{M\+A\+F\+I\+O} mafio, List$<$ String $>$ ignore\+List, Phylogeny guide\+Tree, int start, int end)  throws I\+O\+Exception, Parse\+Exception, 			\+File\+Not\+Found\+Exception 
+\item 
+static List$<$ String $>$ \hyperlink{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a5fe0b616c5840dc5e6cd74bed82a1ee3}{comma\+Separated\+String\+To\+List} (String csv\+List\+Str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a5fe0b616c5840dc5e6cd74bed82a1ee3}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!comma\+Separated\+String\+To\+List@{comma\+Separated\+String\+To\+List}}
+\index{comma\+Separated\+String\+To\+List@{comma\+Separated\+String\+To\+List}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{comma\+Separated\+String\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$String$>$ broad.\+core.\+siphy.\+Conservation\+Utils.\+comma\+Separated\+String\+To\+List (
+\begin{DoxyParamCaption}
+\item[{String}]{csv\+List\+Str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a5fe0b616c5840dc5e6cd74bed82a1ee3}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a9f75501f2ed4d9bbc09461319aa1729c}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!get\+Gapped\+Seqs\+In\+Window\+Matrix@{get\+Gapped\+Seqs\+In\+Window\+Matrix}}
+\index{get\+Gapped\+Seqs\+In\+Window\+Matrix@{get\+Gapped\+Seqs\+In\+Window\+Matrix}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{get\+Gapped\+Seqs\+In\+Window\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$String$>$ broad.\+core.\+siphy.\+Conservation\+Utils.\+get\+Gapped\+Seqs\+In\+Window\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{window, }
+\item[{Map$<$ String, {\bf Matrix} $>$}]{alignment\+Matrix, }
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a9f75501f2ed4d9bbc09461319aa1729c}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a4e88229bea6626fc964ced0e88511004}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!prune\+Tree@{prune\+Tree}}
+\index{prune\+Tree@{prune\+Tree}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{prune\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}static Phylogeny broad.\+core.\+siphy.\+Conservation\+Utils.\+prune\+Tree (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{to\+Prune, }
+\item[{Phylogeny}]{tree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a4e88229bea6626fc964ced0e88511004}
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a4d1f0a461a649310b8acc04856be0886}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!prune\+Tree@{prune\+Tree}}
+\index{prune\+Tree@{prune\+Tree}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{prune\+Tree}]{\setlength{\rightskip}{0pt plus 5cm}static Phylogeny broad.\+core.\+siphy.\+Conservation\+Utils.\+prune\+Tree (
+\begin{DoxyParamCaption}
+\item[{String}]{to\+Prune, }
+\item[{Phylogeny}]{tree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a4d1f0a461a649310b8acc04856be0886}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a2918cf4bdea98feed68a7dc80f58c43a}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!set\+Uninformative\+Nodes@{set\+Uninformative\+Nodes}}
+\index{set\+Uninformative\+Nodes@{set\+Uninformative\+Nodes}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{set\+Uninformative\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+siphy.\+Conservation\+Utils.\+set\+Uninformative\+Nodes (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, {\bf Matrix} $>$}]{column, }
+\item[{List$<$ String $>$}]{sequences}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a2918cf4bdea98feed68a7dc80f58c43a}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a3e67d62373ffaf349c1f2885dbb4a1ac}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!set\+Uninformative\+Nodes@{set\+Uninformative\+Nodes}}
+\index{set\+Uninformative\+Nodes@{set\+Uninformative\+Nodes}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{set\+Uninformative\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}static void broad.\+core.\+siphy.\+Conservation\+Utils.\+set\+Uninformative\+Nodes (
+\begin{DoxyParamCaption}
+\item[{Map$<$ String, {\bf Matrix} $>$}]{column, }
+\item[{List$<$ String $>$}]{sequences, }
+\item[{int}]{col\+Idx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a3e67d62373ffaf349c1f2885dbb4a1ac}
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_ab3eecb49e17d4de98098b5b85d53dcf4}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!set\+Up\+Alignment@{set\+Up\+Alignment}}
+\index{set\+Up\+Alignment@{set\+Up\+Alignment}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{set\+Up\+Alignment}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Multiple\+Alignment} broad.\+core.\+siphy.\+Conservation\+Utils.\+set\+Up\+Alignment (
+\begin{DoxyParamCaption}
+\item[{Argument\+Map}]{arg\+Map, }
+\item[{String}]{aln\+File, }
+\item[{String}]{aln\+File\+Format, }
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{{\bf Evolutionary\+Model}}]{model}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception},	File\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_ab3eecb49e17d4de98098b5b85d53dcf4}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_ae322901c948bd97e564e120f7f98046c}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!set\+Up\+M\+A\+F@{set\+Up\+M\+A\+F}}
+\index{set\+Up\+M\+A\+F@{set\+Up\+M\+A\+F}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{set\+Up\+M\+A\+F}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Multiple\+Alignment} broad.\+core.\+siphy.\+Conservation\+Utils.\+set\+Up\+M\+A\+F (
+\begin{DoxyParamCaption}
+\item[{String}]{aln\+File, }
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{{\bf Evolutionary\+Model}}]{model, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}, 			File\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_ae322901c948bd97e564e120f7f98046c}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a2e8a2956dfe5e74d9cf4fbf09bb29fed}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!set\+Up\+M\+A\+F@{set\+Up\+M\+A\+F}}
+\index{set\+Up\+M\+A\+F@{set\+Up\+M\+A\+F}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{set\+Up\+M\+A\+F}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Multiple\+Alignment} broad.\+core.\+siphy.\+Conservation\+Utils.\+set\+Up\+M\+A\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+A\+F\+I\+O}}]{mafio, }
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{{\bf Evolutionary\+Model}}]{model, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}, 			File\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a2e8a2956dfe5e74d9cf4fbf09bb29fed}
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a76de2884d27bb9c00b5ddb2ab0fe8b70}{\index{broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}!set\+Up\+M\+A\+F@{set\+Up\+M\+A\+F}}
+\index{set\+Up\+M\+A\+F@{set\+Up\+M\+A\+F}!broad\+::core\+::siphy\+::\+Conservation\+Utils@{broad\+::core\+::siphy\+::\+Conservation\+Utils}}
+\subsubsection[{set\+Up\+M\+A\+F}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Multiple\+Alignment} broad.\+core.\+siphy.\+Conservation\+Utils.\+set\+Up\+M\+A\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+A\+F\+I\+O}}]{mafio, }
+\item[{List$<$ String $>$}]{ignore\+List, }
+\item[{Phylogeny}]{guide\+Tree, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception, {\bf Parse\+Exception}, 			File\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [static]}}}\label{classbroad_1_1core_1_1siphy_1_1_conservation_utils_a76de2884d27bb9c00b5ddb2ab0fe8b70}
+
+
+Here is the call graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+java/broad/core/siphy/\hyperlink{_conservation_utils_8java}{Conservation\+Utils.\+java}\end{DoxyCompactItemize}

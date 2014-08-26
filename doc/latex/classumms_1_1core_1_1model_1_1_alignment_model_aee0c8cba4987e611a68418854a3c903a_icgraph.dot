@@ -1,0 +1,35 @@
+digraph "umms.core.model.AlignmentModel.getCount"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.model.Alignment\lModel.getCount",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="umms.core.model.Alignment\lModel.getPositionCountList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#ae5b5c83c1ef855c59c804217e6522c95"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="umms.core.model.Alignment\lModel.getCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a928a086e1ce54468cf0fd582e32f404d"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="umms.core.model.score.Binomial\lEnrichmentScore.BinomialEnrichmentScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_binomial_enrichment_score.html#a6c32742ec3585fee33ce18af66f22d1f"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="umms.core.model.score.End\lInWindowCountScore.EndInWindow\lCountScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_end_in_window_count_score.html#a567fee8b5894ad2366da66b2f2ebc38d"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="umms.core.model.score.Multi\lScore.MultiScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_multi_score.html#a6f2367fd0cfea0843e86e18ed4f46dc9"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="umms.core.model.score.Poisson\lEnrichmentScore.PoissonEnrichmentScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_poisson_enrichment_score.html#a51283d47ccb7a2c89580dff633705532"];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="umms.core.model.score.Start\lInWindowCountScore.StartInWindow\lCountScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_start_in_window_count_score.html#a8b4e82c682905d6b51301906f4c4a510"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="umms.core.model.score.Window\lAllScore.WindowAllScore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1score_1_1_window_all_score.html#aa20eebc9daa9c6ac43be442f2886716e"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="umms.core.model.Alignment\lModel.getCountExcludingRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a6fc7f8dfbc07c036d0701237b917ec80"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="umms.core.model.Alignment\lModel.getCountsPerPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a2ad06cbab73fda69b7f399d1980adde7"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="umms.core.model.Alignment\lModel.getAverageCountPerPosition\lWithThreshold",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#afdbc71f66c4a8e02cf59c6525c668ad0"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="umms.core.model.Alignment\lModel.getAverageCountPerPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a1eedf20d46a117cc86b53632a8cff0cb"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="umms.core.model.Alignment\lModel.getCountsStrandedPerPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a02809d43b5a67c1a9c8942b7d399c1a2"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="umms.core.model.Alignment\lModel.getCountStrandedExcluding\lRegion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classumms_1_1core_1_1model_1_1_alignment_model.html#a4314840666a311fe81b2f0f0340d0f7b"];
+}

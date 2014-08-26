@@ -1,0 +1,9 @@
+digraph "umms.core.readFilters.UniqueMappedReadsFilter.evaluate"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="umms.core.readFilters.Unique\lMappedReadsFilter.evaluate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="umms.core.alignment.Alignment.get\lWeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceumms_1_1core_1_1alignment_1_1_alignment.html#adc1158b384c343f66a3cccfee951b293"];
+}
