@@ -616,7 +616,7 @@ public class BEDFileParser {
 				//logger.info(nextLine);
 				Gene gene = new Gene(nextLine, false);
 				//System.err.println("Gene: " + gene.toBED());
-	
+				
 				Collection<Gene> data=new TreeSet<Gene>();
 				if(rtrn.containsKey(gene.getChr())){
 					data.addAll(rtrn.get(gene.getChr()));
@@ -627,8 +627,7 @@ public class BEDFileParser {
 			i++;
 			if(i%10000==0){logger.info("Loaded " + i + " genes.");}
 		}
-	
-	
+
 		reader.close();
 		return rtrn;
 	

@@ -114,10 +114,6 @@ public class Gene extends BasicAnnotation {
 	}
 	
 	@Deprecated
-	public Gene(Alignments align) {
-		this(align.getChr(), align.getStart(), align.getEnd(), align.getName(), align.getOrientation());
-	}
-	
 	public Gene (Annotation annotation) {
 		this(annotation.getChr(), annotation.getName(), annotation.getOrientation(), annotation.getBlocks());
 	}

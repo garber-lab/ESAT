@@ -1,5 +1,7 @@
 package umms.core;
 
+import umms.esat.Window;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.io.BufferedReader;
@@ -15,10 +17,13 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.LinkedList;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.NoSuchElementException;
 
 import org.apache.log4j.Logger;
 
@@ -32,7 +37,7 @@ import net.sf.samtools.SAMFileReader.ValidationStringency;
 import umms.esat.SAMSequenceCountingDict;
 import umms.core.annotation.Annotation;
 
-public class BamReadTest {
+public class BamWindowedReadTest {
 	
 	static final String usage = "Usage: BamReadTest <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
 			"\n\t-in <input bam file>: input bam file (sorting and indexing not required)" + 
@@ -53,8 +58,11 @@ public class BamReadTest {
 	private static String annotationFile;
 	static Logger logger = Logger.getLogger(BamReadTest.class.getName());
 	private static SAMRecord r;
+	private static int windowLength;
+	private static int windowOverlap;
+	private static int windowExtend;
 	
-	public BamReadTest(String[] args) throws IOException, ParseException {
+	public BamWindowedReadTest(String[] args) throws IOException, ParseException {
 		
 		/*
 		 * @param for ArgumentMap - size, usage, default task
@@ -62,10 +70,16 @@ public class BamReadTest {
 		 */
 		/* seems like a useful utility that can probably be stripped down */
 		ArgumentMap argMap = CLUtil.getParameters(args,usage,"dummy");  /* no default task for now */
-
+		HashMap<String,HashMap<String,LinkedList<Window>>> countsMap;
+		
 		scsFlag = argMap.isPresent("scs");
 		wellBcLength = argMap.isPresent("wellBC")? argMap.getInteger("wellBC") : 6;
 		umiLength = argMap.isPresent("UMI")? argMap.getInteger("UMI") : 10;
+		
+		/* Windowed read count test parameters */
+		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 400;
+		windowOverlap = argMap.isPresent("wOlap")? argMap.getInteger("wOlap") : 40;
+		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 400;
 		
 		bamFile = new File(argMap.getInput());
 		outFile = new File(argMap.getOutput());
@@ -113,7 +127,7 @@ public class BamReadTest {
 		Map<String,Collection<Gene>> annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
 		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
-		bamDict.simpleCountTranscriptReadStarts(annotations);
+		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
 
 		stopTime = System.nanoTime();
 		logger.info("Mapping reads to  "+bamFile+" took "+(stopTime-startTime2)/1e9+" sec\n");
@@ -128,12 +142,35 @@ public class BamReadTest {
 		/* STOP AND REPORT TIMING */
 		stopTime = System.nanoTime();
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
+		
+		FileWriter writer = new FileWriter(outFile);
 
+		/* write the data in bedGraph format */
+		// Header line:
+		writer.write("track type=bedGraph name=\"BedGraph Format\" description=\"BedGraph format\" visibility=full color=200,100,0 altColor=0,100,200 priority=20\n");
+		for (String chr:countsMap.keySet()) {
+			for (String gene:countsMap.get(chr).keySet()) {
+				ListIterator<Window> wIter = countsMap.get(chr).get(gene).listIterator();
+				while (wIter.hasNext()) {
+					try {
+						Window w = wIter.next();
+						// bedGraph format: chr\tstart\tend\tvalue:
+						String oStr = chr+"\t"+w.getStart()+"\t"+w.getEnd()+"\t"+w.getCount()+"\n";
+						writer.write(oStr);
+					} catch (NoSuchElementException e) {
+						logger.error("NoSuchElementException for "+gene);
+					}
+				}	
+			}
+		}
+		writer.flush();
+		writer.close();
+		
 		/* close the files */
 		bamReader.close();
 	}
 
 	public static void main(String[] args) throws ParseException, IOException {
-		new BamReadTest(args);
+		new BamWindowedReadTest(args);
 	}
 }
