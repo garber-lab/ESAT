@@ -2,10 +2,8 @@ package umms.esat;
 
 import umms.esat.Window;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
@@ -28,7 +26,7 @@ import umms.core.annotation.Annotation;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
 
-public class SAMSequenceCountingDict extends SAMSequenceDictionary {
+abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
 /**
  *     Extends the SAMSequenceDictionary class to add startCounts, a set of simple counter arrays that 
  *     keep track of the number of reads beginning at each genomic location. The startCounts arrays are
@@ -45,9 +43,7 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
  */
 	/* start counts holds the count of the number of reads that start at each base within each of the 
 	 * dictionary header entries */
-	private HashMap<String, short[]> startCounts = new HashMap();
-//	private long allocatedMem = 0;
-//	private int allocatedArrays = 0;
+	//protected HashMap<String, short[]> startCounts = new HashMap<String, short[]>();      // **** short or float 
 	public Logger logger;
     
     public SAMSequenceCountingDict () {
@@ -84,53 +80,15 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	this.setSequences(dict.getSequences());
     }
     
-    public void updateCount(final SAMRecord r) {
-    	/** 
-    	 * increments the counter for how many reads had alignments beginning at this position.
-    	 * The total counts are stored as short ints used as unsigned short ints. If the count is
-    	 * negative, it indicates that the total count is >32767 and <65536, and should be converted
-    	 * to the correct int value by adding 65536.
-    	 * 
-    	 * @param	r	a SAMRecord, a single alignment record
-    	 * @see		SAMRecord
-    	 */
-    	String refName;
-    	int alignStart;
-    	// Check to see if storage has already been created for this reference sequence:
-    	refName = r.getReferenceName();
-    	alignStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
-    	String cString = r.getCigarString(); 
-    	// Note: if the CigarString is "*", it indicates that the read is unmapped. It would be better 
-    	//       if SAMRecord had a isMapped() method.
-    	if (cString!="*" && !this.startCounts.containsKey(refName)) {
-    		// Find the maximum coordinate of the refName in the dictionary
-    		SAMSequenceRecord seq = this.getSequence(refName);
-    		// Allocate a short int array for storage of the number of reads starting at each location
-    		this.startCounts.put(refName, new short[seq.getSequenceLength()]);
-    	}
-    	// Skip unaligned reads:
-    	if (cString!="*") {
-    		// NOTE: This effectively treats the counts as short, unsigned ints. Negative numbers indicate
-    		//       that the total count is >32767 and less than 65535. The test for counts!=1 limits the
-    		//       total counts to 65535 after converting back to an int.
-    		if (this.startCounts.get(refName)[alignStart]!=-1) {
-    			this.startCounts.get(refName)[alignStart]++;   // increment the counter
-    		} else {
-    			logger.warn("location "+alignStart+" in "+refName+" has >65535 counts.");
-    			// NOTE: since the counts arrays are short ints, counts between 32767 and 65535 will be negative.
-    			//       To adjust the negative values, <correct int value> = 65536+<negative count value>)
-    		}
-    	}
-    }
-    
-    public int countExonReadStarts(final Set<Annotation> eSet) {
+ 
+   public float countExonReadStarts(final Set<Annotation> eSet) {
     	/**
     	 * sums the count of all reads starting within all of the exons in this Set.
     	 * 
     	 * @param	eSet	a Set of Annotations defining the boundaries of a set of exons
     	 * @return			the (int) sum of reads
     	 */
-    	int countSum = 0;
+    	float countSum = 0;
     	int eStart = 0;
     	int eEnd = 0;
     	
@@ -138,7 +96,7 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	while (eIter.hasNext()) {
     		Annotation exon = eIter.next();    // get the exon
     		String chr = exon.getChr();        // exon chromosome
-    		if (this.startCounts.containsKey(chr)) {
+    		if (startCountsHasKey(chr)) {
     			eStart = exon.getStart()-1;          // exon start (1-based annotation, 0-based arrays)
     			eEnd = exon.getEnd()-1;              // exon end (1-based annotation, 0-based arrays)
     			/* compute the sum read starts over the exon interval */
@@ -146,7 +104,7 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     				// NOTE: the value of getEnd() is both 1-based and "right-open", so it points to the first 
     				// base AFTER the end of the exon (which makes the arithmetic work better, apparently). For this reason, 
     				// the loop uses "i<eEnd", rather than "i<=eEnd".
-    				countSum+=this.startCounts.get(chr)[i];
+    				countSum+=getStartCounts(chr, i);
     			}
     		} else {
     			logger.warn("Counts array does not contain key: "+chr+"\n");
@@ -173,7 +131,6 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	 * @return			a list of windows and counts. 
     	 */
     	int aLen = 0;
-    	short[] counts; 
     	float[] floatCounts; 
     	int[] gCoords;    // genomic coordinates of each location
     	int eStart;
@@ -205,7 +162,7 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		}
     	} else {
     		int gEnd = gene.getEnd();
-    		int segEnd = this.startCounts.get(chr).length;
+    		int segEnd = getChrLength(chr);
     		if (((gEnd+extend)-1)>segEnd) {
     			localExtend = segEnd-gEnd;   // limit extension to the end of the chromosome/segment
     			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases");
@@ -225,7 +182,6 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	aLen += localExtend;
     	
     	/* allocate the storage */
-    	counts = new short[aLen];
     	floatCounts = new float[aLen];
     	gCoords = new int[aLen];
     	
@@ -246,7 +202,7 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	while (eIter.hasNext()) {
     		Annotation exon = eIter.next();    // get the exon
     		chr = exon.getChr();        // exon chromosome
-    		if (!this.startCounts.containsKey(chr)) {
+    		if (!startCountsHasKey(chr)) {
     			logger.warn("Counts array does not contain key: "+chr);
     			return new LinkedList<Window>();
     		}
@@ -254,7 +210,10 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		eStart = exon.getStart();          // exon start
 			eEnd = exon.getEnd();              // exon end
 			eLen = eEnd-eStart;        // exon length
-    		System.arraycopy(this.startCounts.get(chr),eStart, counts, cStart, eLen);
+
+			copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
+    		// System.arraycopy(this.startCounts.get(chr),eStart, counts, cStart, eLen);     // ******************
+
     		// fill the gCoords array with genomic coordinates:
     		for (int i=0; i<eLen; i++) {
     			gCoords[cStart+i]=eStart+i;
@@ -275,7 +234,8 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	eLen = localExtend;            // number of bases to extend past the end of the last exon
     	
     	/* Copy the extension counts */
-    	System.arraycopy(this.startCounts.get(chr),eStart, counts, cStart, eLen);
+		copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
+    	// System.arraycopy(this.startCounts.get(chr),eStart, counts, cStart, eLen);     // ******************
 		// fill the gCoords array with genomic coordinates:
 		for (int i=0; i<eLen; i++) {
 			gCoords[cStart+i]=eStart+i;
@@ -300,16 +260,6 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		}
     	}
     	
-    	/* Copy the short (unsigned) int counts array to floating-point */
-    	for (int i=0;i<aLen; i++) {
-    		/* need to figure out how to do this same thing for floats... */
-    		if (counts[i]<0) {
-    			floatCounts[i] = (float) (counts[i]+65536);    // adjust for counts >32767 and <65536
-    		} else {
-    			floatCounts[i] = (float) counts[i];
-    		}
-    	}
-
     	/* Iterate a sliding window across the counts array and sum the counts over the window. Create a new Window object
     	 * for each step and add them to the output list.
     	 */
@@ -348,7 +298,7 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	 * 
     	 * @param	annotations	a Map of all available Gene Annotations
     	 */
-    	int eCount = 0;  
+    	float eCount = 0;  
     	
     	// Iterate over all "chromosomes":
     	for(String chr:annotations.keySet()){
@@ -433,4 +383,11 @@ public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     return countsMap;
     	
     }    
+
+    abstract void incrementStartCounts(String refName, int alignStart, float fractCount);
+	abstract void copyToLocalCounts(String chr, int eStart, int cStart, int eLen, float[] floatCounts);
+    abstract void updateCount(SAMRecord r);
+    abstract boolean startCountsHasKey(String chr);
+    abstract float getStartCounts(String chr, int i);
+    abstract int getChrLength(String chr);
 }

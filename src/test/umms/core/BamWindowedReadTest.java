@@ -34,7 +34,8 @@ import broad.core.util.CLUtil.ArgumentMap;
 import broad.pda.annotation.BEDFileParser;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
-import umms.esat.SAMSequenceCountingDict;
+import umms.esat.SAMSequenceCountingDict_short;
+import umms.esat.SAMSequenceCountingDict_float;
 import umms.core.annotation.Annotation;
 
 public class BamWindowedReadTest {
@@ -60,7 +61,8 @@ public class BamWindowedReadTest {
 	private static int windowOverlap;
 	private static int windowExtend;
 	private static String multimap;     // one of "ignore", "normal" or "scale"
-	private static SAMSequenceCountingDict bamDict;
+	//private static SAMSequenceCountingDict_short bamDict;
+	private static SAMSequenceCountingDict_float bamDict;
 	
 	public BamWindowedReadTest(String[] args) throws IOException, ParseException {
 		
@@ -99,7 +101,8 @@ public class BamWindowedReadTest {
 				if (firstFile) {
 					// use the header information in the first bam file to create counts storage
 					SAMFileHeader bamHeader = bamReader.getFileHeader();
-					bamDict = new SAMSequenceCountingDict();
+					//bamDict = new SAMSequenceCountingDict_short();
+					bamDict = new SAMSequenceCountingDict_float();
 					bamDict.setLogger(logger);
 					bamDict.copySequences(bamHeader.getSequenceDictionary());    // copy the sequence map from the original dictionary into the counting dict
 					firstFile = false;
