@@ -77,7 +77,7 @@ abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
 		 *
 		 *	@see	SAMSequenceDictionary
     	 */
-    	this.setSequences(dict.getSequences());
+    	setSequences(dict.getSequences());
     }
     
  
@@ -211,8 +211,8 @@ abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
 			eEnd = exon.getEnd();              // exon end
 			eLen = eEnd-eStart;        // exon length
 
+			// copy counts from startCounts to the local floating-point array:
 			copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
-    		// System.arraycopy(this.startCounts.get(chr),eStart, counts, cStart, eLen);     // ******************
 
     		// fill the gCoords array with genomic coordinates:
     		for (int i=0; i<eLen; i++) {
@@ -306,7 +306,7 @@ abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		for(Gene gene : annotations.get(chr)) {
 				Set eSet = gene.getExonSet();
 				// sum all counts starting within this exon set:
-				eCount = this.countExonReadStarts(eSet);
+				eCount = countExonReadStarts(eSet);
 				// set the gene "score" to the number of reads starting within these exons:
 				gene.setScore(eCount);
 			}	
@@ -337,8 +337,8 @@ abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		Collection<Gene> aSet = annotations.get(chr);
     		
     		/* Build strand-specific IntervalTrees containing all exons for this segment */
-    		IntervalTree<String> iTree_fwd = new IntervalTree();   // forward strand tree
-    		IntervalTree<String> iTree_rev = new IntervalTree();   // reverse strand tree
+    		IntervalTree<String> iTree_fwd = new IntervalTree<String>();   // forward strand tree
+    		IntervalTree<String> iTree_rev = new IntervalTree<String>();   // reverse strand tree
     		for(Gene gene : annotations.get(chr)) {
 				Set eSet = gene.getExonSet();
 				String gName = gene.getName();   // gene/transcript name
@@ -363,20 +363,28 @@ abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		for(Gene gene : annotations.get(chr)) {
     			String gName = gene.getName();
 				Set eSet = gene.getExonSet();
+				
+				// skip any chromosomes/segments that were not observed in the alignments files:
+				if (!startCountsHasKey(chr)) {
+					continue;
+				}
+				
+				// test to see if this is a duplicate transcript:
+				if (countsMap.containsKey(chr)) {	
+					if (countsMap.get(chr).containsKey(gName)) {
+						logger.warn("Duplicate entry for transcript "+gName+". Skipping...");	
+						continue;
+					}
+				}
+
 				// sum all counts starting within this exon set:
-				eCount = this.countWindowedReadStarts(eSet, iTree_fwd, iTree_rev, window, overlap, extend, gene);
+				eCount = countWindowedReadStarts(eSet, iTree_fwd, iTree_rev, window, overlap, extend, gene);
 				
 				// add this window set to the HashMap:
-				if (countsMap.containsKey(chr)) {
-					if (countsMap.get(chr).containsKey(gName)) {
-						logger.warn("Duplicate entry for transcript "+gName+". Skipping...");
-					} else {
-						countsMap.get(chr).put(gName, eCount);   // add the counts windows to the hashmap
-					}
-				} else {
+				if (!countsMap.containsKey(chr)) {
 					countsMap.put(chr, new HashMap());           // add an entry in the main map for the chromosome/segment
-					countsMap.get(chr).put(gName, eCount);       // add the counts windows to the hashmap
 				}
+				countsMap.get(chr).put(gName, eCount);       // add the counts windows to the hashmap
 			}	
 		}
     	

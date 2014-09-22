@@ -1,6 +1,7 @@
 package umms.esat;
 
 import java.util.HashMap;
+import java.util.ArrayList;
 
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.SAMSequenceRecord;
@@ -8,19 +9,31 @@ import net.sf.samtools.SAMSequenceRecord;
 public class SAMSequenceCountingDict_short extends SAMSequenceCountingDict {
 	
 	protected HashMap<String, short[]> startCounts = new HashMap<String, short[]>();      // **** short or float 
+	protected HashMap<String, ArrayList<Integer>> overflow = new HashMap<String,ArrayList<Integer>>();
 	
     // **** SHORT INT version limits counts to 65535
     public void incrementStartCounts(String refName, int alignStart, float fractCount) {
 		// NOTE: This effectively treats the counts as short, unsigned ints. Negative numbers indicate
 		//       that the total count is >32767 and less than 65535. The test for counts!=1 limits the
 		//       total counts to 65535 after converting back to an int.
-		if (startCounts.get(refName)[alignStart]!=-1) {
-			startCounts.get(refName)[alignStart]++;   // increment the counter
-		} else {
-			logger.warn("location "+alignStart+" in "+refName+" has >65535 counts.");
-			// NOTE: since the counts arrays are short ints, counts between 32767 and 65535 will be negative.
-			//       To adjust the negative values, <correct int value> = 65536+<negative count value>)
-		}
+    	try {
+    		if (startCounts.get(refName)[alignStart]!=-1) {
+    			startCounts.get(refName)[alignStart]++;   // increment the counter
+    		} else {
+    			// NOTE: since the counts arrays are short ints, counts between 32767 and 65535 will be negative.
+    			//       To adjust the negative values, <correct int value> = 65536+<negative count value>)
+    			if (!overflow.containsKey(refName) || !overflow.get(refName).contains(alignStart)) {
+    				logger.warn("location "+alignStart+" in "+refName+" has >65535 counts.");
+    				// add this location to the overflow map so that only one warning is issued for overflow at this location:
+    				if (!overflow.containsKey(refName)) {
+    					overflow.put(refName, new ArrayList<Integer>());
+    				}
+    				overflow.get(refName).add(alignStart);
+    			}
+    		}
+    	} catch (ArrayIndexOutOfBoundsException e) {
+    		logger.warn("ArrayIndexOutOfBoundsError caught: "+refName+":"+alignStart);
+    	}
     }
 
     public void copyToLocalCounts(String chr, int eStart, int cStart, int eLen, float[] floatCounts) {
@@ -63,7 +76,7 @@ public class SAMSequenceCountingDict_short extends SAMSequenceCountingDict {
     		// Find the maximum coordinate of the refName in the dictionary
     		SAMSequenceRecord seq = this.getSequence(refName);
     		// Allocate a short int array for storage of the number of reads starting at each location
-    		startCounts.put(refName, new short[seq.getSequenceLength()]);
+    		startCounts.put(refName, new short[seq.getSequenceLength()]);   // some alignments start after the end of the segment????
     	}
     	// Skip unaligned reads:
     	if (cString!="*") {

@@ -61,11 +61,14 @@ public class BamWindowedReadTest {
 	private static int windowOverlap;
 	private static int windowExtend;
 	private static String multimap;     // one of "ignore", "normal" or "scale"
-	//private static SAMSequenceCountingDict_short bamDict;
-	private static SAMSequenceCountingDict_float bamDict;
+	private static boolean qFilter;
+	private static int qThresh;         // quality threshold (reads must be GREATER THAN qThresh, if filtering is on 
+	private static HashMap<String,HashMap<String,LinkedList<Window>>> countsMap;
 	
 	public BamWindowedReadTest(String[] args) throws IOException, ParseException {
-		
+	
+		final SAMSequenceCountingDict_short bamDict;
+				
 		/*
 		 * @param for ArgumentMap - size, usage, default task
 		 * argMap maps the command line arguments to the respective parameters
@@ -76,12 +79,21 @@ public class BamWindowedReadTest {
 			logger.error("Please correct input arguments and retry.");
 			throw new IOException();
 		}
-		HashMap<String,HashMap<String,LinkedList<Window>>> countsMap;
-	
+
+		/* Only create floating-point counters if multimap=="scale" */ 
+		if (multimap.equals("scale")) {
+			logger.error("Unable to handle multimapping downweighting yet...");
+			System.exit(0);
+			//bamDict = new SAMSequenceCountingDict_float();	
+		}
+		bamDict = new SAMSequenceCountingDict_short();
+
 		/* START TIMING */
 		long startTime = System.nanoTime();
-		int totalReadCount = 0;
+		int totalValidReadCount = 0;
 		int totalInvalidReadCount = 0;
+		int goodQualityCount = 0;
+		int badQualityCount = 0;
 		int bamFileCount = 0;
 		boolean firstFile = true;      // only read the header from the first alignment file
 		
@@ -95,14 +107,16 @@ public class BamWindowedReadTest {
 				// open the next bam file in the list:
 				bamFile = (File) bamFiles.get(exp).get(i);
 				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
-				bamReader.setValidationStringency(ValidationStringency.LENIENT);	
+				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	
+				bamReader.setValidationStringency(ValidationStringency.STRICT);	
 				SAMRecordIterator bamIterator = bamReader.iterator();
+				logger.info("Processing file: "+bamFile+"...");
 
 				if (firstFile) {
 					// use the header information in the first bam file to create counts storage
 					SAMFileHeader bamHeader = bamReader.getFileHeader();
 					//bamDict = new SAMSequenceCountingDict_short();
-					bamDict = new SAMSequenceCountingDict_float();
+					
 					bamDict.setLogger(logger);
 					bamDict.copySequences(bamHeader.getSequenceDictionary());    // copy the sequence map from the original dictionary into the counting dict
 					firstFile = false;
@@ -111,14 +125,32 @@ public class BamWindowedReadTest {
 				/* read through the input file and increment the count for the start location of each read */
 				// NOTE: Baseline test - simply counting up the number of reads starting at each location for a full
 				//                       10M counts file takes ~30sec
-				int readCount = 0;
+				int validReadCount = 0;
 				int invalidReadCount = 0;
 				while (bamIterator.hasNext()) {
-					r = bamIterator.next();
+					try {
+						r = bamIterator.next();
+					} catch (SAMFormatException e) {
+						// skip SAM Format errors but log a warning:
+						logger.warn(e.getMessage());
+						continue;
+					}
+					// process the read:
 					if (!r.getReadUnmappedFlag()) {
+						// if quality filtering is turned on, skip low-quality reads:
+						if (qFilter==true) {
+							if (r.getMappingQuality()>qThresh){
+								goodQualityCount++;
+							} else {
+								badQualityCount++;
+								continue;
+							}
+						}
 						bamDict.updateCount(r);
-						readCount++;
+						// update the read start count
+						validReadCount++;
 					} else {
+						// Skip unmapped reads, but count them 
 						invalidReadCount++;
 					}
 				}
@@ -130,18 +162,22 @@ public class BamWindowedReadTest {
 				// time the loop:
 				long loopEndTime = System.nanoTime();
 				logger.info("Experiment "+exp+" BAM file "+bamFile+" processed in "+(loopEndTime-loopStartTime)/1e9+" sec\n");
-				logger.info("  "+readCount+" reads\n");
+				logger.info("  "+validReadCount+" valid reads\n");
 				logger.info("  "+invalidReadCount+" invalid reads");
 
 				// accumulate counts:
-				totalReadCount+=readCount;
+				totalValidReadCount+=validReadCount;
 				totalInvalidReadCount+=invalidReadCount;
 			}
 		}
 		
 		long stopTime = System.nanoTime();
 		logger.info(bamFileCount+" BAM files processed in "+(stopTime-startTime)/1e9+" sec\n");
-		logger.info("  "+totalReadCount+" reads\n");
+		logger.info("  "+totalValidReadCount+" valid reads\n");
+		if (qFilter) {
+			//logger.info("     "+goodQualityCount+" reads pass the quality threshold\n");
+			logger.info("     "+badQualityCount+" reads fail the quality threshold\n");
+		}
 		logger.info("  "+totalInvalidReadCount+" invalid reads");
 		long startTime2 = System.nanoTime();
 	
@@ -224,6 +260,14 @@ public class BamWindowedReadTest {
 				logger.error("-multimap flag must be one of ignore, normal, or scale (is set to "+multimap+")");
 				throw new IOException();
 			}
+		}
+		
+		/* Quality filtering */
+		if (!argMap.isPresent("quality")) {
+			qFilter = false;
+		} else {
+			qFilter = true;
+			qThresh = argMap.getInteger("quality");   // quality must be GREATER THAN qThresh for read to be processed
 		}
 		
 		// Allow multiple inputs 
