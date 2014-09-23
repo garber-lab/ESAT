@@ -26,7 +26,7 @@ import umms.core.annotation.Annotation;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
 
-abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
+abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 /**
  *     Extends the SAMSequenceDictionary class to add startCounts, a set of simple counter arrays that 
  *     keep track of the number of reads beginning at each genomic location. The startCounts arrays are
@@ -394,7 +394,7 @@ abstract class SAMSequenceCountingDict extends SAMSequenceDictionary {
 
     abstract void incrementStartCounts(String refName, int alignStart, float fractCount);
 	abstract void copyToLocalCounts(String chr, int eStart, int cStart, int eLen, float[] floatCounts);
-    abstract void updateCount(SAMRecord r);
+    abstract public void updateCount(SAMRecord r);
     abstract boolean startCountsHasKey(String chr);
     abstract float getStartCounts(String chr, int i);
     abstract int getChrLength(String chr);

@@ -15,6 +15,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.LinkedList;
@@ -27,6 +28,8 @@ import java.util.NoSuchElementException;
 
 import org.apache.log4j.Logger;
 
+import umms.core.annotation.Annotation.Strand;
+import umms.core.annotation.BasicAnnotation;
 import umms.core.annotation.Gene;
 import umms.core.exception.RuntimeIOException;
 import broad.core.util.CLUtil;
@@ -34,9 +37,11 @@ import broad.core.util.CLUtil.ArgumentMap;
 import broad.pda.annotation.BEDFileParser;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
-import umms.esat.SAMSequenceCountingDict_short;
-import umms.esat.SAMSequenceCountingDict_float;
+import umms.esat.SAMSequenceCountingDict;
+import umms.esat.SAMSequenceCountingDictShort;
+import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.annotation.Annotation;
+import umms.core.readers.MappingTableReader;
 
 public class BamWindowedReadTest {
 	
@@ -63,11 +68,16 @@ public class BamWindowedReadTest {
 	private static String multimap;     // one of "ignore", "normal" or "scale"
 	private static boolean qFilter;
 	private static int qThresh;         // quality threshold (reads must be GREATER THAN qThresh, if filtering is on 
+	private static boolean gMapping;
+	private static File gMapFile;       // name of the gene mapping file
+	
 	private static HashMap<String,HashMap<String,LinkedList<Window>>> countsMap;
+	private static SAMSequenceCountingDict bamDict;
+	private static Hashtable<String, Gene> geneTable;
 	
 	public BamWindowedReadTest(String[] args) throws IOException, ParseException {
 	
-		final SAMSequenceCountingDict_short bamDict;
+		final MappingTableReader mapFile;
 				
 		/*
 		 * @param for ArgumentMap - size, usage, default task
@@ -82,11 +92,10 @@ public class BamWindowedReadTest {
 
 		/* Only create floating-point counters if multimap=="scale" */ 
 		if (multimap.equals("scale")) {
-			logger.error("Unable to handle multimapping downweighting yet...");
-			System.exit(0);
-			//bamDict = new SAMSequenceCountingDict_float();	
+			bamDict = new SAMSequenceCountingDictFloat();	
+		} else {
+			bamDict = new SAMSequenceCountingDictShort();
 		}
-		bamDict = new SAMSequenceCountingDict_short();
 
 		/* START TIMING */
 		long startTime = System.nanoTime();
@@ -96,6 +105,120 @@ public class BamWindowedReadTest {
 		int badQualityCount = 0;
 		int bamFileCount = 0;
 		boolean firstFile = true;      // only read the header from the first alignment file
+		
+		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
+		/* THIS SHOULD BE A SEPARATE METHOD */
+		if (gMapping) {
+			long startGmapTime = System.nanoTime();    // load timer
+			// open the gene mapping file
+			mapFile = new MappingTableReader(gMapFile);
+			// make sure it has the mandatory columns:
+			String[] reqFields = {"name","chrom","strand","txStart","txEnd","exonStarts","exonEnds","name2"};
+			if (!mapFile.hasMandatoryFields(reqFields)) {
+				logger.error("Input mapping file "+gMapFile+" is missing required columns.");
+			}
+			// build gene-to-transcript map
+			geneTable = new Hashtable<String, Gene>();
+			boolean notDone = true;
+			// NOTE: "name" is the transcriptID, "name2" is the gene symbol
+			String[] cOrder = {"name2","chrom","txStart","txEnd","name","strand","exonStarts","exonEnds"};  
+			while (notDone) {
+				String[] mapData = mapFile.readOrderedFieldsFromLine(cOrder);
+				if (mapData.length==0) {
+					notDone=false;
+				} else {
+					// Use the following Gene constructor:
+					// Gene(String chr, int start, int end, String name, String orientation, List<Integer> exonsStart, List<Integer> exonsEnd)
+					List<Integer> eStarts = stringToIntList(mapData[6].split(","));
+					List<Integer> eEnds = stringToIntList(mapData[7].split(","));
+					Gene newGene = new Gene(mapData[1],Integer.parseInt(mapData[2]),Integer.parseInt(mapData[3]),mapData[4],mapData[5],eStarts,eEnds); 
+					String symbol = mapData[0];
+					if (!geneTable.containsKey(mapData[0])) {
+						// new gene symbol:
+						geneTable.put(symbol, newGene);
+					} else {
+						// add this transcript as an isoform, but only if this isoform is on the same chromosome as the first,
+						// as well as on the same strand:
+						Strand gStrand = geneTable.get(symbol).getStrand();
+						String gChrom = geneTable.get(symbol).getChr();
+						Strand iStrand = newGene.getStrand();
+						String iChrom = newGene.getChr();
+						if (gStrand.equals(iStrand) && gChrom.equals(iChrom)) {
+							geneTable.get(symbol).addIsoform(newGene);
+						} else {
+							logger.warn("New isoform mismatch for "+symbol+" ("+gChrom+gStrand+") with "+mapData[4]+" ("+iChrom+iStrand+")");
+						}
+					}
+				}
+			}
+			
+			long midGmapTime = System.nanoTime();    // end map loading, start isoform collapsing timer
+			// Collapse all multi-isoform genes down to a single exon set:
+			List<String> keySet = new ArrayList<String>(geneTable.keySet());    // since this loop modifies the Hashtable on the fly, it is necessary
+														// to extract the keySet first, rather then (String symbol:geneTable.keySet())
+			//for (String symbol:geneTable.keySet()) {
+			for (String symbol:keySet) {
+				Gene thisGene = geneTable.get(symbol);
+				Collection<Gene> isoforms = thisGene.getIsoforms();
+				if (isoforms.size()==1) {
+					//logger.info(symbol+" has only 1 isoform");
+					// Set the top-level gene name to the the gene symbol:
+					geneTable.get(symbol).setName(symbol);
+				} else {
+					//logger.info(symbol+" has "+isoforms.size()+" isoforms");
+					boolean firstIsoform = true;
+					Gene mergedGene = null;
+					// merge all isoforms
+					for (Gene iso:isoforms) {
+//						logger.info("  "+iso.getName());
+//						Iterator<? extends Annotation> eIter = iso.getExonSet().iterator();
+//						while (eIter.hasNext()) {
+//							Annotation exon = eIter.next();
+//							logger.info("    "+exon.getStart()+":"+exon.getEnd());
+//						}
+						if (firstIsoform) {
+							mergedGene = iso;
+							firstIsoform = false;
+						} else {
+							mergedGene = mergedGene.takeUnion(iso);
+						}
+					}
+//					Iterator<? extends Annotation> eIter = mergedGene.getExonSet().iterator();
+//					while (eIter.hasNext()) {
+//						Annotation exon = eIter.next();
+//						logger.info("  merged: "+exon.getStart()+":"+exon.getEnd());
+//					}
+					// Create a replacement gene where the top-level gene has the union of all exons of all 
+					// isoforms.
+					// NOTE:: doing it this way because there is no simple way to reset the exons of a gene.
+					//        It might be much faster if that method was available.
+					// For genes with multiple isoforms, the top-level gene name is the gene symbol. Otherwise,
+					// it is the transcript ID:
+					// constructor: Gene(String chr, int start, int end, String name, String orientation, List<Integer> exonsStart, List<Integer> exonsEnd)
+					/* make the exon start/end lists */
+					BasicAnnotation[] exons = mergedGene.getExons();
+					List<Integer> exonStarts = new ArrayList<Integer>();
+					List<Integer> exonEnds = new ArrayList<Integer>();
+					for (BasicAnnotation exon:exons) {
+						exonStarts.add(exon.getStart());
+						exonEnds.add(exon.getEnd());
+					}
+					// create the new gene:
+					Gene newGene = new Gene(thisGene.getChr(),thisGene.getStart(),thisGene.getEnd(),symbol,thisGene.getStrand().toString(),exonStarts,exonEnds);
+					// add all of the isoforms:
+					for (Gene iso:isoforms) {
+						newGene.addIsoform(iso);
+					}
+					// replace the old gene with the new one:
+					geneTable.remove(symbol);
+					geneTable.put(symbol, newGene);
+				}
+			}
+			long endGmapTime = System.nanoTime();    // end isoform collapsing timer
+			logger.info("Loading the gene-to-isoform map took "+(midGmapTime-startGmapTime)/1e9+" sec.");
+			logger.info("           Collapsing the genes took "+(endGmapTime-midGmapTime)/1e9+" sec.");
+		}
+		/***********************************************************************************************/
 		
 		/* open the input alignments file */
 		for (String exp:bamFiles.keySet()) {
@@ -182,8 +305,15 @@ public class BamWindowedReadTest {
 		long startTime2 = System.nanoTime();
 	
 		/* open the input alignments file */
-		Map<String,Collection<Gene>> annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
-
+		Map<String, Collection<Gene>> annotations;
+		if (gMapping) {
+			// Create the annotations map, keyed by chromosome:
+			annotations = geneMapToAnnotations(geneTable);
+		} else {
+			// load the annotations from the annotation (BED) file:
+			annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
+		}
+		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
 
@@ -200,9 +330,17 @@ public class BamWindowedReadTest {
 		/* STOP AND REPORT TIMING */
 		stopTime = System.nanoTime();
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
+
+		writeOutputESATFile(countsMap, annotations, outFile);
 		
-		
-		// Write the output file:
+	}
+	
+	public static void main(String[] args) throws ParseException, IOException {
+		new BamWindowedReadTest(args);
+	}
+	
+	public static void writeOutputBEDFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, File outFile, boolean collapseGenes) throws IOException {
+		// Open the output file:
 		FileWriter writer = new FileWriter(outFile);
 
 		/* write the data in bedGraph format */
@@ -227,10 +365,60 @@ public class BamWindowedReadTest {
 		writer.close();
 	}
 
-	public static void main(String[] args) throws ParseException, IOException {
-		new BamWindowedReadTest(args);
+	public static void writeOutputESATFile(HashMap<String,HashMap<String, 
+						LinkedList<Window>>> countsMap, 
+						Map<String, Collection<Gene>> annotations, File outFile) throws IOException {
+
+		// Open the output file:
+		FileWriter writer = new FileWriter(outFile);
+
+		/* write the data in ESAT format */
+		// Header line:
+		writer.write("Symbol\ttranscriptIDs\tcounts\n");
+		
+		for (String chr:annotations.keySet()) {
+			Iterator<Gene> gIter = annotations.get(chr).iterator();
+			while (gIter.hasNext()) {
+				Gene thisGene = gIter.next();
+				// Gene symbol:
+				String symbol = thisGene.getName();
+				// Isoforms:
+				Collection<Gene> isoforms = thisGene.getIsoforms();
+				Iterator<Gene> iIter = isoforms.iterator();
+				String iStr = null;         // build the list of isoforms
+				while (iIter.hasNext()){
+					Gene iso = iIter.next();
+					if (iStr==null) {
+						iStr = iso.getName();
+					} else {
+						if (!iso.getName().equals(symbol)) {
+							iStr += ","+iso.getName();
+						}
+					}
+				}
+				// Window counts:
+				if (!(countsMap.containsKey(chr) && countsMap.get(chr).containsKey(symbol))) {
+					logger.info("No alignments for "+symbol+" ("+chr+")");
+					continue;
+				}
+				Iterator<Window> wIter = countsMap.get(chr).get(symbol).iterator();
+				String wStr = null;
+				while (wIter.hasNext()) {
+					Window w = wIter.next();
+					if (wStr==null) {
+						wStr = ""+w.getCount();
+					} else {
+						wStr += ","+w.getCount();
+					}
+				}
+				// write the line to the output file:
+				writer.write(symbol+"\t"+iStr+"\t"+wStr+"\n");
+			}
+		}
+		writer.flush();
+		writer.close();
 	}
-	
+
 	private static boolean validateArguments(ArgumentMap argMap) throws IOException {
 		/* Validates the input arguments to ensure that all parameters are consistent and
 		 * fills in provided and default values for all required parameters.
@@ -291,7 +479,30 @@ public class BamWindowedReadTest {
 			return false;
 		}
 			
-		//  
+		//  allow all transcripts for a gene to be read from an input file.
+		// The input file is assumed to be a table in the format provided by the UCSC website (genomes.ucsc.edu)
+		// with the following features selected:
+		// Clade: Mammal
+		// genome: human
+		// assembly: <appropriate assembly>
+		// table: refGene
+		// region: genome
+		// output format: all fields from selected table
+		//
+		// The table (at minimum) should have the following columns:
+		//   name: the transcript RefSeq ID
+		//   chrom: chromosome
+		//   strand: strand, + or -
+		//   txStart, txEnd: transcript start and end location (0-based)
+		//   exonStarts, exonEnds: starting and ending location of each exon (paired, 0-based)
+		//   name2: gene symbol
+		if (!argMap.isPresent("geneMapping")) {
+			gMapping = false;
+		} else {
+			gMapping = true;
+			gMapFile = new File(argMap.get("geneMapping"));   // name of the gene mapping file
+		}
+	
 		return true;   // default return value if all tests pass
 	}
 	
@@ -317,5 +528,26 @@ public class BamWindowedReadTest {
 		}		
 		br.close();
 		return expBamFiles;
+	}
+
+	private List<Integer> stringToIntList(String[] vals) {
+		List<Integer> outList = new ArrayList<Integer>();
+		for (int i=0;i<vals.length;i++) {
+			outList.add(Integer.parseInt(vals[i]));
+		}
+		return outList;
+		
+	}
+	
+	private Map<String, Collection<Gene>> geneMapToAnnotations(Hashtable<String, Gene>gTable) {
+		Map<String, Collection<Gene>> annotations = new TreeMap<String, Collection<Gene>>();
+		for (String symbol:gTable.keySet()) {
+			String chr = gTable.get(symbol).getChr();   // get the chromosome (used as annotation key)
+			if (!annotations.containsKey(chr)) {
+				annotations.put(chr, new TreeSet<Gene>());
+			}
+			annotations.get(chr).add(gTable.get(symbol));
+		}
+		return annotations;
 	}
 }
