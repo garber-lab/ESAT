@@ -402,17 +402,13 @@ public class BamWindowedReadTest {
 					continue;
 				}
 				Iterator<Window> wIter = countsMap.get(chr).get(symbol).iterator();
-				String wStr = null;
+				float totalCounts = 0;
 				while (wIter.hasNext()) {
 					Window w = wIter.next();
-					if (wStr==null) {
-						wStr = ""+w.getCount();
-					} else {
-						wStr += ","+w.getCount();
-					}
+					totalCounts+=w.getCount();
 				}
 				// write the line to the output file:
-				writer.write(symbol+"\t"+iStr+"\t"+wStr+"\n");
+				writer.write(symbol+"\t"+iStr+"\t"+totalCounts+"\n");
 			}
 		}
 		writer.flush();

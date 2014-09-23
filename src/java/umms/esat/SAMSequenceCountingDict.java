@@ -18,10 +18,12 @@ import net.sf.samtools.SAMSequenceDictionary;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
 
 
+
 //import org.apache.commons.math3.util.MultidimensionalCounter.Iterator;
 import org.apache.log4j.Logger;
 
 import broad.core.datastructures.IntervalTree;
+import broad.core.datastructures.IntervalTree.Node;
 import umms.core.annotation.Annotation;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
@@ -220,6 +222,58 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		}
     		cStart+=eLen;    // point to the start position of the next copied segment
     	}
+    	
+    	// check if extension overlaps other genes:
+		int testExonStart;
+		int testExonEnd;
+    	if (gene.isNegativeStrand()) {
+    		testExonEnd = gene.getFirstExon().getStart();
+    		testExonStart = testExonEnd-localExtend;
+    		if (iTree_rev.numOverlappers(testExonStart, testExonEnd)>0) {
+    			//logger.warn(localExtend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(testExonStart, testExonEnd)+
+    			//		" overlaps (rev) between "+testExonStart+":"+testExonEnd);
+    			//Iterator<String> oLapIter = iTree_rev.overlappingValueIterator(testExonStart, testExonEnd);
+    			Iterator<Node<String>> oLapIter = iTree_rev.overlappers(testExonStart, testExonEnd);
+    			int oMax = 0;
+    			while (oLapIter.hasNext()) {
+    				Node<String> iName = oLapIter.next();
+    				//logger.warn("   "+iName.getValue()+" "+iName.getStart()+":"+iName.getEnd());
+    				if (iName.getEnd()>oMax) {
+    					oMax = iName.getEnd();
+    				}
+    			}
+    			localExtend = Math.max(0,testExonEnd-oMax);
+    			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(testExonStart, testExonEnd)+
+    					" overlaps (rev) between "+testExonStart+":"+testExonEnd+" (max at "+oMax+"). extension reduced to "+localExtend+" bases.");
+    		}
+    	} else {
+    		testExonStart = eEnd;            // Since the coordinate system is 0-based, exclusive, eEnd points to the first base AFTER the end of the last exon
+    		testExonEnd = testExonStart+localExtend;     // exclusive index of the end of the extended segment
+    		if (iTree_fwd.numOverlappers(testExonStart, testExonEnd)>0) {
+//    			logger.warn(localExtend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(testExonStart, testExonEnd)+
+//    					" overlaps (fwd) between "+testExonStart+":"+testExonEnd);
+//    			Iterator<String> oLapIter = iTree_fwd.overlappingValueIterator(testExonStart, testExonEnd);
+//    			while (oLapIter.hasNext()) {
+//    				
+//    				logger.warn("   "+oLapIter.next());
+//    			}
+    			Iterator<Node<String>> oLapIter = iTree_fwd.overlappers(testExonStart, testExonEnd);
+    			int oMin = Integer.MAX_VALUE;   // initialize to max integer value
+    			while (oLapIter.hasNext()) {
+    				Node<String> iName = oLapIter.next();
+    				//logger.warn("   "+iName.getValue()+" "+iName.getStart()+":"+iName.getEnd());
+    				if (iName.getEnd()<oMin) {
+    					oMin = iName.getStart();
+    				}
+    			}
+    			localExtend = Math.max(0,oMin-testExonStart);
+    			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(testExonStart, testExonEnd)+
+    					" overlaps (fwd) between "+testExonStart+":"+testExonEnd+" (min at "+oMin+"). extension reduced to "+localExtend+" bases.");
+       			
+    		}
+    	}
+    	
+    	/*************************************************************************************************************/
     	/* extend past the end of the last exon by "localExtend" bases. For now, just report a warning 
     	 * if this collides with another exon */
     	if (gene.isNegativeStrand()) {
@@ -240,26 +294,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 		for (int i=0; i<eLen; i++) {
 			gCoords[cStart+i]=eStart+i;
 		}
+    	/*************************************************************************************************************/
 
-    	// check if extension overlaps other genes:
-    	if (strand.toString().equals("+")) {
-    		if (iTree_fwd.numOverlappers(eStart, eEnd)>0) {
-    			logger.warn(localExtend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(eStart, eEnd)+" overlaps (fwd)");
-    			Iterator<String> oLapIter = iTree_fwd.overlappingValueIterator(eStart, eEnd);
-    			while (oLapIter.hasNext()) {
-    				logger.warn("   "+oLapIter.next());
-    			}
-    		}
-    	} else {
-    		if (iTree_rev.numOverlappers(eStart, eEnd)>0) {
-    			logger.warn(localExtend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(eStart, eEnd)+" overlaps (rev)");
-    			Iterator<String> oLapIter = iTree_rev.overlappingValueIterator(eStart, eEnd);
-    			while (oLapIter.hasNext()) {
-    				logger.warn("   "+oLapIter.next());
-    			}
-    		}
-    	}
-    	
     	/* Iterate a sliding window across the counts array and sum the counts over the window. Create a new Window object
     	 * for each step and add them to the output list.
     	 */
