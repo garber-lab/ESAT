@@ -156,7 +156,6 @@ public class BamWindowedReadTest {
 			// Collapse all multi-isoform genes down to a single exon set:
 			List<String> keySet = new ArrayList<String>(geneTable.keySet());    // since this loop modifies the Hashtable on the fly, it is necessary
 														// to extract the keySet first, rather then (String symbol:geneTable.keySet())
-			//for (String symbol:geneTable.keySet()) {
 			for (String symbol:keySet) {
 				Gene thisGene = geneTable.get(symbol);
 				Collection<Gene> isoforms = thisGene.getIsoforms();
@@ -170,12 +169,6 @@ public class BamWindowedReadTest {
 					Gene mergedGene = null;
 					// merge all isoforms
 					for (Gene iso:isoforms) {
-//						logger.info("  "+iso.getName());
-//						Iterator<? extends Annotation> eIter = iso.getExonSet().iterator();
-//						while (eIter.hasNext()) {
-//							Annotation exon = eIter.next();
-//							logger.info("    "+exon.getStart()+":"+exon.getEnd());
-//						}
 						if (firstIsoform) {
 							mergedGene = iso;
 							firstIsoform = false;
@@ -183,17 +176,12 @@ public class BamWindowedReadTest {
 							mergedGene = mergedGene.takeUnion(iso);
 						}
 					}
-//					Iterator<? extends Annotation> eIter = mergedGene.getExonSet().iterator();
-//					while (eIter.hasNext()) {
-//						Annotation exon = eIter.next();
-//						logger.info("  merged: "+exon.getStart()+":"+exon.getEnd());
-//					}
 					// Create a replacement gene where the top-level gene has the union of all exons of all 
 					// isoforms.
 					// NOTE:: doing it this way because there is no simple way to reset the exons of a gene.
 					//        It might be much faster if that method was available.
-					// For genes with multiple isoforms, the top-level gene name is the gene symbol. Otherwise,
-					// it is the transcript ID:
+					// The top-level gene name is the gene symbol, and all isoforms are named by their RefSeq ID (NM_, NR_, etc.)
+					// If a gene has a single isoform, the top-level gene and its isoform will be identical, except for the name.
 					// constructor: Gene(String chr, int start, int end, String name, String orientation, List<Integer> exonsStart, List<Integer> exonsEnd)
 					/* make the exon start/end lists */
 					BasicAnnotation[] exons = mergedGene.getExons();
@@ -485,7 +473,7 @@ public class BamWindowedReadTest {
 		// region: genome
 		// output format: all fields from selected table
 		//
-		// The table (at minimum) should have the following columns:
+		// The table MUST have the following columns:
 		//   name: the transcript RefSeq ID
 		//   chrom: chromosome
 		//   strand: strand, + or -
