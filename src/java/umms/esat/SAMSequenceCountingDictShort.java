@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.SAMSequenceRecord;
 
-public class SAMSequenceCountingDict_short extends SAMSequenceCountingDict {
+public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
 	
 	protected HashMap<String, short[]> startCounts = new HashMap<String, short[]>();      // **** short or float 
 	protected HashMap<String, ArrayList<Integer>> overflow = new HashMap<String,ArrayList<Integer>>();

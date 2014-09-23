@@ -5,7 +5,7 @@ import java.util.HashMap;
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.SAMSequenceRecord;
 
-public class SAMSequenceCountingDict_float extends SAMSequenceCountingDict {
+public class SAMSequenceCountingDictFloat extends SAMSequenceCountingDict {
 	
 	protected HashMap<String, float[]> startCounts = new HashMap<String, float[]>(); 	
 
