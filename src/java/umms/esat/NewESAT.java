@@ -29,6 +29,7 @@ import umms.core.annotation.Gene;
 import umms.core.exception.RuntimeIOException;
 import broad.core.util.CLUtil;
 import broad.core.util.CLUtil.ArgumentMap;
+import broad.core.datastructures.IntervalTree;
 import broad.pda.annotation.BEDFileParser;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
@@ -36,6 +37,7 @@ import umms.esat.SAMSequenceCountingDict;
 import umms.esat.SAMSequenceCountingDictShort;
 import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
+
 //import umms.core.utils.ESATUtils;
 
 public class NewESAT {
@@ -111,13 +113,19 @@ public class NewESAT {
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
 		
-		/* remove all windows with zero counts across all experiments */
-		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = makeExperimentWindowCounter(countsMap);
+		/* Make a new counts map containing only Windows with non-zero counts across ALL experiments */
+		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = makeExperimentWindowCounter(countsMap, bamFiles.keySet().size());
+		
+		/* Create a HashMap of IntervalTrees for all chromosomes that matches the structure of cleanCountsMap */
+		HashMap<String, HashMap<String, IntervalTree>> windowTree = makeIntervalTreeFromCountsMap(cleanCountsMap);
+		
+		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
 
 		/* STOP AND REPORT TIMING */
 		long stopTime = System.nanoTime();
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
 
+		/* need a new version of a writer that writes counts in each window for each experiment !!!!!!! */
 		writeOutputESATFile(countsMap, annotations, outFile);   // ?????
 		
 	}
@@ -540,9 +548,10 @@ public class NewESAT {
 		return bamDict;
 	}
 
-	public HashMap<String,HashMap<String,LinkedList<Window>>> makeExperimentWindowCounter(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap) {
+	public HashMap<String,HashMap<String,LinkedList<Window>>> makeExperimentWindowCounter(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, int nExp) {
 		// Actually, it builds a new counts map containing only Windows with non-zero counts:
 		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = new HashMap<String,HashMap<String,LinkedList<Window>>>();
+		// Each Window is created with storage for counts for nExp separate experiments.
 		
 		int inWindowCount = 0;
 		int outWindowCount = 0;
@@ -562,7 +571,7 @@ public class NewESAT {
 						// add a new Window to the cleanCountsMap:
 						String wName = ""+listIdx;
 						listIdx++;  // increment the list index counter
-						Window wNew = new Window(w.getStrand(), chr, w.getStart(), w.getEnd(), wName);
+						Window wNew = new Window(w.getStrand(), chr, w.getStart(), w.getEnd(), wName, nExp);
 						if (!cleanCountsMap.containsKey(chr)) {
 							cleanCountsMap.put(chr, new HashMap<String, LinkedList<Window>>());
 						}
@@ -580,5 +589,11 @@ public class NewESAT {
 		logger.info("Non-zero window count: "+outWindowCount);
 		
 		return cleanCountsMap;
+	}
+	
+	public HashMap<String, HashMap<String, IntervalTree>> makeIntervalTreeFromCountsMap(HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap) {
+		HashMap<String, HashMap<String, IntervalTree>> iTreeMap = new HashMap<String, HashMap<String, IntervalTree>>();
+		
+		return iTreeMap;
 	}
 }
