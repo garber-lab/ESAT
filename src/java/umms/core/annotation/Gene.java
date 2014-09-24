@@ -29,6 +29,8 @@ import broad.pda.datastructures.Alignments;
 import broad.pda.rnai.ExtractSequence;
 
 public class Gene extends BasicAnnotation {
+
+	private static final long serialVersionUID = 7530249316842274939L;
 	static Logger logger = Logger.getLogger(Gene.class.getName());
 	ArrayList<Double> scores;
 	Map<String, String> attributes;
