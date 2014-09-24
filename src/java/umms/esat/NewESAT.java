@@ -1,4 +1,4 @@
-package umms.core;
+package umms.esat;
 
 import umms.esat.Window;
 
@@ -38,23 +38,21 @@ import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
 //import umms.core.utils.ESATUtils;
 
-public class BamWindowedReadTest {
+public class NewESAT {
 	
+	// This usage message needs to be updated to reflect the actual operation of NewESAT!!!
 	static final String usage = "Usage: BamReadTest <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
 			"\n\t-in <input bam file>: input bam file (sorting and indexing not required)" + 
 			"\n\t-out <output file name>"+
 			"\n\t-annotations <reference annotation file [BED file]>"+
 			"\n\t**************************************************************"+
 			"\n\t\tOPTIONAL arguments"+
-			"\n\t**************************************************************"+
-			"\n\t-scs indicates that input file is UMI- and well barcode-tagged SCS data (optional)"+
-			"\n\t-wellBC <n> well barcode length [default=6]"+
-			"\n\t-UMI <m> UMI length [default=10]";
+			"\n\t**************************************************************";
 	
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
 	private static File outFile;
 	private static String annotationFile;
-	static Logger logger = Logger.getLogger(BamReadTest.class.getName());
+	static Logger logger = Logger.getLogger(NewESAT.class.getName());
 	private static int windowLength;
 	private static int windowOverlap;
 	private static int windowExtend;
@@ -68,7 +66,7 @@ public class BamWindowedReadTest {
 	private static SAMSequenceCountingDict bamDict;
 	private static Hashtable<String, Gene> geneTable;
 	
-	public BamWindowedReadTest(String[] args) throws IOException, ParseException {
+	public NewESAT(String[] args) throws IOException, ParseException {
 	
 		/*
 		 * @param for ArgumentMap - size, usage, default task
@@ -125,7 +123,7 @@ public class BamWindowedReadTest {
 	}
 	
 	public static void main(String[] args) throws ParseException, IOException {
-		new BamWindowedReadTest(args);
+		new NewESAT(args);
 	}
 	
 
@@ -216,9 +214,9 @@ public class BamWindowedReadTest {
 		return true;   // default return value if all tests pass
 	}
 
-	/*******************************************************************************************************/
-	/****** Methods pulled out of ESATUtils.java ***********************************************************/
-	/*******************************************************************************************************/
+//	/*******************************************************************************************************/
+//	/****** Methods pulled out of ESATUtils.java ***********************************************************/
+//	/*******************************************************************************************************/
 	public static void writeOutputBEDFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, File outFile, boolean collapseGenes) throws IOException {
 		// Open the output file:
 		FileWriter writer = new FileWriter(outFile);
