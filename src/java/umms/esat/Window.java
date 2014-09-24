@@ -6,7 +6,8 @@ public class Window {
 	private int start;		// genomic start coordinate  
 	private int end;        // genomic end coordinate  
 	private String name;    // transcript name
-	private float count;    // total reads starting in this window  
+	private float count;    // total reads starting in this window
+	private float[] counts;  // allows for collection of counts from multiple conditions
 	
 	// empty constructor:
 	public Window() {
@@ -27,6 +28,16 @@ public class Window {
 		start = wStart;
 		end = wEnd;
 		name = tName;
+	}
+	
+	// constructor with name and multiple experiment/condition counters:
+	public Window(String wStrand, String wChr, int wStart, int wEnd, String tName, int nExp) {
+		strand = wStrand;
+		chr = wChr;
+		start = wStart;
+		end = wEnd;
+		name = tName;
+		counts = new float[nExp];
 	}
 	
 	// METHODS //
@@ -54,6 +65,11 @@ public class Window {
 		count = wCount;
 	}
 
+	public void incrementCounts(int eIdx) {
+		// update the counts for experiment eIdx:
+		counts[eIdx]++;
+	}
+
 	public String getStrand() {
 		return strand;
 	}
@@ -72,6 +88,16 @@ public class Window {
 
 	public float getCount() {
 		return count;
+	}
+	
+	// get counts for all experiments:
+	public float[] getCounts() {
+		return counts;
+	}
+	
+	// get counts for experiment eIdx:
+	public float getCounts(int eIdx) {
+		return counts[eIdx];
 	}
 	
 	public String getName() {
