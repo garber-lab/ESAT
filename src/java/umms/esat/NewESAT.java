@@ -1,4 +1,4 @@
-package umms.core.utils;
+package umms.esat;
 
 import umms.esat.Window;
 
@@ -26,17 +26,197 @@ import org.apache.log4j.Logger;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.BasicAnnotation;
 import umms.core.annotation.Gene;
+import umms.core.exception.RuntimeIOException;
+import broad.core.util.CLUtil;
+import broad.core.util.CLUtil.ArgumentMap;
+import broad.pda.annotation.BEDFileParser;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
 import umms.esat.SAMSequenceCountingDict;
 import umms.esat.SAMSequenceCountingDictShort;
 import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
+//import umms.core.utils.ESATUtils;
 
-public class ESATUtils {
+public class NewESAT {
 	
-	public static Logger logger = Logger.getLogger(ESATUtils.class.getName());
+	// This usage message needs to be updated to reflect the actual operation of NewESAT!!!
+	static final String usage = "Usage: BamReadTest <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
+			"\n\t-in <input bam file>: input bam file (sorting and indexing not required)" + 
+			"\n\t-out <output file name>"+
+			"\n\t-annotations <reference annotation file [BED file]>"+
+			"\n\t**************************************************************"+
+			"\n\t\tOPTIONAL arguments"+
+			"\n\t**************************************************************";
+	
+	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
+	private static File outFile;
+	private static String annotationFile;
+	static Logger logger = Logger.getLogger(NewESAT.class.getName());
+	private static int windowLength;
+	private static int windowOverlap;
+	private static int windowExtend;
+	private static String multimap;     // one of "ignore", "normal" or "scale"
+	private static boolean qFilter;
+	private static int qThresh;         // quality threshold (reads must be GREATER THAN qThresh, if filtering is on 
+	private static boolean gMapping;
+	private static File gMapFile;       // name of the gene mapping file
+	
+	private static HashMap<String,HashMap<String,LinkedList<Window>>> countsMap;
+	private static SAMSequenceCountingDict bamDict;
+	private static Hashtable<String, Gene> geneTable;
+	
+	public NewESAT(String[] args) throws IOException, ParseException {
+	
+		/*
+		 * @param for ArgumentMap - size, usage, default task
+		 * argMap maps the command line arguments to the respective parameters
+		 */
+		/* seems like a useful utility that can probably be stripped down */
+		ArgumentMap argMap = CLUtil.getParameters(args,usage,"dummy");  /* no default task for now */
+		if (!validateArguments(argMap)) {
+			logger.error("Please correct input arguments and retry.");
+			throw new IOException();
+		}
 
+		/* Only create floating-point counters if multimap=="scale" */ 
+		if (multimap.equals("scale")) {
+			// multimapped read scaling is not implemented yet:
+			bamDict = new SAMSequenceCountingDictFloat();	
+		} else {
+			bamDict = new SAMSequenceCountingDictShort();
+		}
+
+		/* START TIMING */
+		long startTime = System.nanoTime();
+		
+		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
+		if (gMapping) {
+			geneTable = loadGeneTableFromFile(gMapFile);       // ?????
+		}
+		
+		/* collect all read start location counts from the input alignments file(s) */
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh);   // ?????
+	
+		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
+		Map<String, Collection<Gene>> annotations;
+		if (gMapping) {
+			// Create the annotations map, keyed by chromosome:
+			annotations = geneMapToAnnotations(geneTable);    // ?????
+		} else {
+			// load the annotations from the annotation (BED) file:
+			annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
+		}
+		
+		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
+		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
+		
+		/* remove all windows with zero counts across all experiments */
+		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = makeExperimentWindowCounter(countsMap);
+
+		/* STOP AND REPORT TIMING */
+		long stopTime = System.nanoTime();
+		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
+
+		writeOutputESATFile(countsMap, annotations, outFile);   // ?????
+		
+	}
+	
+	public static void main(String[] args) throws ParseException, IOException {
+		new NewESAT(args);
+	}
+	
+
+	private static boolean validateArguments(ArgumentMap argMap) throws IOException {
+		/* Validates the input arguments to ensure that all parameters are consistent and
+		 * fills in provided and default values for all required parameters.
+		 * 
+		 * In the case of single/multiple input alignment files, either the -in <inputFile> flag or
+		 * -alignments <inputFileListFile> can be used. Multiple files (-alignments) overrides -in. 
+		 * The bamFiles argument (a String array) will contain either a single file name (-in), or the
+		 * full set of all alignment files (-alignments). NOTE: In the case of multiple alignments files
+		 * ONLY the header of the first file is used to determine the alignment segments.ls
+		 * 
+		 * 
+		 * @param	args	an ArgumentMap containing the input parameters from the command line.
+		 * @return	success	a boolean flag indicating success/failure of the parameter set validity.
+		 */
+		
+		/* Windowed read count test parameters */
+		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 400;
+		windowOverlap = argMap.isPresent("wOlap")? argMap.getInteger("wOlap") : 40;
+		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 400;
+		
+		/* Multimapping parameters */
+		if (!argMap.isPresent("multimap")) {
+			multimap = "ignore";
+		} else {
+			multimap = argMap.get("multimap");
+			if (!(multimap.equals("ignore") || multimap.equals("normal") || multimap.equals("scale"))) {
+				logger.error("-multimap flag must be one of ignore, normal, or scale (is set to "+multimap+")");
+				throw new IOException();
+			}
+		}
+		
+		/* Quality filtering */
+		if (!argMap.isPresent("quality")) {
+			qFilter = false;
+		} else {
+			qFilter = true;
+			qThresh = argMap.getInteger("quality");   // quality must be GREATER THAN qThresh for read to be processed
+		}
+		
+		// Allow multiple inputs 
+		if (argMap.isPresent("alignments")){
+			// The input file file contains a listing of all input files, with an experiment identifier for
+			// each file as: <experimentID>\t<input BAM file>
+			// fill the File array with the list of input files
+			String inputFileFile = argMap.get("alignments");
+			bamFiles = loadBamFileList(inputFileFile);    // ?????
+		}
+		if (argMap.hasInputFile()) {
+			bamFiles = new HashMap<String, ArrayList<File>>();
+			// Set the default experiment name to "Exp1"
+			bamFiles.put("Exp1",new ArrayList<File>());
+			bamFiles.get("Exp1").add(new File(argMap.getInput()));
+		}
+		outFile = new File(argMap.getOutput());
+		annotationFile = argMap.getMandatory("annotations");
+		if(!annotationFile.endsWith(".bed") && !annotationFile.endsWith(".BED")){
+			logger.error("Please supply an annotation file in the BED format",new RuntimeIOException());
+			return false;
+		}
+			
+		//  allow all transcripts for a gene to be read from an input file.
+		// The input file is assumed to be a table in the format provided by the UCSC website (genomes.ucsc.edu)
+		// with the following features selected:
+		// Clade: Mammal
+		// genome: human
+		// assembly: <appropriate assembly>
+		// table: refGene
+		// region: genome
+		// output format: all fields from selected table
+		//
+		// The table MUST have the following columns:
+		//   name: the transcript RefSeq ID
+		//   chrom: chromosome
+		//   strand: strand, + or -
+		//   txStart, txEnd: transcript start and end location (0-based)
+		//   exonStarts, exonEnds: starting and ending location of each exon (paired, 0-based)
+		//   name2: gene symbol
+		if (!argMap.isPresent("geneMapping")) {
+			gMapping = false;
+		} else {
+			gMapping = true;
+			gMapFile = new File(argMap.get("geneMapping"));   // name of the gene mapping file
+		}
+	
+		return true;   // default return value if all tests pass
+	}
+
+//	/*******************************************************************************************************/
+//	/****** Methods pulled out of ESATUtils.java ***********************************************************/
+//	/*******************************************************************************************************/
 	public static void writeOutputBEDFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, File outFile, boolean collapseGenes) throws IOException {
 		// Open the output file:
 		FileWriter writer = new FileWriter(outFile);
@@ -359,7 +539,7 @@ public class ESATUtils {
 		// Return the updated counts dictionary:
 		return bamDict;
 	}
-	
+
 	public HashMap<String,HashMap<String,LinkedList<Window>>> makeExperimentWindowCounter(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap) {
 		// Actually, it builds a new counts map containing only Windows with non-zero counts:
 		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = new HashMap<String,HashMap<String,LinkedList<Window>>>();
@@ -400,5 +580,5 @@ public class ESATUtils {
 		logger.info("Non-zero window count: "+outWindowCount);
 		
 		return cleanCountsMap;
-	}	
+	}
 }
