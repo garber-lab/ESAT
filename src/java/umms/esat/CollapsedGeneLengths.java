@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
 import org.broad.igv.Globals;
 
 import broad.core.datastructures.IntervalTree;
-import broad.core.datastructures.IntervalTree.Node;
+//import broad.core.datastructures.IntervalTree.Node;
 import broad.core.math.Statistics;
 import broad.core.util.CLUtil;
 import broad.core.util.CLUtil.ArgumentMap;
