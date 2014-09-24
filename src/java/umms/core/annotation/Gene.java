@@ -25,7 +25,6 @@ import broad.core.annotation.LightweightGenomicAnnotation;
 import broad.core.datastructures.IntervalTree;
 import broad.core.datastructures.IntervalTree.Node;
 import broad.core.sequence.Sequence;
-import broad.pda.datastructures.Alignments;
 import broad.pda.rnai.ExtractSequence;
 
 public class Gene extends BasicAnnotation {
@@ -116,10 +115,6 @@ public class Gene extends BasicAnnotation {
 	}
 	
 	@Deprecated
-	public Gene(Alignments align) {
-		this(align.getChr(), align.getStart(), align.getEnd(), align.getName(), align.getOrientation());
-	}
-	
 	public Gene (Annotation annotation) {
 		this(annotation.getChr(), annotation.getName(), annotation.getOrientation(), annotation.getBlocks());
 	}
@@ -236,12 +231,13 @@ public class Gene extends BasicAnnotation {
 		
 		return rtrn;
 	}
-	
+
+	//  Collection<Annotation> does not allow add(<Alignment>)!!!
 	private static Collection<? extends Annotation> makeExons(String chr, List<Integer> exonsStart, List<Integer> exonsEnd) {
 		Collection<Annotation> rtrn=new ArrayList<Annotation>();
 		
 		for(int i=0; i<exonsStart.size(); i++){
-			Alignments align=new Alignments(chr, exonsStart.get(i), exonsEnd.get(i));
+			BasicAnnotation align=new BasicAnnotation(chr, exonsStart.get(i), exonsEnd.get(i));
 			rtrn.add(align);
 		}
 		
@@ -433,7 +429,6 @@ public class Gene extends BasicAnnotation {
 		}
 		
 	}*/
-	
 	
 	public void setBedScore (double d){bedScore=d;}
 	
@@ -768,12 +763,12 @@ public class Gene extends BasicAnnotation {
 	 * Get the region of the gene span that lies 3' of the stop codon, including introns but not the stop codon itself
 	 * @return the region of the gene span that lies 3' of the stop codon as an Alignments object
 	 */
-	public Alignments get3UtrIncludingIntrons(){
+	public BasicAnnotation get3UtrIncludingIntrons(){
 		if(getOrientation() == Strand.NEGATIVE){
-			Alignments rtrn=new Alignments(getChr(), getStart(), this.getCDSRegion().getStart() - 1, getOrientation());
+			BasicAnnotation rtrn=new BasicAnnotation(getChr(), getStart(), this.getCDSRegion().getStart() - 1, getOrientation());
 			return rtrn;
 		}
-		Alignments rtrn=new Alignments(getChr(), this.getCDSRegion().getEnd() + 1, getEnd(), getOrientation());
+		BasicAnnotation rtrn=new BasicAnnotation(getChr(), this.getCDSRegion().getEnd() + 1, getEnd(), getOrientation());
 		return rtrn;
 	}
 	
@@ -781,14 +776,14 @@ public class Gene extends BasicAnnotation {
 		return numBlocks();
 	}
 	
-	public Alignments[] getExons(){
+	public BasicAnnotation[] getExons(){
 		Collection<? extends Annotation> blocks=getBlocks();
 		
-		Alignments[] exons=new Alignments[blocks.size()];
+		BasicAnnotation[] exons=new BasicAnnotation[blocks.size()];
 		
 		int count=0;
 		for(Annotation block: blocks){
-			exons[count++]=new Alignments(block);
+			exons[count++]=new BasicAnnotation(block);
 		}
 		
 		return exons;
@@ -899,17 +894,17 @@ public class Gene extends BasicAnnotation {
 		return introns.get5PrimeExon();
 	}
 	
-	public Alignments[] getIntronsBlocks(){
+	public BasicAnnotation[] getIntronsBlocks(){
 		
 		Object[] sortedUniqueExons=this.getSortedAndUniqueExons().toArray();
-		if(sortedUniqueExons.length==0){return new Alignments[0];}
-		Alignments[] rtrn=new Alignments[sortedUniqueExons.length-1];
+		if(sortedUniqueExons.length==0){return new BasicAnnotation[0];}
+		BasicAnnotation[] rtrn=new BasicAnnotation[sortedUniqueExons.length-1];
 		
 		
 		for(int i=0; i<sortedUniqueExons.length-1; i++){
-			Alignments current=(Alignments)sortedUniqueExons[i];
-			Alignments next=(Alignments) sortedUniqueExons[i+1];
-			Alignments align=new Alignments(getChr(), current.getEnd(), next.getStart());
+			BasicAnnotation current=(BasicAnnotation)sortedUniqueExons[i];
+			BasicAnnotation next=(BasicAnnotation) sortedUniqueExons[i+1];
+			BasicAnnotation align=new BasicAnnotation(getChr(), current.getEnd(), next.getStart());
 			rtrn[i]=align;
 		}
 		return rtrn;
@@ -923,7 +918,7 @@ public class Gene extends BasicAnnotation {
 		for(int i=0; i< sortedUniqueExons.size()-1; i++){
 			Annotation current = sortedUniqueExons.get(i);
 			Annotation next = sortedUniqueExons.get(i+1);
-			//Alignments align=new Alignments(this.chr, current.getEnd()+1, next.getStart()-1); // If we assume Exons are in [start,end) format there should be no need add one to the end.  
+			//BasicAnnotation align=new BasicAnnotation(this.chr, current.getEnd()+1, next.getStart()-1); // If we assume Exons are in [start,end) format there should be no need add one to the end.  
 			BasicAnnotation intron=new BasicAnnotation(getChr(), current.getEnd(), next.getStart());   
 			//if(align.getSize()<0){System.err.println(align.toUCSC()+" "+current.toUCSC()+" "+next.toUCSC()+" "+toBED());}
 			intron.setOrientation(getOrientation());
@@ -986,7 +981,7 @@ public class Gene extends BasicAnnotation {
 	}
 	
 	public Gene getCDS(){
-		Alignments cds=getCDSRegion();
+		BasicAnnotation cds=getCDSRegion();
 		Gene rtrn=this.trimAbsolute(cds.getStart(), cds.getEnd());		
 		if(rtrn == null) {
 			return null;
@@ -1001,25 +996,25 @@ public class Gene extends BasicAnnotation {
 		return rtrn;
 	}
 	
-	public Alignments getCDSRegion(){
-		Alignments align=new Alignments(getChr(), this.cdsStart, this.cdsEnd);
+	public BasicAnnotation getCDSRegion(){
+		BasicAnnotation align=new BasicAnnotation(getChr(), this.cdsStart, this.cdsEnd);
 		return align;
 	}
 	
 	public Annotation getAlignment(){
-		Alignments align=new Alignments(getChr(), getStart(), getEnd(), getOrientation(), getName());
+		BasicAnnotation align=new BasicAnnotation(getChr(), getStart(), getEnd(), getOrientation(), getName());
 		return align;
 	}
 	
-	public Alignments getPromoter(int fudgeFactor){ return getPromoter(fudgeFactor,fudgeFactor);}
+	public BasicAnnotation getPromoter(int fudgeFactor){ return getPromoter(fudgeFactor,fudgeFactor);}
 	
-	public Alignments getPromoter(int upstream,int downstream){
-		Alignments align=null;
+	public BasicAnnotation getPromoter(int upstream,int downstream){
+		BasicAnnotation align=null;
 		if(getOrientation() == Strand.POSITIVE){
-			align=new Alignments(getChr(), getStart()-upstream, getStart()+downstream);
+			align=new BasicAnnotation(getChr(), getStart()-upstream, getStart()+downstream);
 		}
 		else{
-			align=new Alignments(getChr(), getEnd()-downstream, getEnd()+upstream);
+			align=new BasicAnnotation(getChr(), getEnd()-downstream, getEnd()+upstream);
 		}
 		align.setName(getName());
 		align.setOrientation(getOrientation().toString());
@@ -1033,7 +1028,7 @@ public class Gene extends BasicAnnotation {
 	
 	public int getGappedSize(){
 		int sum=0;
-		Alignments[] exons=this.getExons();
+		BasicAnnotation[] exons=this.getExons();
 		if(exons!=null){
 			for(int i=0; i<exons.length; i++){
 				sum+=exons[i].getSize();
@@ -1062,7 +1057,7 @@ public class Gene extends BasicAnnotation {
 		List<? extends Annotation> thisExons  = new ArrayList<Annotation>(getExonSet());
 		Collection<Annotation> overlappingExons = new TreeSet<Annotation>();
 		for(Annotation exon: otherExons) {
-			Annotation exonClone = new Alignments(exon);
+			Annotation exonClone = new BasicAnnotation(exon);
 			List<Annotation> tmp = exonClone.intersect(thisExons);
 			overlappingExons.addAll(exonClone.intersect(thisExons));
 		}
@@ -1668,8 +1663,8 @@ public class Gene extends BasicAnnotation {
 		boolean res=true;
 		if (this.getNumExons()!=iso.getNumExons())
 			return false;
-		Alignments[] myEx= this.getExons();
-		Alignments[] isoEx= iso.getExons();
+		BasicAnnotation[] myEx= this.getExons();
+		BasicAnnotation[] isoEx= iso.getExons();
 		for (int i=0; i<this.getNumExons();i++){
 			if (!(myEx[i].equals(isoEx[i])))
 				res=false;
@@ -1870,8 +1865,8 @@ public class Gene extends BasicAnnotation {
 	public boolean overlapsGene(Gene gen) {
 		if (  this.getOrientation().equals(gen.getOrientation()) || this.getOrientation() == Strand.UNKNOWN || gen.getOrientation() == Strand.UNKNOWN) 
 		{	
-		   Alignments g1 =new Alignments(this.getChr(),this.getStart(),this.getEnd());
-		   Alignments g2 =new Alignments(gen.getChr(),gen.getStart(),gen.getEnd());
+		   BasicAnnotation g1 =new BasicAnnotation(this.getChr(),this.getStart(),this.getEnd());
+		   BasicAnnotation g2 =new BasicAnnotation(gen.getChr(),gen.getStart(),gen.getEnd());
 		   return g1.overlaps(g2);
 		}
 	   else
@@ -1880,8 +1875,8 @@ public class Gene extends BasicAnnotation {
 	
 		
 	public boolean overlapsGeneInAnyOrientation(Gene otherGene) {
-		   Alignments g1 =new Alignments(this.getChr(),this.getStart(),this.getEnd());
-		   Alignments g2 =new Alignments(otherGene.getChr(),otherGene.getStart(),otherGene.getEnd());
+		   BasicAnnotation g1 =new BasicAnnotation(this.getChr(),this.getStart(),this.getEnd());
+		   BasicAnnotation g2 =new BasicAnnotation(otherGene.getChr(),otherGene.getStart(),otherGene.getEnd());
 		   return g1.overlaps(g2);
 	}
 	
@@ -2111,8 +2106,8 @@ public class Gene extends BasicAnnotation {
 	
 	public int numOfCompatibleIntrons(Gene g) {
 		int rtrn=0;
-		Alignments[] myIntrons= this.getIntronsBlocks();
-		Alignments[] gIntrons= g.getIntronsBlocks();
+		BasicAnnotation[] myIntrons= this.getIntronsBlocks();
+		BasicAnnotation[] gIntrons= g.getIntronsBlocks();
 		int myNan=-10;
 		int match=0;
 		int[]ix=new int[gIntrons.length];
@@ -2150,7 +2145,7 @@ public class Gene extends BasicAnnotation {
 	//TODO: MG Testing
 	//@return A RefSeqGene that represent the trimmed piece if the region overlaps any exonic regions
 	public GeneWindow trimAbsolute(int alignmentStart, int alignmentEnd) {
-		Annotation rtrn=this.intersect(new Alignments(this.getChr(), alignmentStart, alignmentEnd));
+		Annotation rtrn=this.intersect(new BasicAnnotation(this.getChr(), alignmentStart, alignmentEnd));
 		if (rtrn == null) return null;
 		
 		/*
@@ -2234,8 +2229,8 @@ public class Gene extends BasicAnnotation {
 	public Double percentGenomeOverlapping(Gene gene2) {
 		
 		if(!getChr().equalsIgnoreCase(gene2.getChr())){return 0.0;}
-		Alignments g1 = new Alignments(this.getChr(),this.getStart(),this.getEnd());
-		Alignments g2 = new Alignments(gene2.getChr(),gene2.getStart(),gene2.getEnd());
+		BasicAnnotation g1 = new BasicAnnotation(this.getChr(),this.getStart(),this.getEnd());
+		BasicAnnotation g2 = new BasicAnnotation(gene2.getChr(),gene2.getStart(),gene2.getEnd());
 		int overlap=getOverlap(g1, g2);
 		return (double)overlap/this.getGenomicLength();
 		
@@ -2256,7 +2251,7 @@ public class Gene extends BasicAnnotation {
 	private Gene addConstantFactor(int factor){
 		Collection<Annotation> set=new TreeSet();
 		for(Annotation exon: this.getExonSet()){
-			Alignments abs=new Alignments(exon.getChr(), exon.getStart()+factor, exon.getEnd()+factor);
+			BasicAnnotation abs=new BasicAnnotation(exon.getChr(), exon.getStart()+factor, exon.getEnd()+factor);
 			set.add(abs);
 		}
 		return new Gene(set, getName(), getOrientation(), getCDSStart(), getCDSEnd());
@@ -2388,12 +2383,12 @@ public class Gene extends BasicAnnotation {
 		TreeSet<Annotation> combinedExons = new TreeSet<Annotation>();
 		combinedExons.addAll(getExonSet());
 		combinedExons.addAll(other.getExonSet());
-		List<Annotation> mergedExons = BasicLightweightAnnotation.stitchList(combinedExons, 0);
+		//List<Annotation> mergedExons = BasicLightweightAnnotation.stitchList(combinedExons, 0);
+		List<Annotation> mergedExons = BasicAnnotation.stitchList(combinedExons, 0);
 		Gene union = new Gene(mergedExons);
 		union.setName(getName());
 		union.setOrientation(getOrientation());
 		return union;
-		
 	}
 
 	public double getPercentCDS() {
@@ -2527,7 +2522,7 @@ public class Gene extends BasicAnnotation {
 		for(int i=0; i<exonStarts.length; i++){
 			exonStart[i]=new Integer(exonStarts[i].toString());
 			exonEnd[i]=exonStart[i]+new Integer(exonSizes[i].toString());
-			exons.add(new Alignments(chr, exonStart[i], exonEnd[i], orientation, name));
+			exons.add(new BasicAnnotation(chr, exonStart[i], exonEnd[i], orientation, name));
 		}
 		
 		Sequence seq=new Sequence(name);

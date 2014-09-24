@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
@@ -21,8 +22,8 @@ import net.sf.samtools.CigarOperator;
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.TextCigarCodec;
 import umms.core.general.TabbedReader;
-
 import broad.pda.datastructures.Alignments;
+import umms.core.annotation.Annotation;
 import broad.core.error.ParseException;
 
 
@@ -655,7 +656,33 @@ public class BasicAnnotation extends AbstractAnnotation implements java.io.Seria
 		}
 		return rtrn;
 	}
+	
+	
+	/* EXTRACTED FROM BROAD BasicLightweightAnnotation */
+	public static List<Annotation> stitchList(Collection<? extends Annotation> sortedList, int maxDistanceToStitch) {
 
+		Stack<Annotation> result = new Stack<Annotation>();
+
+		if(sortedList.size() == 0 ) {
+			return result;
+		}
+		
+		Iterator<? extends Annotation> it = sortedList.iterator();
+		result.push(it.next());
+		while(it.hasNext()) {
+			Annotation next = it.next();
+			Annotation curr = result.pop();
+			if(curr.overlaps(next,maxDistanceToStitch)) {
+				curr.stitchTo(next);
+				curr.setName(curr.getName()+"-"+next.getName());
+				result.push(curr);
+			} else {
+				result.push(curr);
+				result.push(next);
+			}
+		}	
+		return result;
+	}
 
 	public static void main(String[] args)throws IOException{
 		
