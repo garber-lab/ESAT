@@ -160,14 +160,14 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		int gStart = gene.getStart();
     		if ((gStart-extend)<0) {
     			localExtend = gStart;     // limit extension to the beginning of the chromosome/segment
-    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases");
+    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases (before beginning of )"+chr+")");
     		}
     	} else {
     		int gEnd = gene.getEnd();
     		int segEnd = getChrLength(chr);
     		if (((gEnd+extend)-1)>segEnd) {
     			localExtend = segEnd-gEnd;   // limit extension to the end of the chromosome/segment
-    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases");
+    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases (after end of "+chr+")");
     		}
     	}
     	
@@ -230,45 +230,55 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		testExonEnd = gene.getFirstExon().getStart();
     		testExonStart = testExonEnd-localExtend;
     		if (iTree_rev.numOverlappers(testExonStart, testExonEnd)>0) {
-    			//logger.warn(localExtend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(testExonStart, testExonEnd)+
-    			//		" overlaps (rev) between "+testExonStart+":"+testExonEnd);
-    			//Iterator<String> oLapIter = iTree_rev.overlappingValueIterator(testExonStart, testExonEnd);
+    			// find maximum overlapping nearby genes
     			Iterator<Node<String>> oLapIter = iTree_rev.overlappers(testExonStart, testExonEnd);
     			int oMax = 0;
+    			String oNames = null;
     			while (oLapIter.hasNext()) {
     				Node<String> iName = oLapIter.next();
-    				//logger.warn("   "+iName.getValue()+" "+iName.getStart()+":"+iName.getEnd());
+    				// save the names of the overlapping genes:
+    				if (oNames==null) {
+    					oNames=iName.getValue();
+    				} else {
+    					oNames+=","+iName.getValue();
+    				}
+    				// find maximum overlap:
     				if (iName.getEnd()>oMax) {
     					oMax = iName.getEnd();
     				}
     			}
     			localExtend = Math.max(0,testExonEnd-oMax);
+    			//logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(testExonStart, testExonEnd)+
+    			//		" overlaps (rev) between "+testExonStart+":"+testExonEnd+" (max at "+oMax+"). extension reduced to "+localExtend+" bases. ("+oNames+")");
     			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(testExonStart, testExonEnd)+
-    					" overlaps (rev) between "+testExonStart+":"+testExonEnd+" (max at "+oMax+"). extension reduced to "+localExtend+" bases.");
+    					" overlaps (rev). Extension reduced to "+localExtend+" bases. ("+oNames+")");
     		}
     	} else {
     		testExonStart = eEnd;            // Since the coordinate system is 0-based, exclusive, eEnd points to the first base AFTER the end of the last exon
     		testExonEnd = testExonStart+localExtend;     // exclusive index of the end of the extended segment
     		if (iTree_fwd.numOverlappers(testExonStart, testExonEnd)>0) {
-//    			logger.warn(localExtend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(testExonStart, testExonEnd)+
-//    					" overlaps (fwd) between "+testExonStart+":"+testExonEnd);
-//    			Iterator<String> oLapIter = iTree_fwd.overlappingValueIterator(testExonStart, testExonEnd);
-//    			while (oLapIter.hasNext()) {
-//    				
-//    				logger.warn("   "+oLapIter.next());
-//    			}
+    			// find maximum overlapping nearby genes
     			Iterator<Node<String>> oLapIter = iTree_fwd.overlappers(testExonStart, testExonEnd);
     			int oMin = Integer.MAX_VALUE;   // initialize to max integer value
+    			String oNames = null;
     			while (oLapIter.hasNext()) {
     				Node<String> iName = oLapIter.next();
-    				//logger.warn("   "+iName.getValue()+" "+iName.getStart()+":"+iName.getEnd());
+    				// save the names of the overlapping genes:
+    				if (oNames==null) {
+    					oNames=iName.getValue();
+    				} else {
+    					oNames+=","+iName.getValue();
+    				}
+    				// find maximum overlap:
     				if (iName.getEnd()<oMin) {
     					oMin = iName.getStart();
     				}
     			}
     			localExtend = Math.max(0,oMin-testExonStart);
+    			//logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(testExonStart, testExonEnd)+
+    			//		" overlaps (fwd) between "+testExonStart+":"+testExonEnd+" (min at "+oMin+"). extension reduced to "+localExtend+" bases. ("+oNames+")");
     			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(testExonStart, testExonEnd)+
-    					" overlaps (fwd) between "+testExonStart+":"+testExonEnd+" (min at "+oMin+"). extension reduced to "+localExtend+" bases.");
+    					" overlaps (fwd). Extension reduced to "+localExtend+" bases. ("+oNames+")");
        			
     		}
     	}

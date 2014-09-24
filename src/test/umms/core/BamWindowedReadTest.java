@@ -5,23 +5,18 @@ import umms.esat.Window;
 import java.io.IOException;
 import java.text.ParseException;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.NoSuchElementException;
@@ -40,7 +35,6 @@ import net.sf.samtools.SAMFileReader.ValidationStringency;
 import umms.esat.SAMSequenceCountingDict;
 import umms.esat.SAMSequenceCountingDictShort;
 import umms.esat.SAMSequenceCountingDictFloat;
-import umms.core.annotation.Annotation;
 import umms.core.readers.MappingTableReader;
 
 public class BamWindowedReadTest {
@@ -56,7 +50,7 @@ public class BamWindowedReadTest {
 			"\n\t-wellBC <n> well barcode length [default=6]"+
 			"\n\t-UMI <m> UMI length [default=10]";
 	
-	private static HashMap<String,ArrayList> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
+	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
 	private static File bamFile;
 	private static File outFile;
 	private static String annotationFile;
@@ -77,8 +71,6 @@ public class BamWindowedReadTest {
 	
 	public BamWindowedReadTest(String[] args) throws IOException, ParseException {
 	
-		final MappingTableReader mapFile;
-				
 		/*
 		 * @param for ArgumentMap - size, usage, default task
 		 * argMap maps the command line arguments to the respective parameters
@@ -107,106 +99,9 @@ public class BamWindowedReadTest {
 		boolean firstFile = true;      // only read the header from the first alignment file
 		
 		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
-		/* THIS SHOULD BE A SEPARATE METHOD */
 		if (gMapping) {
-			long startGmapTime = System.nanoTime();    // load timer
-			// open the gene mapping file
-			mapFile = new MappingTableReader(gMapFile);
-			// make sure it has the mandatory columns:
-			String[] reqFields = {"name","chrom","strand","txStart","txEnd","exonStarts","exonEnds","name2"};
-			if (!mapFile.hasMandatoryFields(reqFields)) {
-				logger.error("Input mapping file "+gMapFile+" is missing required columns.");
-			}
-			// build gene-to-transcript map
-			geneTable = new Hashtable<String, Gene>();
-			boolean notDone = true;
-			// NOTE: "name" is the transcriptID, "name2" is the gene symbol
-			String[] cOrder = {"name2","chrom","txStart","txEnd","name","strand","exonStarts","exonEnds"};  
-			while (notDone) {
-				String[] mapData = mapFile.readOrderedFieldsFromLine(cOrder);
-				if (mapData.length==0) {
-					notDone=false;
-				} else {
-					// Use the following Gene constructor:
-					// Gene(String chr, int start, int end, String name, String orientation, List<Integer> exonsStart, List<Integer> exonsEnd)
-					List<Integer> eStarts = stringToIntList(mapData[6].split(","));
-					List<Integer> eEnds = stringToIntList(mapData[7].split(","));
-					Gene newGene = new Gene(mapData[1],Integer.parseInt(mapData[2]),Integer.parseInt(mapData[3]),mapData[4],mapData[5],eStarts,eEnds); 
-					String symbol = mapData[0];
-					if (!geneTable.containsKey(mapData[0])) {
-						// new gene symbol:
-						geneTable.put(symbol, newGene);
-					} else {
-						// add this transcript as an isoform, but only if this isoform is on the same chromosome as the first,
-						// as well as on the same strand:
-						Strand gStrand = geneTable.get(symbol).getStrand();
-						String gChrom = geneTable.get(symbol).getChr();
-						Strand iStrand = newGene.getStrand();
-						String iChrom = newGene.getChr();
-						if (gStrand.equals(iStrand) && gChrom.equals(iChrom)) {
-							geneTable.get(symbol).addIsoform(newGene);
-						} else {
-							logger.warn("New isoform mismatch for "+symbol+" ("+gChrom+gStrand+") with "+mapData[4]+" ("+iChrom+iStrand+")");
-						}
-					}
-				}
-			}
-			
-			long midGmapTime = System.nanoTime();    // end map loading, start isoform collapsing timer
-			// Collapse all multi-isoform genes down to a single exon set:
-			List<String> keySet = new ArrayList<String>(geneTable.keySet());    // since this loop modifies the Hashtable on the fly, it is necessary
-														// to extract the keySet first, rather then (String symbol:geneTable.keySet())
-			for (String symbol:keySet) {
-				Gene thisGene = geneTable.get(symbol);
-				Collection<Gene> isoforms = thisGene.getIsoforms();
-				if (isoforms.size()==1) {
-					//logger.info(symbol+" has only 1 isoform");
-					// Set the top-level gene name to the the gene symbol:
-					geneTable.get(symbol).setName(symbol);
-				} else {
-					//logger.info(symbol+" has "+isoforms.size()+" isoforms");
-					boolean firstIsoform = true;
-					Gene mergedGene = null;
-					// merge all isoforms
-					for (Gene iso:isoforms) {
-						if (firstIsoform) {
-							mergedGene = iso;
-							firstIsoform = false;
-						} else {
-							mergedGene = mergedGene.takeUnion(iso);
-						}
-					}
-					// Create a replacement gene where the top-level gene has the union of all exons of all 
-					// isoforms.
-					// NOTE:: doing it this way because there is no simple way to reset the exons of a gene.
-					//        It might be much faster if that method was available.
-					// The top-level gene name is the gene symbol, and all isoforms are named by their RefSeq ID (NM_, NR_, etc.)
-					// If a gene has a single isoform, the top-level gene and its isoform will be identical, except for the name.
-					// constructor: Gene(String chr, int start, int end, String name, String orientation, List<Integer> exonsStart, List<Integer> exonsEnd)
-					/* make the exon start/end lists */
-					BasicAnnotation[] exons = mergedGene.getExons();
-					List<Integer> exonStarts = new ArrayList<Integer>();
-					List<Integer> exonEnds = new ArrayList<Integer>();
-					for (BasicAnnotation exon:exons) {
-						exonStarts.add(exon.getStart());
-						exonEnds.add(exon.getEnd());
-					}
-					// create the new gene:
-					Gene newGene = new Gene(thisGene.getChr(),thisGene.getStart(),thisGene.getEnd(),symbol,thisGene.getStrand().toString(),exonStarts,exonEnds);
-					// add all of the isoforms:
-					for (Gene iso:isoforms) {
-						newGene.addIsoform(iso);
-					}
-					// replace the old gene with the new one:
-					geneTable.remove(symbol);
-					geneTable.put(symbol, newGene);
-				}
-			}
-			long endGmapTime = System.nanoTime();    // end isoform collapsing timer
-			logger.info("Loading the gene-to-isoform map took "+(midGmapTime-startGmapTime)/1e9+" sec.");
-			logger.info("           Collapsing the genes took "+(endGmapTime-midGmapTime)/1e9+" sec.");
+			geneTable = loadGeneTableFromFile(gMapFile);
 		}
-		/***********************************************************************************************/
 		
 		/* open the input alignments file */
 		for (String exp:bamFiles.keySet()) {
@@ -451,9 +346,9 @@ public class BamWindowedReadTest {
 			bamFiles = loadBamFileList(inputFileFile);
 		}
 		if (argMap.hasInputFile()) {
-			bamFiles = new HashMap<String, ArrayList>();
+			bamFiles = new HashMap<String, ArrayList<File>>();
 			// Set the default experiment name to "Exp1"
-			bamFiles.put("Exp1",new ArrayList());
+			bamFiles.put("Exp1",new ArrayList<File>());
 			bamFiles.get("Exp1").add(new File(argMap.getInput()));
 		}
 		outFile = new File(argMap.getOutput());
@@ -490,9 +385,9 @@ public class BamWindowedReadTest {
 		return true;   // default return value if all tests pass
 	}
 	
-	private static HashMap<String, ArrayList> loadBamFileList(String fileListFile) 
+	private static HashMap<String, ArrayList<File>> loadBamFileList(String fileListFile) 
 		throws IOException {
-		HashMap<String, ArrayList> expBamFiles = new HashMap<String, ArrayList>();
+		HashMap<String, ArrayList<File>> expBamFiles = new HashMap<String, ArrayList<File>>();
 		
 		BufferedReader br = new BufferedReader(new FileReader(fileListFile));
 		String s;
@@ -506,7 +401,7 @@ public class BamWindowedReadTest {
 			String exp = strSplit[0];
 			File expFile = new File(strSplit[1]);
 			if (!expBamFiles.containsKey(exp)) {
-				expBamFiles.put(exp, new ArrayList());
+				expBamFiles.put(exp, new ArrayList<File>());
 			}
 			expBamFiles.get(exp).add(expFile);
 		}		
@@ -533,5 +428,109 @@ public class BamWindowedReadTest {
 			annotations.get(chr).add(gTable.get(symbol));
 		}
 		return annotations;
+	}
+	
+	public Hashtable<String, Gene> loadGeneTableFromFile(File gMapFile) throws IOException {
+		
+		final MappingTableReader mapFile;
+		
+		long startGmapTime = System.nanoTime();    // load timer
+		// open the gene mapping file
+		mapFile = new MappingTableReader(gMapFile);
+		// make sure it has the mandatory columns:
+		String[] reqFields = {"name","chrom","strand","txStart","txEnd","exonStarts","exonEnds","name2"};
+		if (!mapFile.hasMandatoryFields(reqFields)) {
+			logger.error("Input mapping file "+gMapFile+" is missing required columns.");
+		}
+		// build gene-to-transcript map
+		geneTable = new Hashtable<String, Gene>();
+		boolean notDone = true;
+		// NOTE: "name" is the transcriptID, "name2" is the gene symbol
+		String[] cOrder = {"name2","chrom","txStart","txEnd","name","strand","exonStarts","exonEnds"};  
+		while (notDone) {
+			String[] mapData = mapFile.readOrderedFieldsFromLine(cOrder);
+			if (mapData.length==0) {
+				notDone=false;
+			} else {
+				// Use the following Gene constructor:
+				// Gene(String chr, int start, int end, String name, String orientation, List<Integer> exonsStart, List<Integer> exonsEnd)
+				List<Integer> eStarts = stringToIntList(mapData[6].split(","));
+				List<Integer> eEnds = stringToIntList(mapData[7].split(","));
+				Gene newGene = new Gene(mapData[1],Integer.parseInt(mapData[2]),Integer.parseInt(mapData[3]),mapData[4],mapData[5],eStarts,eEnds); 
+				String symbol = mapData[0];
+				if (!geneTable.containsKey(mapData[0])) {
+					// new gene symbol:
+					geneTable.put(symbol, newGene);
+				} else {
+					// add this transcript as an isoform, but only if this isoform is on the same chromosome as the first,
+					// as well as on the same strand:
+					Strand gStrand = geneTable.get(symbol).getStrand();
+					String gChrom = geneTable.get(symbol).getChr();
+					Strand iStrand = newGene.getStrand();
+					String iChrom = newGene.getChr();
+					if (gStrand.equals(iStrand) && gChrom.equals(iChrom)) {
+						geneTable.get(symbol).addIsoform(newGene);
+					} else {
+						logger.warn("New isoform mismatch for "+symbol+" ("+gChrom+gStrand+") with "+mapData[4]+" ("+iChrom+iStrand+")");
+					}
+				}
+			}
+		}
+		
+		long midGmapTime = System.nanoTime();    // end map loading, start isoform collapsing timer
+		// Collapse all multi-isoform genes down to a single exon set:
+		List<String> keySet = new ArrayList<String>(geneTable.keySet());    // since this loop modifies the Hashtable on the fly, it is necessary
+													// to extract the keySet first, rather then (String symbol:geneTable.keySet())
+		for (String symbol:keySet) {
+			Gene thisGene = geneTable.get(symbol);
+			Collection<Gene> isoforms = thisGene.getIsoforms();
+			if (isoforms.size()==1) {
+				//logger.info(symbol+" has only 1 isoform");
+				// Set the top-level gene name to the the gene symbol:
+				geneTable.get(symbol).setName(symbol);
+			} else {
+				//logger.info(symbol+" has "+isoforms.size()+" isoforms");
+				boolean firstIsoform = true;
+				Gene mergedGene = null;
+				// merge all isoforms
+				for (Gene iso:isoforms) {
+					if (firstIsoform) {
+						mergedGene = iso;
+						firstIsoform = false;
+					} else {
+						mergedGene = mergedGene.takeUnion(iso);
+					}
+				}
+				// Create a replacement gene where the top-level gene has the union of all exons of all 
+				// isoforms.
+				// NOTE:: doing it this way because there is no simple way to reset the exons of a gene.
+				//        It might be much faster if that method was available.
+				// The top-level gene name is the gene symbol, and all isoforms are named by their RefSeq ID (NM_, NR_, etc.)
+				// If a gene has a single isoform, the top-level gene and its isoform will be identical, except for the name.
+				// constructor: Gene(String chr, int start, int end, String name, String orientation, List<Integer> exonsStart, List<Integer> exonsEnd)
+				/* make the exon start/end lists */
+				BasicAnnotation[] exons = mergedGene.getExons();
+				List<Integer> exonStarts = new ArrayList<Integer>();
+				List<Integer> exonEnds = new ArrayList<Integer>();
+				for (BasicAnnotation exon:exons) {
+					exonStarts.add(exon.getStart());
+					exonEnds.add(exon.getEnd());
+				}
+				// create the new gene:
+				Gene newGene = new Gene(thisGene.getChr(),thisGene.getStart(),thisGene.getEnd(),symbol,thisGene.getStrand().toString(),exonStarts,exonEnds);
+				// add all of the isoforms:
+				for (Gene iso:isoforms) {
+					newGene.addIsoform(iso);
+				}
+				// replace the old gene with the new one:
+				geneTable.remove(symbol);
+				geneTable.put(symbol, newGene);
+			}
+		}
+		long endGmapTime = System.nanoTime();    // end isoform collapsing timer
+		logger.info("Loading the gene-to-isoform map took "+(midGmapTime-startGmapTime)/1e9+" sec.");
+		logger.info("           Collapsing the genes took "+(endGmapTime-midGmapTime)/1e9+" sec.");
+
+		return geneTable;
 	}
 }
