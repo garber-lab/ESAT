@@ -7,17 +7,10 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
 import java.util.Iterator;
 
-import net.sf.samtools.SAMFileHeader;
-import net.sf.samtools.SAMFileReader;
 import net.sf.samtools.SAMRecord;
-import net.sf.samtools.SAMSequenceRecord;
 import net.sf.samtools.SAMSequenceDictionary;
-import net.sf.samtools.SAMFileReader.ValidationStringency;
-
-
 
 //import org.apache.commons.math3.util.MultidimensionalCounter.Iterator;
 import org.apache.log4j.Logger;
@@ -200,7 +193,6 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	eStart = 0;    // save the start position of the last exon
     	eEnd = 0;      // save the end position of the last exon
     	int eLen = eEnd-eStart; 
-    	Strand strand = gene.getStrand();
     	while (eIter.hasNext()) {
     		Annotation exon = eIter.next();    // get the exon
     		chr = exon.getChr();        // exon chromosome
@@ -374,17 +366,15 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	 * @param	overlap	as the window slides, the overlap of each window with the previous one
     	 * @param	extend	number of bases past the last exon to extend the counting
     	 */
-    	HashMap<String,HashMap<String,LinkedList<Window>>> countsMap = new HashMap();   // countsMap[chr][transID][Window]
+    	HashMap<String,HashMap<String,LinkedList<Window>>> countsMap = new HashMap<String,HashMap<String,LinkedList<Window>>>();   // countsMap[chr][transID][Window]
     	LinkedList<Window> eCount;  
     	
     	// Iterate over all "chromosomes":
     	for(String chr:annotations.keySet()){
-			// Iterate over all transcripts:
-    		Collection<Gene> aSet = annotations.get(chr);
-    		
     		/* Build strand-specific IntervalTrees containing all exons for this segment */
     		IntervalTree<String> iTree_fwd = new IntervalTree<String>();   // forward strand tree
     		IntervalTree<String> iTree_rev = new IntervalTree<String>();   // reverse strand tree
+			// Iterate over all transcripts:
     		for(Gene gene : annotations.get(chr)) {
 				Set eSet = gene.getExonSet();
 				String gName = gene.getName();   // gene/transcript name
@@ -406,6 +396,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 				}
     		}
 
+    		// Count windowed read starts over all genes:
     		for(Gene gene : annotations.get(chr)) {
     			String gName = gene.getName();
 				Set eSet = gene.getExonSet();
@@ -428,7 +419,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 				
 				// add this window set to the HashMap:
 				if (!countsMap.containsKey(chr)) {
-					countsMap.put(chr, new HashMap());           // add an entry in the main map for the chromosome/segment
+					countsMap.put(chr, new HashMap<String,LinkedList<Window>>());           // add an entry in the main map for the chromosome/segment
 				}
 				countsMap.get(chr).put(gName, eCount);       // add the counts windows to the hashmap
 			}	

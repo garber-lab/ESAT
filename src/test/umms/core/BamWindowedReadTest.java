@@ -84,6 +84,7 @@ public class BamWindowedReadTest {
 
 		/* Only create floating-point counters if multimap=="scale" */ 
 		if (multimap.equals("scale")) {
+			// multimapped read scaling is not implemented yet:
 			bamDict = new SAMSequenceCountingDictFloat();	
 		} else {
 			bamDict = new SAMSequenceCountingDictShort();
@@ -91,103 +92,16 @@ public class BamWindowedReadTest {
 
 		/* START TIMING */
 		long startTime = System.nanoTime();
-		int totalValidReadCount = 0;
-		int totalInvalidReadCount = 0;
-		int goodQualityCount = 0;
-		int badQualityCount = 0;
-		int bamFileCount = 0;
-		boolean firstFile = true;      // only read the header from the first alignment file
 		
 		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
 		if (gMapping) {
 			geneTable = loadGeneTableFromFile(gMapFile);
 		}
 		
-		/* open the input alignments file */
-		for (String exp:bamFiles.keySet()) {
-			
-			for (int i=0; i<bamFiles.get(exp).size(); i++){
-
-				long loopStartTime = System.nanoTime();    // loop timer
-			
-				// open the next bam file in the list:
-				bamFile = (File) bamFiles.get(exp).get(i);
-				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
-				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	
-				bamReader.setValidationStringency(ValidationStringency.STRICT);	
-				SAMRecordIterator bamIterator = bamReader.iterator();
-				logger.info("Processing file: "+bamFile+"...");
-
-				if (firstFile) {
-					// use the header information in the first bam file to create counts storage
-					SAMFileHeader bamHeader = bamReader.getFileHeader();
-					//bamDict = new SAMSequenceCountingDict_short();
-					
-					bamDict.setLogger(logger);
-					bamDict.copySequences(bamHeader.getSequenceDictionary());    // copy the sequence map from the original dictionary into the counting dict
-					firstFile = false;
-				}
-
-				/* read through the input file and increment the count for the start location of each read */
-				// NOTE: Baseline test - simply counting up the number of reads starting at each location for a full
-				//                       10M counts file takes ~30sec
-				int validReadCount = 0;
-				int invalidReadCount = 0;
-				while (bamIterator.hasNext()) {
-					try {
-						r = bamIterator.next();
-					} catch (SAMFormatException e) {
-						// skip SAM Format errors but log a warning:
-						logger.warn(e.getMessage());
-						continue;
-					}
-					// process the read:
-					if (!r.getReadUnmappedFlag()) {
-						// if quality filtering is turned on, skip low-quality reads:
-						if (qFilter==true) {
-							if (r.getMappingQuality()>qThresh){
-								goodQualityCount++;
-							} else {
-								badQualityCount++;
-								continue;
-							}
-						}
-						bamDict.updateCount(r);
-						// update the read start count
-						validReadCount++;
-					} else {
-						// Skip unmapped reads, but count them 
-						invalidReadCount++;
-					}
-				}
-
-				// close the bam file reader
-				bamReader.close();
-				bamFileCount++;
-				
-				// time the loop:
-				long loopEndTime = System.nanoTime();
-				logger.info("Experiment "+exp+" BAM file "+bamFile+" processed in "+(loopEndTime-loopStartTime)/1e9+" sec\n");
-				logger.info("  "+validReadCount+" valid reads\n");
-				logger.info("  "+invalidReadCount+" invalid reads");
-
-				// accumulate counts:
-				totalValidReadCount+=validReadCount;
-				totalInvalidReadCount+=invalidReadCount;
-			}
-		}
-		
-		long stopTime = System.nanoTime();
-		logger.info(bamFileCount+" BAM files processed in "+(stopTime-startTime)/1e9+" sec\n");
-		logger.info("  "+totalValidReadCount+" valid reads\n");
-		if (qFilter) {
-			//logger.info("     "+goodQualityCount+" reads pass the quality threshold\n");
-			logger.info("     "+badQualityCount+" reads fail the quality threshold\n");
-		}
-		logger.info("  "+totalInvalidReadCount+" invalid reads");
-		long startTime2 = System.nanoTime();
+		/* collect all read start location counts from the input alignments file(s) */
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh);
 	
-		/* open the input alignments file */
+		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
 		if (gMapping) {
 			// Create the annotations map, keyed by chromosome:
@@ -200,18 +114,8 @@ public class BamWindowedReadTest {
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
 
-		stopTime = System.nanoTime();
-		logger.info("Mapping reads to  "+bamFile+" took "+(stopTime-startTime2)/1e9+" sec\n");
-		
-		// for testing:
-//		for(String chr:annotations.keySet()){
-//			for(Gene gene : annotations.get(chr)) {
-//				logger.info(gene.getName()+": "+gene.getScore()+" read starts ("+gene.getNormalizedScore()+" normalized)");
-//			}	
-//		}
-
 		/* STOP AND REPORT TIMING */
-		stopTime = System.nanoTime();
+		long stopTime = System.nanoTime();
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
 
 		writeOutputESATFile(countsMap, annotations, outFile);
@@ -532,5 +436,102 @@ public class BamWindowedReadTest {
 		logger.info("           Collapsing the genes took "+(endGmapTime-midGmapTime)/1e9+" sec.");
 
 		return geneTable;
+	}
+	
+	public SAMSequenceCountingDict countReadStartsFromAlignments (SAMSequenceCountingDict bamDict, HashMap<String,ArrayList<File>> bamFiles,
+																	boolean qFilter, int qThresh) {
+		boolean firstFile = true;      // only read the header from the first alignment file
+		int goodQualityCount = 0;
+		int badQualityCount = 0;
+		int bamFileCount = 0;
+		int validReadCount = 0;
+		int invalidReadCount = 0;		
+		int totalValidReadCount = 0;
+		int totalInvalidReadCount = 0;
+		
+		// start file loading timer:
+		long startTime = System.nanoTime();
+
+		/* open the input alignments file */
+		for (String exp:bamFiles.keySet()) {
+			
+			for (int i=0; i<bamFiles.get(exp).size(); i++){
+
+				long loopStartTime = System.nanoTime();    // loop timer
+			
+				// open the next bam file in the list:
+				bamFile = (File) bamFiles.get(exp).get(i);
+				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
+				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	
+				bamReader.setValidationStringency(ValidationStringency.STRICT);	
+				SAMRecordIterator bamIterator = bamReader.iterator();
+				logger.info("Processing file: "+bamFile+"...");
+
+				if (firstFile) {
+					// use the header information in the first bam file to create counts storage
+					SAMFileHeader bamHeader = bamReader.getFileHeader();
+					//bamDict = new SAMSequenceCountingDict_short();
+					
+					bamDict.setLogger(logger);
+					bamDict.copySequences(bamHeader.getSequenceDictionary());    // copy the sequence map from the original dictionary into the counting dict
+					firstFile = false;
+				}
+
+				// process each read:
+				while (bamIterator.hasNext()) {
+					try {
+						r = bamIterator.next();
+					} catch (SAMFormatException e) {
+						// skip SAM Format errors but log a warning:
+						logger.warn(e.getMessage());
+						continue;
+					}
+					// process the read:
+					if (!r.getReadUnmappedFlag()) {
+						// if quality filtering is turned on, skip low-quality reads:
+						if (qFilter==true) {
+							if (r.getMappingQuality()>qThresh){
+								goodQualityCount++;
+							} else {
+								badQualityCount++;
+								continue;
+							}
+						}
+						bamDict.updateCount(r);
+						// update the read start count
+						validReadCount++;
+					} else {
+						// Skip unmapped reads, but count them 
+						invalidReadCount++;
+					}
+				}
+
+				// close the bam file reader
+				bamReader.close();
+				bamFileCount++;
+				
+				// time the loop:
+				long loopEndTime = System.nanoTime();
+				logger.info("Experiment "+exp+" BAM file "+bamFile+" processed in "+(loopEndTime-loopStartTime)/1e9+" sec\n");
+				logger.info("  "+validReadCount+" valid reads\n");
+				logger.info("  "+invalidReadCount+" invalid reads");
+
+				// accumulate counts:
+				totalValidReadCount+=validReadCount;
+				totalInvalidReadCount+=invalidReadCount;
+			}
+		}
+		
+		long stopTime = System.nanoTime();
+		logger.info(bamFileCount+" BAM files processed in "+(stopTime-startTime)/1e9+" sec\n");
+		logger.info("  "+totalValidReadCount+" valid reads\n");
+		if (qFilter) {
+			//logger.info("     "+goodQualityCount+" reads pass the quality threshold\n");
+			logger.info("     "+badQualityCount+" reads fail the quality threshold\n");
+		}
+		logger.info("  "+totalInvalidReadCount+" invalid reads");
+		
+		// Return the updated counts dictionary:
+		return bamDict;
 	}
 }
