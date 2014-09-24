@@ -36,6 +36,7 @@ import umms.esat.SAMSequenceCountingDict;
 import umms.esat.SAMSequenceCountingDictShort;
 import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
+//import umms.core.utils.ESATUtils;
 
 public class BamWindowedReadTest {
 	
@@ -51,11 +52,9 @@ public class BamWindowedReadTest {
 			"\n\t-UMI <m> UMI length [default=10]";
 	
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
-	private static File bamFile;
 	private static File outFile;
 	private static String annotationFile;
 	static Logger logger = Logger.getLogger(BamReadTest.class.getName());
-	private static SAMRecord r;
 	private static int windowLength;
 	private static int windowOverlap;
 	private static int windowExtend;
@@ -95,17 +94,17 @@ public class BamWindowedReadTest {
 		
 		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
 		if (gMapping) {
-			geneTable = loadGeneTableFromFile(gMapFile);
+			geneTable = loadGeneTableFromFile(gMapFile);       // ?????
 		}
 		
 		/* collect all read start location counts from the input alignments file(s) */
-		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh);
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh);   // ?????
 	
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
 		if (gMapping) {
 			// Create the annotations map, keyed by chromosome:
-			annotations = geneMapToAnnotations(geneTable);
+			annotations = geneMapToAnnotations(geneTable);    // ?????
 		} else {
 			// load the annotations from the annotation (BED) file:
 			annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
@@ -113,12 +112,15 @@ public class BamWindowedReadTest {
 		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
+		
+		/* remove all windows with zero counts across all experiments */
+		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = makeExperimentWindowCounter(countsMap);
 
 		/* STOP AND REPORT TIMING */
 		long stopTime = System.nanoTime();
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
 
-		writeOutputESATFile(countsMap, annotations, outFile);
+		writeOutputESATFile(countsMap, annotations, outFile);   // ?????
 		
 	}
 	
@@ -126,81 +128,6 @@ public class BamWindowedReadTest {
 		new BamWindowedReadTest(args);
 	}
 	
-	public static void writeOutputBEDFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, File outFile, boolean collapseGenes) throws IOException {
-		// Open the output file:
-		FileWriter writer = new FileWriter(outFile);
-
-		/* write the data in bedGraph format */
-		// Header line:
-		writer.write("track type=bedGraph name=\"BedGraph Format\" description=\"BedGraph format\" visibility=full color=200,100,0 altColor=0,100,200 priority=20\n");
-		for (String chr:countsMap.keySet()) {
-			for (String gene:countsMap.get(chr).keySet()) {
-				ListIterator<Window> wIter = countsMap.get(chr).get(gene).listIterator();
-				while (wIter.hasNext()) {
-					try {
-						Window w = wIter.next();
-						// bedGraph format: chr\tstart\tend\tvalue:
-						String oStr = chr+"\t"+w.getStart()+"\t"+w.getEnd()+"\t"+w.getCount()+"\n";
-						writer.write(oStr);
-					} catch (NoSuchElementException e) {
-						logger.error("NoSuchElementException for "+gene);
-					}
-				}	
-			}
-		}
-		writer.flush();
-		writer.close();
-	}
-
-	public static void writeOutputESATFile(HashMap<String,HashMap<String, 
-						LinkedList<Window>>> countsMap, 
-						Map<String, Collection<Gene>> annotations, File outFile) throws IOException {
-
-		// Open the output file:
-		FileWriter writer = new FileWriter(outFile);
-
-		/* write the data in ESAT format */
-		// Header line:
-		writer.write("Symbol\ttranscriptIDs\tcounts\n");
-		
-		for (String chr:annotations.keySet()) {
-			Iterator<Gene> gIter = annotations.get(chr).iterator();
-			while (gIter.hasNext()) {
-				Gene thisGene = gIter.next();
-				// Gene symbol:
-				String symbol = thisGene.getName();
-				// Isoforms:
-				Collection<Gene> isoforms = thisGene.getIsoforms();
-				Iterator<Gene> iIter = isoforms.iterator();
-				String iStr = null;         // build the list of isoforms
-				while (iIter.hasNext()){
-					Gene iso = iIter.next();
-					if (iStr==null) {
-						iStr = iso.getName();
-					} else {
-						if (!iso.getName().equals(symbol)) {
-							iStr += ","+iso.getName();
-						}
-					}
-				}
-				// Window counts:
-				if (!(countsMap.containsKey(chr) && countsMap.get(chr).containsKey(symbol))) {
-					logger.info("No alignments for "+symbol+" ("+chr+")");
-					continue;
-				}
-				Iterator<Window> wIter = countsMap.get(chr).get(symbol).iterator();
-				float totalCounts = 0;
-				while (wIter.hasNext()) {
-					Window w = wIter.next();
-					totalCounts+=w.getCount();
-				}
-				// write the line to the output file:
-				writer.write(symbol+"\t"+iStr+"\t"+totalCounts+"\n");
-			}
-		}
-		writer.flush();
-		writer.close();
-	}
 
 	private static boolean validateArguments(ArgumentMap argMap) throws IOException {
 		/* Validates the input arguments to ensure that all parameters are consistent and
@@ -247,7 +174,7 @@ public class BamWindowedReadTest {
 			// each file as: <experimentID>\t<input BAM file>
 			// fill the File array with the list of input files
 			String inputFileFile = argMap.get("alignments");
-			bamFiles = loadBamFileList(inputFileFile);
+			bamFiles = loadBamFileList(inputFileFile);    // ?????
 		}
 		if (argMap.hasInputFile()) {
 			bamFiles = new HashMap<String, ArrayList<File>>();
@@ -288,8 +215,87 @@ public class BamWindowedReadTest {
 	
 		return true;   // default return value if all tests pass
 	}
+
+	/*******************************************************************************************************/
+	/****** Methods pulled out of ESATUtils.java ***********************************************************/
+	/*******************************************************************************************************/
+	public static void writeOutputBEDFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, File outFile, boolean collapseGenes) throws IOException {
+		// Open the output file:
+		FileWriter writer = new FileWriter(outFile);
+
+		/* write the data in bedGraph format */
+		// Header line:
+		writer.write("track type=bedGraph name=\"BedGraph Format\" description=\"BedGraph format\" visibility=full color=200,100,0 altColor=0,100,200 priority=20\n");
+		for (String chr:countsMap.keySet()) {
+			for (String gene:countsMap.get(chr).keySet()) {
+				ListIterator<Window> wIter = countsMap.get(chr).get(gene).listIterator();
+				while (wIter.hasNext()) {
+					try {
+						Window w = wIter.next();
+						// bedGraph format: chr\tstart\tend\tvalue:
+						String oStr = chr+"\t"+w.getStart()+"\t"+w.getEnd()+"\t"+w.getCount()+"\n";
+						writer.write(oStr);
+					} catch (NoSuchElementException e) {
+						logger.error("NoSuchElementException for "+gene);
+					}
+				}	
+			}
+		}
+		writer.flush();
+		writer.close();
+	}
+
+	public static void writeOutputESATFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, 
+			Map<String, Collection<Gene>> annotations, 
+			File outFile) throws IOException {
+
+		// Open the output file:
+		FileWriter writer = new FileWriter(outFile);
+
+		/* write the data in ESAT format */
+		// Header line:
+		writer.write("Symbol\ttranscriptIDs\tcounts\n");
+
+		for (String chr:annotations.keySet()) {
+			Iterator<Gene> gIter = annotations.get(chr).iterator();
+			while (gIter.hasNext()) {
+				Gene thisGene = gIter.next();
+				// Gene symbol:
+				String symbol = thisGene.getName();
+				// Isoforms:
+				Collection<Gene> isoforms = thisGene.getIsoforms();
+				Iterator<Gene> iIter = isoforms.iterator();
+				String iStr = null;         // build the list of isoforms
+				while (iIter.hasNext()){
+					Gene iso = iIter.next();
+					if (iStr==null) {
+						iStr = iso.getName();
+					} else {
+						if (!iso.getName().equals(symbol)) {
+							iStr += ","+iso.getName();
+						}
+					}
+				}
+				// Window counts:
+				if (!(countsMap.containsKey(chr) && countsMap.get(chr).containsKey(symbol))) {
+					logger.info("No alignments for "+symbol+" ("+chr+")");
+					continue;
+				}
+				Iterator<Window> wIter = countsMap.get(chr).get(symbol).iterator();
+				float totalCounts = 0;
+				while (wIter.hasNext()) {
+					Window w = wIter.next();
+					totalCounts+=w.getCount();
+				}
+				// write the line to the output file:
+				writer.write(symbol+"\t"+iStr+"\t"+totalCounts+"\n");
+			}
+		}
+		writer.flush();
+		writer.close();
+	}
 	
-	private static HashMap<String, ArrayList<File>> loadBamFileList(String fileListFile) 
+	public static HashMap<String, ArrayList<File>> loadBamFileList(String fileListFile) 
 		throws IOException {
 		HashMap<String, ArrayList<File>> expBamFiles = new HashMap<String, ArrayList<File>>();
 		
@@ -313,7 +319,7 @@ public class BamWindowedReadTest {
 		return expBamFiles;
 	}
 
-	private List<Integer> stringToIntList(String[] vals) {
+	private static List<Integer> stringToIntList(String[] vals) {
 		List<Integer> outList = new ArrayList<Integer>();
 		for (int i=0;i<vals.length;i++) {
 			outList.add(Integer.parseInt(vals[i]));
@@ -322,7 +328,7 @@ public class BamWindowedReadTest {
 		
 	}
 	
-	private Map<String, Collection<Gene>> geneMapToAnnotations(Hashtable<String, Gene>gTable) {
+	public static Map<String, Collection<Gene>> geneMapToAnnotations(Hashtable<String, Gene>gTable) {
 		Map<String, Collection<Gene>> annotations = new TreeMap<String, Collection<Gene>>();
 		for (String symbol:gTable.keySet()) {
 			String chr = gTable.get(symbol).getChr();   // get the chromosome (used as annotation key)
@@ -334,7 +340,7 @@ public class BamWindowedReadTest {
 		return annotations;
 	}
 	
-	public Hashtable<String, Gene> loadGeneTableFromFile(File gMapFile) throws IOException {
+	public static Hashtable<String, Gene> loadGeneTableFromFile(File gMapFile) throws IOException {
 		
 		final MappingTableReader mapFile;
 		
@@ -347,7 +353,7 @@ public class BamWindowedReadTest {
 			logger.error("Input mapping file "+gMapFile+" is missing required columns.");
 		}
 		// build gene-to-transcript map
-		geneTable = new Hashtable<String, Gene>();
+		Hashtable<String, Gene> geneTable = new Hashtable<String, Gene>();
 		boolean notDone = true;
 		// NOTE: "name" is the transcriptID, "name2" is the gene symbol
 		String[] cOrder = {"name2","chrom","txStart","txEnd","name","strand","exonStarts","exonEnds"};  
@@ -448,6 +454,7 @@ public class BamWindowedReadTest {
 		int invalidReadCount = 0;		
 		int totalValidReadCount = 0;
 		int totalInvalidReadCount = 0;
+		SAMRecord r;		
 		
 		// start file loading timer:
 		long startTime = System.nanoTime();
@@ -460,7 +467,7 @@ public class BamWindowedReadTest {
 				long loopStartTime = System.nanoTime();    // loop timer
 			
 				// open the next bam file in the list:
-				bamFile = (File) bamFiles.get(exp).get(i);
+				File bamFile = (File) bamFiles.get(exp).get(i);
 				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
 				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	
 				bamReader.setValidationStringency(ValidationStringency.STRICT);	
@@ -533,5 +540,47 @@ public class BamWindowedReadTest {
 		
 		// Return the updated counts dictionary:
 		return bamDict;
+	}
+
+	public HashMap<String,HashMap<String,LinkedList<Window>>> makeExperimentWindowCounter(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap) {
+		// Actually, it builds a new counts map containing only Windows with non-zero counts:
+		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = new HashMap<String,HashMap<String,LinkedList<Window>>>();
+		
+		int inWindowCount = 0;
+		int outWindowCount = 0;
+		// Iterate over chromosomes:
+		for (String chr:countsMap.keySet()) {
+			// Iterate over genes:
+			for (String gene:countsMap.get(chr).keySet()) {
+				ListIterator<Window> wIter = countsMap.get(chr).get(gene).listIterator();
+				int listIdx = 0;
+				while (wIter.hasNext()) {
+					Window w = wIter.next();
+					inWindowCount++;
+					if (w.getCount()==0.0) {
+						// skip this Window
+						continue;
+					} else {
+						// add a new Window to the cleanCountsMap:
+						String wName = ""+listIdx;
+						listIdx++;  // increment the list index counter
+						Window wNew = new Window(w.getStrand(), chr, w.getStart(), w.getEnd(), wName);
+						if (!cleanCountsMap.containsKey(chr)) {
+							cleanCountsMap.put(chr, new HashMap<String, LinkedList<Window>>());
+						}
+						if (!cleanCountsMap.get(chr).containsKey(gene)) {
+							cleanCountsMap.get(chr).put(gene, new LinkedList<Window>());
+						}
+						cleanCountsMap.get(chr).get(gene).add(wNew);   // add the Window copy (with no counts)
+						outWindowCount++;
+					}
+				}
+			}
+		}
+		
+		logger.info("Total window count: "+inWindowCount);
+		logger.info("Non-zero window count: "+outWindowCount);
+		
+		return cleanCountsMap;
 	}
 }
