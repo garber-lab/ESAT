@@ -1,0 +1,86 @@
+
+<project name="ESAT" default="build" basedir=".">
+    
+    <!-- Properties--> 
+
+    
+    <!-- Source and lib directories -->
+    <property name="src.dir"       value="${basedir}/src/" />
+    <property name="lib.dir"       value="${basedir}/lib/" />
+    
+    <!-- Distribution directory.  Binary distribution is placed here -->
+    <property name="dist.dir"      value="${basedir}/dist/" />
+	<!--<property name="dist.dir"      value="/Volumes/seq_mgarber/" />-->
+	<property name="build.dir"	value="${basedir}/build/"/>
+    
+    <!-- build specific properties. These are normally set by Hudson during the build process -->
+    <property name="version"       value="v0.1" />
+	
+	<!-- All jar files in lib file -->
+	<path id="master-classpath">
+      <fileset dir="${lib.dir}">
+        <include name="*.jar"/>
+      </fileset>
+    </path>
+
+     
+    <target name="init" >
+ 
+        
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+
+        <tstamp>
+            <format property="timestamp" pattern="MM.dd.yy_kk.mm" />
+        </tstamp>
+        <property name="jar.name"      value="esat.${version}_${timestamp}.jar" /> 
+        <property name="jar.path"      value="${dist.dir}${jar.name}" />
+        <echo message="Version ${version}"/>
+    	<echo message="jar to build: ${jar.name}"/>
+    </target>
+    
+    
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}"  debug="on" destdir="${build.dir}">
+
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+	
+	<target name="unpack" depends="init">
+	    <!-- Unzip jars to the tmp directory -->
+        <unzip dest="${build.dir}">
+            <patternset>
+                <include name="**/*"/>
+                <exclude name="META-INF/**"/>
+            </patternset>
+            <fileset dir="${lib.dir}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </unzip>
+	</target>
+	
+	<target name="copy.props" depends="init">
+		<copy todir="${build.dir}" file ="${src.dir}log4j.properties"/>
+	</target>
+    
+    
+    <!-- build the esat jar-->
+    <target name="build" depends="compile, unpack, copy.props">  
+        <jar destfile="${jar.path}" basedir="${build.dir}" compress="true">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}" />
+                <attribute name="Main-Class" value="umms.esat.NewESAT"/>
+            </manifest>
+        </jar>
+    </target>
+ 
+    <!-- Clean all generated artifacts -->    
+    <target name="clean">
+        <delete dir="${build.dir}" />
+        <delete dir="${dist.dir}" />
+    </target>
+    
+    <target name="all" depends="clean, build"/>
+    
+</project>

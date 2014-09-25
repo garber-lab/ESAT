@@ -19,13 +19,11 @@ import java.util.TreeSet;
 
 
 
+
 import broad.core.error.ParseException;
 import broad.core.math.MathUtil;
 import broad.core.math.Statistics;
 import broad.core.util.ParseGCTFile;
-import broad.pda.geneexpression.ExpressionExperimentInfo;
-
-
 import Jama.Matrix;
 
 public class MatrixWithHeaders {
