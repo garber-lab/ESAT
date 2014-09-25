@@ -1,5 +1,7 @@
 package umms.core.annotation;
 
+import broad.core.datastructures.IntervalTree;
+import broad.core.datastructures.IntervalTree.Node;
 import broad.core.parser.StringParser;
 
 import java.util.ArrayList;
@@ -15,17 +17,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import umms.core.feature.GeneWindow;
+import umms.core.sequence.Sequence;
 
 import org.apache.log4j.Logger;
 
-import broad.core.annotation.BasicGenomicAnnotation;
-import broad.core.annotation.BasicLightweightAnnotation;
-import broad.core.annotation.GFF;
-import broad.core.annotation.LightweightGenomicAnnotation;
-import broad.core.datastructures.IntervalTree;
-import broad.core.datastructures.IntervalTree.Node;
-import broad.core.sequence.Sequence;
-import broad.pda.rnai.ExtractSequence;
+
 
 public class Gene extends BasicAnnotation {
 
@@ -434,12 +430,6 @@ public class Gene extends BasicAnnotation {
 	
 	public void setCountScore(double score){this.countScore=score;}
 	
-	private String setN(int len){
-		String rtrn="";
-		for(int i=0; i<len; i++){rtrn+="N";}
-		return rtrn;
-	}
-	
 	public int getSize(){
 		return length();
 	}
@@ -461,11 +451,7 @@ public class Gene extends BasicAnnotation {
 		
 		return seq;
 	}
-	
-	public String getSequence(Sequence chr2, boolean repeatMask, boolean stranded) throws Exception {
-		return ExtractSequence.getSequenceForGene(this, chr2, repeatMask, new TreeMap(), stranded);
-	}
-	
+		
 	public Sequence getSequenceObject(){
 		Sequence seq=new Sequence(getName());
 		seq.setSequenceBases(this.sequence);
@@ -487,7 +473,7 @@ public class Gene extends BasicAnnotation {
 		return attributes == null || !attributes.containsKey(name) ? null : attributes.get(name);
 	}
 	
-	public Map getAttributes() { return attributes;} //TODO: Return a copy, attributes should not be modified outside of accessor methods.
+	public Map<String, String> getAttributes() { return attributes;} //TODO: Return a copy, attributes should not be modified outside of accessor methods.
 	
 	public String[] getExtraFields() {
 		if (this.extraFields!=null)
@@ -803,7 +789,7 @@ public class Gene extends BasicAnnotation {
 	}
 	
 	public IntervalTree<Annotation> getExonTree() {
-		IntervalTree<Annotation> rtrn=new IntervalTree();
+		IntervalTree<Annotation> rtrn=new IntervalTree<Annotation>();
 		
 		for(Annotation exon: this.getExonSet()){rtrn.put(exon.getStart(), exon.getEnd(), exon);}
 		
@@ -1017,7 +1003,7 @@ public class Gene extends BasicAnnotation {
 			align=new BasicAnnotation(getChr(), getEnd()-downstream, getEnd()+upstream);
 		}
 		align.setName(getName());
-		align.setOrientation(getOrientation().toString());
+		align.setOrientation(getOrientation());
 		return align;
 	}
 	
@@ -1039,7 +1025,7 @@ public class Gene extends BasicAnnotation {
 	
 	public double getBedScore(){return bedScore;}
 	
-	public int get3PrimeGenomicDistance(LightweightGenomicAnnotation annot) {
+	public int get3PrimeGenomicDistance(Annotation annot) {
 		
 		int res=0;
 		if (getOrientation() == Strand.NEGATIVE)
@@ -1058,7 +1044,6 @@ public class Gene extends BasicAnnotation {
 		Collection<Annotation> overlappingExons = new TreeSet<Annotation>();
 		for(Annotation exon: otherExons) {
 			Annotation exonClone = new BasicAnnotation(exon);
-			List<Annotation> tmp = exonClone.intersect(thisExons);
 			overlappingExons.addAll(exonClone.intersect(thisExons));
 		}
 		
@@ -1103,7 +1088,7 @@ public class Gene extends BasicAnnotation {
 	
 	//position of splice junction relative to full length sequence (0 index)
 	public ArrayList<Integer> getSpliceJunctionCoordinates()throws Exception{
-		ArrayList<Integer> coordinates=new ArrayList();
+		ArrayList<Integer> coordinates=new ArrayList<Integer>();
 		
 		Collection<? extends Annotation> exons=this.getExonSet();
 		
@@ -1121,7 +1106,7 @@ public class Gene extends BasicAnnotation {
 	
 	public IntervalTree<Integer> getSpliceJunctionCoordinatesTree() throws Exception {
 		ArrayList<Integer> junctions=getSpliceJunctionCoordinates();
-		IntervalTree<Integer> tree=new IntervalTree();
+		IntervalTree<Integer> tree=new IntervalTree<Integer>();
 		
 		for(Integer pos: junctions){
 			tree.put(pos, pos+1, pos);
@@ -1192,119 +1177,6 @@ public class Gene extends BasicAnnotation {
 	
 	public String toBEDwithBedScore(){
 		return toBED();
-	}
-		
-	public String toGTF(String source) {
-		return this.toGTF(source,this.getName(),getName() +".0");
-	
-	}
-	
-	public String toGTF(String source,String geneName ,String transcriptName) {
-		
-		StringBuilder rtrn;
-		rtrn = new StringBuilder();
-			Set<? extends Annotation> exons = getExonSet();
-			GFF transcriptGFF = new GFF(new Gene(getChr(), getStart(), getEnd(), getName()));
-			transcriptGFF.setFeature("transcript");
-			transcriptGFF.setSource(source);
-			transcriptGFF.setOrientation(this.getOrientation().toString());
-			transcriptGFF.addAttribute("gene_id", transcriptName);
-			if(attributes != null && !attributes.isEmpty()) {
-				for(String attr : attributes.keySet()) {
-					transcriptGFF.addAttribute(attr, String.valueOf(attributes.get(attr)));
-				}
-			}
-			//Add +1 when we print GFF as it is 1 based rather than 0 based
-			transcriptGFF.setStart(getStart());  // BUG FIX : MORAN AUG 17TH, ADD +1 ; 2nd bug fix - 11.29.10 only during print we add +1 to start pos
-			transcriptGFF.setEnd(getEnd()); //BUG FIX : MORAN AUG 17TH, END IS CORRECT AS GFF IS INCLUSIVE BUT ALSO USES 1 BASE CORRDINATES (WE USE 0 BASED)
-			transcriptGFF.setChromosome(getChr());
-			rtrn.append(transcriptGFF.toString(true));
-			rtrn.append("\n");
-			int i = 0;
-			for(Annotation exon : exons) {
-				GFF exonGFF = new GFF(exon);
-				exonGFF.setFeature("exon");
-				exonGFF.setSource(source);
-				exonGFF.setName(exon.getName());
-				exonGFF.addAttribute("gene_id", exon.getName());
-				exonGFF.addAttribute("transcript_id", transcriptName);
-				exonGFF.addAttribute("Parent",   transcriptName);
-				if(attributes != null && !attributes.isEmpty()) {
-					for(String attr : attributes.keySet()) {
-						exonGFF.addAttribute(attr, String.valueOf(attributes.get(attr)));
-					}
-				}
-				rtrn.append(exonGFF.toString(true));
-				rtrn.append("\n");
-			}
-	
-		return rtrn.toString();
-	}
-		
-	
-	
-	//MORAN: added GTF in cufflinks format without parent
-	//Note: To use the attributes transcript_id or gene_id  as is, set geneName and transcriptNme to empy strings
-	//else the name will be concatenated to the attributes values
-	public String toCufflinksGTF(String source,String geneName ,String transcriptName,String nonParsedAttrs){
-		StringBuilder rtrn = new StringBuilder();
-		Set<? extends Annotation> exons = getExonSet();
-		GFF transcriptGFF = new GFF(getName());
-		transcriptGFF.setSource(source);
-		transcriptGFF.setOrientation(this.getOrientation().toString());
-		transcriptGFF.setFeature("transcript");//As in version 1353 
-		
-		if ( nonParsedAttrs.isEmpty()){
-			transcriptGFF.clearAttribute("gene_id");
-			if (! geneName.isEmpty())
-				transcriptGFF.addAttribute("gene_id", geneName);//As in version 1353 to compile with cufflinks
-			transcriptGFF.clearAttribute("transcript_id");
-			if (! transcriptName.isEmpty())
-				transcriptGFF.addAttribute("transcript_id", transcriptName);//
-			if(attributes != null && !attributes.isEmpty()) {
-				for(String attr : attributes.keySet()) {
-					transcriptGFF.addAttribute(attr, String.valueOf(attributes.get(attr)));
-				}
-			}
-		}
-		else {
-			transcriptGFF.setAttributes(nonParsedAttrs);
-		}
-		//Add +1 when we print GFF as it is 1 based rather than 0 based
-		transcriptGFF.setStart(getStart());  //BUG FIX : MORAN AUG 17TH, ADD +1; 2nd bug fix - 11.29.10 only during print we add +1 to start pos
-		transcriptGFF.setEnd(getEnd()); //BUG FIX : MORAN AUG 17TH, END IS CORRECT AS GFF IS INCLUSIVE BUT ALSO USES 1 BASE CORRDINATES (WE USE 0 BASED)
-		transcriptGFF.setChromosome(getChr());
-		rtrn.append(transcriptGFF.toCufflinksString(true));
-		rtrn.append("\n");
-		
-		for(Annotation exon : exons) {
-			GFF exonGFF = new GFF(exon);
-			exonGFF.setFeature("exon");
-			exonGFF.setSource(source);
-			
-			if ( nonParsedAttrs.isEmpty()){
-				exonGFF.setName(exon.getName());
-				exonGFF.clearAttribute("gene_id");
-				if (! geneName.isEmpty())
-					exonGFF.addAttribute("gene_id", geneName); //As in version 1353 to compile with cufflinks
-				exonGFF.clearAttribute("transcript_id");
-				if (! transcriptName.isEmpty())
-					exonGFF.addAttribute("transcript_id", transcriptName);
-				//exonGFF.addAttribute("Parent",   transcriptName);
-				if(attributes != null && !attributes.isEmpty()) {
-					for(String attr : attributes.keySet()) {
-						exonGFF.addAttribute(attr, String.valueOf(attributes.get(attr)));
-					}
-				}
-			}
-			else
-				exonGFF.setAttributes(nonParsedAttrs);
-			
-			rtrn.append(exonGFF.toCufflinksString(true));
-			rtrn.append("\n");
-		}
-	
-		return rtrn.toString();
 	}
 	
 	//Fixed off by one error
@@ -1421,7 +1293,7 @@ public class Gene extends BasicAnnotation {
 			
 			//System.err.println("ORF genomic start end " + orfGenomicStart +"-" + orfGenomicEnd);
 			
-			LightweightGenomicAnnotation geneCDS = new BasicLightweightAnnotation(getChr(), orfGenomicStart, orfGenomicEnd);
+			Annotation geneCDS = new BasicAnnotation(getChr(), orfGenomicStart, orfGenomicEnd);
 			Set<Annotation> cdsExons = new TreeSet<Annotation>();
 			Set<? extends Annotation> exonSet = getExonSet();
 			for(Annotation e : exonSet) {
@@ -1525,7 +1397,7 @@ public class Gene extends BasicAnnotation {
 	 * Find start codons
 	 * @return collection of all start codon genomic coordinates
 	 */
-	public TreeSet<BasicLightweightAnnotation> findAllStartCodons() {
+	public TreeSet<Annotation> findAllStartCodons() {
 		Collection<int[]> orfs = findAllORFs(sequence);
 		String cdsOrientation = getOrientation().toString();
 		if(Strand.UNKNOWN.equals(getOrientation())) {
@@ -1533,12 +1405,12 @@ public class Gene extends BasicAnnotation {
 			return null;
 		}
 		
-		TreeSet<BasicLightweightAnnotation> rtrn = new TreeSet<BasicLightweightAnnotation>();
+		TreeSet<Annotation> rtrn = new TreeSet<Annotation>();
 		for(int[] orf: orfs){
 			int startCodonGenomicStart = "-".equals(cdsOrientation) ? mapToGenomic(orf[1]):  mapToGenomic(orf[0])  ; 
 			int startCodonGenomicEnd   = "-".equals(cdsOrientation) ? mapToGenomic(orf[1] + 2):  mapToGenomic(orf[0] + 2);
 			
-			BasicLightweightAnnotation startCodon = new BasicLightweightAnnotation(getChr(), startCodonGenomicStart, startCodonGenomicEnd);
+			Annotation startCodon = new BasicAnnotation(getChr(), startCodonGenomicStart, startCodonGenomicEnd);
 			rtrn.add(startCodon);
 			System.err.println("Found start codon at " + getChr() + " " + startCodonGenomicStart + "-" + startCodonGenomicEnd);
 		}
@@ -1677,20 +1549,11 @@ public class Gene extends BasicAnnotation {
 	public boolean overlapsExon(Annotation gen) {
 		Collection<? extends Annotation> exonSet=this.getExonSet();
 		for(Annotation align: exonSet){
-			if(align.overlaps(new BasicGenomicAnnotation(gen.getName(),gen.getChr(),gen.getStart(),gen.getEnd())) ) {return true;}
+			if(align.overlaps(new BasicAnnotation(gen.getChr(),gen.getStart(),gen.getEnd(), gen.getName())) ) {return true;}
 		}
 		return false;
 	}
 	
-	public boolean overlapsExon(LightweightGenomicAnnotation exon){
-		Collection<? extends Annotation> exonSet=this.getExonSet();
-		
-		for(Annotation align: exonSet){
-			if(align.overlaps(exon)){return true;}
-		}
-		
-		return false;
-	}
 	
 	/**
 	 * Whether an exon of this gene overlaps an exon of other gene and the two genes have the same orientation
@@ -1880,9 +1743,9 @@ public class Gene extends BasicAnnotation {
 		   return g1.overlaps(g2);
 	}
 	
-	public boolean overlaps2(LightweightGenomicAnnotation next){
+	public boolean overlaps2(Annotation next){
 		if(next==null){return false;}
-		if(!getChr().equals(next.getChromosome())){return false;}
+		if(!getChr().equals(next.getChr())){return false;}
 		if(next.getStart()>=getStart() && next.getStart()<=getEnd()){return true;}
 		if(next.getEnd()>=getStart() && next.getEnd()<=getEnd()){return true;}
 		return false;
@@ -2072,7 +1935,7 @@ public class Gene extends BasicAnnotation {
 		
 		//System.err.println("ORF genomic start end " + orfGenomicStart +"-" + orfGenomicEnd);
 		
-		LightweightGenomicAnnotation geneCDS = new BasicLightweightAnnotation(getChr(), orfGenomicStart, orfGenomicEnd);
+		Annotation geneCDS = new BasicAnnotation(getChr(), orfGenomicStart, orfGenomicEnd);
 		Set<Annotation> cdsExons = new TreeSet<Annotation>();
 		Set<? extends Annotation> exonSet = getExonSet();
 		for(Annotation e : exonSet) {

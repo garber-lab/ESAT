@@ -18,7 +18,7 @@ import umms.core.feature.GenomeWindow;
 import umms.core.feature.Window;
 import umms.core.annotation.*;
 import umms.core.utils.AnnotationUtils;
-import umms.core.writers.PairedEndWriter;
+
 
 /**
  * @author prussell
@@ -26,6 +26,13 @@ import umms.core.writers.PairedEndWriter;
  */
 public abstract class AbstractPairedEndAlignment extends BasicAnnotation implements Alignment,java.io.Serializable {
 
+	static public final String mateSequenceFlag="ms";
+	static public final String mateCigarFlag="mc";
+	//static final String mateEndFlag="me";
+	static public final String readStartFlag="rs";
+	//static final String readEndFlag="re";
+	static public final String readCigarFlag="rc";
+	static public final String mateLineFlag="mateLine";
 
     /**
 	 * 
@@ -491,10 +498,10 @@ public abstract class AbstractPairedEndAlignment extends BasicAnnotation impleme
 	public final SAMRecord toSAMRecord() {
 		SAMRecord record = firstMate.toSAMRecord();
 		
-		record.setAttribute(PairedEndWriter.readStartFlag, Integer.valueOf(firstMate.getSAMStart()));
-		record.setAttribute(PairedEndWriter.readCigarFlag, firstMate.getCigarString());
-		record.setAttribute(PairedEndWriter.mateSequenceFlag, secondMate.getReadSequence());
-		record.setAttribute(PairedEndWriter.mateCigarFlag, secondMate.getCigarString());
+		record.setAttribute(readStartFlag, Integer.valueOf(firstMate.getSAMStart()));
+		record.setAttribute(readCigarFlag, firstMate.getCigarString());
+		record.setAttribute(mateSequenceFlag, secondMate.getReadSequence());
+		record.setAttribute(mateCigarFlag, secondMate.getCigarString());
 		
 		record.setMateAlignmentStart(secondMate.getSAMStart());
 		// add by @zhuxp

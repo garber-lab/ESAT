@@ -60,6 +60,26 @@ public class BEDFileParser {
 		return nextLine.trim().length() > 0 && ! nextLine.startsWith("#") && !nextLine.startsWith("track") && !nextLine.startsWith("browser");
 	}
 
-    
+	public static Map<String, Integer> loadChrSizes(String file){
+		Map<String, Integer> rtrn=new TreeMap<String, Integer>();
+	
+		try{	
+			BufferedReader reader=new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+	
+	
+			String nextLine;
+			while ((nextLine = reader.readLine()) != null && (nextLine.trim().length() > 0)) {
+				String[] tokens=nextLine.split("\t| +");
+				//System.err.println(nextLine+" "+tokens.length);
+	
+				rtrn.put(tokens[0], new Integer(tokens[1]));
+			}
+	
+	
+			reader.close();
+		}catch(IOException ex){ex.printStackTrace();}
+		return rtrn;
+	
+	}
 
 }

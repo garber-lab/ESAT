@@ -7,20 +7,21 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeSet;
 import java.util.Random;
-
-import org.apache.log4j.Logger;
-
-import umms.core.annotation.*;
-import umms.core.annotation.filter.FullyContainedFilter;
-import umms.core.feature.GenomeWindow;
-import umms.core.feature.Window;
-import broad.core.annotation.ShortBEDReader;
-import broad.pda.annotation.BEDFileParser;
+import java.util.TreeSet;
 
 import org.apache.commons.collections15.Predicate;
 import org.apache.commons.collections15.iterators.FilterIterator;
+import org.apache.log4j.Logger;
+
+import umms.core.annotation.Annotation;
+import umms.core.annotation.AnnotationFileReader;
+import umms.core.annotation.AnnotationList;
+import umms.core.annotation.BEDFileParser;
+import umms.core.annotation.BasicAnnotation;
+import umms.core.annotation.Gene;
+import umms.core.feature.GenomeWindow;
+import umms.core.feature.Window;
 
 
 /**

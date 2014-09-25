@@ -3,16 +3,14 @@ package broad.core.util;
 import java.io.*;
 import java.util.*;
 
-import nextgen.core.annotation.Annotation;
-import nextgen.core.annotation.Gene;
-import nextgen.core.annotation.Annotation.Strand;
-
-import broad.core.annotation.BasicLightweightAnnotation;
-import broad.core.annotation.LightweightGenomicAnnotation;
+import umms.core.annotation.Annotation;
+import umms.core.annotation.Annotation.Strand;
+import umms.core.annotation.BEDFileParser;
+import umms.core.annotation.BasicAnnotation;
+import umms.core.annotation.Gene;
 import broad.core.datastructures.IntervalTree;
 import broad.core.datastructures.IntervalTree.Node;
-import broad.pda.annotation.BEDFileParser;
-import broad.pda.datastructures.Alignments;
+
 
 
 public class CollapseByIntersection {
@@ -21,10 +19,10 @@ public class CollapseByIntersection {
 	static int numOverlapGenes;
 	private static final int MAX_RECURSION = 50;
 	
-	public static Set<Annotation> collapseByIntersection(Collection<? extends Annotation> alignments, boolean intersection){
+	public static Set<Annotation> collapseByIntersection(Collection<? extends Annotation> BasicAnnotation, boolean intersection){
 		numOverlap=10; //just to start
 		
-		Set<Annotation> rtrn=new TreeSet<Annotation>(alignments);
+		Set<Annotation> rtrn=new TreeSet<Annotation>(BasicAnnotation);
 		
 		int i=0;
 		while(numOverlap>1){ //TODO: do not use a static variable for this. 
@@ -75,7 +73,7 @@ public class CollapseByIntersection {
 					overlappingIntrons.add(iter.next().getValue());
 				}
 				//Collections.sort(overlappingIntrons);
-				//TreeSet<Alignments> diff = new TreeSet<Alignments>();
+				//TreeSet<BasicAnnotation> diff = new TreeSet<BasicAnnotation>();
 				//getRecursiveDifference(exon, overlappingIntrons, rtrn, 1);
 				carveExon(exon, overlappingIntrons, decollapsedExons);
 				//rtrn.addAll(diff);				
@@ -92,8 +90,8 @@ public class CollapseByIntersection {
 			while(intronIter.hasNext() && keep) {
 				Annotation intron = intronIter.next().getValue();
 				if(exon.fullyContains(intron)) {
-					Alignments intronLeftPoint = new Alignments(intron.getChr(), intron.getStart()-1, intron.getStart());
-					Alignments intronRightPoint = new Alignments(intron.getChr(), intron.getEnd(), intron.getEnd()+1);						
+					BasicAnnotation intronLeftPoint = new BasicAnnotation(intron.getChr(), intron.getStart()-1, intron.getStart());
+					BasicAnnotation intronRightPoint = new BasicAnnotation(intron.getChr(), intron.getEnd(), intron.getEnd()+1);						
 					Iterator<Node<Annotation>> leftExons=exonTree.get(exon.getChr()).overlappers(intronLeftPoint.getStart(), intronLeftPoint.getEnd());
 					Iterator<Node<Annotation>> rightExons=exonTree.get(exon.getChr()).overlappers(intronRightPoint.getStart(), intronRightPoint.getEnd());
 					while(leftExons.hasNext() && keep) {
@@ -148,19 +146,19 @@ public class CollapseByIntersection {
 		if(overlappingIntrons.size() == 0 ) {
 			difference.add(exon);
 		} else {
-			TreeSet<LightweightGenomicAnnotation> intronLeftEnds = new TreeSet<LightweightGenomicAnnotation>();
-			TreeSet<LightweightGenomicAnnotation> intronRightEnds = new TreeSet<LightweightGenomicAnnotation>();
-			LightweightGenomicAnnotation enlargedExon = new BasicLightweightAnnotation(exon.getChr(), exon.getStart()-1,exon.getEnd()+1);
+			TreeSet<BasicAnnotation> intronLeftEnds = new TreeSet<BasicAnnotation>();
+			TreeSet<BasicAnnotation> intronRightEnds = new TreeSet<BasicAnnotation>();
+			BasicAnnotation enlargedExon = new BasicAnnotation(exon.getChr(), exon.getStart()-1,exon.getEnd()+1);
 		
 			for(Annotation intron : overlappingIntrons){
 				/*if(exon.fullyContained(intron)){
-					LightweightGenomicAnnotation leftEnd = new BasicLightweightAnnotation(intron.getChr(), intron.getStart()-1, intron.getStart());
-					LightweightGenomicAnnotation rightEnd = new BasicLightweightAnnotation(intron.getChr(), intron.getEnd(), intron.getEnd()+1);
+					BasicAnnotation leftEnd = new BasicAnnotation(intron.getChr(), intron.getStart()-1, intron.getStart());
+					BasicAnnotation rightEnd = new BasicAnnotation(intron.getChr(), intron.getEnd(), intron.getEnd()+1);
 					intronLeftEnds.add(leftEnd);
 					intronRightEnds.add(rightEnd);
 				} else {
-					LightweightGenomicAnnotation leftEnd = new BasicLightweightAnnotation(intron.getChr(), intron.getStart(), intron.getStart()+1);
-					LightweightGenomicAnnotation rightEnd = new BasicLightweightAnnotation(intron.getChr(), intron.getEnd() - 1, intron.getEnd());
+					BasicAnnotation leftEnd = new BasicAnnotation(intron.getChr(), intron.getStart(), intron.getStart()+1);
+					BasicAnnotation rightEnd = new BasicAnnotation(intron.getChr(), intron.getEnd() - 1, intron.getEnd());
 					if(enlargedExon.overlaps(leftEnd)) {
 						intronLeftEnds.add(leftEnd);
 					}
@@ -169,8 +167,8 @@ public class CollapseByIntersection {
 					} 
 				}*/
 				
-				LightweightGenomicAnnotation leftEnd = new BasicLightweightAnnotation(intron.getChr(), intron.getStart(), intron.getStart()+1);
-				LightweightGenomicAnnotation rightEnd = new BasicLightweightAnnotation(intron.getChr(), intron.getEnd() - 1, intron.getEnd());
+				BasicAnnotation leftEnd = new BasicAnnotation(intron.getChr(), intron.getStart(), intron.getStart()+1);
+				BasicAnnotation rightEnd = new BasicAnnotation(intron.getChr(), intron.getEnd() - 1, intron.getEnd());
 				if(enlargedExon.overlaps(leftEnd)) {
 					intronLeftEnds.add(leftEnd);
 				}
@@ -181,25 +179,25 @@ public class CollapseByIntersection {
 				
 			
 			if(intronRightEnds.isEmpty()) {
-				intronRightEnds.add(new BasicLightweightAnnotation(exon.getChr(), exon.getStart()-1, exon.getStart()));
+				intronRightEnds.add(new BasicAnnotation(exon.getChr(), exon.getStart()-1, exon.getStart()));
 			}
 			if(intronLeftEnds.isEmpty()) {
-				intronLeftEnds.add(new BasicLightweightAnnotation(exon.getChr(), exon.getEnd(), exon.getEnd()+1));
+				intronLeftEnds.add(new BasicAnnotation(exon.getChr(), exon.getEnd(), exon.getEnd()+1));
 			}
 
-			for(LightweightGenomicAnnotation re : intronRightEnds) {
-				for(LightweightGenomicAnnotation le : intronLeftEnds) {
+			for(BasicAnnotation re : intronRightEnds) {
+				for(BasicAnnotation le : intronLeftEnds) {
 					if(re.getEnd() < le.getStart()) {
-						Alignments carving = new Alignments(exon.getChr(), re.getEnd(),le.getStart());
+						Annotation carving = new BasicAnnotation(exon.getChr(), re.getEnd(),le.getStart());
 						difference.add(carving);
 					} else {
 						// carve out the middle of the exon
 						if(le.getEnd() > exon.getStart()) {
-							Alignments leftPiece = new Alignments (exon.getChr(), exon.getStart(), Math.min(exon.getEnd(),le.getStart()));//new Alignments (exon.getChr(), exon.getStart(), Math.min(exon.getEnd(),le.getEnd()+1));
+							BasicAnnotation leftPiece = new BasicAnnotation (exon.getChr(), exon.getStart(), Math.min(exon.getEnd(),le.getStart()));//new BasicAnnotation (exon.getChr(), exon.getStart(), Math.min(exon.getEnd(),le.getEnd()+1));
 							difference.add(leftPiece);
 						}
 						if(re.getStart() < exon.getEnd()) {
-							Alignments rightPiece = new Alignments (exon.getChr(), re.getEnd(), exon.getEnd());//new Alignments (exon.getChr(), re.getStart()+1, exon.getEnd());
+							BasicAnnotation rightPiece = new BasicAnnotation (exon.getChr(), re.getEnd(), exon.getEnd());//new BasicAnnotation (exon.getChr(), re.getStart()+1, exon.getEnd());
 							difference.add(rightPiece);
 						}
 					}
@@ -212,7 +210,7 @@ public class CollapseByIntersection {
 	}
 	
 	private static void getRecursiveDifference(Annotation exon, LinkedList<Annotation> overlappingIntrons, TreeSet<Annotation> difference, int recursionNum) {
-		//TreeSet<Alignments> rtrn = new TreeSet<Alignments>();
+		//TreeSet<BasicAnnotation> rtrn = new TreeSet<BasicAnnotation>();
 		//System.err.println("Recursion: " + recursionNum + ", Exon " + exon.toUCSC() + ", #introns: " + overlappingIntrons.size());
 		Annotation lastIntron = null;
 		if( difference.contains(exon)) {
@@ -332,17 +330,17 @@ public class CollapseByIntersection {
 	}
 	
 	
-	/*public static Set<Alignments> CollapseByUnion(Collection<Alignments> alignments){
+	/*public static Set<BasicAnnotation> CollapseByUnion(Collection<BasicAnnotation> BasicAnnotation){
 		
-		Collection<Alignments> accountedFor=new TreeSet();
+		Collection<BasicAnnotation> accountedFor=new TreeSet();
 		Set set=new TreeSet();
-		Map<String, IntervalTree> trees=makeIntervalTree(alignments);
+		Map<String, IntervalTree> trees=makeIntervalTree(BasicAnnotation);
 		//for each region get all overlappign and collapse by intersection
-		for(Alignments align: alignments){
+		for(BasicAnnotation align: BasicAnnotation){
 			if(!accountedFor.contains(align)){
-			Collection<Alignments> regions=getOverlappingAll(align, trees);
+			Collection<BasicAnnotation> regions=getOverlappingAll(align, trees);
 			accountedFor.addAll(regions);
-			Alignments collapsed=collapse(regions);
+			BasicAnnotation collapsed=collapse(regions);
 			if(collapsed.getSize()>0){set.add(collapsed);}
 			}
 		}
@@ -403,18 +401,18 @@ public class CollapseByIntersection {
 		return gene;
 	}
 	
-	private static Alignments trimExon(Alignments exon, Alignments intron){
+	private static BasicAnnotation trimExon(Annotation exon, Annotation intron){
 		//if exon starts at or after intron and ends at or before intron -> return null
 		if(intron.fullyContains(exon)){return null;}
 		
 		//if exon starts before intron
 		if(exon.getStart()<intron.getStart()){
-			return new Alignments(exon.getChr(), exon.getStart(), Math.min(exon.getEnd(), intron.getStart()));
+			return new BasicAnnotation(exon.getChr(), exon.getStart(), Math.min(exon.getEnd(), intron.getStart()));
 		}
 		
 		//if exon starts after intron
 		if(exon.getEnd()>intron.getEnd()){
-			return new Alignments (exon.getChr(), Math.max(exon.getStart(), intron.getEnd()), exon.getEnd());
+			return new BasicAnnotation (exon.getChr(), Math.max(exon.getStart(), intron.getEnd()), exon.getEnd());
 		}
 		
 		return null;
@@ -428,17 +426,17 @@ public class CollapseByIntersection {
 	}
 	
 	//can loop through everything in the overlapping list and get all of their overlaps as well
-	private static Collection<Alignments> getOverlappingAll(Alignments align, Map<String, IntervalTree> trees){
-		IntervalTree tree=trees.get(align.getChr());
+	private static Collection<Annotation> getOverlappingAll(Annotation align, Map<String, IntervalTree> trees){
+		IntervalTree<Annotation> tree=trees.get(align.getChr());
 		
-		Collection<Alignments> rtrn=new TreeSet();
+		Collection<Annotation> rtrn=new TreeSet<Annotation>();
 		
 		//go through and get overlapping
-		Iterator<Node<Alignments>> iter=tree.overlappers(align.getStart(), align.getEnd());
+		Iterator<Node<Annotation>> iter=tree.overlappers(align.getStart(), align.getEnd());
 		rtrn=addAll(rtrn, iter);
 		
 		while(iter.hasNext()){
-			Node<Alignments> node=iter.next();
+			Node<Annotation> node=iter.next();
 			Iterator overlappers=tree.overlappers(node.getStart(), node.getEnd());
 			rtrn=addAll(rtrn, overlappers);
 		}
@@ -446,8 +444,8 @@ public class CollapseByIntersection {
 		return rtrn;
 	}
 	
-	private static Collection<Alignments> addAll(Collection<Alignments> set, Iterator<Node<Alignments>> overlappers){
-		Collection<Alignments> rtrn=set;
+	private static Collection<Annotation> addAll(Collection<Annotation> set, Iterator<Node<Annotation>> overlappers){
+		Collection<Annotation> rtrn=set;
 		while(overlappers.hasNext()){
 			rtrn.add(overlappers.next().getValue());
 		}
@@ -463,11 +461,10 @@ public class CollapseByIntersection {
 	
 	
 	
-	private static Alignments collapse(Iterator<Node<Annotation>> iter, boolean intersection){
+	private static Annotation collapse(Iterator<Node<Annotation>> iter, boolean intersection){
 		int start=-1;
 		int end=Integer.MAX_VALUE;
 		String chr="";
-		Strand orientation=Strand.UNKNOWN;
 		
 		int i=0;
 		while(iter.hasNext()){
@@ -482,22 +479,21 @@ public class CollapseByIntersection {
 				end=Math.max(end,  align.getEnd());
 			}
 			chr=align.getChr();
-			orientation=align.getOrientation();
 			i++;
 		}
 		
 		numOverlap=Math.max(i, numOverlap); //TODO: This is not good. Why modify this class variable here? It makes it horribly non-thread safe for no reason.
-		Alignments align=new Alignments(chr, start, end);
+		Annotation align=new BasicAnnotation(chr, start, end);
 		return align;
 	}
 	
-	/*private static Alignments collapse(Collection<Alignments> set){
+	/*private static BasicAnnotation collapse(Collection<BasicAnnotation> set){
 		int start=-1;
 		int end=Integer.MAX_VALUE;
 		String chr="";
 		
 		int i=0;
-		for(Alignments align: set){
+		for(BasicAnnotation align: set){
 			if(i==0){start=align.getStart(); end=align.getEnd();}
 			start=Math.min(start, align.getStart());
 			end=Math.max(end,  align.getEnd());
@@ -506,7 +502,7 @@ public class CollapseByIntersection {
 		}
 		
 		numOverlap=Math.max(i, numOverlap);
-		Alignments align=new Alignments(chr, start, end);
+		BasicAnnotation align=new BasicAnnotation(chr, start, end);
 		return align;
 	}*/
 	
@@ -518,10 +514,10 @@ public class CollapseByIntersection {
 		writer.close();
 	}
 	
-	public static Map<String, IntervalTree<Annotation>> makeIntervalTree(Collection<? extends Annotation> alignments){
+	public static Map<String, IntervalTree<Annotation>> makeIntervalTree(Collection<? extends Annotation> BasicAnnotation){
 		Map<String, IntervalTree<Annotation>> rtrn=new TreeMap<String, IntervalTree<Annotation>> ();
 		
-		for(Annotation align: alignments){
+		for(Annotation align: BasicAnnotation){
 			IntervalTree<Annotation> tree=new IntervalTree<Annotation>();
 			String chr=align.getChr();
 			if(rtrn.containsKey(chr)){tree=rtrn.get(chr);}
@@ -535,10 +531,10 @@ public class CollapseByIntersection {
 	}
 	
 	
-	public static Map<String, IntervalTree<Gene>> makeIntervalTreeForGenes(Collection<Gene> alignments){
+	public static Map<String, IntervalTree<Gene>> makeIntervalTreeForGenes(Collection<Gene> BasicAnnotation){
 		Map<String, IntervalTree<Gene>> rtrn=new TreeMap<String, IntervalTree<Gene>>();
 		
-		for(Gene align: alignments){
+		for(Gene align: BasicAnnotation){
 			IntervalTree<Gene> tree=new IntervalTree<Gene>();
 			String chr=align.getChr();
 			if(rtrn.containsKey(chr)){tree=rtrn.get(chr);}
@@ -556,9 +552,9 @@ public class CollapseByIntersection {
 	
 
 	public static Collection<Annotation> CollapseGenesByIntersection(Collection<Gene> temp, boolean intersection) {
-		Collection<Annotation> alignments=convert(temp);
+		Collection<Annotation> BasicAnnotation=convert(temp);
 		
-		return collapseByIntersection(alignments, intersection);
+		return collapseByIntersection(BasicAnnotation, intersection);
 	}
 
 

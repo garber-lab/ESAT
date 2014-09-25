@@ -24,13 +24,13 @@ import java.util.NoSuchElementException;
 import org.apache.log4j.Logger;
 
 import umms.core.annotation.Annotation.Strand;
+import umms.core.annotation.BEDFileParser;
 import umms.core.annotation.BasicAnnotation;
 import umms.core.annotation.Gene;
 import umms.core.exception.RuntimeIOException;
 import broad.core.util.CLUtil;
 import broad.core.util.CLUtil.ArgumentMap;
 import broad.core.datastructures.IntervalTree;
-import broad.pda.annotation.BEDFileParser;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
 import umms.esat.SAMSequenceCountingDict;
@@ -43,7 +43,7 @@ import umms.core.readers.MappingTableReader;
 public class NewESAT {
 	
 	// This usage message needs to be updated to reflect the actual operation of NewESAT!!!
-	static final String usage = "Usage: BamReadTest <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
+	static final String usage = "Usage: ESAT <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
 			"\n\t-in <input bam file>: input bam file (sorting and indexing not required)" + 
 			"\n\t-out <output file name>"+
 			"\n\t-annotations <reference annotation file [BED file]>"+

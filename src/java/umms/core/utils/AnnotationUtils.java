@@ -10,10 +10,8 @@ import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
 
-import broad.pda.annotation.BEDFileParser;
-
-
 import umms.core.annotation.Annotation;
+import umms.core.annotation.BEDFileParser;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
 

@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import broad.core.sequence.FastaSequenceIO;
-import broad.core.sequence.Sequence;
-import broad.core.sequence.SequenceRegion;
+import umms.core.sequence.FastaSequenceIO;
+import umms.core.sequence.Sequence;
+import umms.core.sequence.SequenceRegion;
 import broad.core.util.CLUtil;
 import broad.core.util.CLUtil.ArgumentMap;
 

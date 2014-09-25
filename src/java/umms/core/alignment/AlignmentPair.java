@@ -6,8 +6,6 @@ import java.util.Collection;
 import org.apache.log4j.Logger;
 
 import net.sf.samtools.SAMRecord;
-import net.sf.samtools.SAMRecord.SAMTagAndValue;
-import umms.core.writers.PairedEndWriter;
 import broad.core.datastructures.Pair;
 
 /**

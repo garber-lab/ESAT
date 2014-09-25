@@ -125,6 +125,21 @@ public class CountScore extends WindowScore.AbstractWindowScore implements Compa
 				getAnnotation().length();
 	}
 	
+	/**
+	 * True iff count and annotation are equal
+	 * MG Sept 2014. Removed this method as it does not compile
+	 * TODO: REVISIT to see what this equivalence function does
+	 */
+	/*
+	@Override
+	public boolean equals(Object o) {
+		ScanStatisticScore otherScore = (ScanStatisticScore) o;
+		if(count != otherScore.getCount()) return false;
+		if(!getAnnotation().equals(otherScore.getAnnotation())) return false;
+		return true;
+	}
+	*/
+	
 	
 	/**
 	 * First compare counts

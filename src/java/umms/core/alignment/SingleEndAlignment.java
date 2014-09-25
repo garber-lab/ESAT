@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
-import org.broad.igv.sam.AlignmentBlock;
 
 
 import net.sf.samtools.Cigar;
@@ -90,9 +89,9 @@ public class SingleEndAlignment extends BasicAnnotation implements Alignment,jav
      * This is to populate our Alignment from the old legacy IGV alignments
      * @param read
      */
-    public SingleEndAlignment(org.broad.igv.sam.Alignment read) {
+    public SingleEndAlignment(Alignment read) {
     	super(read.getChr(), read.getAlignmentStart(), read.getAlignmentStart()+1); //This is a dummy setup
-    	parseCigar(read.getCigarString(), read.getChr(), read.getAlignmentStart());
+    	parseCigar(read.toCigar(), read.getChr(), read.getAlignmentStart());
     	setName(read.getReadName());
     	
     	if (read.isNegativeStrand()) 

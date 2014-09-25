@@ -2,18 +2,10 @@ package umms.core.coordinatesystem;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Map;
-import java.io.File;
-import java.io.IOException;
 
 import umms.core.annotation.Annotation;
-import umms.core.annotation.BasicAnnotation;
 import umms.core.annotation.Gene;
-import umms.core.feature.GeneWindow;
 import umms.core.feature.Window;
-import broad.core.annotation.ShortBEDReader;
-import broad.core.datastructures.IntervalTree;
-import broad.core.error.ParseException;
 
 /**
  * This interface represents the coordinate space in which we analyze the models

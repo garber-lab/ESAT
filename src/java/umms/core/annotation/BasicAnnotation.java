@@ -22,7 +22,6 @@ import net.sf.samtools.CigarOperator;
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.TextCigarCodec;
 import umms.core.general.TabbedReader;
-import broad.pda.datastructures.Alignments;
 import umms.core.annotation.Annotation;
 import broad.core.error.ParseException;
 
@@ -588,16 +587,6 @@ public class BasicAnnotation extends AbstractAnnotation implements java.io.Seria
 		throw new UnsupportedOperationException("TODO");
 	}
 
-
-	private Annotation split(int start, int end) {
-		return this.intersect(new Alignments(getChr(), start, end));
-		
-		/*CompoundInterval newInterval=new CompoundInterval(blocks);
-		newInterval.setStart(start);
-		newInterval.setEnd(end);
-		Annotation rtrn=new BasicAnnotation(referenceName, newInterval, orientation, name);
-		return rtrn;*/
-	}
 
 	@Override
 	public List<Annotation> disect(List<? extends Annotation> disectors) {

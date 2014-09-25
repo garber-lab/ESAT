@@ -3,9 +3,6 @@ package umms.core.annotation;
 import java.util.Collection;
 import java.util.List;
 
-import broad.core.annotation.GenomicAnnotation;
-import broad.core.annotation.LightweightGenomicAnnotation;
-
 public interface Annotation extends Comparable<Annotation> {
 
 	/**

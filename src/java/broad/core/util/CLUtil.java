@@ -12,16 +12,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import broad.core.annotation.AnnotationReader;
-import broad.core.annotation.AnnotationReaderFactory;
-import broad.core.annotation.BasicGenomicAnnotation;
-import broad.core.annotation.GenomicAnnotation;
+import umms.core.annotation.Annotation;
+import umms.core.annotation.BEDFileParser;
+import umms.core.annotation.BasicAnnotation;
+import umms.core.annotation.Gene;
 import broad.core.error.ParseException;
 import broad.core.math.MathUtil;
 
@@ -208,25 +209,20 @@ public class CLUtil {
 			return super.get(key) == null ? new ArrayList<String>() : super.get(key);
 		}
 		
-		public   Map<String, List<? extends GenomicAnnotation>>  getRegionMapFromParameters()
+		public   Map<String, Collection<Gene>> getRegionMapFromParameters()
 		throws ParseException, IOException {
-			Map<String, List<? extends GenomicAnnotation>> regionChrMap = new LinkedHashMap<String, List<? extends GenomicAnnotation>>();
+			Map<String, Collection<Gene>> regionChrMap = null;
 			if(containsKey("regions")) {
 				String annotationFile = getMandatory("regions");
-				String annotationFileFormat = containsKey("regionFormat") ?getMandatory("regionFormat") : "BED";
+				regionChrMap = BEDFileParser.loadDataByChr(annotationFile);
 
-				AnnotationReader<? extends GenomicAnnotation> reader = AnnotationReaderFactory.create(annotationFile, annotationFileFormat);
-				Iterator<String> chrIt = reader.getChromosomeIterator();
-				while(chrIt.hasNext()) {
-					String chr = chrIt.next();
-					regionChrMap.put(chr, reader.getChromosomeBEDs(chr));	
-				}
 			} else {
+				regionChrMap =  new LinkedHashMap<String, Collection<Gene>>();
 				int start = getInteger("start");
 				int end   = getInteger("end");
 				String chr = getMandatory("chr").replace("chr", "");
-				BasicGenomicAnnotation annotation = new BasicGenomicAnnotation("a", chr, start, end); 
-				List<GenomicAnnotation> regionListTmp = new ArrayList<GenomicAnnotation>();
+				Gene annotation = new Gene( chr, start, end, "a"); 
+				Collection <Gene> regionListTmp = new ArrayList<Gene>();
 				regionListTmp.add(annotation);
 				regionChrMap.put(chr, regionListTmp);			
 			}

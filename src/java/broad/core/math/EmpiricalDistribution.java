@@ -20,8 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import umontreal.iro.lecuyer.probdist.KolmogorovSmirnovDist;
-
 import org.apache.commons.math3.stat.inference.ChiSquareTest;
 import org.apache.log4j.Logger;
 

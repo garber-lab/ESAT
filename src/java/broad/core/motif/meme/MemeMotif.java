@@ -1,15 +1,11 @@
 package broad.core.motif.meme;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.NumberFormat;
+import jaligner.Sequence;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import broad.core.motif.PositionWeightMatrix;
-import broad.core.sequence.SequenceRegion;
-import jaligner.Sequence;
 
 public class MemeMotif {
 	PositionWeightMatrix pwm;

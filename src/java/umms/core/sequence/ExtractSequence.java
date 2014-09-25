@@ -12,10 +12,10 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 import umms.core.annotation.Annotation;
+import umms.core.annotation.BEDFileParser;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
 import broad.core.datastructures.IntervalTree;
-import broad.pda.annotation.BEDFileParser;
 
 public class ExtractSequence {
 	

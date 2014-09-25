@@ -22,11 +22,11 @@ import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
 
+import umms.core.annotation.BEDFileParser;
 import umms.core.annotation.Gene;
 import umms.core.exception.RuntimeIOException;
 import broad.core.util.CLUtil;
 import broad.core.util.CLUtil.ArgumentMap;
-import broad.pda.annotation.BEDFileParser;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
 import umms.esat.SAMSequenceCountingDict;
@@ -85,7 +85,7 @@ public class BamReadTest {
 		SAMRecordIterator bamIterator = bamReader.iterator();
 
 		SAMFileHeader bamHeader = bamReader.getFileHeader();
-		SAMSequenceCountingDict bamDict = new SAMSequenceCountingDict();
+		SAMSequenceCountingDict bamDict = null;
 		bamDict.setLogger(logger);
 		bamDict.copySequences(bamHeader.getSequenceDictionary());    // copy the sequence map from the original dictionary into the counting dict
 		

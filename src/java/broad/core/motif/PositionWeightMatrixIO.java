@@ -16,11 +16,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-import broad.core.annotation.BED;
+import umms.core.annotation.Annotation;
+import umms.core.sequence.FastaSequenceIO;
+import umms.core.sequence.Sequence;
+import umms.core.sequence.SequenceRegion;
 import broad.core.error.ParseException;
-import broad.core.sequence.FastaSequenceIO;
-import broad.core.sequence.Sequence;
-import broad.core.sequence.SequenceRegion;
 import broad.core.util.CLUtil;
 import broad.core.util.CLUtil.ArgumentMap;
 
@@ -161,16 +161,16 @@ public class PositionWeightMatrixIO {
 			
 
 			
-			Map<PositionWeightMatrix, List<BED>> matches = new HashMap<PositionWeightMatrix, List<BED>>();
+			Map<PositionWeightMatrix, List<Annotation>> matches = new HashMap<PositionWeightMatrix, List<Annotation>>();
 			Iterator<SequenceRegion> it = regions.iterator();
 			while(it.hasNext()) {
 				SequenceRegion region = it.next();
 				Iterator<PositionWeightMatrix> pwmIt = pwmIO.matrices.iterator();
 				while(pwmIt.hasNext()) {
 					PositionWeightMatrix pwm = pwmIt.next();
-					List<BED> pwmMatches = matches.get(pwm);
+					List<Annotation> pwmMatches = matches.get(pwm);
 					if(pwmMatches == null) {
-						pwmMatches = new ArrayList<BED>();
+						pwmMatches = new ArrayList<Annotation>();
 						matches.put(pwm, pwmMatches);
 					}
 					
@@ -183,9 +183,9 @@ public class PositionWeightMatrixIO {
 			while(pwmIt.hasNext()) {
 				PositionWeightMatrix pwm = pwmIt.next();
 				bw.write("track name=\""+pwm.getName() + "\" visibility=2 \n");
-				Iterator<BED> pwmMatchIt = matches.get(pwm).iterator();
+				Iterator<Annotation> pwmMatchIt = matches.get(pwm).iterator();
 				while(pwmMatchIt.hasNext()) {
-					bw.write(pwmMatchIt.next().toString(false));
+					bw.write(pwmMatchIt.next().toString());
 					bw.newLine();
 				}
 			}

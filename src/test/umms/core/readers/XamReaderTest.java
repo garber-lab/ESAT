@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 
 import net.sf.samtools.*;
-import umms.core.readers.SCSFileReader;
 import umms.core.readers.SCSRecordIterator;
 import umms.core.readers.SCSRecord;
 
@@ -30,9 +29,9 @@ public class XamReaderTest {
 			if (xamFile.exists()) {
 				System.out.println("File " + bamFile + " exists");
 			}
-			SCSFileReader xamFileReader = new SCSFileReader(xamFile);
+			//SCSFileReader xamFileReader = new SCSFileReader(xamFile);
 			
-			SCSRecordIterator xamIter = xamFileReader.iterator();
+			//SCSRecordIterator xamIter = xamFileReader.iterator();
 			
 //			while (xamIter.hasNext()) {
 //				xamRec = xamIter.next();
@@ -40,7 +39,7 @@ public class XamReaderTest {
 //				System.out.println(" read seq: " + xamRec.getReadString());
 //			}
 			
-			xamFileReader.close();
+			//xamFileReader.close();
 
 		}
 }

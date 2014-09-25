@@ -2,7 +2,6 @@ package umms.core.feature;
 
 import java.util.Collection;
 import java.util.TreeSet;
-import broad.pda.datastructures.Alignments;
 
 import umms.core.annotation.Annotation;
 import umms.core.annotation.BasicAnnotation;

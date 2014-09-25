@@ -11,11 +11,14 @@ import java.util.Random;
 
 import org.apache.commons.math3.stat.clustering.Clusterable;
 
+import umms.core.annotation.Annotation;
+import umms.core.annotation.Annotation.Strand;
+import umms.core.annotation.BasicAnnotation;
+import umms.core.sequence.SequenceRegion;
+import umms.core.sequence.WindowSlider;
 import Jama.Matrix;
-import broad.core.annotation.BED;
 import broad.core.error.ParseException;
-import broad.core.sequence.SequenceRegion;
-import broad.core.sequence.WindowSlider;
+
 
 public class PositionWeightMatrix extends ArrayList<PositionWeightColumn> implements Clusterable<PositionWeightMatrix>{
 
@@ -440,10 +443,10 @@ public class PositionWeightMatrix extends ArrayList<PositionWeightColumn> implem
 		return alignDir;
 	}
 
-	public List<BED> match(SequenceRegion region, double[] background, float minScore) {
+	public List<Annotation> match(SequenceRegion region, double[] background, float minScore) {
 		PositionWeightMatrix neutralPWM = createIsoPWM(background, "neutral");
 		WindowSlider slider = WindowSlider.getSlider(region, size(), size() - 1);
-		List<BED> scoredWindows = new ArrayList<BED>();
+		List<Annotation> scoredWindows = new ArrayList<Annotation>();
 		
 		while(slider.hasNext()) {
 			SequenceRegion window = slider.next();
@@ -455,12 +458,12 @@ public class PositionWeightMatrix extends ArrayList<PositionWeightColumn> implem
 			double reverseScore = getLogLikelihood(reversedChrs) - neutralPWM.getLogLikelihood(reversedChrs);
 			double max = Math.max(directScore, reverseScore);
 			if(max >= minScore) {
-				BED scoredWindow = new BED(window);
+				Annotation scoredWindow = new BasicAnnotation(window);
 				scoredWindow.setStart(scoredWindow.getStart() + region.getStart());
 				scoredWindow.setEnd(scoredWindow.getEnd() + region.getStart());
-				scoredWindow.setOrientation(directScore > reverseScore);
+				scoredWindow.setOrientation(directScore > reverseScore ? Strand.POSITIVE : Strand.NEGATIVE);
 				scoredWindow.setScore(max);
-				scoredWindow.setChromosome(region.getContainingSequenceId());
+				scoredWindow.setReferenceName(region.getContainingSequenceId());
 				scoredWindows.add(scoredWindow);
 			}
 		}
