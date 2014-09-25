@@ -188,37 +188,44 @@ public class NewESAT {
 			bamFiles.put("Exp1",new ArrayList<File>());
 			bamFiles.get("Exp1").add(new File(argMap.getInput()));
 		}
+		
+		// output file
 		outFile = new File(argMap.getOutput());
-		annotationFile = argMap.getMandatory("annotations");
-		if(!annotationFile.endsWith(".bed") && !annotationFile.endsWith(".BED")){
-			logger.error("Please supply an annotation file in the BED format",new RuntimeIOException());
-			return false;
-		}
-			
-		//  allow all transcripts for a gene to be read from an input file.
-		// The input file is assumed to be a table in the format provided by the UCSC website (genomes.ucsc.edu)
-		// with the following features selected:
-		// Clade: Mammal
-		// genome: human
-		// assembly: <appropriate assembly>
-		// table: refGene
-		// region: genome
-		// output format: all fields from selected table
-		//
-		// The table MUST have the following columns:
-		//   name: the transcript RefSeq ID
-		//   chrom: chromosome
-		//   strand: strand, + or -
-		//   txStart, txEnd: transcript start and end location (0-based)
-		//   exonStarts, exonEnds: starting and ending location of each exon (paired, 0-based)
-		//   name2: gene symbol
-		if (!argMap.isPresent("geneMapping")) {
-			gMapping = false;
-		} else {
+
+		// Must have either an annotations file or a gene-to-transcript mapping file (gene-mapping takes precedence over annotation file):
+		if (argMap.isPresent("geneMapping"))
+		{
+			//  allow all transcripts for a gene to be read from an input file.
+			// The input file is assumed to be a table in the format provided by the UCSC website (genomes.ucsc.edu)
+			// with the following features selected:
+			// Clade: Mammal
+			// genome: human
+			// assembly: <appropriate assembly>
+			// table: refGene
+			// region: genome
+			// output format: all fields from selected table
+			//
+			// The table MUST have the following columns:
+			//   name: the transcript RefSeq ID
+			//   chrom: chromosome
+			//   strand: strand, + or -
+			//   txStart, txEnd: transcript start and end location (0-based)
+			//   exonStarts, exonEnds: starting and ending location of each exon (paired, 0-based)
+			//   name2: gene symbol
 			gMapping = true;
 			gMapFile = new File(argMap.get("geneMapping"));   // name of the gene mapping file
+		} else if (argMap.isPresent("annotations")) {
+			annotationFile = argMap.get("annotations");
+			if(!annotationFile.endsWith(".bed") && !annotationFile.endsWith(".BED")){
+				logger.error("Please supply an annotation file in the BED format",new RuntimeIOException());
+				return false;
+			}
+			gMapping = false;
+		} else {
+			logger.error("Either an annotation file or gene-to-transcript mapping file must be provided.");
+			return false;
 		}
-	
+
 		return true;   // default return value if all tests pass
 	}
 

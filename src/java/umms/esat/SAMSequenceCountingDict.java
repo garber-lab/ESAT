@@ -162,6 +162,10 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     			localExtend = segEnd-gEnd;   // limit extension to the end of the chromosome/segment
     			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases (after end of "+chr+")");
     		}
+    		if (localExtend<0) {
+    			logger.error("Gene "+gene.getName()+" end coordinate ("+gEnd+") is past the end of chromosome "+gene.getReferenceName()+" ("+segEnd+")");
+    			logger.error("This could be caused by a mismatch between the reference genome .bed file and the reference used for alignments.");
+    		}
     	}
     	
     	/* build the array containing all counts for this exon set: */
