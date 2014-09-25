@@ -1,4 +1,4 @@
-package broad.pda.geneexpression;
+package broad.core.datastructures;
 
 import java.io.File;
 
