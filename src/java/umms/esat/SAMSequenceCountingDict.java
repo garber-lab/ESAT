@@ -314,6 +314,20 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	}
     	
     	while (sumEnd < aLen) {
+    		if (gCoords[sumStart]>=gCoords[sumEnd]) {
+    			/* this will occur if a gene length plus the window extension are shorter than one full window width,
+    			 * or if the extension is shortened because it would overlap a neighboring gene. The last window will be
+    			 * shorter than the nominal window width (This might affect the significance calculation.)*/
+    			// locate the last non-zero entry in the gCoords array, which will give the last valid genomic coordinate
+    			int lastValid = sumStart-1;
+    			for (int i=sumStart;i<sumEnd;i++) {
+    				if (gCoords[i]==0) {
+    					break;
+    				}
+    				lastValid++;
+    			}
+    			sumEnd=lastValid;
+    		}
     		Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
     		float countSum = 0;
     		for (int i=sumStart; i<sumEnd; i++) {
@@ -324,6 +338,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		/* update start and end for the next window */
     		sumStart += (window-overlap);
     		sumEnd = sumStart+window;
+    		/* Any partial windows after the first one will be skipped */
     	}
     	
     	return wList;

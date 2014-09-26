@@ -1,6 +1,7 @@
 package umms.esat;
 
 import umms.esat.Window;
+import umms.esat.EventCounter;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -22,6 +23,8 @@ import java.util.TreeSet;
 import java.util.NoSuchElementException;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.BasicConfigurator;
 
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.BEDFileParser;
@@ -31,6 +34,7 @@ import umms.core.exception.RuntimeIOException;
 import broad.core.util.CLUtil;
 import broad.core.util.CLUtil.ArgumentMap;
 import broad.core.datastructures.IntervalTree;
+import broad.core.datastructures.IntervalTree.Node;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
 import umms.esat.SAMSequenceCountingDict;
@@ -43,7 +47,7 @@ import umms.core.readers.MappingTableReader;
 public class NewESAT {
 	
 	// This usage message needs to be updated to reflect the actual operation of NewESAT!!!
-	static final String usage = "Usage: ESAT <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
+	static final String usage = "[USAGE MESSAGE IS NOT CORRECT]Usage: ESAT <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
 			"\n\t-in <input bam file>: input bam file (sorting and indexing not required)" + 
 			"\n\t-out <output file name>"+
 			"\n\t-annotations <reference annotation file [BED file]>"+
@@ -54,7 +58,6 @@ public class NewESAT {
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
 	private static File outFile;
 	private static String annotationFile;
-	static Logger logger = Logger.getLogger(NewESAT.class.getName());
 	private static int windowLength;
 	private static int windowOverlap;
 	private static int windowExtend;
@@ -64,6 +67,8 @@ public class NewESAT {
 	private static boolean gMapping;
 	private static File gMapFile;       // name of the gene mapping file
 	
+	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
+
 	private static HashMap<String,HashMap<String,LinkedList<Window>>> countsMap;
 	private static SAMSequenceCountingDict bamDict;
 	private static Hashtable<String, Gene> geneTable;
@@ -74,6 +79,10 @@ public class NewESAT {
 		 * @param for ArgumentMap - size, usage, default task
 		 * argMap maps the command line arguments to the respective parameters
 		 */
+	
+		// Configure the logger:
+		BasicConfigurator.configure();
+		
 		/* seems like a useful utility that can probably be stripped down */
 		ArgumentMap argMap = CLUtil.getParameters(args,usage,"dummy");  /* no default task for now */
 		if (!validateArguments(argMap)) {
@@ -114,13 +123,12 @@ public class NewESAT {
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
 		
 		/* Make a new counts map containing only Windows with non-zero counts across ALL experiments */
-		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = makeExperimentWindowCounter(countsMap, bamFiles.keySet().size());
-		
-		/* Create a HashMap of IntervalTrees for all chromosomes that matches the structure of cleanCountsMap */
-		HashMap<String, HashMap<String, IntervalTree>> windowTree = makeIntervalTreeFromCountsMap(cleanCountsMap);
+		// !!! this should be modified to simply return the IntervalTree rather than do this in two steps.... 
+		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
 		
 		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
-
+		fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh);
+		
 		/* STOP AND REPORT TIMING */
 		long stopTime = System.nanoTime();
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
@@ -555,11 +563,15 @@ public class NewESAT {
 		return bamDict;
 	}
 
-	public HashMap<String,HashMap<String,LinkedList<Window>>> makeExperimentWindowCounter(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, int nExp) {
-		// Actually, it builds a new counts map containing only Windows with non-zero counts:
-		HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap = new HashMap<String,HashMap<String,LinkedList<Window>>>();
-		// Each Window is created with storage for counts for nExp separate experiments.
+	public HashMap<String, HashMap<String, IntervalTree<EventCounter>>> makeCountingIntervalTree(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, int nExp) {
+		// Builds a stranded HashMap of IntervalTrees, one per chromosome
 		
+		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> cleanTree = new HashMap<String, HashMap<String, IntervalTree<EventCounter>>>();
+		// create top-level node for the two strands:
+		cleanTree.put("+", new HashMap<String, IntervalTree<EventCounter>>());
+		cleanTree.put("-", new HashMap<String, IntervalTree<EventCounter>>());
+		
+		// keep track of how many non-significant windows there are
 		int inWindowCount = 0;
 		int outWindowCount = 0;
 		// Iterate over chromosomes:
@@ -576,16 +588,22 @@ public class NewESAT {
 						continue;
 					} else {
 						// add a new Window to the cleanCountsMap:
-						String wName = ""+listIdx;
+						String strand = w.getStrand();
+						//String nName = gene+"."+listIdx;
+						// TEST extended name:
+						String nName = gene+"."+listIdx+" "+chr+":"+w.getStart()+"-"+w.getEnd()+" ("+strand+")";
 						listIdx++;  // increment the list index counter
-						Window wNew = new Window(w.getStrand(), chr, w.getStart(), w.getEnd(), wName, nExp);
-						if (!cleanCountsMap.containsKey(chr)) {
-							cleanCountsMap.put(chr, new HashMap<String, LinkedList<Window>>());
+						if (w.getStart()>=w.getEnd()) {
+							logger.warn("start>end for "+gene);
 						}
-						if (!cleanCountsMap.get(chr).containsKey(gene)) {
-							cleanCountsMap.get(chr).put(gene, new LinkedList<Window>());
+							
+						EventCounter e = new EventCounter(nName, nExp);
+						// *** TEST: initialize the event counter with the total alignments
+						e.setSumCounts(w.getCount());
+						if (!cleanTree.get(strand).containsKey(chr)) {
+							cleanTree.get(strand).put(chr, new IntervalTree<EventCounter>());
 						}
-						cleanCountsMap.get(chr).get(gene).add(wNew);   // add the Window copy (with no counts)
+						cleanTree.get(strand).get(chr).put(w.getStart(),w.getEnd(), e);   // add the node to the tree
 						outWindowCount++;
 					}
 				}
@@ -595,12 +613,85 @@ public class NewESAT {
 		logger.info("Total window count: "+inWindowCount);
 		logger.info("Non-zero window count: "+outWindowCount);
 		
-		return cleanCountsMap;
+		return cleanTree;
 	}
 	
-	public HashMap<String, HashMap<String, IntervalTree>> makeIntervalTreeFromCountsMap(HashMap<String,HashMap<String,LinkedList<Window>>> cleanCountsMap) {
-		HashMap<String, HashMap<String, IntervalTree>> iTreeMap = new HashMap<String, HashMap<String, IntervalTree>>();
+	public void fillExperimentWindowCounter(HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree, 
+											HashMap<String,ArrayList<File>> bamFiles,
+											boolean qFilter,
+											int qThresh) {
 		
-		return iTreeMap;
+		SAMRecord r;		// alignment
+		String rStrand;		// alignment strand
+		String rName;		// alignment name (chromosome)
+		int rStart;			// alignment start location
+		
+		// Get the list of experiment names:
+		Object[] expList = bamFiles.keySet().toArray();
+		
+		// Iterate over the files in each experiment:
+		for (int eIdx=0; eIdx<expList.length; eIdx++) {
+			
+			Object exp = expList[eIdx];
+			
+			for (int i=0; i<bamFiles.get(exp).size(); i++){
+
+				//long loopStartTime = System.nanoTime();    // loop timer
+				
+				// open the next bam file in the list:
+				File bamFile = (File) bamFiles.get(exp).get(i);
+				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
+				bamReader.setValidationStringency(ValidationStringency.STRICT);	
+				SAMRecordIterator bamIterator = bamReader.iterator();
+				logger.info("Processing file: "+bamFile+"...");
+
+				// process each read:
+				while (bamIterator.hasNext()) {
+					try {
+						r = bamIterator.next();
+					} catch (SAMFormatException e) {
+						// skip SAM Format errors but log a warning:
+						logger.warn(e.getMessage());
+						continue;
+					}
+					// process the read:
+					if (!r.getReadUnmappedFlag()) {
+						// if quality filtering is turned on, skip low-quality reads:
+						if (qFilter==true) {
+							if (!(r.getMappingQuality()>qThresh)) {
+								// skip bad reads
+								continue;
+							}
+						}
+						// Update the counts in cleanCountsMap if the read start location is contained in
+						// an interval in the windowTree.
+					   	rName = r.getReferenceName();                // chromosome ID
+				    	rStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
+				    	if (r.getReadNegativeStrandFlag()) {
+				    		rStrand = "-";
+				    	} else {
+				    		rStrand = "+";
+				    	}
+				    	String cString = r.getCigarString(); 
+				    	// Note: if the CigarString is "*", it indicates that the read is unmapped. It would be better 
+				    	//       if SAMRecord had a isMapped() method.
+				    	if (cString!="*") {
+				    		// check if this read start is contained in any intervals in the tree:
+				    		if (windowTree.get(rStrand).containsKey(rName) && windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)>0) {
+				    			Iterator<IntervalTree.Node<EventCounter>> oIter = windowTree.get(rStrand).get(rName).overlappers(rStart,rStart+1);
+				    			//logger.info("Read at "+rName+":"+rStart+" ("+rStrand+
+				    			//		") has "+windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)+" overlapping intervals");
+				    			while (oIter.hasNext()) {
+				    				Node<EventCounter> n = oIter.next();
+				    				// update the count for this interval:
+				    				n.getValue().incrementCount(eIdx);
+				    				//logger.info("  "+n.getValue().getName());
+				    			}
+				    		}
+				    	}
+					}
+				}
+			}
+		}
 	}
 }
