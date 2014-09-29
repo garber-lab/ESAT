@@ -109,13 +109,246 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	return countSum;
     }
     
+//    public LinkedList<Window> countWindowedReadStarts(final Set<Annotation> eSet, 
+//    									final HashMap<String, HashMap<String, IntervalTree<String>>> iTree,
+//    									final int window, 
+//    									final int overlap, 
+//    									final int extend,
+//    									final Gene gene) {
+//    	/**
+//    	 * sums the count of all reads starting within sliding windows across all of the 
+//    	 * exons in this Set. An array is created by concatenating the exons and extending by
+//    	 * "extend" bases, then a window is stepped across the array overlapping "overlap" bases 
+//    	 * with the previous window, counting the number of reads in each window.  
+//    	 * 
+//    	 * @param	eSet	a Set of Annotations defining the boundaries of a set of exons
+//    	 * @return			a list of windows and counts. 
+//    	 */
+//    	int aLen = 0;
+//    	float[] floatCounts; 
+//    	int[] gCoords;    // genomic coordinates of each location
+//    	int eStart;
+//    	int eEnd;
+//    	String gStrand;   // strand of the gene
+//    	int localExtend = extend;    // default extension
+//    	
+//    	LinkedList<Window> wList = new LinkedList<Window>();    // Is this the right type?...
+//    	
+//    	Iterator<Annotation> eIter = eSet.iterator();    // iterator over the exons
+//    	
+//    	/* get the BED file segment to which this segment is aligned: */
+//    	String chr = eSet.iterator().next().getChr();
+//    	
+//    	// reset the iterator:
+//    	eIter = eSet.iterator();
+//
+//    	/* Adjust the extension for this gene:
+//    	 * If negative strand and extension will end before base 0, or
+//    	 * If positive strand and extension will end after the last base, 
+//    	 * shorten the extension.
+//    	 */
+//    	
+//    	if (gene.isNegativeStrand()) {
+//    		int gStart = gene.getStart();
+//    		if ((gStart-extend)<0) {
+//    			localExtend = gStart;     // limit extension to the beginning of the chromosome/segment
+//    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases (before beginning of )"+chr+")");
+//    		}
+//    	} else {
+//    		int gEnd = gene.getEnd();
+//    		int segEnd = getChrLength(chr);
+//    		if (((gEnd+extend)-1)>segEnd) {
+//    			localExtend = segEnd-gEnd;   // limit extension to the end of the chromosome/segment
+//    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases (after end of "+chr+")");
+//    		}
+//    		if (localExtend<0) {
+//    			logger.error("Gene "+gene.getName()+" end coordinate ("+gEnd+") is past the end of chromosome "+gene.getReferenceName()+" ("+segEnd+")");
+//    			logger.error("This could be caused by a mismatch between the reference genome .bed file and the reference used for alignments.");
+//    		}
+//    	}
+//    	
+//    	/* build the array containing all counts for this exon set: */
+//    	/* first, scan through the exon set to determine how long the composite array needs to be */
+//    	while (eIter.hasNext()) {
+//    		Annotation exon = eIter.next();
+//    		// Arithmetic works better with 0-based, exclusive (native) coordinates
+//    		eStart = exon.getStart();  
+//    		eEnd = exon.getEnd();      
+//    		aLen += (exon.getEnd()-exon.getStart());  // sum the exon lengths
+//    	}
+//    	/* add the extension */
+//    	aLen += localExtend;
+//    	
+//    	/* allocate the storage */
+//    	floatCounts = new float[aLen];
+//    	gCoords = new int[aLen];
+//    	
+//    	/* reset the iterator */
+//    	eIter = eSet.iterator();
+//    	/* copy the counts from startCounts */
+//    	
+//    	int cStart;
+//    	if (gene.isNegativeStrand()) {
+//    		cStart = localExtend;      // leave room to copy counts from lower genomic coordinates for negative-strand genes
+//    	} else {
+//    		cStart = 0;	      // otherwise, start at the beginning of the startCounts array
+//    	}
+//    	eStart = 0;    // save the start position of the last exon
+//    	eEnd = 0;      // save the end position of the last exon
+//    	int eLen = eEnd-eStart; 
+//    	while (eIter.hasNext()) {
+//    		Annotation exon = eIter.next();    // get the exon
+//    		chr = exon.getChr();        // exon chromosome
+//    		if (!startCountsHasKey(chr)) {
+//    			logger.warn("Counts array does not contain key: "+chr);
+//    			return new LinkedList<Window>();
+//    		}
+//    		// use the native coordinate system (0-based, exclusive):
+//    		eStart = exon.getStart();          // exon start
+//			eEnd = exon.getEnd();              // exon end
+//			eLen = eEnd-eStart;        // exon length
+//
+//			// copy counts from startCounts to the local floating-point array:
+//			copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
+//
+//    		// fill the gCoords array with genomic coordinates:
+//    		for (int i=0; i<eLen; i++) {
+//    			gCoords[cStart+i]=eStart+i;
+//    		}
+//    		cStart+=eLen;    // point to the start position of the next copied segment
+//    	}
+//    	
+//    	// check if extension overlaps other genes:
+//		int testExonStart;
+//		int testExonEnd;
+//    	if (gene.isNegativeStrand()) {
+//    		testExonEnd = gene.getFirstExon().getStart();
+//    		testExonStart = testExonEnd-localExtend;
+//    		if (iTree.get("-").get(chr).numOverlappers(testExonStart, testExonEnd)>0) {
+//    			// find maximum overlapping nearby genes
+//    			Iterator<Node<String>> oLapIter = iTree.get("-").get(chr).overlappers(testExonStart, testExonEnd);
+//    			int oMax = 0;
+//    			String oNames = null;
+//    			while (oLapIter.hasNext()) {
+//    				Node<String> iName = oLapIter.next();
+//    				// save the names of the overlapping genes:
+//    				if (oNames==null) {
+//    					oNames=iName.getValue();
+//    				} else {
+//    					oNames+=","+iName.getValue();
+//    				}
+//    				// find maximum overlap:
+//    				if (iName.getEnd()>oMax) {
+//    					oMax = iName.getEnd();
+//    				}
+//    			}
+//    			localExtend = Math.max(0,testExonEnd-oMax);
+//    			//logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_rev.get(chr).numOverlappers(testExonStart, testExonEnd)+
+//    			//		" overlaps (rev) between "+testExonStart+":"+testExonEnd+" (max at "+oMax+"). extension reduced to "+localExtend+" bases. ("+oNames+")");
+//    			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree.get("-").get(chr).numOverlappers(testExonStart, testExonEnd)+
+//    					" overlaps (rev). Extension reduced to "+localExtend+" bases. ("+oNames+")");
+//    		}
+//    	} else {
+//    		testExonStart = eEnd;            // Since the coordinate system is 0-based, exclusive, eEnd points to the first base AFTER the end of the last exon
+//    		testExonEnd = testExonStart+localExtend;     // exclusive index of the end of the extended segment
+//    		if (iTree.get("+").get(chr).numOverlappers(testExonStart, testExonEnd)>0) {
+//    			// find maximum overlapping nearby genes
+//    			Iterator<Node<String>> oLapIter = iTree.get("+").get(chr).overlappers(testExonStart, testExonEnd);
+//    			int oMin = Integer.MAX_VALUE;   // initialize to max integer value
+//    			String oNames = null;
+//    			while (oLapIter.hasNext()) {
+//    				Node<String> iName = oLapIter.next();
+//    				// save the names of the overlapping genes:
+//    				if (oNames==null) {
+//    					oNames=iName.getValue();
+//    				} else {
+//    					oNames+=","+iName.getValue();
+//    				}
+//    				// find maximum overlap:
+//    				if (iName.getEnd()<oMin) {
+//    					oMin = iName.getStart();
+//    				}
+//    			}
+//    			localExtend = Math.max(0,oMin-testExonStart);
+//    			//logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_fwd.get(chr).numOverlappers(testExonStart, testExonEnd)+
+//    			//		" overlaps (fwd) between "+testExonStart+":"+testExonEnd+" (min at "+oMin+"). extension reduced to "+localExtend+" bases. ("+oNames+")");
+//    			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree.get("+").get(chr).numOverlappers(testExonStart, testExonEnd)+
+//    					" overlaps (fwd). Extension reduced to "+localExtend+" bases. ("+oNames+")");
+//       			
+//    		}
+//    	}
+//    	
+//    	/*************************************************************************************************************/
+//    	/* extend past the end of the last exon by "localExtend" bases. For now, just report a warning 
+//    	 * if this collides with another exon */
+//    	if (gene.isNegativeStrand()) {
+//    		//eEnd = gene.getFirstExon().getStart()+1;
+//    		eEnd = gene.getFirstExon().getStart();
+//    		eStart = eEnd-localExtend;
+//    		cStart = 0;               // start copying into the beginning of the array
+//    	} else {
+//    		eStart = eEnd;            // Since the coordinate system is 0-based, exclusive, eEnd points to the first base AFTER the end of the last exon
+//    		eEnd = eStart+localExtend;     // exclusive index of the end of the extended segment
+//    	}
+//    	eLen = localExtend;            // number of bases to extend past the end of the last exon
+//    	
+//    	/* Copy the extension counts */
+//		copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
+//    	// System.arraycopy(this.startCounts.get(chr),eStart, counts, cStart, eLen);     // ******************
+//		// fill the gCoords array with genomic coordinates:
+//		for (int i=0; i<eLen; i++) {
+//			gCoords[cStart+i]=eStart+i;
+//		}
+//    	/*************************************************************************************************************/
+//
+//    	/* Iterate a sliding window across the counts array and sum the counts over the window. Create a new Window object
+//    	 * for each step and add them to the output list.
+//    	 */
+//    	int sumStart = 0;					// start of summing window
+//    	int sumEnd = sumStart+window;       // end of summing window (exclusive)
+//    	if (gene.isNegativeStrand()) {
+//    		gStrand = "-";
+//    	} else {
+//    		gStrand = "+";
+//    	}
+//    	
+//    	while (sumEnd < aLen) {
+//    		if (gCoords[sumStart]>=gCoords[sumEnd]) {
+//    			/* this will occur if a gene length plus the window extension are shorter than one full window width,
+//    			 * or if the extension is shortened because it would overlap a neighboring gene. The last window will be
+//    			 * shorter than the nominal window width (This might affect the significance calculation.)*/
+//    			// locate the last non-zero entry in the gCoords array, which will give the last valid genomic coordinate
+//    			int lastValid = sumStart-1;
+//    			for (int i=sumStart;i<sumEnd;i++) {
+//    				if (gCoords[i]==0) {
+//    					break;
+//    				}
+//    				lastValid++;
+//    			}
+//    			sumEnd=lastValid;
+//    		}
+//    		Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+//    		float countSum = 0;
+//    		for (int i=sumStart; i<sumEnd; i++) {
+//    			countSum += floatCounts[i];
+//    		}
+//    		thisWindow.setCount(countSum);    // update count for this window
+//    		wList.add(thisWindow);            // add this window to the output list
+//    		/* update start and end for the next window */
+//    		sumStart += (window-overlap);
+//    		sumEnd = sumStart+window;
+//    		/* Any partial windows after the first one will be skipped */
+//    	}
+//    	
+//    	return wList;
+//    }
+        
     public LinkedList<Window> countWindowedReadStarts(final Set<Annotation> eSet, 
-    									final IntervalTree<String> iTree_fwd,
-    									final IntervalTree<String> iTree_rev,
-    									final int window, 
-    									final int overlap, 
-    									final int extend,
-    									final Gene gene) {
+    		final HashMap<String, HashMap<String,IntervalTree<String>>> iTree,
+    		final int window, 
+    		final int overlap, 
+    		final int extend,
+    		final Gene gene) {
     	/**
     	 * sums the count of all reads starting within sliding windows across all of the 
     	 * exons in this Set. An array is created by concatenating the exons and extending by
@@ -128,180 +361,157 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	int aLen = 0;
     	float[] floatCounts; 
     	int[] gCoords;    // genomic coordinates of each location
-    	int eStart;
-    	int eEnd;
+    	int eStart = 0;
+    	int eEnd = 0;
+    	int eLen = 0; 
     	String gStrand;   // strand of the gene
     	int localExtend = extend;    // default extension
-    	
+
     	LinkedList<Window> wList = new LinkedList<Window>();    // Is this the right type?...
-    	
+
     	Iterator<Annotation> eIter = eSet.iterator();    // iterator over the exons
-    	
+
     	/* get the BED file segment to which this segment is aligned: */
-    	String chr = eSet.iterator().next().getChr();
-    	
+    	Annotation e = eIter.next(); 
+    	String chr = e.getChr();
+    	String strand = e.getStrand().toString();
+
     	// reset the iterator:
     	eIter = eSet.iterator();
 
-    	/* Adjust the extension for this gene:
-    	 * If negative strand and extension will end before base 0, or
-    	 * If positive strand and extension will end after the last base, 
-    	 * shorten the extension.
+    	/* Step 1: determine the start and end coordinate range for this gene, and the total number
+    	 * of bases over all exons.
     	 */
+    	int gMin = Integer.MAX_VALUE;
+    	int gMax = 0;
+    	int tLen = 0;   // transcript length, in bases
     	
-    	if (gene.isNegativeStrand()) {
-    		int gStart = gene.getStart();
-    		if ((gStart-extend)<0) {
-    			localExtend = gStart;     // limit extension to the beginning of the chromosome/segment
-    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases (before beginning of )"+chr+")");
-    		}
-    	} else {
-    		int gEnd = gene.getEnd();
-    		int segEnd = getChrLength(chr);
-    		if (((gEnd+extend)-1)>segEnd) {
-    			localExtend = segEnd-gEnd;   // limit extension to the end of the chromosome/segment
-    			logger.warn(extend+"-base extension for gene "+gene.getName()+" reduced to "+localExtend+" bases (after end of "+chr+")");
-    		}
-    		if (localExtend<0) {
-    			logger.error("Gene "+gene.getName()+" end coordinate ("+gEnd+") is past the end of chromosome "+gene.getReferenceName()+" ("+segEnd+")");
-    			logger.error("This could be caused by a mismatch between the reference genome .bed file and the reference used for alignments.");
-    		}
-    	}
-    	
-    	/* build the array containing all counts for this exon set: */
-    	/* first, scan through the exon set to determine how long the composite array needs to be */
     	while (eIter.hasNext()) {
-    		Annotation exon = eIter.next();
-    		// Arithmetic works better with 0-based, exclusive (native) coordinates
-    		eStart = exon.getStart();  
-    		eEnd = exon.getEnd();      
-    		aLen += (exon.getEnd()-exon.getStart());  // sum the exon lengths
+    		e = eIter.next();
+    		eStart = e.getStart();
+    		eEnd = e.getEnd();
+    		/* find earliest start and latest end */
+    		if (eStart<gMin) {
+    			gMin = eStart;
+    		}
+    		if (eEnd>gMax) {
+    			gMax = eEnd;
+    		}
+    		tLen += eEnd-eStart;
     	}
-    	/* add the extension */
-    	aLen += localExtend;
     	
+		String oStr = null;
+    	/* Step 2: Determine the maximum length, up to "extend" bases, that the transcript can be extended without
+    	 * overlapping a nearby gene. This will be the new value of "localExtend"
+    	 */
+    	// if ((gene.isNegativeStrand() && <task is 3prime>) || (!gene.isNegativeStrand() && <task is 5prime>))  // eventual test 
+    	if (gene.isNegativeStrand()) {
+    		/* "-" strand (with 3prime libraries, or "+" strand with 5prime libraries) */
+    		int minExt = Math.max(0, eStart-extend);      // initial minimum of extension
+    		int maxExt = eStart;
+    		if (iTree.get(strand).get(chr).numOverlappers(minExt, maxExt) > 0) {
+    			// trim overlap
+    			Iterator<Node<String>> iIter = iTree.get(strand).get(chr).overlappers(minExt, maxExt);
+    			oStr = null;
+    			while (iIter.hasNext()) {
+    				Node<String> n = iIter.next();
+    				// construct string of names of overlappers
+    				String iName = n.getValue();
+    				if (oStr==null) {
+    					oStr = iName;
+    				} else {
+    					oStr += ","+iName;
+    				}
+    				int iEnd = n.getEnd();
+    				if (iEnd>minExt) {
+    					minExt = Math.min(iEnd,maxExt);   
+    				}
+    			}
+    		}
+			localExtend = maxExt-minExt;   // final extension value
+			if (localExtend<extend) {
+				logger.warn("Gene "+gene.getName()+" ("+strand+") extension overlaps "+oStr+". "+extend+"-base extension shortened to "+localExtend);
+			}
+    	} else {
+    		/* "+" strand (with 3prime libraries, or "-" strand with 5prime libraries) */
+    		int minExt = eEnd;
+    		int maxExt = Math.min(eEnd+extend, getChrLength(chr));  // initial maximum of extension 
+    		if (iTree.get(strand).get(chr).numOverlappers(minExt, maxExt) > 0) {
+    			// trim overlap
+    			Iterator<Node<String>> iIter = iTree.get(strand).get(chr).overlappers(minExt, maxExt);
+    			oStr = null;
+    			while (iIter.hasNext()) {
+    				Node<String> n = iIter.next();
+    				// construct string of names of overlappers
+    				String iName = n.getValue();
+    				if (oStr==null) {
+    					oStr = iName;
+    				} else {
+    					oStr += ","+iName;
+    				}
+    				int iStart = n.getStart();
+    				if (iStart<maxExt) {
+    					maxExt = Math.max(iStart,minExt);   
+    				}
+    			}
+    		}
+			localExtend = maxExt-minExt;   // final extension value
+			if (localExtend<extend) {
+				logger.warn("Gene "+gene.getName()+" ("+strand+") extension overlaps "+oStr+". "+extend+"-base extension shortened to "+localExtend);
+			}
+    	}
+    	
+    	/* Step 3: Copy the counts and genomic coordinates for all locations within
+    	 * this gene's transcript, plus the extension.
+    	 */
     	/* allocate the storage */
-    	floatCounts = new float[aLen];
-    	gCoords = new int[aLen];
-    	
-    	/* reset the iterator */
-    	eIter = eSet.iterator();
-    	/* copy the counts from startCounts */
-    	
-    	int cStart;
-    	if (gene.isNegativeStrand()) {
-    		cStart = localExtend;      // leave room to copy counts from lower genomic coordinates for negative-strand genes
-    	} else {
-    		cStart = 0;	      // otherwise, start at the beginning of the startCounts array
-    	}
-    	eStart = 0;    // save the start position of the last exon
-    	eEnd = 0;      // save the end position of the last exon
-    	int eLen = eEnd-eStart; 
-    	while (eIter.hasNext()) {
-    		Annotation exon = eIter.next();    // get the exon
-    		chr = exon.getChr();        // exon chromosome
-    		if (!startCountsHasKey(chr)) {
-    			logger.warn("Counts array does not contain key: "+chr);
-    			return new LinkedList<Window>();
-    		}
-    		// use the native coordinate system (0-based, exclusive):
-    		eStart = exon.getStart();          // exon start
-			eEnd = exon.getEnd();              // exon end
-			eLen = eEnd-eStart;        // exon length
+    	floatCounts = new float[tLen+localExtend];
+    	gCoords = new int[tLen+localExtend];
+    	int cStart = 0;     // index of where to start copying
 
-			// copy counts from startCounts to the local floating-point array:
+    	/* If 3' library and negative strand, or 5' library and positive strand copy counts and genomic coordinates 
+    	 * for the extension to the "left" of the transcript start: 
+    	 */
+    	// if ((gene.isNegativeStrand() && <task is 3prime>) || (!gene.isNegativeStrand() && <task is 5prime>))  // eventual test 
+    	if (gene.isNegativeStrand()) {
+    		/* "-" strand (with 3prime libraries, or "+" strand with 5prime libraries) */
+    		eStart = gMin-localExtend;
+    		eLen = localExtend;
 			copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
-
-    		// fill the gCoords array with genomic coordinates:
+			for (int i=0; i<localExtend; i++) {
+				gCoords[cStart+i] = eStart+i;      // corresponding genomic coordinates of the counts
+    		}
+			cStart+=localExtend;
+    	}
+    	
+    	/* For all exons, copy the counts and genomic coordinates */
+    	eIter = eSet.iterator();
+    	while (eIter.hasNext()) {
+    		e = eIter.next();
+    		eStart = e.getStart();
+    		eLen = e.getEnd()-e.getStart();
+			copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
     		for (int i=0; i<eLen; i++) {
-    			gCoords[cStart+i]=eStart+i;
+    			gCoords[cStart+i] = eStart+i;
     		}
-    		cStart+=eLen;    // point to the start position of the next copied segment
+    		cStart+=eLen;
     	}
     	
-    	// check if extension overlaps other genes:
-		int testExonStart;
-		int testExonEnd;
-    	if (gene.isNegativeStrand()) {
-    		testExonEnd = gene.getFirstExon().getStart();
-    		testExonStart = testExonEnd-localExtend;
-    		if (iTree_rev.numOverlappers(testExonStart, testExonEnd)>0) {
-    			// find maximum overlapping nearby genes
-    			Iterator<Node<String>> oLapIter = iTree_rev.overlappers(testExonStart, testExonEnd);
-    			int oMax = 0;
-    			String oNames = null;
-    			while (oLapIter.hasNext()) {
-    				Node<String> iName = oLapIter.next();
-    				// save the names of the overlapping genes:
-    				if (oNames==null) {
-    					oNames=iName.getValue();
-    				} else {
-    					oNames+=","+iName.getValue();
-    				}
-    				// find maximum overlap:
-    				if (iName.getEnd()>oMax) {
-    					oMax = iName.getEnd();
-    				}
-    			}
-    			localExtend = Math.max(0,testExonEnd-oMax);
-    			//logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(testExonStart, testExonEnd)+
-    			//		" overlaps (rev) between "+testExonStart+":"+testExonEnd+" (max at "+oMax+"). extension reduced to "+localExtend+" bases. ("+oNames+")");
-    			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_rev.numOverlappers(testExonStart, testExonEnd)+
-    					" overlaps (rev). Extension reduced to "+localExtend+" bases. ("+oNames+")");
+    	/* If 3' library and positive strand, or 5' library and negative strand copy counts and genomic coordinates 
+    	 * for the extension to the "right" of the transcript end: 
+    	 */
+    	// if ((!gene.isNegativeStrand() && <task is 5prime>) || (gene.isNegativeStrand() && <task is 3prime>))  // eventual test 
+    	if (!gene.isNegativeStrand()) {
+    		/* "+" strand (with 3prime libraries, or "-" strand with 5prime libraries) */
+    		eStart = gMax;   // +1?
+    		eLen = localExtend;
+			copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
+			for (int i=0; i<localExtend; i++) {
+				gCoords[cStart+i] = eStart+i;      // corresponding genomic coordinates of the counts
     		}
-    	} else {
-    		testExonStart = eEnd;            // Since the coordinate system is 0-based, exclusive, eEnd points to the first base AFTER the end of the last exon
-    		testExonEnd = testExonStart+localExtend;     // exclusive index of the end of the extended segment
-    		if (iTree_fwd.numOverlappers(testExonStart, testExonEnd)>0) {
-    			// find maximum overlapping nearby genes
-    			Iterator<Node<String>> oLapIter = iTree_fwd.overlappers(testExonStart, testExonEnd);
-    			int oMin = Integer.MAX_VALUE;   // initialize to max integer value
-    			String oNames = null;
-    			while (oLapIter.hasNext()) {
-    				Node<String> iName = oLapIter.next();
-    				// save the names of the overlapping genes:
-    				if (oNames==null) {
-    					oNames=iName.getValue();
-    				} else {
-    					oNames+=","+iName.getValue();
-    				}
-    				// find maximum overlap:
-    				if (iName.getEnd()<oMin) {
-    					oMin = iName.getStart();
-    				}
-    			}
-    			localExtend = Math.max(0,oMin-testExonStart);
-    			//logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(testExonStart, testExonEnd)+
-    			//		" overlaps (fwd) between "+testExonStart+":"+testExonEnd+" (min at "+oMin+"). extension reduced to "+localExtend+" bases. ("+oNames+")");
-    			logger.warn(extend+" base extension of "+gene.getName()+" has "+iTree_fwd.numOverlappers(testExonStart, testExonEnd)+
-    					" overlaps (fwd). Extension reduced to "+localExtend+" bases. ("+oNames+")");
-       			
-    		}
+			cStart+=localExtend;
     	}
     	
-    	/*************************************************************************************************************/
-    	/* extend past the end of the last exon by "localExtend" bases. For now, just report a warning 
-    	 * if this collides with another exon */
-    	if (gene.isNegativeStrand()) {
-    		//eEnd = gene.getFirstExon().getStart()+1;
-    		eEnd = gene.getFirstExon().getStart();
-    		eStart = eEnd-localExtend;
-    		cStart = 0;               // start copying into the beginning of the array
-    	} else {
-    		eStart = eEnd;            // Since the coordinate system is 0-based, exclusive, eEnd points to the first base AFTER the end of the last exon
-    		eEnd = eStart+localExtend;     // exclusive index of the end of the extended segment
-    	}
-    	eLen = localExtend;            // number of bases to extend past the end of the last exon
-    	
-    	/* Copy the extension counts */
-		copyToLocalCounts(chr, eStart, cStart, eLen, floatCounts);
-    	// System.arraycopy(this.startCounts.get(chr),eStart, counts, cStart, eLen);     // ******************
-		// fill the gCoords array with genomic coordinates:
-		for (int i=0; i<eLen; i++) {
-			gCoords[cStart+i]=eStart+i;
-		}
-    	/*************************************************************************************************************/
-
     	/* Iterate a sliding window across the counts array and sum the counts over the window. Create a new Window object
     	 * for each step and add them to the output list.
     	 */
@@ -312,39 +522,41 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	} else {
     		gStrand = "+";
     	}
-    	
-    	while (sumEnd < aLen) {
-    		if (gCoords[sumStart]>=gCoords[sumEnd]) {
-    			/* this will occur if a gene length plus the window extension are shorter than one full window width,
-    			 * or if the extension is shortened because it would overlap a neighboring gene. The last window will be
-    			 * shorter than the nominal window width (This might affect the significance calculation.)*/
-    			// locate the last non-zero entry in the gCoords array, which will give the last valid genomic coordinate
-    			int lastValid = sumStart-1;
-    			for (int i=sumStart;i<sumEnd;i++) {
-    				if (gCoords[i]==0) {
-    					break;
-    				}
-    				lastValid++;
-    			}
-    			sumEnd=lastValid;
-    		}
+
+    	aLen = tLen+localExtend;    // this is the total number of count locations being considered
+    	sumStart = 0;
+    	sumEnd = sumStart+window;
+
+    	if (aLen<=window) {
+    		sumEnd = aLen-1;     // number of valid reads, minus one to compensate for 0-based index;
+    		// deal with special case of the total gene length (plus extension) being shorter than a window length:
     		Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
-    		float countSum = 0;
-    		for (int i=sumStart; i<sumEnd; i++) {
-    			countSum += floatCounts[i];
+			float countSum = 0;
+			for (int i=sumStart; i<sumEnd; i++) {
+				countSum += floatCounts[i];
+			}
+			thisWindow.setCount(countSum);    // update count for this window
+			wList.add(thisWindow);            // add this window to the output list
+    	} else {
+    		while (sumEnd < aLen) {
+    			Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+    			float countSum = 0;
+    			for (int i=sumStart; i<sumEnd; i++) {
+    				countSum += floatCounts[i];
+    			}
+    			thisWindow.setCount(countSum);    // update count for this window
+    			wList.add(thisWindow);            // add this window to the output list
+    			/* update start and end for the next window */
+    			sumStart += (window-overlap);
+    			sumEnd = sumStart+window;
+    			/* Any partial windows after the first one will be skipped */
     		}
-    		thisWindow.setCount(countSum);    // update count for this window
-    		wList.add(thisWindow);            // add this window to the output list
-    		/* update start and end for the next window */
-    		sumStart += (window-overlap);
-    		sumEnd = sumStart+window;
-    		/* Any partial windows after the first one will be skipped */
     	}
-    	
+
     	return wList;
     }
-        
-    
+
+
     public void simpleCountTranscriptReadStarts (final Map<String,Collection<Gene>> annotations) {
     	/**
     	 * counts the number of reads starting within the boundaries of the exons of a transcript/gene
@@ -385,14 +597,20 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	 * @param	overlap	as the window slides, the overlap of each window with the previous one
     	 * @param	extend	number of bases past the last exon to extend the counting
     	 */
-    	HashMap<String,HashMap<String,LinkedList<Window>>> countsMap = new HashMap<String,HashMap<String,LinkedList<Window>>>();   // countsMap[chr][transID][Window]
+    	// countsMap[chr][transID][Window]
+    	HashMap<String,HashMap<String,LinkedList<Window>>> countsMap = 
+    			new HashMap<String,HashMap<String,LinkedList<Window>>>();   
     	LinkedList<Window> eCount;  
-    	
-    	// Iterate over all "chromosomes":
+    	// iTree[strand][chromosome]<tree>
+    	HashMap<String, HashMap<String, IntervalTree<String>>> iTree = new HashMap<String, HashMap<String, IntervalTree<String>>>();
+    	iTree.put("+", new HashMap<String, IntervalTree<String>>());
+    	iTree.put("-", new HashMap<String, IntervalTree<String>>());
+
+		// Iterate over all "chromosomes":
     	for(String chr:annotations.keySet()){
     		/* Build strand-specific IntervalTrees containing all exons for this segment */
-    		IntervalTree<String> iTree_fwd = new IntervalTree<String>();   // forward strand tree
-    		IntervalTree<String> iTree_rev = new IntervalTree<String>();   // reverse strand tree
+    		iTree.get("+").put(chr, new IntervalTree<String>());
+    		iTree.get("-").put(chr, new IntervalTree<String>());
 			// Iterate over all transcripts:
     		for(Gene gene : annotations.get(chr)) {
 				Set eSet = gene.getExonSet();
@@ -407,9 +625,9 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 					String intervalName = gName+"_"+eID;
 					if (strand.toString().equals("+")) {
 						// forward strand interval tree
-						iTree_fwd.put(eStart, eEnd, intervalName);
+						iTree.get("+").get(chr).put(eStart, eEnd, intervalName);
 					} else {
-						iTree_rev.put(eStart, eEnd, intervalName);
+						iTree.get("-").get(chr).put(eStart, eEnd, intervalName);
 					}						
 					eID++;	// increment the exon ID
 				}
@@ -434,7 +652,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 				}
 
 				// sum all counts starting within this exon set:
-				eCount = countWindowedReadStarts(eSet, iTree_fwd, iTree_rev, window, overlap, extend, gene);
+				eCount = countWindowedReadStarts(eSet, iTree, window, overlap, extend, gene);
 				
 				// add this window set to the HashMap:
 				if (!countsMap.containsKey(chr)) {
