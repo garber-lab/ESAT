@@ -164,7 +164,7 @@ public class NewESAT {
 		
 		/* Windowed read count test parameters */
 		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 400;
-		windowOverlap = argMap.isPresent("wOlap")? argMap.getInteger("wOlap") : 40;
+		windowOverlap = argMap.isPresent("wOlap")? argMap.getInteger("wOlap") : 0;   // only allow overlap if window significance is being tested
 		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 400;
 		
 		/* Multimapping parameters */
@@ -274,38 +274,63 @@ public class NewESAT {
 			HashMap<String,ArrayList<File>> bamfiles, File outFile) throws IOException {
 				
 		String baseName = outFile.getAbsolutePath();
-		File oFile = new File(baseName+".window.txt");
+		File wFile = new File(baseName+".window.txt");  // window-level counts file
+		File gFile = new File(baseName+".gene.txt");  // gene-level counts file
 		
-		// Open the output file:
-		FileWriter writer = new FileWriter(oFile);
+		// Open the output files:
+		FileWriter wWriter = new FileWriter(wFile);
+		FileWriter gWriter = new FileWriter(gFile);
 
-		/* write the data in ESAT format */
-		// Header line:
-		String hStr = "Symbol\tchr\tstart\tend";
+		// Header line for window file:
+		String wStr = "Symbol\tchr\tstart\tend";
+		// Header line for gene file:
+		String gStr = "Symbol";
 		for (String e:bamfiles.keySet()) {
-			hStr+="\t"+e;
+			wStr+="\t"+e;
+			gStr+="\t"+e;
 		}
-		writer.write(hStr+"\n");
+		wWriter.write(wStr+"\n");   // write the window file header  
+		gWriter.write(gStr+"\n");   // write the gene file header  
 		
 		int nExp = bamfiles.keySet().size();   // number of experiments
 		
 		for (String strand:windowTree.keySet()) {
 			for (String chr:windowTree.get(strand).keySet()) {
+				// Create storage for gene-level counts:
+				HashMap<String, float[]> gCounts = new HashMap<String, float[]>();
 				// Iterate through the interval tree to extract the counts for each window:
 				Iterator<EventCounter> eIter = windowTree.get(strand).get(chr).valueIterator();
 				while (eIter.hasNext()) {
 					EventCounter e = eIter.next();
+					// extract the gene name and create storage for the gene counts, if necessary:
+					String[] wLoc = e.getName().split("\t");
+					String gName = wLoc[0]; 
+					if (!gCounts.containsKey(gName)) {
+						gCounts.put(gName, new float[nExp]);
+					}
 					String oStr = e.getName();
 					for (int i=0; i<nExp; i++) {
 						oStr+="\t"+e.getCounts(i);
+						gCounts.get(gName)[i]+=e.getCounts(i);
 					}
-					writer.write(oStr+"\n");
+					wWriter.write(oStr+"\n");
+				}
+				// write out counts for all genes for this chromosome:
+				for (String gene:gCounts.keySet()) {
+					String oStr = gene;
+					float[] counts = gCounts.get(gene);
+					for (int i=0; i<nExp; i++) {
+						oStr += "\t"+counts[i];
+					}
+					gWriter.write(oStr+"\n");
 				}
 			}
 		}
 
-		writer.flush();
-		writer.close();
+		wWriter.flush();
+		wWriter.close();
+		gWriter.flush();
+		gWriter.close();
 	}	
 	
 	public static void writeOutputESATFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, 
