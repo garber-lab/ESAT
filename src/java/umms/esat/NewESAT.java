@@ -48,13 +48,17 @@ import umms.core.readers.MappingTableReader;
 public class NewESAT {
 	
 	// This usage message needs to be updated to reflect the actual operation of NewESAT!!!
-	static final String usage = "[USAGE MESSAGE IS NOT CORRECT]Usage: ESAT <input bam file> [-scs [-wellBC <n>] [-UMI <m>]] "+
-			"\n\t-in <input bam file>: input bam file (sorting and indexing not required)" + 
-			"\n\t-out <output file name>"+
-			"\n\t-annotations <reference annotation file [BED file]>"+
+	static final String usage = "Usage: NewESAT -in <input Bam File> | -alignments <input filelist file>"+
+			"\n\t-annotations <reference annotation file [BED file]> | -geneMapping <gene-to-transcript map file>"+
+			"\n\t-out <output file basename>"+
 			"\n\t**************************************************************"+
 			"\n\t\tOPTIONAL arguments"+
-			"\n\t**************************************************************";
+			"\n\t**************************************************************"+
+			"\n\t-quality <minimum alignment quality [default: no filtering]>"+ 
+			"\n\tWindow parameters:"+
+			"\n\t\t-wLen <window length [default: 400]>"+
+			"\n\t\t-wOlap <window overlap [default: 0]"+
+			"\n\t\t-wExt <extension past end of transcript [default: 400]>\n";
 	
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
 	private static File outFile;
@@ -74,7 +78,7 @@ public class NewESAT {
 	private static SAMSequenceCountingDict bamDict;
 	private static Hashtable<String, Gene> geneTable;
 	
-	public NewESAT(String[] args) throws IOException, ParseException {
+	public NewESAT(String[] args) throws IOException, ParseException, IllegalArgumentException {
 	
 		/*
 		 * @param for ArgumentMap - size, usage, default task
@@ -164,8 +168,20 @@ public class NewESAT {
 		
 		/* Windowed read count test parameters */
 		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 400;
+		if (windowLength<1) {
+			logger.error("Illegal value for wLen: "+windowLength+" (window length must be >= 1.");
+			throw new IllegalArgumentException();
+		}
 		windowOverlap = argMap.isPresent("wOlap")? argMap.getInteger("wOlap") : 0;   // only allow overlap if window significance is being tested
+		if (windowOverlap<0) {
+			logger.error("Illegal value for wOlap: "+windowOverlap+" (window overlap must be >= 0.");
+			throw new IllegalArgumentException();
+		}
 		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 400;
+		if (windowExtend<0) {
+			logger.error("Illegal value for wExt: "+windowExtend+" (extension must be >= 0.");
+			throw new IllegalArgumentException();
+		}
 		
 		/* Multimapping parameters */
 		if (!argMap.isPresent("multimap")) {
@@ -184,6 +200,10 @@ public class NewESAT {
 		} else {
 			qFilter = true;
 			qThresh = argMap.getInteger("quality");   // quality must be GREATER THAN qThresh for read to be processed
+			if (qThresh<0) {
+				logger.error("Illegal value for quality: "+qThresh+" (quality threshold must be >= 0.");
+				throw new IllegalArgumentException();
+			}
 		}
 		
 		// Allow multiple inputs 
