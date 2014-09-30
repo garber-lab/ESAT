@@ -366,16 +366,18 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	int eLen = 0; 
     	String gStrand;   // strand of the gene
     	int localExtend = extend;    // default extension
+    	IntervalTree<String> exonTree = new IntervalTree<String>();
+		String oStr = null;
 
     	LinkedList<Window> wList = new LinkedList<Window>();    // Is this the right type?...
 
-    	Iterator<Annotation> eIter = eSet.iterator();    // iterator over the exons
-
     	/* get the BED file segment to which this segment is aligned: */
+    	Iterator<Annotation> eIter = eSet.iterator();    // iterator over the exons
     	Annotation e = eIter.next(); 
     	String chr = e.getChr();
     	String strand = e.getStrand().toString();
-
+    	int nExons = eSet.size();      // number of exons for this gene
+    	
     	// reset the iterator:
     	eIter = eSet.iterator();
 
@@ -385,11 +387,17 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	int gMin = Integer.MAX_VALUE;
     	int gMax = 0;
     	int tLen = 0;   // transcript length, in bases
-    	
+    	int eID = 0;    // exon ID
+
     	while (eIter.hasNext()) {
     		e = eIter.next();
     		eStart = e.getStart();
     		eEnd = e.getEnd();
+
+    		// add an interval to the interval tree:
+    		exonTree.put(eStart,  eEnd, gene.getName()+".e"+eID);
+    		eID++;
+    		
     		/* find earliest start and latest end */
     		if (eStart<gMin) {
     			gMin = eStart;
@@ -397,16 +405,18 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		if (eEnd>gMax) {
     			gMax = eEnd;
     		}
+    		
+    		// update the transcript length
     		tLen += eEnd-eStart;
     	}
     	
-		String oStr = null;
     	/* Step 2: Determine the maximum length, up to "extend" bases, that the transcript can be extended without
     	 * overlapping a nearby gene. This will be the new value of "localExtend"
     	 */
     	// if ((gene.isNegativeStrand() && <task is 3prime>) || (!gene.isNegativeStrand() && <task is 5prime>))  // eventual test 
     	if (gene.isNegativeStrand()) {
     		/* "-" strand (with 3prime libraries, or "+" strand with 5prime libraries) */
+    		eStart = exonTree.min().getStart();           // "leftmost" transcript genomic coordinate
     		int minExt = Math.max(0, eStart-extend);      // initial minimum of extension
     		int maxExt = eStart;
     		if (iTree.get(strand).get(chr).numOverlappers(minExt, maxExt) > 0) {
@@ -432,8 +442,13 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 			if (localExtend<extend) {
 				logger.warn("Gene "+gene.getName()+" ("+strand+") extension overlaps "+oStr+". "+extend+"-base extension shortened to "+localExtend);
 			}
+			// if the there is an extension past the transcript, andd an interval to the tree:
+			if (localExtend>0) {
+				exonTree.put(minExt, maxExt, gene.getName()+".ext");
+			}
     	} else {
     		/* "+" strand (with 3prime libraries, or "-" strand with 5prime libraries) */
+    		eEnd = exonTree.max().getEnd();             // "rightmost" transcript genomic coordinate
     		int minExt = eEnd;
     		int maxExt = Math.min(eEnd+extend, getChrLength(chr));  // initial maximum of extension 
     		if (iTree.get(strand).get(chr).numOverlappers(minExt, maxExt) > 0) {
@@ -458,6 +473,10 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 			localExtend = maxExt-minExt;   // final extension value
 			if (localExtend<extend) {
 				logger.warn("Gene "+gene.getName()+" ("+strand+") extension overlaps "+oStr+". "+extend+"-base extension shortened to "+localExtend);
+			}
+			// if the there is an extension past the transcript, andd an interval to the tree:
+			if (localExtend>0) {
+				exonTree.put(minExt, maxExt, gene.getName()+".ext");
 			}
     	}
     	
@@ -528,28 +547,42 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	sumEnd = sumStart+window;
 
     	if (aLen<=window) {
-    		sumEnd = aLen-1;     // number of valid reads, minus one to compensate for 0-based index;
     		// deal with special case of the total gene length (plus extension) being shorter than a window length:
-    		Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+    		sumEnd = aLen-1;     // number of valid reads, minus one to compensate for 0-based index;
 			float countSum = 0;
 			for (int i=sumStart; i<sumEnd; i++) {
 				countSum += floatCounts[i];
 			}
-			thisWindow.setCount(countSum);    // update count for this window
-			wList.add(thisWindow);            // add this window to the output list
+			// don't bother saving windows with zero counts:
+			if (countSum>0.0) {
+	    		Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+				thisWindow.setCount(countSum);    // update count for this window
+				// if the gene has more than one exon, check to see if the window spans more than one
+				if (nExons > 1) {
+					thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
+				}
+				wList.add(thisWindow);            // add this window to the output list
+			}
     	} else {
     		while (sumEnd < aLen) {
-    			Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
     			float countSum = 0;
     			for (int i=sumStart; i<sumEnd; i++) {
     				countSum += floatCounts[i];
     			}
-    			thisWindow.setCount(countSum);    // update count for this window
-    			wList.add(thisWindow);            // add this window to the output list
+    			// don't bother saving windows with zero counts:
+    			if (countSum>0.0) {
+        			Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+        			thisWindow.setCount(countSum);    // update count for this window
+    				// if the gene has more than one exon, check to see if the window spans more than one
+    				if (nExons > 1) {
+    					thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
+    				}
+    				wList.add(thisWindow);            // add this window to the output list
+    			}
     			/* update start and end for the next window */
     			sumStart += (window-overlap);
     			sumEnd = sumStart+window;
-    			/* Any partial windows after the first one will be skipped */
+    			/* NB: Any partial windows will be skipped! */
     		}
     	}
 

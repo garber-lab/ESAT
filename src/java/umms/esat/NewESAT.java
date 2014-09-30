@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.NoSuchElementException;
@@ -134,10 +135,13 @@ public class NewESAT {
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
 
 		/* need a new version of a writer that writes counts in each window for each experiment !!!!!!! */
-		writeOutputESATFile(countsMap, annotations, outFile);   // ?????
+		//writeOutputESATFile(countsMap, annotations, outFile);   // ?????
+		//writeSummaryCountsFile(windowTree, outFile);
+		writeExperimentCountsFile(windowTree, bamFiles, outFile);
 		
 	}
 	
+									
 	public static void main(String[] args) throws ParseException, IOException {
 		new NewESAT(args);
 	}
@@ -266,6 +270,44 @@ public class NewESAT {
 		writer.close();
 	}
 
+	public void writeExperimentCountsFile(HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree,
+			HashMap<String,ArrayList<File>> bamfiles, File outFile) throws IOException {
+				
+		String baseName = outFile.getAbsolutePath();
+		File oFile = new File(baseName+".window.txt");
+		
+		// Open the output file:
+		FileWriter writer = new FileWriter(oFile);
+
+		/* write the data in ESAT format */
+		// Header line:
+		String hStr = "Symbol\tchr\tstart\tend";
+		for (String e:bamfiles.keySet()) {
+			hStr+="\t"+e;
+		}
+		writer.write(hStr+"\n");
+		
+		int nExp = bamfiles.keySet().size();   // number of experiments
+		
+		for (String strand:windowTree.keySet()) {
+			for (String chr:windowTree.get(strand).keySet()) {
+				// Iterate through the interval tree to extract the counts for each window:
+				Iterator<EventCounter> eIter = windowTree.get(strand).get(chr).valueIterator();
+				while (eIter.hasNext()) {
+					EventCounter e = eIter.next();
+					String oStr = e.getName();
+					for (int i=0; i<nExp; i++) {
+						oStr+="\t"+e.getCounts(i);
+					}
+					writer.write(oStr+"\n");
+				}
+			}
+		}
+
+		writer.flush();
+		writer.close();
+	}	
+	
 	public static void writeOutputESATFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, 
 			Map<String, Collection<Gene>> annotations, 
 			File outFile) throws IOException {
@@ -573,7 +615,7 @@ public class NewESAT {
 		
 		// keep track of how many non-significant windows there are
 		int inWindowCount = 0;
-		int outWindowCount = 0;
+
 		// Iterate over chromosomes:
 		for (String chr:countsMap.keySet()) {
 			// Iterate over genes:
@@ -583,35 +625,29 @@ public class NewESAT {
 				while (wIter.hasNext()) {
 					Window w = wIter.next();
 					inWindowCount++;
-					if (w.getCount()==0.0) {
-						// skip this Window
-						continue;
-					} else {
-						// add a new Window to the cleanCountsMap:
-						String strand = w.getStrand();
-						//String nName = gene+"."+listIdx;
-						// TEST extended name:
-						String nName = gene+"."+listIdx+" "+chr+":"+w.getStart()+"-"+w.getEnd()+" ("+strand+")";
-						listIdx++;  // increment the list index counter
-						if (w.getStart()>=w.getEnd()) {
-							logger.warn("start>end for "+gene);
-						}
-							
-						EventCounter e = new EventCounter(nName, nExp);
-						// *** TEST: initialize the event counter with the total alignments
-						e.setSumCounts(w.getCount());
-						if (!cleanTree.get(strand).containsKey(chr)) {
-							cleanTree.get(strand).put(chr, new IntervalTree<EventCounter>());
-						}
-						cleanTree.get(strand).get(chr).put(w.getStart(),w.getEnd(), e);   // add the node to the tree
-						outWindowCount++;
+					// add a new Window to the cleanCountsMap:
+					String strand = w.getStrand();
+					//String nName = gene+"."+listIdx;
+					// tab-delimited node name:
+					String nName = gene+"\t"+chr+"\t"+w.getStart()+"\t"+w.getEnd();
+					//String nName = gene+"."+listIdx+" "+chr+":"+w.getStart()+"-"+w.getEnd()+" ("+strand+")";
+					listIdx++;  // increment the list index counter
+					if (w.getStart()>=w.getEnd()) {
+						logger.warn("start>end for "+gene);
 					}
+
+					EventCounter e = new EventCounter(nName, nExp, w);
+					// *** TEST: initialize the event counter with the total alignments
+					e.setSumCounts(w.getCount());
+					if (!cleanTree.get(strand).containsKey(chr)) {
+						cleanTree.get(strand).put(chr, new IntervalTree<EventCounter>());
+					}
+					cleanTree.get(strand).get(chr).put(w.getStart(),w.getEnd(), e);   // add the node to the tree
 				}
 			}
 		}
 		
 		logger.info("Total window count: "+inWindowCount);
-		logger.info("Non-zero window count: "+outWindowCount);
 		
 		return cleanTree;
 	}
@@ -683,9 +719,9 @@ public class NewESAT {
 				    			//		") has "+windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)+" overlapping intervals");
 				    			while (oIter.hasNext()) {
 				    				Node<EventCounter> n = oIter.next();
-				    				// update the count for this interval:
-				    				n.getValue().incrementCount(eIdx);
-				    				//logger.info("  "+n.getValue().getName());
+				    				// 	update the count for this interval:
+				    				n.getValue().incrementIntervalCount(rStart, rStart+1, eIdx);   // increment counter if read is contained in an interval
+				    				//	logger.info("  "+n.getValue().getName());
 				    			}
 				    		}
 				    	}
