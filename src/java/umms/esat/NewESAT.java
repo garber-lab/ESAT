@@ -55,6 +55,7 @@ public class NewESAT {
 			"\n\t\tOPTIONAL arguments"+
 			"\n\t**************************************************************"+
 			"\n\t-quality <minimum alignment quality [default: no filtering]>"+ 
+			"\n\t-task <score3p | score5p> [default: score3p]"+
 			"\n\tWindow parameters:"+
 			"\n\t\t-wLen <window length [default: 400]>"+
 			"\n\t\t-wOlap <window overlap [default: 0]"+
