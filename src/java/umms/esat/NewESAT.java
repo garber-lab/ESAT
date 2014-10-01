@@ -108,17 +108,17 @@ public class NewESAT {
 		
 		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
 		if (gMapping) {
-			geneTable = loadGeneTableFromFile(gMapFile);       // ?????
+			geneTable = loadGeneTableFromFile(gMapFile); 
 		}
 		
 		/* collect all read start location counts from the input alignments file(s) */
-		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh);   // ?????
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh); 
 	
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
 		if (gMapping) {
 			// Create the annotations map, keyed by chromosome:
-			annotations = geneMapToAnnotations(geneTable);    // ?????
+			annotations = geneMapToAnnotations(geneTable);  
 		} else {
 			// load the annotations from the annotation (BED) file:
 			annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
@@ -127,8 +127,7 @@ public class NewESAT {
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
 		
-		/* Make a new counts map containing only Windows with non-zero counts across ALL experiments */
-		// !!! this should be modified to simply return the IntervalTree rather than do this in two steps.... 
+		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
 		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
 		
 		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */

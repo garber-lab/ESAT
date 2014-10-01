@@ -7,16 +7,17 @@ import net.sf.samtools.SAMSequenceRecord;
 
 public class SAMSequenceCountingDictFloat extends SAMSequenceCountingDict {
 	
-	protected HashMap<String, float[]> startCounts = new HashMap<String, float[]>(); 	
+	protected HashMap<String, HashMap<String,float[]>> startCounts = new HashMap<String, HashMap<String, float[]>>(); 	
 
 	// **** FLOATING-POINT version simply increments the count by x
-    public void incrementStartCounts(String refName, int alignStart, float fractCount) {
-    	startCounts.get(refName)[alignStart]+=fractCount;   // increment the counter
+    public void incrementStartCounts(String refName, String strand, int alignStart, float fractCount) {
+    	startCounts.get(refName).get(strand)[alignStart]+=fractCount;   // increment the counter
     }
 
-    public void copyToLocalCounts(String chr, int eStart, int cStart, int eLen, float[] floatCounts) {
-    	System.arraycopy(startCounts.get(chr),  eStart, floatCounts, cStart, eLen);
+    public void copyToLocalCounts(String chr, String strand, int eStart, int cStart, int eLen, float[] floatCounts) {
+    	System.arraycopy(startCounts.get(chr).get(strand), eStart, floatCounts, cStart, eLen);
     }
+    
     public void updateCount(final SAMRecord r) {
     	/** 
     	 * increments the counter for how many reads had alignments beginning at this position.
@@ -30,7 +31,14 @@ public class SAMSequenceCountingDictFloat extends SAMSequenceCountingDict {
     	String refName;
     	int alignStart;
     	float fractCount = 1; 
+    	String strand;
     	
+    	if (r.getReadNegativeStrandFlag()) {
+    		strand = "-";
+    	} else  {
+    		strand = "+";
+    	}
+     	
     	// Check to see if storage has already been created for this reference sequence:
     	refName = r.getReferenceName();
     	alignStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
@@ -40,12 +48,15 @@ public class SAMSequenceCountingDictFloat extends SAMSequenceCountingDict {
     	if (cString!="*" && !startCounts.containsKey(refName)) {
     		// Find the maximum coordinate of the refName in the dictionary
     		SAMSequenceRecord seq = this.getSequence(refName);
-    		// Allocate a short int array for storage of the number of reads starting at each location
-    		startCounts.put(refName, new float[seq.getSequenceLength()]);
+    		// Allocate a float array for storage of the number of reads starting at each location on each strand
+    		startCounts.put(refName, new HashMap<String, float[]>());
+    		startCounts.get(refName).put("+", new float[seq.getSequenceLength()]);   // forward strand
+    		startCounts.get(refName).put("-", new float[seq.getSequenceLength()]);   // forward strand
+    		
     	}
     	// Skip unaligned reads:
     	if (cString!="*") {
-    		incrementStartCounts(refName, alignStart, fractCount);
+    		incrementStartCounts(refName, strand, alignStart, fractCount);
     	}
     }
 
@@ -53,12 +64,7 @@ public class SAMSequenceCountingDictFloat extends SAMSequenceCountingDict {
     	return startCounts.containsKey(chr);
     }
     
-    public float getStartCounts(String chr, int i) {
-		return startCounts.get(chr)[i];
+    public float getStartCounts(String chr, String strand, int i) {
+		return startCounts.get(chr).get(strand)[i];
     }
-    
-    public int getChrLength(String chr) {
-		return startCounts.get(chr).length;
-    }
-    
 }
