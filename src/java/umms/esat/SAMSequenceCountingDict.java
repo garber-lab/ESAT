@@ -115,6 +115,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		final int window, 
     		final int overlap, 
     		final int extend,
+    		String task,
     		final Gene gene) {
     	/**
     	 * sums the count of all reads starting within sliding windows across all of the 
@@ -187,8 +188,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	/* Step 2: Determine the maximum length, up to "extend" bases, that the transcript can be extended without
     	 * overlapping a nearby gene. This will be the new value of "localExtend"
     	 */
-    	// if ((gene.isNegativeStrand() && <task is 3prime>) || (!gene.isNegativeStrand() && <task is 5prime>))  // eventual test 
-    	if (gStrand.equals("-")) {
+    	//if (gStrand.equals("-")) {
+    	if ((gStrand.equals("-") && task.equals("score3p")) || (gStrand.equals("+") && task.equals("score5p"))) {
     		/* "-" strand (with 3prime libraries, or "+" strand with 5prime libraries) */
     		eStart = exonTree.min().getStart();           // "leftmost" transcript genomic coordinate
     		int minExt = Math.max(0, eStart-extend);      // initial minimum of extension
@@ -265,8 +266,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	/* If 3' library and negative strand, or 5' library and positive strand copy counts and genomic coordinates 
     	 * for the extension to the "left" of the transcript start: 
     	 */
-    	// if ((gene.isNegativeStrand() && <task is 3prime>) || (!gene.isNegativeStrand() && <task is 5prime>))  // eventual test 
-    	if (gStrand.equals("-")) {
+    	//if (gStrand.equals("-")) {
+    	if ((gStrand.equals("-") && task.equals("score3p")) || (gStrand.equals("+") && task.equals("score5p"))) {
     		/* "-" strand (with 3prime libraries, or "+" strand with 5prime libraries) */
     		eStart = gMin-localExtend;
     		eLen = localExtend;
@@ -293,8 +294,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	/* If 3' library and positive strand, or 5' library and negative strand copy counts and genomic coordinates 
     	 * for the extension to the "right" of the transcript end: 
     	 */
-    	// if ((!gene.isNegativeStrand() && <task is 5prime>) || (gene.isNegativeStrand() && <task is 3prime>))  // eventual test 
-    	if (!gene.isNegativeStrand()) {
+    	//if (gStrand.equals("+")) {
+    	if ((gStrand.equals("+") && task.equals("score3p")) || (gStrand.equals("-") && task.equals("score5p"))) {
     		/* "+" strand (with 3prime libraries, or "-" strand with 5prime libraries) */
     		eStart = gMax;   // +1?
     		eLen = localExtend;
@@ -388,7 +389,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     public HashMap<String,HashMap<String, LinkedList<Window>>> countWindowedTranscriptReadStarts (final Map<String,Collection<Gene>> annotations, 
     												final int window, 
     												final int overlap,
-    												final int extend) {
+    												final int extend,
+    												String task) {
     	/**
     	 * counts the number of reads starting within each sliding window of "window" bases with and
     	 * overlap of "overlap" bases. The transcript is extended past the last exon "extend" bases past
@@ -454,7 +456,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 				}
 
 				// sum all counts starting within this exon set:
-				eCount = countWindowedReadStarts(eSet, iTree, window, overlap, extend, gene);
+				eCount = countWindowedReadStarts(eSet, iTree, window, overlap, extend, task, gene);
 				
 				// add this window set to the HashMap:
 				if (!countsMap.containsKey(chr)) {

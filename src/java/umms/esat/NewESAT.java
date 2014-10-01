@@ -71,6 +71,7 @@ public class NewESAT {
 	private static int qThresh;         // quality threshold (reads must be GREATER THAN qThresh, if filtering is on 
 	private static boolean gMapping;
 	private static File gMapFile;       // name of the gene mapping file
+	private static String task; 		// 3' or 5' library
 	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
 
@@ -89,7 +90,7 @@ public class NewESAT {
 		BasicConfigurator.configure();
 		
 		/* seems like a useful utility that can probably be stripped down */
-		ArgumentMap argMap = CLUtil.getParameters(args,usage,"dummy");  /* no default task for now */
+		ArgumentMap argMap = CLUtil.getParameters(args,usage,"score3p");  /* no default task for now */
 		if (!validateArguments(argMap)) {
 			logger.error("Please correct input arguments and retry.");
 			throw new IOException();
@@ -125,7 +126,7 @@ public class NewESAT {
 		}
 		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
-		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend);
+		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task);
 		
 		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
 		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
@@ -192,6 +193,9 @@ public class NewESAT {
 				throw new IOException();
 			}
 		}
+		
+		/* 3' or 5' library (defaults to 3') */
+		task = argMap.getTask();  
 		
 		/* Quality filtering */
 		if (!argMap.isPresent("quality")) {
