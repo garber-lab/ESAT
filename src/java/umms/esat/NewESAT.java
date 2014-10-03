@@ -306,9 +306,9 @@ public class NewESAT {
 		FileWriter gWriter = new FileWriter(gFile);
 
 		// Header line for window file:
-		String wStr = "Symbol\tchr\tstart\tend";
+		String wStr = "Symbol\tchr\tstart\tend\tstrand";
 		// Header line for gene file:
-		String gStr = "Symbol";
+		String gStr = "Symbol\tchr\tstrand";
 		for (String e:bamfiles.keySet()) {
 			wStr+="\t"+e;
 			gStr+="\t"+e;
@@ -333,6 +333,7 @@ public class NewESAT {
 						gCounts.put(gName, new float[nExp]);
 					}
 					String oStr = e.getName();
+					oStr += "\t"+strand;
 					for (int i=0; i<nExp; i++) {
 						oStr+="\t"+e.getCounts(i);
 						gCounts.get(gName)[i]+=e.getCounts(i);
@@ -341,7 +342,7 @@ public class NewESAT {
 				}
 				// write out counts for all genes for this chromosome:
 				for (String gene:gCounts.keySet()) {
-					String oStr = gene;
+					String oStr = gene+"\t"+chr+"\t"+strand;
 					float[] counts = gCounts.get(gene);
 					for (int i=0; i<nExp; i++) {
 						oStr += "\t"+counts[i];
