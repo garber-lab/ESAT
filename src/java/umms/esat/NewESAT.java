@@ -59,7 +59,9 @@ public class NewESAT {
 			"\n\tWindow parameters:"+
 			"\n\t\t-wLen <window length [default: 400]>"+
 			"\n\t\t-wOlap <window overlap [default: 0]"+
-			"\n\t\t-wExt <extension past end of transcript [default: 400]>\n";
+			"\n\t\t-wExt <extension past end of transcript [default: 400]>"+
+			"\n\tSignificance testing:"+
+			"\n\t\t-sigTest <minimum allowable p-value>\n";
 	
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
 	private static File outFile;
@@ -73,6 +75,7 @@ public class NewESAT {
 	private static boolean gMapping;
 	private static File gMapFile;       // name of the gene mapping file
 	private static String task; 		// 3' or 5' library
+	private static float pValThresh;		// minimum allowable p-value for window significance testing
 	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
 
@@ -127,7 +130,7 @@ public class NewESAT {
 		}
 		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
-		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task);
+		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh);
 		
 		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
 		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
@@ -261,6 +264,9 @@ public class NewESAT {
 			logger.error("Either an annotation file or gene-to-transcript mapping file must be provided.");
 			return false;
 		}
+		
+		// Significance testing:
+		pValThresh = argMap.isPresent("sigTest")? argMap.getFloat("sigTest") : 1;   
 
 		return true;   // default return value if all tests pass
 	}

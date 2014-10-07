@@ -17,6 +17,8 @@ import org.apache.log4j.Logger;
 
 import broad.core.datastructures.IntervalTree;
 import broad.core.datastructures.IntervalTree.Node;
+import broad.core.math.ScanStatistics;
+
 import umms.core.annotation.Annotation;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
@@ -116,7 +118,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		final int overlap, 
     		final int extend,
     		String task,
-    		final Gene gene) {
+    		final Gene gene,
+    		float pValThresh) {
     	/**
     	 * sums the count of all reads starting within sliding windows across all of the 
     	 * exons in this Set. An array is created by concatenating the exons and extending by
@@ -124,6 +127,16 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	 * with the previous window, counting the number of reads in each window.  
     	 * 
     	 * @param	eSet	a Set of Annotations defining the boundaries of a set of exons
+    	 * @param	iTree	an interval tree containing ...
+    	 * @param	window	sliding window width
+    	 * @param	overlap	overlap from one sliding window position and the next
+    	 * @param	extend	maximum number of bases to extend past the boundary of the transcript
+    	 * @param	task	library source 3' ("score3p") or 5' ("score5p")
+    	 * @param	gene	source gene for this exon set
+    	 * @param	pValThresh	if only "significant" windows are being processed, this indicates
+    	 * 						the significance threshold. Windows with a p-value of greater than 
+    	 * 						this value are ignored. If this value is 1.0, it indicates that 
+    	 * 						all windows with non-zero counts should be processed.
     	 * @return			a list of windows and counts. 
     	 */
     	int aLen = 0;
@@ -136,8 +149,20 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	int localExtend = extend;    // default extension
     	IntervalTree<String> exonTree = new IntervalTree<String>();
 		String oStr = null;
-
-    	LinkedList<Window> wList = new LinkedList<Window>();    // Is this the right type?...
+		boolean sigTesting;
+		double lambda;
+		
+		// set significance test flag:
+		if (pValThresh==1.0) {
+			// if pValThresh is 1.0, no testing:
+			sigTesting = false;
+		} else {
+			// otherwise, do the significance testing, using the specified threshold:
+			sigTesting = true;
+		}
+		
+		// initialize the output linked list:
+    	LinkedList<Window> wList = new LinkedList<Window>();    
 
     	// get the gene strand
     	if (gene.isNegativeStrand()) {
@@ -312,7 +337,15 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	int sumStart = 0;					// start of summing window
     	int sumEnd = sumStart+window;       // end of summing window (exclusive)
 
-    	aLen = tLen+localExtend;    // this is the total number of count locations being considered
+    	aLen = tLen+localExtend;    // this is the total length of the transcript, plus any extension
+    	
+    	/* if using a SCAN statistic-based p-value threshold, compute lambda */
+    	if (sigTesting) {
+    		lambda = computeLocalLambda(aLen, floatCounts);
+    	} else {
+    		lambda = 0;
+    	}
+    	
     	sumStart = 0;
     	sumEnd = sumStart+window;
 
@@ -323,15 +356,18 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 			for (int i=sumStart; i<sumEnd; i++) {
 				countSum += floatCounts[i];
 			}
-			// don't bother saving windows with zero counts:
+			// don't bother saving windows with zero counts, or (if sigTesting) with p-val>pValThresh:
 			if (countSum>0.0) {
-	    		Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
-				thisWindow.setCount(countSum);    // update count for this window
-				// if the gene has more than one exon, check to see if the window spans more than one
-				if (nExons > 1) {
-					thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
+				if (sigTesting && ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen)>pValThresh) {
+				} else {
+					Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+					thisWindow.setCount(countSum);    // update count for this window
+					// if the gene has more than one exon, check to see if the window spans more than one
+					if (nExons > 1) {
+						thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
+					}
+					wList.add(thisWindow);            // add this window to the output list
 				}
-				wList.add(thisWindow);            // add this window to the output list
 			}
     	} else {
     		while (sumEnd < aLen) {
@@ -341,13 +377,16 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     			}
     			// don't bother saving windows with zero counts:
     			if (countSum>0.0) {
-        			Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
-        			thisWindow.setCount(countSum);    // update count for this window
-    				// if the gene has more than one exon, check to see if the window spans more than one
-    				if (nExons > 1) {
-    					thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
+    				if (sigTesting && ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen)>pValThresh) {
+    				} else {
+    					Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+    					thisWindow.setCount(countSum);    // update count for this window
+    					// if the gene has more than one exon, check to see if the window spans more than one
+    					if (nExons > 1) {
+    						thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
+    					}
+    					wList.add(thisWindow);            // add this window to the output list
     				}
-    				wList.add(thisWindow);            // add this window to the output list
     			}
     			/* update start and end for the next window */
     			sumStart += (window-overlap);
@@ -359,6 +398,20 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	return wList;
     }
 
+    public double computeLocalLambda(int nBases, float[] readCount) {
+    	double lambda;
+    	double countSum = 0.0;
+    	
+    	// compute the total counts aligned to this transcript:
+    	for (int i=0; i<nBases; i++) {
+    		countSum+=readCount[i];
+    	}
+    	
+    	// compute lambda:
+    	lambda = countSum/nBases;
+    	
+    	return lambda;
+    }
 
     public void simpleCountTranscriptReadStarts (final Map<String,Collection<Gene>> annotations) {
     	/**
@@ -390,7 +443,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     												final int window, 
     												final int overlap,
     												final int extend,
-    												String task) {
+    												String task,
+    												float pValThresh) {
     	/**
     	 * counts the number of reads starting within each sliding window of "window" bases with and
     	 * overlap of "overlap" bases. The transcript is extended past the last exon "extend" bases past
@@ -400,6 +454,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	 * @param	window	the length of the sliding window, in bases
     	 * @param	overlap	as the window slides, the overlap of each window with the previous one
     	 * @param	extend	number of bases past the last exon to extend the counting
+    	 * @param	task	library type: 3' ("score3p") or 5' ("score5p")
+    	 * @param	pValThresh	p-value threshold for significance testing
     	 */
     	// countsMap[chr][transID][Window]
     	HashMap<String,HashMap<String,LinkedList<Window>>> countsMap = 
@@ -456,7 +512,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 				}
 
 				// sum all counts starting within this exon set:
-				eCount = countWindowedReadStarts(eSet, iTree, window, overlap, extend, task, gene);
+				eCount = countWindowedReadStarts(eSet, iTree, window, overlap, extend, task, gene, pValThresh);
 				
 				// add this window set to the HashMap:
 				if (!countsMap.containsKey(chr)) {
