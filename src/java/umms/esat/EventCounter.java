@@ -51,4 +51,14 @@ public class EventCounter {
 			counts[n]++;
 		} 
 	}
+
+	public void addIntervalCount(int iStart, int iEnd, int n, float fractCount) {
+		// If the node's window contains an interval tree, need to do a second-level check to see if
+		// the read actually falls into one of the exon ranges. If there is no interval tree, it means that 
+		// this genomic range does not span more than one exon, so just update the count without any further checking.
+
+		if (!w.hasITree() || w.hasOverlap(iStart, iEnd)) { 
+			counts[n]+=fractCount;
+		} 
+	}
 }

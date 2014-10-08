@@ -117,7 +117,7 @@ public class NewESAT {
 		}
 		
 		/* collect all read start location counts from the input alignments file(s) */
-		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh); 
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap); 
 	
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
@@ -136,7 +136,7 @@ public class NewESAT {
 		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
 		
 		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
-		fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh);
+		fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap);
 		
 		/* STOP AND REPORT TIMING */
 		long stopTime = System.nanoTime();
@@ -148,7 +148,6 @@ public class NewESAT {
 		writeExperimentCountsFile(windowTree, bamFiles, outFile);
 		
 	}
-	
 									
 	public static void main(String[] args) throws ParseException, IOException {
 		new NewESAT(args);
@@ -189,7 +188,7 @@ public class NewESAT {
 		
 		/* Multimapping parameters */
 		if (!argMap.isPresent("multimap")) {
-			multimap = "ignore";
+			multimap = "normal";     // default to treat multimapped reads as normal reads
 		} else {
 			multimap = argMap.get("multimap");
 			if (!(multimap.equals("ignore") || multimap.equals("normal") || multimap.equals("scale"))) {
@@ -337,11 +336,15 @@ public class NewESAT {
 					if (wLoc.length==1) {
 						// if the event counter name only has one field, it is a gene-level counter:
 						String oStr = gName+"\t"+chr+"\t"+strand;
+						float counts=0;
 						for (int i=0; i<nExp; i++) {
 							oStr += "\t"+e.getCounts(i);
+							counts+=e.getCounts(i);
 						}
-						gWriter.write(oStr+"\n");	// write to gene-level file
-						
+						if (counts>0) {
+							// don't bother writing genes wiith no counts
+							gWriter.write(oStr+"\n");	// write to gene-level file
+						}
 					} else {
 						// otherwise, it is a window-level counter:
 						String oStr = e.getName();
@@ -562,7 +565,7 @@ public class NewESAT {
 	}
 	
 	public SAMSequenceCountingDict countReadStartsFromAlignments (SAMSequenceCountingDict bamDict, HashMap<String,ArrayList<File>> bamFiles,
-																	boolean qFilter, int qThresh) {
+																	boolean qFilter, int qThresh, String multimap) {
 		boolean firstFile = true;      // only read the header from the first alignment file
 		int goodQualityCount = 0;
 		int badQualityCount = 0;
@@ -621,7 +624,7 @@ public class NewESAT {
 								continue;
 							}
 						}
-						bamDict.updateCount(r);
+						bamDict.updateCount(r, multimap);
 						// update the read start count
 						validReadCount++;
 					} else {
@@ -716,7 +719,8 @@ public class NewESAT {
 	public void fillExperimentWindowCounter(HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree, 
 											HashMap<String,ArrayList<File>> bamFiles,
 											boolean qFilter,
-											int qThresh) {
+											int qThresh,
+											String multimap) {
 		
 		SAMRecord r;		// alignment
 		String rStrand;		// alignment strand
@@ -773,6 +777,23 @@ public class NewESAT {
 				    	// Note: if the CigarString is "*", it indicates that the read is unmapped. It would be better 
 				    	//       if SAMRecord had a isMapped() method.
 				    	if (cString!="*") {
+				    		// Deal with multimapped reads:
+				    		float fractCount;
+				    		if (multimap.equals("normal")) {
+				    			fractCount=1;
+				    		} else if (multimap.equals("ignore")) {
+				    			int mmCount = SAMSequenceCountingDict.getMultimapCount(r);
+				    			if (mmCount==1) {
+				    				fractCount=1;
+				    			} else {
+				    				fractCount=0;   // hacky way to skip reads... 
+				    			}
+				    		} else {
+				    			// scaled mulitmapped reads:
+				    			int mmCount = SAMSequenceCountingDict.getMultimapCount(r);
+				    			fractCount=1f/mmCount;
+				    		}
+
 				    		// check if this read start is contained in any intervals in the tree:
 				    		if (windowTree.get(rStrand).containsKey(rName) && windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)>0) {
 				    			Iterator<IntervalTree.Node<EventCounter>> oIter = windowTree.get(rStrand).get(rName).overlappers(rStart,rStart+1);
@@ -781,8 +802,8 @@ public class NewESAT {
 				    			while (oIter.hasNext()) {
 				    				Node<EventCounter> n = oIter.next();
 				    				// 	update the count for this interval:
-				    				n.getValue().incrementIntervalCount(rStart, rStart+1, eIdx);   // increment counter if read is contained in an interval
-				    				//	logger.info("  "+n.getValue().getName());
+				    				//n.getValue().incrementIntervalCount(rStart, rStart+1, eIdx);   // increment counter if read is contained in an interval
+				    				n.getValue().addIntervalCount(rStart, rStart+1, eIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
 				    			}
 				    		}
 				    	}
@@ -790,5 +811,5 @@ public class NewESAT {
 				}
 			}
 		}
-	}
+	} 	
 }

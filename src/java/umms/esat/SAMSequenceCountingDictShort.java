@@ -60,7 +60,7 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     	}
     }
     
-    public void updateCount(final SAMRecord r) {
+    public void updateCount(final SAMRecord r, final String multimap) {
     	/** 
     	 * increments the counter for how many reads had alignments beginning at this position.
     	 * The total counts are stored as short ints used as unsigned short ints. If the count is
@@ -68,6 +68,7 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     	 * to the correct int value by adding 65536.
     	 * 
     	 * @param	r	a SAMRecord, a single alignment record
+    	 * @param	multimap	how to handle multimapped reads (either "normal" or "ignore")
     	 * @see		SAMRecord
     	 */
     	String refName;
@@ -98,7 +99,12 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     	}
     	// Skip unaligned reads:
     	if (cString!="*") {
-    		incrementStartCounts(refName, strand, alignStart, fractCount);
+    		if (multimap.equals("normal") || getMultimapCount(r)==1) {
+    			// if multimap=="normal", just treat this as a single read
+    			// if multimap=="ignore", skip it if it is multimapped
+    			// if multimap=="scale", the floating-point version will be used.
+    			incrementStartCounts(refName, strand, alignStart, 1);
+    		} 
     	}
     }
     

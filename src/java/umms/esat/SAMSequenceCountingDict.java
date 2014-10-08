@@ -8,6 +8,8 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 import java.util.Iterator;
+import java.util.List;
+
 
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.SAMSequenceDictionary;
@@ -565,10 +567,19 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	return getSequence(chr).getSequenceLength();
     }
     
-
+    public static int getMultimapCount(SAMRecord r) {
+    	int mmCount = 1;    // default multimapped count
+    	try {
+    		mmCount = r.getIntegerAttribute("NH");    // multimap flag
+    	} catch (RuntimeException e) {
+    		mmCount = 1;
+    	}
+    	return mmCount;
+    }
+    
     abstract void incrementStartCounts(String refName, String strand, int alignStart, float fractCount);
 	abstract void copyToLocalCounts(String chr, String strand, int eStart, int cStart, int eLen, float[] floatCounts);
-    abstract public void updateCount(SAMRecord r);
+    abstract public void updateCount(SAMRecord r, String multimap);
     abstract boolean startCountsHasKey(String chr);
     abstract float getStartCounts(String chr, String strand, int i);
 }
