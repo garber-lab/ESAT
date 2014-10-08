@@ -79,7 +79,7 @@ public class NewESAT {
 	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
 
-	private static HashMap<String,HashMap<String,LinkedList<Window>>> countsMap;
+	private static HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap;
 	private static SAMSequenceCountingDict bamDict;
 	private static Hashtable<String, Gene> geneTable;
 	
@@ -326,38 +326,36 @@ public class NewESAT {
 		
 		for (String strand:windowTree.keySet()) {
 			for (String chr:windowTree.get(strand).keySet()) {
-				// Create storage for gene-level counts:
-				HashMap<String, float[]> gCounts = new HashMap<String, float[]>();
 				// Iterate through the interval tree to extract the counts for each window:
 				Iterator<EventCounter> eIter = windowTree.get(strand).get(chr).valueIterator();
 				while (eIter.hasNext()) {
 					EventCounter e = eIter.next();
-					// extract the gene name and create storage for the gene counts, if necessary:
+					// extract the gene name:
 					String[] wLoc = e.getName().split("\t");
 					String gName = wLoc[0]; 
-					if (!gCounts.containsKey(gName)) {
-						gCounts.put(gName, new float[nExp]);
+					
+					if (wLoc.length==1) {
+						// if the event counter name only has one field, it is a gene-level counter:
+						String oStr = gName+"\t"+chr+"\t"+strand;
+						for (int i=0; i<nExp; i++) {
+							oStr += "\t"+e.getCounts(i);
+						}
+						gWriter.write(oStr+"\n");	// write to gene-level file
+						
+					} else {
+						// otherwise, it is a window-level counter:
+						String oStr = e.getName();
+						oStr += "\t"+strand;
+						for (int i=0; i<nExp; i++) {
+							oStr+="\t"+e.getCounts(i);
+						}
+						wWriter.write(oStr+"\n"); 	// write to window-level file
 					}
-					String oStr = e.getName();
-					oStr += "\t"+strand;
-					for (int i=0; i<nExp; i++) {
-						oStr+="\t"+e.getCounts(i);
-						gCounts.get(gName)[i]+=e.getCounts(i);
-					}
-					wWriter.write(oStr+"\n");
-				}
-				// write out counts for all genes for this chromosome:
-				for (String gene:gCounts.keySet()) {
-					String oStr = gene+"\t"+chr+"\t"+strand;
-					float[] counts = gCounts.get(gene);
-					for (int i=0; i<nExp; i++) {
-						oStr += "\t"+counts[i];
-					}
-					gWriter.write(oStr+"\n");
 				}
 			}
 		}
 
+		// flush and close the writers:
 		wWriter.flush();
 		wWriter.close();
 		gWriter.flush();
@@ -661,7 +659,7 @@ public class NewESAT {
 		return bamDict;
 	}
 
-	public HashMap<String, HashMap<String, IntervalTree<EventCounter>>> makeCountingIntervalTree(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, int nExp) {
+	public HashMap<String, HashMap<String, IntervalTree<EventCounter>>> makeCountingIntervalTree(HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap, int nExp) {
 		// Builds a stranded HashMap of IntervalTrees, one per chromosome
 		
 		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> cleanTree = new HashMap<String, HashMap<String, IntervalTree<EventCounter>>>();
@@ -674,20 +672,19 @@ public class NewESAT {
 
 		// Iterate over chromosomes:
 		for (String chr:countsMap.keySet()) {
-			// Iterate over genes:
+			// Iterate over genes/transcripts:
 			for (String gene:countsMap.get(chr).keySet()) {
-				ListIterator<Window> wIter = countsMap.get(chr).get(gene).listIterator();
-				int listIdx = 0;
+				// First add all intervals of significant windows:
+				ListIterator<Window> wIter = countsMap.get(chr).get(gene).getWindows().listIterator();
+				String strand = countsMap.get(chr).get(gene).getStrand();
 				while (wIter.hasNext()) {
 					Window w = wIter.next();
 					inWindowCount++;
 					// add a new Window to the cleanCountsMap:
-					String strand = w.getStrand();
-					//String nName = gene+"."+listIdx;
+					//strand = w.getStrand();
 					// tab-delimited node name:
 					String nName = gene+"\t"+chr+"\t"+w.getStart()+"\t"+w.getEnd();
 					//String nName = gene+"."+listIdx+" "+chr+":"+w.getStart()+"-"+w.getEnd()+" ("+strand+")";
-					listIdx++;  // increment the list index counter
 					if (w.getStart()>=w.getEnd()) {
 						logger.warn("start>end for "+gene);
 					}
@@ -700,6 +697,14 @@ public class NewESAT {
 					}
 					cleanTree.get(strand).get(chr).put(w.getStart(),w.getEnd(), e);   // add the node to the tree
 				}
+				// next, add an event counter for intervals of the full gene/transcript to allow accumulation of gene-level counts:
+				IntervalTree<String> eTree = countsMap.get(chr).get(gene).getITree();
+				Window gWindow = new Window(strand, chr, eTree, gene, nExp);
+				EventCounter e = new EventCounter(gene, nExp, gWindow);
+				if (!cleanTree.get(strand).containsKey(chr)) {
+					cleanTree.get(strand).put(chr, new IntervalTree<EventCounter>());
+				}
+				cleanTree.get(strand).get(chr).put(gWindow.getStart(), gWindow.getEnd(), e);
 			}
 		}
 		

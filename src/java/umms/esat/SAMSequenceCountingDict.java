@@ -112,7 +112,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	return countSum;
     }
     
-    public LinkedList<Window> countWindowedReadStarts(final Set<Annotation> eSet, 
+//    public LinkedList<Window> countWindowedReadStarts(final Set<Annotation> eSet, 
+   	public TranscriptCountInfo countWindowedReadStarts(final Set<Annotation> eSet,    
     		final HashMap<String, HashMap<String,IntervalTree<String>>> iTree,
     		final int window, 
     		final int overlap, 
@@ -395,7 +396,12 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		}
     	}
 
-    	return wList;
+    	// Create output object containing the windows and transcript ranges:
+    	IntervalTree<String> gTree = makeITreeFromCoords(gCoords, gene);
+    	TranscriptCountInfo tInfo = new TranscriptCountInfo(gene.getName(), strand, wList, gTree);
+    	
+    	//return wList;
+    	return tInfo;
     }
 
     public double computeLocalLambda(int nBases, float[] readCount) {
@@ -413,6 +419,29 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	return lambda;
     }
 
+    private IntervalTree<String> makeITreeFromCoords(int[] coords, Gene gene) {
+    	IntervalTree<String> myTree = new IntervalTree<String>();
+    	
+    	// use the gene name as the node name:
+    	String gName = gene.getName();
+
+    	// scan through the coordinates to locate discontinuities:
+    	// initialize:
+    	int eStart = coords[0];    // start of the first segment
+    	int nCoords = coords.length;
+    	for (int i=0; i<(nCoords-1); i++) {
+    		if (coords[i+1]-coords[i] != 1) {
+    			// add an interval to the tree:
+    			int eEnd = coords[i]+1;     // right-open coordinate
+    			myTree.put(eStart, eEnd, gName);
+    			eStart = coords[i+1];
+    		}
+    	}
+    	// add final interval to the tree:
+    	myTree.put(eStart,  coords[nCoords-1]+1, gName);
+    	
+    	return myTree;
+    }
     public void simpleCountTranscriptReadStarts (final Map<String,Collection<Gene>> annotations) {
     	/**
     	 * counts the number of reads starting within the boundaries of the exons of a transcript/gene
@@ -439,7 +468,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	
     }
     
-    public HashMap<String,HashMap<String, LinkedList<Window>>> countWindowedTranscriptReadStarts (final Map<String,Collection<Gene>> annotations, 
+//    public HashMap<String,HashMap<String, LinkedList<Window>>> countWindowedTranscriptReadStarts (final Map<String,Collection<Gene>> annotations, 
+    public HashMap<String,HashMap<String, TranscriptCountInfo>> countWindowedTranscriptReadStarts (final Map<String,Collection<Gene>> annotations,     
     												final int window, 
     												final int overlap,
     												final int extend,
@@ -458,9 +488,13 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	 * @param	pValThresh	p-value threshold for significance testing
     	 */
     	// countsMap[chr][transID][Window]
-    	HashMap<String,HashMap<String,LinkedList<Window>>> countsMap = 
-    			new HashMap<String,HashMap<String,LinkedList<Window>>>();   
-    	LinkedList<Window> eCount;  
+//    	HashMap<String,HashMap<String,LinkedList<Window>>> countsMap = 
+//    			new HashMap<String,HashMap<String,LinkedList<Window>>>();
+    	HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap =     	
+    			new HashMap<String,HashMap<String,TranscriptCountInfo>>();   
+    	
+    	//LinkedList<Window> eCount;  
+    	TranscriptCountInfo eCount;
     	// iTree[strand][chromosome]<tree>
     	HashMap<String, HashMap<String, IntervalTree<String>>> iTree = new HashMap<String, HashMap<String, IntervalTree<String>>>();
     	iTree.put("+", new HashMap<String, IntervalTree<String>>());
@@ -516,7 +550,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 				
 				// add this window set to the HashMap:
 				if (!countsMap.containsKey(chr)) {
-					countsMap.put(chr, new HashMap<String,LinkedList<Window>>());           // add an entry in the main map for the chromosome/segment
+					countsMap.put(chr, new HashMap<String,TranscriptCountInfo>());           // add an entry in the main map for the chromosome/segment
 				}
 				countsMap.get(chr).put(gName, eCount);       // add the counts windows to the hashmap
 			}	

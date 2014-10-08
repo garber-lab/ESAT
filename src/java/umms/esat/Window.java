@@ -49,6 +49,16 @@ public class Window {
 		iTree = null;
 	}
 	
+	// constructor for pre-existing IntervalTrees:
+	public Window(String wStrand, String wChr, IntervalTree<String> eTree, String tName, int nExp) {
+		strand = wStrand;
+		chr = wChr;
+		name = tName;
+		counts = new float[nExp];
+		iTree = eTree;
+		start = eTree.min().getStart();   	// start of earliest interval
+		end = eTree.max().getEnd();			// end of latest interval
+	}
 	// METHODS //
 
 	// getters and setters:
