@@ -8,7 +8,7 @@ public class TranscriptCountInfo {
 	/* This object stores the significant windows spanning all transcripts of a gene, as well
 	 * as an interval tree covering ALL exons of all transcripts of the gene and any additional
 	 * extension past the gene boundary. (This is required for determining total counts for each 
-	 * gene for each experimental condition.
+	 * gene for each experimental condition.)
 	 */
 	String name;
 	String strand;
