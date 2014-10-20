@@ -588,11 +588,11 @@ public class NewESAT {
 			
 				// open the next bam file in the list:
 				File bamFile = (File) bamFiles.get(exp).get(i);
+				logger.info("Processing file: "+bamFile+"...");
 				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
 				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	
 				bamReader.setValidationStringency(ValidationStringency.STRICT);	
 				SAMRecordIterator bamIterator = bamReader.iterator();
-				logger.info("Processing file: "+bamFile+"...");
 
 				if (firstFile) {
 					// use the header information in the first bam file to create counts storage

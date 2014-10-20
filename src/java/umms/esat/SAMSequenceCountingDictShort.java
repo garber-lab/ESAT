@@ -2,6 +2,7 @@ package umms.esat;
 
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.TreeMap;
 
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.SAMSequenceRecord;
@@ -13,7 +14,8 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
 	//protected HashMap<String, ArrayList<Integer>> overflow = new HashMap<String,ArrayList<Integer>>();
 	// STRANDED:
 	protected HashMap<String, HashMap<String, short[]>> startCounts = new HashMap<String, HashMap<String, short[]>>();      // startCounts[chr][strand][location]
-	protected HashMap<String, HashMap<String, ArrayList<Integer>>> overflow = new HashMap<String, HashMap<String, ArrayList<Integer>>>();
+	//protected HashMap<String, HashMap<String, ArrayList<Integer>>> overflow = new HashMap<String, HashMap<String, ArrayList<Integer>>>();
+	protected HashMap<String, HashMap<String, TreeMap<Integer, Integer>>> overflow = new HashMap<String, HashMap<String, TreeMap<Integer, Integer>>>();
 	
     // **** SHORT INT version limits counts to 65535
     public void incrementStartCounts(String refName, String strand, int alignStart, float fractCount) {
@@ -27,16 +29,23 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     			// NOTE: since the counts arrays are short ints, counts between 32767 and 65535 will be negative.
     			//       To adjust the negative values, <correct int value> = 65536+<negative count value>)
     			//if (!overflow.containsKey(refName) || !overflow.get(refName).contains(alignStart)) {
-    			if (!overflow.containsKey(refName) || !overflow.get(refName).containsKey(strand) || !overflow.get(refName).get(strand).contains(alignStart)) {
+    			if (!overflow.containsKey(refName) || !overflow.get(refName).containsKey(strand) || !overflow.get(refName).get(strand).containsKey(alignStart)) {
     				logger.warn("location "+alignStart+" in "+refName+" ("+strand+") has >65535 counts.");
     				// add this location to the overflow map so that only one warning is issued for overflow at this location:
     				if (!overflow.containsKey(refName)) {
-    					overflow.put(refName, new HashMap<String, ArrayList<Integer>>());
+    					//overflow.put(refName, new HashMap<String, ArrayList<Integer>>());
+    					overflow.put(refName, new HashMap<String, TreeMap<Integer, Integer>>());
     					// make overflow storage for both strands:
-    					overflow.get(refName).put("+", new ArrayList<Integer>());
-    					overflow.get(refName).put("-", new ArrayList<Integer>());
+    					//overflow.get(refName).put("+", new ArrayList<Integer>());
+    					//overflow.get(refName).put("-", new ArrayList<Integer>());
+    					overflow.get(refName).put("+", new TreeMap<Integer, Integer>());
+    					overflow.get(refName).put("-", new TreeMap<Integer, Integer>());
     				}
-    				overflow.get(refName).get(strand).add(alignStart);
+    				overflow.get(refName).get(strand).put(alignStart, 1);
+    			} else {
+    			// Otherwise, increment the overflow count to keep track of any counts over 65535
+    				int obs = overflow.get(refName).get(strand).get(alignStart);
+    				overflow.get(refName).get(strand).put(alignStart,obs+1);
     			}
     		}
     	} catch (ArrayIndexOutOfBoundsException e) {
@@ -51,9 +60,16 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     	short x;
     	
     	for (int i=0; i<eLen; i++){
-    		x = startCounts.get(chr).get(strand)[eStart+i];
+    		int gLoc = eStart+i;
+    		x = startCounts.get(chr).get(strand)[gLoc];
     		if (x<0) {
     			floatCounts[cStart+i] = (float) x+65536;
+    			if (x==-1) {
+    				// add any additional overflow counts:
+    				if (overflow.containsKey(chr) & overflow.get(chr).get(strand).containsKey(gLoc)) {
+    					floatCounts[cStart+i] += overflow.get(chr).get(strand).get(gLoc);
+    				}
+    			}
     		} else {
     			floatCounts[cStart+i] = (float) x;
     		}
