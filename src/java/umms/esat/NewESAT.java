@@ -801,9 +801,13 @@ public class NewESAT {
 				    			//		") has "+windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)+" overlapping intervals");
 				    			while (oIter.hasNext()) {
 				    				Node<EventCounter> n = oIter.next();
-				    				// 	update the count for this interval:
-				    				//n.getValue().incrementIntervalCount(rStart, rStart+1, eIdx);   // increment counter if read is contained in an interval
-				    				n.getValue().addIntervalCount(rStart, rStart+1, eIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
+				    				// This node might contain multiple EventCounters. Update them all:
+				    				Collection<EventCounter> cvNode = n.getContainedValues();
+				    				for (EventCounter e:cvNode) {
+				    					// 	update the count for this interval:
+				    					//n.getValue().addIntervalCount(rStart, rStart+1, eIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
+				    					e.addIntervalCount(rStart, rStart+1, eIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
+				    				}
 				    			}
 				    		}
 				    	}
