@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Vector;
 
 
 import net.sf.samtools.SAMRecord;
@@ -122,7 +123,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		final int extend,
     		String task,
     		final Gene gene,
-    		float pValThresh) {
+    		float pValThresh,
+    		boolean allWindows) {
     	/**
     	 * sums the count of all reads starting within sliding windows across all of the 
     	 * exons in this Set. An array is created by concatenating the exons and extending by
@@ -382,7 +384,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     			if (countSum>0.0) {
     				if (sigTesting && ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen)>pValThresh) {
     				} else {
-    					Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
+    					Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName(),
+    													sumStart, sumEnd);
     					thisWindow.setCount(countSum);    // update count for this window
     					// if the gene has more than one exon, check to see if the window spans more than one
     					if (nExons > 1) {
@@ -397,6 +400,60 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     			/* NB: Any partial windows will be skipped! */
     		}
     	}
+    	
+    	// If not returning all significant windows, find the best window position of length wLen over each 
+    	// contiguous set of overlapping windows:
+    	if (!allWindows & wList.size()>1) {
+    		// Since the windows are added from lowest to highest genomic coordinates, two successive windows
+    		// where the start of one is less than the beginning of the previous one overlap.
+    		/* set the initial interval conditions */
+        	LinkedList<Window> bestList = new LinkedList<Window>();    // list of "best" replacement windows    
+    		int iStart = wList.get(0).getRelStart();   // start of interval
+    		int iEnd = wList.get(0).getRelEnd();       // end of interval   
+    		int idxStart = 0;	// index of first (possibly) overlapping window
+    		Vector<Integer> olapList = new Vector<Integer>();  // list of windows to remove from this gene
+    		int wCount = 1;     // overlapping window counter
+    		for (int i=1; i<wList.size(); i++) {
+    			if (wList.get(i).getRelStart()<=iEnd) {
+    				// update the list of overlapping windows
+    				if (!olapList.contains(idxStart)) {
+    					olapList.add(idxStart);   // make sure the start of this group is added to the list of windows to remove
+    				}
+    				olapList.add(i);   // add this window to the list
+    				iEnd = wList.get(i).getRelEnd();
+    				wCount+=1;         // update the overlapping window count
+    			} else {
+    				if (wCount>1) {
+        				// process any overlapping windows
+    					Window bestWindow = findBestWindow(iStart, iEnd, gCoords, floatCounts, 
+    												window, nExons, chr, gStrand, gene.getName(), exonTree);
+    					// add the best window to the bestWindow list:
+    					bestList.add(bestWindow);
+    				}
+					// reset the window parameters:
+					iStart = wList.get(i).getRelStart();
+					iEnd = wList.get(i).getRelEnd();
+					idxStart = i;
+					wCount = 1;
+    			}
+    		}
+    		// if there is a block of windows left, process them:
+    		if (wCount>1) {
+    			// process any overlapping windows
+				Window bestWindow = findBestWindow(iStart, iEnd, gCoords, floatCounts, 
+													window, nExons, chr, gStrand, gene.getName(), exonTree);
+				// add the best window to the bestWindow list:
+				bestList.add(bestWindow);
+    		}
+    		// Add any non-overlapping windows from the original list to the best window list:
+    		for (int wIdx=0; wIdx<wList.size(); wIdx++) {
+    			if (!olapList.contains(wIdx)) {
+    				bestList.add(wList.get(wIdx));
+    			}
+    		}
+    		// Finally, replace the original window list with the best window list:
+    		wList = bestList;
+    	}
 
     	// Create output object containing the windows and transcript ranges:
     	IntervalTree<String> gTree = makeITreeFromCoords(gCoords, gene);
@@ -406,6 +463,44 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     	return tInfo;
     }
 
+   	public Window findBestWindow(int iStart, int iEnd, int[] gCoords, float[] counts, 
+   									int wLen, int nExons, String chr, String strand, String gName, IntervalTree<String> eTree) {
+   		// Slide a window of width wLen across the region, and find the window position with the highest counts:
+   		// Initialize by finding the total counts in the first window position:
+   		float wCount = 0;
+   		for (int i=iStart; i<iStart+wLen; i++) {
+   			wCount+=counts[i];
+   		}
+   		// initialize the bestWindow parameters:
+   		int relStart = iStart;
+   		int relEnd = iStart+wLen;
+   		float bestCount = wCount;
+   		int bestStart = relStart;
+   		int bestEnd = relEnd;
+   		while (relEnd<iEnd) {
+   			relStart+=1;
+   			relEnd+=1;
+   			// add new base and subtract previous first base to get new window sum:
+   			wCount-=counts[relStart-1];   // subtract previous start 
+   			wCount+=counts[relEnd];       // add new end
+   			if (wCount>bestCount) {
+   				bestStart = relStart;
+   				bestEnd = relEnd;
+   				bestCount = wCount;
+   			}
+   		}
+
+   		// make a new window with the best location:
+   		Window bestWindow = new Window(strand, chr, gCoords[bestStart], gCoords[bestEnd], gName, bestStart, bestEnd); 
+
+   		// if the gene has more than one exon, check to see if the new best window spans more than one exon:
+		if (nExons > 1) {
+			bestWindow.addIntervals(gCoords[bestStart], gCoords[bestEnd], eTree);
+		}
+		
+		return bestWindow; 
+   	}
+   	
     public double computeLocalLambda(int nBases, float[] readCount) {
     	double lambda;
     	double countSum = 0.0;
@@ -476,7 +571,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     												final int overlap,
     												final int extend,
     												String task,
-    												float pValThresh) {
+    												float pValThresh,
+    												boolean allWindows) {
     	/**
     	 * counts the number of reads starting within each sliding window of "window" bases with and
     	 * overlap of "overlap" bases. The transcript is extended past the last exon "extend" bases past
@@ -548,7 +644,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 				}
 
 				// sum all counts starting within this exon set:
-				eCount = countWindowedReadStarts(eSet, iTree, window, overlap, extend, task, gene, pValThresh);
+				eCount = countWindowedReadStarts(eSet, iTree, window, overlap, extend, task, gene, pValThresh, allWindows);
 				
 				// add this window set to the HashMap:
 				if (!countsMap.containsKey(chr)) {

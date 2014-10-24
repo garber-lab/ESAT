@@ -14,6 +14,8 @@ public class Window {
 	private float count;    // total reads starting in this window
 	private float[] counts;  // allows for collection of counts from multiple conditions
 	private IntervalTree<String> iTree;    // Interval tree for windows that span multiple exons
+	private int relStart = -1;	// relative start position (within transcript)
+	private int relEnd = -1;	// relative end position (within transcript)
 	
 	// empty constructor:
 	public Window() {
@@ -36,6 +38,18 @@ public class Window {
 		end = wEnd;
 		name = tName;
 		iTree = null;
+	}
+	
+	// constructor with relative start and end positions within the compressed transcript:
+	public Window(String wStrand, String wChr, int wStart, int wEnd, String tName, int rStart, int rEnd) {
+		strand = wStrand;
+		chr = wChr;
+		start = wStart;
+		end = wEnd;
+		name = tName;
+		iTree = null;
+		relStart = rStart;
+		relEnd = rEnd;
 	}
 	
 	// constructor with name and multiple experiment/condition counters:
@@ -103,6 +117,14 @@ public class Window {
 
 	public int getEnd() {
 		return end;
+	}
+
+	public int getRelStart() {
+		return relStart;
+	}
+
+	public int getRelEnd() {
+		return relEnd;
 	}
 
 	public float getCount() {

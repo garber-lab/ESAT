@@ -60,6 +60,7 @@ public class NewESAT {
 			"\n\t\t-wLen <window length [default: 400]>"+
 			"\n\t\t-wOlap <window overlap [default: 0]"+
 			"\n\t\t-wExt <extension past end of transcript [default: 400]>"+
+			"\n\t\t-all [default: disabled]"+
 			"\n\tSignificance testing:"+
 			"\n\t\t-sigTest <minimum allowable p-value>\n";
 	
@@ -69,6 +70,8 @@ public class NewESAT {
 	private static int windowLength;
 	private static int windowOverlap;
 	private static int windowExtend;
+	private static boolean allWindows;  // save all significant windows (default, only single window position with the highest counts 
+										// within a set of contiguous overlapping windows.)
 	private static String multimap;     // one of "ignore", "normal" or "scale"
 	private static boolean qFilter;
 	private static int qThresh;         // quality threshold (reads must be GREATER THAN qThresh, if filtering is on 
@@ -130,7 +133,7 @@ public class NewESAT {
 		}
 		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
-		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh);
+		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
 		
 		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
 		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
@@ -185,6 +188,7 @@ public class NewESAT {
 			logger.error("Illegal value for wExt: "+windowExtend+" (extension must be >= 0.");
 			throw new IllegalArgumentException();
 		}
+		allWindows = argMap.isPresent("all")? true : false;
 		
 		/* Multimapping parameters */
 		if (!argMap.isPresent("multimap")) {
