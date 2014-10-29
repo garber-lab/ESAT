@@ -76,7 +76,7 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     	}
     }
     
-    public void updateCount(final SAMRecord r, final String multimap) {
+    public void updateCount(final SAMRecord r, final String multimap, boolean stranded) {
     	/** 
     	 * increments the counter for how many reads had alignments beginning at this position.
     	 * The total counts are stored as short ints used as unsigned short ints. If the count is
@@ -89,10 +89,9 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     	 */
     	String refName;
     	int alignStart;
-    	float fractCount = 0; 
     	String strand;
     	
-    	if (r.getReadNegativeStrandFlag()) {
+    	if (stranded & r.getReadNegativeStrandFlag()) {
     		strand = "-";
     	} else  {
     		strand = "+";

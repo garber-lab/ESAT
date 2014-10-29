@@ -56,6 +56,7 @@ public class NewESAT {
 			"\n\t**************************************************************"+
 			"\n\t-quality <minimum alignment quality [default: no filtering]>"+ 
 			"\n\t-task <score3p | score5p> [default: score3p]"+
+			"\n\t-unstranded [default: stranded]"+
 			"\n\tWindow parameters:"+
 			"\n\t\t-wLen <window length [default: 400]>"+
 			"\n\t\t-wOlap <window overlap [default: 0]"+
@@ -79,6 +80,7 @@ public class NewESAT {
 	private static File gMapFile;       // name of the gene mapping file
 	private static String task; 		// 3' or 5' library
 	private static float pValThresh;		// minimum allowable p-value for window significance testing
+	private static boolean stranded;    // allow for unstranded analysis (defaults to stranded)
 	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
 
@@ -120,7 +122,7 @@ public class NewESAT {
 		}
 		
 		/* collect all read start location counts from the input alignments file(s) */
-		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap); 
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded); 
 	
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
@@ -139,7 +141,7 @@ public class NewESAT {
 		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
 		
 		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
-		fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap);
+		fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
 		
 		/* STOP AND REPORT TIMING */
 		long stopTime = System.nanoTime();
@@ -215,6 +217,9 @@ public class NewESAT {
 				throw new IllegalArgumentException();
 			}
 		}
+		
+		/* Stranded or unstranded alignments */
+		stranded = argMap.isPresent("unstranded")? false : true;
 		
 		// Allow multiple inputs 
 		if (argMap.isPresent("alignments")){
@@ -569,7 +574,7 @@ public class NewESAT {
 	}
 	
 	public SAMSequenceCountingDict countReadStartsFromAlignments (SAMSequenceCountingDict bamDict, HashMap<String,ArrayList<File>> bamFiles,
-																	boolean qFilter, int qThresh, String multimap) {
+																	boolean qFilter, int qThresh, String multimap, boolean stranded) {
 		boolean firstFile = true;      // only read the header from the first alignment file
 		int goodQualityCount = 0;
 		int badQualityCount = 0;
@@ -628,7 +633,7 @@ public class NewESAT {
 								continue;
 							}
 						}
-						bamDict.updateCount(r, multimap);
+						bamDict.updateCount(r, multimap, stranded);
 						// update the read start count
 						validReadCount++;
 					} else {
@@ -724,7 +729,8 @@ public class NewESAT {
 											HashMap<String,ArrayList<File>> bamFiles,
 											boolean qFilter,
 											int qThresh,
-											String multimap) {
+											String multimap,
+											boolean stranded) {
 		
 		SAMRecord r;		// alignment
 		String rStrand;		// alignment strand
@@ -772,7 +778,7 @@ public class NewESAT {
 						// an interval in the windowTree.
 					   	rName = r.getReferenceName();                // chromosome ID
 				    	rStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
-				    	if (r.getReadNegativeStrandFlag()) {
+				    	if (stranded & r.getReadNegativeStrandFlag()) {
 				    		rStrand = "-";
 				    	} else {
 				    		rStrand = "+";

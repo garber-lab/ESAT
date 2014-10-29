@@ -279,7 +279,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 			if (localExtend<extend) {
 				logger.warn("Gene "+gene.getName()+" ("+strand+") extension overlaps "+oStr+". "+extend+"-base extension shortened to "+localExtend);
 			}
-			// if the there is an extension past the transcript, andd an interval to the tree:
+			// if the there is an extension past the transcript, add an interval to the tree:
 			if (localExtend>0) {
 				exonTree.put(minExt, maxExt, gene.getName()+".ext");
 			}
@@ -675,7 +675,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     
     abstract void incrementStartCounts(String refName, String strand, int alignStart, float fractCount);
 	abstract void copyToLocalCounts(String chr, String strand, int eStart, int cStart, int eLen, float[] floatCounts);
-    abstract public void updateCount(SAMRecord r, String multimap);
+    abstract public void updateCount(SAMRecord r, String multimap, boolean stranded);
     abstract boolean startCountsHasKey(String chr);
     abstract float getStartCounts(String chr, String strand, int i);
 }
