@@ -492,6 +492,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 
    		// make a new window with the best location:
    		Window bestWindow = new Window(strand, chr, gCoords[bestStart], gCoords[bestEnd], gName, bestStart, bestEnd); 
+   		bestWindow.setCount(bestCount);
 
    		// if the gene has more than one exon, check to see if the new best window spans more than one exon:
 		if (nExons > 1) {
