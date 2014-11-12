@@ -74,6 +74,16 @@
             </manifest>
         </jar>
     </target>
+	
+    <!-- build the barcode splitter jar-->
+    <target name="bcprocess" depends="compile, unpack, copy.props">  
+        <jar destfile="${dist.dir}splitter_${timestamp}.jar" basedir="${build.dir}" compress="true">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}" />
+                <attribute name="Main-Class" value="umms.core.fastq.utils.BCProcessor"/>
+            </manifest>
+        </jar>
+    </target>
  
     <!-- Clean all generated artifacts -->    
     <target name="clean">

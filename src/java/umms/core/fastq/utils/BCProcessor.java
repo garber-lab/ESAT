@@ -1,16 +1,13 @@
 package umms.core.fastq.utils;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 
@@ -19,6 +16,7 @@ import picard.cmdline.Option;
 import picard.cmdline.Usage;
 import umms.core.fastq.FastqParser;
 import umms.core.fastq.FastqSequence;
+import umms.core.sequence.SequenceUtils;
 
 /**
  * This class is meant to generally process reads that have barcodes 
@@ -51,6 +49,10 @@ public class BCProcessor extends CommandLineProgram {
     public int MAX_HAMMING_DIST = 0;
     @Option (doc="Output directory (default .)", shortName="O", optional=true)
     public File OUTDIR = new File(".");
+    @Option (doc="Flag to indicate that the barcode is embeded in the read name", shortName="IRN", optional=true)
+    public boolean IN_READ_NAME = false;
+    @Option (doc="Pattern to indicate that barcode is next", shortName="PTRN", optional=true)
+    public String READ_PATTERN = null;
     
     private int bcLength;
     private int idxSampleBCStart;
@@ -83,9 +85,14 @@ public class BCProcessor extends CommandLineProgram {
 		randomNonBarcodeCounts = new HashMap<String, Integer>();
 		otherNonBarcodeCounts  = new HashMap<String, Integer>();
 		
+		if(IN_READ_NAME && (this.READ_PATTERN == null || READ_PATTERN.isEmpty())) {
+			System.out.println("IN_READ_NAME was set to TRUE but no READ_PATTERN was provided\n");
+			super.getStandardUsagePreamble();
+		}
+		
 		HashMap<String, String> bcSampleMap = null;
 		try {
-			bcSampleMap = readBCMap(BC_SAMPLE_MAP);
+			bcSampleMap = BCEvaluator.readBCMap(BC_SAMPLE_MAP);
 		} catch (FileNotFoundException e) {
 			System.out.println("Could not access the barcode sample mapping file");
 			e.printStackTrace();
@@ -138,15 +145,20 @@ public class BCProcessor extends CommandLineProgram {
 			
 			while (parser1.hasNext()) {
 				FastqSequence r1 = parser1.next();
-				String seq = r1.getSequence();
 				
-				String [] bcInfo = parseBarcode(seq); // First position saple, second UMI, third OTHER
+				String [] bcInfo = parseBarcode(r1); // First position sample, second UMI, third OTHER
+				
+				if(bcInfo[0] == null) {
+					logger.error("Obtained a null barcode for read " + r1.getName() + " sequence " + r1.getSequence());
+				}
 				
 				BufferedWriter out1 = unassignedP1;
 				BufferedWriter out2 = unassignedP2;
 
 				String bc = getClosestBc(bcSampleMap, bcInfo[0]);
 				if( bc != null) {
+					//Need to update the BCInfo with the closest barcode once it is found
+					bcInfo[0] = bc;
 					BufferedWriter [] out = writerMap.get(bc);
 					out1 = out[0];
 					if(isPaired) { 
@@ -154,7 +166,9 @@ public class BCProcessor extends CommandLineProgram {
 					}
 					
 					setBarcode(r1, bcInfo);
-					r1.excise(this.BC_START_POS,this.bcLength);
+					if( !IN_READ_NAME) {
+						r1.excise(this.BC_START_POS,this.bcLength);
+					}
 					updateCounts(bcInfo);
 				} else {
 					updateNonCounts(bcInfo);
@@ -167,7 +181,7 @@ public class BCProcessor extends CommandLineProgram {
 					if( bc!= null) {
 						setBarcode(r2, bcInfo);
 					}
-					r2.excise(this.BC_START_POS,this.bcLength);
+					//TODO: Handle when/if there is another barcode on R2
 					r2.write(out2);
 				}
 				
@@ -243,34 +257,41 @@ public class BCProcessor extends CommandLineProgram {
 		int sampleCounts = sampleBarcodeCounts.containsKey(bcInfo[0]) ? sampleBarcodeCounts.get(bcInfo[0]) + 1 : 1;
 		sampleBarcodeCounts.put(bcInfo[0], sampleCounts);
 		
-		int randomBCCounts = randomBarcodeCounts.containsKey(bcInfo[1]) ? randomBarcodeCounts.get(bcInfo[1]) + 1 : 1;
-		randomBarcodeCounts.put(bcInfo[1], randomBCCounts);
+		if(bcInfo[1] != null) {
+			int randomBCCounts = randomBarcodeCounts.containsKey(bcInfo[1]) ? randomBarcodeCounts.get(bcInfo[1]) + 1 : 1;
+			randomBarcodeCounts.put(bcInfo[1], randomBCCounts);
+		}
 		
-		int otherCounts = otherBarcodeCounts.containsKey(bcInfo[2]) ? otherBarcodeCounts.get(bcInfo[2]) + 1 : 1;
-		otherBarcodeCounts.put(bcInfo[2], otherCounts);
+		if(bcInfo[2] != null) {
+			int otherCounts = otherBarcodeCounts.containsKey(bcInfo[2]) ? otherBarcodeCounts.get(bcInfo[2]) + 1 : 1;
+			otherBarcodeCounts.put(bcInfo[2], otherCounts);
+		}
 	}
 	
 	private void updateNonCounts(String [] bcInfo) {
 		int sampleCounts = sampleNonBarcodeCounts.containsKey(bcInfo[0]) ? sampleNonBarcodeCounts.get(bcInfo[0]) + 1 : 1;
 		sampleNonBarcodeCounts.put(bcInfo[0], sampleCounts);
 		
-		int randomBCCounts = randomNonBarcodeCounts.containsKey(bcInfo[1]) ? randomNonBarcodeCounts.get(bcInfo[1]) + 1 : 1;
-		randomNonBarcodeCounts.put(bcInfo[1], randomBCCounts);
+		if(bcInfo[1] != null) {
+			int randomBCCounts = randomNonBarcodeCounts.containsKey(bcInfo[1]) ? randomNonBarcodeCounts.get(bcInfo[1]) + 1 : 1;
+			randomNonBarcodeCounts.put(bcInfo[1], randomBCCounts);
+		}
 		
-		int otherCounts = otherNonBarcodeCounts.containsKey(bcInfo[2]) ? otherNonBarcodeCounts.get(bcInfo[2]) + 1 : 1;
-		otherNonBarcodeCounts.put(bcInfo[2], otherCounts);
+		if(bcInfo[2] != null) {
+			int otherCounts = otherNonBarcodeCounts.containsKey(bcInfo[2]) ? otherNonBarcodeCounts.get(bcInfo[2]) + 1 : 1;
+			otherNonBarcodeCounts.put(bcInfo[2], otherCounts);
+		}
 	}
 
 	private void setBarcode(FastqSequence r, String[] bcInfo) {
-		String name = r.getName();
-		String compoundBC = bcInfo[0] + "_" + bcInfo[1];
-		if (name.contains(" ")) {
-			name = name.replace(" ", ":" + compoundBC + " ");
+		String compoundBC = bcInfo[0] + (bcInfo[1] != null && bcInfo[1].length() > 0 ? "_" + bcInfo[1] : "");
+		String newName = null;
+		if(this.IN_READ_NAME ) {
+			newName = buildBarcodeFromReadName( r.getName(), compoundBC);
 		} else {
-			name = name + ":" + compoundBC;
+			newName = buildBarcodeFromSequence(r.getName(), compoundBC);
 		}
-		
-		r.setName(name);
+		r.setName(newName);
 		
 		String comment = r.getDescription();
 		if (comment == null || comment.trim().isEmpty()) {
@@ -279,6 +300,38 @@ public class BCProcessor extends CommandLineProgram {
 			comment = comment + ":" + compoundBC;
 		}
 		r.setDescription(comment);
+	}
+	
+	/**
+	 * Cumbersome way to replace the existing barcode with he compound one we built
+	 * @param readName
+	 * @param compoundBC
+	 * @return
+	 */
+	private String buildBarcodeFromReadName(String readName, String compoundBC) {
+		String newName = readName;
+		if (READ_PATTERN != null & !READ_PATTERN.isEmpty() ) {
+			String [] info = readName.split(READ_PATTERN);
+			info[info.length - 1] = compoundBC;
+			StringBuffer sb = new StringBuffer(info[0]);
+			for (int i = 1 ; i < info.length; i++) {
+				sb.append(READ_PATTERN);
+				sb.append(info[i]);
+			}
+			newName = sb.toString();
+		}
+		return newName;
+	}
+
+	private String buildBarcodeFromSequence(String name, String compoundBC) {
+
+		if (name.contains(" ")) {
+			name = name.replace(" ", ":" + compoundBC + " ");
+		} else {
+			name = name + ":" + compoundBC;
+		}
+		
+		return name;
 		
 	}
 
@@ -298,22 +351,77 @@ public class BCProcessor extends CommandLineProgram {
 	
 	private String getClosestBc(HashMap<String, String> bcSampleMap, String observedBC) {
 		// TODO Add hemming distance comparison
-		return bcSampleMap.containsKey(observedBC) ? observedBC : null;
+		String barcode = bcSampleMap.containsKey(observedBC) ? observedBC : null;
+		
+		int bestDist = Integer.MAX_VALUE;
+		int bcsAtBestDist = 0;
+		if (barcode == null) {
+			for (String bc : bcSampleMap.keySet()) {
+				int dist = SequenceUtils.hamming(bc, observedBC);
+				if ( dist <= MAX_HAMMING_DIST && dist <= bestDist) {
+					if (bestDist > dist) {
+						bestDist = dist;
+						bcsAtBestDist = 1;
+						barcode = bc;
+					} else {
+						bcsAtBestDist++;
+					}
+				}
+				
+			}
+			if( bcsAtBestDist > 1  ) { //TODO: Perhaps be more stringent with other nearby barcodes being farther than a single base from the "one"
+				barcode = null;
+			}
+		} 
+		
+		return barcode;//TODO: Shall we examine other barcodes that are at the required HD?
 	}
 	
 	//	TODO: HANDLE THE CASE WHERE ANY OF THE START/ENDS ARE 0
-	private String[] parseBarcode(String seq) {
+	private String[] parseBarcode(FastqSequence r) {
+		if(this.IN_READ_NAME ) {
+			return parseBarcodeFromName(r.getName());
+		} else {
+			return parseBarcodeFromSequence( r.getSequence());
+		}
+
+	}
+	
+	private String[] parseBarcodeFromName(String name) {
+		String [] barcodeInfo = new String [3];
+		if (READ_PATTERN != null && !READ_PATTERN.isEmpty()) {
+			String [] info = name.split(READ_PATTERN);
+			if(info.length > 1) {
+				String barcode = info[info.length - 1];
+				barcodeInfo = splitBarcode( barcode);
+			}
+		}
+		return barcodeInfo;
+	}
+
+	private String [] parseBarcodeFromSequence (String seq) {
+		
+		String bcString = seq.substring(BC_START_POS, BC_START_POS + bcLength +1);		
+		return splitBarcode( bcString);		
+	}
+
+	private String [] splitBarcode( String bcString) {
 		String [] info = new String [3];
 		
-		String bcString = seq.substring(BC_START_POS, BC_START_POS + bcLength +1);
+		//This is to handle non-complex barcodes that for example only have the sample id
+		if(idxSampleBCStart > -1 ) {
+			info [0] = bcString.substring(idxSampleBCStart,idxSampleBCEnd + 1);
+			if(idxUMIStart > -1) {
+				info [1] = bcString.substring(idxUMIStart,idxUMIEnd+1);
+				
+			}
+			if (idxOtherStart > -1) {
+				info [2] = bcString.substring(idxOtherStart,idxOtherEnd + 1);
+			}
+		} else {
+			info[0] = bcString; // assuming that the barcode is the sample id. Not handling the case where the barcode is only the UMI
+		}
 
-		
-		info [0] = bcString.substring(idxSampleBCStart,idxSampleBCEnd + 1);
-		info [1] = bcString.substring(idxUMIStart,idxUMIEnd+1);
-		info [2] = bcString.substring(idxOtherStart,idxOtherEnd + 1);
-
-		//logger.debug("Read: " + seq + " bc: " + bcString + " sampleBC: " + info[0] + " UMI: " + info[1] + "other "+ info[2]);
-		
 		return info;
 	}
 
@@ -356,18 +464,5 @@ public class BCProcessor extends CommandLineProgram {
 		
 		return map;
 	}
-
-	private HashMap<String, String> readBCMap(File file) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader(file));
-		HashMap<String, String> map = new HashMap<String, String>();
-		String line = null;
-		while (  (line = br.readLine()) != null) {
-			String [] info = line.split("\\s+");
-			map.put(info[0], info[1]);
-		}
-		br.close();
-		return map;
-	}
-
 
 }
