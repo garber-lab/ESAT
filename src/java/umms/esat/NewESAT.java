@@ -185,7 +185,7 @@ public class NewESAT {
 			logger.error("Illegal value for wOlap: "+windowOverlap+" (window overlap must be >= 0.");
 			throw new IllegalArgumentException();
 		}
-		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 0;
+		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 400;
 		if (windowExtend<0) {
 			logger.error("Illegal value for wExt: "+windowExtend+" (extension must be >= 0.");
 			throw new IllegalArgumentException();
