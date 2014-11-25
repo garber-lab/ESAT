@@ -120,10 +120,7 @@ public class NewESAT {
 		if (gMapping) {
 			geneTable = loadGeneTableFromFile(gMapFile); 
 		}
-		
-		/* collect all read start location counts from the input alignments file(s) */
-		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded); 
-	
+
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
 		if (gMapping) {
@@ -134,6 +131,9 @@ public class NewESAT {
 			annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
 		}
 		
+		/* collect all read start location counts from the input alignments file(s) */
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded); 
+	
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
 		
