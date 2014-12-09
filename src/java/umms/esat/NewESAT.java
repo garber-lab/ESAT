@@ -43,6 +43,8 @@ import umms.esat.SAMSequenceCountingDictShort;
 import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
 
+import umms.core.utils.NexteraPreprocess;
+
 //import umms.core.utils.ESATUtils;
 
 public class NewESAT {
@@ -63,7 +65,10 @@ public class NewESAT {
 			"\n\t\t-wExt <extension past end of transcript [default: 400]>"+
 			"\n\t\t-all [default: disabled]"+
 			"\n\tSignificance testing:"+
-			"\n\t\t-sigTest <minimum allowable p-value>\n";
+			"\n\t\t-sigTest <minimum allowable p-value>\n"+
+			"\n\tPre-processing alignments from Nextera library reads:"+
+			"\n\t\t-nextPrep [default: off]"+
+			"\n\t\t-uMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
 	
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
 	private static File outFile;
@@ -81,6 +86,11 @@ public class NewESAT {
 	private static String task; 		// 3' or 5' library
 	private static float pValThresh;		// minimum allowable p-value for window significance testing
 	private static boolean stranded;    // allow for unstranded analysis (defaults to stranded)
+	
+	/* single-cell parameters */
+	private static boolean nextPreprocess;    // Nextera library reads preprocessing flag
+											  // NOTE: barcode and UMI are in the read name, separated by "_".
+	private static int umiMin;			// minimum number of reads per UMI that must be mapped to a transcript to be considered a valid UMI 
 	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
 
@@ -131,6 +141,18 @@ public class NewESAT {
 			annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
 		}
 		
+		/*****************************************************************************************************
+		 * BEGIN Single-cell data preprocessing 
+		 ******************************************************************************************************/
+		if (nextPreprocess) {
+			NexteraPreprocess nextData = new NexteraPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
+			bamFiles = nextData.getPreprocessedFiles();
+		}	
+		
+		/*****************************************************************************************************
+		 * END Single-cell data preprocessing 
+		 ******************************************************************************************************/
+
 		/* collect all read start location counts from the input alignments file(s) */
 		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded); 
 	
@@ -220,6 +242,10 @@ public class NewESAT {
 		
 		/* Stranded or unstranded alignments */
 		stranded = argMap.isPresent("unstranded")? false : true;
+		
+		/* single-cell pre-processing? */
+		nextPreprocess = argMap.isPresent("scPrep") ? true : false;
+		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 10;
 		
 		// Allow multiple inputs 
 		if (argMap.isPresent("alignments")){
@@ -454,7 +480,6 @@ public class NewESAT {
 			outList.add(Integer.parseInt(vals[i]));
 		}
 		return outList;
-		
 	}
 	
 	public static Map<String, Collection<Gene>> geneMapToAnnotations(Hashtable<String, Gene>gTable) {
@@ -464,7 +489,9 @@ public class NewESAT {
 			if (!annotations.containsKey(chr)) {
 				annotations.put(chr, new TreeSet<Gene>());
 			}
-			annotations.get(chr).add(gTable.get(symbol));
+			//annotations.get(chr).add(gTable.get(symbol));
+			Gene g = gTable.get(symbol);
+			annotations.get(chr).add(g);
 		}
 		return annotations;
 	}
