@@ -457,6 +457,7 @@ public class NewESAT {
 		BufferedReader br = new BufferedReader(new FileReader(fileListFile));
 		String s;
 		while((s = br.readLine())!= null){
+			s = s.replaceAll("\\s+", "\t");
 			String[] strSplit = s.split("\t");
 			//Check for blank lines or comments (start with "#"):
 			if (strSplit.length < 2 || strSplit[0].startsWith("#")) {
