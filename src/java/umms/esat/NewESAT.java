@@ -244,7 +244,7 @@ public class NewESAT {
 		stranded = argMap.isPresent("unstranded")? false : true;
 		
 		/* single-cell pre-processing? */
-		nextPreprocess = argMap.isPresent("scPrep") ? true : false;
+		nextPreprocess = argMap.isPresent("nextPrep") ? true : false;
 		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 10;
 		
 		// Allow multiple inputs 
@@ -253,7 +253,7 @@ public class NewESAT {
 			// each file as: <experimentID>\t<input BAM file>
 			// fill the File array with the list of input files
 			String inputFileFile = argMap.get("alignments");
-			bamFiles = loadBamFileList(inputFileFile);    // ?????
+			bamFiles = loadBamFileList(inputFileFile);    
 		}
 		if (argMap.hasInputFile()) {
 			bamFiles = new HashMap<String, ArrayList<File>>();
