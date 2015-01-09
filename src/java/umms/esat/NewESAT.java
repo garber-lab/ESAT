@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -42,7 +43,6 @@ import umms.esat.SAMSequenceCountingDict;
 import umms.esat.SAMSequenceCountingDictShort;
 import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
-
 import umms.core.utils.NexteraPreprocess;
 
 //import umms.core.utils.ESATUtils;
@@ -71,6 +71,7 @@ public class NewESAT {
 			"\n\t\t-uMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
 	
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
+	private static HashMap<String,ArrayList<File>> mmBamFiles;     // key=experiment ID, File[]= list of input files for the experiment (for 'proper' multimap handling)
 	private static File outFile;
 	private static String annotationFile;
 	private static int windowLength;
@@ -141,6 +142,14 @@ public class NewESAT {
 			annotations =  BEDFileParser.loadDataByChr(new File(annotationFile));	
 		}
 		
+		// This should be done regardless of the type of multimap handling, and the rest of the program needs to be
+		// re-written to be more efficient, but for now, make an IntervalTree for each chromosome and strand and
+		// add all annotations to it. Add extensions to all of the annotations at this point.
+		HashMap<String, HashMap<String, IntervalTree<String>>> occupancyTree = new HashMap<String, HashMap<String, IntervalTree<String>>>();
+		if (multimap.equals("proper")) {
+			fillOccupancyTree(occupancyTree, annotations, windowExtend, task);
+		}
+		
 		/*****************************************************************************************************
 		 * BEGIN Single-cell data preprocessing 
 		 ******************************************************************************************************/
@@ -154,8 +163,24 @@ public class NewESAT {
 		 ******************************************************************************************************/
 
 		/* collect all read start location counts from the input alignments file(s) */
-		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded); 
+		mmBamFiles = new HashMap<String,ArrayList<File>>();
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded, occupancyTree, mmBamFiles); 
 	
+		// If handling multimapped reads "properly", call the function again with the multimapped temp files:
+		if (multimap.equals("proper")) {
+			bamDict = countReadStartsFromAlignments(bamDict, mmBamFiles, qFilter, qThresh, "ignore", stranded, occupancyTree, mmBamFiles);
+			// add any files in the mmBamFiles list to the list of bamFiles:
+			for (String exp:mmBamFiles.keySet()) {
+				Iterator<File> fIter = mmBamFiles.get(exp).iterator();
+				while (fIter.hasNext()) {
+					File f = fIter.next();
+					bamFiles.get(exp).add(f);
+				}
+			}
+			// From here on, ignore multimappers:
+			multimap = "ignore";
+		}
+		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
 		
@@ -165,15 +190,12 @@ public class NewESAT {
 		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
 		fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
 		
+		/* write the output file */
+		writeExperimentCountsFile(windowTree, bamFiles, outFile);
+
 		/* STOP AND REPORT TIMING */
 		long stopTime = System.nanoTime();
 		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
-
-		/* need a new version of a writer that writes counts in each window for each experiment !!!!!!! */
-		//writeOutputESATFile(countsMap, annotations, outFile);   // ?????
-		//writeSummaryCountsFile(windowTree, outFile);
-		writeExperimentCountsFile(windowTree, bamFiles, outFile);
-		
 	}
 									
 	public static void main(String[] args) throws ParseException, IOException {
@@ -219,7 +241,7 @@ public class NewESAT {
 			multimap = "normal";     // default to treat multimapped reads as normal reads
 		} else {
 			multimap = argMap.get("multimap");
-			if (!(multimap.equals("ignore") || multimap.equals("normal") || multimap.equals("scale"))) {
+			if (!(multimap.equals("ignore") || multimap.equals("normal") || multimap.equals("scale") || multimap.equals("proper"))) {
 				logger.error("-multimap flag must be one of ignore, normal, or scale (is set to "+multimap+")");
 				throw new IOException();
 			}
@@ -497,6 +519,44 @@ public class NewESAT {
 		return annotations;
 	}
 	
+	public void fillOccupancyTree(HashMap<String, HashMap<String, IntervalTree<String>>> oTree,
+									Map<String, Collection<Gene>> annotations, int wExt, String task) {
+		// fill the occupancy tree with gene/transcript intervals:
+		for (String chr:annotations.keySet()) {
+			// add an entry for this chromosome:
+			oTree.put(chr, new HashMap<String, IntervalTree<String>>());
+			// make + and - strand IntervalTrees to avoid testing strand of each gene:
+			oTree.get(chr).put("+", new IntervalTree<String>());
+			oTree.get(chr).put("-", new IntervalTree<String>());
+			for (Gene g:annotations.get(chr)) {
+				String strand = g.getStrand().toString();   // strand
+				String gName = g.getName();    // gene name
+				BasicAnnotation[] eSet = g.getExons();
+				for (BasicAnnotation e:eSet) {
+					oTree.get(chr).get(strand).put(e.getStart(), e.getEnd(), gName);
+				}
+				// Add one additional "exon" for the extension. It shouldn't matter if it overlaps another gene,
+				// since this will be dealt with when the reads are windowed.
+				if (wExt>0) {
+					int extStart;  // start of extension
+					int extEnd;    // end of extension
+					
+					if ((strand.equals("+") & task.equals("score5p")) || (strand.equals("-") & task.equals("score3p"))) { 
+						extEnd = g.getStart();
+						extStart = Math.max(extEnd-wExt,0);
+					} else {
+						extStart = g.getEnd();
+						extEnd = extStart+wExt;
+					}
+					// Add the extension:
+					oTree.get(chr).get(strand).put(extStart, extEnd, gName);
+				}
+			}
+		}
+		
+		return;
+	}
+								
 	public static Hashtable<String, Gene> loadGeneTableFromFile(File gMapFile) throws IOException {
 		
 		final MappingTableReader mapFile;
@@ -602,7 +662,9 @@ public class NewESAT {
 	}
 	
 	public SAMSequenceCountingDict countReadStartsFromAlignments (SAMSequenceCountingDict bamDict, HashMap<String,ArrayList<File>> bamFiles,
-																	boolean qFilter, int qThresh, String multimap, boolean stranded) {
+																	boolean qFilter, int qThresh, String multimap, boolean stranded, 
+																	HashMap<String, HashMap<String, IntervalTree<String>>> occupancyTree, 
+																	HashMap<String,ArrayList<File>> mmTempFiles) {
 		boolean firstFile = true;      // only read the header from the first alignment file
 		int goodQualityCount = 0;
 		int badQualityCount = 0;
@@ -612,30 +674,44 @@ public class NewESAT {
 		int totalValidReadCount = 0;
 		int totalInvalidReadCount = 0;
 		SAMRecord r;		
+		SAMFileWriterFactory sf = new SAMFileWriterFactory();
+		SAMFileHeader tempHeader = new SAMFileHeader();
+		SAMFileHeader outHeader;
+		// to make compilation errors go away:::
+		SAMFileWriter bamWriter = null;
+		File multimapTempFile = null; 
+		HashMap<String, ArrayList<SAMRecord>> mmMap = null;
 		
 		// start file loading timer:
 		long startTime = System.nanoTime();
-
+		
 		/* open the input alignments file */
 		for (String exp:bamFiles.keySet()) {
 			
 			for (int i=0; i<bamFiles.get(exp).size(); i++){
 
 				long loopStartTime = System.nanoTime();    // loop timer
-			
+				int mmCount=0;     // count saved multimapped reads
+				validReadCount = 0;   // reset read counters
+				invalidReadCount = 0;
+						
 				// open the next bam file in the list:
 				File bamFile = (File) bamFiles.get(exp).get(i);
 				logger.info("Processing file: "+bamFile+"...");
 				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
+				SAMFileHeader bamHeader = bamReader.getFileHeader();
+				
 				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	
 				bamReader.setValidationStringency(ValidationStringency.STRICT);	
 				SAMRecordIterator bamIterator = bamReader.iterator();
+				
+				/* Create and open a temporary BAM file for multimapped reads if -multimap == "proper" */
+				if (multimap.equals("proper")) {
+					mmMap = new HashMap<String, ArrayList<SAMRecord>>();
+				}
 
 				if (firstFile) {
 					// use the header information in the first bam file to create counts storage
-					SAMFileHeader bamHeader = bamReader.getFileHeader();
-					//bamDict = new SAMSequenceCountingDict_short();
-					
 					bamDict.setLogger(logger);
 					bamDict.copySequences(bamHeader.getSequenceDictionary());    // copy the sequence map from the original dictionary into the counting dict
 					firstFile = false;
@@ -662,6 +738,16 @@ public class NewESAT {
 							}
 						}
 						bamDict.updateCount(r, multimap, stranded);
+						// proper handling of multimapped reads
+						if (multimap.equals("proper") & SAMSequenceCountingDict.getMultimapCount(r)>1) {
+							String readName = r.getReadName();
+							// update the count of the number of times this read name is mapped:
+							if (!mmMap.containsKey(r.getReadName())) {
+								mmMap.put(readName, new ArrayList<SAMRecord>());
+							}
+							mmMap.get(readName).add(r);
+							mmCount+=1;   // update multimap count for this file
+						}
 						// update the read start count
 						validReadCount++;
 					} else {
@@ -672,6 +758,23 @@ public class NewESAT {
 
 				// close the bam file reader
 				bamReader.close();
+				if (multimap.equals("proper") & mmCount>0){    // don't bother if there were no multimapped reads
+					System.out.print("Total unique read IDs: "+mmMap.keySet().size()+"\n");
+					System.out.print("Total multimapped reads: "+mmCount+"\n");
+
+					// process the multimapped reads and get the file where the reads were written:
+					multimapTempFile = processMultimapTempFile(mmMap, occupancyTree, bamHeader, sf);
+					// !!! Should give the option of saving the temp file as a command-line argument:
+//					if (!saveMMTempFiles) {
+//						multimapTempFile.deleteOnExit();
+//					}
+					// Add this file to the output HashMap:
+					if (!mmTempFiles.containsKey(exp)) {
+						// initialize, if necessary:
+						mmTempFiles.put(exp, new ArrayList<File>());
+					}
+					mmTempFiles.get(exp).add(multimapTempFile);
+				}
 				bamFileCount++;
 				
 				// time the loop:
@@ -688,15 +791,89 @@ public class NewESAT {
 		
 		long stopTime = System.nanoTime();
 		logger.info(bamFileCount+" BAM files processed in "+(stopTime-startTime)/1e9+" sec\n");
-		logger.info("  "+totalValidReadCount+" valid reads\n");
+		logger.info("  "+totalValidReadCount+" total valid reads\n");
 		if (qFilter) {
 			//logger.info("     "+goodQualityCount+" reads pass the quality threshold\n");
 			logger.info("     "+badQualityCount+" reads fail the quality threshold\n");
 		}
-		logger.info("  "+totalInvalidReadCount+" invalid reads");
+		logger.info("  "+totalInvalidReadCount+" total invalid reads");
 		
 		// Return the updated counts dictionary:
 		return bamDict;
+	}
+
+	private File processMultimapTempFile(HashMap<String, ArrayList<SAMRecord>> mmMap,
+											HashMap<String, HashMap<String, IntervalTree<String>>> occupancyTree,											 
+											SAMFileHeader bHeader, SAMFileWriterFactory sf) {
+		// Process the multimapped reads in this file, save the valid reads in a new temp file,
+		// delete this file and return the name of the new file. The new file should have the same header
+		// as the original input BAM file.
+		File newTempFile = null;
+		SAMFileWriter newWriter = null;
+		SAMRecord r;
+		String chr;
+		String strand;
+		int readStart; 
+		int uAligns = 0;
+		
+		System.out.print("Processing multimappers...");
+		// create the new output file:
+		try {
+			newTempFile = File.createTempFile("multimapped_valid_", ".bam");   // !!!should probably include the experiment ID
+			// delete after exit:
+			newTempFile.deleteOnExit();
+			newWriter = sf.makeBAMWriter(bHeader, false, newTempFile);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		
+		// START READ PROCESSING:::::::::
+		for (String rID:mmMap.keySet()) {    
+			// loop over each read ID:
+			ArrayList<SAMRecord> rArray = mmMap.get(rID);
+			//System.out.println("Read ID: "+rID);
+			int bestIdx = -1;    // initialize best index to -1
+			int bestCount = 0;   // initialize valid alignment counter
+			for (int i=0; i<rArray.size(); i++) {
+				r = rArray.get(i);   // get the read
+				// check to see if it is mapped to a transcript:
+				chr = r.getReferenceName();                     // chromosome
+				if (r.getReadNegativeStrandFlag()) {            // strand
+					strand = "-";
+				} else {
+					strand = "+";
+				}
+				readStart = r.getAlignmentStart();              // start location
+
+				// Test read start against occupancyTree:
+				if (occupancyTree.containsKey(chr)) {
+					int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+					if (oCount>0) {
+						// if this overlaps any intervals in the tree, save this index and increment the count:
+						bestIdx = i;
+						bestCount++;
+					}
+				}
+			}
+			// if there were any reads that map to any gene, but not more than one, write the indexed read to the output file:
+			if (bestCount==1) {
+				// Change the multimap count to 1:
+				r = rArray.get(bestIdx);
+				r.setAttribute("NH", 1);
+				// write the read to the temp file:
+				newWriter.addAlignment(r);
+				uAligns++;
+			}
+		}
+		
+		// END READ PROCESSING:::::::::::
+		
+		// close the file:
+		newWriter.close();
+		System.out.print("done.\n");
+		System.out.printf(" Number of valid alignments: %d\n",uAligns);
+		
+		return newTempFile;
 	}
 
 	public HashMap<String, HashMap<String, IntervalTree<EventCounter>>> makeCountingIntervalTree(HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap, int nExp) {
@@ -817,10 +994,10 @@ public class NewESAT {
 				    	if (cString!="*") {
 				    		// Deal with multimapped reads:
 				    		float fractCount;
-				    		if (multimap.equals("normal")) {
+			    			int mmCount = SAMSequenceCountingDict.getMultimapCount(r);
+				    		if (multimap.equals("normal") || multimap.equals("proper")) {
 				    			fractCount=1;
 				    		} else if (multimap.equals("ignore")) {
-				    			int mmCount = SAMSequenceCountingDict.getMultimapCount(r);
 				    			if (mmCount==1) {
 				    				fractCount=1;
 				    			} else {
@@ -828,7 +1005,6 @@ public class NewESAT {
 				    			}
 				    		} else {
 				    			// scaled mulitmapped reads:
-				    			int mmCount = SAMSequenceCountingDict.getMultimapCount(r);
 				    			fractCount=1f/mmCount;
 				    		}
 
