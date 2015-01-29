@@ -70,6 +70,7 @@ public class NewESAT {
 			"\n\t\t-nextPrep [default: off]"+
 			"\n\t\t-uMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
 	
+	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
 	private static HashMap<String,ArrayList<File>> mmBamFiles;     // key=experiment ID, File[]= list of input files for the experiment (for 'proper' multimap handling)
 	private static File outFile;
