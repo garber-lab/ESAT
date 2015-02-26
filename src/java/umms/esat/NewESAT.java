@@ -1,5 +1,7 @@
 package umms.esat;
 
+import picard.sam.SortSam;
+
 import umms.esat.Window;
 import umms.esat.EventCounter;
 
@@ -235,7 +237,7 @@ public class NewESAT {
 			logger.error("Illegal value for wExt: "+windowExtend+" (extension must be >= 0.");
 			throw new IllegalArgumentException();
 		}
-		allWindows = argMap.isPresent("all")? true : false;
+		allWindows = argMap.isPresent("all");
 		
 		/* Multimapping parameters */
 		if (!argMap.isPresent("multimap")) {
@@ -682,6 +684,8 @@ public class NewESAT {
 		SAMFileWriter bamWriter = null;
 		File multimapTempFile = null; 
 		HashMap<String, ArrayList<SAMRecord>> mmMap = null;
+		File mmFile = null;
+		SAMFileWriter mmWriter = null;
 		
 		// start file loading timer:
 		long startTime = System.nanoTime();
@@ -706,10 +710,20 @@ public class NewESAT {
 				bamReader.setValidationStringency(ValidationStringency.STRICT);	
 				SAMRecordIterator bamIterator = bamReader.iterator();
 				
-				/* Create and open a temporary BAM file for multimapped reads if -multimap == "proper" */
+				/* Create a HashMap containing all multimapped reads if -multimap == "proper" */
+				/* SHOULD: Create and open a temporary BAM file for multimapped reads if -multimap == "proper" */
 				if (multimap.equals("proper")) {
-					mmMap = new HashMap<String, ArrayList<SAMRecord>>();
-				}
+					//mmMap = new HashMap<String, ArrayList<SAMRecord>>();
+					/* to use less memory, open a temporary BAM file for multimapped reads */
+					try {
+						mmFile = File.createTempFile("multimapped_valid_", ".bam");   // !!!should probably include the experiment ID
+						// delete after exit:
+						mmFile.deleteOnExit();
+						mmWriter = sf.makeBAMWriter(bamHeader, false, mmFile);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}		
+									}
 
 				if (firstFile) {
 					// use the header information in the first bam file to create counts storage
@@ -741,12 +755,22 @@ public class NewESAT {
 						bamDict.updateCount(r, multimap, stranded);
 						// proper handling of multimapped reads
 						if (multimap.equals("proper") & SAMSequenceCountingDict.getMultimapCount(r)>1) {
-							String readName = r.getReadName();
-							// update the count of the number of times this read name is mapped:
-							if (!mmMap.containsKey(r.getReadName())) {
-								mmMap.put(readName, new ArrayList<SAMRecord>());
-							}
-							mmMap.get(readName).add(r);
+							// To reduce the amount of memory required, write the multimapped reads out to a temp file.
+							// Then, before processing, sort the temp file by read ID.
+							// Write to temp file:     !!!!!!!!!!
+							
+							// Writing to temp file replaces this:
+							// *******
+							//String readName = r.getReadName();
+							// update the list reads with this read name:
+							//if (!mmMap.containsKey(r.getReadName())) {
+							//	mmMap.put(readName, new ArrayList<SAMRecord>());
+							//}
+							//mmMap.get(readName).add(r);
+							// *******
+							
+							// Write the multimapped read out to the temporary BAM file
+							mmWriter.addAlignment(r);
 							mmCount+=1;   // update multimap count for this file
 						}
 						// update the read start count
@@ -760,11 +784,15 @@ public class NewESAT {
 				// close the bam file reader
 				bamReader.close();
 				if (multimap.equals("proper") & mmCount>0){    // don't bother if there were no multimapped reads
-					System.out.print("Total unique read IDs: "+mmMap.keySet().size()+"\n");
+					//System.out.print("Total unique read IDs: "+mmMap.keySet().size()+"\n");
 					System.out.print("Total multimapped reads: "+mmCount+"\n");
 
+					// close the temporary BAM file:
+					mmWriter.close();
+					
 					// process the multimapped reads and get the file where the reads were written:
-					multimapTempFile = processMultimapTempFile(mmMap, occupancyTree, bamHeader, sf);
+					//multimapTempFile = processMultimapTempFile(mmMap, occupancyTree, bamHeader, sf);  // original
+					multimapTempFile = processMultimapTempFile(mmFile, occupancyTree, bamHeader, sf);  // using temp mm file
 					// !!! Should give the option of saving the temp file as a command-line argument:
 //					if (!saveMMTempFiles) {
 //						multimapTempFile.deleteOnExit();
@@ -775,6 +803,9 @@ public class NewESAT {
 						mmTempFiles.put(exp, new ArrayList<File>());
 					}
 					mmTempFiles.get(exp).add(multimapTempFile);
+					
+					// delete the temp multimapped read file:
+					mmFile.delete();
 				}
 				bamFileCount++;
 				
@@ -803,21 +834,42 @@ public class NewESAT {
 		return bamDict;
 	}
 
-	private File processMultimapTempFile(HashMap<String, ArrayList<SAMRecord>> mmMap,
+	//private File processMultimapTempFile(HashMap<String, ArrayList<SAMRecord>> mmMap,
+	private File processMultimapTempFile(File mmFile,
 											HashMap<String, HashMap<String, IntervalTree<String>>> occupancyTree,											 
 											SAMFileHeader bHeader, SAMFileWriterFactory sf) {
 		// Process the multimapped reads in this file, save the valid reads in a new temp file,
 		// delete this file and return the name of the new file. The new file should have the same header
 		// as the original input BAM file.
 		File newTempFile = null;
+		File mmFileSorted = null;
 		SAMFileWriter newWriter = null;
 		SAMRecord r;
-		String chr;
-		String strand;
-		int readStart; 
 		int uAligns = 0;
+		int mmCount = 0;
+		
+		SortSam samSorter = new SortSam();
 		
 		System.out.print("Processing multimappers...");
+		// First, sort the input BAM file by read ID:
+		try {
+			mmFileSorted = File.createTempFile("multimapped_valid_", ".bam");   // !!!should probably include the experiment ID
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		// create the command line arg list:
+		String[] clOptions = new String[3];
+		clOptions[0] = "I="+mmFile.toString();
+		clOptions[1] = "SO=queryname";
+		clOptions[2] = "O="+mmFileSorted.toString();
+		// call the samSorter program:
+		int exitCode = samSorter.instanceMain(clOptions);
+		// ### should probably test the exit code, in case the sorting fails for some reason....
+		
+		// Open the (sorted) output file:
+		SAMFileReader mmReader = new SAMFileReader(mmFileSorted);   // open as a non-eager reader
+		SAMRecordIterator mmIterator = mmReader.iterator();
+		
 		// create the new output file:
 		try {
 			newTempFile = File.createTempFile("multimapped_valid_", ".bam");   // !!!should probably include the experiment ID
@@ -829,54 +881,113 @@ public class NewESAT {
 		}		
 		
 		// START READ PROCESSING:::::::::
-		for (String rID:mmMap.keySet()) {    
-			// loop over each read ID:
-			ArrayList<SAMRecord> rArray = mmMap.get(rID);
-			//System.out.println("Read ID: "+rID);
-			int bestIdx = -1;    // initialize best index to -1
-			int bestCount = 0;   // initialize valid alignment counter
-			for (int i=0; i<rArray.size(); i++) {
-				r = rArray.get(i);   // get the read
-				// check to see if it is mapped to a transcript:
-				chr = r.getReferenceName();                     // chromosome
-				if (r.getReadNegativeStrandFlag()) {            // strand
-					strand = "-";
-				} else {
-					strand = "+";
-				}
-				readStart = r.getAlignmentStart();              // start location
-
-				// Test read start against occupancyTree:
-				if (occupancyTree.containsKey(chr)) {
-					int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
-					if (oCount>0) {
-						// if this overlaps any intervals in the tree, save this index and increment the count:
-						bestIdx = i;
-						bestCount++;
-					}
-				}
+		String lastReadID = null;
+		ArrayList<SAMRecord> rArray = new ArrayList<SAMRecord>(); 
+		while (mmIterator.hasNext()) {
+			try {
+				r = mmIterator.next();
+			} catch (SAMFormatException e) {
+				// skip SAM Format errors but log a warning:
+				logger.warn(e.getMessage());
+				continue;
 			}
-			// if there were any reads that map to any gene, but not more than one, write the indexed read to the output file:
-			if (bestCount==1) {
-				// Change the multimap count to 1:
-				r = rArray.get(bestIdx);
-				r.setAttribute("NH", 1);
-				// write the read to the temp file:
-				newWriter.addAlignment(r);
+			
+			String thisReadID = r.getReadName();
+			mmCount += 1;   // update the multimapped read count
+			
+			// Process the read array, or add this read to it:
+			if (!thisReadID.equals(lastReadID)) {
+				if (!rArray.isEmpty()) {
+					// Process the ArrayList
+					SAMRecord bestRead = findBestReadMapping(rArray, occupancyTree);
+					// write the read to the temp file, if it is not null:
+					if (bestRead != null) {
+						newWriter.addAlignment(bestRead);
+						uAligns++;
+					}
+					// reset rArray, add current read, update lastReadID, continue:
+					rArray = new ArrayList<SAMRecord>();
+				} 
+				// add the current read to the array and continue
+				rArray.add(r);
+				lastReadID = thisReadID;
+
+			} else {
+				// same readID, add to rArray, update lastReadID, continue:
+				rArray.add(r);
+				lastReadID = thisReadID;
+			}
+		}
+
+		// Process any reads remaining in rArray:
+		if (!rArray.isEmpty()) {
+			// Process the ArrayList
+			SAMRecord bestRead = findBestReadMapping(rArray, occupancyTree);
+			// write the read to the temp file, if it is not null:
+			if (bestRead != null) {
+				newWriter.addAlignment(bestRead);
 				uAligns++;
 			}
 		}
-		
 		// END READ PROCESSING:::::::::::
 		
 		// close the file:
 		newWriter.close();
-		System.out.print("done.\n");
+		//System.out.print("done.\n");
+		//System.out.printf(" Number of multimapped reads: %d\n",mmCount);
 		System.out.printf(" Number of valid alignments: %d\n",uAligns);
+		
+		// close the temp multimapped reader:
+		mmReader.close();
+		// delete the sorted temp multimapped file:
+		mmFileSorted.delete();
 		
 		return newTempFile;
 	}
 
+	private SAMRecord findBestReadMapping(ArrayList<SAMRecord> rArray, HashMap<String, HashMap<String, IntervalTree<String>>> occupancyTree) {
+		SAMRecord bestRead = null;
+		SAMRecord r;
+		String chr;
+		String strand;
+		int readStart; 
+		
+		// loop over each read ID:
+		int bestIdx = -1;    // initialize best index to -1
+		int bestCount = 0;   // initialize valid alignment counter
+		for (int i=0; i<rArray.size(); i++) {
+			r = rArray.get(i);   // get the read
+			// check to see if it is mapped to a transcript:
+			chr = r.getReferenceName();                     // chromosome
+			if (r.getReadNegativeStrandFlag()) {            // strand
+				strand = "-";
+			} else {
+				strand = "+";
+			}
+			readStart = r.getAlignmentStart();              // start location
+
+			// Test read start against occupancyTree:
+			if (occupancyTree.containsKey(chr)) {
+				int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+				if (oCount>0) {
+					// if this overlaps any intervals in the tree, save this index and increment the count:
+					bestIdx = i;
+					bestCount++;
+				}
+			}
+		}
+		// if there were any reads that map to any gene, but not more than one, write the indexed read to the output file:
+		if (bestCount==1) {
+			// Change the multimap count to 1:
+			r = rArray.get(bestIdx);
+			r.setAttribute("NH", 1);
+			bestRead = r;
+		}
+		
+		// Return the best read, if there was one. If there was no best read, bestRead will be null.
+		return bestRead;
+	}
+	
 	public HashMap<String, HashMap<String, IntervalTree<EventCounter>>> makeCountingIntervalTree(HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap, int nExp) {
 		// Builds a stranded HashMap of IntervalTrees, one per chromosome
 		
