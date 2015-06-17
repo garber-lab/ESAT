@@ -314,8 +314,8 @@ public class BCProcessor extends CommandLineProgram {
 
 		String [] idComponents = readName.split (":");
 		
-		if (idComponents.length  == 4) { // Casava version 1.4 or earlier
-			idComponents[idComponents.length - 1].replaceFirst("#.+/", "#"+compoundBC+"/");
+		if (idComponents.length  == 5) { // Casava version 1.4 or earlier
+			idComponents[idComponents.length - 1] = idComponents[idComponents.length - 1].replaceFirst("#.+/", "#"+compoundBC+"/");
 			newName = join(idComponents);
 		} else { //Later Casava version (> 1.8) has barcode at the end.
 			idComponents[idComponents.length - 1] = compoundBC;
