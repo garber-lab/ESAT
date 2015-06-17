@@ -339,8 +339,8 @@ public class BCProcessor extends CommandLineProgram {
 		}
 		
 		StringBuilder sb = new StringBuilder(idComponents[0]);
-		for (String c : idComponents) {
-			sb.append(":").append(c);
+		for (int i = 1 ; i < idComponents.length; i++) {
+			sb.append(":").append(idComponents[i]);
 		}
 		return sb.toString();
 	}
