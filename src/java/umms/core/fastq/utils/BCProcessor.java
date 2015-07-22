@@ -49,10 +49,9 @@ public class BCProcessor extends CommandLineProgram {
     public int MAX_HAMMING_DIST = 0;
     @Option (doc="Output directory (default .)", shortName="O", optional=true)
     public File OUTDIR = new File(".");
-    @Option (doc="Flag to indicate that the barcode is embeded in the read name", shortName="IRN", optional=true)
+    @Option (doc="Flag to indicate that the barcode is embeded in the read name accordingly to a Casava Specification.", shortName="IRN", optional=true)
     public boolean IN_READ_NAME = false;
-    @Option (doc="Pattern to indicate that barcode is next", shortName="PTRN", optional=true)
-    public String READ_PATTERN = null;
+
     
     private int bcLength;
     private int idxSampleBCStart;
@@ -85,11 +84,6 @@ public class BCProcessor extends CommandLineProgram {
 		randomNonBarcodeCounts = new HashMap<String, Integer>();
 		otherNonBarcodeCounts  = new HashMap<String, Integer>();
 		
-		if(IN_READ_NAME && (this.READ_PATTERN == null || READ_PATTERN.isEmpty())) {
-			System.out.println("IN_READ_NAME was set to TRUE but no READ_PATTERN was provided\n");
-			super.getStandardUsagePreamble();
-		}
-		
 		HashMap<String, String> bcSampleMap = null;
 		try {
 			bcSampleMap = BCEvaluator.readBCMap(BC_SAMPLE_MAP);
@@ -101,6 +95,17 @@ public class BCProcessor extends CommandLineProgram {
 			System.out.println("Error accessing barcode sample mapping file");
 			e.printStackTrace();
 			return 1;
+		}
+
+		if(! OUTDIR.exists()) {
+			try {
+				System.out.println("Output directory does not exists " + OUTDIR+ ", going to create it");
+				OUTDIR.mkdir();
+			}catch (SecurityException e) {
+				System.out.println("Could not create output directory");
+				e.printStackTrace();
+				return 1;
+			}
 		}
 		
 		init();
@@ -285,21 +290,17 @@ public class BCProcessor extends CommandLineProgram {
 
 	private void setBarcode(FastqSequence r, String[] bcInfo) {
 		String compoundBC = bcInfo[0] + (bcInfo[1] != null && bcInfo[1].length() > 0 ? "_" + bcInfo[1] : "");
-		String newName = null;
-		if(this.IN_READ_NAME ) {
-			newName = buildBarcodeFromReadName( r.getName(), compoundBC);
-		} else {
-			newName = buildBarcodeFromSequence(r.getName(), compoundBC);
-		}
+		String newName = buildBarcodeFromReadName( r.getName(), compoundBC);
+		
 		r.setName(newName);
 		
-		String comment = r.getDescription();
+		/*String comment = r.getDescription();
 		if (comment == null || comment.trim().isEmpty()) {
 			comment = compoundBC;
 		} else {
 			comment = comment + ":" + compoundBC;
 		}
-		r.setDescription(comment);
+		r.setDescription(comment);*/
 	}
 	
 	/**
@@ -310,29 +311,38 @@ public class BCProcessor extends CommandLineProgram {
 	 */
 	private String buildBarcodeFromReadName(String readName, String compoundBC) {
 		String newName = readName;
-		if (READ_PATTERN != null & !READ_PATTERN.isEmpty() ) {
-			String [] info = readName.split(READ_PATTERN);
-			info[info.length - 1] = compoundBC;
-			StringBuffer sb = new StringBuffer(info[0]);
-			for (int i = 1 ; i < info.length; i++) {
-				sb.append(READ_PATTERN);
-				sb.append(info[i]);
-			}
-			newName = sb.toString();
+
+		String [] idComponents = readName.split (":");
+		
+		if (idComponents.length  == 5) { // Casava version 1.4 or earlier
+			idComponents[idComponents.length - 1] = idComponents[idComponents.length - 1].replaceFirst("#.+/", "#"+compoundBC+"/");
+			newName = join(idComponents);
+		} else { //Later Casava version (> 1.8) has barcode at the end.
+			idComponents[idComponents.length - 1] = compoundBC;
+			newName = join(idComponents);
 		}
-		return newName;
-	}
 
-	private String buildBarcodeFromSequence(String name, String compoundBC) {
-
+		/*
 		if (name.contains(" ")) {
 			name = name.replace(" ", ":" + compoundBC + " ");
 		} else {
 			name = name + ":" + compoundBC;
 		}
+		*/
+
+		return newName;
+	}
+
+	private String join(String[] idComponents) {
+		if(idComponents.length == 0) {
+			return "";
+		}
 		
-		return name;
-		
+		StringBuilder sb = new StringBuilder(idComponents[0]);
+		for (int i = 1 ; i < idComponents.length; i++) {
+			sb.append(":").append(idComponents[i]);
+		}
+		return sb.toString();
 	}
 
 	protected void init() {
@@ -387,22 +397,24 @@ public class BCProcessor extends CommandLineProgram {
 
 	}
 	
+    /**
+     * This now assumes Casava formats
+     */
 	private String[] parseBarcodeFromName(String name) {
-		String [] barcodeInfo = new String [3];
-		if (READ_PATTERN != null && !READ_PATTERN.isEmpty()) {
-			String [] info = name.split(READ_PATTERN);
-			if(info.length > 1) {
-				String barcode = info[info.length - 1];
-				barcodeInfo = splitBarcode( barcode);
-			}
-		}
-		return barcodeInfo;
+	    String [] idComponents = name.split (":");
+	    String bc = idComponents[idComponents.length - 1];
+	    
+	    if (idComponents.length  == 4) { // Casava version 1.4 or earlier
+		bc = bc.replace("#", "");
+		bc = bc.replace("/","");
+	    } 
+	    return splitBarcode(bc);
 	}
 
 	private String [] parseBarcodeFromSequence (String seq) {
 		
 		String bcString = seq.substring(BC_START_POS, BC_START_POS + bcLength +1);		
-		return splitBarcode( bcString);		
+		return splitBarcode( bcString);	 	
 	}
 
 	private String [] splitBarcode( String bcString) {
