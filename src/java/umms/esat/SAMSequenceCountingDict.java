@@ -391,6 +391,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     					if (nExons > 1) {
     						thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
     					}
+    					float pVal = (float) ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen);
     					wList.add(thisWindow);            // add this window to the output list
     				}
     			}
