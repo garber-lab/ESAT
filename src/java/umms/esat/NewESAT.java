@@ -135,14 +135,11 @@ public class NewESAT {
 		/* START TIMING */
 		long startTime = System.nanoTime();
 		
-		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
-		if (gMapping) {
-			geneTable = loadGeneTableFromFile(gMapFile); 
-		}
-
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
 		if (gMapping) {
+			/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
+			geneTable = loadGeneTableFromFile(gMapFile); 
 			// Create the annotations map, keyed by chromosome:
 			annotations = geneMapToAnnotations(geneTable);  
 		} else {
@@ -165,7 +162,11 @@ public class NewESAT {
 			NexteraPreprocess nextData = new NexteraPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
 			bamFiles = nextData.getPreprocessedFiles();
 		} else if (inPreprocess) {
-			InDropPreprocess inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
+			//InDropPreprocess inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
+			/* New version of InDropPreprocess: 
+			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc1>:<bc2>:<umi>
+			 */
+			InDropPreprocess inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task);
 			bamFiles = inDropData.getPreprocessedFiles();
 		}	
 		

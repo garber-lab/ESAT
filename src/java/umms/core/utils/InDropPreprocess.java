@@ -164,6 +164,135 @@ public class InDropPreprocess {
 		logger.info("Preprocessing complete: Total reads in: "+readsIn+" Total reads out: "+readsOut);
 	}
 	
+	/* this version of InDropPreprocess does not have a umiMin parameter, and saves the first read mapping to 
+	 * gene/barcode/umi. The barcode and UMI are assumed to be concatenated with the read ID as <readID>:<bc1>:<bc2>:<umi>: 
+	 */
+	public InDropPreprocess(HashMap<String,ArrayList<File>> bamFiles, 
+			Map<String, Collection<Gene>> annotations, 
+			boolean qFilter, int qThresh, String multimap, int wExt, boolean stranded, String task) throws IOException {
+		
+		SAMRecord r;
+		SAMFileWriterFactory sf = new SAMFileWriterFactory();
+		int readsIn = 0;
+		int readsOut = 0;
+		
+		/* First, build the exon interval map */
+		HashMap<String, HashMap<String, IntervalTree<String>>> eMap = buildExonIntervalMap(annotations, wExt, stranded, task);
+		
+		/* open the input alignments file */
+		for (String exp:bamFiles.keySet()) {
+			
+			/* storage for well barcode/UMI counts (new for each experiment)*/
+			/* Keys: strand:chr:gene:wellBarcode:UMI:<count> */
+			HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> umiCount = 
+				new HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>>();
+
+			for (int i=0; i<bamFiles.get(exp).size(); i++){
+
+				long loopStartTime = System.nanoTime();    // loop timer
+
+				// open the next BAM file in the list:
+				File bamFile = (File) bamFiles.get(exp).get(i);
+				logger.info("Processing file: "+bamFile+"...");
+				SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
+				SAMFileHeader bamHeader = bamReader.getFileHeader();    // get the header information
+				
+				// create the pre-processed output BAM file:
+				// The processed file is called <original bam file base name>_nextPrep.bam
+				String inFile = bamFile.getCanonicalPath();
+				int extPos = inFile.length()-4;
+				File outFile = new File(inFile.substring(0,extPos)+"_inPrep"+inFile.substring(extPos));
+				
+				// add this file to the list of files to be processed by ESAT:
+				if (!bamFiles_prep.containsKey(exp)) {
+					bamFiles_prep.put(exp, new ArrayList<File>());
+				}
+				bamFiles_prep.get(exp).add(outFile);
+				SAMProgramRecord prepProg = new SAMProgramRecord("ESAT");
+				prepProg.setProgramVersion(PROGRAM_VERSION);
+				prepProg.setAttribute("task", task);
+				prepProg.setAttribute("wExt", ""+wExt);
+				boolean makeNewPrepFile = true;     // by default, make a new file.
+				
+				// check for the existence of this file:
+				if (outFile.exists()) {
+					// open the file to read the header
+					SAMFileReader scReader = new SAMFileReader(outFile);   // open as a non-eager reader
+					SAMFileHeader scHeader = scReader.getFileHeader();    // get the header information
+					List<SAMProgramRecord> scProg = scHeader.getProgramRecords();
+					// check to make sure the ESAT parameters are the same:
+					for (SAMProgramRecord sp:scProg) {
+						String pid = sp.getProgramGroupId();
+						if (pid.equals("ESAT")) {
+							// Extract all necessary parameters:
+							String oldVer = sp.getProgramVersion();
+							String oldTask = sp.getAttribute("task");
+							int oldWExt = Integer.parseInt(sp.getAttribute("wExt"));
+							if (oldVer.equals(PROGRAM_VERSION) && oldTask.equals(task) && oldWExt==wExt) {
+								makeNewPrepFile = false;	
+							}
+						}
+					}
+				}
+
+				if (!makeNewPrepFile) {
+					// close the input file
+					bamReader.close();
+					// skip creating a new output file:
+					continue;
+				}
+				
+				// copy the header from the input BAM file:
+				bamHeader.addProgramRecord(prepProg);
+				SAMFileWriter bamWriter = sf.makeBAMWriter(bamHeader, false, outFile);
+
+				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	
+				bamReader.setValidationStringency(ValidationStringency.STRICT);	
+				SAMRecordIterator bamIterator = bamReader.iterator();
+
+				int readCount = 0;
+				int writeCount = 0;
+				
+				while (bamIterator.hasNext()) {
+					try {
+						r = bamIterator.next();
+						int mmCount=SAMSequenceCountingDict.getMultimapCount(r);
+						if (mmCount>1 && multimap.equals("ignore")) {
+							// skip multimapped reads if "ignore" is selected:
+							continue;
+						}
+						
+						readCount+=1;
+						// check if read start overlaps any transcript in the annotations:
+						Vector<String> oLaps = readStartOverlap(r, eMap); 
+						if (!oLaps.isEmpty()) {
+							// if so, extract the cell barcode and UMI, and add counts for the overlapping transcript(s)
+							if (updateUmiCounts(r,oLaps,umiCount)) {
+								/* write this read out as the exemplar read for this cell/transcript/UMI */
+								bamWriter.addAlignment(r);
+								writeCount+=1;
+							}
+						}
+					} catch (SAMFormatException e) {
+						// skip SAM Format errors but log a warning:
+						logger.warn(e.getMessage());
+						continue;
+					}
+				}
+				
+				bamReader.close();
+				bamWriter.close();
+				
+				long loopEndTime = System.nanoTime();    // loop timer
+				logger.info("Reads: "+readCount+" writes: "+writeCount);
+				logger.info("Preprocessing file: "+bamFile+" took "+(loopEndTime-loopStartTime)/1e9+" sec\n");
+				readsIn+=readCount;
+				readsOut+=writeCount;
+			}
+		}
+		logger.info("Preprocessing complete: Total reads in: "+readsIn+" Total reads out: "+readsOut);
+	}
+	
 	public HashMap<String,ArrayList<File>> getPreprocessedFiles() {
 		return bamFiles_prep;
 	}
@@ -228,6 +357,63 @@ public class InDropPreprocess {
 		
 		return writeExemplar;
 	}
+	
+	/* New version without umiMin parameter */
+	public boolean updateUmiCounts(SAMRecord r, Vector<String> oLaps, 
+			HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> umiCount) {
+		boolean writeExemplar=false;
+		
+		// HashMap keys:
+		String chr = r.getReferenceName();
+		String strand = r.getReadNegativeStrandFlag() ? "-" : "+";
+		String gName;
+		String BC;
+		String UMI;
+		
+		// extract the well barcode and UMI:
+		String readName = r.getReadName();
+		String[] fields = readName.split(":");
+		if (fields.length == 4) {
+			BC = fields[1]+fields[2];
+			UMI = fields[3];
+		} else {
+			logger.warn("Improper read name: "+readName);
+			return writeExemplar;
+		}
+		
+		// update the counts:
+		// Strand key:
+		if (!umiCount.containsKey(strand)) {
+			umiCount.put(strand, new HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>());
+		}
+		// chromosome key:
+		if (!umiCount.get(strand).containsKey(chr)) {
+			umiCount.get(strand).put(chr, new HashMap<String, HashMap<String, HashMap<String, Integer>>>());
+		}
+		// gene symbol(s) keys:
+		for (String g:oLaps) {
+			if (!umiCount.get(strand).get(chr).containsKey(g)) {
+				umiCount.get(strand).get(chr).put(g, new HashMap<String, HashMap<String, Integer>>());
+			}
+			// well barcode keys:
+			if (!umiCount.get(strand).get(chr).get(g).containsKey(BC)) {
+				umiCount.get(strand).get(chr).get(g).put(BC, new HashMap<String, Integer>());
+			}
+			if (!umiCount.get(strand).get(chr).get(g).get(BC).containsKey(UMI)) {
+				umiCount.get(strand).get(chr).get(g).get(BC).put(UMI, 0);
+			}
+			// Update the counts for this gene/barcode/UMI
+			umiCount.get(strand).get(chr).get(g).get(BC).put(UMI,umiCount.get(strand).get(chr).get(g).get(BC).get(UMI)+1);
+			// If any transcript hits the UMI count threshold, set the writeExemplar flag:
+			int umiN = umiCount.get(strand).get(chr).get(g).get(BC).get(UMI);   // TEMPORARY
+			if (umiCount.get(strand).get(chr).get(g).get(BC).get(UMI)==1) {
+				// only write the first read with a BC:UMI mapped to this location:
+				writeExemplar=true;
+			}
+		}
+		
+		return writeExemplar;
+	}	
 	
 	public static Vector<String> readStartOverlap(SAMRecord r, HashMap<String, HashMap<String, IntervalTree<String>>> eMap) {
 		String chr;		// alignment chromosome
