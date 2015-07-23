@@ -1,9 +1,8 @@
-package umms.esat;
+package umms.ribosat;
 
 import picard.sam.SortSam;
-
-import umms.esat.Window;
-import umms.esat.EventCounter;
+import umms.ribosat.Window;
+import umms.ribosat.EventCounter;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -12,6 +11,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.lang.annotation.Annotation;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -41,19 +42,19 @@ import broad.core.datastructures.IntervalTree;
 import broad.core.datastructures.IntervalTree.Node;
 import net.sf.samtools.*;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
-import umms.esat.SAMSequenceCountingDict;
-import umms.esat.SAMSequenceCountingDictShort;
-import umms.esat.SAMSequenceCountingDictFloat;
+import umms.ribosat.RIBOSAT;
+import umms.ribosat.SAMSequenceCountingDict;
+import umms.ribosat.SAMSequenceCountingDictShort;
+import umms.ribosat.SAMSequenceCountingDictFloat;
+import umms.ribosat.TranscriptCountInfo;
 import umms.core.readers.MappingTableReader;
 import umms.core.utils.NexteraPreprocess;
-import umms.core.utils.InDropPreprocess;
 
 //import umms.core.utils.ESATUtils;
 
-public class NewESAT {
-	
-	// This usage message needs to be updated to reflect the actual operation of NewESAT!!!
-	static final String usage = "Usage: NewESAT -in <input Bam File> | -alignments <input filelist file>"+
+public class RIBOSAT {
+	// This usage message needs to be updated to reflect the actual operation of RIBOSAT!!!
+	static final String usage = "Usage: RIBOSAT -in <input Bam File> | -alignments <input filelist file>"+
 			"\n\t-annotations <reference annotation file [BED file]> | -geneMapping <gene-to-transcript map file>"+
 			"\n\t-out <output file basename>"+
 			"\n\t**************************************************************"+
@@ -71,8 +72,6 @@ public class NewESAT {
 			"\n\t\t-sigTest <minimum allowable p-value>\n"+
 			"\n\tPre-processing alignments from Nextera library reads:"+
 			"\n\t\t-nextPrep [default: off]"+
-			"\n\tPre-processing alignments from inDrop library reads:"+
-			"\n\t\t-inPrep [default: off]"+
 			"\n\t\t-uMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
 	
 	// new comment
@@ -97,17 +96,15 @@ public class NewESAT {
 	/* single-cell parameters */
 	private static boolean nextPreprocess;    // Nextera library reads preprocessing flag
 											  // NOTE: barcode and UMI are in the read name, separated by "_".
-	private static boolean inPreprocess;    // inDrop library reads preprocessing flag
-	  										// NOTE: barcode is encoded in filename, UMIs are in the read name, separated by "_".
 	private static int umiMin;			// minimum number of reads per UMI that must be mapped to a transcript to be considered a valid UMI 
 	
-	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
+	static final Logger logger = LogManager.getLogger(RIBOSAT.class.getName());
 
 	private static HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap;
 	private static SAMSequenceCountingDict bamDict;
 	private static Hashtable<String, Gene> geneTable;
 	
-	public NewESAT(String[] args) throws IOException, ParseException, IllegalArgumentException {
+	public RIBOSAT(String[] args) throws IOException, ParseException, IllegalArgumentException {
 	
 		/*
 		 * @param for ArgumentMap - size, usage, default task
@@ -135,11 +132,14 @@ public class NewESAT {
 		/* START TIMING */
 		long startTime = System.nanoTime();
 		
+		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
+		if (gMapping) {
+			geneTable = loadGeneTableFromFile(gMapFile); 
+		}
+
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
 		if (gMapping) {
-			/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
-			geneTable = loadGeneTableFromFile(gMapFile); 
 			// Create the annotations map, keyed by chromosome:
 			annotations = geneMapToAnnotations(geneTable);  
 		} else {
@@ -161,13 +161,6 @@ public class NewESAT {
 		if (nextPreprocess) {
 			NexteraPreprocess nextData = new NexteraPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
 			bamFiles = nextData.getPreprocessedFiles();
-		} else if (inPreprocess) {
-			//InDropPreprocess inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
-			/* New version of InDropPreprocess: 
-			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc1>:<bc2>:<umi>
-			 */
-			InDropPreprocess inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task);
-			bamFiles = inDropData.getPreprocessedFiles();
 		}	
 		
 		/*****************************************************************************************************
@@ -211,7 +204,7 @@ public class NewESAT {
 	}
 									
 	public static void main(String[] args) throws ParseException, IOException {
-		new NewESAT(args);
+		new RIBOSAT(args);
 	}
 	
 
@@ -279,7 +272,6 @@ public class NewESAT {
 		
 		/* single-cell pre-processing? */
 		nextPreprocess = argMap.isPresent("nextPrep") ? true : false;
-		inPreprocess = argMap.isPresent("inPrep") ? true : false;
 		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 10;
 		
 		// Allow multiple inputs 
@@ -381,12 +373,12 @@ public class NewESAT {
 		FileWriter gWriter = new FileWriter(gFile);
 
 		// Header line for window file:
-		String wStr = "Symbol\tchr\tstart\tend\tstrand";
+		String wStr = "Symbol\tchr\tstart\tend\tstrand\tpval\t";
 		// Header line for gene file:
-		String gStr = "Symbol\tchr\tstrand";
+		String gStr = "Symbol\tchr\tstrand\tpval\t";
 		for (String e:bamfiles.keySet()) {
-			wStr+="\t"+e;
-			gStr+="\t"+e;
+			wStr+= e+"_score\t"+e+"_reads";
+			gStr+= e+"_score\t"+e+"_reads";
 		}
 		wWriter.write(wStr+"\n");   // write the window file header  
 		gWriter.write(gStr+"\n");   // write the gene file header  
@@ -402,12 +394,15 @@ public class NewESAT {
 					// extract the gene name:
 					String[] wLoc = e.getName().split("\t");
 					String gName = wLoc[0]; 
-					
+					float pval = e.getPval();
+
 					if (wLoc.length==1) {
 						// if the event counter name only has one field, it is a gene-level counter:
-						String oStr = gName+"\t"+chr+"\t"+strand;
+						String oStr = gName+"\t"+chr+"\t"+strand+"\t"+pval;
 						float counts=0;
 						for (int i=0; i<nExp; i++) {
+							BigDecimal score = new BigDecimal((e.getCounts(i)+1)/(e.getLambda()+1)).setScale(1, RoundingMode.HALF_EVEN);
+							oStr += "\t"+score;
 							oStr += "\t"+e.getCounts(i);
 							counts+=e.getCounts(i);
 						}
@@ -418,8 +413,10 @@ public class NewESAT {
 					} else {
 						// otherwise, it is a window-level counter:
 						String oStr = e.getName();
-						oStr += "\t"+strand;
+						oStr += "\t"+strand+"\t"+pval;
 						for (int i=0; i<nExp; i++) {
+							BigDecimal score = new BigDecimal((e.getCounts(i)+1)/(e.getLambda()+1)).setScale(1, RoundingMode.HALF_EVEN);
+							oStr += "\t"+score;
 							oStr+="\t"+e.getCounts(i);
 						}
 						wWriter.write(oStr+"\n"); 	// write to window-level file
@@ -492,7 +489,7 @@ public class NewESAT {
 		BufferedReader br = new BufferedReader(new FileReader(fileListFile));
 		String s;
 		while((s = br.readLine())!= null){
-			//s = s.replaceAll("\\s+", "\t");
+			s = s.replaceAll("\\s+", "\t");
 			String[] strSplit = s.split("\t");
 			//Check for blank lines or comments (start with "#"):
 			if (strSplit.length < 2 || strSplit[0].startsWith("#")) {
@@ -1152,4 +1149,5 @@ public class NewESAT {
 			}
 		}
 	} 	
+
 }

@@ -84,7 +84,17 @@
             </manifest>
         </jar>
     </target>
- 
+	
+	<!-- build the ribosat jar-->
+	<target name="ribosat" depends="compile, unpack, copy.props">  
+	    <jar destfile="${dist.dir}ribosat_${timestamp}.jar" basedir="${build.dir}" compress="true">
+	        <manifest>
+	            <attribute name="Built-By" value="${user.name}" />
+	            <attribute name="Main-Class" value="umms.ribosat.RIBOSAT"/>
+	        </manifest>
+	    </jar>
+	</target>
+	 
     <!-- Clean all generated artifacts -->    
     <target name="clean">
         <delete dir="${build.dir}" />

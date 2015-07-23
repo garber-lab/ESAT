@@ -1,6 +1,7 @@
-package umms.esat;
+package umms.ribosat;
 
-import umms.esat.Window;
+import umms.ribosat.TranscriptCountInfo;
+import umms.ribosat.Window;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -11,9 +12,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
 
-
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.SAMSequenceDictionary;
+
 
 //import org.apache.commons.math3.util.MultidimensionalCounter.Iterator;
 import org.apache.log4j.Logger;
@@ -21,10 +22,10 @@ import org.apache.log4j.Logger;
 import broad.core.datastructures.IntervalTree;
 import broad.core.datastructures.IntervalTree.Node;
 import broad.core.math.ScanStatistics;
-
 import umms.core.annotation.Annotation;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
+
 
 abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 /**
@@ -363,10 +364,14 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 			}
 			// don't bother saving windows with zero counts, or (if sigTesting) with p-val>pValThresh:
 			if (countSum>0.0) {
-				if (sigTesting && ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen)>pValThresh) {
+				float pval = (float) ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen);
+				if (sigTesting && pval>pValThresh) {
 				} else {
 					Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName());
 					thisWindow.setCount(countSum);    // update count for this window
+					thisWindow.setPval(pval);
+					thisWindow.setLambda(lambda);
+					thisWindow.setaLen(aLen);
 					// if the gene has more than one exon, check to see if the window spans more than one
 					if (nExons > 1) {
 						thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
@@ -382,16 +387,19 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     			}
     			// don't bother saving windows with zero counts:
     			if (countSum>0.0) {
-    				if (sigTesting && ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen)>pValThresh) {
+    				float pval = (float) ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen);
+    				if (sigTesting && pval>pValThresh) {
     				} else {
     					Window thisWindow = new Window(gStrand, chr, gCoords[sumStart], gCoords[sumEnd], gene.getName(),
     													sumStart, sumEnd);
     					thisWindow.setCount(countSum);    // update count for this window
+    					thisWindow.setPval(pval);
+    					thisWindow.setLambda(lambda);
+    					thisWindow.setaLen(aLen);
     					// if the gene has more than one exon, check to see if the window spans more than one
     					if (nExons > 1) {
     						thisWindow.addIntervals(gCoords[sumStart], gCoords[sumEnd], exonTree);
     					}
-    					float pVal = (float) ScanStatistics.calculatePVal((int)countSum, lambda, (double)window, (double)aLen);
     					wList.add(thisWindow);            // add this window to the output list
     				}
     			}
@@ -410,7 +418,9 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		/* set the initial interval conditions */
         	LinkedList<Window> bestList = new LinkedList<Window>();    // list of "best" replacement windows    
     		int iStart = wList.get(0).getRelStart();   // start of interval
-    		int iEnd = wList.get(0).getRelEnd();       // end of interval   
+    		int iEnd = wList.get(0).getRelEnd();       // end of interval
+    		double iLambda = wList.get(0).getLambda(); // *********************** maybe clean this?
+    		int iaLen = wList.get(0).getaLen();
     		int idxStart = 0;	// index of first (possibly) overlapping window
     		Vector<Integer> olapList = new Vector<Integer>();  // list of windows to remove from this gene
     		int wCount = 1;     // overlapping window counter
@@ -427,7 +437,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     				if (wCount>1) {
         				// process any overlapping windows
     					Window bestWindow = findBestWindow(iStart, iEnd, gCoords, floatCounts, 
-    												window, nExons, chr, gStrand, gene.getName(), exonTree);
+    												window, nExons, chr, gStrand, iLambda, iaLen, gene.getName(), exonTree);
     					// add the best window to the bestWindow list:
     					bestList.add(bestWindow);
     				}
@@ -442,7 +452,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		if (wCount>1) {
     			// process any overlapping windows
 				Window bestWindow = findBestWindow(iStart, iEnd, gCoords, floatCounts, 
-													window, nExons, chr, gStrand, gene.getName(), exonTree);
+													window, nExons, chr, gStrand, iLambda, iaLen, gene.getName(), exonTree);
 				// add the best window to the bestWindow list:
 				bestList.add(bestWindow);
     		}
@@ -465,7 +475,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     }
 
    	public Window findBestWindow(int iStart, int iEnd, int[] gCoords, float[] counts, 
-   									int wLen, int nExons, String chr, String strand, String gName, IntervalTree<String> eTree) {
+   									int wLen, int nExons, String chr, String strand, double iLambda, int iaLen, String gName, IntervalTree<String> eTree) {
    		// Slide a window of width wLen across the region, and find the window position with the highest counts:
    		// Initialize by finding the total counts in the first window position:
    		float wCount = 0;
@@ -490,11 +500,14 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
    				bestCount = wCount;
    			}
    		}
-
+   		//pval for bestWindow
+   		double bestlambda = iLambda;
+   		int bestaLen = iaLen;
+ 		float bestPval = (float) ScanStatistics.calculatePVal((int)bestCount, bestlambda, (double)wLen, (double)bestaLen);
    		// make a new window with the best location:
    		Window bestWindow = new Window(strand, chr, gCoords[bestStart], gCoords[bestEnd], gName, bestStart, bestEnd); 
    		bestWindow.setCount(bestCount);
-
+ 		bestWindow.setPval(bestPval);
    		// if the gene has more than one exon, check to see if the new best window spans more than one exon:
 		if (nExons > 1) {
 			bestWindow.addIntervals(gCoords[bestStart], gCoords[bestEnd], eTree);
