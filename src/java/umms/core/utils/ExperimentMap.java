@@ -78,6 +78,10 @@ public class ExperimentMap {
 		return nEntries;
 	}
 
+	public Integer nExp() {
+		// dummy function to test push
+		return fileMap.size();
+	}
 	public HashMap<String,ArrayList<File>> getBamFiles() {
 		return fileMap;
 	}
