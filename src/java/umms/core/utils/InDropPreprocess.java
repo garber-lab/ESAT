@@ -129,13 +129,13 @@ public class InDropPreprocess {
 				while (bamIterator.hasNext()) {
 					try {
 						r = bamIterator.next();
+						readCount+=1;
 						int mmCount=SAMSequenceCountingDict.getMultimapCount(r);
 						if (mmCount>1 && multimap.equals("ignore")) {
 							// skip multimapped reads if "ignore" is selected:
 							continue;
 						}
 						
-						readCount+=1;
 						// check if read start overlaps any transcript in the annotations:
 						Vector<String> oLaps = readStartOverlap(r, eMap); 
 						if (!oLaps.isEmpty()) {
@@ -272,13 +272,13 @@ public class InDropPreprocess {
 				while (bamIterator.hasNext()) {
 					try {
 						r = bamIterator.next();
+						readCount+=1;
 						int mmCount=SAMSequenceCountingDict.getMultimapCount(r);
 						if (mmCount>1 && multimap.equals("ignore")) {
 							// skip multimapped reads if "ignore" is selected:
 							continue;
 						}
 						
-						readCount+=1;
 						// check if read start overlaps any transcript in the annotations:
 						Vector<String> oLaps = readStartOverlap(r, eMap); 
 						if (!oLaps.isEmpty()) {
