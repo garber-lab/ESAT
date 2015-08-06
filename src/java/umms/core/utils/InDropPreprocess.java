@@ -21,6 +21,7 @@ import net.sf.samtools.SAMFormatException;
 import net.sf.samtools.SAMFileReader.ValidationStringency;
 import net.sf.samtools.SAMRecordIterator;
 
+
 //import org.apache.commons.math3.util.MultidimensionalCounter.Iterator;
 import org.apache.log4j.Logger;
 
@@ -34,6 +35,7 @@ public class InDropPreprocess {
 	static Logger logger = Logger.getLogger(InDropPreprocess.class.getName());
 	/* output pre-processed BAM files */
 	HashMap<String,ArrayList<File>> bamFiles_prep = new HashMap<String,ArrayList<File>>();
+	HashMap<String,Integer> bcCounts = new HashMap<String, Integer>();
 	
 	public InDropPreprocess(HashMap<String,ArrayList<File>> bamFiles, 
 			Map<String, Collection<Gene>> annotations, 
@@ -127,13 +129,13 @@ public class InDropPreprocess {
 				while (bamIterator.hasNext()) {
 					try {
 						r = bamIterator.next();
+						readCount+=1;
 						int mmCount=SAMSequenceCountingDict.getMultimapCount(r);
 						if (mmCount>1 && multimap.equals("ignore")) {
 							// skip multimapped reads if "ignore" is selected:
 							continue;
 						}
 						
-						readCount+=1;
 						// check if read start overlaps any transcript in the annotations:
 						Vector<String> oLaps = readStartOverlap(r, eMap); 
 						if (!oLaps.isEmpty()) {
@@ -163,6 +165,20 @@ public class InDropPreprocess {
 		}
 		logger.info("Preprocessing complete: Total reads in: "+readsIn+" Total reads out: "+readsOut);
 	}
+	
+	public static String getBarcodeFromRead(SAMRecord r) {
+		String BC = "";	
+		// extract the well barcode and UMI:
+		String readName = r.getReadName();
+		String[] fields = readName.split(":");
+		if (fields.length == 4) {
+			BC = fields[1]+fields[2];
+		} else {
+			logger.warn("Improper read name: "+readName);
+		}
+
+		return BC;
+	}	
 	
 	/* this version of InDropPreprocess does not have a umiMin parameter, and saves the first read mapping to 
 	 * gene/barcode/umi. The barcode and UMI are assumed to be concatenated with the read ID as <readID>:<bc1>:<bc2>:<umi>: 
@@ -256,13 +272,13 @@ public class InDropPreprocess {
 				while (bamIterator.hasNext()) {
 					try {
 						r = bamIterator.next();
+						readCount+=1;
 						int mmCount=SAMSequenceCountingDict.getMultimapCount(r);
 						if (mmCount>1 && multimap.equals("ignore")) {
 							// skip multimapped reads if "ignore" is selected:
 							continue;
 						}
 						
-						readCount+=1;
 						// check if read start overlaps any transcript in the annotations:
 						Vector<String> oLaps = readStartOverlap(r, eMap); 
 						if (!oLaps.isEmpty()) {
@@ -271,6 +287,14 @@ public class InDropPreprocess {
 								/* write this read out as the exemplar read for this cell/transcript/UMI */
 								bamWriter.addAlignment(r);
 								writeCount+=1;
+								/* update the count for this exp:barcode */
+								String bc = getBarcodeFromRead(r);
+								String expBc = exp+":"+bc;
+								if (bcCounts.containsKey(expBc)) {
+									bcCounts.put(expBc, bcCounts.get(expBc)+1);
+								} else {
+									bcCounts.put(expBc, 1);
+								}
 							}
 						}
 					} catch (SAMFormatException e) {
@@ -297,6 +321,86 @@ public class InDropPreprocess {
 		return bamFiles_prep;
 	}
 	
+	public int fillBarcodeCounts() {
+		SAMRecord r;
+		int rCount = 0;
+		// Only fill bcCounts if it is empty:
+		if (bcCounts.isEmpty()) {
+			// If it is empty, fill it with data from PCR-duplicate-cleaned files:
+			/* open the input alignments file */
+			for (String exp:bamFiles_prep.keySet()) {
+				for (int i=0; i<bamFiles_prep.get(exp).size(); i++){
+					// open the next BAM file in the list:
+					File bamFile = (File) bamFiles_prep.get(exp).get(i);
+					logger.info("Processing file: "+bamFile+"...");
+					long loopStartTime = System.nanoTime();    // loop timer
+					SAMFileReader bamReader = new SAMFileReader(bamFile);   // open as a non-eager reader
+					// process all reads:
+					bamReader.setValidationStringency(ValidationStringency.STRICT);	
+					SAMRecordIterator bamIterator = bamReader.iterator();
+
+					while (bamIterator.hasNext()) {
+						try {
+							r = bamIterator.next();
+							rCount++;
+							/* update the count for this exp:barcode */
+							String bc = getBarcodeFromRead(r);
+							String expBc = exp+":"+bc;
+							if (bcCounts.containsKey(expBc)) {
+								bcCounts.put(expBc, bcCounts.get(expBc)+1);
+							} else {
+								bcCounts.put(expBc, 1);
+							}
+						} catch (SAMFormatException e) {
+							// skip SAM Format errors but log a warning:
+							logger.warn(e.getMessage());
+							continue;
+						}
+					}
+					bamReader.close();
+					long loopEndTime = System.nanoTime();    // loop timer
+					logger.info("Counting barcodes in file: "+bamFile+" took "+(loopEndTime-loopStartTime)/1e9+" sec\n");
+				}
+			}
+		}
+		return rCount;
+	}
+	
+	/* Remove barcodes with observations < bcMin, and return a HashMap with some statistics */
+	public HashMap<String, Integer> filterLowcountBarcodes(int bcMin) {
+		HashMap<String, Integer> bcStats = new HashMap<String, Integer>();
+		bcStats.put("startCount", bcCounts.size());  // number of barcodes before removing low counts
+		int rangeMin = Integer.MAX_VALUE;
+		int rangeMax = 0;
+		List<String> badBc = new ArrayList<String>();
+		// Find barcodes with too few reads and add them to a list:
+		for (String bc:bcCounts.keySet()) {
+			int bcN = bcCounts.get(bc);    // barcode observations
+			if (bcN < bcMin) {
+				badBc.add(bc);
+			} else {
+				if (bcN<rangeMin) {
+					rangeMin = bcN;           // smallest number of barcode observations > bcMin
+				} 	
+				if (bcN>rangeMax) {
+					rangeMax = bcN;           // largest number of barcode observations
+				}
+			}
+		}
+		
+		// remove the bad barcodes from the HashMap:
+		for (String bc:badBc) {
+			bcCounts.remove(bc);
+		}
+		
+		// fill in stats and return:
+		bcStats.put("endCount",bcCounts.size());     // number of barcodes after cleaning
+		bcStats.put("minCount", rangeMin);
+		bcStats.put("maxCount", rangeMax);
+		
+		return bcStats;
+	}
+
 	public boolean updateUmiCounts(SAMRecord r, Vector<String> oLaps, 
 			HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> umiCount,
 			int umiMin) {
@@ -519,6 +623,11 @@ public class InDropPreprocess {
 		}
 		
 		return eTree;
+	}
+	
+	// get the bcCounts map
+	public HashMap<String,Integer> getBcCounts() {
+		return bcCounts;
 	}
 	public static void main() {
 		
