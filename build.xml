@@ -113,7 +113,7 @@
 	</target>
 
     <!-- Run Tests -->
-    <target name="test" depends="build">
+    <target name="test" depends="build, ribosat, bcprocess">
         <junit fork="yes" haltonfailure="true">
             <classpath refid="test-classpath" />
             <batchtest fork="yes" todir="tres">
