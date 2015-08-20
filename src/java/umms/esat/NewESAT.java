@@ -255,7 +255,7 @@ public class NewESAT {
 		 */
 		
 		/* Windowed read count test parameters */
-		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 400;
+		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 50;
 		if (windowLength<1) {
 			logger.error("Illegal value for wLen: "+windowLength+" (window length must be >= 1.");
 			throw new IllegalArgumentException();
@@ -265,7 +265,7 @@ public class NewESAT {
 			logger.error("Illegal value for wOlap: "+windowOverlap+" (window overlap must be >= 0.");
 			throw new IllegalArgumentException();
 		}
-		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 400;
+		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 0;
 		if (windowExtend<0) {
 			logger.error("Illegal value for wExt: "+windowExtend+" (extension must be >= 0.");
 			throw new IllegalArgumentException();
