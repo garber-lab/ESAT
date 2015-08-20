@@ -49,6 +49,8 @@ import umms.ribosat.SAMSequenceCountingDictFloat;
 import umms.ribosat.TranscriptCountInfo;
 import umms.core.readers.MappingTableReader;
 import umms.core.utils.NexteraPreprocess;
+import broad.core.math.ScanStatistics;
+
 
 //import umms.core.utils.ESATUtils;
 
@@ -373,12 +375,12 @@ public class RIBOSAT {
 		FileWriter gWriter = new FileWriter(gFile);
 
 		// Header line for window file:
-		String wStr = "Symbol\tchr\tstart\tend\tstrand\tpval\t";
+		String wStr = "Symbol\tchr\tstart\tend\tstrand\tpval";
 		// Header line for gene file:
-		String gStr = "Symbol\tchr\tstrand\tpval\t";
+		String gStr = "Symbol\tchr\tstrand\tpval";
 		for (String e:bamfiles.keySet()) {
-			wStr+= e+"_score\t"+e+"_reads";
-			gStr+= e+"_score\t"+e+"_reads";
+			wStr+= "\t"+e+"_score\t"+e+"_reads\t"+e+"_pval";
+			gStr+= "\t"+e+"_reads";
 		}
 		wWriter.write(wStr+"\n");   // write the window file header  
 		gWriter.write(gStr+"\n");   // write the gene file header  
@@ -387,22 +389,33 @@ public class RIBOSAT {
 		
 		for (String strand:windowTree.keySet()) {
 			for (String chr:windowTree.get(strand).keySet()) {
+				final HashMap<String, float[]> GeneCounts = new HashMap<String, float[]>();
 				// Iterate through the interval tree to extract the counts for each window:
 				Iterator<EventCounter> eIter = windowTree.get(strand).get(chr).valueIterator();
+				while (eIter.hasNext()) {
+					EventCounter e = eIter.next();
+					String[] wLoc = e.getName().split("\t");
+					String gName = wLoc[0];
+					if (wLoc.length==1) {
+						GeneCounts.put(gName, new float[nExp]);
+						// calculate lambda for each experiment
+						for (int i=0; i<nExp; i++) {
+							GeneCounts.get(gName)[i] = e.getCounts(i);
+						}
+					}
+				}
+				eIter = windowTree.get(strand).get(chr).valueIterator();
 				while (eIter.hasNext()) {
 					EventCounter e = eIter.next();
 					// extract the gene name:
 					String[] wLoc = e.getName().split("\t");
 					String gName = wLoc[0]; 
-					float pval = e.getPval();
-
+					float pval = e.getPval();					
 					if (wLoc.length==1) {
 						// if the event counter name only has one field, it is a gene-level counter:
-						String oStr = gName+"\t"+chr+"\t"+strand+"\t"+pval;
+						String oStr = gName+"\t"+chr+"\t"+strand;
 						float counts=0;
 						for (int i=0; i<nExp; i++) {
-							BigDecimal score = new BigDecimal((e.getCounts(i)+1)/(e.getLambda()+1)).setScale(1, RoundingMode.HALF_EVEN);
-							oStr += "\t"+score;
 							oStr += "\t"+e.getCounts(i);
 							counts+=e.getCounts(i);
 						}
@@ -415,9 +428,13 @@ public class RIBOSAT {
 						String oStr = e.getName();
 						oStr += "\t"+strand+"\t"+pval;
 						for (int i=0; i<nExp; i++) {
-							BigDecimal score = new BigDecimal((e.getCounts(i)+1)/(e.getLambda()+1)).setScale(1, RoundingMode.HALF_EVEN);
+							float gcount = GeneCounts.get(gName)[i];
+							float wlambda = (gcount+1)/(int)e.getaLen();
+							BigDecimal score = new BigDecimal((e.getCounts(i))/(wlambda*windowLength)).setScale(1, RoundingMode.HALF_EVEN);
+							float wpval = (float) ScanStatistics.calculatePVal((int)e.getCounts(i), wlambda, (double)windowLength, (double)e.getaLen());
 							oStr += "\t"+score;
 							oStr+="\t"+e.getCounts(i);
+							oStr += "\t"+wpval;
 						}
 						wWriter.write(oStr+"\n"); 	// write to window-level file
 					}
