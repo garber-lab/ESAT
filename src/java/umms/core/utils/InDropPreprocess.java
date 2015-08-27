@@ -199,7 +199,7 @@ public class InDropPreprocess {
 		for (String exp:bamFiles.keySet()) {
 			
 			/* storage for well barcode/UMI counts (new for each experiment)*/
-			/* Keys: strand:chr:gene:wellBarcode:UMI:<count> */
+			/* Keys: strand:chr:gene:barcode:UMI => <count> */
 			HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> umiCount = 
 				new HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>>();
 
