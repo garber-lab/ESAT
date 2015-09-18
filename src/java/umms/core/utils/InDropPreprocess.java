@@ -171,10 +171,11 @@ public class InDropPreprocess {
 		// extract the well barcode and UMI:
 		String readName = r.getReadName();
 		String[] fields = readName.split(":");
-		if (fields.length == 4) {
-			BC = fields[1]+fields[2];
-		} else {
+		if (fields.length < 4) {
 			logger.warn("Improper read name: "+readName);
+		} else {
+			int fLen = fields.length;
+			BC = fields[fLen-3]+fields[fLen-2];
 		}
 
 		return BC;
@@ -477,12 +478,13 @@ public class InDropPreprocess {
 		// extract the well barcode and UMI:
 		String readName = r.getReadName();
 		String[] fields = readName.split(":");
-		if (fields.length == 4) {
-			BC = fields[1]+fields[2];
-			UMI = fields[3];
-		} else {
+		if (fields.length < 4) {
 			logger.warn("Improper read name: "+readName);
 			return writeExemplar;
+		} else {
+			int fLen = fields.length;
+			BC = fields[fLen-3]+fields[fLen-2];
+			UMI = fields[fLen-1];
 		}
 		
 		// update the counts:
