@@ -75,7 +75,7 @@ public class NewESAT {
 			"\n\t\t-nextPrep [default: off]"+
 			"\n\tPre-processing alignments from inDrop library reads:"+
 			"\n\t\t-inPrep [default: off]"+
-			"\n\t\t-uMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
+			"\n\t\t-umiMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
@@ -161,6 +161,25 @@ public class NewESAT {
 			fillOccupancyTree(occupancyTree, annotations, windowExtend, task);
 		}
 		
+		/* collect all read start location counts from the input alignments file(s) */
+		mmBamFiles = new HashMap<String,ArrayList<File>>();
+		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded, occupancyTree, mmBamFiles); 
+	
+		// If handling multimapped reads "properly", call the function again with the multimapped temp files:
+		if (multimap.equals("proper")) {
+			bamDict = countReadStartsFromAlignments(bamDict, mmBamFiles, qFilter, qThresh, "ignore", stranded, occupancyTree, mmBamFiles);
+			// add any files in the mmBamFiles list to the list of bamFiles:
+			for (String exp:mmBamFiles.keySet()) {
+				Iterator<File> fIter = mmBamFiles.get(exp).iterator();
+				while (fIter.hasNext()) {
+					File f = fIter.next();
+					bamFiles.get(exp).add(f);
+				}
+			}
+			// From here on, ignore multimappers:
+			multimap = "ignore";
+		}
+		
 		/*****************************************************************************************************
 		 * BEGIN Single-cell data preprocessing 
 		 ******************************************************************************************************/
@@ -188,25 +207,6 @@ public class NewESAT {
 		 * END Single-cell data preprocessing 
 		 ******************************************************************************************************/
 
-		/* collect all read start location counts from the input alignments file(s) */
-		mmBamFiles = new HashMap<String,ArrayList<File>>();
-		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded, occupancyTree, mmBamFiles); 
-	
-		// If handling multimapped reads "properly", call the function again with the multimapped temp files:
-		if (multimap.equals("proper")) {
-			bamDict = countReadStartsFromAlignments(bamDict, mmBamFiles, qFilter, qThresh, "ignore", stranded, occupancyTree, mmBamFiles);
-			// add any files in the mmBamFiles list to the list of bamFiles:
-			for (String exp:mmBamFiles.keySet()) {
-				Iterator<File> fIter = mmBamFiles.get(exp).iterator();
-				while (fIter.hasNext()) {
-					File f = fIter.next();
-					bamFiles.get(exp).add(f);
-				}
-			}
-			// From here on, ignore multimappers:
-			multimap = "ignore";
-		}
-		
 		/* create the experiment map to be used by makeCountingIntervalTree(), fillExperimentWindowCounter() and writeExperimentCounter(): */
 		if (inPreprocess) {
 			expMap = new ExperimentMap(bamFiles, inDropData);
