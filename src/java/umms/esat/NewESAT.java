@@ -304,7 +304,7 @@ public class NewESAT {
 		/* single-cell pre-processing? */
 		nextPreprocess = argMap.isPresent("nextPrep") ? true : false;
 		inPreprocess = argMap.isPresent("inPrep") ? true : false;
-		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 10;
+		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 0;
 		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
 		
 		// Allow multiple inputs 
@@ -441,10 +441,10 @@ public class NewESAT {
 							oStr += "\t"+e.getCounts(i);
 							counts+=e.getCounts(i);
 						}
-						if (counts>0) {
-							// don't bother writing genes with no counts
-							gWriter.write(oStr+"\n");	// write to gene-level file
-						}
+						// don't bother writing genes with no counts <<< NOTE: Now writing ALL genes, even with 0 counts
+						//if (counts>0) {
+						gWriter.write(oStr+"\n");	// write to gene-level file
+						//}
 					} else {
 						// otherwise, it is a window-level counter:
 						String oStr = e.getName();
@@ -1008,7 +1008,10 @@ public class NewESAT {
 
 			// Test read start against occupancyTree:
 			if (occupancyTree.containsKey(chr)) {
-				int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+				//int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+				// ignore strandedness of multimapped reads (i.e., test if the read falls within any transcript region, regardless of strand):
+				int oCount = occupancyTree.get(chr).get("+").numOverlappers(readStart, readStart+1) +
+						occupancyTree.get(chr).get("-").numOverlappers(readStart, readStart+1);
 				if (oCount>0) {
 					// if this overlaps any intervals in the tree, save this index and increment the count:
 					bestIdx = i;
@@ -1020,8 +1023,19 @@ public class NewESAT {
 		if (bestCount==1) {
 			// Change the multimap count to 1:
 			r = rArray.get(bestIdx);
-			r.setAttribute("NH", 1);
-			bestRead = r;
+			// Finally, make sure that this read maps to this location on the correct strand (this was ignored before):
+			chr = r.getReferenceName();
+			if (r.getReadNegativeStrandFlag()) {            // strand
+				strand = "-";
+			} else {
+				strand = "+";
+			}
+			readStart = r.getAlignmentStart();              // start location
+			int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+			if (oCount>0) {
+				r.setAttribute("NH", 1);
+				bestRead = r;
+			}
 		}
 		
 		// Return the best read, if there was one. If there was no best read, bestRead will be null.
