@@ -1004,7 +1004,13 @@ public class NewESAT {
 			} else {
 				strand = "+";
 			}
-			readStart = r.getAlignmentStart();              // start location
+			
+			// negative-strand alignments 'start' at the alignment end:
+			if (strand.matches("\\+")) {
+				readStart = r.getAlignmentStart();              // start location
+			} else {
+				readStart = r.getAlignmentEnd();              // start location
+			}
 
 			// Test read start against occupancyTree:
 			if (occupancyTree.containsKey(chr)) {
@@ -1030,7 +1036,14 @@ public class NewESAT {
 			} else {
 				strand = "+";
 			}
-			readStart = r.getAlignmentStart();              // start location
+			
+			// negative-strand alignments 'start' at the alignment end:
+			if (strand.matches("\\+")) {
+				readStart = r.getAlignmentStart();              // start location
+			} else {
+				readStart = r.getAlignmentEnd();              // start location
+			}
+			
 			int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
 			if (oCount>0) {
 				r.setAttribute("NH", 1);
@@ -1151,12 +1164,19 @@ public class NewESAT {
 						// Update the counts in cleanCountsMap if the read start location is contained in
 						// an interval in the windowTree.
 					   	rName = r.getReferenceName();                // chromosome ID
-				    	rStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
 				    	if (stranded & r.getReadNegativeStrandFlag()) {
 				    		rStrand = "-";
 				    	} else {
 				    		rStrand = "+";
 				    	}
+				    	
+						// negative-strand alignments 'start' at the alignment end:
+				    	if (rStrand.matches("\\+")) {
+				    		rStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
+				    	} else {
+				    		rStart = (int)(r.getAlignmentEnd())-1;   // alignments are 1-based, arrays are 0-based
+				    	}
+				    	
 				    	String cString = r.getCigarString(); 
 				    	// Note: if the CigarString is "*", it indicates that the read is unmapped. It would be better 
 				    	//       if SAMRecord had a isMapped() method.
