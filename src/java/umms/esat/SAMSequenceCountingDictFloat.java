@@ -41,7 +41,14 @@ public class SAMSequenceCountingDictFloat extends SAMSequenceCountingDict {
      	
     	// Check to see if storage has already been created for this reference sequence:
     	refName = r.getReferenceName();
-    	alignStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
+    	
+		// negative-strand alignments 'start' at the read end:
+    	if (strand.matches("\\+")) {
+    		alignStart = (int)(r.getAlignmentStart())-1;   // alignments are 1-based, arrays are 0-based
+    	} else {
+    		alignStart = (int)(r.getAlignmentEnd())-1;   // alignments are 1-based, arrays are 0-based
+    	}
+    	
     	String cString = r.getCigarString(); 
     	// Note: if the CigarString is "*", it indicates that the read is unmapped. It would be better 
     	//       if SAMRecord had a isMapped() method.

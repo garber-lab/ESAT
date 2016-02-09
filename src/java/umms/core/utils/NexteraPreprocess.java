@@ -235,8 +235,13 @@ public class NexteraPreprocess {
 		oLaps = new Vector<String>();	// initialize to "no overlap"
 		
 		chr = r.getReferenceName();
-		aStart = r.getAlignmentStart();
 		strand = r.getReadNegativeStrandFlag() ? "-" : "+";   // read strand
+		// negative-strand alignments 'start' at the read end:
+		if (strand.matches("\\+")) {
+			aStart = r.getAlignmentStart();
+		} else {
+			aStart = r.getAlignmentEnd();
+		}
 				
 		if (eMap.containsKey(chr)) {
 			if (eMap.get(chr).containsKey(strand)) {
