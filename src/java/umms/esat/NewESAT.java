@@ -71,11 +71,8 @@ public class NewESAT {
 			"\n\t\t-all [default: disabled]"+
 			"\n\tSignificance testing:"+
 			"\n\t\t-sigTest <minimum allowable p-value>\n"+
-			"\n\tPre-processing alignments from Nextera library reads:"+
-			"\n\t\t-nextPrep [default: off]"+
-			"\n\tPre-processing alignments from inDrop library reads:"+
-			"\n\t\t-inPrep [default: off]"+
-			"\n\t\t-umiMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
+			"\n\tPre-processing alignments single-cell library reads:"+
+			"\n\t\t-scPrep [default: off]";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
@@ -99,9 +96,8 @@ public class NewESAT {
 	/* single-cell parameters */
 	private static boolean nextPreprocess;    // Nextera library reads preprocessing flag
 											  // NOTE: barcode and UMI are in the read name, separated by "_".
-	private static boolean inPreprocess;    // inDrop library reads preprocessing flag
+	private static boolean scPreprocess;    // inDrop library reads preprocessing flag
 	  										// NOTE: barcode is encoded in filename, UMIs are in the read name, separated by "_".
-	private static int umiMin;			// minimum number of reads per UMI that must be mapped to a transcript to be considered a valid UMI 
 	private static int bcMin;			// minimum number of reads that must be observed for a barcode to be considered valid (after PCR duplicate removal) 
 	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
@@ -183,18 +179,15 @@ public class NewESAT {
 		/*****************************************************************************************************
 		 * BEGIN Single-cell data preprocessing 
 		 ******************************************************************************************************/
-		if (nextPreprocess) {
-			NexteraPreprocess nextData = new NexteraPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
-			bamFiles = nextData.getPreprocessedFiles();
-		} else if (inPreprocess) {
-			//InDropPreprocess inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
+		if (scPreprocess) {
 			/* New version of InDropPreprocess: 
-			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc1>:<bc2>:<umi>
+			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc>:<umi>
+			 * NOTE: This was originally specific to inDrop libraries, but is now used for ALL single-cell methods
 			 */
 			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task);
 			bamFiles = inDropData.getPreprocessedFiles();
 			// Fill in barcode counts from preprocessed files, if necessary:
-			int rCount = inDropData.fillBarcodeCounts();
+			//int rCount = inDropData.fillBarcodeCounts();
 			// Remove low-count barcodes, if -bcMin value is given:
 			if (bcMin>0) {
 				HashMap<String, Integer> bcStats = inDropData.filterLowcountBarcodes(bcMin);
@@ -208,7 +201,7 @@ public class NewESAT {
 		 ******************************************************************************************************/
 
 		/* create the experiment map to be used by makeCountingIntervalTree(), fillExperimentWindowCounter() and writeExperimentCounter(): */
-		if (inPreprocess) {
+		if (scPreprocess) {
 			expMap = new ExperimentMap(bamFiles, inDropData);
 		} else {
 			expMap = new ExperimentMap(bamFiles);
@@ -303,8 +296,7 @@ public class NewESAT {
 		
 		/* single-cell pre-processing? */
 		nextPreprocess = argMap.isPresent("nextPrep") ? true : false;
-		inPreprocess = argMap.isPresent("inPrep") ? true : false;
-		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 0;
+		scPreprocess = argMap.isPresent("scPrep") ? true : false;
 		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
 		
 		// Allow multiple inputs 
