@@ -12,8 +12,10 @@ import java.util.List;
 import java.util.Vector;
 
 
+
 import net.sf.samtools.SAMRecord;
 import net.sf.samtools.SAMSequenceDictionary;
+
 
 //import org.apache.commons.math3.util.MultidimensionalCounter.Iterator;
 import org.apache.log4j.Logger;
@@ -21,7 +23,6 @@ import org.apache.log4j.Logger;
 import broad.core.datastructures.IntervalTree;
 import broad.core.datastructures.IntervalTree.Node;
 import broad.core.math.ScanStatistics;
-
 import umms.core.annotation.Annotation;
 import umms.core.annotation.Annotation.Strand;
 import umms.core.annotation.Gene;
@@ -44,7 +45,7 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
 	/* start counts holds the count of the number of reads that start at each base within each of the 
 	 * dictionary header entries */
 	//protected HashMap<String, short[]> startCounts = new HashMap<String, short[]>();      // **** short or float 
-	public Logger logger;
+	public static Logger logger;
     
     public SAMSequenceCountingDict () {
     	super();
@@ -673,6 +674,22 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
     		mmCount = 1;
     	}
     	return mmCount;
+    }
+    
+    public static boolean passATFilt(SAMRecord r, int nAT) {
+    	// returns false if the read does NOT contain any stretches of As or Ts >= nAT in length.
+    	boolean retVal;
+    	String samString = r.getSAMString();
+    	// extract the sequence string from the SAM string:
+    	String[] fields = samString.split("\\s");
+    	
+    	// use regex test on sequence:
+    	if (fields[9].matches("(.*A{"+ nAT + ",}.*)|(.*T{"+ nAT + ",}.*)")) {
+    		retVal = true;
+    	} else {
+    		retVal = false;
+    	}
+    	return retVal;
     }
     
     abstract void incrementStartCounts(String refName, String strand, int alignStart, float fractCount);

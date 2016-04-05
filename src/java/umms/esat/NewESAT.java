@@ -104,6 +104,10 @@ public class NewESAT {
 	private static int umiMin;			// minimum number of reads per UMI that must be mapped to a transcript to be considered a valid UMI 
 	private static int bcMin;			// minimum number of reads that must be observed for a barcode to be considered valid (after PCR duplicate removal) 
 	
+	/* optional AT filter */
+	private static boolean filtAT;		// A/T filtering flag. True=filter out reads with long stretches of As of Ts 
+	private static int filtAtN; 		// length of maximum length of A/T stretches. Reads with stretches of A/T >= filtAtN will be removed.
+	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
 
 	private static HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap;
@@ -191,10 +195,10 @@ public class NewESAT {
 			/* New version of InDropPreprocess: 
 			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc1>:<bc2>:<umi>
 			 */
-			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task);
+			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task,filtAT, filtAtN);
 			bamFiles = inDropData.getPreprocessedFiles();
 			// Fill in barcode counts from preprocessed files, if necessary:
-			int rCount = inDropData.fillBarcodeCounts();
+			int rCount = inDropData.fillBarcodeCounts(filtAT, filtAtN);
 			// Remove low-count barcodes, if -bcMin value is given:
 			if (bcMin>0) {
 				HashMap<String, Integer> bcStats = inDropData.filterLowcountBarcodes(bcMin);
@@ -306,6 +310,15 @@ public class NewESAT {
 		inPreprocess = argMap.isPresent("inPrep") ? true : false;
 		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 0;
 		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
+		
+		/* A/T filtering */
+		// disable A/T filtering unless a value is given:
+		filtAtN = argMap.isPresent("filtAT") ? argMap.getInteger("filtAT") : Integer.MAX_VALUE;
+		if (filtAtN<Integer.MAX_VALUE) {
+			filtAT = true;
+		} else {
+			filtAT = false;
+		}
 		
 		// Allow multiple inputs 
 		if (argMap.isPresent("alignments")){
@@ -781,6 +794,11 @@ public class NewESAT {
 						logger.warn(e.getMessage());
 						continue;
 					}
+					// test/count long A/T stretch reads:
+					if (filtAT && SAMSequenceCountingDict.passATFilt(r, filtAtN)) {
+						continue;
+					}
+					
 					// process the read:
 					if (!r.getReadUnmappedFlag()) {
 						// if quality filtering is turned on, skip low-quality reads:
@@ -1152,6 +1170,11 @@ public class NewESAT {
 						logger.warn(e.getMessage());
 						continue;
 					}
+					// test/count long A/T stretch reads:
+					if (filtAT && SAMSequenceCountingDict.passATFilt(r, filtAtN)) {
+						continue;
+					}
+					
 					// process the read:
 					if (!r.getReadUnmappedFlag()) {
 						// if quality filtering is turned on, skip low-quality reads:
