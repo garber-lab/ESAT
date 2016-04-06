@@ -58,7 +58,8 @@ public class InDropPreprocess {
 	 */
 	public InDropPreprocess(HashMap<String,ArrayList<File>> bamFiles, 
 			Map<String, Collection<Gene>> annotations, 
-			boolean qFilter, int qThresh, String multimap, int wExt, boolean stranded, String task) throws IOException {
+			boolean qFilter, int qThresh, String multimap, int wExt, boolean stranded, String task,
+			boolean filtAT, int filtAtN) throws IOException {
 		
 		SAMRecord r;
 		SAMFileWriterFactory sf = new SAMFileWriterFactory();
@@ -145,6 +146,12 @@ public class InDropPreprocess {
 				while (bamIterator.hasNext()) {
 					try {
 						r = bamIterator.next();
+						
+						// test long A/T stretch reads:
+ 						if (filtAT && SAMSequenceCountingDict.passATFilt(r, filtAtN)) {
+ 							continue;
+ 						}
+ 						
 						readCount+=1;
 						int mmCount=SAMSequenceCountingDict.getMultimapCount(r);
 						if (mmCount>1 && multimap.equals("ignore")) {
@@ -194,7 +201,7 @@ public class InDropPreprocess {
 		return bamFiles_prep;
 	}
 	
-	public int fillBarcodeCounts() {
+	public int fillBarcodeCounts(boolean filtAT, int filtAtN) {
 		SAMRecord r;
 		int rCount = 0;
 		// Only fill bcCounts if it is empty:
@@ -215,6 +222,12 @@ public class InDropPreprocess {
 					while (bamIterator.hasNext()) {
 						try {
 							r = bamIterator.next();
+							
+							// test long A/T stretch reads:
+	 						if (filtAT && SAMSequenceCountingDict.passATFilt(r, filtAtN)) {
+	 							continue;
+	 						}
+	 						
 							rCount++;
 							/* update the count for this exp:barcode */
 							String bc = getBarcodeFromRead(r);
