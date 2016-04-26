@@ -22,6 +22,7 @@ import net.sf.samtools.SAMFileReader.ValidationStringency;
 import net.sf.samtools.SAMRecordIterator;
 
 
+
 //import org.apache.commons.math3.util.MultidimensionalCounter.Iterator;
 import org.apache.log4j.Logger;
 
@@ -63,6 +64,7 @@ public class InDropPreprocess {
 		
 		SAMRecord r;
 		SAMFileWriterFactory sf = new SAMFileWriterFactory();
+		File outFile;
 		int readsIn = 0;
 		int readsOut = 0;
 		
@@ -88,52 +90,26 @@ public class InDropPreprocess {
 				SAMFileHeader bamHeader = bamReader.getFileHeader();    // get the header information
 				
 				// create the pre-processed output BAM file:
-				// The processed file is called <original bam file base name>_nextPrep.bam
+				// The processed file is called <original bam file base name>_inPrep.bam
 				String inFile = bamFile.getCanonicalPath();
 				int extPos = inFile.length()-4;
-				File outFile = new File(inFile.substring(0,extPos)+"_inPrep"+inFile.substring(extPos));
+				// File outFile = new File(inFile.substring(0,extPos)+"_inPrep"+inFile.substring(extPos));
+				
+				// Make a temporary file for the PCR de-duplicated reads:
+				//logger.info("creating temporary file: "+inFile.substring(0,extPos)+"xxxxxxx.bam");				
+				//outFile = File.createTempFile(inFile.substring(0,extPos), ".bam");   
+				outFile = File.createTempFile("sc_umiFiltered_", ".bam");   
+				logger.info("temporary file created: "+outFile);
+				// delete after exit:
+				outFile.deleteOnExit();
 				
 				// add this file to the list of files to be processed by ESAT:
 				if (!bamFiles_prep.containsKey(exp)) {
 					bamFiles_prep.put(exp, new ArrayList<File>());
 				}
 				bamFiles_prep.get(exp).add(outFile);
-				SAMProgramRecord prepProg = new SAMProgramRecord("ESAT");
-				prepProg.setProgramVersion(PROGRAM_VERSION);
-				prepProg.setAttribute("task", task);
-				prepProg.setAttribute("wExt", ""+wExt);
-				boolean makeNewPrepFile = true;     // by default, make a new file.
-				
-				// check for the existence of this file:
-				if (outFile.exists()) {
-					// open the file to read the header
-					SAMFileReader scReader = new SAMFileReader(outFile);   // open as a non-eager reader
-					SAMFileHeader scHeader = scReader.getFileHeader();    // get the header information
-					List<SAMProgramRecord> scProg = scHeader.getProgramRecords();
-					// check to make sure the ESAT parameters are the same:
-					for (SAMProgramRecord sp:scProg) {
-						String pid = sp.getProgramGroupId();
-						if (pid.equals("ESAT")) {
-							// Extract all necessary parameters:
-							String oldVer = sp.getProgramVersion();
-							String oldTask = sp.getAttribute("task");
-							int oldWExt = Integer.parseInt(sp.getAttribute("wExt"));
-							if (oldVer.equals(PROGRAM_VERSION) && oldTask.equals(task) && oldWExt==wExt) {
-								makeNewPrepFile = false;	
-							}
-						}
-					}
-				}
 
-				if (!makeNewPrepFile) {
-					// close the input file
-					bamReader.close();
-					// skip creating a new output file:
-					continue;
-				}
-				
 				// copy the header from the input BAM file:
-				bamHeader.addProgramRecord(prepProg);
 				SAMFileWriter bamWriter = sf.makeBAMWriter(bamHeader, false, outFile);
 
 				//bamReader.setValidationStringency(ValidationStringency.LENIENT);	

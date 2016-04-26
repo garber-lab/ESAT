@@ -94,10 +94,8 @@ public class NewESAT {
 	private static boolean stranded;    // allow for unstranded analysis (defaults to stranded)
 	
 	/* single-cell parameters */
-	private static boolean nextPreprocess;    // Nextera library reads preprocessing flag
-											  // NOTE: barcode and UMI are in the read name, separated by "_".
 	private static boolean scPreprocess;    // inDrop library reads preprocessing flag
-	  										// NOTE: barcode is encoded in filename, UMIs are in the read name, separated by "_".
+	  										// NOTE: barcode and UMIs are appended to the read name, with the format "<readName>:<barcode>:<UMI>".
 	private static int bcMin;			// minimum number of reads that must be observed for a barcode to be considered valid (after PCR duplicate removal) 
 
 	/* optional AT filter */
@@ -189,6 +187,7 @@ public class NewESAT {
 			 * NOTE: This was originally specific to inDrop libraries, but is now used for ALL single-cell methods
 			 */
 			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, filtAT, filtAtN);
+			// replace the original input file list with the pre-processed (PCR de-duplicated) files:
 			bamFiles = inDropData.getPreprocessedFiles();
 			// Fill in barcode counts from preprocessed files, if necessary:
 			//int rCount = inDropData.fillBarcodeCounts();
@@ -299,7 +298,6 @@ public class NewESAT {
 		stranded = argMap.isPresent("unstranded")? false : true;
 		
 		/* single-cell pre-processing? */
-		nextPreprocess = argMap.isPresent("nextPrep") ? true : false;
 		scPreprocess = argMap.isPresent("scPrep") ? true : false;
 		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
 
