@@ -67,6 +67,8 @@ public class InDropPreprocess {
 		File outFile;
 		int readsIn = 0;
 		int readsOut = 0;
+		int totalAlignedUmis = 0;
+		int totalDedupedUmis = 0;
 		
 		/* First, build the exon interval map */
 		HashMap<String, HashMap<String, IntervalTree<String>>> eMap = buildExonIntervalMap(annotations, wExt, stranded, task);
@@ -138,8 +140,12 @@ public class InDropPreprocess {
 						// check if read start overlaps any transcript in the annotations:
 						Vector<String> oLaps = readStartOverlap(r, eMap); 
 						if (!oLaps.isEmpty()) {
+							// increment the totalAlignedUmis counter:
+							totalAlignedUmis+=1;
 							// if so, extract the cell barcode and UMI, and add counts for the overlapping transcript(s)
 							if (updateUmiCounts(r,oLaps,umiCount)) {
+								// only update the totalDedupedUmis counter when writing an alignment:
+								totalDedupedUmis+=1;
 								/* write this read out as the exemplar read for this cell/transcript/UMI */
 								bamWriter.addAlignment(r);
 								writeCount+=1;
@@ -171,6 +177,7 @@ public class InDropPreprocess {
 			}
 		}
 		logger.info("Preprocessing complete: Total reads in: "+readsIn+" Total reads out: "+readsOut);
+		logger.info("Total aligned UMIs: "+totalAlignedUmis+"  Total de-duped UMIs: "+totalDedupedUmis);
 	}
 	
 	public HashMap<String,ArrayList<File>> getPreprocessedFiles() {
