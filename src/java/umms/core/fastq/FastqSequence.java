@@ -3,6 +3,8 @@ package umms.core.fastq;
 import java.io.BufferedWriter;
 import java.io.IOException;
 
+import broad.core.error.ParseException;
+
 public class FastqSequence {
 
 	private String sequence;
@@ -11,6 +13,12 @@ public class FastqSequence {
 	String description;
 	
 	public FastqSequence(String name, String sequence, String description, String quality){
+		if(sequence == null) {
+			throw new ParseException("trying to create a FastqSequence with a null sequence data for seq name "+ name);
+		}
+		if(description == null) {
+			throw new ParseException("trying to create a FastqSequence with a null description data for seq name "+ name);
+		}
 		this.sequence=sequence.replaceFirst("^@", "");
 		this.quality=quality;
 		this.name=name;
