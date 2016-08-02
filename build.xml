@@ -8,14 +8,17 @@
     <property name="src.dir"       value="${basedir}/src/" />
     <property name="lib.dir"       value="${basedir}/lib/" />
     
-    <!-- Distribution directory.  Binary distribution is placed here -->
+    <!-- Distribution directory. Binary distribution is placed here -->
     <property name="dist.dir"      value="${basedir}/dist/" />
-	<!--<property name="dist.dir"      value="/Volumes/seq_mgarber/" />-->
-	<property name="build.dir"	value="${basedir}/build/"/>
-    
+    <!--<property name="dist.dir"  value="/Volumes/seq_mgarber/" />-->
+    <property name="build.dir"     value="${basedir}/build/"/>
+    <!--<property name="test.dir"  JUnit tests go here" />-->
+    <property name="test.dir"      location="${basedir}/test/"/>
+
+
     <!-- build specific properties. These are normally set by Hudson during the build process -->
     <property name="version"       value="v0.1" />
-	
+
 	<!-- All jar files in lib file -->
 	<path id="master-classpath">
       <fileset dir="${lib.dir}">
@@ -23,12 +26,23 @@
       </fileset>
     </path>
 
-     
+    <path id="test-classpath">
+        <fileset dir="${lib.dir}">
+            <include name="junit*.jar"/>
+            <include name="hamcrest*.jar"/>
+        </fileset>
+        <pathelement location="${test.dir}" />
+        <pathelement location="${build.dir}/main"/>
+        <pathelement location="${build.dir}/test"/>
+    </path>
+
+
     <target name="init" >
- 
-        
+
+
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${build.dir}/test"/>
 
         <tstamp>
             <format property="timestamp" pattern="MM.dd.yy_kk.mm" />
@@ -38,12 +52,15 @@
         <echo message="Version ${version}"/>
     	<echo message="jar to build: ${jar.name}"/>
     </target>
-    
-    
+
+
     <target name="compile" depends="init">
         <javac srcdir="${src.dir}"  debug="on" destdir="${build.dir}">
 
             <classpath refid="master-classpath"/>
+        </javac>
+        <javac srcdir="${test.dir}" destdir="${build.dir}/test">
+            <classpath refid="test-classpath"/>
         </javac>
     </target>
 	
@@ -94,7 +111,20 @@
 	        </manifest>
 	    </jar>
 	</target>
-	 
+
+    <!-- Run Tests -->
+    <target name="test" depends="build, ribosat, bcprocess">
+        <junit fork="yes" haltonfailure="true">
+            <classpath refid="test-classpath" />
+            <batchtest fork="yes" todir="tres">
+                <formatter type="brief" usefile="false"/>
+                <fileset dir="${test.dir}">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
     <!-- Clean all generated artifacts -->    
     <target name="clean">
         <delete dir="${build.dir}" />

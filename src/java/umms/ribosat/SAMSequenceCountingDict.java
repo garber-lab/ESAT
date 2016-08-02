@@ -508,6 +508,8 @@ abstract public class SAMSequenceCountingDict extends SAMSequenceDictionary {
    		Window bestWindow = new Window(strand, chr, gCoords[bestStart], gCoords[bestEnd], gName, bestStart, bestEnd); 
    		bestWindow.setCount(bestCount);
  		bestWindow.setPval(bestPval);
+ 		bestWindow.setLambda(bestlambda);
+ 		bestWindow.setaLen(bestaLen);
    		// if the gene has more than one exon, check to see if the new best window spans more than one exon:
 		if (nExons > 1) {
 			bestWindow.addIntervals(gCoords[bestStart], gCoords[bestEnd], eTree);

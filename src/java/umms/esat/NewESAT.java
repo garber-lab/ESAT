@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.lang.annotation.Annotation;
+import java.lang.Runtime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -46,6 +47,8 @@ import umms.esat.SAMSequenceCountingDictShort;
 import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
 import umms.core.utils.NexteraPreprocess;
+import umms.core.utils.InDropPreprocess;
+import umms.core.utils.ExperimentMap;
 
 //import umms.core.utils.ESATUtils;
 
@@ -70,7 +73,9 @@ public class NewESAT {
 			"\n\t\t-sigTest <minimum allowable p-value>\n"+
 			"\n\tPre-processing alignments from Nextera library reads:"+
 			"\n\t\t-nextPrep [default: off]"+
-			"\n\t\t-uMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
+			"\n\tPre-processing alignments from inDrop library reads:"+
+			"\n\t\t-inPrep [default: off]"+
+			"\n\t\t-umiMin <minimum number of reads per UMI per transcript to be considered valid [default: 10]";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
@@ -94,13 +99,19 @@ public class NewESAT {
 	/* single-cell parameters */
 	private static boolean nextPreprocess;    // Nextera library reads preprocessing flag
 											  // NOTE: barcode and UMI are in the read name, separated by "_".
+	private static boolean inPreprocess;    // inDrop library reads preprocessing flag
+	  										// NOTE: barcode is encoded in filename, UMIs are in the read name, separated by "_".
 	private static int umiMin;			// minimum number of reads per UMI that must be mapped to a transcript to be considered a valid UMI 
+	private static int bcMin;			// minimum number of reads that must be observed for a barcode to be considered valid (after PCR duplicate removal) 
 	
 	static final Logger logger = LogManager.getLogger(NewESAT.class.getName());
 
 	private static HashMap<String,HashMap<String,TranscriptCountInfo>> countsMap;
 	private static SAMSequenceCountingDict bamDict;
 	private static Hashtable<String, Gene> geneTable;
+	
+	private static InDropPreprocess inDropData;
+	private static ExperimentMap expMap;
 	
 	public NewESAT(String[] args) throws IOException, ParseException, IllegalArgumentException {
 	
@@ -130,14 +141,11 @@ public class NewESAT {
 		/* START TIMING */
 		long startTime = System.nanoTime();
 		
-		/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
-		if (gMapping) {
-			geneTable = loadGeneTableFromFile(gMapFile); 
-		}
-
 		/* Either use the existing gene-to-transcript mapping table, or load in a genomic annotation file */
 		Map<String, Collection<Gene>> annotations;
 		if (gMapping) {
+			/* If collapsing transcripts down to the gene level, load the gene annotation mapping file */
+			geneTable = loadGeneTableFromFile(gMapFile); 
 			// Create the annotations map, keyed by chromosome:
 			annotations = geneMapToAnnotations(geneTable);  
 		} else {
@@ -153,18 +161,6 @@ public class NewESAT {
 			fillOccupancyTree(occupancyTree, annotations, windowExtend, task);
 		}
 		
-		/*****************************************************************************************************
-		 * BEGIN Single-cell data preprocessing 
-		 ******************************************************************************************************/
-		if (nextPreprocess) {
-			NexteraPreprocess nextData = new NexteraPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
-			bamFiles = nextData.getPreprocessedFiles();
-		}	
-		
-		/*****************************************************************************************************
-		 * END Single-cell data preprocessing 
-		 ******************************************************************************************************/
-
 		/* collect all read start location counts from the input alignments file(s) */
 		mmBamFiles = new HashMap<String,ArrayList<File>>();
 		bamDict = countReadStartsFromAlignments(bamDict, bamFiles, qFilter, qThresh, multimap, stranded, occupancyTree, mmBamFiles); 
@@ -184,17 +180,54 @@ public class NewESAT {
 			multimap = "ignore";
 		}
 		
+		/*****************************************************************************************************
+		 * BEGIN Single-cell data preprocessing 
+		 ******************************************************************************************************/
+		if (nextPreprocess) {
+			NexteraPreprocess nextData = new NexteraPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
+			bamFiles = nextData.getPreprocessedFiles();
+		} else if (inPreprocess) {
+			//InDropPreprocess inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, umiMin);
+			/* New version of InDropPreprocess: 
+			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc1>:<bc2>:<umi>
+			 */
+			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task);
+			bamFiles = inDropData.getPreprocessedFiles();
+			// Fill in barcode counts from preprocessed files, if necessary:
+			int rCount = inDropData.fillBarcodeCounts();
+			// Remove low-count barcodes, if -bcMin value is given:
+			if (bcMin>0) {
+				HashMap<String, Integer> bcStats = inDropData.filterLowcountBarcodes(bcMin);
+				logger.info((bcStats.get("startCount")-bcStats.get("endCount"))+" low-count barcodes removed. "+
+						bcStats.get("endCount")+" remaining.");
+			}
+		}	
+		
+		/*****************************************************************************************************
+		 * END Single-cell data preprocessing 
+		 ******************************************************************************************************/
+
+		/* create the experiment map to be used by makeCountingIntervalTree(), fillExperimentWindowCounter() and writeExperimentCounter(): */
+		if (inPreprocess) {
+			expMap = new ExperimentMap(bamFiles, inDropData);
+		} else {
+			expMap = new ExperimentMap(bamFiles);
+		}
+		
 		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
 		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
 		
 		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
-		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
+		//HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
+		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, expMap.getNexp());
 		
 		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
-		fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
+		//fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
+		fillExperimentWindowCounter(windowTree, expMap, qFilter, qThresh, multimap, stranded);
 		
 		/* write the output file */
-		writeExperimentCountsFile(windowTree, bamFiles, outFile);
+		//writeExperimentCountsFile(windowTree, bamFiles, outFile);
+		writeExperimentCountsFile(windowTree, expMap, outFile);
 
 		/* STOP AND REPORT TIMING */
 		long stopTime = System.nanoTime();
@@ -222,7 +255,7 @@ public class NewESAT {
 		 */
 		
 		/* Windowed read count test parameters */
-		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 400;
+		windowLength = argMap.isPresent("wLen")? argMap.getInteger("wLen") : 50;
 		if (windowLength<1) {
 			logger.error("Illegal value for wLen: "+windowLength+" (window length must be >= 1.");
 			throw new IllegalArgumentException();
@@ -232,7 +265,7 @@ public class NewESAT {
 			logger.error("Illegal value for wOlap: "+windowOverlap+" (window overlap must be >= 0.");
 			throw new IllegalArgumentException();
 		}
-		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 400;
+		windowExtend = argMap.isPresent("wExt")? argMap.getInteger("wExt") : 0;
 		if (windowExtend<0) {
 			logger.error("Illegal value for wExt: "+windowExtend+" (extension must be >= 0.");
 			throw new IllegalArgumentException();
@@ -270,7 +303,9 @@ public class NewESAT {
 		
 		/* single-cell pre-processing? */
 		nextPreprocess = argMap.isPresent("nextPrep") ? true : false;
-		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 10;
+		inPreprocess = argMap.isPresent("inPrep") ? true : false;
+		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 0;
+		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
 		
 		// Allow multiple inputs 
 		if (argMap.isPresent("alignments")){
@@ -360,7 +395,8 @@ public class NewESAT {
 	}
 
 	public void writeExperimentCountsFile(HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree,
-			HashMap<String,ArrayList<File>> bamfiles, File outFile) throws IOException {
+			//HashMap<String,ArrayList<File>> bamfiles, File outFile) throws IOException {
+			ExperimentMap eMap, File outFile) throws IOException {
 				
 		String baseName = outFile.getAbsolutePath();
 		File wFile = new File(baseName+".window.txt");  // window-level counts file
@@ -374,14 +410,18 @@ public class NewESAT {
 		String wStr = "Symbol\tchr\tstart\tend\tstrand";
 		// Header line for gene file:
 		String gStr = "Symbol\tchr\tstrand";
-		for (String e:bamfiles.keySet()) {
+//		for (String e:bamfiles.keySet()) {      // before single-cell update
+		int nCols = eMap.getNexp();             // after single-cell update
+		for (int i=0; i<nCols; i++) {				// after single-cell update
+			String e = eMap.getName(i);			// after single-cell update
 			wStr+="\t"+e;
 			gStr+="\t"+e;
 		}
 		wWriter.write(wStr+"\n");   // write the window file header  
 		gWriter.write(gStr+"\n");   // write the gene file header  
 		
-		int nExp = bamfiles.keySet().size();   // number of experiments
+		//int nExp = bamfiles.keySet().size();   // number of experiments    // before single-cell update
+		int nExp = eMap.getNexp();						// after single-cell update
 		
 		for (String strand:windowTree.keySet()) {
 			for (String chr:windowTree.get(strand).keySet()) {
@@ -401,10 +441,10 @@ public class NewESAT {
 							oStr += "\t"+e.getCounts(i);
 							counts+=e.getCounts(i);
 						}
-						if (counts>0) {
-							// don't bother writing genes wiith no counts
-							gWriter.write(oStr+"\n");	// write to gene-level file
-						}
+						// don't bother writing genes with no counts <<< NOTE: Now writing ALL genes, even with 0 counts
+						//if (counts>0) {
+						gWriter.write(oStr+"\n");	// write to gene-level file
+						//}
 					} else {
 						// otherwise, it is a window-level counter:
 						String oStr = e.getName();
@@ -482,7 +522,7 @@ public class NewESAT {
 		BufferedReader br = new BufferedReader(new FileReader(fileListFile));
 		String s;
 		while((s = br.readLine())!= null){
-			s = s.replaceAll("\\s+", "\t");
+			//s = s.replaceAll("\\s+", "\t");
 			String[] strSplit = s.split("\t");
 			//Check for blank lines or comments (start with "#"):
 			if (strSplit.length < 2 || strSplit[0].startsWith("#")) {
@@ -723,7 +763,7 @@ public class NewESAT {
 					} catch (Exception e) {
 						e.printStackTrace();
 					}		
-									}
+				}
 
 				if (firstFile) {
 					// use the header information in the first bam file to create counts storage
@@ -968,7 +1008,10 @@ public class NewESAT {
 
 			// Test read start against occupancyTree:
 			if (occupancyTree.containsKey(chr)) {
-				int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+				//int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+				// ignore strandedness of multimapped reads (i.e., test if the read falls within any transcript region, regardless of strand):
+				int oCount = occupancyTree.get(chr).get("+").numOverlappers(readStart, readStart+1) +
+						occupancyTree.get(chr).get("-").numOverlappers(readStart, readStart+1);
 				if (oCount>0) {
 					// if this overlaps any intervals in the tree, save this index and increment the count:
 					bestIdx = i;
@@ -980,8 +1023,19 @@ public class NewESAT {
 		if (bestCount==1) {
 			// Change the multimap count to 1:
 			r = rArray.get(bestIdx);
-			r.setAttribute("NH", 1);
-			bestRead = r;
+			// Finally, make sure that this read maps to this location on the correct strand (this was ignored before):
+			chr = r.getReferenceName();
+			if (r.getReadNegativeStrandFlag()) {            // strand
+				strand = "-";
+			} else {
+				strand = "+";
+			}
+			readStart = r.getAlignmentStart();              // start location
+			int oCount = occupancyTree.get(chr).get(strand).numOverlappers(readStart, readStart+1);
+			if (oCount>0) {
+				r.setAttribute("NH", 1);
+				bestRead = r;
+			}
 		}
 		
 		// Return the best read, if there was one. If there was no best read, bestRead will be null.
@@ -1043,7 +1097,8 @@ public class NewESAT {
 	}
 	
 	public void fillExperimentWindowCounter(HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree, 
-											HashMap<String,ArrayList<File>> bamFiles,
+											//HashMap<String,ArrayList<File>> bamFiles,
+											ExperimentMap eMap,
 											boolean qFilter,
 											int qThresh,
 											String multimap,
@@ -1055,13 +1110,15 @@ public class NewESAT {
 		int rStart;			// alignment start location
 		
 		// Get the list of experiment names:
-		Object[] expList = bamFiles.keySet().toArray();
+		//Object[] expList = bamFiles.keySet().toArray();   // before single-cell update
+		Object [] expList = eMap.getBamFiles().keySet().toArray();    // after single cell update
 		
-		// Iterate over the files in each experiment:
+		// Iterate over each experiment:
 		for (int eIdx=0; eIdx<expList.length; eIdx++) {
 			
 			Object exp = expList[eIdx];
 			
+			// Iterate over the files in each experiment:
 			for (int i=0; i<bamFiles.get(exp).size(); i++){
 
 				//long loopStartTime = System.nanoTime();    // loop timer
@@ -1121,25 +1178,43 @@ public class NewESAT {
 				    		}
 
 				    		// check if this read start is contained in any intervals in the tree:
-				    		if (windowTree.get(rStrand).containsKey(rName) && windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)>0) {
-				    			Iterator<IntervalTree.Node<EventCounter>> oIter = windowTree.get(rStrand).get(rName).overlappers(rStart,rStart+1);
-				    			//logger.info("Read at "+rName+":"+rStart+" ("+rStrand+
-				    			//		") has "+windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)+" overlapping intervals");
+				    		// NOTE: the reads are checked against the region rStart-1 to rStart so that reads at the right-most position
+				    		//  	in a window are placed in the window and not one base past the end of the window. This was causing a problem
+				    		//   	where a significant window was found, but the counts in the window were reported as 0, because all of the 
+				    		// 		reads were in the last base of the window.
+				    		if (windowTree.get(rStrand).containsKey(rName) && windowTree.get(rStrand).get(rName).numOverlappers(rStart-1, rStart)>0) {
+			    			Iterator<IntervalTree.Node<EventCounter>> oIter = windowTree.get(rStrand).get(rName).overlappers(rStart-1,rStart);
+				    			if (rStart==13857423) {
+				    				logger.info("Read at "+rName+":"+rStart+" ("+rStrand+") has "+
+				    						windowTree.get(rStrand).get(rName).numOverlappers(rStart-1, rStart)+" overlapping intervals");
+				    			}
 				    			while (oIter.hasNext()) {
 				    				Node<EventCounter> n = oIter.next();
 				    				// This node might contain multiple EventCounters. Update them all:
 				    				Collection<EventCounter> cvNode = n.getContainedValues();
 				    				for (EventCounter e:cvNode) {
 				    					// 	update the count for this interval:
-				    					//n.getValue().addIntervalCount(rStart, rStart+1, eIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
-				    					e.addIntervalCount(rStart, rStart+1, eIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
+				    					if (!eMap.isSingleCell()) {
+				    						int cIdx = eMap.getIndex(exp.toString());
+				    						//e.addIntervalCount(rStart, rStart+1, eIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
+				    						e.addIntervalCount(rStart, rStart+1, cIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval					    								
+				    					} else {
+				    						String bc = InDropPreprocess.getBarcodeFromRead(r);
+				    						String eName = exp+":"+bc;
+				    						int cIdx = eMap.getIndex(eName);
+				    						if (cIdx>=0) {
+				    							// update the count if this is a valid experiment and barcode:
+				    							e.addIntervalCount(rStart, rStart+1, cIdx, fractCount);   // add (possibly) fractional counts if read is contained in an interval
+				    						}
+				    					}
 				    				}
 				    			}
 				    		}
 				    	}
 					}
 				}
+				bamReader.close();
 			}
 		}
 	} 	
-}
+}	

@@ -46,6 +46,10 @@ public class EventCounter {
 	public double getLambda() {
 		return w.getLambda();
 	}
+	
+	public double getaLen() {
+		return w.getaLen();
+	}
 
 	public boolean hasIntervalTree() {
 		return w.hasITree();
@@ -70,5 +74,4 @@ public class EventCounter {
 			counts[n]+=fractCount;
 		} 
 	}
-
 }
