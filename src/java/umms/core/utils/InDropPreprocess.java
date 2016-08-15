@@ -60,7 +60,8 @@ public class InDropPreprocess {
 	public InDropPreprocess(HashMap<String,ArrayList<File>> bamFiles, 
 			Map<String, Collection<Gene>> annotations, 
 			boolean qFilter, int qThresh, String multimap, int wExt, boolean stranded, String task,
-			boolean filtAT, int filtAtN) throws IOException {
+			boolean filtAT, int filtAtN , int umiMin)      // umiMin added 
+					throws IOException {
 		
 		SAMRecord r;
 		SAMFileWriterFactory sf = new SAMFileWriterFactory();
@@ -143,7 +144,7 @@ public class InDropPreprocess {
 							// increment the totalAlignedUmis counter:
 							totalAlignedUmis+=1;
 							// if so, extract the cell barcode and UMI, and add counts for the overlapping transcript(s)
-							if (updateUmiCounts(r,oLaps,umiCount)) {
+							if (updateUmiCounts(r,oLaps,umiCount,umiMin)) {
 								// only update the totalDedupedUmis counter when writing an alignment:
 								totalDedupedUmis+=1;
 								/* write this read out as the exemplar read for this cell/transcript/UMI */
@@ -270,15 +271,15 @@ public class InDropPreprocess {
 		return bcStats;
 	}
 
-	/* New version without umiMin parameter */
+	/* New version with umiMin parameter */
 	public boolean updateUmiCounts(SAMRecord r, Vector<String> oLaps, 
-			HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> umiCount) {
+			HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> umiCount,
+			int umiMin) {
 		boolean writeExemplar=false;
 		
 		// HashMap keys:
 		String chr = r.getReferenceName();
 		String strand = r.getReadNegativeStrandFlag() ? "-" : "+";
-		String gName;
 		String BC;
 		String UMI;
 		
@@ -319,7 +320,7 @@ public class InDropPreprocess {
 			umiCount.get(strand).get(chr).get(g).get(BC).put(UMI,umiCount.get(strand).get(chr).get(g).get(BC).get(UMI)+1);
 			// If any transcript hits the UMI count threshold, set the writeExemplar flag:
 			int umiN = umiCount.get(strand).get(chr).get(g).get(BC).get(UMI);   // TEMPORARY
-			if (umiCount.get(strand).get(chr).get(g).get(BC).get(UMI)==1) {
+			if (umiN==umiMin) { 
 				// only write the first read with a BC:UMI mapped to this location:
 				writeExemplar=true;
 			}
