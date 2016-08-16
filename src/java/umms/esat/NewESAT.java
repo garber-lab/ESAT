@@ -72,7 +72,8 @@ public class NewESAT {
 			"\n\tSignificance testing:"+
 			"\n\t\t-sigTest <minimum allowable p-value>\n"+
 			"\n\tPre-processing alignments single-cell library reads:"+
-			"\n\t\t-scPrep [default: off]";
+			"\n\t\t-scPrep [default: off]"+
+			"\n\t\t-umiMin [default: 1]";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
@@ -97,7 +98,8 @@ public class NewESAT {
 	private static boolean scPreprocess;    // inDrop library reads preprocessing flag
 	  										// NOTE: barcode and UMIs are appended to the read name, with the format "<readName>:<barcode>:<UMI>".
 	private static int bcMin;			// minimum number of reads that must be observed for a barcode to be considered valid (after PCR duplicate removal) 
-
+	private static int umiMin;			// minimum number times a barcode:transcript:UMI must occur for it to be considered valid 
+	
 	/* optional AT filter */
  	private static boolean filtAT;		// A/T filtering flag. True=filter out reads with long stretches of As of Ts 
  	private static int filtAtN; 		// length of maximum length of A/T stretches. Reads with stretches of A/T >= filtAtN will be removed.
@@ -186,7 +188,8 @@ public class NewESAT {
 			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc>:<umi>
 			 * NOTE: This was originally specific to inDrop libraries, but is now used for ALL single-cell methods
 			 */
-			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, windowExtend, stranded, task, filtAT, filtAtN);
+			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, 
+					windowExtend, stranded, task, filtAT, filtAtN, umiMin);
 			// replace the original input file list with the pre-processed (PCR de-duplicated) files:
 			bamFiles = inDropData.getPreprocessedFiles();
 			// Fill in barcode counts from preprocessed files, if necessary:
@@ -300,6 +303,7 @@ public class NewESAT {
 		/* single-cell pre-processing? */
 		scPreprocess = argMap.isPresent("scPrep") ? true : false;
 		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
+		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 1;
 
 		/* A/T filtering */
 		// disable A/T filtering unless a value is given:
