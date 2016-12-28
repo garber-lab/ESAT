@@ -4,7 +4,8 @@ The ESAT toolkit is designed for expression analysis of Digital expression (DGE)
 
 The toolkit is implemented in Java and requires version 1.6 or higher. ESAT can be run on a single or multiple samples. When running multiple samples, all samples are processed together and the results reported as a matrix. To handle multiple samples you will need to prepare a file describing the samples indicating the alignment file locations and the experiment condition assigned to each file. (See **Usage Examples** below for a description of the file format.)
 
-### Download ESAT: [esat.v1.jar](http://galaxyweb.umassmed.edu/img/esat.jar)
+### To download the latest version of ESAT:
+The latest version of ESAT is in src/java/umms/esatJar/esat.latest.jar in the **develop** branch. To download the latest version, navigate to the jar file (click on *src* above, then *java*, etc.), then click on *esat.jar.latest* and click **Download** to download the binary file.
 
 ### Usage: 
 *```java -jar esat.jar -task <score3p | score5p> ```
