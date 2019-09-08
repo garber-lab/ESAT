@@ -61,6 +61,7 @@ public class SAMSequenceCountingDictShort extends SAMSequenceCountingDict {
     	
     	for (int i=0; i<eLen; i++){
     		int gLoc = eStart+i;
+    		logger.debug("This gLoc, is giving array out of bounds some times" + gLoc);
     		x = startCounts.get(chr).get(strand)[gLoc];
     		if (x<0) {
     			floatCounts[cStart+i] = (float) x+65536;

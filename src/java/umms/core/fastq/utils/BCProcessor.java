@@ -43,7 +43,7 @@ public class BCProcessor extends CommandLineProgram {
     public String BC_FORMAT;
     @Option(doc="Position (zero based) in the read where the barcode is expected to start, default is the first position (0)" , shortName="S", optional=true)
     public int BC_START_POS = 0;
-    @Option (doc="2-colum Tab delimited file with barcode to sample mapping" , shortName="M", optional=false)
+    @Option (doc="2-colum Tab delimited file with barcode to sample mapping" , shortName="M", optional=true)
     public File BC_SAMPLE_MAP;
     @Option (doc="Maximum hamming distance to the sample barcode in order to assign the read to the sample (default 0)", shortName="HD", optional=true)
     public int MAX_HAMMING_DIST = 0;
@@ -69,6 +69,8 @@ public class BCProcessor extends CommandLineProgram {
 	private Map<String,Integer> randomNonBarcodeCounts;
 	private Map<String,Integer> otherNonBarcodeCounts;
 	
+	static final String DEFAULT_BC = "nobc";
+	
     /** Stock main method. */
     public static void main(final String[] argv) {
         System.exit(new BCProcessor().instanceMain(argv));
@@ -85,16 +87,18 @@ public class BCProcessor extends CommandLineProgram {
 		otherNonBarcodeCounts  = new HashMap<String, Integer>();
 		
 		HashMap<String, String> bcSampleMap = null;
-		try {
-			bcSampleMap = BCEvaluator.readBCMap(BC_SAMPLE_MAP);
-		} catch (FileNotFoundException e) {
-			System.out.println("Could not access the barcode sample mapping file");
-			e.printStackTrace();
-			return 1;
-		} catch (IOException e) {
-			System.out.println("Error accessing barcode sample mapping file");
-			e.printStackTrace();
-			return 1;
+		if(BC_SAMPLE_MAP != null) {
+			try {
+				bcSampleMap = BCEvaluator.readBCMap(BC_SAMPLE_MAP);
+			} catch (FileNotFoundException e) {
+				System.out.println("Could not access the barcode sample mapping file");
+				e.printStackTrace();
+				return 1;
+			} catch (IOException e) {
+				System.out.println("Error accessing barcode sample mapping file");
+				e.printStackTrace();
+				return 1;
+			}
 		}
 
 		if(! OUTDIR.exists()) {
@@ -116,6 +120,7 @@ public class BCProcessor extends CommandLineProgram {
 		HashMap<String, BufferedWriter[]> writerMap = null;
 		BufferedWriter unassignedP1 = null;
 		BufferedWriter unassignedP2 = null;
+		BufferedWriter [] unnasigned = isPaired ? new BufferedWriter[2] : new BufferedWriter[1];
 		
 		try {
 			try {
@@ -134,18 +139,24 @@ public class BCProcessor extends CommandLineProgram {
 					e.printStackTrace();
 					return 1;
 				}
-			}			
+			}		
+			
 			try {
-				writerMap = buildWriterMap(bcSampleMap) ;
-				unassignedP1 = new BufferedWriter(new FileWriter(OUTDIR + "/unassigned.P1.fq"));
+				if(BC_SAMPLE_MAP != null) {
+					writerMap = buildWriterMap(bcSampleMap) ;
+				}
+				unassignedP1 = new BufferedWriter(new FileWriter(OUTDIR + "/"+FASTQ1.getName().replaceFirst("\\.[^\\.]*$",".unasigned.fq") ));
+				unnasigned[0] = unassignedP1;
 				if (isPaired) {
-					unassignedP2 = new BufferedWriter(new FileWriter(OUTDIR + "/unassigned.P2.fq"));
+					unassignedP2 = new BufferedWriter(new FileWriter(OUTDIR + "/"+FASTQ2.getName().replaceFirst("\\.[^\\.]*$",".unasigned.fq") ));
+					unnasigned[1] = unassignedP2;
 				}
 			} catch (IOException e) {
-				System.out.println("Could not create output files for barcode splitting");
-				e.printStackTrace();
-				return 1;
+					System.out.println("Could not create output files for barcode splitting");
+					e.printStackTrace();
+					return 1;
 			}
+			
 				
 			
 			while (parser1.hasNext()) {
@@ -153,7 +164,7 @@ public class BCProcessor extends CommandLineProgram {
 				
 				String [] bcInfo = parseBarcode(r1); // First position sample, second UMI, third OTHER
 				
-				if(bcInfo[0] == null) {
+				if(bcInfo[0] == null && bcInfo[1] == null) {
 					logger.error("Obtained a null barcode for read " + r1.getName() + " sequence " + r1.getSequence());
 				}
 				
@@ -161,24 +172,29 @@ public class BCProcessor extends CommandLineProgram {
 				BufferedWriter out2 = unassignedP2;
 
 				String bc = getClosestBc(bcSampleMap, bcInfo[0]);
+
+				BufferedWriter [] out = null;
 				if( bc != null) {
 					//Need to update the BCInfo with the closest barcode once it is found
 					bcInfo[0] = bc;
-					BufferedWriter [] out = writerMap.get(bc);
-					out1 = out[0];
-					if(isPaired) { 
-						out2 = out[1];
-					}
-					
-					setBarcode(r1, bcInfo);
-					if( !IN_READ_NAME) {
-						r1.excise(this.BC_START_POS,this.bcLength);
-					}
+					out = writerMap.get(bc);
 					updateCounts(bcInfo);
 				} else {
+					out = unnasigned;
+					bc = getBarcodeFromReadName(r1.getName());
+					bcInfo[0] = bc;
 					updateNonCounts(bcInfo);
 				}
-				
+
+				out1 = out[0];
+				if(isPaired) { 
+					out2 = out[1];
+				}
+					
+				setBarcode(r1, bcInfo);
+				if( !IN_READ_NAME) {
+					r1.excise(this.BC_START_POS,this.bcLength);
+				}
 				
 				r1.write(out1);
 				if( isPaired) {
@@ -289,7 +305,12 @@ public class BCProcessor extends CommandLineProgram {
 	}
 
 	private void setBarcode(FastqSequence r, String[] bcInfo) {
-		String compoundBC = bcInfo[0] + (bcInfo[1] != null && bcInfo[1].length() > 0 ? "_" + bcInfo[1] : "");
+		String compoundBC = "";
+		if(bcInfo[0] != null) {
+			compoundBC = bcInfo[0] + (bcInfo[1] != null && bcInfo[1].length() > 0 ? "_" + bcInfo[1] : "");
+		} else if (bcInfo[1] != null && bcInfo[1].length() > 0){
+			compoundBC = bcInfo[1];
+		}
 		String newName = buildBarcodeFromReadName( r.getName(), compoundBC);
 		
 		r.setName(newName);
@@ -360,6 +381,11 @@ public class BCProcessor extends CommandLineProgram {
 
 	
 	private String getClosestBc(HashMap<String, String> bcSampleMap, String observedBC) {
+
+		if(observedBC == null) {
+			return null;
+		}
+		
 		// TODO Add hemming distance comparison
 		String barcode = bcSampleMap.containsKey(observedBC) ? observedBC : null;
 		
@@ -401,18 +427,21 @@ public class BCProcessor extends CommandLineProgram {
      * This now assumes Casava formats
      */
 	private String[] parseBarcodeFromName(String name) {
+	    return splitBarcode(getBarcodeFromReadName(name));
+	}
+
+	private String getBarcodeFromReadName(String name) {
 	    String [] idComponents = name.split (":");
 	    String bc = idComponents[idComponents.length - 1];
 	    
 	    if (idComponents.length  == 4) { // Casava version 1.4 or earlier
-		bc = bc.replace("#", "");
-		bc = bc.replace("/","");
+	    	bc = bc.replace("#", "");
+	    	bc = bc.replace("/","");
 	    } 
-	    return splitBarcode(bc);
+		return bc;
 	}
 
 	private String [] parseBarcodeFromSequence (String seq) {
-		
 		String bcString = seq.substring(BC_START_POS, BC_START_POS + bcLength +1);		
 		return splitBarcode( bcString);	 	
 	}
@@ -423,16 +452,14 @@ public class BCProcessor extends CommandLineProgram {
 		//This is to handle non-complex barcodes that for example only have the sample id
 		if(idxSampleBCStart > -1 ) {
 			info [0] = bcString.substring(idxSampleBCStart,idxSampleBCEnd + 1);
-			if(idxUMIStart > -1) {
-				info [1] = bcString.substring(idxUMIStart,idxUMIEnd+1);
+		} 
+		if(idxUMIStart > -1) {
+			info [1] = bcString.substring(idxUMIStart,idxUMIEnd+1);
 				
-			}
-			if (idxOtherStart > -1) {
-				info [2] = bcString.substring(idxOtherStart,idxOtherEnd + 1);
-			}
-		} else {
-			info[0] = bcString; // assuming that the barcode is the sample id. Not handling the case where the barcode is only the UMI
 		}
+		if (idxOtherStart > -1) {
+			info [2] = bcString.substring(idxOtherStart,idxOtherEnd + 1);
+		} 
 
 		return info;
 	}

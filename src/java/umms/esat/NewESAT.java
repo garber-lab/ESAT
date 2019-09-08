@@ -188,8 +188,9 @@ public class NewESAT {
 			 * Assumes umiMin=1 and that the barcode and UMI are concatenated with the readID as <readID>:<bc>:<umi>
 			 * NOTE: This was originally specific to inDrop libraries, but is now used for ALL single-cell methods
 			 */
-			inDropData = new InDropPreprocess(bamFiles, annotations, qFilter, qThresh, multimap, 
+			inDropData = new InDropPreprocess( qFilter, qThresh, multimap, 
 					windowExtend, stranded, task, filtAT, filtAtN, umiMin);
+			inDropData.process(bamFiles, annotations, true);
 			// replace the original input file list with the pre-processed (PCR de-duplicated) files:
 			bamFiles = inDropData.getPreprocessedFiles();
 			// Fill in barcode counts from preprocessed files, if necessary:
@@ -200,37 +201,38 @@ public class NewESAT {
 				logger.info((bcStats.get("startCount")-bcStats.get("endCount"))+" low-count barcodes removed. "+
 						bcStats.get("endCount")+" remaining.");
 			}
+			
 		}	
 		
 		/*****************************************************************************************************
 		 * END Single-cell data preprocessing 
 		 ******************************************************************************************************/
 
-		/* create the experiment map to be used by makeCountingIntervalTree(), fillExperimentWindowCounter() and writeExperimentCounter(): */
-		if (scPreprocess) {
-			expMap = new ExperimentMap(bamFiles, inDropData);
-		} else {
-			expMap = new ExperimentMap(bamFiles);
-		}
-		
-		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
-		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
-		
-		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
-		//HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
-		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, expMap.getNexp());
-		
-		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
-		//fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
-		fillExperimentWindowCounter(windowTree, expMap, qFilter, qThresh, multimap, stranded);
-		
-		/* write the output file */
-		//writeExperimentCountsFile(windowTree, bamFiles, outFile);
-		writeExperimentCountsFile(windowTree, expMap, outFile);
-
-		/* STOP AND REPORT TIMING */
-		long stopTime = System.nanoTime();
-		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
+//		/* create the experiment map to be used by makeCountingIntervalTree(), fillExperimentWindowCounter() and writeExperimentCounter(): */
+//		if (scPreprocess) {
+//			expMap = new ExperimentMap(bamFiles, inDropData);
+//		} else {
+//			expMap = new ExperimentMap(bamFiles);
+//		}
+//		
+//		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
+//		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
+//		
+//		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
+//		//HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
+//		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, expMap.getNexp());
+//		
+//		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
+//		//fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
+//		fillExperimentWindowCounter(windowTree, expMap, qFilter, qThresh, multimap, stranded);
+//		
+//		/* write the output file */
+//		//writeExperimentCountsFile(windowTree, bamFiles, outFile);
+//		writeExperimentCountsFile(windowTree, expMap, outFile);
+//
+//		/* STOP AND REPORT TIMING */
+//		long stopTime = System.nanoTime();
+//		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
 	}
 									
 	public static void main(String[] args) throws ParseException, IOException {
@@ -1221,10 +1223,12 @@ public class NewESAT {
 				    		//  	in a window are placed in the window and not one base past the end of the window. This was causing a problem
 				    		//   	where a significant window was found, but the counts in the window were reported as 0, because all of the 
 				    		// 		reads were in the last base of the window.
-				    		//if (windowTree.get(rStrand).containsKey(rName) && windowTree.get(rStrand).get(rName).numOverlappers(rStart-1, rStart)>0) {
-			    			//Iterator<IntervalTree.Node<EventCounter>> oIter = windowTree.get(rStrand).get(rName).overlappers(rStart-1,rStart);
-				    		if (windowTree.get(rStrand).containsKey(rName) && windowTree.get(rStrand).get(rName).numOverlappers(rStart, rStart+1)>0) {
-			    			Iterator<IntervalTree.Node<EventCounter>> oIter = windowTree.get(rStrand).get(rName).overlappers(rStart,rStart+1);
+				    		if (windowTree.get(rStrand).containsKey(rName) && windowTree.get(rStrand).get(rName).numOverlappers(rStart-1, rStart)>0) {
+			    			Iterator<IntervalTree.Node<EventCounter>> oIter = windowTree.get(rStrand).get(rName).overlappers(rStart-1,rStart);
+				    			if (rStart==13857423) {
+				    				logger.info("Read at "+rName+":"+rStart+" ("+rStrand+") has "+
+				    						windowTree.get(rStrand).get(rName).numOverlappers(rStart-1, rStart)+" overlapping intervals");
+				    			}
 				    			while (oIter.hasNext()) {
 				    				Node<EventCounter> n = oIter.next();
 				    				// This node might contain multiple EventCounters. Update them all:

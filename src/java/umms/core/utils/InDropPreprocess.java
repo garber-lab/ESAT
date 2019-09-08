@@ -1,6 +1,8 @@
 package umms.core.utils;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,6 +34,17 @@ import umms.esat.SAMSequenceCountingDict;
 
 public class InDropPreprocess {
 
+	// State 
+	private boolean qFilter;
+	private int qThreshold;
+	private String multimap;
+	private int wExt;
+	private boolean stranded;
+	private String task;
+	private boolean filtAT;
+	private int umiMin;
+	private int filtAtN;
+	
 	private static final String PROGRAM_VERSION = "0.01";
 	static Logger logger = Logger.getLogger(InDropPreprocess.class.getName());
 	/* output pre-processed BAM files */
@@ -57,12 +70,21 @@ public class InDropPreprocess {
 	/* this version of InDropPreprocess does not have a umiMin parameter, and saves the first read mapping to 
 	 * gene/barcode/umi. The barcode and UMI are assumed to be concatenated with the read ID as <readID>:<bc>:<umi>: 
 	 */
-	public InDropPreprocess(HashMap<String,ArrayList<File>> bamFiles, 
-			Map<String, Collection<Gene>> annotations, 
-			boolean qFilter, int qThresh, String multimap, int wExt, boolean stranded, String task,
+	public InDropPreprocess(boolean qFilter, int qThresh, String multimap, int wExt, boolean stranded, String task,
 			boolean filtAT, int filtAtN , int umiMin)      // umiMin added 
 					throws IOException {
-		
+		this.qFilter = qFilter;
+		this.qThreshold = qThresh;
+		this.multimap = multimap;
+		this.wExt = wExt;
+		this.stranded = stranded;
+		this.task = task;
+		this.filtAT = filtAT;
+		this.umiMin = umiMin;
+		this.filtAtN = filtAtN;
+	}
+
+	public void  process(HashMap<String, ArrayList<File>> bamFiles, Map<String, Collection<Gene>> annotations, boolean writeUMISupport) throws IOException {	
 		SAMRecord r;
 		SAMFileWriterFactory sf = new SAMFileWriterFactory();
 		File outFile;
@@ -76,7 +98,7 @@ public class InDropPreprocess {
 		
 		/* open the input alignments file */
 		for (String exp:bamFiles.keySet()) {
-			
+			logger.debug("exp variable: " + exp);
 			/* storage for well barcode/UMI counts (new for each experiment)*/
 			/* Keys: strand:chr:gene:barcode:UMI => <count> */
 			HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> umiCount = 
@@ -175,10 +197,110 @@ public class InDropPreprocess {
 				logger.info("Preprocessing file: "+bamFile+" took "+(loopEndTime-loopStartTime)/1e9+" sec\n");
 				readsIn+=readCount;
 				readsOut+=writeCount;
+				if(writeUMISupport) {
+					/* Keys: strand:chr:gene:barcode:UMI => <count> */
+					File outUmiCntFile = new File( exp+".umi.distributions.txt");
+					BufferedWriter  outUmiCntFileBW = new BufferedWriter(new FileWriter(outUmiCntFile));
+					logger.info("Writing out UMI support data for experiment: " + exp + " to ");
+					long startWriteUMISupport = System.nanoTime();  
+					for (String strnd : umiCount.keySet()) {
+						 HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>> strandedUmis = umiCount.get(strnd);
+						 for( HashMap<String, HashMap<String, HashMap<String, Integer>>>  chrStrandedUmis : strandedUmis.values()) {
+							 for (String g : chrStrandedUmis.keySet()) {
+								 HashMap<String, HashMap<String, Integer>> geneUmis = chrStrandedUmis.get(g);
+								 for (String bc : geneUmis.keySet()) {
+									 HashMap<String, Integer> geneBCUmis = geneUmis.get(bc);
+									 String key = bc+"\t"+g;
+									 for (String umi : geneBCUmis.keySet()) {
+										 outUmiCntFileBW.write(key);
+										 outUmiCntFileBW.write("\t"+ umi+"\t"+geneBCUmis.get(umi));
+										 outUmiCntFileBW.newLine();
+									 }
+								 }
+							 }
+						 }
+					}
+					outUmiCntFileBW.close();
+					long timeTaken = System.nanoTime() - startWriteUMISupport;
+					logger.info("Finished Writing  UMI support data for experiment: " + exp + " took: " + (timeTaken)/1e9+" sec\n");
+					
+					// BEGIN SAM'S WORK
+					
+					
+					
+					// END SAM'S WORK
+				}
+				
 			}
 		}
 		logger.info("Preprocessing complete: Total reads in: "+readsIn+" Total reads out: "+readsOut);
 		logger.info("Total aligned UMIs: "+totalAlignedUmis+"  Total de-duped UMIs: "+totalDedupedUmis);
+	}
+	
+	/**
+	 * find the Hamming distance between two input strings:
+	 * @param x
+	 * @param y
+	 * @return
+	 */
+	private int hammingDistance(String x, String y) {
+		int hd;
+		
+		if (x.length() != y.length()) {
+			hd = x.length();
+		} else {
+			hd = 0;
+			for (int i = 0; i < x.length(); i++) {
+				if (x.charAt(i) != y.charAt(i)) {
+					hd += 1; // count mismatches
+				}
+			}
+		}
+		return hd;
+	}
+	
+	/**
+	 * test each element of singList against all elements of multList to see if any
+     * singletons are one base off from any of the multis.
+	 * @param singList list of UMIs with only one count
+	 * @param multList list of UMIs with count >= nMin
+	 * @param badUmis output list of UMIs to be removed
+	 * @param repUmis UMIs to be incremented, with the increment count
+	 */
+	private void testUmiDist(List<String> singList, List<String> multList, List<String> badUmis, Map<String, Integer> repUmis) {
+		for (String bc0 : singList) {
+			ArrayList<String> bc1off = new ArrayList<String>(); // barcodes with a Hamming distance of 1 from the singelton
+			for (String bc1 : multList) {
+				if (hammingDistance(bc0, bc1) == 1) {
+					bc1off.add(bc1);
+				}
+			}
+			// if a barcode is one off from any multi, remove it:
+			if (bc1off.size() > 0) {
+				badUmis.add(bc0);
+			}
+			// if bc0 is one off from only ONE multi, increment the count for that multi:
+			if (bc1off.size() == 1) {
+				if (repUmis.containsKey(bc1off.get(0))) {
+					repUmis.replace(bc1off.get(0), repUmis.get(bc1off.get(0)));
+				} else {
+					repUmis.put(bc1off.get(0), 1);
+				}
+			}
+		}
+	}
+	
+	/**
+	 * sums the values of the values in a key:value list:
+	 * @param d
+	 * @return
+	 */
+	private int sumValues(Map<String, Integer> d) {
+		int x = 0;
+		for (Integer value : d.values()) {
+			x += value;
+		}
+		return x;
 	}
 	
 	public HashMap<String,ArrayList<File>> getPreprocessedFiles() {
@@ -447,4 +569,13 @@ public class InDropPreprocess {
 	public static void main() {
 		
 	}
+	
+	class UMICount {
+		/* Keys: strand:chr:gene:barcode:UMI => <count> */
+		private HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>> data =
+				new HashMap<String, HashMap<String, HashMap<String, HashMap<String, HashMap<String, Integer>>>>>();
+		
+		
+	}
+
 }
