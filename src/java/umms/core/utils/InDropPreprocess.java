@@ -1,7 +1,10 @@
 package umms.core.utils;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,6 +14,7 @@ import java.util.Map;
 import java.util.List;
 import java.util.Vector;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 
 import broad.core.datastructures.IntervalTree;
 import net.sf.samtools.SAMProgramRecord;
@@ -224,17 +228,170 @@ public class InDropPreprocess {
 					long timeTaken = System.nanoTime() - startWriteUMISupport;
 					logger.info("Finished Writing  UMI support data for experiment: " + exp + " took: " + (timeTaken)/1e9+" sec\n");
 					
-					// BEGIN SAM'S WORK
+					// translated Python code for cleaning low-end UMIs
 					
+					long startCleanLowEndUmis = System.nanoTime();
 					
+					File cleanLowEndUmisOut = new File(exp + ".expression.txt");
+					File cleanLowEndUmisReadsOut = new File(exp + ".reads.txt");
+					int nMin = 2;
+					int uMin = 1;
 					
-					// END SAM'S WORK
+					cleanLowEndUmis(outUmiCntFile, cleanLowEndUmisOut, cleanLowEndUmisReadsOut, nMin, uMin);
+					
+					logger.info("Finished cleaning low end UMIs for experiment " + exp + " in " + (System.nanoTime() - startCleanLowEndUmis)/1e9 + "s");
 				}
 				
 			}
 		}
 		logger.info("Preprocessing complete: Total reads in: "+readsIn+" Total reads out: "+readsOut);
 		logger.info("Total aligned UMIs: "+totalAlignedUmis+"  Total de-duped UMIs: "+totalDedupedUmis);
+	}
+	
+	private void cleanLowEndUmis(File inFile, File outFile, File readsFile, int nMin, int uMin) throws IOException {
+		BufferedReader fIn = new BufferedReader(new FileReader(inFile));
+		
+		LinkedHashMap<String, Integer> umiDict = new LinkedHashMap<String, Integer>();
+		LinkedHashMap<String, Map<String, Map<String, Integer>>> umiHist = new LinkedHashMap<String, Map<String, Map<String, Integer>>>();
+		LinkedHashMap<String, Integer> gDict = new LinkedHashMap<String, Integer>();
+		int nLines = 0;
+		
+		for (String line = fIn.readLine(); line != null; line = fIn.readLine()) {
+			nLines++;
+			
+			// split into barcode and count
+			String[] fields = line.split("\t");
+			
+			// signal bad input line
+			if (fields.length < 4) {
+				logger.error("Too few items in line: " + line);
+			}
+			
+			// parse the line
+			String bc = fields[0];
+			String g = fields[1];
+			String umi = fields[2];
+			int n = Integer.parseInt(fields[3]);
+			
+			// update the gene dictionary
+			gDict.putIfAbsent(g, 0);
+			
+			// UMI counts histogram
+			umiHist.putIfAbsent(bc, new LinkedHashMap<String, Map<String, Integer>>());
+			umiHist.get(bc).putIfAbsent(g, new LinkedHashMap<String, Integer>());
+			umiHist.get(bc).get(g).putIfAbsent(umi, 0);
+			umiHist.get(bc).get(g).replace(umi, umiHist.get(bc).get(g).get(umi) + n);
+			
+			// keep stats on all UMIs
+			umiDict.putIfAbsent(umi, 0);
+			umiDict.replace(umi, umiDict.get(umi) + n);
+		}
+		
+		fIn.close();
+		
+		// get lists of UMIs with one count and UMIs with >nMin counts:
+		int meanMin = 2; // minimum number of UMI counts for use in computing UMI mean
+		for (String bc : umiHist.keySet()) {
+			for (String g : umiHist.get(bc).keySet()) {
+				// for average UMI count calculations
+				int nzUmis = 0; // number of UMIs with non-zero counts
+				int ntUmis = 0; // number of UMIs with >1 counts
+				int umiSum = 0; // sum for UMI mean calculation	
+				// make lists of singlets and multis
+				ArrayList<String> singlets = new ArrayList<String>();
+				ArrayList<String> multis = new ArrayList<String>();
+				for (String umi : umiHist.get(bc).get(g).keySet()) {
+					int count = umiHist.get(bc).get(g).get(umi);
+					if (count == 1) {
+						singlets.add(umi);
+					} else if (count >= nMin) {
+						multis.add(umi);
+						nzUmis++;
+					} else {
+						nzUmis++;
+					}
+				}
+				
+				// separate true singlets from ones that have a Hamming distance of 1 from one or more of the multis
+				ArrayList<String> rmUmis = new ArrayList<String>();
+				HashMap<String, Integer> incUmis = new HashMap<String, Integer>();
+				testUmiDist(singlets, multis, rmUmis, incUmis);
+				
+				// remove bad UMIs from the dictionary
+				for (String umi : rmUmis) {
+					umiHist.get(bc).get(g).remove(umi); // delete error UMI
+				}
+				// update the counts for UMIs that were uniquely one-off from one of the singletons
+				for (String umi : incUmis.keySet()) {
+					umiHist.get(bc).get(g).replace(umi, umiHist.get(bc).get(g).get(umi) + incUmis.get(umi));
+				}
+			}
+		}
+		
+		// For each gene, the expression value is len(umiHist[g].keys()) (i.e., the number of UMIs remaining with at least one copy)
+		BufferedWriter fOut = new BufferedWriter(new FileWriter(outFile));
+		
+		// open the optional read counts file
+		boolean writeReads = (readsFile != null) ? true : false;
+		BufferedWriter fReads = new BufferedWriter(new FileWriter(readsFile));
+		
+		// remove any barcodes/cells with fewer than uMin total UMIs (if uMin>0)
+		if (uMin > 0) {
+			ArrayList<String> bcRm = new ArrayList<String>();
+			for (String bc : umiHist.keySet()) { // loop over barcodes
+				int bcSum = 0;
+				for (String g : umiHist.get(bc).keySet()) { // loop over genes
+					bcSum += umiHist.get(bc).get(g).keySet().size(); // sum total UMIs for this cell
+				}
+				// remove this barcode if the total count is less than uMin
+				if (bcSum < uMin) {
+					bcRm.add(bc);
+				}
+			}
+			// remove low-count cells
+			for (String bc : bcRm) {
+				umiHist.remove(bc);
+			}
+		}
+		
+		// file header
+		String hStr = "gene"; // header
+		ArrayList<String> bcList = new ArrayList<String>();
+		bcList.addAll(umiHist.keySet());
+		for (String bc : bcList) {
+			hStr += "\t" + bc;
+		}
+		fOut.write(hStr + "\n");
+		
+		// option reads count file header
+		if (writeReads) {
+			fReads.write(hStr + "\n");
+		}
+		
+		// per-gene count
+		for (String g : gDict.keySet()) { // loop over all observed genes
+			String oStr = g;
+			String rStr = g;
+			for (String bc : bcList) { // UMI counts for each cell
+				if (umiHist.get(bc).containsKey(g)) {
+					oStr += "\t" + umiHist.get(bc).get(g).keySet().size();
+					rStr += "\t" + sumValues(umiHist.get(bc).get(g));
+				} else {
+					oStr += "\t0";
+					rStr += "\t0";
+				}
+			}
+			
+			fOut.write(oStr + "\n");
+			if (writeReads) {
+				fReads.write(rStr + "\n");
+			}
+		}
+		
+		fOut.close();
+		if (writeReads) {
+			fReads.close();
+		}
 	}
 	
 	/**
