@@ -73,7 +73,8 @@ public class NewESAT {
 			"\n\t\t-sigTest <minimum allowable p-value>\n"+
 			"\n\tPre-processing alignments single-cell library reads:"+
 			"\n\t\t-scPrep [default: off]"+
-			"\n\t\t-umiMin [default: 1]";
+			"\n\t\t-umiMin [default: 1]"+
+			"\n\t\t-umiClean [default: off] (also write <exp>.expression.txt/<exp>.reads.txt after low-end UMI cleaning)";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
@@ -98,6 +99,7 @@ public class NewESAT {
 	private static boolean scPreprocess;    // inDrop library reads preprocessing flag
 	  										// NOTE: barcode and UMIs are appended to the read name, with the format "<readName>:<barcode>:<UMI>".
 	private static int bcMin;			// minimum number of reads that must be observed for a barcode to be considered valid (after PCR duplicate removal) 
+	private static boolean umiClean;	// run the low-end UMI cleaning step (writes .expression.txt/.reads.txt)
 	private static int umiMin;			// minimum number times a barcode:transcript:UMI must occur for it to be considered valid 
 	
 	/* optional AT filter */
@@ -190,6 +192,7 @@ public class NewESAT {
 			 */
 			inDropData = new InDropPreprocess( qFilter, qThresh, multimap, 
 					windowExtend, stranded, task, filtAT, filtAtN, umiMin);
+			inDropData.setUmiClean(umiClean);
 			inDropData.process(bamFiles, annotations, true);
 			// replace the original input file list with the pre-processed (PCR de-duplicated) files:
 			bamFiles = inDropData.getPreprocessedFiles();
@@ -208,31 +211,31 @@ public class NewESAT {
 		 * END Single-cell data preprocessing 
 		 ******************************************************************************************************/
 
-//		/* create the experiment map to be used by makeCountingIntervalTree(), fillExperimentWindowCounter() and writeExperimentCounter(): */
-//		if (scPreprocess) {
-//			expMap = new ExperimentMap(bamFiles, inDropData);
-//		} else {
-//			expMap = new ExperimentMap(bamFiles);
-//		}
-//		
-//		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
-//		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
-//		
-//		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
-//		//HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
-//		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, expMap.getNexp());
-//		
-//		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
-//		//fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
-//		fillExperimentWindowCounter(windowTree, expMap, qFilter, qThresh, multimap, stranded);
-//		
-//		/* write the output file */
-//		//writeExperimentCountsFile(windowTree, bamFiles, outFile);
-//		writeExperimentCountsFile(windowTree, expMap, outFile);
-//
-//		/* STOP AND REPORT TIMING */
-//		long stopTime = System.nanoTime();
-//		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
+		/* create the experiment map to be used by makeCountingIntervalTree(), fillExperimentWindowCounter() and writeExperimentCounter(): */
+		if (scPreprocess) {
+			expMap = new ExperimentMap(bamFiles, inDropData);
+		} else {
+			expMap = new ExperimentMap(bamFiles);
+		}
+		
+		/* Count all reads beginning within the exons of each of the transcripts in the annotationFile */
+		countsMap = bamDict.countWindowedTranscriptReadStarts(annotations, windowLength, windowOverlap, windowExtend, task, pValThresh, allWindows);
+		
+		/* Make an intervalTree containing only Windows with non-zero counts across ALL experiments */
+		//HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, bamFiles.keySet().size());
+		HashMap<String, HashMap<String, IntervalTree<EventCounter>>> windowTree = makeCountingIntervalTree(countsMap, expMap.getNexp());
+		
+		/* re-process the alignments files to count all reads that start within intervals in the windowTree (i.e., within windows in cleanCountsMap) */
+		//fillExperimentWindowCounter(windowTree, bamFiles, qFilter, qThresh, multimap, stranded);
+		fillExperimentWindowCounter(windowTree, expMap, qFilter, qThresh, multimap, stranded);
+		
+		/* write the output file */
+		//writeExperimentCountsFile(windowTree, bamFiles, outFile);
+		writeExperimentCountsFile(windowTree, expMap, outFile);
+
+		/* STOP AND REPORT TIMING */
+		long stopTime = System.nanoTime();
+		logger.info("Total processing time: "+(stopTime-startTime)/1e9+" sec\n");
 	}
 									
 	public static void main(String[] args) throws ParseException, IOException {
@@ -306,6 +309,7 @@ public class NewESAT {
 		scPreprocess = argMap.isPresent("scPrep") ? true : false;
 		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
 		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 1;
+		umiClean = argMap.isPresent("umiClean") ? true : false;
 
 		/* A/T filtering */
 		// disable A/T filtering unless a value is given:

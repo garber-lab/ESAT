@@ -48,6 +48,12 @@ public class InDropPreprocess {
 	private boolean filtAT;
 	private int umiMin;
 	private int filtAtN;
+	private boolean umiClean = false;	// run cleanLowEndUmis() after writing the UMI support data
+
+	/* Enable the low-end UMI cleaning step (off by default, matching the production umihack jar) */
+	public void setUmiClean(boolean clean) {
+		this.umiClean = clean;
+	}
 	
 	private static final String PROGRAM_VERSION = "0.01";
 	static Logger logger = Logger.getLogger(InDropPreprocess.class.getName());
@@ -228,18 +234,20 @@ public class InDropPreprocess {
 					long timeTaken = System.nanoTime() - startWriteUMISupport;
 					logger.info("Finished Writing  UMI support data for experiment: " + exp + " took: " + (timeTaken)/1e9+" sec\n");
 					
-					// translated Python code for cleaning low-end UMIs
+					if (umiClean) {
+						// translated Python code for cleaning low-end UMIs
 					
-					long startCleanLowEndUmis = System.nanoTime();
+						long startCleanLowEndUmis = System.nanoTime();
 					
-					File cleanLowEndUmisOut = new File(exp + ".expression.txt");
-					File cleanLowEndUmisReadsOut = new File(exp + ".reads.txt");
-					int nMin = 2;
-					int uMin = 1;
+						File cleanLowEndUmisOut = new File(exp + ".expression.txt");
+						File cleanLowEndUmisReadsOut = new File(exp + ".reads.txt");
+						int nMin = 2;
+						int uMin = 1;
 					
-					cleanLowEndUmis(outUmiCntFile, cleanLowEndUmisOut, cleanLowEndUmisReadsOut, nMin, uMin);
+						cleanLowEndUmis(outUmiCntFile, cleanLowEndUmisOut, cleanLowEndUmisReadsOut, nMin, uMin);
 					
-					logger.info("Finished cleaning low end UMIs for experiment " + exp + " in " + (System.nanoTime() - startCleanLowEndUmis)/1e9 + "s");
+						logger.info("Finished cleaning low end UMIs for experiment " + exp + " in " + (System.nanoTime() - startCleanLowEndUmis)/1e9 + "s");
+					}
 				}
 				
 			}
