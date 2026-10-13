@@ -1,0 +1,19 @@
+name: ESAT tests
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+      - name: Install ant and samtools
+        run: sudo apt-get update && sudo apt-get install -y ant samtools
+      - name: Build
+        run: ant build
+      - name: Run tests
+        run: bash test/run_all_tests.sh

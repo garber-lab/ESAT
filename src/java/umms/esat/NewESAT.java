@@ -74,7 +74,9 @@ public class NewESAT {
 			"\n\tPre-processing alignments single-cell library reads:"+
 			"\n\t\t-scPrep [default: off]"+
 			"\n\t\t-umiMin [default: 1]"+
-			"\n\t\t-umiClean [default: off] (also write <exp>.expression.txt/<exp>.reads.txt after low-end UMI cleaning)";
+			"\n\t\t-umiClean [default: off] (also write <exp>.expression.txt/<exp>.reads.txt after low-end UMI cleaning)"+
+			"\n\t\t-umiMode <gene|position> [default: gene] (position: collapse on UMI + read 5' alignment coordinate; for bulk libraries)"+
+			"\n\t\t-umiDropN [default: off] (discard reads whose UMI contains N)";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
@@ -100,6 +102,8 @@ public class NewESAT {
 	  										// NOTE: barcode and UMIs are appended to the read name, with the format "<readName>:<barcode>:<UMI>".
 	private static int bcMin;			// minimum number of reads that must be observed for a barcode to be considered valid (after PCR duplicate removal) 
 	private static boolean umiClean;	// run the low-end UMI cleaning step (writes .expression.txt/.reads.txt)
+	private static String umiMode;		// UMI collapsing key: "gene" (strand:chr:gene:BC:UMI) or "position" (adds read 5' coordinate)
+	private static boolean umiDropN;	// discard reads with N in the UMI
 	private static int umiMin;			// minimum number times a barcode:transcript:UMI must occur for it to be considered valid 
 	
 	/* optional AT filter */
@@ -193,6 +197,8 @@ public class NewESAT {
 			inDropData = new InDropPreprocess( qFilter, qThresh, multimap, 
 					windowExtend, stranded, task, filtAT, filtAtN, umiMin);
 			inDropData.setUmiClean(umiClean);
+			inDropData.setUmiKeyMode(umiMode, umiDropN);
+			logger.info("UMI collapsing mode: "+umiMode+(umiDropN ? " (N-containing UMIs discarded)" : ""));
 			inDropData.process(bamFiles, annotations, true);
 			// replace the original input file list with the pre-processed (PCR de-duplicated) files:
 			bamFiles = inDropData.getPreprocessedFiles();
@@ -310,6 +316,12 @@ public class NewESAT {
 		bcMin = argMap.isPresent("bcMin") ? argMap.getInteger("bcMin") : 0;
 		umiMin = argMap.isPresent("umiMin") ? argMap.getInteger("umiMin") : 1;
 		umiClean = argMap.isPresent("umiClean") ? true : false;
+		umiMode = argMap.isPresent("umiMode") ? argMap.get("umiMode") : "gene";
+		if (!(umiMode.equals("gene") || umiMode.equals("position"))) {
+			logger.error("Illegal value for umiMode: "+umiMode+" (must be gene or position)");
+			throw new IllegalArgumentException();
+		}
+		umiDropN = argMap.isPresent("umiDropN") ? true : false;
 
 		/* A/T filtering */
 		// disable A/T filtering unless a value is given:

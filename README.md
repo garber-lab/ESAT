@@ -2,7 +2,7 @@
 
 The ESAT toolkit is designed for expression analysis of Digital expression (DGE) libraries that target transcript "ends". ESAT takes a set of alignment files (SAM or BAM) with genome alignment coordinates, a file containing transcript coordinates (BED or text file) and outputs read counts for each transcript provided.
 
-The toolkit is implemented in Java and requires version 1.6 or higher. ESAT can be run on a single or multiple samples. When running multiple samples, all samples are processed together and the results reported as a matrix. To handle multiple samples you will need to prepare a file describing the samples indicating the alignment file locations and the experiment condition assigned to each file. (See **Usage Examples** below for a description of the file format.)
+The toolkit is implemented in Java and requires version 8 or higher. ESAT can be run on a single or multiple samples. When running multiple samples, all samples are processed together and the results reported as a matrix. To handle multiple samples you will need to prepare a file describing the samples indicating the alignment file locations and the experiment condition assigned to each file. (See **Usage Examples** below for a description of the file format.)
 
 ### To download the latest version of ESAT:
 The latest version of ESAT is in src/java/umms/esatJar/esat.latest.jar in the **develop** branch. To download the latest version, navigate to the jar file (click on *src* above, then *java*, etc.), then click on *esat.jar.latest* and click **Download** to download the binary file.
@@ -91,6 +91,20 @@ This optional parameter specifies the minimum number of UMI-filtered reads that 
 *`-umiMin <m>`*    
 This optional parameter specifies the minimum number of times a UMI must be observed with a specific transcript for a specific cell/barcode before it is counted as valid. Each combination of cell/barcode-transcript-UMI is only counted once, but this parameter requires that combination to be seen a minimum number of times before it is counted. This helps to minimize the effect of sequencing errors in the barcode or UMI resulting in spurious transcript counts when using the UMIs to remove PCR duplicates. (*Default: 1*)
 
+*`-umiMode <gene | position>`*    
+Selects the key used to collapse PCR duplicates when `-scPrep` is given. (*Default: `gene`*)
+- `gene`: reads are collapsed on strand, chromosome, gene, cell barcode and UMI. This is the original ESAT behaviour and is appropriate for single-cell libraries, where each barcode holds few molecules per gene.
+- `position`: the read's 5' alignment coordinate (alignment start for + strand reads, alignment end for − strand reads) is added to the key, so reads are collapsed only when they share the UMI **and** the 5' position. Intended for bulk libraries; see *UMI saturation in bulk libraries* below.
+
+*`-umiDropN`*    
+Discard reads whose UMI contains an `N`. By default such UMIs are treated as distinct sequences. (*Default: disabled*)
+
+*`-umiClean`*    
+After writing the UMI support file, also run the low-end UMI cleaning step (UMI sequencing-error collapsing for UMIs seen once) and write *<eID>.expression.txt* and *<eID>.reads.txt*. Only applies with `-umiMode gene`. These files are not used for the gene/window counts. (*Default: disabled*)
+
+##### UMI saturation in bulk libraries
+With `-umiMode gene`, a gene can report at most 4<sup>k</sup> molecules per barcode for a k-nt UMI (4,096 for 6-nt UMIs), and well before that ceiling different molecules increasingly share a UMI by chance and are merged. In single-cell data this rarely matters. In bulk libraries (one barcode = one sample), highly expressed and strongly induced genes reach thousands of molecules, so their counts and fold changes are compressed. For example, a gene with 6,000 molecules in the regression fixture is reported as 3,213. `-umiMode position` reduces these collisions, because two molecules must share both the UMI and the 5' position to be merged. Note that it counts distinct (UMI, 5' position) fragments: when one tagged molecule gives rise to several fragments (e.g. after IVT amplification in CEL-seq2), it is counted once per distinct fragment end. Calibrate against low-expressed genes, where collisions are negligible, before interpreting position-mode counts as molecules.
+
 ----------
 
 ### Annotation BED file
@@ -130,7 +144,9 @@ When the `–geneMapping` parameter is selected, all exons for all transcripts a
 
 **The window-level output file** (*<output file prefix>.window.txt*) contains a matrix with one row per window. The first 5 columns contain the gene symbol (or transcript ID), chromosome, genomic start coordinate, genomic end coordinate, and strand. This is followed by one column for each experiment/condition indicating the number of reads aligned to locations within the exonic regions contained in that window for that experiment/condition. 
 
-For both files, counts include any extension past the end of the gene/transcript specified by the ```-wExt``` parameter. Partial windows (i.e., windows with length less than the value specified with the ```–wLen``` parameter) are discarded, with one exception: if the total length of the transcript, plus any extension, is less than one full window length, read start counts are reported for all available bases for that transcript.
+**The UMI support file** (*<eID>.umi.distributions.txt*, written to the working directory when `-scPrep` is given; one file per experiment/condition label) lists every collapsed molecule key with its read support, as four tab-separated columns: cell barcode, gene, UMI, number of reads. With `-umiMode position` the UMI column is `<UMI>@<5' coordinate>`. Rows are in hash order, so sort the file before comparing runs.
+
+For the gene and window files, counts include any extension past the end of the gene/transcript specified by the ```-wExt``` parameter. Partial windows (i.e., windows with length less than the value specified with the ```–wLen``` parameter) are discarded, with one exception: if the total length of the transcript, plus any extension, is less than one full window length, read start counts are reported for all available bases for that transcript.
 
 ----------
 
@@ -159,6 +175,27 @@ Exp2	/home/usr1/sample2b.bam
 Note that multiple alignment files can be included for each experimental condition. With this example file, two columns of counts would be provided in the gene-level and window-level output files, with column headers “Exp1” and “Exp2”.
 
 -------------------------
+
+## Building and testing
+
+Build the jar with `ant build` (output: `dist/esat.<version>_<timestamp>.jar`). Run the test suite with
+
+```
+bash test/run_all_tests.sh [path/to/esat.jar]
+```
+
+(requires Java 8+, `samtools` and Python 3). The suite runs on every push and pull request (GitHub Actions, `.github/workflows/tests.yml`) and has three parts:
+
+1. **Golden regression** (`test/regression/`): a deterministic synthetic dataset (both strands, spliced reads, multi-isoform genes, 3' extensions, multimappers, soft clips, PCR duplicates, a UMI-saturated gene, N-containing UMIs) is processed with the production parameters and with an alternative parameter set. Default-mode outputs (`gene.txt`, `window.txt`, sorted UMI support file) must be identical, and the log no more than twice as long, compared with the goldens produced by the production binary `esat.v0.1_09.09.16_24.18.umihack.jar` (see `test/regression/golden/PROVENANCE.txt`). Never regenerate the goldens with a development build.
+2. **Sensitivity check**: the same comparison with `-umiMode position` must *differ*, which confirms that the regression test can detect a change in behaviour.
+3. **Feature tests** (`test/bulkumi/`): hand-built reads with known expected counts for `-umiMode gene|position` and `-umiDropN`, including − strand reads, where the key must use the alignment end.
+
+Changes that are meant to alter default output must document the change in `PROVENANCE.txt` and add a dedicated test.
+
+## Version history
+- **2016-09 (production `umihack` jar)**: single-cell preprocessing writes the UMI support file `<eID>.umi.distributions.txt`.
+- **2019-09 (samdzie/ESAT)**: low-end UMI cleaning (Python code translated to Java); counting step temporarily commented out in that fork.
+- **2026-10**: fork merged into garber-lab; counting re-enabled, a per-base debug log statement removed, and low-end cleaning made opt-in (`-umiClean`), restoring production behaviour; added `-umiMode position` and `-umiDropN` for bulk libraries; regression, sensitivity and feature tests plus CI.
 
 ## Warning/error messages:
 

@@ -48,6 +48,21 @@ public class InDropPreprocess {
 	private boolean filtAT;
 	private int umiMin;
 	private int filtAtN;
+	private String umiMode = "gene";	// "gene": key strand:chr:gene:BC:UMI (original); "position": key adds read 5' coordinate
+	private boolean umiDropN = false;	// discard reads whose UMI contains N
+
+	/* Set the UMI collapsing key. "position" is intended for bulk libraries, where a 6-nt UMI
+	 * space is too small to distinguish molecules of highly expressed genes by UMI alone. */
+	public void setUmiKeyMode(String mode, boolean dropN) {
+		this.umiMode = mode;
+		this.umiDropN = dropN;
+	}
+
+	/* 5' alignment coordinate of a read: alignment start for + strand reads, alignment end for - strand reads */
+	public static int readFivePrimePosition(SAMRecord r) {
+		return r.getReadNegativeStrandFlag() ? r.getAlignmentEnd() : r.getAlignmentStart();
+	}
+
 	private boolean umiClean = false;	// run cleanLowEndUmis() after writing the UMI support data
 
 	/* Enable the low-end UMI cleaning step (off by default, matching the production umihack jar) */
@@ -234,7 +249,7 @@ public class InDropPreprocess {
 					long timeTaken = System.nanoTime() - startWriteUMISupport;
 					logger.info("Finished Writing  UMI support data for experiment: " + exp + " took: " + (timeTaken)/1e9+" sec\n");
 					
-					if (umiClean) {
+					if (umiClean && umiMode.equals("gene")) {  // UMI error-correction heuristics assume UMI-only keys
 						// translated Python code for cleaning low-end UMIs
 					
 						long startCleanLowEndUmis = System.nanoTime();
@@ -580,6 +595,14 @@ public class InDropPreprocess {
 			int fLen = fields.length;
 			BC = fields[fLen-2];
 			UMI = fields[fLen-1];
+		}
+		// optional: discard reads with ambiguous (N-containing) UMIs
+		if (umiDropN && UMI.indexOf('N')>=0) {
+			return writeExemplar;
+		}
+		// bulk mode: a molecule is identified by UMI + read 5' alignment coordinate
+		if (umiMode.equals("position")) {
+			UMI = UMI+"@"+readFivePrimePosition(r);
 		}
 		
 		// update the counts:
