@@ -407,6 +407,7 @@ public class BasicAnnotation extends AbstractAnnotation implements java.io.Seria
 		return toBED();
 	}
 
+
 	/********************************************************************************
 	 * SETTING METHODS
 	 */

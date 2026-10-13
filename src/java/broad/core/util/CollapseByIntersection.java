@@ -259,20 +259,17 @@ public class CollapseByIntersection {
 		//return rtrn;
 	}
 
+	/*
+	 * MG: Fixed what must lead to a bug in the cases where a differences returns more than one annotation 7/24/17
+	 */
 
 	private static Collection<Annotation> takeDifference(Annotation exon,  Annotation intron) {
 		Collection<Annotation> rtrn = new ArrayList<Annotation>();
 		if(!exon.overlaps(intron)){
 			rtrn.add(exon);
-		}
-		else if(exon.fullyContains(intron)){
-			//System.err.println("Odd case Exon "+exon.toUCSC()+" Intron: "+intron.toUCSC());
+		}else if(!exon.fullyContains(intron)) {
 			Annotation newExons=exon.minus(intron);
 			rtrn.addAll(newExons.getBlocks());
-		} else if(!intron.fullyContains(exon)){
-			Annotation newExon=exon.minus(intron);
-			//System.err.println(intron.toUCSC()+" "+exon.toUCSC()+" "+newExon.toUCSC());
-			rtrn.addAll(newExon.getBlocks());
 		}
 		
 		return rtrn;
@@ -289,9 +286,7 @@ public class CollapseByIntersection {
 			Iterator<Node<Annotation>> iter=intronTree.get(exon.getChr()).overlappers(exon.getStart(), exon.getEnd());
 			while(iter.hasNext()){
 				Annotation intron=iter.next().getValue();
-				rtrn.addAll(takeDifference(exon, intron));
-				
-				
+				rtrn.addAll(takeDifference(exon, intron));	
 			}
 		}
 		
@@ -310,18 +305,12 @@ public class CollapseByIntersection {
 			while(iter.hasNext()){
 				Annotation intron=iter.next().getValue();
 				//MG: Added this case because crashed when an exon overlapped an intron completely
+				// Removed this hack 7/24/17
 				if(exon.fullyContains(intron)){
 					//System.err.println("Odd case Exon "+exon.toUCSC()+" Intron: "+intron.toUCSC());
 					Annotation newExons=exon.minus(intron);
 					rtrn.addAll(newExons.getBlocks());
 				}
-				
-				else if(!intron.fullyContains(exon)){
-					Annotation newExon=exon.minus(intron);
-					//System.err.println(intron.toUCSC()+" "+exon.toUCSC()+" "+newExon.toUCSC());
-					rtrn.addAll(newExon.getBlocks());
-				}
-				
 				
 			}
 		}
