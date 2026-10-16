@@ -10,8 +10,8 @@ them carrying 60% of the molecules):
 Checks
   (1) <exp>.umi.saturation.txt lists every gene, background factors ~1;
   (2) the exact estimator recovers the simulated molecule numbers of MID and SAT within 10%;
-  (3) <out>.gene.corrected.txt = gene.txt x the chosen estimator's factor (exact, original); exact factors >= 1;
-  (4) -umiSaturation none (default) writes no corrected file; an illegal mode fails.
+  (3) <out>.gene.corrected.txt = gene.txt x the exact factor; factors >= 1;
+  (4) -umiSaturation none (default) writes no corrected file; any other value than none|exact fails.
 
 Usage: python test_saturation.py <esat.jar> [parent_dir_for_a_new_workdir]
 """
@@ -92,7 +92,7 @@ def check(ok, msg):
     failures += not ok
     print(f"[{'PASS' if ok else 'FAIL'}] {msg}")
 
-for mode in ["exact", "original"]:
+for mode in ["exact"]:
     rc = run(mode, mode)
     check(rc == 0, f"{mode}: ESAT exit code {rc}")
     if rc:
@@ -110,13 +110,13 @@ for mode in ["exact", "original"]:
         check(bg < 1.05, f"exact: background genes factor <= {bg:.3f} (< 1.05)")
         for k, n in TRUE_N.items():
             est, keys = float(sat[k]["n_exact"]), int(sat[k]["keys"])
-            check(abs(est / n - 1) < 0.10, f"exact: {k} keys={keys} true n={n} estimate={est:.0f} "
-                                            f"(original {float(sat[k]['n_original']):.0f})")
+            check(abs(est / n - 1) < 0.10, f"exact: {k} keys={keys} true n={n} estimate={est:.0f}")
 
 rc = run("none", None)
 check(rc == 0 and not os.path.exists("none/none_esat.txt.gene.corrected.txt")
       and not os.path.exists("none/test.umi.saturation.txt"), "default (none): no corrected or saturation file")
 check(run("illegal", "bogus") != 0, "illegal -umiSaturation value fails")
-check(run("removed", "uniform") != 0, "removed mode (uniform) is rejected")
+for removed in ["original", "uniform", "reads"]:
+    check(run("removed_" + removed, removed) != 0, f"unsupported value ({removed}) is rejected")
 print("ALL TESTS PASSED" if failures == 0 else f"{failures} FAILURE(S)")
 sys.exit(1 if failures else 0)

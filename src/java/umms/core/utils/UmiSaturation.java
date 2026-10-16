@@ -16,18 +16,16 @@ import org.apache.log4j.Logger;
  * UMI-collision (saturation) correction of collapsed UMI counts (option -umiSaturation).
  *
  * After collapsing, a gene's number of keys k (UMI, or UMI + 5' position with -umiMode position) under-counts its
- * molecules n, because different molecules that draw the same key are merged. Estimators of n:
- * <ul>
- * <li><b>exact</b>: a molecule draws position p with probability q_p (the gene's reads) and UMI u with probability p_u
- *     (the experiment's UMI frequencies) independently, so E[k | n] = sum_p sum_u [1 - (1 - q_p p_u)^n]; n solves
- *     E[k | n] = k (method of moments; Agyemang, Irizarry and Baharav, J Comput Biol 2026, with the 5' position as
- *     additional barcode letters). UMI probabilities in 64 quantile bins; positions exact up to 512 per gene, beyond
- *     that the 256 busiest kept individually and the rest binned (binPositions); safeguarded Newton iterations.</li>
- * <li><b>original</b>: the handling used for the skin response-QTL counts before this option, kept for reference:
- *     n = -K ln(1 - k/K) with all K = U_eff x P_eff keys equally likely (U_eff = 1 / sum_u p_u^2, P_eff = R^2 /
- *     sum_p r_p^2 from reads; k/K capped at 0.95), but, when that correction exceeds 1.5x, reads of the gene / reads
- *     per key of genes with 5-30 keys. Over-corrects below the switch, inherits read noise above it.</li>
- * </ul>
+ * molecules n, because different molecules that draw the same key are merged.
+ *
+ * <b>exact</b> (method of moments; Agyemang, Irizarry and Baharav, J Comput Biol 2026, with the 5' position as
+ * additional barcode letters): a molecule draws position p with probability q_p (the gene's reads, which collisions
+ * do not merge) and UMI u with probability p_u (the experiment's UMI frequencies) independently, so
+ * E[k | n] = sum_p sum_u [1 - (1 - q_p p_u)^n]; n solves E[k | n] = k. UMI probabilities in 64 quantile bins;
+ * positions exact up to 512 per gene, beyond that the 256 busiest kept individually and the rest binned
+ * (binPositions); safeguarded Newton iterations started from the uniform-key-space value -K ln(1 - k/K),
+ * K = U_eff x P_eff (U_eff = 1 / sum_u p_u^2, P_eff = R^2 / sum_p r_p^2), which is also used for genes with
+ * k/K below exactMinFrac, where both agree to better than 0.1%.
  * p_u is estimated from the keys of genes with at most 200 keys (collisions negligible), pooled over the barcodes
  * of the experiment; all 4^L UMIs get a pseudo-count of 0.5.
  */
@@ -35,36 +33,27 @@ public class UmiSaturation {
 
 	static Logger logger = Logger.getLogger(UmiSaturation.class.getName());
 
-	public static final List<String> MODES = Arrays.asList("none", "original", "exact");
+	public static final List<String> MODES = Arrays.asList("none", "exact");
 
 	public static int maxKeysUmiFreq = 200;		// genes used to estimate the UMI frequencies
 	public static int umiBins = 64;				// quantile bins for UMI probabilities
 	public static int posMaxExact = 512;		// genes with up to this many positions: no position binning
 	public static int posKeepTop = 256;			// otherwise the busiest positions stay individual ...
 	public static int posTailBins = 64;			// ... and the remaining ones go into quantile bins
-	public static double uniformCap = 0.95;		// cap on k/K for the uniform estimator
-	public static double exactMinFrac = 0.002;	// below this k/K the exact estimate is set to the uniform one
+	public static double startCap = 0.95;		// cap on k/K for the Newton starting value
+	public static double exactMinFrac = 0.002;	// below this k/K the exact estimate is set to the starting value (< 0.1% apart)
 	public static double maxFactor = 20.0;		// largest correction factor of the exact estimator
-	public static int lowKeysMin = 5, lowKeysMax = 30;	// genes used for reads per key
-	public static double originalFallback = 1.5;	// "original": reads when the formula's factor exceeds this
 
 	/** One gene x barcode. */
 	public static class Estimate {
 		public String strand, chr, gene, bc;
 		public int keys, positions;
 		public long reads;
-		public double pEff, uEff, kOverK, nUniform, nExact, nReads;
-		public boolean uniformCapped, exactCapped;
-
-		/* "original" switches to reads above the fallback factor */
-		public boolean originalUsesReads() {
-			return keys > 0 && nUniform / keys > originalFallback;
-		}
+		public double pEff, uEff, kOverK, nExact;
+		public boolean exactCapped;
 
 		public double n(String mode) {
-			if (mode.equals("exact")) return nExact;
-			if (mode.equals("original")) return originalUsesReads() ? nReads : nUniform;
-			return keys;
+			return mode.equals("exact") ? nExact : keys;
 		}
 
 		public double factor(String mode) {
@@ -204,7 +193,6 @@ public class UmiSaturation {
 		double uEff = 1.0 / sq;
 		double[][] ub = bin(pu, umiBins);
 		List<Estimate> out = new ArrayList<Estimate>();
-		HashMap<String, long[]> low = new HashMap<String, long[]>();	// bc -> {reads, keys} of low-count genes
 		for (String strand : umiCount.keySet())
 			for (String chr : umiCount.get(strand).keySet())
 				for (String g : umiCount.get(strand).get(chr).keySet())
@@ -227,45 +215,32 @@ public class UmiSaturation {
 						e.pEff = (double) e.reads * e.reads / ss;
 						double K = e.pEff * uEff;
 						e.kOverK = e.keys / K;
-						double frac = Math.min(e.kOverK, uniformCap);
-						e.uniformCapped = e.kOverK > uniformCap;
-						// factor -ln(1 - f)/f applied to k: = -K ln(1 - k/K) below the cap, 3.15 k above it
-						e.nUniform = frac < 1e-9 ? e.keys : e.keys * (-Math.log1p(-frac) / frac);
-						e.nExact = e.nUniform;
+						// starting value: uniform key space, k [-ln(1 - f) / f] with f = k/K (capped)
+						double frac = Math.min(e.kOverK, startCap);
+						double nStart = frac < 1e-9 ? e.keys : e.keys * (-Math.log1p(-frac) / frac);
+						e.nExact = nStart;
 						if (e.kOverK >= exactMinFrac) {
 							double[][] qbin = binPositions(q);
-							double[] r = solveExact(e.keys, qbin[0], qbin[1], ub[0], ub[1], e.nUniform);
+							double[] r = solveExact(e.keys, qbin[0], qbin[1], ub[0], ub[1], nStart);
 							e.nExact = r[0];
 							e.exactCapped = r[1] > 0;
 						}
-						if (e.keys >= lowKeysMin && e.keys <= lowKeysMax) {
-							long[] a = low.get(e.bc);
-							if (a == null) { a = new long[2]; low.put(e.bc, a); }
-							a[0] += e.reads; a[1] += e.keys;
-						}
 						out.add(e);
 					}
-		for (Estimate e : out) {
-			long[] a = low.get(e.bc);
-			double rpk = (a == null || a[1] == 0) ? 1.0 : (double) a[0] / a[1];
-			e.nReads = e.reads / rpk;
-		}
 		logger.info("UMI saturation: U_eff = " + String.format("%.1f", uEff) + " of " + pu.length + " UMIs; " + out.size()
 				+ " gene x barcode estimates");
 		return out;
 	}
 
-	/** Writes <exp>.umi.saturation.txt with all estimators. */
+	/** Writes <exp>.umi.saturation.txt. */
 	public static void write(List<Estimate> est, File f) throws IOException {
 		BufferedWriter w = new BufferedWriter(new FileWriter(f));
-		w.write("barcode\tgene\tchr\tstrand\tkeys\treads\tpositions\tP_eff\tU_eff\tk_over_K\tn_exact\tn_original"
-				+ "\tfactor_exact\tfactor_original\toriginal_used_reads\texact_capped");
+		w.write("barcode\tgene\tchr\tstrand\tkeys\treads\tpositions\tP_eff\tU_eff\tk_over_K\tn_exact\tfactor_exact\texact_capped");
 		w.newLine();
 		for (Estimate e : est) {
 			w.write(e.bc + "\t" + e.gene + "\t" + e.chr + "\t" + e.strand + "\t" + e.keys + "\t" + e.reads + "\t" + e.positions
 					+ "\t" + fmt(e.pEff) + "\t" + fmt(e.uEff) + "\t" + fmt(e.kOverK) + "\t" + fmt(e.nExact) + "\t"
-					+ fmt(e.n("original")) + "\t" + fmt(e.factor("exact")) + "\t" + fmt(e.factor("original")) + "\t"
-					+ (e.originalUsesReads() ? 1 : 0) + "\t" + (e.exactCapped ? 1 : 0));
+					+ fmt(e.factor("exact")) + "\t" + (e.exactCapped ? 1 : 0));
 			w.newLine();
 		}
 		w.close();
