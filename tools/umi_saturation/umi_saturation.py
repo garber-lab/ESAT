@@ -1,30 +1,17 @@
-"""UMI-collision (saturation) correction of ESAT position-mode counts: Python version of ESAT -umiSaturation.
+"""UMI-collision (saturation) correction of ESAT position-mode counts: Python version of ESAT -umiSaturation exact
+(reproduces ESAT's numbers to ~1e-6), a simulator with known truth, and the real-data validation with shortened UMIs.
 
 ESAT position mode collapses reads into keys (UMI, 5' position) per gene; different molecules that draw the same UMI
-at the same position are merged, so a gene's key count k under-counts its molecules n. Two methods (ESAT
--umiSaturation original | exact; these functions reproduce ESAT's numbers to ~1e-6):
-
-exact (recommended; Agyemang, Irizarry & Baharav, J Comput Biol 2026, with the 5' position as additional barcode
-    letters): a molecule draws position p with probability q_p (the gene's reads, which collisions do not merge) and
-    UMI u with probability p_u (the library's UMI frequencies), so E[k | n] = sum_p sum_u [1 - (1 - q_p p_u)^n];
-    n solves E[k | n] = k (method of moments, one equation per gene).
-original (the current count table's rule, scripts/qc3/build_position_tables.py, kept for reference):
-    n = -K ln(1 - k/K) with all K = U_eff x P_eff keys equally likely (U_eff = 1 / sum_u p_u^2, P_eff = R^2 / sum_p
-    r_p^2; k/K capped at 0.95), but reads of the gene / reads per key of genes with 5-30 keys when that correction
-    exceeds 1.5x. (The current table's step 3 used STAR whole-gene reads instead, see notebook 07.)
-
-Also: a simulator with known truth, and the real-data validation with shortened UMIs (truncation_test,
-self_consistency) used in notebook 07 and tools/umi_saturation/validate_saturation.py of the ESAT repository.
-The full exploration (uniform, reads, per-position variants) is archived in
-analysis/07_saturation/archive_2026-10-16/.
+at the same position are merged, so a gene's key count k under-counts its molecules n. The exact estimator
+(Agyemang, Irizarry & Baharav, J Comput Biol 2026, with the 5' position as additional barcode letters): a molecule
+draws position p with probability q_p (the gene's reads, which collisions do not merge) and UMI u with probability
+p_u (the library's UMI frequencies), so E[k | n] = sum_p sum_u [1 - (1 - q_p p_u)^n]; n solves E[k | n] = k.
 """
 import gzip
 import itertools
 import numpy as np
 import pandas as pd
 
-ORIGINAL_FALLBACK = 1.5
-METHOD_COLORS = {"none": "#8a8984", "current table": "#e34948", "exact": "#2a78d6"}
 
 
 # ----------------------------------------------------------------------------- input
@@ -100,10 +87,11 @@ def solve_exact(k: float, qb: np.ndarray, qw: np.ndarray, pb: np.ndarray, wb: np
     return n, False
 
 
-def estimate(keys: pd.DataFrame, p_u: pd.Series | None = None, cap: float = 0.95, exact_min_frac: float = 0.002,
-             low_keys=(5, 30)) -> pd.DataFrame:
-    """Per gene: k (keys), R (reads), positions, P_eff, U_eff, k/K, n_exact, n_original (+ whether original used
-    reads) and the factors n/k. Below k/K = exact_min_frac exact is set to the formula (identical to < 0.1%)."""
+def estimate(keys: pd.DataFrame, p_u: pd.Series | None = None, cap: float = 0.95,
+             exact_min_frac: float = 0.002) -> pd.DataFrame:
+    """Per gene: k (keys), R (reads), positions, P_eff, U_eff, k/K, n_exact and factor_exact = n_exact / k. Newton
+    starts from the uniform-key-space value -K ln(1 - k/K) (K = U_eff x P_eff, k/K capped), which is also used below
+    k/K = exact_min_frac (identical to < 0.1%)."""
     p_u = umi_frequencies(keys) if p_u is None else p_u
     U_eff = 1.0 / float((p_u ** 2).sum())
     pb, wb = bin_probs(p_u.to_numpy(), 64)
@@ -116,11 +104,6 @@ def estimate(keys: pd.DataFrame, p_u: pd.Series | None = None, cap: float = 0.95
     frac = g["k_over_K"].clip(upper=cap)
     formula = pd.Series(np.where(frac < 1e-9, g["k"], g["k"] * (-np.log1p(-frac) / frac.where(frac > 0, 1.0))),
                         index=g.index)
-    lo, hi = low_keys
-    low = g[(g["k"] >= lo) & (g["k"] <= hi)]
-    reads_based = g["R"] / (low["R"].sum() / low["k"].sum())
-    g["original_used_reads"] = formula / g["k"] > ORIGINAL_FALLBACK
-    g["n_original"] = np.where(g["original_used_reads"], reads_based, formula)
     g["n_exact"] = formula
     g["exact_capped"] = False
     todo = g.index[g["k_over_K"] >= exact_min_frac]
@@ -129,7 +112,7 @@ def estimate(keys: pd.DataFrame, p_u: pd.Series | None = None, cap: float = 0.95
         qb, qw = bin_positions(q / q.sum())
         n, capped = solve_exact(float(g.at[gene, "k"]), qb, qw, pb, wb, n0=float(formula[gene]))
         g.at[gene, "n_exact"], g.at[gene, "exact_capped"] = n, capped
-    g["factor_exact"], g["factor_original"] = g["n_exact"] / g["k"], g["n_original"] / g["k"]
+    g["factor_exact"] = g["n_exact"] / g["k"]
     g.attrs = {"U_eff": U_eff}
     return g
 
@@ -146,8 +129,8 @@ def simulate_grid(p_u: np.ndarray, peff_targets=(2, 5, 20, 80), n_grid=None, rep
                   reads_per_mol_extra: float = 0.6, cap: float = 0.95) -> pd.DataFrame:
     """Simulation with known truth: a Dirichlet position profile with about the target effective position number;
     n molecules draw positions and UMIs; each molecule gets 1 + Poisson(extra) reads. The methods see only the
-    observed keys and reads (position profile and reads per molecule estimated from them). One row per simulation:
-    n (truth), k, k/K, n_original, n_exact."""
+    observed keys and reads (position profile estimated from reads). One row per simulation: n (truth), k, k/K,
+    n_exact."""
     rng = np.random.default_rng(seed)
     n_grid = n_grid if n_grid is not None else np.unique(np.logspace(2, 5.3, 16).astype(int))
     U_eff = 1.0 / (p_u ** 2).sum()
@@ -170,11 +153,9 @@ def simulate_grid(p_u: np.ndarray, peff_targets=(2, 5, 20, 80), n_grid=None, rep
                 K = P_eff * U_eff
                 fr = min(k / K, cap)
                 formula = k * (-np.log1p(-fr) / fr)
-                n_orig = rp.sum() / (1 + reads_per_mol_extra) if formula / k > ORIGINAL_FALLBACK else formula
                 qb, qw = bin_positions(rp / rp.sum())
                 n_e, _ = solve_exact(k, qb, qw, pb, wb, n0=formula)
-                rows.append(dict(P_eff_target=target, rep=rep, n=n, k=k, k_over_K=k / K, n_original=n_orig,
-                                 n_exact=n_e))
+                rows.append(dict(P_eff_target=target, rep=rep, n=n, k=k, k_over_K=k / K, n_exact=n_e))
     return pd.DataFrame(rows)
 
 
@@ -186,7 +167,7 @@ def truncate_umis(keys: pd.DataFrame, L: int) -> pd.DataFrame:
 
 def truncation_test(keys: pd.DataFrame, lengths=(5, 4, 3), truth_max_frac: float = 0.2) -> pd.DataFrame:
     """Genes nearly unsaturated with the full UMIs (k/K < truth_max_frac): truth = their full-length exact estimate.
-    With UMIs shortened to each length: keys, k/K, original and exact estimates."""
+    With UMIs shortened to each length: keys, k/K and exact estimate."""
     full = estimate(keys)
     ok = full.index[(full["k_over_K"] < truth_max_frac) & (full["k"] >= 20)]
     out = []
@@ -194,16 +175,15 @@ def truncation_test(keys: pd.DataFrame, lengths=(5, 4, 3), truth_max_frac: float
         e = estimate(truncate_umis(keys, L))
         g = ok.intersection(e.index)
         out.append(pd.DataFrame({"L": L, "truth": full.loc[g, "n_exact"], "k": e.loc[g, "k"],
-                                 "k_over_K": e.loc[g, "k_over_K"], "original": e.loc[g, "n_original"],
-                                 "exact": e.loc[g, "n_exact"]}, index=g))
+                                 "k_over_K": e.loc[g, "k_over_K"], "exact": e.loc[g, "n_exact"]}, index=g))
     return pd.concat(out)
 
 
-SELF_METHODS = {"none": "k", "current table": "n_original", "exact": "n_exact"}
+SELF_METHODS = {"none": "k", "exact": "n_exact"}
 
 
 def self_consistency(keys: pd.DataFrame, lengths=(5, 4, 3), min_keys: int = 20) -> pd.DataFrame:
-    """Robustness to saturation: each method with the full UMIs and with UMIs shortened to each length (collisions
+    """Robustness to saturation: keys (none) and exact with the full UMIs and with UMIs shortened to each length (collisions
     4x, 16x, 64x more likely; same molecules). Per gene x length: <method>_full, <method>, k/K after shortening."""
     full = estimate(keys)
     full = full[full["k"] >= min_keys]
@@ -234,34 +214,3 @@ def self_consistency_summary(sc: pd.DataFrame, sat_min: float = 0.2) -> pd.DataF
                          "bias saturated (median log2)": round(float(lr.median()), 3),
                          "spread saturated (robust SD log2)": round(float(1.4826 * (lr - lr.median()).abs().median()), 3)})
     return pd.DataFrame(rows)
-
-
-# ----------------------------------------------------------------------------- all libraries, plotting
-def load_exact_vs_current(min_count: float = 10.0):
-    """All 509 libraries: the current table (counts_pos_final), the exact table (ESAT -umiSaturation exact,
-    data/position_mode/exact_509/) and the uncorrected position counts, aligned; plus a long table of gene x library
-    entries with >= min_count in either table (gene, library, current, exact, position, log2 (exact+1)/(current+1))."""
-    from rqtl_utils import ROOT
-    d = ROOT / "data" / "position_mode"
-    cur = pd.read_csv(d / "counts_pos_final.tsv.gz", sep="\t", index_col=0)
-    ex = pd.read_csv(d / "exact_509" / "counts_exact.tsv.gz", sep="\t", index_col=0).loc[cur.index, cur.columns]
-    pos = pd.read_csv(d / "position_mode_gene_counts.tsv.gz", sep="\t", index_col=0).loc[cur.index, cur.columns]
-    keep = ((cur >= min_count) | (ex >= min_count)).to_numpy()
-    gi, li = np.nonzero(keep)
-    c, e, p = cur.to_numpy()[gi, li], ex.to_numpy()[gi, li], pos.to_numpy()[gi, li]
-    long = pd.DataFrame({"gene": cur.index[gi], "library": cur.columns[li], "current": c, "exact": e, "position": p,
-                         "log2_ratio": np.log2((e + 1) / (c + 1))})
-    return cur, ex, pos, long
-
-
-def summary_box(x_labels, values, order, name: str, color: str, showlegend: bool = True, legendgroup=None):
-    """A plotly Box from precomputed statistics (quartiles, whiskers at the 5th / 95th percentiles), so the page does
-    not carry every point."""
-    import plotly.graph_objects as go
-    d = pd.DataFrame({"x": np.asarray(x_labels), "v": np.asarray(values, float)}).dropna()
-    q = d.groupby("x")["v"].quantile([0.05, 0.25, 0.5, 0.75, 0.95]).unstack()
-    cats = [c for c in order if c in q.index]
-    q = q.loc[cats]
-    return go.Box(x=cats, q1=q[0.25].round(4), median=q[0.5].round(4), q3=q[0.75].round(4),
-                  lowerfence=q[0.05].round(4), upperfence=q[0.95].round(4), name=name, marker_color=color,
-                  showlegend=showlegend, legendgroup=legendgroup or name, boxpoints=False)

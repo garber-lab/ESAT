@@ -78,8 +78,8 @@ public class NewESAT {
 			"\n\t\t-umiClean [default: off] (also write <exp>.expression.txt/<exp>.reads.txt after low-end UMI cleaning)"+
 			"\n\t\t-umiMode <gene|position> [default: gene] (position: collapse on UMI + read 5' alignment coordinate; for bulk libraries)"+
 			"\n\t\t-umiDropN [default: off] (discard reads whose UMI contains N)"+
-			"\n\t\t-umiSaturation <none|original|exact> [default: none] (UMI-collision correction: writes"+
-			"\n\t\t\t<exp>.umi.saturation.txt with both estimators and <out>.gene.corrected.txt with the chosen one)";
+			"\n\t\t-umiSaturation <none|exact> [default: none] (UMI-collision correction: writes"+
+			"\n\t\t\t<exp>.umi.saturation.txt and <out>.gene.corrected.txt)";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
