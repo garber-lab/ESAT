@@ -48,6 +48,7 @@ import umms.esat.SAMSequenceCountingDictFloat;
 import umms.core.readers.MappingTableReader;
 import umms.core.utils.NexteraPreprocess;
 import umms.core.utils.InDropPreprocess;
+import umms.core.utils.UmiSaturation;
 import umms.core.utils.ExperimentMap;
 
 //import umms.core.utils.ESATUtils;
@@ -76,7 +77,9 @@ public class NewESAT {
 			"\n\t\t-umiMin [default: 1]"+
 			"\n\t\t-umiClean [default: off] (also write <exp>.expression.txt/<exp>.reads.txt after low-end UMI cleaning)"+
 			"\n\t\t-umiMode <gene|position> [default: gene] (position: collapse on UMI + read 5' alignment coordinate; for bulk libraries)"+
-			"\n\t\t-umiDropN [default: off] (discard reads whose UMI contains N)";
+			"\n\t\t-umiDropN [default: off] (discard reads whose UMI contains N)"+
+			"\n\t\t-umiSaturation <none|uniform|exact|reads|original> [default: none] (UMI-collision correction: writes"+
+			"\n\t\t\t<exp>.umi.saturation.txt with all estimators and <out>.gene.corrected.txt with the chosen one)";
 	
 	// new comment
 	private static HashMap<String,ArrayList<File>> bamFiles;     // key=experiment ID, File[]= list of input files for the experiment
@@ -104,6 +107,7 @@ public class NewESAT {
 	private static boolean umiClean;	// run the low-end UMI cleaning step (writes .expression.txt/.reads.txt)
 	private static String umiMode;		// UMI collapsing key: "gene" (strand:chr:gene:BC:UMI) or "position" (adds read 5' coordinate)
 	private static boolean umiDropN;	// discard reads with N in the UMI
+	private static String umiSaturation;	// UMI-collision correction (UmiSaturation.MODES)
 	private static int umiMin;			// minimum number times a barcode:transcript:UMI must occur for it to be considered valid 
 	
 	/* optional AT filter */
@@ -198,6 +202,10 @@ public class NewESAT {
 					windowExtend, stranded, task, filtAT, filtAtN, umiMin);
 			inDropData.setUmiClean(umiClean);
 			inDropData.setUmiKeyMode(umiMode, umiDropN);
+			inDropData.setUmiSaturation(umiSaturation);
+			if (!umiSaturation.equals("none")) {
+				logger.info("UMI saturation correction: "+umiSaturation);
+			}
 			logger.info("UMI collapsing mode: "+umiMode+(umiDropN ? " (N-containing UMIs discarded)" : ""));
 			inDropData.process(bamFiles, annotations, true);
 			// replace the original input file list with the pre-processed (PCR de-duplicated) files:
@@ -322,6 +330,15 @@ public class NewESAT {
 			throw new IllegalArgumentException();
 		}
 		umiDropN = argMap.isPresent("umiDropN") ? true : false;
+		umiSaturation = argMap.isPresent("umiSaturation") ? argMap.get("umiSaturation") : "none";
+		if (!UmiSaturation.MODES.contains(umiSaturation)) {
+			logger.error("Illegal value for umiSaturation: "+umiSaturation+" (must be one of "+UmiSaturation.MODES+")");
+			throw new IllegalArgumentException();
+		}
+		if (!umiSaturation.equals("none") && !scPreprocess) {
+			logger.error("-umiSaturation requires -scPrep (UMI collapsing)");
+			throw new IllegalArgumentException();
+		}
 
 		/* A/T filtering */
 		// disable A/T filtering unless a value is given:
@@ -426,6 +443,9 @@ public class NewESAT {
 		String baseName = outFile.getAbsolutePath();
 		File wFile = new File(baseName+".window.txt");  // window-level counts file
 		File gFile = new File(baseName+".gene.txt");  // gene-level counts file
+		// UMI-collision corrected gene-level counts (-umiSaturation): gene.txt counts x the gene's correction factor
+		boolean corr = scPreprocess && inDropData != null && !inDropData.getUmiSaturation().equals("none");
+		FileWriter cWriter = corr ? new FileWriter(new File(baseName+".gene.corrected.txt")) : null;
 		
 		// Open the output files:
 		FileWriter wWriter = new FileWriter(wFile);
@@ -444,6 +464,7 @@ public class NewESAT {
 		}
 		wWriter.write(wStr+"\n");   // write the window file header  
 		gWriter.write(gStr+"\n");   // write the gene file header  
+		if (corr) cWriter.write(gStr+"\n");
 		
 		//int nExp = bamfiles.keySet().size();   // number of experiments    // before single-cell update
 		int nExp = eMap.getNexp();						// after single-cell update
@@ -470,6 +491,14 @@ public class NewESAT {
 						//if (counts>0) {
 						gWriter.write(oStr+"\n");	// write to gene-level file
 						//}
+						if (corr) {
+							String cStr = gName+"\t"+chr+"\t"+strand;
+							for (int i=0; i<nExp; i++) {
+								double fac = inDropData.getSaturationFactor(eMap.getName(i), strand, chr, gName);
+								cStr += "\t"+(float) (e.getCounts(i)*fac);
+							}
+							cWriter.write(cStr+"\n");
+						}
 					} else {
 						// otherwise, it is a window-level counter:
 						String oStr = e.getName();
@@ -488,6 +517,10 @@ public class NewESAT {
 		wWriter.close();
 		gWriter.flush();
 		gWriter.close();
+		if (corr) {
+			cWriter.flush();
+			cWriter.close();
+		}
 	}	
 	
 	public static void writeOutputESATFile(HashMap<String,HashMap<String,LinkedList<Window>>> countsMap, 

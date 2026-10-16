@@ -105,6 +105,15 @@ After writing the UMI support file, also run the low-end UMI cleaning step (UMI 
 ##### UMI saturation in bulk libraries
 With `-umiMode gene`, a gene can report at most 4<sup>k</sup> molecules per barcode for a k-nt UMI (4,096 for 6-nt UMIs), and well before that ceiling different molecules increasingly share a UMI by chance and are merged. In single-cell data this rarely matters. In bulk libraries (one barcode = one sample), highly expressed and strongly induced genes reach thousands of molecules, so their counts and fold changes are compressed. For example, a gene with 6,000 molecules in the regression fixture is reported as 3,213. `-umiMode position` reduces these collisions, because two molecules must share both the UMI and the 5' position to be merged. Note that it counts distinct (UMI, 5' position) fragments: when one tagged molecule gives rise to several fragments (e.g. after IVT amplification in CEL-seq2), it is counted once per distinct fragment end. Calibrate against low-expressed genes, where collisions are negligible, before interpreting position-mode counts as molecules.
 
+*`-umiSaturation <none | uniform | exact | reads | original>`*    
+Correct gene counts for UMI collisions (requires `-scPrep`; intended for `-umiMode position`). With any value other than `none`, ESAT writes *<eID>.umi.saturation.txt* (every gene × barcode: keys k, reads, positions, effective position number P_eff, effective UMI number U_eff, saturation k/K, and the molecule estimates and correction factors of all estimators) and *<out>.gene.corrected.txt* (same layout as *gene.txt*, counts × the chosen estimator's factor). *gene.txt* is unchanged. (*Default: `none`*)
+- `exact`: method-of-moments estimator of Agyemang, Irizarry & Baharav (*J Comput Biol* 2026, doi:10.1177/15578666261477771), extended to positions. A molecule draws 5' position p with probability q<sub>p</sub> (the gene's read profile; reads are not merged by collisions) and UMI u with probability p<sub>u</sub> (the experiment's UMI frequencies, measured on genes with ≤ 200 keys), so E[k | n] = Σ<sub>p</sub> Σ<sub>u</sub> [1 − (1 − q<sub>p</sub> p<sub>u</sub>)<sup>n</sup>]; n solves E[k | n] = k (safeguarded Newton; UMIs in 64 quantile bins; positions exact up to 512 per gene, beyond that the 256 busiest kept individually). Recommended.
+- `uniform`: all K = U<sub>eff</sub> × P<sub>eff</sub> keys equally likely, n = −K ln(1 − k/K), k/K capped at 0.95. Over-corrects strongly saturated genes.
+- `reads`: reads of the gene / reads per key of genes with 5–30 keys. Not affected by collisions but noisier (amplification varies between molecules) and a few % high.
+- `original`: `uniform`, but `reads` for genes whose uniform factor exceeds 1.5 (the handling used for the skin response-QTL counts before this option).
+
+Validation on real CEL-seq2 libraries with UMIs shortened to 5, 4 and 3 nt (`tools/umi_saturation/validate_saturation.py`): `exact` recovers the full-UMI molecule numbers within ~1–2% (median) up to k/K ≈ 1.5, with 2–3× less gene-to-gene spread than `original`.
+
 ----------
 
 ### Annotation BED file
@@ -184,11 +193,14 @@ Build the jar with `ant build` (output: `dist/esat.<version>_<timestamp>.jar`). 
 bash test/run_all_tests.sh [path/to/esat.jar]
 ```
 
-(requires Java 8+, `samtools` and Python 3). The suite runs on every push and pull request (GitHub Actions, `.github/workflows/tests.yml`) and has three parts:
+(requires Java 8+, `samtools` and Python 3). The suite runs on every push and pull request (GitHub Actions, `.github/workflows/tests.yml`) and has four parts:
 
 1. **Golden regression** (`test/regression/`): a deterministic synthetic dataset (both strands, spliced reads, multi-isoform genes, 3' extensions, multimappers, soft clips, PCR duplicates, a UMI-saturated gene, N-containing UMIs) is processed with the production parameters and with an alternative parameter set. Default-mode outputs (`gene.txt`, `window.txt`, sorted UMI support file) must be identical, and the log no more than twice as long, compared with the goldens produced by the production binary `esat.v0.1_09.09.16_24.18.umihack.jar` (see `test/regression/golden/PROVENANCE.txt`). Never regenerate the goldens with a development build.
 2. **Sensitivity check**: the same comparison with `-umiMode position` must *differ*, which confirms that the regression test can detect a change in behaviour.
 3. **Feature tests** (`test/bulkumi/`): hand-built reads with known expected counts for `-umiMode gene|position` and `-umiDropN`, including − strand reads, where the key must use the alignment end.
+4. **Saturation tests** (`test/bulkumi/test_saturation.py`): a synthetic library with 4-nt UMIs of skewed composition, where genes with known molecule numbers saturate (including one with 120 positions, one of them dominant); `exact` must recover them within 10%, `gene.corrected.txt` must equal `gene.txt` × the chosen factor for every mode, and the default writes no extra files.
+
+The Python prototype of the estimators, the simulator and the real-data validation (`tools/umi_saturation/`) reproduce ESAT's numbers to ~1e-6.
 
 Changes that are meant to alter default output must document the change in `PROVENANCE.txt` and add a dedicated test.
 
@@ -196,6 +208,7 @@ Changes that are meant to alter default output must document the change in `PROV
 - **2016-09 (production `umihack` jar)**: single-cell preprocessing writes the UMI support file `<eID>.umi.distributions.txt`.
 - **2019-09 (samdzie/ESAT)**: low-end UMI cleaning (Python code translated to Java); counting step temporarily commented out in that fork.
 - **2026-10**: fork merged into garber-lab; counting re-enabled, a per-base debug log statement removed, and low-end cleaning made opt-in (`-umiClean`), restoring production behaviour; added `-umiMode position` and `-umiDropN` for bulk libraries; regression, sensitivity and feature tests plus CI.
+- **2026-10-16**: `-umiSaturation` (UMI-collision correction; collision-aware `exact` estimator after Agyemang, Irizarry & Baharav 2026, extended to 5' positions), saturation tests, and `tools/umi_saturation/` (Python prototype, simulator and shortened-UMI validation).
 
 ## Warning/error messages:
 

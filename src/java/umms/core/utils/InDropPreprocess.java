@@ -65,6 +65,27 @@ public class InDropPreprocess {
 
 	private boolean umiClean = false;	// run cleanLowEndUmis() after writing the UMI support data
 
+	private String umiSaturation = "none";	// UMI-collision correction (UmiSaturation.MODES)
+	/* exp:barcode -> strand\tchr\tgene -> correction factor (n / keys) of the chosen estimator */
+	private HashMap<String, HashMap<String, Double>> saturationFactors = new HashMap<String, HashMap<String, Double>>();
+
+	/* Estimate UMI collisions per gene after collapsing and write <exp>.umi.saturation.txt (see UmiSaturation) */
+	public void setUmiSaturation(String mode) {
+		this.umiSaturation = mode;
+	}
+
+	public String getUmiSaturation() {
+		return umiSaturation;
+	}
+
+	/* correction factor for gene g (strand, chr) in column exp:barcode; 1 when not estimated */
+	public double getSaturationFactor(String expBc, String strand, String chr, String g) {
+		HashMap<String, Double> m = saturationFactors.get(expBc);
+		if (m == null) return 1.0;
+		Double f = m.get(strand+"\t"+chr+"\t"+g);
+		return f == null ? 1.0 : f;
+	}
+
 	/* Enable the low-end UMI cleaning step (off by default, matching the production umihack jar) */
 	public void setUmiClean(boolean clean) {
 		this.umiClean = clean;
@@ -265,6 +286,19 @@ public class InDropPreprocess {
 					}
 				}
 				
+			}
+			if (!umiSaturation.equals("none")) {
+				long t0 = System.nanoTime();
+				List<UmiSaturation.Estimate> est = UmiSaturation.estimate(umiCount);
+				UmiSaturation.write(est, new File(exp+".umi.saturation.txt"));
+				for (UmiSaturation.Estimate e : est) {
+					String expBc = exp+":"+e.bc;
+					if (!saturationFactors.containsKey(expBc)) {
+						saturationFactors.put(expBc, new HashMap<String, Double>());
+					}
+					saturationFactors.get(expBc).put(e.strand+"\t"+e.chr+"\t"+e.gene, e.factor(umiSaturation));
+				}
+				logger.info("UMI saturation ("+umiSaturation+") for experiment "+exp+" took "+(System.nanoTime()-t0)/1e9+" sec");
 			}
 		}
 		logger.info("Preprocessing complete: Total reads in: "+readsIn+" Total reads out: "+readsOut);

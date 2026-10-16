@@ -11,4 +11,6 @@ echo "== 2. Sensitivity: -umiMode position must change the outputs"
 python3 test/regression/test_regression.py "$JAR" --expect-fail -umiMode position
 echo "== 3. Bulk UMI feature tests (-umiMode / -umiDropN)"
 python3 test/bulkumi/test_bulkumi.py "$JAR"
+echo "== 4. UMI saturation correction (-umiSaturation)"
+python3 test/bulkumi/test_saturation.py "$JAR"
 echo "ALL ESAT TESTS PASSED"
