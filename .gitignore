@@ -1,7 +1,4 @@
-.classpath
-.project
-*.class
-build
-dist
-bin
-*.swp
+build/
+dist/
+._*
+.DS_Store
